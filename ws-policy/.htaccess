@@ -1,0 +1,7 @@
+RewriteEngine On
+RewriteBase   /ns/ws-policy
+
+DirectoryIndex Overview.html
+
+RewriteRule   ^(Sha1Exc)$	policy.html
+
