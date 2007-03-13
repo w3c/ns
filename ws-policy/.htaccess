@@ -5,3 +5,5 @@ DirectoryIndex Overview.html
 
 RewriteRule   ^(Sha1Exc)$	policy.html
 
+RewriteRule   ^(policytypes|localpolicyreference|remotepolicyreference)$	policy-attach.html
+
