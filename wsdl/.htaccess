@@ -1,6 +1,6 @@
 # .htaccess created by setup-namespaces; edit carefully
 RewriteEngine On
-RewriteBase   /2007/03/wsdl
+RewriteBase   /ns/wsdl
 
 # PART1-BEGIN
 
