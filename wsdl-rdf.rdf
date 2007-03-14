@@ -1,0 +1,637 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:wsdl="http://www.w3.org/ns/wsdl-rdf#"
+         xmlns:xml="http://www.w3.org/XML/1998/namespace"
+         xml:base="http://www.w3.org/ns/wsdl-rdf">
+
+<!-- the following are notes on the deviations this model has from the WSDL2
+component model:
+
+direction - msg ref or fault ref instance of inputmessage or outputmessage
+
+soap module also direct reference
+
+binding types as classes (or subclasses of binding)
+
+for us, MEPs are one individual of MessageExchangePattern and a number of
+individuals of MessageLabel
+
+fault propagation rules in MEPs are modeled as subclasses of MEP
+
+message labels are qualified with mep name and so are different for each MEP
+-->
+
+<!-- todo modularization again? RH 
+if so, http and soap binding modules import core, not the other way (duh?)
+if so, interface and binding things can have same names
+-->
+
+<!-- todo maybe reuse rdf/rdfs/owl/dc commenting property instead of
+documentation? RH -->
+
+<!-- todo RH add english annotations everywhere, add language attributes to
+all annotations -->
+
+<!-- todo make explicit more domains and ranges? RH -->
+
+<owl:Ontology rdf:about="">
+</owl:Ontology>
+
+<owl:Class rdf:about="#Binding">
+  <rdfs:comment>The type of a binding is indicated with rdf:type</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#BindingFault">
+</owl:Class>
+
+<owl:Class rdf:about="#BindingFaultReference">
+</owl:Class>
+
+<owl:Class rdf:about="#BindingMessageReference">
+</owl:Class>
+
+<owl:Class rdf:about="#BindingOperation">
+</owl:Class>
+
+<owl:Class rdf:about="#Description">
+</owl:Class>
+
+<owl:Class rdf:about="#Endpoint">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#address"/>
+      <owl:maxCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxCardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Interface">
+  <rdfs:label>WDSL Interface</rdfs:label>
+</owl:Class>
+
+<owl:Class rdf:about="#InterfaceFault">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#messageContentModel"/>
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#InterfaceFaultReference">
+</owl:Class>
+
+<owl:Class rdf:about="#InterfaceMessageReference">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#messageContentModel"/>
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#InputMessage">
+  <rdfs:comment>To be used by message references and fault references instead of direction property</rdfs:comment>
+  <owl:disjointWith rdf:resource="#OutputMessage"/>
+</owl:Class>
+
+<owl:Class rdf:about="#OutputMessage">
+  <rdfs:comment>To be used by message references and fault references instead of direction property</rdfs:comment>
+</owl:Class>
+
+<owl:Class rdf:about="#InterfaceOperation">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#messageExchangePattern"/>
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="#Service">
+</owl:Class>
+
+<owl:Class rdf:about="#MessageExchangePattern">
+</owl:Class>
+
+<owl:Class rdf:about="#MessageLabel">
+</owl:Class>
+
+<owl:ObjectProperty rdf:about="#definesMessageLabel">
+  <rdfs:domain rdf:resource="#MessageExchangePattern"/>
+  <rdfs:range  rdf:resource="#MessageLabel"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#address">
+  <rdfs:domain rdf:resource="#Endpoint"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#binding">
+  <rdfs:range  rdf:resource="#Binding"/>
+  <rdfs:comment>To be used for pointing to a Binding from Description</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#usesBinding">
+  <rdfs:range  rdf:resource="#Binding"/>
+  <rdfs:comment>To be used for pointing to a Binding from Endpoint</rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#bindingFault">
+  <rdfs:range  rdf:resource="#BindingFault"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#bindingOperation">
+  <rdfs:range  rdf:resource="#BindingOperation"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#bindingMessageReference"> 
+  <rdfs:range  rdf:resource="#BindingMessageReference"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#bindingFaultReference"> 
+  <rdfs:range  rdf:resource="#BindingFaultReference"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#typeDefinition">
+  <rdfs:range  rdf:resource="#QName"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#elementDeclaration">
+  <rdfs:range  rdf:resource="#QName"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#endpoint"> 
+  <rdfs:range  rdf:resource="#Endpoint"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#extends">
+  <rdfs:range  rdf:resource="#Interface"/>
+  <rdfs:domain rdf:resource="#Interface"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#QName">
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#localName"/>
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#namespace"/>
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:DatatypeProperty rdf:about="#localName"> 
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#NCName"/>
+</owl:DatatypeProperty>
+
+<owl:ObjectProperty rdf:about="#namespace"> 
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#interface">
+  <rdfs:range  rdf:resource="#Interface"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#interfaceFault">
+  <rdfs:range  rdf:resource="#InterfaceFault"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#interfaceFaultReference">
+  <rdfs:range  rdf:resource="#InterfaceFaultReference"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#interfaceMessageReference">
+  <rdfs:range  rdf:resource="#InterfaceMessageReference"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#binds">
+  <rdfs:comment>
+    points from a binding component (or any sub-component) to the respective
+    interface component (or sub-component)
+  </rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#operationStyle">
+  <rdfs:domain rdf:resource="#InterfaceOperation"/>
+  <rdfs:range  rdf:resource="#OperationStyle"/>
+  <rdfs:comment>
+    points to one style this operation conforms to (can be used multiple times
+    to point to multiple styles)
+  </rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#OperationStyle">
+</owl:Class>
+
+<owl:ObjectProperty rdf:about="#interfaceOperation">
+  <rdfs:range  rdf:resource="#InterfaceOperation"/>
+  <rdfs:comment>
+    used on interface to link to an operation
+  </rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#messageContentModel">
+  <rdfs:range  rdf:resource="#MessageContentModel"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="#MessageContentModel">
+  <owl:oneOf rdf:parseType="Collection">
+      <wsdl:MessageContentModel rdf:about="#AnyContent"/>
+      <wsdl:MessageContentModel rdf:about="#NoContent"/>
+      <wsdl:MessageContentModel rdf:about="#ElementContent"/>
+      <wsdl:MessageContentModel rdf:about="#OtherContent"/>
+  </owl:oneOf>
+</owl:Class>
+
+<owl:ObjectProperty rdf:about="#messageExchangePattern">
+  <rdfs:range  rdf:resource="#MessageExchangePattern"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#messageLabel">
+  <rdfs:range  rdf:resource="#MessageLabel"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="#service">
+  <rdfs:range  rdf:resource="#Service"/>
+</owl:ObjectProperty>
+
+
+<!-- part 2: message exchange patterns -->
+
+<owl:Class rdf:about="#NoFaults">
+  <rdfs:subClassOf rdf:resource="#MessageExchangePattern" />
+  <owl:disjointWith rdf:resource="#FaultReplacesMessage"/>
+  <owl:disjointWith rdf:resource="#MessageTriggersFault"/>
+</owl:Class>
+
+<owl:Class rdf:about="#FaultReplacesMessage">
+  <rdfs:subClassOf rdf:resource="#MessageExchangePattern" />
+  <owl:disjointWith rdf:resource="#MessageTriggersFault"/>
+</owl:Class>
+
+<owl:Class rdf:about="#MessageTriggersFault">
+  <rdfs:subClassOf rdf:resource="#MessageExchangePattern" />
+</owl:Class>
+
+<wsdl:NoFaults rdf:about="http://www.w3.org/ns/wsdl/in-only">
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/in-only#In"/>
+  </wsdl:definesMessageLabel>
+</wsdl:NoFaults>
+
+<wsdl:NoFaults rdf:about="http://www.w3.org/ns/wsdl/out-only">
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/out-only#Out"/>
+  </wsdl:definesMessageLabel>
+</wsdl:NoFaults>
+
+<wsdl:MessageTriggersFault rdf:about="http://www.w3.org/ns/wsdl/robust-in-only">
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/robust-in-only#In"/>
+  </wsdl:definesMessageLabel>
+</wsdl:MessageTriggersFault>
+
+<wsdl:MessageTriggersFault rdf:about="http://www.w3.org/ns/wsdl/in-opt-out">
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/in-opt-out#In"/>
+  </wsdl:definesMessageLabel>
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/in-opt-out#Out"/>
+  </wsdl:definesMessageLabel>
+</wsdl:MessageTriggersFault>
+
+<wsdl:MessageTriggersFault rdf:about="http://www.w3.org/ns/wsdl/robust-out-only">
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/robust-out-only#Out"/>
+  </wsdl:definesMessageLabel>
+</wsdl:MessageTriggersFault>
+
+<wsdl:MessageTriggersFault rdf:about="http://www.w3.org/ns/wsdl/out-opt-in">
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/out-opt-in#Out"/>
+  </wsdl:definesMessageLabel>
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/out-opt-in#In"/>
+  </wsdl:definesMessageLabel>
+</wsdl:MessageTriggersFault>
+
+<wsdl:FaultReplacesMessage rdf:about="http://www.w3.org/ns/wsdl/in-out">
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/in-out#In"/>
+  </wsdl:definesMessageLabel>
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/in-out#Out"/>
+  </wsdl:definesMessageLabel>
+</wsdl:FaultReplacesMessage>
+
+<wsdl:FaultReplacesMessage rdf:about="http://www.w3.org/ns/wsdl/out-in">
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/out-in#Out"/>
+  </wsdl:definesMessageLabel>
+  <wsdl:definesMessageLabel>
+    <wsdl:MessageLabel rdf:about="http://www.w3.org/ns/wsdl/out-in#In"/>
+  </wsdl:definesMessageLabel>
+</wsdl:FaultReplacesMessage>
+
+<!-- part 2: safety -->
+
+<owl:Class rdf:about="http://www.w3.org/ns/wsdl-extensions#SafeInteraction">
+  <rdfs:comment>
+    Class representing safe interactions as defined in Web Architecture at W3C.
+  </rdfs:comment>
+</owl:Class>
+
+<!-- part 2: operation styles -->
+
+<wsdl:OperationStyle rdf:about="http://www.w3.org/ns/wsdl/style/rpc">
+  <rdfs:comment>RPC operation style</rdfs:comment>
+</wsdl:OperationStyle>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/rpc#signature">
+  <rdfs:domain rdf:resource="#InterfaceOperation"/>
+  <rdfs:range  rdf:resource="http://www.w3.org/ns/wsdl/rpc#signatureType"/>
+  <rdfs:comment>todo - can we use the above URI for the datatype of this property?</rdfs:comment>
+</owl:DatatypeProperty>
+
+<wsdl:OperationStyle rdf:about="http://www.w3.org/ns/wsdl/style/iri">
+  <rdfs:comment>IRI operation style</rdfs:comment>
+</wsdl:OperationStyle>
+
+<wsdl:OperationStyle rdf:about="http://www.w3.org/ns/wsdl/style/multipart">
+  <rdfs:comment>multipart operation style</rdfs:comment>
+</wsdl:OperationStyle>
+
+
+
+<!-- part 2: bindings -->
+
+<!-- SOAP binding -->
+
+<owl:Class rdf:about="http://www.w3.org/ns/wsdl/soap">
+  <rdfs:comment>WSDL 2 SOAP binding</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Binding"/>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/wsdl/soap#version"/>
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/wsdl/soap#protocol"/>
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/soap#version">
+  <rdfs:comment>
+    indicates what version of SOAP is used by the binding, usually "1.2"
+    todo - using string is fairly ugly, but can we invent URIs?
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/soap#protocol">
+  <rdfs:comment>
+    indicates the underlying protocol used by a binding
+    todo - protocol class and the known instances? ask the XMLP group
+  </rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/soap#faultCode">
+  <rdfs:comment>
+    indicates the fault code of a binding fault
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="#QName"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/soap#faultSubcodes">
+  <rdfs:comment>
+    indicates the fault subcodes of a binding fault; there can be multiple subcodes
+    todo - make the range an rdf:Seq (maybe of QNames)
+  </rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/soap#soapMEP">
+  <rdfs:comment>
+    indicates the SOAP MEP this binding operation uses
+  </rdfs:comment>
+  <rdfs:range rdf:resource="http://www.w3.org/2006/02/soap12/abstractions#classOfMEPs"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/soap#defaultSoapMEP">
+  <rdfs:comment>
+    indicates the default SOAP MEP this binding's operations use
+  </rdfs:comment>
+  <rdfs:range rdf:resource="http://www.w3.org/2006/02/soap12/abstractions#classOfMEPs"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="http://www.w3.org/2006/02/soap12/abstractions#classOfMEPs">
+</owl:Class>
+
+<rdf:Description rdf:about="http://www.w3.org/2003/05/soap/mep/request-response/">
+  <rdf:type rdf:resource="http://www.w3.org/2006/02/soap12/abstractions#classOfMEPs"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://www.w3.org/2003/05/soap/mep/soap-response/">
+  <rdf:type rdf:resource="http://www.w3.org/2006/02/soap12/abstractions#classOfMEPs"/>
+</rdf:Description>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/soap#action">
+  <rdfs:comment>
+    indicates the SOAP action this binding operation uses
+  </rdfs:comment>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/soap#offersSOAPModule">
+  <rdfs:range  rdf:resource="http://www.w3.org/ns/wsdl/soap#SOAPModule"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/soap#requiresSOAPModule">
+  <rdfs:range  rdf:resource="http://www.w3.org/ns/wsdl/soap#SOAPModule"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="http://www.w3.org/ns/wsdl/soap#SOAPModule">
+  <rdfs:comment>
+    a SOAP module; a WSDL 2 SOAP binding (and subcomponents) may use or
+    require any number of modules
+    todo - should this class be created by xmlp group?
+  </rdfs:comment>
+</owl:Class>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/soap#offersHeader">
+  <rdfs:range  rdf:resource="http://www.w3.org/ns/wsdl/soap#SOAPHeaderBlock"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/soap#requiresHeader">
+  <rdfs:range  rdf:resource="http://www.w3.org/ns/wsdl/soap#SOAPHeaderBlock"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="http://www.w3.org/ns/wsdl/soap#SOAPHeaderBlock">
+  <rdfs:comment>
+    a SOAP header
+  </rdfs:comment>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#elementDeclaration"/>
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:Class rdf:about="http://www.w3.org/ns/wsdl/soap#MustUnderstandSOAPHeaderBlock">
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wsdl/soap#SOAPHeaderBlock" />
+  <rdfs:comment>
+    a SOAP header that must be marked as mustUnderstand by the sender
+  </rdfs:comment>
+</owl:Class>
+
+<!-- HTTP binding -->
+
+<owl:Class rdf:about="http://www.w3.org/ns/wsdl/http">
+  <rdfs:comment>WSDL 2 HTTP binding</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="#Binding"/>
+</owl:Class>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#location">
+  <rdfs:comment>
+    defines the location for an operation, relative to the address of the
+    service; this is the only URI-valued property modeled as datatype
+    property because the URI is not meant as pointer to a resource
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#locationIgnoreUncited">
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#defaultMethod">
+  <rdfs:comment>
+    declares the default HTTP method used by this binding's operations
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#method">
+  <rdfs:comment>
+    declares the HTTP method used by this operation
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#inputSerialization">
+  <rdfs:comment>
+    declares the media type of the input message of an operation
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#outputSerialization">
+  <rdfs:comment>
+    declares the media type of the output message of an operation
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#faultSerialization">
+  <rdfs:comment>
+    declares the media type of the fault messages of an operation
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#defaultQueryParameterSeparator">
+  <rdfs:comment>
+    declares the default character to be used as query parameter separator by this binding's operations
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#queryParameterSeparator">
+  <rdfs:comment>
+    declares the character to be used as query parameter separator by an operation
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#headerName">
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/http#requiresHeader">
+  <rdfs:range  rdf:resource="http://www.w3.org/ns/wsdl/http#HTTPHeader"/>
+</owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://www.w3.org/ns/wsdl/http#offersHeader">
+  <rdfs:range  rdf:resource="http://www.w3.org/ns/wsdl/http#HTTPHeader"/>
+</owl:ObjectProperty>
+
+<owl:Class rdf:about="http://www.w3.org/ns/wsdl/http#HTTPHeader">
+  <rdfs:comment>
+    an HTTP header
+  </rdfs:comment>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="#typeDefinition"/>
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+  <rdfs:subClassOf>
+    <owl:Restriction>
+      <owl:onProperty rdf:resource="http://www.w3.org/ns/wsdl/http#headerName"/>
+      <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+    </owl:Restriction>
+  </rdfs:subClassOf>
+</owl:Class>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#errorCode">
+  <rdfs:comment>
+    declares the error status code that a fault will return
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty
+rdf:about="http://www.w3.org/ns/wsdl/http#defaultContentEncoding">
+  <rdfs:comment>
+    declares the default content encoding to be used by this binding's operation messages
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#contentEncoding">
+  <rdfs:comment>
+    declares the content encoding to be used by operation messages
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:Class rdf:about="http://www.w3.org/ns/wsdl/http#HTTPBindingWithCookies">
+  <rdfs:comment>WSDL 2 HTTP binding with cookies</rdfs:comment>
+  <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/wsdl/http"/>
+</owl:Class>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#authenticationScheme">
+  <rdfs:comment>
+    declares the authentication scheme used by an endpoint, by default "none"
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+<owl:DatatypeProperty rdf:about="http://www.w3.org/ns/wsdl/http#authenticationRealm">
+  <rdfs:comment>
+    declares the authentication realm used by an endpoint
+  </rdfs:comment>
+  <rdfs:range  rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</owl:DatatypeProperty>
+
+
+</rdf:RDF>
+
