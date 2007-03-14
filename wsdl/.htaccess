@@ -1,0 +1,29 @@
+# .htaccess created by setup-namespaces; edit carefully
+RewriteEngine On
+RewriteBase   /2007/03/wsdl
+
+# PART1-BEGIN
+
+DirectoryIndex wsdl20
+
+# PART1-END
+
+# PART2-BEGIN
+
+RewriteRule   ^in-out$                  patterns.html
+RewriteRule   ^in-opt-out$              patterns.html
+RewriteRule   ^out-only$                patterns.html
+RewriteRule   ^robust-out-only$         patterns.html
+RewriteRule   ^robust-in-only$          patterns.html
+RewriteRule   ^out-in$                  patterns.html
+RewriteRule   ^out-opt-in$              patterns.html
+RewriteRule   ^in-only$                 patterns.html
+RewriteRule   ^in-multi-out$            patterns.html
+RewriteRule   ^out-multi-in$            patterns.html
+RewriteRule   ^asynch-out-in$           patterns.html
+
+RewriteRule   ^fault-replaces-message$  faults.html
+RewriteRule   ^message-triggers-fault$  faults.html
+RewriteRule   ^no-faults$               faults.html
+
+# PART2-END
