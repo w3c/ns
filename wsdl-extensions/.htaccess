@@ -1,0 +1,10 @@
+# .htaccess created by setup-namespaces; edit carefully
+RewriteEngine On
+RewriteBase   /ns/wsdl-extensions
+
+# PART2-BEGIN
+
+DirectoryIndex wsdl-extensions
+
+# PART2-END
+
