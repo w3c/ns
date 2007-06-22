@@ -6,32 +6,6 @@
          xmlns:xml="http://www.w3.org/XML/1998/namespace"
          xml:base="http://www.w3.org/ns/wsdl-rdf">
 
-<!-- the following are notes on the deviations this model has from the WSDL2
-component model:
-
-direction - msg ref or fault ref instance of inputmessage or outputmessage
-
-soap module also direct reference
-
-binding types as classes (or subclasses of binding)
-
-for us, MEPs are one individual of MessageExchangePattern and a number of
-individuals of MessageLabel
-
-fault propagation rules in MEPs are modeled as subclasses of MEP
-
-message labels are qualified with mep name and so are different for each MEP
--->
-
-<!-- todo documentation removed, now respond
-maybe reuse rdf/rdfs/owl/dc commenting property instead of
-documentation? RH
--->
-
-<!-- todo RH add english annotations everywhere, add language attributes to
-all annotations; (jk) maybe also add seeAlso to the spec and wsdl rdf mapping? -->
-
-<!-- todo make explicit more domains and ranges? RH (and cardinalities? JK) -->
 
 <owl:Ontology rdf:about="">
 </owl:Ontology>
