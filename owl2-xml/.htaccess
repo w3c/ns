@@ -1,6 +1,0 @@
-
-# See http://lists.w3.org/Archives/Public/public-owl-wg/2008Mar/0245
-
-RewriteEngine On
-RewriteBase /ns/owl2-xml/
-RewriteRule ^Overview.xml$ http://esw.w3.org/2007/OWL/wiki/OWL_XML_Schema&action=raw&ctype=application/xml&templates=expand [P,L]
