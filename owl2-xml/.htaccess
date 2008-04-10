@@ -1,0 +1,6 @@
+
+# added by sandro@w3.org 2008-03-20, trying to see if a schema can
+# live in a mediaiwiki
+RewriteEngine On
+RewriteBase /ns/owl2-xml/
+RewriteRule ^live-from-wiki.xsd$ http://esw.w3.org/2007/OWL/wiki/OWL_XML_Schema&action=raw&ctype=application/xml&templates=expand [P,L]
