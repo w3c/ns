@@ -152,7 +152,8 @@
    rdfs:domain :RSAPrivateKey;
    rdfs:range :Integer .
 
-:base64 a owl:DatatypeProperty;
+:base64 a owl:DatatypeProperty, 
+          owl:InverseFunctionalProperty;
     vs:term_status "unstable";
     rdfs:seeAlso <http://en.wikipedia.org/wiki/Distinguished_Encoding_Rules>;
     rdfs:seeAlso <http://en.wikipedia.org/wiki/X509>;
@@ -168,6 +169,21 @@
     """;
    rdfs:domain :Integer;
    rdfs:range xsd:String .
+
+:decimal a owl:DatatypeProperty,
+           owl:InverseFunctionalProperty;
+   vs:term_status "unstable";
+   rdfs:comment """
+    The encoding of an integer in decimal format. Similar to xsd:integer,
+    except that we relate an integer to its string representation.
+    This should be part of another ontology of course.
+    Could one use xsd:integer as such a relation, in which case this would be
+    owl:sameAs xsd:integer
+    """;
+   rdfs:domain :Integer;
+   rdfs:range xsd:String .
+
+
 
 :identity a rdf:Property;
     vs:term_status "unstable";
