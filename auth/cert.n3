@@ -1,1 +1,179 @@
-# this is a place for a cert ontology
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix wot: <http://xmlns.com/wot/0.1/> .
+@prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix : <cert#> .
+
+<cert> a owl:Ontology ;
+   vs:term_status "unstable";
+   rdfs:seeAlso <http://lists.foaf-project.org/mailman/listinfo/foaf-protocols>;
+   rdfs:seeAlso <X509.svg>;
+   rdfs:comment """
+   Ontology for Certificates and crypto stuff.
+   This is in development. 
+   Some other ontologies to look at:
+     * http://www.w3.org/2000/10/swap/crypto
+        + has cwm builtins: http://www.w3.org/2000/10/swap/doc/Trust
+        - a bit old perhaps. It imports daml+oil
+        - would help to be more completely specified
+        - uses literals as subjects a little liberally, which makes this a 
+        bit difficult to work with frameworks that don't permit this
+     * http://xmlns.com/wot/0.1/
+        - limited very much to PGP (though on can map PGP to X509)
+        - a little coarse grained, mixes up the PGP certificate with the PGP
+          public key
+     *
+   Todo: 
+     - add some classes and relations for DSA
+     - should this all be in one file? Or should this be cut up a little? Say one file for the general CERT ontology, and then files for RSA, DSA, PGP, etc... Or perhaps it does not really matter?
+     - expand more on the certification side of things
+     - verify this by security experts
+     - add more todos
+     - owl2 has some constructs for combined inverse functional properties. 
+       This may be useful to use in defining an RSA key which is identified
+       by two numbers.
+     - when more stable create rdf/xml version
+     - also create html version of the spec by using this as a template.
+     - should comments such as this be in html?
+   """.
+
+:Integer a owl:Class;
+    vs:term_status "unstable";
+    rdfs:comment """ 
+    The class of all integers, however large they be. 
+    This should probably be defined in another ontology.
+    Different representations for each can be defined via relations to string
+    literals. 
+    This is equivalent to the values of of xsd:integer literals, except that we don't want to be locked into having to use a particular literal notation. Some of these integers are so long it is much better to express them in hexadecimal format.
+    """ .
+
+:Certificate a owl:Class;
+    vs:term_status "unstable";
+    rdfs:subClassOf foaf:Document;
+    rdfs:comment """A certificate is a Document that is signed.
+    As explained here http://www.pgpi.org/doc/pgpintro/#p16
+    'A digital certificate consists of three things:
+        * A public key.
+        * Certificate information. ('Identity' information about the  
+          user, such as name, user ID, and so on.)
+        * One or more digital signatures.'
+    """ .
+
+
+:X509Certificate a owl:Class;
+   vs:term_status "unstable";
+   rdfs:subClassOf :Certificate;
+   rdfs:seeAlso <http://en.wikipedia.org/wiki/X509>;
+   rdfs:comment "the class of X509 Certificates".   
+
+:PGPCertificate a owl:Class;
+   vs:term_status "unstable";
+   rdfs:subClassOf :Certificate;
+   owl:equivalentClass wot:PubKey;
+   rdfs:comment "the class of PGP Certificates".   
+      
+:Signature a owl:Class;
+   vs:term_status "unstable";
+   rdfs:comment "the class of signtatures" .
+
+:Key a owl:Class;
+   vs:term_status "unstable";
+   rdfs:comment "the class of keys" .
+
+:PublicKey a owl:Class;
+   vs:term_status "unstable";
+   rdfs:comment "Public Key";
+   rdfs:subClassOf :Key .
+
+:PrivateKey a owl:Class;
+   rdfs:comment "Private Key" ;
+   rdfs:subClassOf :Key .
+
+:public_key a rdf:Property;
+    vs:term_status "unstable";
+    rdfs:comment """
+    relates the private key to the public key component, in a public/private
+    key pair.
+    """;
+    rdfs:domain :PrivateKey;
+    rdfs:range :PublicKey .  
+
+:RSAKey rdfs:subClassOf :Key;
+    vs:term_status "unstable";
+    rdfs:comment """
+    The union of the public and private components of an RSAKey.
+    Usually those pieces are not kept together
+    """.
+     
+:RSAPublicKey rdfs:subClassOf :PublicKey, :RSAKey;
+    vs:term_status "unstable";
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/RSA>;
+    rdfs:comment """
+    The RSA public key.  Padded message m are encrypted by applying the function
+      modulus(power(m,exponent),modulus)
+    """ .
+
+:modulus a rdf:Property;
+   vs:term_status "unstable";
+   rdfs:comment """    
+   The modulus of an RSA public and private key. 
+   This is defined as n = p*q
+   """;
+   rdfs:domain :RSAKey;
+   rdfs:range :Integer .
+
+:public_exponent a rdf:Property;
+   vs:term_status "unstable";
+   rdfs:comment """
+       The exponent used to encrypt the message. Number chosen between
+       1 and the totient(p*q). Often named 'e' .
+    """;
+   rdfs:domain :RSAPublicKey;
+   rdfs:range :Integer .
+
+:RSAPrivateKey rdfs:subClassOf :PrivateKey, :RSAKey;
+    vs:term_status "unstable";
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/RSA>;
+    rdfs:comment """
+    A Private Key in the RSA framework 
+    """.
+
+:private_exponent a rdf:Property;
+    vs:term_status "unstable";
+    rdfs:comment """
+       The exponent used to decrypt the message
+       calculated as 
+          public_exponent*private_exponent ≡ 1 modulo totient(p*q)
+       The private exponent is often named 'd'
+    """;
+   rdfs:domain :RSAPrivateKey;
+   rdfs:range :Integer .
+
+:base64 a owl:DatatypeProperty;
+    vs:term_status "unstable";
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/Distinguished_Encoding_Rules>;
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/X509>;
+    rdfs:comment """
+    The encoding of an integer as a hex string as it appears in the human
+    readable versions of X509 keys as shown <http://en.wikipedia.org/wiki/X509>
+    these are strings of the form '00:b4:31:98:0a' and can have newlines and spaces in between. The ':' are optional. 
+    We are looking for the official spec for this format. Please point us to it. 
+    Note: having found the official spec, we may decide that the name of this 
+    property is wrong.
+    Note: does specifying that the range is an xsd:String oblige the string
+    to be in ^^xsd:String format?
+    """;
+   rdfs:domain :Integer;
+   rdfs:range xsd:String .
+
+:identity a rdf:Property;
+    vs:term_status "unstable";
+    rdfs:comment """
+    the identity of the public key. These is the entity that knows the private key and so can decrypt messages encrypted with the public key, or encrypt messages that can be decrypted with the public key.
+    """;
+    rdfs:domain :PublicKey;
+    rdfs:range foaf:Agent .
+
