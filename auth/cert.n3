@@ -10,7 +10,7 @@
 <cert> a owl:Ontology ;
    vs:term_status "unstable";
    rdfs:seeAlso <http://lists.foaf-project.org/mailman/listinfo/foaf-protocols>;
-   rdfs:seeAlso <X509.svg>;
+   rdfs:seeAlso <X509Uml.svg>;
    rdfs:comment """
    Ontology for Certificates and crypto stuff.
    This is in development. 
