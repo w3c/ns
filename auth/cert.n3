@@ -6,8 +6,12 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix : <cert#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+
 
 <cert> a owl:Ontology ;
+   dc:created "2008-11-13"^^xsd:date;
+   foaf:maker <http://bblfish.net/people/henry/card#me>;
    vs:term_status "unstable";
    rdfs:seeAlso <http://lists.foaf-project.org/mailman/listinfo/foaf-protocols>;
    rdfs:seeAlso <X509Uml.svg>;
@@ -152,7 +156,7 @@
    rdfs:domain :RSAPrivateKey;
    rdfs:range :Integer .
 
-:base64 a owl:DatatypeProperty, 
+:hex a owl:DatatypeProperty, 
           owl:InverseFunctionalProperty;
     vs:term_status "unstable";
     rdfs:seeAlso <http://en.wikipedia.org/wiki/Distinguished_Encoding_Rules>;
