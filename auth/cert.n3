@@ -51,7 +51,7 @@
     This should probably be defined in another ontology.
     Different representations for each can be defined via relations to string
     literals. 
-    This is equivalent to the values of of xsd:integer literals, except that we don't want to be locked into having to use a particular literal notation. Some of these integers are so long it is much better to express them in hexadecimal format.
+    This is equivalent to the values of xsd:integer literals, except that we don't want to be locked into having to use a particular literal notation. Some of these integers are so long it is much better to express them in hexadecimal format.
     """ .
 
 :Certificate a owl:Class;
