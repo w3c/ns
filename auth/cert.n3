@@ -15,6 +15,7 @@
    vs:term_status "unstable";
    rdfs:seeAlso <http://lists.foaf-project.org/mailman/listinfo/foaf-protocols>;
    rdfs:seeAlso <X509Uml.svg>;
+   rdfs:seeAlso <rsa>;
    rdfs:comment """
    Ontology for Certificates and crypto stuff.
    This is in development. 
@@ -104,57 +105,6 @@
     """;
     rdfs:domain :PrivateKey;
     rdfs:range :PublicKey .  
-
-:RSAKey rdfs:subClassOf :Key;
-    vs:term_status "unstable";
-    rdfs:comment """
-    The union of the public and private components of an RSAKey.
-    Usually those pieces are not kept together
-    """.
-     
-:RSAPublicKey rdfs:subClassOf :PublicKey, :RSAKey;
-    vs:term_status "unstable";
-    rdfs:seeAlso <http://en.wikipedia.org/wiki/RSA>;
-    rdfs:comment """
-    The RSA public key.  Padded message m are encrypted by applying the function
-      modulus(power(m,exponent),modulus)
-    """ .
-
-:modulus a rdf:Property;
-   vs:term_status "unstable";
-   rdfs:comment """    
-   The modulus of an RSA public and private key. 
-   This is defined as n = p*q
-   """;
-   rdfs:domain :RSAKey;
-   rdfs:range :Integer .
-
-:public_exponent a rdf:Property;
-   vs:term_status "unstable";
-   rdfs:comment """
-       The exponent used to encrypt the message. Number chosen between
-       1 and the totient(p*q). Often named 'e' .
-    """;
-   rdfs:domain :RSAPublicKey;
-   rdfs:range :Integer .
-
-:RSAPrivateKey rdfs:subClassOf :PrivateKey, :RSAKey;
-    vs:term_status "unstable";
-    rdfs:seeAlso <http://en.wikipedia.org/wiki/RSA>;
-    rdfs:comment """
-    A Private Key in the RSA framework 
-    """.
-
-:private_exponent a rdf:Property;
-    vs:term_status "unstable";
-    rdfs:comment """
-       The exponent used to decrypt the message
-       calculated as 
-          public_exponent*private_exponent ≡ 1 modulo totient(p*q)
-       The private exponent is often named 'd'
-    """;
-   rdfs:domain :RSAPrivateKey;
-   rdfs:range :Integer .
 
 :hex a owl:DatatypeProperty, 
           owl:InverseFunctionalProperty;
