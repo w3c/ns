@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/*
+ * Copyright © ns World Wide Web Consortium,
+ *
+ * (Massachusetts Institute of Technology, European Research Consortium for
+ * Informatics and Mathematics, Keio University). All Rights Reserved. This
+ * work is distributed under the W3C® Document License [1] in the hope that
+ * it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * [1] http://www.w3.org/Consortium/Legal/2002/copyright-documents-20021231
+ */
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:sml="http://www.w3.org/ns/sml" targetNamespace="http://www.w3.org/ns/sml" elementFormDefault="qualified" blockDefault="#all" version="1.0" xml:lang="en" finalDefault="" attributeFormDefault="unqualified">
+    
+   <!--
+        References
+        ==========
+    -->
+   
+    
+   <!-- CONTEXT: To be used in any <xs:element> -->
+   
+    <xs:attribute name="ref" type="xs:boolean">
+        <xs:annotation>
+            <xs:documentation>
+                Specifies if the element contains a reference
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    
+   <!-- CONTEXT: To be used in any <xs:element> -->
+   
+    <xs:attribute name="nilref" type="xs:boolean">
+        <xs:annotation>
+            <xs:documentation>
+                Specifies that the reference element denotes a “null” reference. 
+                To be used only on elements for which sml:ref="true".
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>  
+    
+   <!-- CONTEXT: To be used in any <xs:element> -->
+   
+    <xs:attribute name="targetElement" type="xs:QName">
+        <xs:annotation>
+            <xs:documentation>
+                A qualified name of a global element in the referenced document.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    
+   <!-- CONTEXT: To be used in any <xs:element>-->
+   
+    <xs:attribute name="targetRequired" type="xs:boolean">
+        <xs:annotation>
+            <xs:documentation>
+                If true, requires the target element of the reference to
+                exist in the model.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    
+   <!-- CONTEXT: To be used in any <xs:element>-->
+   
+    <xs:attribute name="targetType" type="xs:QName">
+        <xs:annotation>
+            <xs:documentation>
+                A qualified name of the type of the element in the
+                referenced document.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    
+   <!-- CONTEXT: To be used in any <xs:complexType>-->
+   
+    <xs:attribute name="acyclic" type="xs:boolean">
+        <xs:annotation>
+            <xs:documentation>
+                If this attribute is set to true for a type D 
+                then instances of D should not create any
+                cycles in a model. More precisely, the directed graph whose
+                edges represent instances of D, and whose nodes represent
+                documents that contain the source or target elements for
+                instances of D, must be acyclic.
+            </xs:documentation>
+        </xs:annotation>
+    </xs:attribute>
+    
+    
+   <!-- CONTEXT: To be used in <sch:assert>, <sch:report>
+         and elements with textual content.
+         This attribute is used to support string localization.
+         It is used to define the translation location for 
+         the text content of the containing element.-->
+     
+    <xs:attribute name="locid" type="xs:QName"/>
+    
+    
+   <!-- CONTEXT: Represents a reference using the URI scheme. To be
+         used as a child  element of elements for which
+         sml:ref="true". -->
+   
+    <xs:element name="uri" type="xs:anyURI">
+        <xs:annotation>
+            <xs:documentation>
+                References in URI scheme must be representend by this
+                element.  
+            </xs:documentation>
+        </xs:annotation>
+    </xs:element>
+
+    
+   <!--
+        Uniqueness and Key constraints
+        ==============================
+    -->
+   
+
+    <xs:complexType name="keybase" mixed="false">
+        <xs:sequence minOccurs="0">
+            <xs:element name="selector" type="sml:selectorXPathType"/>
+            <xs:element name="field" type="sml:fieldXPathType" maxOccurs="unbounded"/>
+            <xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+        </xs:sequence>
+        <xs:attribute name="name" type="xs:NCName"/>
+        <xs:attribute name="ref" type="xs:QName"/>
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+    </xs:complexType>
+    <xs:element name="key" type="sml:keybase"/>
+    <xs:element name="unique" type="sml:keybase"/>
+    <xs:element name="keyref">
+        <xs:complexType mixed="false">
+            <xs:complexContent>
+                <xs:extension base="sml:keybase">
+                    <xs:attribute name="refer" type="xs:QName" use="optional"/>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+
+    
+   <!--
+        Other Complex Types
+        ==================
+    -->
+   
+
+    <xs:complexType name="selectorXPathType" mixed="false">
+        <xs:sequence>
+            <xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+        </xs:sequence>
+        <xs:attribute name="xpath" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    
+   <!-- The value MUST conform to the selector BNF grammar defined in
+                         section '4.4 Identity Constraints' in the SML specification.
+                    -->
+   
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+    </xs:complexType>
+
+    <xs:complexType name="fieldXPathType" mixed="false">
+        <xs:sequence>
+            <xs:any namespace="##other" minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
+        </xs:sequence>
+        <xs:attribute name="xpath" use="required">
+            <xs:simpleType>
+                <xs:restriction base="xs:string">
+                    
+   <!-- The value MUST conform to the field BNF grammar defined in
+                         section '4.4 Identity Constraints' in the SML specification.
+                    -->
+   
+                </xs:restriction>
+            </xs:simpleType>
+        </xs:attribute>
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+    </xs:complexType>
+</xs:schema>

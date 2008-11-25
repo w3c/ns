@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+/*
+ * Copyright © 2008 World Wide Web Consortium,
+ *
+ * (Massachusetts Institute of Technology, European Research Consortium for
+ * Informatics and Mathematics, Keio University). All Rights Reserved. This
+ * work is distributed under the W3C® Document License [1] in the hope that
+ * it will be useful, but WITHOUT ANY WARRANTY; without even the implied
+ * warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ *
+ * [1] http://www.w3.org/Consortium/Legal/2002/copyright-documents-20021231
+ */
+-->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:smlif="http://www.w3.org/ns/sml-if" targetNamespace="http://www.w3.org/2008/11/sml-if" elementFormDefault="qualified" blockDefault="#all" version="1.0" xml:lang="EN" finalDefault="" attributeFormDefault="unqualified">
+  <xs:element name="model" type="smlif:modelType"/>
+  <xs:complexType name="modelType" mixed="false">
+    <xs:sequence>
+      <xs:element name="identity" type="smlif:identityType"/>
+      <xs:element ref="smlif:ruleBindings" minOccurs="0"/>
+      <xs:element ref="smlif:schemaBindings" minOccurs="0"/>
+      <xs:element name="definitions" type="smlif:documentCollectionType" minOccurs="0"/>
+      <xs:element name="instances" type="smlif:documentCollectionType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:attribute name="SMLIFVersion" type="xs:token" use="optional"/>
+    <xs:attribute name="schemaComplete" type="xs:boolean" default="false"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  
+   <!-- If there is a need for localized string values, e.g. in displayName
+         or description, the sml:locid global attribute can be
+         used -->
+   
+  <xs:complexType name="identityType" mixed="false">
+    <xs:sequence>
+      <xs:element name="name" type="smlif:uriType"/>
+      <xs:element name="version" type="smlif:tokenType" minOccurs="0"/>
+      <xs:element name="displayName" type="smlif:displayType" minOccurs="0"/>
+      <xs:element name="baseURI" type="smlif:uriType" minOccurs="0"/>
+      <xs:element name="description" type="smlif:displayType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:complexType name="displayType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:string">
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="tokenType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:token">
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="uriType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:anyURI">
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:element name="ruleBindings" type="smlif:ruleBindingCollectionType"/>
+  <xs:complexType name="ruleBindingCollectionType" mixed="false">
+    <xs:sequence>
+      <xs:element ref="smlif:ruleBinding" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="ruleBinding" type="smlif:ruleBindingType"/>
+  <xs:complexType name="ruleBindingType" mixed="false">
+    <xs:sequence>
+      <xs:element name="documentAlias" type="smlif:uriType" minOccurs="0"/>
+      <xs:element name="ruleAlias" type="smlif:uriType"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="schemaBindings" type="smlif:schemaBindingCollectionType"/>
+  <xs:complexType name="schemaBindingCollectionType" mixed="false">
+    <xs:sequence>
+      <xs:element ref="smlif:defaultSchema" minOccurs="0"/>
+      <xs:element ref="smlif:schemaBinding" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="smlif:noSchemaBinding" minOccurs="0" maxOccurs="1"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="schemaBinding" type="smlif:schemaBindingType"/>
+  <xs:complexType name="schemaBindingType" mixed="false">
+    <xs:sequence>
+      <xs:element ref="smlif:namespaceBinding" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element name="documentAlias" type="smlif:uriType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="namespaceBinding" type="smlif:namespaceBindingType"/>
+  
+   <!-- The value of the aliases attribute in the complexType below 
+       is a list of instance document URIs -->
+   
+  <xs:complexType name="namespaceBindingType" mixed="false">
+    <xs:attribute name="namespace" type="xs:anyURI" use="optional"/>
+    <xs:attribute name="aliases" use="required">
+      <xs:simpleType>
+        <xs:list itemType="xs:anyURI"/>
+      </xs:simpleType>
+    </xs:attribute>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="noSchemaBinding" type="smlif:noSchemaBindingType"/>
+  <xs:complexType name="noSchemaBindingType" mixed="false">
+    <xs:sequence>
+      <xs:element name="documentAlias" type="smlif:uriType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="defaultSchema" type="smlif:defaultSchemaType"/>
+  <xs:complexType name="defaultSchemaType" mixed="false">
+    <xs:sequence>
+      <xs:element ref="smlif:namespaceBinding" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:complexType name="documentCollectionType" mixed="false">
+    <xs:sequence>
+      <xs:element ref="smlif:document" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="document" type="smlif:documentType"/>
+  <xs:complexType name="documentType" mixed="false">
+    <xs:sequence>
+      <xs:element ref="smlif:docinfo" minOccurs="0"/>
+      <xs:choice>
+        <xs:element name="data" type="smlif:dataType"/>
+        <xs:element name="base64Data" type="smlif:base64DataType"/>
+        <xs:element name="locator" type="smlif:locatorType"/>
+      </xs:choice>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="docinfo" type="smlif:docinfoType"/>
+  <xs:complexType name="docinfoType" mixed="false">
+    <xs:sequence>
+      <xs:element name="baseURI" type="smlif:uriType" minOccurs="0"/>
+      <xs:element ref="smlif:aliases" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:element name="aliases" type="smlif:aliasCollectionType"/>
+  <xs:complexType name="aliasCollectionType" mixed="false">
+    <xs:sequence>
+      <xs:element name="alias" type="smlif:uriType" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:complexType name="dataType" mixed="false">
+    <xs:annotation>
+      <xs:documentation>
+                The wildcard with processContents "skip" matches the root element of the  
+                model document being packaged. The value of processContents is set to "skip" so
+                that the contained element is not processed for schema validation. As a result,
+                validity of the packaged document will not affect validity of the IF document
+                itself.
+            </xs:documentation>
+    </xs:annotation>
+    <xs:sequence>
+      <xs:any processContents="skip" minOccurs="0" namespace="##any" maxOccurs="1"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+  <xs:complexType name="base64DataType" mixed="false">
+    <xs:simpleContent>
+      <xs:extension base="xs:base64Binary">
+        <xs:anyAttribute namespace="##other" processContents="lax"/>
+      </xs:extension>
+    </xs:simpleContent>
+  </xs:complexType>
+  <xs:complexType name="locatorType" mixed="false">
+    <xs:sequence>
+      <xs:element name="documentURI" type="smlif:uriType" minOccurs="0"/>
+      <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+    </xs:sequence>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
+  </xs:complexType>
+</xs:schema>
