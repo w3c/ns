@@ -1,0 +1,161 @@
+
+<!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
+<!--     using base file:///Users/hjs/Programming/w3.org/WWW/ns/auth/cert.n3-->
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">
+
+    <owl:Ontology rdf:about="cert">
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-11-13</dc:created>
+        <comment>
+   Ontology for Certificates and crypto stuff.
+   This is in development. 
+   Some other ontologies to look at:
+     * http://www.w3.org/2000/10/swap/crypto
+        + has cwm builtins: http://www.w3.org/2000/10/swap/doc/Trust
+        - a bit old perhaps. It imports daml+oil
+        - would help to be more completely specified
+        - uses literals as subjects a little liberally, which makes this a 
+        bit difficult to work with frameworks that don't permit this
+     * http://xmlns.com/wot/0.1/
+        - limited very much to PGP (though on can map PGP to X509)
+        - a little coarse grained, mixes up the PGP certificate with the PGP
+          public key
+     *
+   Todo: 
+     - add some classes and relations for DSA
+     - should this all be in one file? Or should this be cut up a little? Say one file for the general CERT ontology, and then files for RSA, DSA, PGP, etc... Or perhaps it does not really matter?
+     - expand more on the certification side of things
+     - verify this by security experts
+     - add more todos
+     - owl2 has some constructs for combined inverse functional properties. 
+       This may be useful to use in defining an RSA key which is identified
+       by two numbers.
+     - when more stable create rdf/xml version
+     - also create html version of the spec by using this as a template.
+     - should comments such as this be in html?
+   </comment>
+        <seeAlso rdf:resource="X509Uml.svg"/>
+        <seeAlso rdf:resource="rsa"/>
+        <seeAlso rdf:resource="http://lists.foaf-project.org/mailman/listinfo/foaf-protocols"/>
+        <vs:term_status>unstable</vs:term_status>
+        <foaf:maker rdf:resource="http://bblfish.net/people/henry/card#me"/>
+    </owl:Ontology>
+
+    <owl:Class rdf:about="cert#Certificate">
+        <comment>A certificate is a Document that is signed.
+    As explained here http://www.pgpi.org/doc/pgpintro/#p16
+    'A digital certificate consists of three things:
+        * A public key.
+        * Certificate information. ('Identity' information about the  
+          user, such as name, user ID, and so on.)
+        * One or more digital signatures.'
+    </comment>
+        <subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:Class>
+
+    <owl:Class rdf:about="cert#Integer">
+        <comment> 
+    The class of all integers, however large they be. 
+    This should probably be defined in another ontology.
+    Different representations for each can be defined via relations to string
+    literals. 
+    This is equivalent to the values of xsd:integer literals, except that we don't want to be locked into having to use a particular literal notation. Some of these integers are so long it is much better to express them in hexadecimal format.
+    </comment>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:Class>
+
+    <owl:Class rdf:about="cert#Key">
+        <comment>the class of keys</comment>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:Class>
+
+    <owl:Class rdf:about="cert#PGPCertificate">
+        <comment>the class of PGP Certificates</comment>
+        <subClassOf rdf:resource="cert#Certificate"/>
+        <owl:equivalentClass rdf:resource="http://xmlns.com/wot/0.1/PubKey"/>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:Class>
+
+    <owl:Class rdf:about="cert#PrivateKey">
+        <comment>Private Key</comment>
+        <subClassOf rdf:resource="cert#Key"/>
+    </owl:Class>
+
+    <owl:Class rdf:about="cert#PublicKey">
+        <comment>Public Key</comment>
+        <subClassOf rdf:resource="cert#Key"/>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:Class>
+
+    <owl:Class rdf:about="cert#Signature">
+        <comment>the class of signtatures</comment>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:Class>
+
+    <owl:Class rdf:about="cert#X509Certificate">
+        <comment>the class of X509 Certificates</comment>
+        <seeAlso rdf:resource="http://en.wikipedia.org/wiki/X509"/>
+        <subClassOf rdf:resource="cert#Certificate"/>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:Class>
+
+    <owl:DatatypeProperty rdf:about="cert#decimal">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <comment>
+    The encoding of an integer in decimal format. Similar to xsd:integer,
+    except that we relate an integer to its string representation.
+    This should be part of another ontology of course.
+    Could one use xsd:integer as such a relation, in which case this would be
+    owl:sameAs xsd:integer
+    </comment>
+        <domain rdf:resource="cert#Integer"/>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#String"/>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="cert#hex">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <comment>
+    The encoding of an integer as a hex string as it appears in the human
+    readable versions of X509 keys as shown &#60;http://en.wikipedia.org/wiki/X509&#62;
+    these are strings of the form '00:b4:31:98:0a' and can have newlines and spaces in between. The ':' are optional. 
+    We are looking for the official spec for this format. Please point us to it. 
+    Note: having found the official spec, we may decide that the name of this 
+    property is wrong.
+    Note: does specifying that the range is an xsd:String oblige the string
+    to be in ^^xsd:String format?
+    </comment>
+        <domain rdf:resource="cert#Integer"/>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#String"/>
+        <seeAlso rdf:resource="http://en.wikipedia.org/wiki/Distinguished_Encoding_Rules"/>
+        <seeAlso rdf:resource="http://en.wikipedia.org/wiki/X509"/>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:DatatypeProperty>
+
+    <rdf:Property rdf:about="cert#identity">
+        <comment>
+    the identity of the public key. These is the entity that knows the private key and so can decrypt messages encrypted with the public key, or encrypt messages that can be decrypted with the public key.
+    </comment>
+        <domain rdf:resource="cert#PublicKey"/>
+        <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <vs:term_status>unstable</vs:term_status>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="cert#public_key">
+        <comment>
+    relates the private key to the public key component, in a public/private
+    key pair.
+    </comment>
+        <domain rdf:resource="cert#PrivateKey"/>
+        <range rdf:resource="cert#PublicKey"/>
+        <vs:term_status>unstable</vs:term_status>
+    </rdf:Property>
+</rdf:RDF>
