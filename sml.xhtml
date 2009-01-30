@@ -1,6 +1,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
   <head>
-    <title>Service Modeling Language, Version 1.1 Namespaces</title>
+    <title>Service Modeling Language, Version 1.1 Namespace</title>
     <link type="text/css" rel="stylesheet" href="/StyleSheets/TR/base.css"/>
   </head>
   
@@ -8,24 +8,22 @@
     
     <div class="head">
       <p>
-	<a href="http://www.w3.org/" shape="rect">
-	  <img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/>
+	<a href="http://www.w3.org/">
+	  <img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home" border="0"/>
 	</a>
       </p>
       
-      <h1>Service Modeling Language, Version 1.1 Namespaces</h1>
-    </div>
-    
-    <div>
+      <h1>Service Modeling Language, Version 1.1 Namespace</h1>
       
       <p>The namespace identified by the URI
 	<code><a hef="http://www.w3.org/ns/sml">http://www.w3.org/ns/sml</a></code> 
 	is defined in the Service Modeling Language, Version
 	1.1.  This document contains a directory of links to resources
 	related to that namespace, using <a href="http://www.rddl.org/"
-	  shape="rect">Resource Directory Description Language</a>.</p>
+	 >Resource Directory Description Language</a>.</p>
       
     </div>
+
     <div>
       <h2>Normative definition of this namespace</h2>
       
@@ -36,12 +34,15 @@
 	  xlink:role="http://www.isi.edu/in-notes/iana/assignments/media-types/text/html" 
 	  xlink:arcrole="http://www.rddl.org/purposes#normative-reference" 
 	  xlink:href="http://www.w3.org/TR/2008/CR-sml-20081125/" 
-	  xlink:type="simple" xlink:show="none" xlink:actuate="none">
+	  xlink:type="simple" 
+	  xlink:show="none" 
+	  xlink:actuate="none">
 	  <a href="http://www.w3.org/TR/sml">Service Modeling 
-	    Language, Version 1.1</a> </rddl:resource>
+	    Language, Version 1.1</a>.</rddl:resource>
       </p>
       
     </div>
+
     <div>
       
       <h2>SML Schema</h2>
@@ -57,23 +58,72 @@
 	xlink:show="none" 
 	xlink:actuate="none">
 
-	<p>An XSD 1.0 schema document for this namespace is available
-	at
+	<p>An XSD 1.0 schema document for this namespace is available in two
+	  forms.  The schema document at
 	  <a title="2008-11-25 Service Modeling Language, Version 1.1 schema document" 
 	    href="http://www.w3.org/ns/sml-schema.xsd"
 	    >http://www.w3.org/ns/sml-schema.xsd</a>
+	  will be updated as necessary to correct errors or reflect
+	  changes or additions to the namespace.
 	</p>
+
+      </rddl:resource>      
+
+      <rddl:resource 
+	xmlns:xlink="http://www.w3.org/1999/xlink" 
+	id="SML_Schema_dated" 
+	xlink:title="2008-11-25 Service Modeling Language, Version 1.1 schema document" 
+	xlink:role="http://www.w3.org/2001/XMLSchema" 
+	xlink:arcrole="http://www.rddl.org/purposes#schema-validation" 
+	xlink:href="http://www.w3.org/2008/11/sml-schema.xsd" 
+	xlink:type="simple" 
+	xlink:show="none" 
+	xlink:actuate="none">
+
+	<p>The schema document at
+	  <a title="2008-11-25 Service Modeling Language, Version 1.1 schema document" 
+	    href="http://www.w3.org/2008/11/sml-schema.xsd"
+	    >http://www.w3.org/2008/11/sml-schema.xsd</a>
+	  will not change but will be retained without modification, 
+	  to reflect the state of the namespace at its date of issue.
+	</p>
+
       </rddl:resource>
     </div>
-        
-    <hr/>
+    <div>
 
-    <p>Comments on this document may be sent to the public <a
-	href="mailto:public-sml@w3.org" shape="rect">public-sml@w3.org</a>
-      mailing list (<a
-	href="http://lists.w3.org/Archives/Public/public-sml/"
-	shape="rect">public archive</a>).
-    </p>
+      <h2>SML and SML-IF Namespace Policy</h2>
 
+      <p>The <a href="http://www.w3.org/TR/sml/">SML</a> and 
+	<a href="http://www.w3.org/TR/2008/WD-sml-if-20081125/">SML-IF</a> 
+	specifications define the following namespaces.
+      </p>
+      <ul>
+	<li><a href="http://www.w3.org/ns/sml">http://www.w3.org/ns/sml</a></li>
+	<li><a href="http://www.w3.org/ns/sml-function">http://www.w3.org/ns/sml-function</a></li>
+	<li><a href="http://www.w3.org/ns/sml-if">http://www.w3.org/ns/sml-if</a></li>
+      </ul>
+      
+      <p>Names in the namespaces listed above are defined in version 1.1
+	of the SML and SML-IF specifications, and may also be defined in future
+	versions of the two specifications. The specifications define language
+	extension mechanisms and how to handle changes such as the addition of
+	new terms to the language. W3C reserves the right to determine which
+	changes (backward compatible or not) are in the interest of the
+	community at large.
+      </p>
+      
+    </div>
+
+    <div>        
+      <hr/>
+
+      <p>Comments on this document may be sent to the public 
+	<a href="mailto:public-sml@w3.org">public-sml@w3.org</a> mailing list 
+	(<a href="http://lists.w3.org/Archives/Public/public-sml/">public 
+	  archive</a>).
+      </p>
+
+    </div>
   </body>
 </html>
