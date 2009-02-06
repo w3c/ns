@@ -142,10 +142,10 @@
 
     <rdf:Property rdf:about="cert#identity">
         <comment>
-    the identity of the public key. These is the entity that knows the private key and so can decrypt messages encrypted with the public key, or encrypt messages that can be decrypted with the public key.
+    the identity of the public key. This is the entity that knows the private key and so can decrypt messages encrypted with the public key, or encrypt messages that can be decrypted with the public key. It can be an Agent, or an idirect identifier of an agent such as a foaf:OnlineAccount .
+    Should one specify the range as being the union of those two classes, or should one leave this open?
     </comment>
         <domain rdf:resource="cert#PublicKey"/>
-        <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
         <vs:term_status>unstable</vs:term_status>
     </rdf:Property>
 
