@@ -1,0 +1,78 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@keywords is, a, of.
+@prefix : <http://www.w3.org/ns/auth/acl#>.
+
+# Use classes of agents or use sioc:member of group?
+
+<> dc:title "Basic Access Control ontology";
+    rdfs:comment """Defines the element fo Authorization and its essential properties,
+    and also some classes pf access such as read and write. """.
+
+
+
+Authorization a rdfs:Class;
+    rdfs:label  "authorization";
+    rdfs:comment """An element of access control,
+    allowing agent to agents access of some kind to resources or classes of resources""".
+
+agent   a rdf:Property;
+        rdfs:label "agent";
+        rdfs:comment "A person or social entity to being given the right";
+        rdfs:domain     Authorization;
+        rdfs:range      foaf:Agent.
+        
+agentClass   a rdf:Property;
+        rdfs:label "agent";
+        rdfs:comment "A class of persons or social entities to being given the right";
+        rdfs:domain     Authorization;
+        rdfs:range      rdfs:Class.
+        
+accessTo
+    a rdf:Property;
+        rdfs:label "resource";
+        rdfs:comment "The informatiuon resource to which access is being granted.";
+        rdfs:domain     Authorization;
+        rdfs:range      foaf:Agent.
+        
+accessToClass
+    a rdf:Property;
+        rdfs:label "resource";
+        rdfs:comment "A class of nformation resources to which access is being granted.";
+        rdfs:domain     Authorization;
+        rdfs:range      rdfs:Class.
+    
+mode
+    a rdf:Property;
+        rdfs:label "access mode";
+        rdfs:comment "A mode of acess such as read or write.";
+        rdfs:domain     Authorization;
+        rdfs:range      rdfs:Class.
+
+#################################### Access modes
+
+Access a rdfs:Class;
+    label "access"@en;
+    rdfs:comment """Any kind of access to a resource. Don't use this, use R W and RW""".
+
+Read a rdfs:Class;
+    rdfs:label  "read"@en;
+    rdfs:subClassOf Access;
+    rdfs:comment    """The class of read operations""".
+        
+Write a rdfs:Class;
+    rdfs:subClassOf Access;
+    rdfs:label  "write"@en.
+        
+Control a rdfs:Class;
+    rdfs:subClassOf Access;
+    rdfs:label  "control"@en;
+    rdfs:comment """Allows read/write access to the ACL for the resource(s)""".
+    
+#ReadWrite a rdfs:Class;
+#    rdfs:label  "read, write"@en.
+#    rdfs:subClassOf Access; is subClassOf of Read, Write. # Any action in R or W is in RW
+        
+# Question -- should we allow read of the ACL by anyone with Read for the resource?

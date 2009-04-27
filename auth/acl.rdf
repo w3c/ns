@@ -1,0 +1,78 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdf:Description rdf:about="">
+        <dc:title>Basic Access Control ontology</dc:title>
+        <comment>Defines the element fo Authorization and its essential properties,
+    and also some classes pf access such as read and write. </comment>
+    </rdf:Description>
+
+    <Class rdf:about="http://www.w3.org/ns/auth/acl#Access">
+        <comment>Any kind of access to a resource. Don't use this, use R W and RW</comment>
+        <label xmlns="http://www.w3.org/ns/auth/acl#"
+            xml:lang="en">access</label>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/auth/acl#Authorization">
+        <comment>An element of access control,
+    allowing agent to agents access of some kind to resources or classes of resources</comment>
+        <label>authorization</label>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/auth/acl#Control">
+        <comment>Allows read/write access to the ACL for the resource(s)</comment>
+        <label xml:lang="en">control</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/acl#Access"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/auth/acl#Read">
+        <comment>The class of read operations</comment>
+        <label xml:lang="en">read</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/acl#Access"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/auth/acl#Write">
+        <label xml:lang="en">write</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/acl#Access"/>
+    </Class>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#accessTo">
+        <comment>The informatiuon resource to which access is being granted.</comment>
+        <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
+        <label>resource</label>
+        <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#accessToClass">
+        <comment>A class of nformation resources to which access is being granted.</comment>
+        <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
+        <label>resource</label>
+        <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#agent">
+        <comment>A person or social entity to being given the right</comment>
+        <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
+        <label>agent</label>
+        <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#agentClass">
+        <comment>A class of persons or social entities to being given the right</comment>
+        <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
+        <label>agent</label>
+        <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#mode">
+        <comment>A mode of acess such as read or write.</comment>
+        <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
+        <label>access mode</label>
+        <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Property>
+</rdf:RDF>
