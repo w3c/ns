@@ -44,14 +44,14 @@
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#accessTo">
         <comment>The informatiuon resource to which access is being granted.</comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
-        <label>resource</label>
-        <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <label>to</label>
+        <range rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#accessToClass">
         <comment>A class of nformation resources to which access is being granted.</comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
-        <label>resource</label>
+        <label>to all in</label>
         <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </rdf:Property>
 
@@ -67,6 +67,12 @@
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
         <label>agent</label>
         <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#defaultForNew">
+        <comment>A directory for which this authorization is used for new files in the directory.</comment>
+        <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
+        <label>default access for new things in</label>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#mode">

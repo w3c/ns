@@ -1,5 +1,6 @@
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix gen: <http://www.w3.org/2006/gen/ont#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @keywords is, a, of.
@@ -28,21 +29,28 @@ agentClass   a rdf:Property;
         rdfs:label "agent";
         rdfs:comment "A class of persons or social entities to being given the right";
         rdfs:domain     Authorization;
-        rdfs:range      rdfs:Class.
+        rdfs:range      rdfs:Class.  # Must be subclass of foaf:Agent. 
+                        # For public access, use foaf:Agent.
         
 accessTo
     a rdf:Property;
-        rdfs:label "resource";
+        rdfs:label "to";
         rdfs:comment "The informatiuon resource to which access is being granted.";
         rdfs:domain     Authorization;
-        rdfs:range      foaf:Agent.
+        rdfs:range      gen:InformationResource.
         
 accessToClass
     a rdf:Property;
-        rdfs:label "resource";
+        rdfs:label "to all in";
         rdfs:comment "A class of nformation resources to which access is being granted.";
         rdfs:domain     Authorization;
         rdfs:range      rdfs:Class.
+    
+defaultForNew
+    a rdf:Property;
+        rdfs:label "default access for new things in";
+        rdfs:comment "A directory for which this authorization is used for new files in the directory.";
+        rdfs:domain     Authorization.
     
 mode
     a rdf:Property;
