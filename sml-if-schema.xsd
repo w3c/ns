@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="../2008/09/xsd.xsl"?>
-
 <!--
 /*
- * Copyright © 2008 World Wide Web Consortium,
+ * Copyright © 2009 World Wide Web Consortium,
  *
  * (Massachusetts Institute of Technology, European Research Consortium for
  * Informatics and Mathematics, Keio University). All Rights Reserved. This
@@ -17,7 +16,7 @@
 <xs:schema 
     xmlns:xs="http://www.w3.org/2001/XMLSchema" 
     xmlns:smlif="http://www.w3.org/ns/sml-if" 
-    targetNamespace="http://www.w3.org/2008/11/sml-if" 
+    targetNamespace="http://www.w3.org/ns/sml-if" 
     elementFormDefault="qualified" 
     blockDefault="#all" 
     version="1.0" 
