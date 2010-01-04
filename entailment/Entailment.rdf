@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <foaf:name>Ivan Herman</foaf:name>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:date>2009-12-28</dc:date>
+    <owl:versionInfo>$Date$</owl:versionInfo>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/entailment/"/>
+    <dc:description>Unique URIs for Semantic Web Entailment Regimes</dc:description>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/Overview.html">
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+    <dc:title>Unique URIs for Entailment Regimes</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/Entailment">
+    <dc:description>This is a unique, top-level Class URI for various Semantic Web entailment regimes as instances</dc:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/RDFS"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/RIF"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/OWL-RDF-Based"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/RDF"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/Simple"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/D"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/OWL-Direct"/>
+  </rdf:Description>
+</rdf:RDF>
+
