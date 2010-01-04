@@ -7,8 +7,6 @@ ForceType 'text/html; charset=UTF-8'
 ForceType 'text/turtle; charset=UTF-8'
 </Files>
 
-Options -MultiViews
-
 RewriteEngine On
 RewriteBase /ns/owl-profile/
 
