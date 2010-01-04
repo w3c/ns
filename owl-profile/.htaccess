@@ -10,7 +10,7 @@ ForceType 'text/turtle; charset=UTF-8'
 Options -MultiViews
 
 RewriteEngine On
-RewriteBase http://www.w3.org/ns/owl-profile/
+RewriteBase /ns/owl-profile/
 
 RewriteRule ^$ Overview
 
