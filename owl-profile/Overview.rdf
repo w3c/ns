@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <foaf:name>Ivan Herman</foaf:name>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/owl-profile/Profile">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/owl-profile/Full"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/owl-profile/RL"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/owl-profile/DL"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/owl-profile/QL"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/owl-profile/EL"/>
+    <dc:description>This is a unique, top-level Class URI for various OWL 2 Profiles and instances.</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/owl-profile/">
+    <dc:date>2010-01-05</dc:date>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <rdfs:comment>Note that, strictly speaking, OWL Full and OWL DL are not referred to, formally, as "profiles" by the OWL 2 Profiles specification. However, "each profile is defined as a syntactic restriction of the OWL 2 Structural Specification, i.e., as a subset of the structural elements that can be used in a conforming ontology,…" (see the OWL 2 Document Overview) In this sense, and for practical purposes, including URI-s for OWL Full and OWL DL is correct: OWL Full does not impose any restriction, whereas OWL DL can be seen as a sytactic restriction of OWL Full that is particularly well suited for OWL 2 Direct Semantics. Note also that there are no separate URI-s for the 2004 version of OWL Full and OWL DL; OWL 2 Full and OWL 2 DL, published in 2008 supersede that version of OWL. Nor is there a URI for OWL Lite.</rdfs:comment>
+    <dc:description>Unique URIs for OWL 2 Profiles</dc:description>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/owl-profile/"/>
+    <owl:versionInfo>$Date$</owl:versionInfo>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/Overview.html">
+    <dc:title>Unique URIs for OWL Profiles</dc:title>
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+  </rdf:Description>
+</rdf:RDF>
+

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  xmlns:dc="http://purl.org/dc/terms/"
+	  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
+	  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+	  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	  xmlns:prof="http://www.w3.org/ns/owl-profile/"
+	  xmlns:owl="http://www.w3.org/2002/07/owl#"
+	  version="XHTML+RDFa 1.0"
+>
+  <head about="http://www.w3.org/ns/entailment/Overview.html">
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+	<title property="dc:title">Unique URIs for OWL Profiles</title>
+	<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/base"/>
+  </head>
+	
+  <body about="[prof:]" typeof="owl:Ontology">
+	<p class="banner">
+		<a href="/2001/sw/">
+			<img src="/Icons/SW/sw-horz-w3c.png" width="241" height="48" alt="W3C SW Logo"/>
+		</a>
+	</p>
+	
+	<h1 property="dc:description">Unique URIs for OWL 2 Profiles</h1>
+		
+	<div about="[prof:Profile]" typeof="rdfs:Class owl:Class">
+	  <p ><span property="dc:description" datatype="">This is a unique, top-level Class URI for various OWL 2 Profiles and instances.</span>. For the specific entailment regimes, use these URI-s:</p>
+	  <ul rel="rdfs:seeAlso">
+		<li>Full: (<code><a href="http://www.w3.org/ns/owl-profile/Full">http://www.w3.org/ns/owl-profile/Full</a></code>)</li>
+		<li>DL: (<code><a href="http://www.w3.org/ns/owl-profile/DL">http://www.w3.org/ns/owl-profile/DL</a></code>)</li>
+		<li>EL: (<code><a href="http://www.w3.org/ns/owl-profile/EL">http://www.w3.org/ns/owl-profile/EL</a></code>)</li>
+		<li>QL: (<code><a href="http://www.w3.org/ns/owl-profile/QL">http://www.w3.org/ns/owl-profile/QL</a></code>)</li>
+		<li>RL: (<code><a href="http://www.w3.org/ns/owl-profile/RL">http://www.w3.org/ns/owl-profile/RL</a></code>)</li>
+	  </ul>
+	</div>
+	
+	<p property="rdfs:comment" datatype="">Note that, strictly speaking, OWL Full and OWL DL are not referred to, formally, as "profiles"
+	by the <a href="http://www.w3.org/TR/owl2-profiles/">OWL 2 Profiles</a> specification. However, "each profile is defined as a syntactic restriction of the
+	OWL 2 Structural Specification, i.e., as a subset of the structural elements that can be used in a conforming ontology,…"
+	(see the <a href="http://www.w3.org/TR/owl2-overview/">OWL 2 Document Overview</a>)
+	In this sense, and for practical purposes, including URI-s for OWL Full and OWL DL is correct: OWL Full does not impose any restriction, whereas OWL DL
+	can be seen as a sytactic restriction of OWL Full that is particularly well suited for <a href="http://www.w3.org/TR/owl2-direct-semantics/">OWL 2 Direct Semantics</a>.
+	Note also that there are no separate URI-s for the 2004 version of OWL Full and OWL DL; OWL 2 Full and OWL 2 DL, published in 2008 supersede
+	that version of OWL. Nor is there a URI for OWL Lite.</p>
+	  
+	<hr />
+	<address >
+	  <span rel="dc:creator" >
+		<span about="http://www.ivan-herman.net/foaf#me" typeof="foaf:Person">
+			<span property="foaf:name" datatype=""><a href="http://www.w3.org/People/Ivan">Ivan Herman</a></span>,
+			<a rel="foaf:mbox" href="mailto:ivan@w3.org">ivan@w3.org</a>,
+			<a rel="foaf:workplaceHomepage" href="http://www.w3.org">W3C</a>,
+			<span rel="rdfs:seeAlso" resource="http://www.ivan-herman.net/foaf" property="foaf:title">Semantic Web Activity Lead</span>,
+		</span>
+	  </span>
+	  <span property="dc:date">2010-01-05</span>
+	  <br />
+	  <span property="owl:versionInfo">$Date$</span>
+	  <span style="display:none" rel="owl:versionIRI" resource="[prof:]"/>
+	</address>
+  </body>
+</html>
