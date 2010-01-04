@@ -7,4 +7,10 @@ ForceType 'text/html; charset=UTF-8'
 ForceType 'text/turtle; charset=UTF-8'
 </Files>
 
+Options -MultiViews
+
+RewriteEngine On
+RewriteBase http://www.w3.org/ns/owl-profile/
+
+RewriteRule ^$ Overview
 
