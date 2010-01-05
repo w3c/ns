@@ -1,5 +1,6 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix dist: <http://www.w3.org/2007/08/pyRdfa/distiller#> .
+@prefix ent: <http://www.w3.org/ns/entailment/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -8,13 +9,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-<http://www.w3.org/ns/entailment/OWL-Direct> dc:creator <http://www.ivan-herman.net/foaf#me> ;
-     dc:date "2009-11-13" ;
+ent:OWL-Direct a ent:Entailment ;
+     dc:creator <http://www.ivan-herman.net/foaf#me> ;
+     dc:date "2010-01-05" ;
      dc:description "This is a unique identifier defined for the OWL Entailment with Direct Semantics" ;
-     rdfs:comment "“http://www.w3.org/ns/entailment/OWL-Direct” is the URI. The specification for the entailment is part of the OWL 2 W3C Recommendation." ;
+     rdfs:comment "The specification for the entailment is part of the OWL 2 W3C Recommendation." ;
      rdfs:seeAlso <http://www.w3.org/TR/2009/REC-owl2-direct-semantics-20091027/> . 
 
-<http://www.w3.org/ns/entailment/OWL-Direct.html> dc:title "Unique URI for OWL Entailment with Direct Semantics" ;
+ent:OWL-Direct.html dc:title "Unique URI for OWL Entailment with Direct Semantics" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;

@@ -6,24 +6,25 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/OWL-Direct">
+    <dc:date>2010-01-05</dc:date>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <rdfs:comment>The specification for the entailment is part of the OWL 2 W3C Recommendation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/ns/entailment/Entailment"/>
+    <dc:description>This is a unique identifier defined for the OWL Entailment with Direct Semantics</dc:description>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/2009/REC-owl2-direct-semantics-20091027/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <foaf:name>Ivan Herman</foaf:name>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/entailment/OWL-Direct.html">
     <dc:title>Unique URI for OWL Entailment with Direct Semantics</dc:title>
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/OWL-Direct">
-    <dc:description>This is a unique identifier defined for the OWL Entailment with Direct Semantics</dc:description>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/2009/REC-owl2-direct-semantics-20091027/"/>
-    <rdfs:comment>“http://www.w3.org/ns/entailment/OWL-Direct” is the URI. The specification for the entailment is part of the OWL 2 W3C Recommendation.</rdfs:comment>
-    <dc:date>2009-11-13</dc:date>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:name>Ivan Herman</foaf:name>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
   </rdf:Description>
 </rdf:RDF>
 
