@@ -6,25 +6,25 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/owl-profile/RL">
-    <dc:date>2010-01-05</dc:date>
-    <dc:description>This is a unique identifier for the OWL 2 RL Profile</dc:description>
-    <rdf:type rdf:resource="http://www.w3.org/ns/owl-profile/Profile"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/owl2-profiles/#OWL_2_RL"/>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdfs:comment>'http://www.w3.org/ns/owl-profile/RL' is the URI. The specification for the OWL 2 RL Profile is part of the the OWL 2 W3C Recommendation.</rdfs:comment>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/entailment/D.html">
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
     <dc:title>Unique URI for OWL 2 RL Profile</dc:title>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:name>Ivan Herman</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
     <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
     <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <foaf:name>Ivan Herman</foaf:name>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/owl-profile/RL">
+    <dc:date>2010-01-05</dc:date>
+    <rdfs:comment>'http://www.w3.org/ns/owl-profile/RL' is the URI. The specification for the OWL 2 RL Profile is part of the the OWL 2 W3C Recommendation.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/owl2-profiles/#OWL_2_RL"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/owl-profile/Profile"/>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <dc:description>This is a unique identifier for the OWL 2 RL Profile</dc:description>
   </rdf:Description>
 </rdf:RDF>
 
