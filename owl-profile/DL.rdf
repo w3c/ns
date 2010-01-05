@@ -11,20 +11,20 @@
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/owl-profile/DL">
+    <rdfs:comment>OWL DL is defined by the OWL 2 Structural Specification and Functional-Style Syntax document, part of the the OWL 2 W3C Recommendation.</rdfs:comment>
     <dc:date>2010-01-05</dc:date>
-    <rdfs:comment>'http://www.w3.org/ns/owl-profile/DL' is the URI. OWL DL is defined by the OWL 2 Structural Specification and Functional-Style Syntax document, part of the the OWL 2 W3C Recommendation.</rdfs:comment>
-    <dc:description>This is a unique identifier for OWL 2 DL</dc:description>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/owl-profile/Profile"/>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <dc:description>This is a unique identifier for OWL 2 DL</dc:description>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/owl2-syntax/"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
     <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:name>Ivan Herman</foaf:name>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:name>Ivan Herman</foaf:name>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
     <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
   </rdf:Description>
 </rdf:RDF>
 
