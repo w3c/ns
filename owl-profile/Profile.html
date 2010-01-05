@@ -26,9 +26,10 @@
 	<h1 property="dc:description">Unique URIs for OWL 2 Profiles</h1>
 		
 	<div about="[prof:Profile]" typeof="rdfs:Class owl:Class">
-	  <p ><span property="dc:description" datatype="">This is a unique, top-level Class URI for various OWL 2 Profiles and instances.</span> For the specific entailment regimes, use these URI-s:</p>
+	  <p >'<code>http://www.w3.org/ns/owl-profile/Profile</code>' is <span property="dc:description" datatype="">a unique, top-level
+	  Class URI for the concept of OWL 2 Profiles. Instances for this Class represent the OWL 2 Profiles like DL, EL, QL, and RL.</span>
+	  For the specific profiles, use these URI-s:</p>
 	  <ul rel="rdfs:seeAlso">
-		<li>Full: (<code><a href="http://www.w3.org/ns/owl-profile/Full">http://www.w3.org/ns/owl-profile/Full</a></code>)</li>
 		<li>DL: (<code><a href="http://www.w3.org/ns/owl-profile/DL">http://www.w3.org/ns/owl-profile/DL</a></code>)</li>
 		<li>EL: (<code><a href="http://www.w3.org/ns/owl-profile/EL">http://www.w3.org/ns/owl-profile/EL</a></code>)</li>
 		<li>QL: (<code><a href="http://www.w3.org/ns/owl-profile/QL">http://www.w3.org/ns/owl-profile/QL</a></code>)</li>
@@ -36,21 +37,18 @@
 	  </ul>
 	</div>
 	
-	<p property="rdfs:comment" datatype="">Note that, strictly speaking, OWL Full and OWL DL are not referred to,
-	formally, as “profiles”
-	by the <a href="http://www.w3.org/TR/owl2-profiles/">OWL 2 Profiles</a> specification. However,
-	“each profile is defined as a syntactic restriction of the
+	<p property="rdfs:comment" datatype="">Note that, strictly speaking OWL DL is not referred to,
+	formally, as a “profile” by the <a href="http://www.w3.org/TR/owl2-profiles/">OWL 2 Profiles</a> specification.
+	However, “each profile is defined as a syntactic restriction of the
 	OWL 2 Structural Specification, i.e., as a subset of the structural elements that can be used in a
 	conforming ontology,…”
-	(see the <a href="http://www.w3.org/TR/owl2-overview/">OWL 2 Document Overview</a>)
-	In this sense, and for practical purposes, including URI-s for OWL Full and OWL DL is correct:
-	OWL Full does not impose any restriction, whereas OWL DL
-	can be seen as a sytactic restriction of OWL Full that is particularly well suited for
+	(see the <a href="http://www.w3.org/TR/owl2-overview/">OWL 2 Document Overview</a>).
+	In this sense, and for practical purposes, including a URI for OWL DL is correct;
+	indeed, OWL DL
+	can be seen as a sytactic restriction of OWL that is particularly well suited for
 	<a href="http://www.w3.org/TR/owl2-direct-semantics/">OWL 2 Direct Semantics</a>.
-	Note also that there are no separate URI-s for the 2004 version of OWL Full and OWL DL; OWL 2
-	Full and OWL 2 DL, published in 2008 supersede
-	that version of OWL. Nor is there a URI for OWL Lite.</p>
-	  
+	Note also that there are no separate URI-s for the 2004 version of OWL DL; OWL 2 DL, published in 2008 supersede
+	that version of. Nor is there a URI for OWL Lite.</p>
 	<hr />
 	<address >
 	  <span rel="dc:creator" >
