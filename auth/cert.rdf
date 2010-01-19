@@ -123,20 +123,31 @@
 
     <owl:DatatypeProperty rdf:about="cert#hex">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <comment>
-    The encoding of an integer as a hex string as it appears in the human
-    readable versions of X509 keys as shown &#60;http://en.wikipedia.org/wiki/X509&#62;
-    these are strings of the form '00:b4:31:98:0a' and can have newlines and spaces in between. The ':' are optional. 
-    We are looking for the official spec for this format. Please point us to it. 
-    Note: having found the official spec, we may decide that the name of this 
-    property is wrong.
-    Note: does specifying that the range is an xsd:String oblige the string
-    to be in ^^xsd:String format?
-    </comment>
+        <comment xml:lang="en">
+   An encoding of a positive integer (from 0 to infintity) as a hexadecimal string that makes it easy to read and/or fun to present on the web. 
+   The purpose of this way of representing hexadecimals is to enable users to copy and paste hexadecimal notations as shown by most browsers, keychains or tools such as opensso, into their rdf representation of choice.  There are a wide variety of ways in which such strings can be presented. One finds the following 
+
+  e1 dc d5 e1 00 8f 21 5e d5 cc 7c 7e c4 9c ad 86 
+  64 aa dc 29 f2 8d d9 56 7f 31 b6 bd 1b fd b8 ee 
+  51 0d 3c 84 59 a2 45 d2 13 59 2a 14 82 1a 0f 6e 
+  d3 d1 4a 2d a9 4c 7e db 90 07 fc f1 8d a3 8e 38 
+  25 21 0a 32 c1 95 31 3c ba 56 cc 17 45 87 e1 eb 
+  fd 9f 0f 82 16 67 9f 67 fa 91 e4 0d 55 4e 52 c0 
+  66 64 2f fe 98 8f ae f8 96 21 5e ea 38 9e 5c 4f 
+  27 e2 48 ca ca f2 90 23 ad 99 4b cc 38 32 6d bf  
+
+ Or the same as the above, with ':' instead of spaces. We can't guarantee that these are the only ways such tools will present hexadecimals, so we are very lax.
+ The letters can be uppercase or lowercase, or mixed.  
+ Some strings may start with initial 00's which would be very important if the number were in complement of 2 notation, where in some cases this could be the difference between a positive and a negative number, in particular if the number starts with one of [8-f].  But as we interpret this string as a hexadecimal number leading 00s are not important  (Complement of 2 notation and hexadecimal overlap for positive numbers)
+ In order to make this fun, we allow any unicode characters in the string. A parser should 
+  1. remove all non hexadecimal characters
+  2. treat the resulting as a hexadecimal representation of a number
+ This will allow people to make an ascii - better yet a UTF-8 - picture of their public key when publishing it on the web.
+   </comment>
         <domain rdf:resource="cert#Integer"/>
+        <label xml:lang="en">hexadecimal</label>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#String"/>
-        <seeAlso rdf:resource="http://en.wikipedia.org/wiki/Distinguished_Encoding_Rules"/>
-        <seeAlso rdf:resource="http://en.wikipedia.org/wiki/X509"/>
+        <seeAlso rdf:resource="http://en.wikipedia.org/wiki/Hexadecimal"/>
         <vs:term_status>unstable</vs:term_status>
     </owl:DatatypeProperty>
 
