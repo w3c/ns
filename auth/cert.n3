@@ -110,7 +110,7 @@
       owl:InverseFunctionalProperty;
    rdfs:label "hexadecimal"@en;  
    rdfs:comment """
-   An encoding of a positive integer (from 0 to infintity) as a hexadecimal string that makes it easy to read and/or fun to present on the web. 
+   An encoding of a positive integer (from 0 to infinity) as a hexadecimal string that makes it easy to read and/or fun to present on the web. 
    The purpose of this way of representing hexadecimals is to enable users to copy and paste hexadecimal notations as shown by most browsers, keychains or tools such as opensso, into their rdf representation of choice.  There are a wide variety of ways in which such strings can be presented. One finds the following 
 
   e1 dc d5 e1 00 8f 21 5e d5 cc 7c 7e c4 9c ad 86 
