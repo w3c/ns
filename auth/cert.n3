@@ -6,6 +6,7 @@
 @prefix xsd:  <http://www.w3.org/2001/XMLSchema#> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix : <cert#> .
 
 
@@ -36,24 +37,13 @@
      - should this all be in one file? Or should this be cut up a little? Say one file for the general CERT ontology, and then files for RSA, DSA, PGP, etc... Or perhaps it does not really matter?
      - expand more on the certification side of things
      - verify this by security experts
-     - add more todos
      - owl2 has some constructs for combined inverse functional properties. 
        This may be useful to use in defining an RSA key which is identified
        by two numbers.
-     - when more stable create rdf/xml version
      - also create html version of the spec by using this as a template.
      - should comments such as this be in html?
+     - add more todos
    """.
-
-:Integer a owl:Class;
-    vs:term_status "unstable";
-    rdfs:comment """ 
-    The class of all integers, however large they be. 
-    This should probably be defined in another ontology.
-    Different representations for each can be defined via relations to string
-    literals. 
-    This is equivalent to the values of xsd:integer literals, except that we don't want to be locked into having to use a particular literal notation. Some of these integers are so long it is much better to express them in hexadecimal format.
-    """ .
 
 :Certificate a owl:Class;
     vs:term_status "unstable";
@@ -106,9 +96,19 @@
     rdfs:domain :PrivateKey;
     rdfs:range :PublicKey .  
 
-:hex a owl:DatatypeProperty, 
+:hex a owl:DatatypeProperty, rdfs:Datatype,
       owl:InverseFunctionalProperty;
    rdfs:label "hexadecimal"@en;  
+   rdfs:seeAlso <http://en.wikipedia.org/wiki/Hexadecimal>;
+   owl:equivalentClass xsd:nonNegativeInteger;
+   rdfs:domain xsd:nonNegativeInteger;
+   rdfs:range xsd:string;
+   skos:editorialNote """
+     This relation should slowly be transited to just being a datatype.
+     Being a datatype and a property is legal as explained here
+   http://lists.w3.org/Archives/Public/semantic-web/2010Mar/0037.html 
+ But it may be somewhat confusing, especially if it goes against a pattern - still to be set - by the xsd datatypes as the follow up email makes clear. 
+   """@en;
    rdfs:comment """
    An encoding of a positive integer (from 0 to infinity) as a hexadecimal string that makes it easy to read and/or fun to present on the web. 
    The purpose of this way of representing hexadecimals is to enable users to copy and paste hexadecimal notations as shown by most browsers, keychains or tools such as opensso, into their rdf representation of choice.  There are a wide variety of ways in which such strings can be presented. One finds the following 
@@ -124,31 +124,38 @@
 
  Or the same as the above, with ':' instead of spaces. We can't guarantee that these are the only ways such tools will present hexadecimals, so we are very lax.
  The letters can be uppercase or lowercase, or mixed.  
- Some strings may start with initial 00's which would be very important if the number were in complement of 2 notation, where in some cases this could be the difference between a positive and a negative number, in particular if the number starts with one of [8-f].  But as we interpret this string as a hexadecimal number leading 00s are not important  (Complement of 2 notation and hexadecimal overlap for positive numbers)
+ Some strings may start with initial 00's, and can be stripped in this notation as they often are. Doing this could, in complement of 2 notation turn a positive number into a negative one, if the first hexadecimal character happens to be one of  the set {'8', '9', 'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E', 'f', 'F'} .  As we interpret this string as a hexadecimal number leading 00s are not important  (Complement of 2 notation and hexadecimal overlap for positive numbers)
  In order to make this fun, we allow any unicode characters in the string. A parser should 
   1. remove all non hexadecimal characters
   2. treat the resulting as a hexadecimal representation of a number
  This will allow people to make an ascii - better yet a UTF-8 - picture of their public key when publishing it on the web.
    """@en;
-  rdfs:seeAlso <http://en.wikipedia.org/wiki/Hexadecimal>;
-  rdfs:domain :Integer;
-  rdfs:range xsd:String;
   vs:term_status "unstable" .
 
 :decimal a owl:DatatypeProperty,
            owl:InverseFunctionalProperty;
-   vs:term_status "unstable";
+   vs:term_status "archaic";
+   rdfs:domain xsd:nonNegativeInteger;
+   rdfs:range xsd:string; 
+   skos:editorialNote """
+      The name for this relation is not good. Even though Decimal is clearly defined as numbers in base 10 notation ( conf http://en.wikipedia.org/wiki/Decimal ), it is most often understood as refering to numbers with decimal fractions, which in cryptgraphic integer arithmetic do not turn up. 
+    Instead one should use cert:int
+   """@en;
    rdfs:comment """
-    The encoding of an integer in decimal format. Similar to xsd:integer,
-    except that we relate an integer to its string representation.
-    This should be part of another ontology of course.
-    Could one use xsd:integer as such a relation, in which case this would be
-    owl:sameAs xsd:integer
-    """;
-   rdfs:domain :Integer;
-   rdfs:range xsd:String .
+      An encoding of an integer in base 10 notation. Use cert:int instead.
+    """@en.
 
-
+:int a rdfs:Datatype;
+   vs:term_status "unstable";
+   owl:equivalentClass xsd:nonNegativeInteger;
+   skos:editorialNote """
+      We may decide to make it easier to write integers than what xsd:integer provides, if needed.
+   """@en;
+   rdfs:comment """
+      A positive integer in base 10 notation.
+      xsd:nonNegativeInteger could be used, but is a bit long to write, and may be too strictly defined. 
+      This is here to provice a pair with cert:hex, to avoid needing to import a new namespace, and to give a bit more flexibility in the future.
+   """@en .
 
 :identity a rdf:Property;
     vs:term_status "unstable";
