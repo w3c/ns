@@ -1,0 +1,54 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+@prefix dc:	<http://purl.org/dc/elements/1.1/>.
+@prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
+@prefix :	<http://www.w3.org/ns/pim/trip#> .
+
+@prefix dbp: <http://dbpedia.org/resource/>.
+@prefix cal: <http://www.w3.org/2002/12/cal/ical#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+
+@keywords a, is, of.
+
+<>  doc:version "$Id$";
+s:comment """This ontology is for use in describing trips,
+such as business trips.
+Trips connect where we are at a given point in time,
+meetings which are part of the trip, and who pays for the trip 
+or part of the trip.
+They are useful for describing travel plans,
+for working out expenses, and for categoizing photographs.
+Trips do not in fact logically have to involve travel.
+A trip could be used to collate expenses relating to an activity or event
+at ones home base, or a set of photos taken at home etc.
+""".
+
+Trip a s:Class; s:label "trip";
+    :example  [
+            cal:DTSTART "2006-02-01";
+            cal:DTEND "2006-02-04";
+            dc:title "Trip to New York and Chicago";
+            :part [
+                cal:DTSTART "2006-02-03";
+                cal:DTEND "2006-02-04";
+                :location dbp:Chicago]
+            ].
+
+part a rdf:Property; s:label "part".   # @@ Use a common part from another generic vocabulary?
+
+location a rdf:Property; s:label "location".
+
+funder a rdf:Property;
+    s:label "funder";
+    s:comment """Who pays for the this? An organization or individual.
+     Could apply to a trip (or a doap:Project, or a cal:Event, etc)""";
+    s:range foaf:Agent.
+
+trip a rdf:Property;
+    s:label "trip";
+    s:comment """The trips associated with an expense (a financial transaction), 
+    a photo, a meeting, etc.""".
+
+
