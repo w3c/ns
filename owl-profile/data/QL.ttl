@@ -9,15 +9,16 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-<http://www.w3.org/ns/entailment/D.html> dc:title "Unique URI for OWL 2 QL Profile" ;
-     xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
-
 prof:QL a prof:Profile ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
      dc:date "2010-01-05" ;
      dc:description "This is a unique identifier for the OWL 2 QL Profile" ;
      rdfs:comment "The specification for the OWL 2 QL Profile is part of the the OWL 2 W3C Recommendation." ;
-     rdfs:seeAlso <http://www.w3.org/TR/owl2-profiles/#OWL_2_QL> . 
+     rdfs:isDefinedBy <http://www.w3.org/TR/owl2-profiles/#OWL_2_QL> ;
+     rdfs:seeAlso <http://www.w3.org/TR/2009/REC-owl2-overview-20091027/> . 
+
+<http://www.w3.org/ns/owl-profile/data/QL.html> dc:title "Unique URI for OWL 2 QL Profile" ;
+     xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;
      rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;

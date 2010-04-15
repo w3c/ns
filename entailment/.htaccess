@@ -10,7 +10,7 @@ ForceType 'text/turtle; charset=UTF-8'
 RewriteEngine On
 RewriteBase /ns/entailment/
 
-RewriteRule ^$ Entailment [R=303]
+RewriteRule ^$ Entailment
 
 RewriteRule ^D$ data/D [R=303]
 RewriteRule ^OWL-Direct$ data/OWL-Direct [R=303]

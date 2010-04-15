@@ -12,3 +12,7 @@ RewriteBase /ns/owl-profile/
 
 RewriteRule ^$ Profile
 
+RewriteRule ^DL$ data/DL [R=303]
+RewriteRule ^QL$ data/QL [R=303]
+RewriteRule ^RL$ data/RL [R=303]
+RewriteRule ^EL$ data/EL [R=303]
