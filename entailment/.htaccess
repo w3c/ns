@@ -12,3 +12,4 @@ RewriteBase /ns/entailment/
 
 RewriteRule ^D$ data/D [R=303]
 
+RewriteRule ^test$ data/D [R=303]
