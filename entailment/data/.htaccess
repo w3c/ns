@@ -7,8 +7,3 @@ ForceType 'text/html; charset=UTF-8'
 ForceType 'text/turtle; charset=UTF-8'
 </Files>
 
-RewriteEngine On
-RewriteBase /ns/entailment/
-
-RewriteRule ^D$ data/D [R=303]
-

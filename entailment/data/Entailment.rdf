@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/">
+    <dc:date>2010-01-05</dc:date>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/entailment/"/>
+    <owl:versionInfo>$Date$</owl:versionInfo>
+    <dc:description>Unique URIs for Semantic Web Entailment Regimes</dc:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/Overview.html">
+    <dc:title>Unique URIs for Entailment Regimes</dc:title>
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/Entailment">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/RDF"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/OWL-RDF-Based"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/OWL-Direct"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/RIF"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/RDFS"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/Simple"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/entailment/D"/>
+    <dc:description>This is a unique, top-level Class URI for various Semantic Web entailment regimes. Instances include Simple entailment, RDF, RDFS, and D entailments, entailments with Direct and RDF Based Semantics of OWL, and RIF entailment.</dc:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <foaf:name>Ivan Herman</foaf:name>
+  </rdf:Description>
+</rdf:RDF>
+
