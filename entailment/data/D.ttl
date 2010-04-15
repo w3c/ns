@@ -11,12 +11,13 @@
 
 ent:D a ent:Entailment ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
-     dc:date "2010-01-05" ;
+     dc:date "2010-04-18" ;
      dc:description "This is a unique identifier for D Entailment" ;
      rdfs:comment "The specification for the D entailment is part of the RDF Semantics W3C Recommendation." ;
-     rdfs:seeAlso <http://www.w3.org/TR/2004/REC-rdf-mt-20040210/#D_entailment> . 
+     rdfs:isDefinedBy <http://www.w3.org/TR/2004/REC-rdf-mt-20040210/#D_entailment> ;
+     rdfs:seeAlso <http://www.w3.org/TR/2004/REC-rdf-mt-20040210/> . 
 
-ent:D.html dc:title "Unique URI for D Entailment" ;
+<http://www.w3.org/ns/entailment/data/D.html> dc:title "Unique URI for D Entailment" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;
