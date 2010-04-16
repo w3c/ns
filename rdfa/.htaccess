@@ -1,8 +1,0 @@
-<Files ~ "\.ttl">
-ForceType 'text/turtle; charset=UTF-8'
-</Files>
-
-RewriteEngine On
-RewriteBase /ns/rdfa/
-
-RewriteRule ^$ rdfa 
