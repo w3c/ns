@@ -1,0 +1,10 @@
+URI: rdfa
+
+URI: rdfa.html
+Content-Type: text/html
+
+URI: rdfa.rdf
+Content-Type: application/rdf+xml; qs=0.4
+
+URI: rdfa.ttl
+Content-Type: text/turtle; qs=0.5
