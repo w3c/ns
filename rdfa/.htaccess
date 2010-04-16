@@ -3,6 +3,6 @@ ForceType 'text/turtle; charset=UTF-8'
 </Files>
 
 RewriteEngine On
-RewriteBase /ns/
+RewriteBase /ns/rdfa/
 
-RewriteRule ^rdfa$ rdfa/ [R=303]
+RewriteRule ^$ rdfa 
