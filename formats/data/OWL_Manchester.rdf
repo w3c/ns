@@ -7,28 +7,28 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:name>Ivan Herman</foaf:name>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/OWL_Manchester">
-    <formats:media_type>text/owl-manchester</formats:media_type>
-    <formats:preferred_suffix>.omn</formats:preferred_suffix>
-    <dc:description>Unique identifier for the OWL Manchester Syntax file format</dc:description>
-    <dc:date>2010-05-03</dc:date>
-    <rdfs:comment>OWL Manchester Syntax is defined by the “OWL 2 Web Ontology Language, Manchester Syntax” W3C Note.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/owl2-manchester-syntax/"/>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/owl2-manchester-syntax/#Appendix:_Internet_Media_Type.2C_File_Extension_and_Macintosh_File_Type"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/OWL_Manchester.html">
     <dc:title>Information Resource for the OWL Manchester Syntax File Format</dc:title>
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/formats/OWL_Manchester">
+    <rdfs:comment>OWL Manchester Syntax is defined by the “OWL 2 Web Ontology Language, Manchester Syntax” W3C Note.</rdfs:comment>
+    <formats:media_type>text/owl-manchester</formats:media_type>
+    <dc:date>2010-05-03</dc:date>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/owl2-manchester-syntax/"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/owl2-manchester-syntax/#Appendix:_Internet_Media_Type.2C_File_Extension_and_Macintosh_File_Type"/>
+    <formats:preferred_suffix>.omn</formats:preferred_suffix>
+    <dc:description>Unique identifier for the OWL Manchester Syntax file format</dc:description>
+    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <foaf:name>Ivan Herman</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
   </rdf:Description>
 </rdf:RDF>
 

@@ -8,11 +8,11 @@
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <foaf:name>Ivan Herman</foaf:name>
     <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:name>Ivan Herman</foaf:name>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
     <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/Turtle.html">
@@ -20,15 +20,15 @@
     <dc:title>Information Resource for the Turtle File Format</dc:title>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/Turtle">
-    <rdfs:comment>Turtle is defined by the “Turtle - Terse RDF Triple Language” W3C Team Submission.</rdfs:comment>
-    <dc:date>2010-05-03</dc:date>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
-    <formats:media_type>text/turtle</formats:media_type>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TeamSubmission/turtle/#sec-mediaReg"/>
-    <formats:preferred_suffix>.ttl</formats:preferred_suffix>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TeamSubmission/turtle/"/>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <formats:preferred_suffix>.ttl</formats:preferred_suffix>
+    <dc:date>2010-05-03</dc:date>
+    <formats:media_type>text/turtle</formats:media_type>
     <dc:description>Unique identifier for the Turtle file format</dc:description>
+    <rdfs:comment>Turtle is defined by the “Turtle - Terse RDF Triple Language” W3C Team Submission.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TeamSubmission/turtle/#sec-mediaReg"/>
   </rdf:Description>
 </rdf:RDF>
 

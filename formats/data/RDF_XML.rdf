@@ -7,28 +7,28 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/RDF_XML.html">
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-    <dc:title>Information Resource for the RDF/XML File Format</dc:title>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/RDF_XML">
-    <dc:date>2010-05-03</dc:date>
     <formats:media_type>application/rdf+xml</formats:media_type>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/rdf-syntax-grammar/#section-MIME-Type"/>
     <formats:preferred_suffix>.rdf</formats:preferred_suffix>
     <dc:description>Unique identifier for the RDF/XML file format</dc:description>
-    <rdfs:comment>RDF/XML is defined by the “RDF/XML Syntax Specification” W3C Recommendation.</rdfs:comment>
+    <dc:date>2010-05-03</dc:date>
     <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
+    <rdfs:comment>RDF/XML is defined by the “RDF/XML Syntax Specification” W3C Recommendation.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdf-syntax-grammar/"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/rdf-syntax-grammar/#section-MIME-Type"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
     <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
     <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
     <foaf:name>Ivan Herman</foaf:name>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/RDF_XML.html">
+    <dc:title>Information Resource for the RDF/XML File Format</dc:title>
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
   </rdf:Description>
 </rdf:RDF>
 
