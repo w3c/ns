@@ -7,13 +7,41 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
+  <rdf:Description rdf:about="http://www.w3.org/ns/formats/">
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/formats/"/>
+    <dc:date>2010-05-03</dc:date>
+    <dc:description>Unique URIs for File Formats</dc:description>
+    <owl:versionInfo>$Date$</owl:versionInfo>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <foaf:name>Ivan Herman</foaf:name>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:name>Ivan Herman</foaf:name>
     <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
     <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/Overview.html">
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+    <dc:title>Unique URIs for File Formats</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/formats/Format">
+    <dc:description>a unique, top-level Class URI for file formats. As media types do not uniquely identify file formats, these URI-s can be used instead.</dc:description>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_JSON"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_XML"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/POWDER"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/N3"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_XML"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_Manchester"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/RDF_XML"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/RIF_XML"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_Functional"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/POWDER-S"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/media_type">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
@@ -22,34 +50,6 @@
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/preferred_suffix">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <dc:description>Unique URIs for File Formats</dc:description>
-    <dc:date>2010-05-03</dc:date>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <owl:versionIRI rdf:resource="http://www.w3.org/ns/formats/"/>
-    <owl:versionInfo>$Date$</owl:versionInfo>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/Format">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <dc:description>a unique, top-level Class URI for file formats. As media types do not uniquely identify file formats, these URI-s can be used instead.</dc:description>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_XML"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_XML"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/POWDER-S"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/POWDER"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/N3"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/RIF_XML"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_Functional"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/RDF_XML"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_JSON"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_Manchester"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/Overview.html">
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-    <dc:title>Unique URIs for File Formats</dc:title>
   </rdf:Description>
 </rdf:RDF>
 
