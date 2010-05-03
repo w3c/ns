@@ -1,0 +1,30 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dist: <http://www.w3.org/2007/08/pyRdfa/distiller#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+formats:RIF_XML a formats:Format ;
+     dc:creator <http://www.ivan-herman.net/foaf#me> ;
+     dc:date "2010-05-03" ;
+     dc:description "Unique identifier for the RIF XML file format" ;
+     rdfs:comment "RIF XML syntax is defined by the “RIF Core Dialect” Proposed W3C Recommendation." ;
+     rdfs:isDefinedBy <http://www.w3.org/TR/rif-core/> ;
+     rdfs:seeAlso <http://www.w3.org/TR/rif-core/#Appendix:_RIF_Media_Type_Registration> ;
+     formats:media_type "application/rif+xml" ;
+     formats:preferred_suffix ".rif" . 
+
+<http://www.w3.org/ns/formats/data/RIF_XML.html> dc:title "Information Resource for the RIF XML File Format" ;
+     xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
+
+<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
+     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
+     foaf:mbox <mailto:ivan@w3.org> ;
+     foaf:name "Ivan Herman" ;
+     foaf:title "Semantic Web Activity Lead" ;
+     foaf:workplaceHomepage <http://www.w3.org> . 

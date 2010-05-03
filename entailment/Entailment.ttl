@@ -24,16 +24,16 @@ ent:Entailment a rdfs:Class, owl:Class ;
 ent:Overview.html dc:title "Unique URIs for Entailment Regimes" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
-<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
-     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
-     foaf:mbox <mailto:ivan@w3.org> ;
-     foaf:name "Ivan Herman" ;
-     foaf:title "Semantic Web Activity Lead" ;
-     foaf:workplaceHomepage <http://www.w3.org> . 
-
 <http://www.w3.org/ns/entailment/> a owl:Ontology ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
      dc:date "2010-01-05" ;
      dc:description "Unique URIs for Semantic Web Entailment Regimes" ;
      owl:versionIRI <http://www.w3.org/ns/entailment/> ;
      owl:versionInfo "$Date$" . 
+
+<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
+     rdfs:seeAlso <http://www.ivan-herman.net/foaf#me> ;
+     foaf:mbox <mailto:ivan@w3.org> ;
+     foaf:name "Ivan Herman" ;
+     foaf:title "Semantic Web Activity Lead" ;
+     foaf:workplaceHomepage <http://www.w3.org> . 

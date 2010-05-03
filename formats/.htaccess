@@ -1,0 +1,27 @@
+# $Id$
+<Files ~ "\.html">
+ForceType 'text/html; charset=UTF-8'
+</Files>
+
+<Files ~ "\.ttl">
+ForceType 'text/turtle; charset=UTF-8'
+</Files>
+
+RewriteEngine On
+RewriteBase /ns/formats/
+
+RewriteRule ^$ Format
+RewriteRule ^media_type$ Format
+RewriteRule ^preferred_suffix$ Format
+
+RewriteRule ^Turtle$ data/Turtle [R=303]
+RewriteRule ^RDF_XML$ data/RDF_XML [R=303]
+RewriteRule ^N3$ data/N3 [R=303]
+RewriteRule ^SPARQL_Results_XML$ data/SPARQL_Results_XML [R=303]
+RewriteRule ^SPARQL_Results_JSON$ data/SPARQL_Results_JSON [R=303]
+RewriteRule ^POWDER$ data/POWDER [R=303]
+RewriteRule ^POWDER-S$ data/POWDER-S [R=303]
+RewriteRule ^OWL_XML$ data/OWL_XML [R=303]
+RewriteRule ^OWL_Functional$ data/OWL_Functional [R=303]
+RewriteRule ^OWL_Manchester$ data/OWL_Functional [R=303]
+RewriteRule ^RIF_XML$ data/RIF_XML [R=303]

@@ -6,26 +6,26 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/RIF">
-    <rdf:type rdf:resource="http://www.w3.org/ns/entailment/Entailment"/>
-    <dc:description>This is a unique identifier defined for RIF Logical Entailment</dc:description>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/2009/WD-rif-overview-20091001/"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2009/CR-rif-bld-20091001/#Logical_Entailment"/>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <dc:date>2010-04-15</dc:date>
-    <rdfs:comment>The specification for the entailment is part of the RIF W3C Recommendation.</rdfs:comment>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/entailment/data/RIF.html">
+    <dc:title>Information Resource for RIF Logical Entailment</dc:title>
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-    <dc:title>Unique URI for RIF Logical Entailment</dc:title>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
     <foaf:name>Ivan Herman</foaf:name>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
     <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/RIF">
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <dc:date>2010-05-03</dc:date>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/2009/WD-rif-overview-20091001/"/>
+    <dc:description>Unique identifier defined for RIF Logical Entailment</dc:description>
+    <rdfs:comment>The specification for the entailment is part of the RIF W3C Recommendation.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/ns/entailment/Entailment"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2009/CR-rif-bld-20091001/#Logical_Entailment"/>
   </rdf:Description>
 </rdf:RDF>
 

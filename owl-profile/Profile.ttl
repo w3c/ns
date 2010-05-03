@@ -11,7 +11,8 @@
 
 
 prof:Profile a rdfs:Class, owl:Class ;
-     dc:description "a unique, top-level Class URI for the concept of OWL 2 Profiles. Instances for this Class represent the OWL 2 Profiles like DL, EL, QL, and RL." ;
+     dc:description """a unique, top-level
+	  Class URI for the concept of OWL 2 Profiles. Instances for this Class represent the OWL 2 Profiles like DL, EL, QL, and RL.""" ;
      rdfs:seeAlso
          prof:DL,
          prof:EL,
@@ -21,17 +22,28 @@ prof:Profile a rdfs:Class, owl:Class ;
 <http://www.w3.org/ns/entailment/Overview.html> dc:title "Unique URIs for OWL Profiles" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
-<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
-     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
-     foaf:mbox <mailto:ivan@w3.org> ;
-     foaf:name "Ivan Herman" ;
-     foaf:title "Semantic Web Activity Lead" ;
-     foaf:workplaceHomepage <http://www.w3.org> . 
-
 <http://www.w3.org/ns/owl-profile/> a owl:Ontology ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
      dc:date "2010-01-05" ;
      dc:description "Unique URIs for OWL 2 Profiles" ;
-     rdfs:comment "Note that, strictly speaking OWL DL is not referred to, formally, as a “profile” by the OWL 2 Profiles specification. However, “each profile is defined as a syntactic restriction of the OWL 2 Structural Specification, i.e., as a subset of the structural elements that can be used in a conforming ontology,…” (see the OWL 2 Document Overview). In this sense, and for practical purposes, including a URI for OWL DL is correct; indeed, OWL DL can be seen as a sytactic restriction of OWL that is particularly well suited for OWL 2 Direct Semantics. Note also that there are no separate URI-s for the 2004 version of OWL DL; OWL 2 DL, published in 2008 supersede that version of. Nor is there a URI for OWL Lite." ;
+     rdfs:comment """Note that, strictly speaking OWL DL is not referred to,
+	formally, as a “profile” by the OWL 2 Profiles specification.
+	However, “each profile is defined as a syntactic restriction of the
+	OWL 2 Structural Specification, i.e., as a subset of the structural elements that can be used in a
+	conforming ontology,…”
+	(see the OWL 2 Document Overview).
+	In this sense, and for practical purposes, including a URI for OWL DL is correct;
+	indeed, OWL DL
+	can be seen as a sytactic restriction of OWL that is particularly well suited for
+	OWL 2 Direct Semantics.
+	Note also that there are no separate URI-s for the 2004 version of OWL DL; OWL 2 DL, published in 2008 supersede
+	that version of. Nor is there a URI for OWL Lite.""" ;
      owl:versionIRI <http://www.w3.org/ns/owl-profile/> ;
      owl:versionInfo "$Date$" . 
+
+<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
+     rdfs:seeAlso <http://www.ivan-herman.net/foaf#me> ;
+     foaf:mbox <mailto:ivan@w3.org> ;
+     foaf:name "Ivan Herman" ;
+     foaf:title "Semantic Web Activity Lead" ;
+     foaf:workplaceHomepage <http://www.w3.org> . 

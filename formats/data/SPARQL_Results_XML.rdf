@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:formats="http://www.w3.org/ns/formats/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+>
+  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/SPARQL_Results_XML.html">
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+    <dc:title>Information Resource for the SPARQL Results File Format in XML</dc:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <foaf:name>Ivan Herman</foaf:name>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/formats/RDFXML">
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/rdf-sparql-XMLres/#mime"/>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
+    <dc:description>Unique identifier for the SPARQL Results in XML file format</dc:description>
+    <formats:preferred_suffix>.srx</formats:preferred_suffix>
+    <rdfs:comment>SPARQL Results in XML is defined by the “SPARQL Query Results XML Format” W3C Recommendation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdf-sparql-XMLres/"/>
+    <formats:media_type>application/sparql-results+xml</formats:media_type>
+    <dc:date>2010-05-03</dc:date>
+  </rdf:Description>
+</rdf:RDF>
+

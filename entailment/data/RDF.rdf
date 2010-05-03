@@ -6,26 +6,26 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:name>Ivan Herman</foaf:name>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/entailment/RDF">
-    <dc:description>This is a unique identifier for RDF Entailment</dc:description>
-    <dc:date>2010-04-15</dc:date>
+    <dc:date>2010-05-03</dc:date>
+    <rdfs:comment>The specification for the RDF entailment is part of the RDF Semantics W3C Recommendation.</rdfs:comment>
     <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
     <rdf:type rdf:resource="http://www.w3.org/ns/entailment/Entailment"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/#rdf_entail"/>
+    <dc:description>Unique identifier for RDF Entailment</dc:description>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/"/>
-    <rdfs:comment>The specification for the RDF entailment is part of the RDF Semantics W3C Recommendation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/#rdf_entail"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:name>Ivan Herman</foaf:name>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/entailment/data/RDF.html">
-    <dc:title>Unique URI for RDF Entailment</dc:title>
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+    <dc:title>Information Resource for RDF Entailment</dc:title>
   </rdf:Description>
 </rdf:RDF>
 
