@@ -13,8 +13,10 @@ formats:N-Triples a formats:Format ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
      dc:date "2010-05-04" ;
      dc:description "Unique identifier for the RDF serialization in N-Triples" ;
-     rdfs:comment "N-Triples is defined as part of the “RDF Test Cases” W3C Recommendation." ;
-     rdfs:isDefinedBy <http://www.w3.org/TR/rdf-testcases/#ntriples> . 
+     rdfs:comment "N-Triples is defined as part of the “RDF Test Cases” W3C Recommendation. It uses the general media type: ‘text/plain’ and a preferred suffix: ‘.nt’." ;
+     rdfs:isDefinedBy <http://www.w3.org/TR/rdf-testcases/#ntriples> ;
+     formats:media_type "text/plain" ;
+     formats:preferred_suffix ".nt" . 
 
 <http://www.w3.org/ns/formats/data/RDF_XML.html> dc:title "Information Resource for the RDF Serialization in N-Triples" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 

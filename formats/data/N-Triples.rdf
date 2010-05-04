@@ -2,29 +2,32 @@
 <rdf:RDF
    xmlns:dc="http://purl.org/dc/terms/"
    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:formats="http://www.w3.org/ns/formats/"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:name>Ivan Herman</foaf:name>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/RDF_XML.html">
     <dc:title>Information Resource for the RDF Serialization in N-Triples</dc:title>
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <foaf:name>Ivan Herman</foaf:name>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/N-Triples">
+    <formats:media_type>text/plain</formats:media_type>
     <dc:date>2010-05-04</dc:date>
-    <rdfs:comment>N-Triples is defined as part of the “RDF Test Cases” W3C Recommendation.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdf-testcases/#ntriples"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
     <dc:description>Unique identifier for the RDF serialization in N-Triples</dc:description>
+    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
     <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <rdfs:comment>N-Triples is defined as part of the “RDF Test Cases” W3C Recommendation. It uses the general media type: ‘text/plain’ and a preferred suffix: ‘.nt’.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdf-testcases/#ntriples"/>
+    <formats:preferred_suffix>.nt</formats:preferred_suffix>
   </rdf:Description>
 </rdf:RDF>
 
