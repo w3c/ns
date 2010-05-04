@@ -11,8 +11,9 @@
 
 
 formats:Format a rdfs:Class, owl:Class ;
-     dc:description "a unique, top-level Class URI for file formats. As media types do not uniquely identify file formats, these URI-s can be used instead." ;
+     dc:description "a unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification." ;
      rdfs:seeAlso
+         formats:N-Triples,
          formats:N3,
          formats:OWL_Functional,
          formats:OWL_Manchester,
@@ -20,6 +21,7 @@ formats:Format a rdfs:Class, owl:Class ;
          formats:POWDER,
          formats:POWDER-S,
          formats:RDF_XML,
+         formats:RDFa,
          formats:RIF_XML,
          formats:SPARQL_Results_JSON,
          formats:SPARQL_Results_XML,
