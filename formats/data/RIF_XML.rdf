@@ -11,24 +11,24 @@
     <dc:title>Information Resource for the RIF XML File Format</dc:title>
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/RIF_XML">
-    <dc:date>2010-05-03</dc:date>
-    <rdfs:comment>RIF XML syntax is defined by the “RIF Core Dialect” Proposed W3C Recommendation.</rdfs:comment>
-    <formats:preferred_suffix>.rif</formats:preferred_suffix>
-    <formats:media_type>application/rif+xml</formats:media_type>
-    <dc:description>Unique identifier for the RIF XML file format</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rif-core/"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/rif-core/#Appendix:_RIF_Media_Type_Registration"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
     <foaf:name>Ivan Herman</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
     <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/formats/RIF_XML">
+    <rdfs:comment>RIF XML syntax is defined by the “RIF Core Dialect” Proposed W3C Recommendation.</rdfs:comment>
+    <formats:preferred_suffix>.rif</formats:preferred_suffix>
+    <dc:description>Unique identifier for the RIF XML file format</dc:description>
+    <dc:date>2010-05-03</dc:date>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/rif-core/#Appendix:_RIF_Media_Type_Registration"/>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <formats:media_type>application/rif+xml</formats:media_type>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rif-core/"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
   </rdf:Description>
 </rdf:RDF>
 

@@ -8,26 +8,26 @@
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/POWDER.html">
-    <dc:title>Information Resource for the POWDER File Format</dc:title>
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+    <dc:title>Information Resource for the POWDER File Format</dc:title>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:name>Ivan Herman</foaf:name>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
     <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <foaf:name>Ivan Herman</foaf:name>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/POWDER">
-    <dc:description>Unique identifier for the POWDER file format</dc:description>
-    <formats:media_type>powder+xml</formats:media_type>
     <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
     <dc:date>2010-05-03</dc:date>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdfs:comment>POWDER is defined by the “Protocol for Web Description Resources (POWDER): Description Resources” W3C Recommendation.</rdfs:comment>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/powder-dr/#appB"/>
+    <dc:description>Unique identifier for the POWDER file format</dc:description>
+    <rdfs:comment>POWDER is defined by the “Protocol for Web Description Resources (POWDER): Description Resources” W3C Recommendation.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/powder-dr/"/>
+    <formats:media_type>powder+xml</formats:media_type>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
   </rdf:Description>
 </rdf:RDF>
 

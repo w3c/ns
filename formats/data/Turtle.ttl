@@ -12,14 +12,14 @@
 formats:Turtle a formats:Format ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
      dc:date "2010-05-03" ;
-     dc:description "Unique identifier for the Turtle file format" ;
+     dc:description "Unique identifier for the RDF Serialization in Turtle" ;
      rdfs:comment "Turtle is defined by the “Turtle - Terse RDF Triple Language” W3C Team Submission." ;
      rdfs:isDefinedBy <http://www.w3.org/TeamSubmission/turtle/> ;
      rdfs:seeAlso <http://www.w3.org/TeamSubmission/turtle/#sec-mediaReg> ;
      formats:media_type "text/turtle" ;
      formats:preferred_suffix ".ttl" . 
 
-<http://www.w3.org/ns/formats/data/Turtle.html> dc:title "Information Resource for the Turtle File Format" ;
+<http://www.w3.org/ns/formats/data/Turtle.html> dc:title "Information Resource for the RDF Serialiation in Turtle" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;

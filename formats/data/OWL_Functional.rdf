@@ -7,28 +7,28 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/OWL_Functional.html">
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-    <dc:title>Information Resource for the OWL Functional Syntax File Format</dc:title>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/OWL_Functional">
-    <dc:date>2010-05-03</dc:date>
-    <formats:media_type>text/owl-functional</formats:media_type>
     <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <formats:preferred_suffix>.ofn</formats:preferred_suffix>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/owl-syntax/#Appendix:_Internet_Media_Type.2C_File_Extension.2C_and_Macintosh_File_Type"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/owl-syntax/"/>
-    <dc:description>Unique identifier for the OWL Functional Syntax file format</dc:description>
-    <rdfs:comment>OWL Functional Syntax is defined by the “OWL 2 Web Ontology Language, Structural Specification and Functional-Style Syntax” W3C Recommendation.</rdfs:comment>
     <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/owl-syntax/"/>
+    <formats:media_type>text/owl-functional</formats:media_type>
+    <dc:description>Unique identifier for the OWL Serialization in Functional Syntax</dc:description>
+    <rdfs:comment>OWL Functional Syntax is defined by the “OWL 2 Web Ontology Language, Structural Specification and Functional-Style Syntax” W3C Recommendation.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/owl-syntax/#Appendix:_Internet_Media_Type.2C_File_Extension.2C_and_Macintosh_File_Type"/>
+    <dc:date>2010-05-04</dc:date>
+    <formats:preferred_suffix>.ofn</formats:preferred_suffix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/OWL_Functional.html">
+    <dc:title>Information Resource for the OWL Serialization in Functional Syntax</dc:title>
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
     <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
     <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
     <foaf:name>Ivan Herman</foaf:name>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
 </rdf:RDF>
 

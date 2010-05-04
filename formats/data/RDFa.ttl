@@ -9,17 +9,14 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-formats:RDF_XML a formats:Format ;
+formats:RDFa a formats:Format ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
      dc:date "2010-05-04" ;
-     dc:description "Unique identifier for the RDF serialization in XML (RDF/XML)" ;
-     rdfs:comment "RDF/XML is defined by the “RDF/XML Syntax Specification” W3C Recommendation." ;
-     rdfs:isDefinedBy <http://www.w3.org/TR/rdf-syntax-grammar/> ;
-     rdfs:seeAlso <http://www.w3.org/TR/rdf-syntax-grammar/#section-MIME-Type> ;
-     formats:media_type "application/rdf+xml" ;
-     formats:preferred_suffix ".rdf" . 
+     dc:description "Unique Identifier for the RDFa RDF Serialization Format" ;
+     rdfs:comment "RDFa is defined by the “RDFa in XHTML: Syntax and Processing” W3C Recommendation." ;
+     rdfs:isDefinedBy <http://www.w3.org/TR/rdfa-syntax/> . 
 
-<http://www.w3.org/ns/formats/data/RDF_XML.html> dc:title "Information Resource for the RDF Serialization in XML" ;
+<http://www.w3.org/ns/formats/data/RDF_XML.html> dc:title "Information Resource for the RDFa RDF Serialization Format" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;

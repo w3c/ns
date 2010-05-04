@@ -7,27 +7,27 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
+  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/N3.html">
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+    <dc:title>Information Resource for the N3 RDF Syntax</dc:title>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/N3">
-    <rdfs:comment>N3 is defined by the “Notation3 (N3): A readable RDF syntax” W3C Team Submission.</rdfs:comment>
+    <dc:date>2010-05-04</dc:date>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TeamSubmission/n3/#mimetype"/>
-    <formats:media_type>text/rdf+n3</formats:media_type>
-    <dc:description>Unique identifier for the N3 file format</dc:description>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TeamSubmission/n3/"/>
+    <dc:description>Unique identifier for the N3 RDF syntax</dc:description>
     <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
-    <dc:date>2010-05-03</dc:date>
+    <rdfs:comment>N3 is defined by the “Notation3 (N3): A readable RDF syntax” W3C Team Submission.</rdfs:comment>
+    <formats:media_type>text/rdf+n3</formats:media_type>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TeamSubmission/n3/"/>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
     <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
     <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
     <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
     <foaf:name>Ivan Herman</foaf:name>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/N3.html">
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-    <dc:title>Information Resource for the N3 File Format</dc:title>
   </rdf:Description>
 </rdf:RDF>
 

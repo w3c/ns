@@ -11,14 +11,14 @@
 
 formats:N3 a formats:Format ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
-     dc:date "2010-05-03" ;
-     dc:description "Unique identifier for the N3 file format" ;
+     dc:date "2010-05-04" ;
+     dc:description "Unique identifier for the N3 RDF syntax" ;
      rdfs:comment "N3 is defined by the “Notation3 (N3): A readable RDF syntax” W3C Team Submission." ;
      rdfs:isDefinedBy <http://www.w3.org/TeamSubmission/n3/> ;
      rdfs:seeAlso <http://www.w3.org/TeamSubmission/n3/#mimetype> ;
      formats:media_type "text/rdf+n3" . 
 
-<http://www.w3.org/ns/formats/data/N3.html> dc:title "Information Resource for the N3 File Format" ;
+<http://www.w3.org/ns/formats/data/N3.html> dc:title "Information Resource for the N3 RDF Syntax" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;
