@@ -11,8 +11,9 @@ RewriteEngine On
 RewriteBase /ns/formats/
 
 RewriteRule ^$ Format
-RewriteRule ^media_type$ Format
-RewriteRule ^preferred_suffix$ Format
+RewriteRule ^media_type$ vocab-data/media_type [R=303]
+RewriteRule ^preferred_suffix$ vocab-data/preferred_suffix [R=303]
+RewriteRule ^Format$ vocab-data/Format [R=303]
 
 RewriteRule ^Turtle$ data/Turtle [R=303]
 RewriteRule ^RDF_XML$ data/RDF_XML [R=303]

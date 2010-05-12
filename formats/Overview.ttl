@@ -27,7 +27,7 @@ formats:Format a rdfs:Class, owl:Class ;
          formats:SPARQL_Results_XML,
          formats:Turtle . 
 
-<http://www.w3.org/ns/entailment/Overview.html> dc:title "Unique URIs for File Formats" ;
+formats:Overview.html dc:title "Unique URIs for File Formats" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
 formats:media_type a rdfs:Property, owl:DatatypeProperty . 
