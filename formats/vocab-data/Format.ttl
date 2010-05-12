@@ -13,7 +13,7 @@
 formats:Format a rdfs:Class, owl:Class ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
      dc:date "2010-05-04" ;
-     dc:description "a unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification." . 
+     dc:description "A unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification." . 
 
 <http://www.w3.org/ns/formats/vocab-data/Format.html> dc:title "Information Resource for the Format class" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 

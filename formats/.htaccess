@@ -10,7 +10,6 @@ ForceType 'text/turtle; charset=UTF-8'
 RewriteEngine On
 RewriteBase /ns/formats/
 
-RewriteRule ^$ Format
 RewriteRule ^media_type$ vocab-data/media_type [R=303]
 RewriteRule ^preferred_suffix$ vocab-data/preferred_suffix [R=303]
 RewriteRule ^Format$ vocab-data/Format [R=303]
