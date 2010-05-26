@@ -1,0 +1,30 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dist: <http://www.w3.org/2007/08/pyRdfa/distiller#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sparql: <http://www.w3.org/ns/sparql#> .
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://www.w3.org/ns/entailment/Overview.html> dc:title "Terms used by SPARQL 1.1" ;
+     xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
+
+<http://www.w3.org/ns/sparql#> a owl:Ontology ;
+     dc:creator <http://www.ivan-herman.net/foaf#me> ;
+     dc:date "2010-05-26" ;
+     dc:description "Terms used by SPARQL 1.1" ;
+     owl:versionInfo "$Date$" . 
+
+sparql:bound dc:description "Checks if a variable is bound to a value." ;
+     rdfs:isDefinedBy <http://www.w3.org/TR/sparql11-query/#func-bound> . 
+
+<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
+     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
+     foaf:mbox <mailto:ivan@w3.org> ;
+     foaf:name "Ivan Herman" ;
+     foaf:title "Semantic Web Activity Lead" ;
+     foaf:workplaceHomepage <http://www.w3.org> . 

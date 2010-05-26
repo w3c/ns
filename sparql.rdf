@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <foaf:name>Ivan Herman</foaf:name>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sparql#">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dc:description>Terms used by SPARQL 1.1</dc:description>
+    <owl:versionInfo>$Date$</owl:versionInfo>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <dc:date>2010-05-26</dc:date>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/Overview.html">
+    <dc:title>Terms used by SPARQL 1.1</dc:title>
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sparql#bound">
+    <dc:description>Checks if a variable is bound to a value.</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/sparql11-query/#func-bound"/>
+  </rdf:Description>
+</rdf:RDF>
+
