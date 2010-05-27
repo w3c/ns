@@ -5,6 +5,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix void: <http://rdfs.org/ns/void#> .
 @prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -12,8 +13,9 @@
 
 formats:Format a rdfs:Class, owl:Class ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
-     dc:date "2010-05-04" ;
-     dc:description "A unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification." . 
+     dc:date "2010-05-27" ;
+     dc:description "A unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification." ;
+     rdfs:subClassOf <http://rdfs.org/ns/void#/TechnicalFeature> . 
 
 <http://www.w3.org/ns/formats/vocab-data/Format.html> dc:title "Information Resource for the Format class" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 

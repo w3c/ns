@@ -8,6 +8,7 @@
 	  xmlns:owl="http://www.w3.org/2002/07/owl#"
 	  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	  xmlns:formats="http://www.w3.org/ns/formats/"
+	  xmlns:void="http://rdfs.org/ns/void#"
 	  version="XHTML+RDFa 1.0"
 >
   <head about="http://www.w3.org/ns/formats/vocab-data/Format.html">
@@ -25,6 +26,9 @@
 	
 	<p property="dc:description" datatype="">A unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification.</p>
 	
+	<p>This class is also a subclass of the <a rel="rdfs:subClassOf" href="http://rdfs.org/ns/void#/TechnicalFeature">“Technical Feature”</a> class of the
+	<a href="http://rdfs.org/ns/void#">“void” vocabulary</a>.</p>
+	
 
 	<hr />
 	<address >
@@ -36,7 +40,7 @@
 			<span rel="rdfs:seeAlso" resource="http://www.ivan-herman.net/foaf" property="foaf:title">Semantic Web Activity Lead</span>,
 		</span>
 	  </span>
-	  <span property="dc:date">2010-05-04</span>
+	  <span property="dc:date">2010-05-27</span>
 	</address>
   </body>
 </html>
