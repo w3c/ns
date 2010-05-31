@@ -5,25 +5,24 @@
 @prefix skos:       <http://www.w3.org/2004/02/skos/core#> .
 @prefix foaf:       <http://xmlns.com/foaf/0.1/> .
 @prefix dct:        <http://dublincore.org/documents/dcmi-terms/> .
-@prefix doc:        <http://www.w3.org/2000/10/swap/pim/doc#> .
 @prefix gr:         <http://purl.org/goodrelations/v1#> .
 @prefix owlTime:    <http://www.w3.org/2006/time> .
 @prefix org:        <http://www.w3.org/ns/org#> .
 @prefix vcard:      <http://www.w3.org/2006/vcard/ns#> .
+@prefix opmv:       <http://purl.org/net/opmv/ns#> .
 @prefix :           <http://www.w3.org/ns/org#> .
 
 # -- Meta data -----------------------------------------------------------
 
-<http://www.w3.org/ns/org>
+<http://www.w3.org/ns/org#>
     a owl:Ontology;
     owl:versionInfo "0.1";
     rdfs:label "Core organization ontology"@en;
     rdfs:comment "Vocabulary for describing organizational structures, specializable to a broad variety of types of organization."@en;
-    dct:created "2010-0-05"^^xsd:date;
+    dct:created "2010-05-28"^^xsd:date;
     dct:title "Core organization ontology@en";
     dct:contributor [foaf:mbox "dave@epimorphics.com"; foaf:name "Dave Reynolds"];
-    doc:version "$Id$";
-
+    rdfs:seeAlso <http://www.epimorphics.com/public/vocabulary/org.html>;
     .
     
 # -- Organizational structure -----------------------------------------------------------
@@ -270,22 +269,25 @@ org:OrganizationalCollaboration a owl:Class, rdfs:Class;
 # -- Historical information -----------------------------------------------------------
 
 org:ChangeEvent a owl:Class, rdfs:Class;
+    rdfs:subClassOf opmv:Process;
     rdfs:label "ChangeEvent"@en;
-    rdfs:comment """Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The date of the event should be indicated, when known, via `dct:date`, a description should be given by `dct:description`."""@en;
+    rdfs:comment """Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `opmv:wasGeneratedAt`, a description should be given by `dct:description`. """@en;
     .
 
 org:originalOrganization a owl:ObjectProperty, rdf:Property;
     rdfs:label "originalOrganization"@en;
     rdfs:domain org:ChangeEvent;
     rdfs:range  org:Organization;
-    rdfs:comment """Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event."""@en;
+    rdfs:subPropertyOf opmv:used;
+    rdfs:comment """Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Note that in specializing the OPMV vocabulary we are treating an `org:Organization` as an `opmv:Artifact`, which is consistent with the OPM model."""@en;
     .
 
 org:resultingOrganization a owl:ObjectProperty, rdf:Property;
     rdfs:label "resultingOrganization"@en;
     rdfs:domain org:ChangeEvent;
     rdfs:range  org:Organization;
-    rdfs:comment """Indicates the organization that resulted from the event."""@en;
+    rdfs:subPropertyOf opmv:wasGeneratedBy;
+    rdfs:comment """Indicates the organization that resulted from the event. Note that in specializing the OPMV vocabulary we are treating an `org:Organization` as an `opmv:Artifact`, which is consistent with the OPM model."""@en;
     .
 
 # -- Disjointness of backbone -----------------------------------------------------------
