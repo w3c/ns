@@ -15,6 +15,10 @@
     <rdfs:comment xml:lang="en">Vocabulary for describing organizational structures, specializable to a broad variety of types of organization.</rdfs:comment>
     <dct:title>Core organization ontology@en</dct:title>
     <owl:versionInfo>0.3</owl:versionInfo>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
+      <foaf:name>Dave Reynolds</foaf:name>
+    </dct:contributor>
     <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-05-28</dct:created>
@@ -22,10 +26,6 @@
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-06-09</dct:modified>
     <rdfs:seeAlso rdf:resource="http://www.epimorphics.com/public/vocabulary/org.html"/>
-    <dct:contributor rdf:parseType="Resource">
-      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
-      <foaf:name>Dave Reynolds</foaf:name>
-    </dct:contributor>
   </owl:Ontology>
   <rdfs:Class rdf:about="http://www.w3.org/ns/org#Organization">
     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
@@ -195,7 +195,7 @@
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#headOf">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:label xml:lang="en">head of</rdfs:label>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <rdfs:subPropertyOf>
       <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#memberOf"/>

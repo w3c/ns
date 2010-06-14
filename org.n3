@@ -219,7 +219,7 @@ org:roleProperty a owl:AnnotationProperty, rdf:Property;
 
 org:headOf a owl:ObjectProperty, rdf:Property;
     rdfs:label "head of"@en;
-    rdfs:domain foaf:Person;
+    rdfs:domain foaf:Agent;
     rdfs:range  org:Organization;
     rdfs:subPropertyOf org:memberOf;
     rdfs:comment """Indicates that a person is the leader or formal head of the Organization. This will normally mean that they are the root of the `org:reportsTo` (acyclic) graph, though an organization may have more than one head."""@en;
