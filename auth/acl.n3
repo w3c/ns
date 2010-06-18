@@ -6,11 +6,11 @@
 @keywords is, a, of.
 @prefix : <http://www.w3.org/ns/auth/acl#>.
 
-# Use classes of agents or use sioc:member of group?
+# Design Issue: Use classes of agents or use sioc:member of group?
 
 <> dc:title "Basic Access Control ontology";
-    rdfs:comment """Defines the element fo Authorization and its essential properties,
-    and also some classes pf access such as read and write. """.
+    rdfs:comment """Defines the element of Authorization and its essential properties,
+    and also some classes of access such as read and write. """.
 
 
 
@@ -35,14 +35,14 @@ agentClass   a rdf:Property;
 accessTo
     a rdf:Property;
         rdfs:label "to";
-        rdfs:comment "The informatiuon resource to which access is being granted.";
+        rdfs:comment "The information resource to which access is being granted.";
         rdfs:domain     Authorization;
         rdfs:range      gen:InformationResource.
         
 accessToClass
     a rdf:Property;
         rdfs:label "to all in";
-        rdfs:comment "A class of nformation resources to which access is being granted.";
+        rdfs:comment "A class of information resources to which access is being granted.";
         rdfs:domain     Authorization;
         rdfs:range      rdfs:Class.
     
@@ -55,7 +55,7 @@ defaultForNew
 mode
     a rdf:Property;
         rdfs:label "access mode";
-        rdfs:comment "A mode of acess such as read or write.";
+        rdfs:comment "A mode of access such as read or write.";
         rdfs:domain     Authorization;
         rdfs:range      rdfs:Class.
 
@@ -74,6 +74,17 @@ Write a rdfs:Class;
     rdfs:subClassOf Access;
     rdfs:label  "write"@en.
         
+Append a rdfs:Class;
+    rdfs:subClassOf Access, Write;
+    rdfs:label  "append"@en;
+    rdfs:comment """Append accesses are specific write access which only add information, and do not remove information.
+    For text files, for example, append access allows bytes to be added onto the end of the file.
+    For RDF graphs, Append access allows adds triples to the graph but does not remove any.
+    Append access is useful for dropbox functionality.
+    Dropbox can be used for link notification, which the information added is a notification
+    that a some link has been made elsewhere relevant to the given resource.
+    """.
+        
 Control a rdfs:Class;
     rdfs:subClassOf Access;
     rdfs:label  "control"@en;
@@ -82,5 +93,23 @@ Control a rdfs:Class;
 #ReadWrite a rdfs:Class;
 #    rdfs:label  "read, write"@en.
 #    rdfs:subClassOf Access; is subClassOf of Read, Write. # Any action in R or W is in RW
-        
+# Initial implementations will NOT do RDFS inference and so one should NOT use superclasses like this
+# in ACL files.
+#
 # Question -- should we allow read of the ACL by anyone with Read for the resource?
+
+
+
+# Linking a resource to its access control information
+accessControl 
+    a rdf:Property;
+        rdfs:label "access control";
+        rdfs:subPropertyOf rdfs:seeAlso;
+        rdfs:comment """The Access Control file for this information resource.
+        This may of course be a virtual resorce implemented by the access control system.
+        Note also HTTP's header  Link:  foo.meta ;rel=meta can be used for this.""";
+        rdfs:domain      gen:InformationResource;       
+        rdfs:range      gen:InformationResource.        
+
+
+# ENDS

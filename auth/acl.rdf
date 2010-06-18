@@ -8,14 +8,27 @@
 
     <rdf:Description rdf:about="">
         <dc:title>Basic Access Control ontology</dc:title>
-        <comment>Defines the element fo Authorization and its essential properties,
-    and also some classes pf access such as read and write. </comment>
+        <comment>Defines the element of Authorization and its essential properties,
+    and also some classes of access such as read and write. </comment>
     </rdf:Description>
 
     <Class rdf:about="http://www.w3.org/ns/auth/acl#Access">
         <comment>Any kind of access to a resource. Don't use this, use R W and RW</comment>
         <label xmlns="http://www.w3.org/ns/auth/acl#"
             xml:lang="en">access</label>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/auth/acl#Append">
+        <comment>Append accesses are specific write access which only add information, and do not remove information.
+    For text files, for example, append access allows bytes to be added onto the end of the file.
+    For RDF graphs, Append access allows adds triples to the graph but does not remove any.
+    Append access is useful for dropbox functionality.
+    Dropbox can be used for link notification, which the information added is a notification
+    that a some link has been made elsewhere relevant to the given resource.
+    </comment>
+        <label xml:lang="en">append</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/acl#Access"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/acl#Write"/>
     </Class>
 
     <Class rdf:about="http://www.w3.org/ns/auth/acl#Authorization">
@@ -41,15 +54,25 @@
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/acl#Access"/>
     </Class>
 
+    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#accessControl">
+        <comment>The Access Control file for this information resource.
+        This may of course be a virtual resorce implemented by the access control system.
+        Note also HTTP's header  Link:  foo.meta ;rel=meta can be used for this.</comment>
+        <domain rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+        <label>access control</label>
+        <range rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+        <subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#seeAlso"/>
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#accessTo">
-        <comment>The informatiuon resource to which access is being granted.</comment>
+        <comment>The information resource to which access is being granted.</comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
         <label>to</label>
         <range rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#accessToClass">
-        <comment>A class of nformation resources to which access is being granted.</comment>
+        <comment>A class of information resources to which access is being granted.</comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
         <label>to all in</label>
         <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -76,7 +99,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#mode">
-        <comment>A mode of acess such as read or write.</comment>
+        <comment>A mode of access such as read or write.</comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
         <label>access mode</label>
         <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
