@@ -6,26 +6,26 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:name>Ivan Herman</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/data/Simple.html">
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-    <dc:title>Information Resource for Simple Entailment</dc:title>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/entailment/Simple">
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/#entail"/>
+    <dc:description>Unique identifier for Simple Entailment</dc:description>
     <rdf:type rdf:resource="http://www.w3.org/ns/entailment/Entailment"/>
     <rdfs:comment>The specification for the Simple entailment is part of the RDF Semantics W3C Recommendation.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/#entail"/>
-    <dc:date>2009-05-03</dc:date>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/"/>
-    <dc:description>Unique identifier for Simple Entailment</dc:description>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-05-03</dc:date>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/data/Simple.html">
+    <dc:title>Information Resource for Simple Entailment</dc:title>
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <foaf:name>Ivan Herman</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
   </rdf:Description>
 </rdf:RDF>
 

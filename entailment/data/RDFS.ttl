@@ -11,7 +11,7 @@
 
 ent:RDFS a ent:Entailment ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
-     dc:date "2009-05-03" ;
+     dc:date "2010-05-03"^^xsd:date ;
      dc:description "Unique identifier for RDFS Entailment" ;
      rdfs:comment "The specification for the RDFS entailment is part of the RDF Semantics W3C Recommendation." ;
      rdfs:isDefinedBy <http://www.w3.org/TR/2004/REC-rdf-mt-20040210/#rdfs_entailment> ;
@@ -21,7 +21,7 @@ ent:RDFS a ent:Entailment ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;
-     rdfs:seeAlso <http://www.ivan-herman.net/foaf#me> ;
+     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
      foaf:mbox <mailto:ivan@w3.org> ;
      foaf:name "Ivan Herman" ;
      foaf:title "Semantic Web Activity Lead" ;

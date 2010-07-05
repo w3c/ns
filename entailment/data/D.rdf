@@ -6,26 +6,26 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/D">
-    <dc:date>2010-05-03</dc:date>
-    <rdf:type rdf:resource="http://www.w3.org/ns/entailment/Entailment"/>
-    <rdfs:comment>The specification for the D entailment is part of the RDF Semantics W3C Recommendation.</rdfs:comment>
-    <dc:description>Unique identifier for D Entailment</dc:description>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/#D_entailment"/>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/"/>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/entailment/data/D.html">
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
     <dc:title>Information Resource for for D Entailment</dc:title>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     <foaf:name>Ivan Herman</foaf:name>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
     <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/entailment/D">
+    <rdfs:comment>The specification for the D entailment is part of the RDF Semantics W3C Recommendation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/#D_entailment"/>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/entailment/Entailment"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/2004/REC-rdf-mt-20040210/"/>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-05-03</dc:date>
+    <dc:description>Unique identifier for D Entailment</dc:description>
   </rdf:Description>
 </rdf:RDF>
 
