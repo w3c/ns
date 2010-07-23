@@ -1,29 +1,57 @@
-@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl:  <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dist: <http://www.w3.org/2007/08/pyRdfa/distiller#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfa: <http://www.w3.org/ns/rdfa#> .
-	
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-rdfa:VocabularyMapping	a rdfs:Class .
 
-rdfa:PrefixMapping		a rdfs:Class;
-	rdfs:subClassOf rdfa:VocabularyMapping .
-	
-rdfa:TermMapping	 	a rdfs:Class ;
-	rdfs:subClassOf rdfa:VocabularyMapping .
+rdfa:PrefixMapping a rdfs:Class ;
+     dc:description "used in conjunction with the definition of prefixes as the domain of the rdfa:prefix property"@en ;
+     rdfs:subClassOf rdfa:VocabularyMapping . 
 
-[]  a owl:AllDisjointClasses ;
-	owl:members  ( rdfa:PrefixMapping  rdfa:TermMapping ) .
+rdfa:TermMapping a rdfs:Class ;
+     dc:description "used in conjunction with the definition of terms as the domain of the rdfa:term property"@en ;
+     rdfs:subClassOf rdfa:VocabularyMapping . 
 
-rdfa:uri a rdf:Property, owl:FunctionalProperty, owl:DatatypeProperty ;
-	rdfs:range xsd:anyURI ;
-	rdfs:domain rdfa:VocabularyMapping .
-	
-rdfa:prefix a rdf:Property, owl:FunctionalProperty, owl:DatatypeProperty ;
-	rdfs:range xsd:NMTOKEN ;
-	rdfs:domain rdfa:PrefixMapping .
+rdfa:VocabularyMapping a rdfs:Class . 
 
-rdfa:term a rdf:Property, owl:FunctionalProperty, owl:DatatypeProperty ;
-	rdfs:range xsd:NMTOKEN ;
-	rdfs:domain rdfa:TermMapping .
-	
+<http://www.w3.org/ns/rdfa#> a owl:Ontology ;
+     dc:creator <http://www.ivan-herman.net/foaf#me> ;
+     dc:date "2010-07-14"@en ;
+     dc:description "This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa1.1 processing behavior."@en ;
+     dc:title "RDFa Vocabulary for Term and Prefix Assignment"@en ;
+     rdfs:isDefinedBy <http://www.w3.org/TR/rdfa-core/> ;
+     rdfs:seeAlso <http://www.w3.org/TR/rdfa-core/> ;
+     owl:versionInfo "$Date$"@en . 
+
+rdfa:prefix a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty ;
+     dc:description "defines a prefix"@en ;
+     rdfs:domain rdfa:PrefixMapping ;
+     rdfs:range xsd:NMTOKEN . 
+
+rdfa:term a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty ;
+     dc:description "defines a term"@en ;
+     rdfs:domain rdfa:TermMapping ;
+     rdfs:range xsd:NMTOKEN . 
+
+rdfa:uri a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty ;
+     dc:description "defines a uri string to be used either with a term or a prefix definition"@en ;
+     rdfs:domain rdfa:VocabularyMapping ;
+     rdfs:range xsd:anURI . 
+
+<http://www.w3.org/ns/rdfa.html> xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base.css> . 
+
+<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
+     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
+     foaf:mbox <mailto:ivan@w3.org> ;
+     foaf:name "Ivan Herman"@en ;
+     foaf:title "Semantic Web Activity Lead"@en ;
+     foaf:workplaceHomepage <http://www.w3.org> . 
+
+ [ a owl:AllDisjointClasses ;
+         owl:members ( rdfa:PrefixMapping rdfa:TermMapping )].
