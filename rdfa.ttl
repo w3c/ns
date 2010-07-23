@@ -22,7 +22,7 @@ rdfa:VocabularyMapping a rdfs:Class .
 
 <http://www.w3.org/ns/rdfa#> a owl:Ontology ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
-     dc:date "2010-07-14"@en ;
+     dc:date "2010-07-23"@en ;
      dc:description "This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa1.1 processing behavior."@en ;
      dc:title "RDFa Vocabulary for Term and Prefix Assignment"@en ;
      rdfs:isDefinedBy <http://www.w3.org/TR/rdfa-core/> ;
