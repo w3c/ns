@@ -42,7 +42,11 @@ rdfa:term a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty ;
 rdfa:uri a rdf:Property, owl:DatatypeProperty, owl:FunctionalProperty ;
      dc:description "defines a uri string to be used either with a term or a prefix definition"@en ;
      rdfs:domain rdfa:VocabularyMapping ;
-     rdfs:range xsd:anURI . 
+     rdfs:range xsd:anyURI . 
+
+rdfa:vocabulary a rdf:Property, owl:DatatypeProperty ;
+     dc:description "defines a uri string to be used as a default vocabulary"@en ;
+     rdfs:range xsd:anyURI . 
 
 <http://www.w3.org/ns/rdfa.html> xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base.css> . 
 

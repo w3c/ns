@@ -8,8 +8,7 @@
 	  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
 	  xmlns:owl="http://www.w3.org/2002/07/owl#"
 	  xmlns:rdfa="http://www.w3.org/ns/rdfa#"
-	  xml:base="http://www.w3.org/ns/"
-	  version="XHTML+RDFa 1.0">
+	  xml:base="http://www.w3.org/ns/">
   <head about="http://www.w3.org/ns/rdfa.html">
 	<base href="http://www.w3.org/ns/"/>
     <title>RDFa Vocabulary for Term and Prefix Assignment</title>
@@ -28,7 +27,8 @@
     The URI of the vocabulary is <code>http://www.w3.org/ns/rdfa#</code>. <a href="rdfa.ttl">Turtle</a> and an
 	<a href="rdfa.rdf">RDF/XML</a> versions of the vocabulary are also available.</p>
 	
-	<p>For a precise definition of these vocabulary elements, see the <a rel="rdfs:seeAlso rdfs:isDefinedBy" href="http://www.w3.org/TR/rdfa-core/">RDFa Core&nbsp;1.1</a> specification.</p>
+	<p>For a precise definition of these vocabulary elements, see the
+	<a rel="rdfs:seeAlso rdfs:isDefinedBy" href="http://www.w3.org/TR/rdfa-core/">RDFa Core&nbsp;1.1</a> specification.</p>
 	
 	<h2>Term and prefix assignment vocabulary</h2>
 	<p>This vocabulary contains terms to define prefix mappings and term assignments; these can be used
@@ -73,9 +73,14 @@
 	  </li>
 	  <li about="[rdfa:uri]" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:uri</code>:
 		<span property="dc:description" datatype="">defines a uri <em>string</em> to be used either with a term or a prefix definition</span>.
-		<span rel="rdfs:range" resource="[xsd:anURI]">The value is supposed to be a valid URI;</span> the property
+		<span rel="rdfs:range" resource="[xsd:anyURI]">The value is supposed to be a valid URI;</span> the property
 		is used on a <span rel="rdfs:domain" resource="[rdfa:VocabularyMapping]"><code>rdfa:VocabularyMapping</code> instance.</span>
 		It is a <span rel="rdf:type" resource="[owl:FunctionalProperty]">functional property</span>.
+	  </li>
+	  <li about="[rdfa:vocabulary]" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:vocabulary</code>:
+		<span property="dc:description" datatype="">defines a uri <em>string</em> to be used as a default vocabulary</span>.
+		<span rel="rdfs:range" resource="[xsd:anyURI]">The value is supposed to be a valid URI.</span>; the subject is of
+		no use (usually a separate blank node).
 	  </li>
 	</ul>
 	
