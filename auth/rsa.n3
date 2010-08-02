@@ -39,7 +39,7 @@
    This is defined as n = p*q
    """;
    rdfs:domain :RSAKey;
-   rdfs:range cert:Integer .
+   rdfs:range cert:int .
 
 :public_exponent a rdf:Property;
    vs:term_status "unstable";
@@ -48,7 +48,7 @@
        1 and the totient(p*q). Often named 'e' .
     """;
    rdfs:domain :RSAPublicKey;
-   rdfs:range cert:Integer .
+   rdfs:range cert:int .
 
 :RSAPrivateKey rdfs:subClassOf cert:PrivateKey, :RSAKey;
     vs:term_status "unstable";
@@ -66,6 +66,6 @@
        The private exponent is often named 'd'
     """;
    rdfs:domain :RSAPrivateKey;
-   rdfs:range cert:Integer .
+   rdfs:range cert:int .
 
 

@@ -57,7 +57,7 @@
    This is defined as n = p*q
    </comment>
         <domain rdf:resource="rsa#RSAKey"/>
-        <range rdf:resource="cert#Integer"/>
+        <range rdf:resource="cert#int"/>
         <vs:term_status>unstable</vs:term_status>
     </rdf:Property>
 
@@ -69,7 +69,7 @@
        The private exponent is often named 'd'
     </comment>
         <domain rdf:resource="rsa#RSAPrivateKey"/>
-        <range rdf:resource="cert#Integer"/>
+        <range rdf:resource="cert#int"/>
         <vs:term_status>unstable</vs:term_status>
     </rdf:Property>
 
@@ -79,7 +79,7 @@
        1 and the totient(p*q). Often named 'e' .
     </comment>
         <domain rdf:resource="rsa#RSAPublicKey"/>
-        <range rdf:resource="cert#Integer"/>
+        <range rdf:resource="cert#int"/>
         <vs:term_status>unstable</vs:term_status>
     </rdf:Property>
 </rdf:RDF>
