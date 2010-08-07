@@ -1,0 +1,12 @@
+
+
+
+<r:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+    <r:Property r:about="http://dig.csail.mit.edu/2010/issues/track#style">
+        <comment>Must be a valid CSS style stying such as one could put in an HTML style attribute.</comment>
+        <label>style</label>
+    </r:Property>
+</r:RDF>

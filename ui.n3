@@ -1,0 +1,18 @@
+#  Ontology for user interface hints
+#
+@prefix wf: <http://www.w3.org/2005/01/wf/flow#>.
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix default73: <http://www.w3.org/2002/07/owl#>.
+@prefix doc: <http://www.w3.org/2000/10/swap/pim/doc#>.
+@prefix contact: <http://www.w3.org/2000/10/swap/pim/contact#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix : <http://dig.csail.mit.edu/2010/issues/track#>.
+@prefix tt: <http://dig.csail.mit.edu/2010/issues/track#>.
+@keywords is, of, a.
+
+style a r:Property;
+	s:label "style";
+	s:comment "Must be a valid CSS style stying such as one could put in an HTML style attribute.".
+
