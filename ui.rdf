@@ -6,7 +6,12 @@
     xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
 
     <r:Property r:about="http://dig.csail.mit.edu/2010/issues/track#style">
-        <comment>Must be a valid CSS style stying such as one could put in an HTML style attribute.</comment>
+        <comment>Must be a valid CSS style string such as one could put in
+        an HTML style attribute.  Depedning on teh user interface system, this can
+        by given to individuals, classes or properties. It is up to a user interface 
+        which wants to draw on them to pick how it uses styles from which parts
+        of the data it has.  For example, the style of a class may be picked 
+        to distinguish information about things in that class.</comment>
         <label>style</label>
     </r:Property>
 </r:RDF>
