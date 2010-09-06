@@ -5,6 +5,22 @@
     xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
 
+    <r:Property r:about="http://dig.csail.mit.edu/2010/issues/track#background-color">
+        <comment>Must be a valid CSS color string such as one could put in
+        an HTML style attribute.  This should be in the #xxxxxx form,
+        (with 6 digits of hex)  so that it
+        can work with Graphviz.</comment>
+        <label>style</label>
+    </r:Property>
+
+    <r:Property r:about="http://dig.csail.mit.edu/2010/issues/track#sortPriority">
+        <comment>When individuals or classes must be sorted, this
+        if they are given different values of sortPriority a user agent can
+        use this as a hint to how to present information.</comment>
+        <label>sort priority</label>
+        <range r:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </r:Property>
+
     <r:Property r:about="http://dig.csail.mit.edu/2010/issues/track#style">
         <comment>Must be a valid CSS style string such as one could put in
         an HTML style attribute.  Depedning on teh user interface system, this can
