@@ -15,7 +15,8 @@
     <rdfs:comment xml:lang="en">Vocabulary for describing organizational structures, specializable to a broad variety of types of organization.</rdfs:comment>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-05-28</dct:created>
-    <owl:versionInfo>0.3</owl:versionInfo>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2010-10-08</dct:modified>
     <dct:contributor rdf:parseType="Resource">
       <foaf:mbox>dave@epimorphics.com</foaf:mbox>
       <foaf:name>Dave Reynolds</foaf:name>
@@ -26,6 +27,7 @@
     <rdfs:seeAlso rdf:resource="http://www.epimorphics.com/public/vocabulary/org.html"/>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-06-09</dct:modified>
+    <owl:versionInfo>0.4</owl:versionInfo>
   </owl:Ontology>
   <rdfs:Class rdf:about="http://www.w3.org/ns/org#Organization">
     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
@@ -42,6 +44,9 @@
       <owl:Class rdf:about="http://www.w3.org/ns/org#Membership"/>
     </owl:disjointWith>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <owl:hasKey rdf:parseType="Collection">
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
+    </owl:hasKey>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#Site"/>
@@ -388,6 +393,14 @@
     <rdfs:comment xml:lang="en">Indicates the purpose of this Organization. There can be many purposes at different levels of abstraction but the nature of an organization is to have a reason for existence and this property is a means to document that reason. An Organization may have multiple purposes. It is recommended that the purpose be denoted by a controlled term or code list, ideally a `skos:Concept`. However, the range is left open to allow for other types of descriptive schemes. It is expected that specializations or application profiles of this vocabulary will constrain the range of the purpose. Alternative names: _remit_ _responsibility_ (esp. if applied to OrganizationalUnits such as Government Departments).</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </rdf:Property>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">identifier</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
+    <rdfs:comment xml:lang="en">Gives an identifier, such as a company registration number, that can be used to used to uniquely identify the organization. Many different national and international identier schemes are available. The org ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value.  Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for `skos:notation` of which this property is a specialization.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </owl:DatatypeProperty>
   <org:Role rdf:about="http://www.w3.org/ns/org#Head">
     <skos:prefLabel xml:lang="en">head</skos:prefLabel>
     <rdfs:comment xml:lang="en">A role corresponding to the `org:headOf` property</rdfs:comment>
