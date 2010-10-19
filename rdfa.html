@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:dc="http://purl.org/dc/terms/"
+	  xmlns:dcterms="http://purl.org/dc/terms/"
 	  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
 	  xmlns:foaf="http://xmlns.com/foaf/0.1/"
 	  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -20,73 +20,41 @@
 		  <img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/>
 		</a>
       </p>
-      <h1 property="dc:title">RDFa Vocabulary for Term and Prefix Assignment</h1>
+      <h1 property="dcterms:title">RDFa Vocabulary for Term and Prefix Assignment</h1>
     </div>
 
-    <p><span property="dc:description" datatype="">This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify <a href="http://www.w3.org/TR/rdfa-core/#s_profiles">RDFa&nbsp;1.1 processing behavior</a>.</span>
+    <p><span property="dcterms:description" datatype="">This document describes the RDFa Vocabulary for Term and Prefix Assignment.
+	The Vocabulary is used to modify <a href="http://www.w3.org/TR/rdfa-core/#s_profiles">RDFa&nbsp;1.1 processing behavior</a>.</span>
     The URI of the vocabulary is <code>http://www.w3.org/ns/rdfa#</code>. <a href="rdfa.ttl">Turtle</a> and an
 	<a href="rdfa.rdf">RDF/XML</a> versions of the vocabulary are also available.</p>
 	
 	<p>For a precise definition of these vocabulary elements, see the
-	<a rel="rdfs:seeAlso rdfs:isDefinedBy" href="http://www.w3.org/TR/rdfa-core/">RDFa Core&nbsp;1.1</a> specification.</p>
+	<a rel="rdfs:seeAlso rdfs:isDefinedBy" href="http://www.w3.org/TR/rdfa-core/#s_profiles">RDFa Core&nbsp;1.1</a> specification.</p>
 	
 	<h2>Term and prefix assignment vocabulary</h2>
 	<p>This vocabulary contains terms to define prefix mappings and term assignments; these can be used
 	as part of the <code>@profile</code> mechanism of RDFa 1.1.</p>
-	<h3>Classes</h3>
-	<ul>
-	  <li about="[rdfa:PrefixMapping]" typeof="rdfs:Class">
-		<span rel="rdfs:subClassOf" resource="[rdfa:VocabularyMapping]"><code>rdfa:PrefixMapping</code></span>:
-		<span property="dc:description" datatype="">used in conjunction with the definition of prefixes as the domain of the <code>rdfa:prefix</code> property</span>.
-	  </li>
-	  <li about="[rdfa:TermMapping]" typeof="rdfs:Class">
-		<span rel="rdfs:subClassOf" resource="[rdfa:VocabularyMapping]"><code>rdfa:TermMapping</code></span>:
-		<span property="dc:description" datatype="">used in conjunction with the definition of terms as the domain of the <code>rdfa:term</code> property</span>.
-	  </li>
-	</ul>
-	<p>Both of these classes are subclasses of a common <span about="[rdfa:VocabularyMapping]" typeof="rdfs:Class">
-	  <code>rdfa:VocabularyMapping</code></span>.
-	  <span typeof="owl:AllDisjointClasses">
-		<span rel="owl:members" >
-		  <span rel="rdf:first" resource="[rdfa:PrefixMapping]"></span>
-		  <span rel="rdf:rest" >
-			<span  rel="rdf:first" resource="[rdfa:TermMapping]"></span>
-			<span  rel="rdf:rest" resource="[rdf:nil]">The two classes are disjoint.</span>
-		  </span>
-		</span>
-	  </span>
-	</p>
 	
 	<h3>Properties</h3>
 	<ul>
 	  <li about="[rdfa:prefix]" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:prefix</code>:
-		<span property="dc:description">defines a prefix</span>.
-		<span rel="rdfs:range" resource="[xsd:NMTOKEN]">The value is supposed to be a NMTOKEN;</span> the property
-		is used on a <span rel="rdfs:domain" resource="[rdfa:PrefixMapping]"><code>rdfa:PrefixMapping</code> instance.</span>
-		It is a <span rel="rdf:type" resource="[owl:FunctionalProperty]">functional property</span>.
+		<span property="dcterms:description">defines a prefix mapping for a URI</span>.
+		<span rel="rdfs:range" resource="[xsd:NMTOKEN]">The value is supposed to be a NMTOKEN.</span>.
 	  </li>
 	  <li about="[rdfa:term]" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:term</code>:
-		<span property="dc:description">defines a term</span>.
-		<span rel="rdfs:range" resource="[xsd:NMTOKEN]">The value is supposed to be a NMTOKEN;</span> the property
-		is used on a <span rel="rdfs:domain" resource="[rdfa:TermMapping]"><code>rdfa:TermMapping</code> instance.</span>
-		It is a <span rel="rdf:type" resource="[owl:FunctionalProperty]">functional property</span>.
-	  </li>
-	  <li about="[rdfa:uri]" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:uri</code>:
-		<span property="dc:description" datatype="">defines a uri <em>string</em> to be used either with a term or a prefix definition</span>.
-		<span rel="rdfs:range" resource="[xsd:anyURI]">The value is supposed to be a valid URI;</span> the property
-		is used on a <span rel="rdfs:domain" resource="[rdfa:VocabularyMapping]"><code>rdfa:VocabularyMapping</code> instance.</span>
-		It is a <span rel="rdf:type" resource="[owl:FunctionalProperty]">functional property</span>.
+		<span property="dcterms:description">defines a term mapping for a URI</span>.
+		<span rel="rdfs:range" resource="[xsd:NMTOKEN]">The value is supposed to be a NMTOKEN</span>.
 	  </li>
 	  <li about="[rdfa:vocabulary]" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:vocabulary</code>:
-		<span property="dc:description" datatype="">defines a uri <em>string</em> to be used as a default vocabulary</span>.
-		<span rel="rdfs:range" resource="[xsd:anyURI]">The value is supposed to be a valid URI.</span>; the subject is of
-		no use (usually a separate blank node).
+		<span property="dcterms:description" datatype="">defines a URI to be used as a default vocabulary</span>.
+		<span rel="rdfs:range" resource="[xsd:string]">The value is supposed can be any string; for documentation
+		purposed it is advised to use the string “true” or “True”.</span>
 	  </li>
 	</ul>
 	
 	<hr />
 	<address >
-	  <span rel="dc:creator" >
+	  <span rel="dcterms:creator" >
 		<span about="http://www.ivan-herman.net/foaf#me" typeof="foaf:Person">
 			<span property="foaf:name" datatype=""><a href="http://www.w3.org/People/Ivan">Ivan Herman</a></span>,
 			<a rel="foaf:mbox" href="mailto:ivan@w3.org">ivan@w3.org</a>,
@@ -94,7 +62,7 @@
 			<span rel="rdfs:seeAlso" resource="http://www.ivan-herman.net/foaf" property="foaf:title">Semantic Web Activity Lead</span>,
 		</span>
 	  </span>
-	  <span property="dc:date">2010-07-23</span>
+	  <span property="dcterms:date">2010-09-03</span>
 	  <br />
 	  <span property="owl:versionInfo">$Date$</span>
 	</address>
