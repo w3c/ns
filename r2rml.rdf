@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dcterms="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:owl="http://www.w3.org/2002/07/owl#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml.html">
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base.css"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <foaf:name xml:lang="en">Ivan Herman</foaf:name>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <foaf:title xml:lang="en">Semantic Web Activity Lead</foaf:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/r2rml#">
+    <dcterms:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <owl:versionInfo xml:lang="en">$Date$</owl:versionInfo>
+    <dcterms:title xml:lang="en">R2RML: RDB to RDF Mapping Language Schema</dcterms:title>
+    <dcterms:date xml:lang="en">2010-10-27</dcterms:date>
+  </rdf:Description>
+</rdf:RDF>
+

@@ -1,0 +1,25 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dist: <http://www.w3.org/2007/08/pyRdfa/distiller#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix r2rml: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+
+<http://www.w3.org/ns/r2rml#> dcterms:creator <http://www.ivan-herman.net/foaf#me> ;
+     dcterms:date "2010-10-27"@en ;
+     dcterms:title "R2RML: RDB to RDF Mapping Language Schema"@en ;
+     owl:versionInfo "$Date$"@en . 
+
+<http://www.w3.org/ns/r2rml.html> xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base.css> . 
+
+<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
+     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
+     foaf:mbox <mailto:ivan@w3.org> ;
+     foaf:name "Ivan Herman"@en ;
+     foaf:title "Semantic Web Activity Lead"@en ;
+     foaf:workplaceHomepage <http://www.w3.org> . 

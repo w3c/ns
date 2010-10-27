@@ -1,0 +1,10 @@
+URI: r2rml
+
+URI: r2rml.html
+Content-Type: text/html
+
+URI: r2rml.rdf
+Content-Type: application/rdf+xml; qs=0.4
+
+URI: r2rml.ttl
+Content-Type: text/turtle; qs=0.5
