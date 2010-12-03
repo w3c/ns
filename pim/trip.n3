@@ -9,6 +9,7 @@
 @prefix dbp: <http://dbpedia.org/resource/>.
 @prefix cal: <http://www.w3.org/2002/12/cal/ical#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix q: <http://www.w3.org/2000/10/swap/pim/qif#> .
 
 @keywords a, is, of.
 
@@ -29,11 +30,15 @@ Trip a s:Class; s:label "trip";
     :example  [
             cal:DTSTART "2006-02-01";
             cal:DTEND "2006-02-04";
-            dc:title "Trip to New York and Chicago";
+            dc:title "Jim's trip to New York and Chicago";
             :part [
                 cal:DTSTART "2006-02-03";
                 cal:DTEND "2006-02-04";
-                :location dbp:Chicago]
+                :location dbp:Chicago];
+            is :trip of 
+                [q:amount -20.56; q:payee "Ardvark Taxis"; q:date  "2006-02-01"],
+                [q:amount -21.79; q:payee "Bert Taxis"; q:date  "2006-02-04"],
+                [q:amount 40.00; q:payee "Acme Inc"; q:date  "2006-04-23"]
             ].
 
 part a rdf:Property; s:label "part".   # @@ Use a common part from another generic vocabulary?

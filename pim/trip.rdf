@@ -5,6 +5,7 @@
     xmlns:cal="http://www.w3.org/2002/12/cal/ical#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#"
+    xmlns:q="http://www.w3.org/2000/10/swap/pim/qif#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:s="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:t="http://www.w3.org/ns/pim/trip#">
@@ -26,16 +27,7 @@ at ones home base, or a set of photos taken at home etc.
 
     <Class rdf:about="http://www.w3.org/ns/pim/trip#Trip">
         <label>trip</label>
-        <t:example rdf:parseType="Resource">
-            <dc:title>Trip to New York and Chicago</dc:title>
-            <cal:DTEND>2006-02-04</cal:DTEND>
-            <cal:DTSTART>2006-02-01</cal:DTSTART>
-            <t:part rdf:parseType="Resource">
-                <cal:DTEND>2006-02-04</cal:DTEND>
-                <cal:DTSTART>2006-02-03</cal:DTSTART>
-                <t:location rdf:resource="http://dbpedia.org/resource/Chicago"/>
-            </t:part>
-        </t:example>
+        <t:example rdf:nodeID="b1"/>
     </Class>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#funder">
@@ -58,4 +50,36 @@ at ones home base, or a set of photos taken at home etc.
     a photo, a meeting, etc.</comment>
         <label>trip</label>
     </rdf:Property>
+
+    <rdf:Description rdf:nodeID="b1">
+        <dc:title>Jim's trip to New York and Chicago</dc:title>
+        <cal:DTEND>2006-02-04</cal:DTEND>
+        <cal:DTSTART>2006-02-01</cal:DTSTART>
+        <t:part rdf:parseType="Resource">
+            <cal:DTEND>2006-02-04</cal:DTEND>
+            <cal:DTSTART>2006-02-03</cal:DTSTART>
+            <t:location rdf:resource="http://dbpedia.org/resource/Chicago"/>
+        </t:part>
+    </rdf:Description>
+
+    <rdf:Description>
+        <q:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-20.56</q:amount>
+        <q:date>2006-02-01</q:date>
+        <q:payee>Ardvark Taxis</q:payee>
+        <t:trip rdf:nodeID="b1"/>
+    </rdf:Description>
+
+    <rdf:Description>
+        <q:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-21.79</q:amount>
+        <q:date>2006-02-04</q:date>
+        <q:payee>Bert Taxis</q:payee>
+        <t:trip rdf:nodeID="b1"/>
+    </rdf:Description>
+
+    <rdf:Description>
+        <q:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</q:amount>
+        <q:date>2006-04-23</q:date>
+        <q:payee>Acme Inc</q:payee>
+        <t:trip rdf:nodeID="b1"/>
+    </rdf:Description>
 </rdf:RDF>
