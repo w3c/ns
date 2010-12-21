@@ -46,9 +46,10 @@ at ones home base, or a set of photos taken at home etc.
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#trip">
-        <comment>The trips associated with an expense (a financial transaction), 
+        <comment>The trip associated with an expense (a financial transaction), 
     a photo, a meeting, etc.</comment>
         <label>trip</label>
+        <range rdf:resource="http://www.w3.org/ns/pim/trip#Trip"/>
     </rdf:Property>
 
     <rdf:Description rdf:nodeID="b1">

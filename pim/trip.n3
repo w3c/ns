@@ -53,7 +53,8 @@ funder a rdf:Property;
 
 trip a rdf:Property;
     s:label "trip";
-    s:comment """The trips associated with an expense (a financial transaction), 
+    s:range Trip;
+    s:comment """The trip associated with an expense (a financial transaction), 
     a photo, a meeting, etc.""".
 
 
