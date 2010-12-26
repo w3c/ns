@@ -3,9 +3,10 @@
 
 <r:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ui="http://dig.csail.mit.edu/ns/ui#">
 
-    <r:Property r:about="http://dig.csail.mit.edu/2010/issues/track#background-color">
+    <r:Property r:about="http://dig.csail.mit.edu/ns/ui#background-color">
         <comment>Must be a valid CSS color string such as one could put in
         an HTML style attribute.  This should be in the #xxxxxx form,
         (with 6 digits of hex)  so that it
@@ -13,7 +14,28 @@
         <label>style</label>
     </r:Property>
 
-    <r:Property r:about="http://dig.csail.mit.edu/2010/issues/track#sortPriority">
+    <r:Property r:about="http://dig.csail.mit.edu/ns/ui#initialProperties">
+        <ui:prompt>Properties to be specified for new ones</ui:prompt>
+        <comment>A really simple way of enabling user interfaces to 
+            create new information about a class of things is to make a define of properties
+            to be specified when a information about a new item
+            ("New item" here means an item which the system
+            does not have prvious information about yet,
+            not an items which has just been created,
+            like new friend as opposed to new baby)</comment>
+        <domain r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <label>must give for new</label>
+        <range r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+    </r:Property>
+
+    <r:Property r:about="http://dig.csail.mit.edu/ns/ui#prompt">
+        <ui:prompt>A longer prompt for a user inputting this property</ui:prompt>
+        <comment>A string for the UI to use if the user needs a longer
+        prompts than just a field name, the rdfs:label. </comment>
+        <label>user prompt</label>
+    </r:Property>
+
+    <r:Property r:about="http://dig.csail.mit.edu/ns/ui#sortPriority">
         <comment>When individuals or classes must be sorted, this
         if they are given different values of sortPriority a user agent can
         use this as a hint to how to present information.</comment>
@@ -21,7 +43,8 @@
         <range r:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </r:Property>
 
-    <r:Property r:about="http://dig.csail.mit.edu/2010/issues/track#style">
+    <r:Property r:about="http://dig.csail.mit.edu/ns/ui#style">
+        <ui:prompt>CSS style</ui:prompt>
         <comment>Must be a valid CSS style string such as one could put in
         an HTML style attribute.  Depedning on teh user interface system, this can
         by given to individuals, classes or properties. It is up to a user interface 
@@ -29,5 +52,14 @@
         of the data it has.  For example, the style of a class may be picked 
         to distinguish information about things in that class.</comment>
         <label>style</label>
+    </r:Property>
+
+    <r:Property r:about="http://dig.csail.mit.edu/ns/ui#tableProperties">
+        <ui:prompt>Properties to be given in a default table view</ui:prompt>
+        <comment>This  is a crude way of specifying a table-based
+            view for objects of this class.</comment>
+        <domain r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <label>table properties</label>
+        <range r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
     </r:Property>
 </r:RDF>

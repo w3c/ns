@@ -1,5 +1,7 @@
 #  Ontology for user interface hints
 #
+#  See also fresnel
+#
 @prefix wf: <http://www.w3.org/2005/01/wf/flow#>.
 @prefix s: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
@@ -7,7 +9,8 @@
 @prefix doc: <http://www.w3.org/2000/10/swap/pim/doc#>.
 @prefix contact: <http://www.w3.org/2000/10/swap/pim/contact#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix : <http://dig.csail.mit.edu/2010/issues/track#>.
+@prefix : <http://dig.csail.mit.edu/ns/ui#>.
+@prefix ui: <http://dig.csail.mit.edu/ns/ui#>.
 @prefix tt: <http://dig.csail.mit.edu/2010/issues/track#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
@@ -15,6 +18,7 @@
 
 style a r:Property;
 	s:label "style";
+        prompt "CSS style";
 	s:comment """Must be a valid CSS style string such as one could put in
         an HTML style attribute.  Depedning on teh user interface system, this can
         by given to individuals, classes or properties. It is up to a user interface 
@@ -35,6 +39,35 @@ sortPriority a r:Property;
         s:comment """When individuals or classes must be sorted, this
         if they are given different values of sortPriority a user agent can
         use this as a hint to how to present information.""".
+
+initialProperties a r:Property;
+        s:label "must give for new";
+        s:domain s:Class;
+        s:range r:List; # List of r:Property
+        s:comment """A really simple way of enabling user interfaces to 
+            create new information about a class of things is to make a define of properties
+            to be specified when a information about a new item
+            ("New item" here means an item which the system
+            does not have prvious information about yet,
+            not an items which has just been created,
+            like new friend as opposed to new baby)""";
+            prompt "Properties to be specified for new ones".
+
+tableProperties a r:Property;
+        s:domain s:Class;
+        s:label "table properties";
+        s:range r:List; # List of r:Property
+        s:comment """This  is a crude way of specifying a table-based
+            view for objects of this class.""";
+            prompt "Properties to be given in a default table view".
+
+prompt  a r:Property;
+        s:label "user prompt";
+        s:comment """A string for the UI to use if the user needs a longer
+        prompts than just a field name, the rdfs:label. """;
+        ui:prompt "A longer prompt for a user inputting this property".
+
+
 
 # ENDS
 
