@@ -8,7 +8,8 @@
     xmlns:q="http://www.w3.org/2000/10/swap/pim/qif#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:s="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:t="http://www.w3.org/ns/pim/trip#">
+    xmlns:t="http://www.w3.org/ns/pim/trip#"
+    xmlns:ui="http://dig.csail.mit.edu/ns/ui#">
 
     <rdf:Description rdf:about="">
         <comment>This ontology is for use in describing trips,
@@ -26,6 +27,10 @@ at ones home base, or a set of photos taken at home etc.
     </rdf:Description>
 
     <Class rdf:about="http://www.w3.org/ns/pim/trip#Trip">
+        <ui:initialProperties rdf:parseType="Resource">
+            <rdf:first rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </ui:initialProperties>
         <label>trip</label>
         <t:example rdf:nodeID="b1"/>
     </Class>
