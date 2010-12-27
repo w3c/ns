@@ -9,8 +9,8 @@
 @prefix doc: <http://www.w3.org/2000/10/swap/pim/doc#>.
 @prefix contact: <http://www.w3.org/2000/10/swap/pim/contact#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix : <http://dig.csail.mit.edu/ns/ui#>.
-@prefix ui: <http://dig.csail.mit.edu/ns/ui#>.
+@prefix : <http://www.w3.org/ns/ui#>.
+@prefix ui: <http://www.w3.org/ns/ui#>.
 @prefix tt: <http://dig.csail.mit.edu/2010/issues/track#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
@@ -41,7 +41,7 @@ sortPriority a r:Property;
         use this as a hint to how to present information.""".
 
 initialProperties a r:Property;
-        s:label "must give for new";
+        s:label "initial properties";
         s:domain s:Class;
         s:range r:List; # List of r:Property
         s:comment """A really simple way of enabling user interfaces to 

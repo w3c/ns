@@ -2,7 +2,7 @@
 @prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 
-@prefix ui: <http://dig.csail.mit.edu/ns/ui#>.
+@prefix ui: <http://www.w3.org/ns/ui#>.
 @prefix dc:	<http://purl.org/dc/elements/1.1/>.
 @prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
 @prefix :	<http://www.w3.org/ns/pim/trip#> .
