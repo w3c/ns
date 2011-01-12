@@ -1,17 +1,18 @@
 #  Ontology for user interface hints
 #
-#  See also fresnel
+#  See also related: the Fresnel language
 #
-@prefix wf: <http://www.w3.org/2005/01/wf/flow#>.
-@prefix s: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix contact: <http://www.w3.org/2000/10/swap/pim/contact#>.
+@prefix dc:  <http://purl.org/dc/elements/1.1/>.
+@prefix doc: <http://www.w3.org/2000/10/swap/pim/doc#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
-@prefix doc: <http://www.w3.org/2000/10/swap/pim/doc#>.
-@prefix contact: <http://www.w3.org/2000/10/swap/pim/contact#>.
-@prefix foaf: <http://xmlns.com/foaf/0.1/>.
-@prefix : <http://www.w3.org/ns/ui#>.
-@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix tt: <http://dig.csail.mit.edu/2010/issues/track#>.
+@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix : <http://www.w3.org/ns/ui#>.
+@prefix wf: <http://www.w3.org/2005/01/wf/flow#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
 
 @keywords is, of, a.
@@ -66,6 +67,94 @@ prompt  a r:Property;
         s:comment """A string for the UI to use if the user needs a longer
         prompts than just a field name, the rdfs:label. """;
         ui:prompt "A longer prompt for a user inputting this property".
+
+
+#  A Taxonomy of Field types
+
+ui:Form owl:disjointUnionOf ( ui:ValueField ui:LinkField ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ).
+ui:Single owl:disjointUnionOf ( ui:ValueField ui:LinkField ui:Group ui:Choice ui:Classifier ui:Options ).
+ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:DateField ).
+ui:NumericField owl:disjointUnionOf (ui:IntergerField ui:DecimalField ui:FloatField).
+ui:Multiple owl:disjointUnionOf ( ui:ZeroOrMore ui:OneOrMore ).
+ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField).
+
+ui:Form is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options, ui:Multiple.
+ui:Single is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options. 
+ui:ValueField is s:subClassOf of  ui:TextField, ui:NumericField, ui:DateField.
+ui:NumericField is s:subClassOf of ui:IntergerField, ui:DecimalField, ui:FloatField.
+ui:TextField is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
+
+ui:property a r:Property; s:domain ui:Form; s:range r:Property;
+    s:label "property"@en;
+    s:comment """Many fields prompt for infromation about a given property of the subject""".
+
+ui:category  a r:Property; s:domain ui:Classifier; s:range s:Class;
+    s:label "property"@en;
+    s:comment """The superclass subclasses of which will be selected.""".
+
+ui:dependingOn a r:Property; s:domain ui:Options; s:range r:Property;
+    s:label "depending on"@en;
+    s:comment """Many fields prompt for infromation about a gven property of the subject""".
+
+ui:for a r:Property; s:label "for"@en; s:comment "The value for which this case is selected.".
+ui:use a r:Property; s:range ui:Form.
+
+
+ui:from a r:Property; s:domain ui:Choice; s:range r:Class;
+    s:label "from"; ui:prompt "from what class".
+
+ui:fieldLength a r:Property; s:domain ui:TextField; s:range xsd:integer;
+    s:label "field length".
+
+ui:minValue a r:Property; s:domain ui:NumericField; s:range xsd:integer; s:label "min".
+ui:maxValue a r:Property; s:domain ui:NumericField; s:range xsd:integer; s:label "max".
+
+ui:earliest a r:Property; s:domain ui:DateField; s:range xsd:integer; s:label "min".
+ui:tooLate a r:Property; s:domain ui:DateField; s:range xsd:integer; s:label "max".
+
+ ui:creationForm a r:Property; s:domain s:Class; s:range ui:Form;
+    s:label "creation form"; 
+    s:comment """A form which may be used to collect information about a
+    hitherto locally undocumented instance instance of this class.""".
+ 
+########
+
+NewForm a ui:Form, ui:Multiple;
+    dc:title "Form for making new forms";
+    is ui:creationForm of Form;
+    ui:element NewField.
+
+NewField a ui:Group;
+    ui:part
+        [ a ui:Classifier; ui:sequence 1; ui:property s:type; ui:category ui:Form], 
+        
+        [ a ui:Options; ui:sequence 2; ui:dependingOn s:type; 
+
+            ui:case [ ui:for ui:TextField; ui:use
+                [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],  # @@@ Needs inference on current web
+                [ a ui:NumericField; ui:property ui:feildLength; ui:label "length"; ui:min 1; ui:max 4096]];
+
+            ui:case [ ui:for ui:NumericField; ui:use [a ui:Group; ui:part
+                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
+                [ ui:sequence 2; a ui:NumericField; ui:property ui:min; ui:label "minimum value"],
+                [ ui:sequence 3; a ui:NumericField; ui:property ui:max; ui:label "maximum value"]  ]];
+
+            ui:case [ ui:for ui:DateField; ui:use [a ui:Group; ui:part
+                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty], # @@ restsriction
+                [ ui:sequence 2; a ui:DateField; ui:property ui:earliest; ui:label "earliest date"],
+                [ ui:sequence 3; a ui:DateField; ui:property ui:tooLate; ui:label "first date too late"]
+            ]];
+
+            ui:case [ ui:for ui:LinkField; ui:use [a ui:Group; ui:part
+                [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty]
+            ]];
+
+            ui:case [ ui:for ui:Group; ui:use FormForm; ];
+
+            ui:case [ ui:for ui:Multiple; ui:use ui:Single; # don't allow immediately nestded multiples.
+            ];
+
+        ].
 
 
 

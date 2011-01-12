@@ -2,9 +2,265 @@
 
 
 <r:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:s="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:ui="http://www.w3.org/ns/ui#">
+
+    <r:Description r:about="http://www.w3.org/ns/ui#Choice">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#Classifier">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#DateField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#ValueField"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#DecimalField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#NumericField"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#FloatField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#NumericField"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#Form">
+        <owl:disjointUnionOf r:parseType="Resource">
+            <r:first r:resource="http://www.w3.org/ns/ui#ValueField"/>
+            <r:rest r:parseType="Resource">
+                <r:first r:resource="http://www.w3.org/ns/ui#LinkField"/>
+                <r:rest r:parseType="Resource">
+                    <r:first r:resource="http://www.w3.org/ns/ui#Group"/>
+                    <r:rest r:parseType="Resource">
+                        <r:first r:resource="http://www.w3.org/ns/ui#Choice"/>
+                        <r:rest r:parseType="Resource">
+                            <r:first r:resource="http://www.w3.org/ns/ui#Classifier"/>
+                            <r:rest r:parseType="Resource">
+                                <r:first r:resource="http://www.w3.org/ns/ui#Options"/>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:resource="http://www.w3.org/ns/ui#Multiple"/>
+                                    <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                </r:rest>
+                            </r:rest>
+                        </r:rest>
+                    </r:rest>
+                </r:rest>
+            </r:rest>
+        </owl:disjointUnionOf>
+        <ui:creationForm r:resource="http://www.w3.org/ns/ui#NewForm"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#Group">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#IntergerField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#NumericField"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#LinkField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#MultiLineTextField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#TextField"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#Multiple">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
+        <owl:disjointUnionOf r:parseType="Resource">
+            <r:first r:resource="http://www.w3.org/ns/ui#ZeroOrMore"/>
+            <r:rest r:parseType="Resource">
+                <r:first r:resource="http://www.w3.org/ns/ui#OneOrMore"/>
+                <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </r:rest>
+        </owl:disjointUnionOf>
+    </r:Description>
+
+    <ui:Group r:about="http://www.w3.org/ns/ui#NewField">
+        <ui:part r:parseType="Resource">
+            <r:type r:resource="http://www.w3.org/ns/ui#Classifier"/>
+            <ui:category r:resource="http://www.w3.org/ns/ui#Form"/>
+            <ui:property r:resource="http://www.w3.org/2000/01/rdf-schema#type"/>
+            <ui:sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ui:sequence>
+        </ui:part>
+        <ui:part r:parseType="Resource">
+            <r:type r:resource="http://www.w3.org/ns/ui#Options"/>
+            <ui:case r:parseType="Resource">
+                <ui:for r:resource="http://www.w3.org/ns/ui#TextField"/>
+                <ui:use r:parseType="Resource">
+                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                    <ui:from r:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+                    <ui:label>property</ui:label>
+                    <ui:property r:resource="http://www.w3.org/ns/ui#property"/>
+                </ui:use>
+                <ui:use r:parseType="Resource">
+                    <r:type r:resource="http://www.w3.org/ns/ui#NumericField"/>
+                    <ui:label>length</ui:label>
+                    <ui:max r:datatype="http://www.w3.org/2001/XMLSchema#integer">4096</ui:max>
+                    <ui:min r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ui:min>
+                    <ui:property r:resource="http://www.w3.org/ns/ui#feildLength"/>
+                </ui:use>
+            </ui:case>
+            <ui:case r:parseType="Resource">
+                <ui:for r:resource="http://www.w3.org/ns/ui#NumericField"/>
+                <ui:use r:parseType="Resource">
+                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                    <ui:part r:parseType="Resource">
+                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                        <ui:from r:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+                        <ui:label>property</ui:label>
+                        <ui:property r:resource="http://www.w3.org/ns/ui#property"/>
+                        <ui:sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ui:sequence>
+                    </ui:part>
+                    <ui:part r:parseType="Resource">
+                        <r:type r:resource="http://www.w3.org/ns/ui#NumericField"/>
+                        <ui:label>minimum value</ui:label>
+                        <ui:property r:resource="http://www.w3.org/ns/ui#min"/>
+                        <ui:sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ui:sequence>
+                    </ui:part>
+                    <ui:part r:parseType="Resource">
+                        <r:type r:resource="http://www.w3.org/ns/ui#NumericField"/>
+                        <ui:label>maximum value</ui:label>
+                        <ui:property r:resource="http://www.w3.org/ns/ui#max"/>
+                        <ui:sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ui:sequence>
+                    </ui:part>
+                </ui:use>
+            </ui:case>
+            <ui:case r:parseType="Resource">
+                <ui:for r:resource="http://www.w3.org/ns/ui#DateField"/>
+                <ui:use r:parseType="Resource">
+                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                    <ui:part r:parseType="Resource">
+                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                        <ui:from r:resource="http://www.w3.org/2002/07/owl#DataProperty"/>
+                        <ui:label>property</ui:label>
+                        <ui:property r:resource="http://www.w3.org/ns/ui#property"/>
+                        <ui:sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</ui:sequence>
+                    </ui:part>
+                    <ui:part r:parseType="Resource">
+                        <r:type r:resource="http://www.w3.org/ns/ui#DateField"/>
+                        <ui:label>earliest date</ui:label>
+                        <ui:property r:resource="http://www.w3.org/ns/ui#earliest"/>
+                        <ui:sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ui:sequence>
+                    </ui:part>
+                    <ui:part r:parseType="Resource">
+                        <r:type r:resource="http://www.w3.org/ns/ui#DateField"/>
+                        <ui:label>first date too late</ui:label>
+                        <ui:property r:resource="http://www.w3.org/ns/ui#tooLate"/>
+                        <ui:sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ui:sequence>
+                    </ui:part>
+                </ui:use>
+            </ui:case>
+            <ui:case r:parseType="Resource">
+                <ui:for r:resource="http://www.w3.org/ns/ui#LinkField"/>
+                <ui:use r:parseType="Resource">
+                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                    <ui:part r:parseType="Resource">
+                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                        <ui:from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+                        <ui:label>property</ui:label>
+                        <ui:property r:resource="http://www.w3.org/ns/ui#property"/>
+                    </ui:part>
+                </ui:use>
+            </ui:case>
+            <ui:case r:parseType="Resource">
+                <ui:for r:resource="http://www.w3.org/ns/ui#Group"/>
+                <ui:use r:resource="http://www.w3.org/ns/ui#FormForm"/>
+            </ui:case>
+            <ui:case r:parseType="Resource">
+                <ui:for r:resource="http://www.w3.org/ns/ui#Multiple"/>
+                <ui:use r:resource="http://www.w3.org/ns/ui#Single"/>
+            </ui:case>
+            <ui:dependingOn r:resource="http://www.w3.org/2000/01/rdf-schema#type"/>
+            <ui:sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ui:sequence>
+        </ui:part>
+    </ui:Group>
+
+    <ui:Form r:about="http://www.w3.org/ns/ui#NewForm">
+        <r:type r:resource="http://www.w3.org/ns/ui#Multiple"/>
+        <dc:title>Form for making new forms</dc:title>
+        <ui:element r:resource="http://www.w3.org/ns/ui#NewField"/>
+    </ui:Form>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#NumericField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#ValueField"/>
+        <owl:disjointUnionOf r:parseType="Resource">
+            <r:first r:resource="http://www.w3.org/ns/ui#IntergerField"/>
+            <r:rest r:parseType="Resource">
+                <r:first r:resource="http://www.w3.org/ns/ui#DecimalField"/>
+                <r:rest r:parseType="Resource">
+                    <r:first r:resource="http://www.w3.org/ns/ui#FloatField"/>
+                    <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </r:rest>
+            </r:rest>
+        </owl:disjointUnionOf>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#Options">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#Single">
+        <owl:disjointUnionOf r:parseType="Resource">
+            <r:first r:resource="http://www.w3.org/ns/ui#ValueField"/>
+            <r:rest r:parseType="Resource">
+                <r:first r:resource="http://www.w3.org/ns/ui#LinkField"/>
+                <r:rest r:parseType="Resource">
+                    <r:first r:resource="http://www.w3.org/ns/ui#Group"/>
+                    <r:rest r:parseType="Resource">
+                        <r:first r:resource="http://www.w3.org/ns/ui#Choice"/>
+                        <r:rest r:parseType="Resource">
+                            <r:first r:resource="http://www.w3.org/ns/ui#Classifier"/>
+                            <r:rest r:parseType="Resource">
+                                <r:first r:resource="http://www.w3.org/ns/ui#Options"/>
+                                <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </r:rest>
+                        </r:rest>
+                    </r:rest>
+                </r:rest>
+            </r:rest>
+        </owl:disjointUnionOf>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#SingleLineTextField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#TextField"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#TextField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#ValueField"/>
+        <owl:disjointUnionOf r:parseType="Resource">
+            <r:first r:resource="http://www.w3.org/ns/ui#SingleLineTextField"/>
+            <r:rest r:parseType="Resource">
+                <r:first r:resource="http://www.w3.org/ns/ui#MultiLineTextField"/>
+                <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </r:rest>
+        </owl:disjointUnionOf>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#ValueField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
+        <owl:disjointUnionOf r:parseType="Resource">
+            <r:first r:resource="http://www.w3.org/ns/ui#TextField"/>
+            <r:rest r:parseType="Resource">
+                <r:first r:resource="http://www.w3.org/ns/ui#NumericField"/>
+                <r:rest r:parseType="Resource">
+                    <r:first r:resource="http://www.w3.org/ns/ui#DateField"/>
+                    <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </r:rest>
+            </r:rest>
+        </owl:disjointUnionOf>
+    </r:Description>
 
     <r:Property r:about="http://www.w3.org/ns/ui#background-color">
         <comment>Must be a valid CSS color string such as one could put in
@@ -12,6 +268,52 @@
         (with 6 digits of hex)  so that it
         can work with Graphviz.</comment>
         <label>style</label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#category">
+        <comment>The superclass subclasses of which will be selected.</comment>
+        <domain r:resource="http://www.w3.org/ns/ui#Classifier"/>
+        <label xml:lang="en">property</label>
+        <range r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#creationForm">
+        <comment>A form which may be used to collect information about a
+    hitherto locally undocumented instance instance of this class.</comment>
+        <domain r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+        <label>creation form</label>
+        <range r:resource="http://www.w3.org/ns/ui#Form"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#dependingOn">
+        <comment>Many fields prompt for infromation about a gven property of the subject</comment>
+        <domain r:resource="http://www.w3.org/ns/ui#Options"/>
+        <label xml:lang="en">depending on</label>
+        <range r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#earliest">
+        <domain r:resource="http://www.w3.org/ns/ui#DateField"/>
+        <label>min</label>
+        <range r:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#fieldLength">
+        <domain r:resource="http://www.w3.org/ns/ui#TextField"/>
+        <label>field length</label>
+        <range r:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#for">
+        <comment>The value for which this case is selected.</comment>
+        <label xml:lang="en">for</label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#from">
+        <domain r:resource="http://www.w3.org/ns/ui#Choice"/>
+        <label>from</label>
+        <range r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Class"/>
+        <ui:prompt>from what class</ui:prompt>
     </r:Property>
 
     <r:Property r:about="http://www.w3.org/ns/ui#initialProperties">
@@ -28,11 +330,30 @@
         <ui:prompt>Properties to be specified for new ones</ui:prompt>
     </r:Property>
 
+    <r:Property r:about="http://www.w3.org/ns/ui#maxValue">
+        <domain r:resource="http://www.w3.org/ns/ui#NumericField"/>
+        <label>max</label>
+        <range r:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#minValue">
+        <domain r:resource="http://www.w3.org/ns/ui#NumericField"/>
+        <label>min</label>
+        <range r:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </r:Property>
+
     <r:Property r:about="http://www.w3.org/ns/ui#prompt">
         <comment>A string for the UI to use if the user needs a longer
         prompts than just a field name, the rdfs:label. </comment>
         <label>user prompt</label>
         <ui:prompt>A longer prompt for a user inputting this property</ui:prompt>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#property">
+        <comment>Many fields prompt for infromation about a given property of the subject</comment>
+        <domain r:resource="http://www.w3.org/ns/ui#Form"/>
+        <label xml:lang="en">property</label>
+        <range r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </r:Property>
 
     <r:Property r:about="http://www.w3.org/ns/ui#sortPriority">
@@ -61,5 +382,15 @@
         <label>table properties</label>
         <range r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
         <ui:prompt>Properties to be given in a default table view</ui:prompt>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#tooLate">
+        <domain r:resource="http://www.w3.org/ns/ui#DateField"/>
+        <label>max</label>
+        <range r:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#use">
+        <range r:resource="http://www.w3.org/ns/ui#Form"/>
     </r:Property>
 </r:RDF>
