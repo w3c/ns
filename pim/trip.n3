@@ -61,4 +61,14 @@ trip a rdf:Property;
 
 Trip ui:initialProperties ( dc:title ).
 
+Trip ui:creationForm TripForm.
+###########################
+# A form for creating a new trip amounts to just capturing its title.
+TripForm is ui:creationForm of Trip;
+    a ui:Form, ui:TextField;
+    ui:property dc:title;
+    ui:length 60.
+
+
+
 #ends

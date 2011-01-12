@@ -1,4 +1,5 @@
-<!-- hand edited to fix list serialization problem - master is trip.n3 -->
+
+
 
 <rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:cal="http://www.w3.org/2002/12/cal/ical#"
@@ -28,10 +29,18 @@ at ones home base, or a set of photos taken at home etc.
     <Class rdf:about="http://www.w3.org/ns/pim/trip#Trip">
         <label>trip</label>
         <t:example rdf:nodeID="b1"/>
-        <ui:initialProperties rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://purl.org/dc/elements/1.1/title"/>
+        <ui:creationForm rdf:resource="http://www.w3.org/ns/pim/trip#TripForm"/>
+        <ui:initialProperties rdf:parseType="Resource">
+            <rdf:first rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
         </ui:initialProperties>
     </Class>
+
+    <ui:Form rdf:about="http://www.w3.org/ns/pim/trip#TripForm">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ui#TextField"/>
+        <ui:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ui:length>
+        <ui:property rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+    </ui:Form>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#funder">
         <comment>Who pays for the this? An organization or individual.
