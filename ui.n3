@@ -119,12 +119,13 @@ ui:tooLate a r:Property; s:domain ui:DateField; s:range xsd:integer; s:label "ma
  
 ########
 
-NewForm a ui:Form, ui:Multiple;
+FormForm a ui:Form, ui:Multiple;
     dc:title "Form for making new forms";
     is ui:creationForm of Form;
-    ui:element NewField.
+    ui:property ui:element;
+    ui:element FieldForm.
 
-NewField a ui:Group;
+FieldForm a ui:Group;
     ui:part
         [ a ui:Classifier; ui:sequence 1; ui:property s:type; ui:category ui:Form], 
         
@@ -151,7 +152,8 @@ NewField a ui:Group;
 
             ui:case [ ui:for ui:Group; ui:use FormForm; ];
 
-            ui:case [ ui:for ui:Multiple; ui:use ui:Single; # don't allow immediately nestded multiples.
+            ui:case [ ui:for ui:Multiple; ui:use FormForm;
+            # don't allow immediately nestded multiples. (@@only allow singles)
             ];
 
         ].

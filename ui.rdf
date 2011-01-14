@@ -26,66 +26,7 @@
         <subClassOf r:resource="http://www.w3.org/ns/ui#NumericField"/>
     </r:Description>
 
-    <r:Description r:about="http://www.w3.org/ns/ui#FloatField">
-        <subClassOf r:resource="http://www.w3.org/ns/ui#NumericField"/>
-    </r:Description>
-
-    <r:Description r:about="http://www.w3.org/ns/ui#Form">
-        <owl:disjointUnionOf r:parseType="Resource">
-            <r:first r:resource="http://www.w3.org/ns/ui#ValueField"/>
-            <r:rest r:parseType="Resource">
-                <r:first r:resource="http://www.w3.org/ns/ui#LinkField"/>
-                <r:rest r:parseType="Resource">
-                    <r:first r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <r:rest r:parseType="Resource">
-                        <r:first r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <r:rest r:parseType="Resource">
-                            <r:first r:resource="http://www.w3.org/ns/ui#Classifier"/>
-                            <r:rest r:parseType="Resource">
-                                <r:first r:resource="http://www.w3.org/ns/ui#Options"/>
-                                <r:rest r:parseType="Resource">
-                                    <r:first r:resource="http://www.w3.org/ns/ui#Multiple"/>
-                                    <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                                </r:rest>
-                            </r:rest>
-                        </r:rest>
-                    </r:rest>
-                </r:rest>
-            </r:rest>
-        </owl:disjointUnionOf>
-        <ui:creationForm r:resource="http://www.w3.org/ns/ui#NewForm"/>
-    </r:Description>
-
-    <r:Description r:about="http://www.w3.org/ns/ui#Group">
-        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
-        <subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
-    </r:Description>
-
-    <r:Description r:about="http://www.w3.org/ns/ui#IntergerField">
-        <subClassOf r:resource="http://www.w3.org/ns/ui#NumericField"/>
-    </r:Description>
-
-    <r:Description r:about="http://www.w3.org/ns/ui#LinkField">
-        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
-        <subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
-    </r:Description>
-
-    <r:Description r:about="http://www.w3.org/ns/ui#MultiLineTextField">
-        <subClassOf r:resource="http://www.w3.org/ns/ui#TextField"/>
-    </r:Description>
-
-    <r:Description r:about="http://www.w3.org/ns/ui#Multiple">
-        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
-        <owl:disjointUnionOf r:parseType="Resource">
-            <r:first r:resource="http://www.w3.org/ns/ui#ZeroOrMore"/>
-            <r:rest r:parseType="Resource">
-                <r:first r:resource="http://www.w3.org/ns/ui#OneOrMore"/>
-                <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-            </r:rest>
-        </owl:disjointUnionOf>
-    </r:Description>
-
-    <ui:Group r:about="http://www.w3.org/ns/ui#NewField">
+    <ui:Group r:about="http://www.w3.org/ns/ui#FieldForm">
         <ui:part r:parseType="Resource">
             <r:type r:resource="http://www.w3.org/ns/ui#Classifier"/>
             <ui:category r:resource="http://www.w3.org/ns/ui#Form"/>
@@ -178,18 +119,78 @@
             </ui:case>
             <ui:case r:parseType="Resource">
                 <ui:for r:resource="http://www.w3.org/ns/ui#Multiple"/>
-                <ui:use r:resource="http://www.w3.org/ns/ui#Single"/>
+                <ui:use r:resource="http://www.w3.org/ns/ui#FormForm"/>
             </ui:case>
             <ui:dependingOn r:resource="http://www.w3.org/2000/01/rdf-schema#type"/>
             <ui:sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ui:sequence>
         </ui:part>
     </ui:Group>
 
-    <ui:Form r:about="http://www.w3.org/ns/ui#NewForm">
+    <r:Description r:about="http://www.w3.org/ns/ui#FloatField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#NumericField"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#Form">
+        <owl:disjointUnionOf r:parseType="Resource">
+            <r:first r:resource="http://www.w3.org/ns/ui#ValueField"/>
+            <r:rest r:parseType="Resource">
+                <r:first r:resource="http://www.w3.org/ns/ui#LinkField"/>
+                <r:rest r:parseType="Resource">
+                    <r:first r:resource="http://www.w3.org/ns/ui#Group"/>
+                    <r:rest r:parseType="Resource">
+                        <r:first r:resource="http://www.w3.org/ns/ui#Choice"/>
+                        <r:rest r:parseType="Resource">
+                            <r:first r:resource="http://www.w3.org/ns/ui#Classifier"/>
+                            <r:rest r:parseType="Resource">
+                                <r:first r:resource="http://www.w3.org/ns/ui#Options"/>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:resource="http://www.w3.org/ns/ui#Multiple"/>
+                                    <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                </r:rest>
+                            </r:rest>
+                        </r:rest>
+                    </r:rest>
+                </r:rest>
+            </r:rest>
+        </owl:disjointUnionOf>
+        <ui:creationForm r:resource="http://www.w3.org/ns/ui#FormForm"/>
+    </r:Description>
+
+    <ui:Form r:about="http://www.w3.org/ns/ui#FormForm">
         <r:type r:resource="http://www.w3.org/ns/ui#Multiple"/>
         <dc:title>Form for making new forms</dc:title>
-        <ui:element r:resource="http://www.w3.org/ns/ui#NewField"/>
+        <ui:element r:resource="http://www.w3.org/ns/ui#FieldForm"/>
+        <ui:property r:resource="http://www.w3.org/ns/ui#element"/>
     </ui:Form>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#Group">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#IntergerField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#NumericField"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#LinkField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#MultiLineTextField">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#TextField"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#Multiple">
+        <subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
+        <owl:disjointUnionOf r:parseType="Resource">
+            <r:first r:resource="http://www.w3.org/ns/ui#ZeroOrMore"/>
+            <r:rest r:parseType="Resource">
+                <r:first r:resource="http://www.w3.org/ns/ui#OneOrMore"/>
+                <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </r:rest>
+        </owl:disjointUnionOf>
+    </r:Description>
 
     <r:Description r:about="http://www.w3.org/ns/ui#NumericField">
         <subClassOf r:resource="http://www.w3.org/ns/ui#ValueField"/>
