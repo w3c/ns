@@ -99,6 +99,7 @@ ui:dependingOn a r:Property; s:domain ui:Options; s:range r:Property;
 ui:for a r:Property; s:label "for"@en; s:comment "The value for which this case is selected.".
 ui:use a r:Property; s:range ui:Form.
 
+ui:element a r:Property; s:label "element"@en; s:domain ui:Multiple; s:range ui:Single.
 
 ui:from a r:Property; s:domain ui:Choice; s:range r:Class;
     s:label "from"; ui:prompt "from what class".
@@ -142,8 +143,8 @@ FieldForm a ui:Group;
 
             ui:case [ ui:for ui:DateField; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty], # @@ restsriction
-                [ ui:sequence 2; a ui:DateField; ui:property ui:earliest; ui:label "earliest date"],
-                [ ui:sequence 3; a ui:DateField; ui:property ui:tooLate; ui:label "first date too late"]
+                [ ui:sequence 2; a ui:DateField; ui:property ui:start; ui:label "start date"],
+                [ ui:sequence 3; a ui:DateField; ui:property ui:overBy ; ui:label "over by"]
             ]];
 
             ui:case [ ui:for ui:LinkField; ui:use [a ui:Group; ui:part
@@ -152,9 +153,7 @@ FieldForm a ui:Group;
 
             ui:case [ ui:for ui:Group; ui:use FormForm; ];
 
-            ui:case [ ui:for ui:Multiple; ui:use FormForm;
-            # don't allow immediately nestded multiples. (@@only allow singles)
-            ];
+            ui:case [ ui:for ui:Multiple; ui:use FormForm;];
 
         ].
 

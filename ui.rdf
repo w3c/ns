@@ -89,14 +89,14 @@
                     </ui:part>
                     <ui:part r:parseType="Resource">
                         <r:type r:resource="http://www.w3.org/ns/ui#DateField"/>
-                        <ui:label>earliest date</ui:label>
-                        <ui:property r:resource="http://www.w3.org/ns/ui#earliest"/>
+                        <ui:label>start date</ui:label>
+                        <ui:property r:resource="http://www.w3.org/ns/ui#start"/>
                         <ui:sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</ui:sequence>
                     </ui:part>
                     <ui:part r:parseType="Resource">
                         <r:type r:resource="http://www.w3.org/ns/ui#DateField"/>
-                        <ui:label>first date too late</ui:label>
-                        <ui:property r:resource="http://www.w3.org/ns/ui#tooLate"/>
+                        <ui:label>over by</ui:label>
+                        <ui:property r:resource="http://www.w3.org/ns/ui#overBy"/>
                         <ui:sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</ui:sequence>
                     </ui:part>
                 </ui:use>
@@ -297,6 +297,12 @@
         <domain r:resource="http://www.w3.org/ns/ui#DateField"/>
         <label>min</label>
         <range r:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#element">
+        <domain r:resource="http://www.w3.org/ns/ui#Multiple"/>
+        <label xml:lang="en">element</label>
+        <range r:resource="http://www.w3.org/ns/ui#Single"/>
     </r:Property>
 
     <r:Property r:about="http://www.w3.org/ns/ui#fieldLength">
