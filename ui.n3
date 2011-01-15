@@ -17,7 +17,7 @@
 
 @keywords is, of, a.
 
-style a r:Property;
+style a r:Property, owl:DataProperty;
 	s:label "style";
         prompt "CSS style";
 	s:comment """Must be a valid CSS style string such as one could put in
@@ -27,14 +27,14 @@ style a r:Property;
         of the data it has.  For example, the style of a class may be picked 
         to distinguish information about things in that class.""".
 
-background-color a r:Property;
+background-color a r:Property, owl:DataProperty;
 	s:label "style";
 	s:comment """Must be a valid CSS color string such as one could put in
         an HTML style attribute.  This should be in the #xxxxxx form,
         (with 6 digits of hex)  so that it
         can work with Graphviz.""".
 
-sortPriority a r:Property;
+sortPriority a r:Property, owl:DataProperty;
         s:label "sort priority";
         s:range xsd:integer;
         s:comment """When individuals or classes must be sorted, this
@@ -74,14 +74,14 @@ prompt  a r:Property;
 ui:Form owl:disjointUnionOf ( ui:ValueField ui:LinkField ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ).
 ui:Single owl:disjointUnionOf ( ui:ValueField ui:LinkField ui:Group ui:Choice ui:Classifier ui:Options ).
 ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:DateField ).
-ui:NumericField owl:disjointUnionOf (ui:IntergerField ui:DecimalField ui:FloatField).
+ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:IntergerField ui:DecimalField ui:FloatField).
 ui:Multiple owl:disjointUnionOf ( ui:ZeroOrMore ui:OneOrMore ).
 ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField).
 
 ui:Form is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options, ui:Multiple.
 ui:Single is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options. 
 ui:ValueField is s:subClassOf of  ui:TextField, ui:NumericField, ui:DateField.
-ui:NumericField is s:subClassOf of ui:IntergerField, ui:DecimalField, ui:FloatField.
+ui:NumericField is s:subClassOf of ui:BooleanField, ui:IntergerField, ui:DecimalField, ui:FloatField.
 ui:TextField is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
 
 ui:property a r:Property; s:domain ui:Form; s:range r:Property;
@@ -132,9 +132,10 @@ FieldForm a ui:Group;
         
         [ a ui:Options; ui:sequence 2; ui:dependingOn s:type; 
 
-            ui:case [ ui:for ui:TextField; ui:use
+            ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:part
                 [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],  # @@@ Needs inference on current web
-                [ a ui:NumericField; ui:property ui:feildLength; ui:label "length"; ui:min 1; ui:max 4096]];
+                [ a ui:NumericField; ui:property ui:feildLength; ui:label "length"; ui:min 1; ui:max 4096]
+            ]];
 
             ui:case [ ui:for ui:NumericField; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
@@ -148,10 +149,17 @@ FieldForm a ui:Group;
             ]];
 
             ui:case [ ui:for ui:LinkField; ui:use [a ui:Group; ui:part
-                [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty]
+                [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty],
+                [ a ui:BooleanField; ui:property ui:canAddNew; ui:label "user can add new"]
             ]];
 
             ui:case [ ui:for ui:Group; ui:use FormForm; ];
+
+            ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:part
+                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty], # @@ restsriction
+                [ ui:sequence 1; a ui:Choice; ui:property ui:from; ui:label "destination class"; ui:from s:Class; ] # @@ restsriction
+                
+            ] ];
 
             ui:case [ ui:for ui:Multiple; ui:use FormForm;];
 
