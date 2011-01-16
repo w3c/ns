@@ -155,7 +155,7 @@ FieldForm a ui:Group;
                 [ ui:sequence 2; a ui:BooleanField; ui:property ui:canAddNew; ui:label "user can add new"]
             ]];
 
-            ui:case [ ui:for ui:Group; ui:use FormForm; ];
+            ui:case [ ui:for ui:Group; ui:use FieldForm; ];
 
             ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty], # @@ restsriction
@@ -163,7 +163,7 @@ FieldForm a ui:Group;
                 
             ] ];
 
-            ui:case [ ui:for ui:Multiple; ui:use FormForm;];
+            ui:case [ ui:for ui:Multiple; ui:use FieldForm;];
 
         ].
 
