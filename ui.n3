@@ -120,11 +120,12 @@ ui:tooLate a r:Property; s:domain ui:DateField; s:range xsd:integer; s:label "ma
  
 ########
 
-FormForm a ui:Form, ui:Multiple;
+
+FormForm a ui:Form;
     dc:title "Form for making new forms";
-    is ui:creationForm of Form;
-    ui:property ui:element;
-    ui:element FieldForm.
+    a ui:Group; ui:part
+        [ ui:sequence 1; a ui:SingleLineTextField; ui:property dc:title; ui:length 60 ],
+        [ ui:sequence 2; a ui:Multiple; is ui:creationForm of Form; ui:property ui:element; ui:element FieldForm].
 
 FieldForm a ui:Group;
     ui:part
@@ -137,7 +138,7 @@ FieldForm a ui:Group;
                 [ a ui:NumericField; ui:property ui:feildLength; ui:label "length"; ui:min 1; ui:max 4096]
             ]];
 
-            ui:case [ ui:for ui:NumericField; ui:use [a ui:Group; ui:part
+            ui:case [ ui:for ui:IntergerField, ui:DecimalField, ui:FloatField; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
                 [ ui:sequence 2; a ui:NumericField; ui:property ui:min; ui:label "minimum value"],
                 [ ui:sequence 3; a ui:NumericField; ui:property ui:max; ui:label "maximum value"]  ]];
@@ -149,8 +150,8 @@ FieldForm a ui:Group;
             ]];
 
             ui:case [ ui:for ui:LinkField; ui:use [a ui:Group; ui:part
-                [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty],
-                [ a ui:BooleanField; ui:property ui:canAddNew; ui:label "user can add new"]
+                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty],
+                [ ui:sequence 2; a ui:BooleanField; ui:property ui:canAddNew; ui:label "user can add new"]
             ]];
 
             ui:case [ ui:for ui:Group; ui:use FormForm; ];
