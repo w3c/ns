@@ -163,7 +163,7 @@ FieldForm a ui:Group;
                 
             ] ];
 
-            ui:case [ ui:for ui:Multiple; ui:use FieldForm;];
+            ui:case [ ui:for ui:Multiple; ui:use FieldForm;  ui:label  "Multiple copies of:"];
 
         ].
 
