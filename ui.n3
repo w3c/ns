@@ -123,9 +123,10 @@ ui:tooLate a r:Property; s:domain ui:DateField; s:range xsd:integer; s:label "ma
 
 FormForm a ui:Form;
     dc:title "Form for making new forms";
+    is ui:creationForm of Form;
     a ui:Group; ui:part
         [ ui:sequence 1; a ui:SingleLineTextField; ui:property dc:title; ui:length 60 ],
-        [ ui:sequence 2; a ui:Multiple; is ui:creationForm of Form; ui:property ui:element; ui:element FieldForm].
+        [ ui:sequence 2; a ui:Multiple; ui:property ui:element; ui:element FieldForm].
 
 FieldForm a ui:Group;
     ui:part
