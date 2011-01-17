@@ -129,6 +129,7 @@ FormForm a ui:Form;
         [ ui:sequence 2; a ui:Multiple; ui:property ui:element; ui:element FieldForm].
 
 FieldForm a ui:Group;
+    dc:title "Form for selecting a type of field";
     ui:part
         [ a ui:Classifier; ui:sequence 1; ui:property s:type; ui:category ui:Form], 
         
@@ -156,6 +157,8 @@ FieldForm a ui:Group;
             ]];
 
             ui:case [ ui:for ui:Group; ui:use FieldForm; ];
+            
+            ui:case [ ui:for ui:Options; ui:use [a ui:Multiple; ui:property ui:case; ui:element CaseForm]];
 
             ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty], # @@ restsriction
@@ -167,7 +170,11 @@ FieldForm a ui:Group;
 
         ].
 
-
+CaseForm a ui:Group;
+   dc:title "Form for a conditional case in a form";
+   ui:part
+        [ ui:sequence 1; a ui:Choice; ui:property ui:for; ui:label "property"; ui:from owl:ObjectProperty] ,    
+         FieldForm.       # @@ Bug:  we can't share the form using the sequence number system.
 
 # ENDS
 
