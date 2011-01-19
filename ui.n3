@@ -75,7 +75,7 @@ ui:Form owl:disjointUnionOf ( ui:ValueField ui:LinkField ui:Group ui:Choice ui:C
 ui:Single owl:disjointUnionOf ( ui:ValueField ui:LinkField ui:Group ui:Choice ui:Classifier ui:Options ).
 ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:DateField ).
 ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:IntergerField ui:DecimalField ui:FloatField).
-ui:Multiple owl:disjointUnionOf ( ui:ZeroOrMore ui:OneOrMore ).
+# ui:Multiple owl:disjointUnionOf ( ui:ZeroOrMore ui:OneOrMore ).
 ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField).
 
 ui:Form is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options, ui:Multiple.
