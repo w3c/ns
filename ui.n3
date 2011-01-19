@@ -99,7 +99,7 @@ ui:dependingOn a r:Property; s:domain ui:Options; s:range r:Property;
 ui:for a r:Property; s:label "for"@en; s:comment "The value for which this case is selected.".
 ui:use a r:Property; s:range ui:Form.
 
-ui:element a r:Property; s:label "element"@en; s:domain ui:Multiple; s:range ui:Single.
+ui:part a r:Property; s:label "part"@en ; s:domain ui:Form; s:range ui:Form.  #  Was: s:domain ui:Multiple; s:range ui:Single.
 
 ui:from a r:Property; s:domain ui:Choice; s:range r:Class;
     s:label "from"; ui:prompt "from what class".
