@@ -131,9 +131,9 @@ FormForm a ui:Form;
 FieldForm a ui:Group;
     dc:title "Form for selecting a type of field";
     ui:part
-        [ a ui:Classifier; ui:sequence 1; ui:property s:type; ui:category ui:Form], 
+        [ a ui:Classifier; ui:sequence 1; ui:property r:type; ui:category ui:Form], 
         
-        [ a ui:Options; ui:sequence 2; ui:dependingOn s:type; 
+        [ a ui:Options; ui:sequence 2; ui:dependingOn r:type; 
 
             ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:part
                 [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],  # @@@ Needs inference on current web
