@@ -126,7 +126,7 @@ FormForm a ui:Form;
     is ui:creationForm of Form;
     a ui:Group; ui:part
         [ ui:sequence 1; a ui:SingleLineTextField; ui:property dc:title; ui:length 60 ],
-        [ ui:sequence 2; a ui:Multiple; ui:property ui:element; ui:element FieldForm].
+        [ ui:sequence 2; a ui:Multiple; ui:property ui:part; ui:part FieldForm].
 
 FieldForm a ui:Group;
     dc:title "Form for selecting a type of field";
@@ -158,15 +158,18 @@ FieldForm a ui:Group;
 
             ui:case [ ui:for ui:Group; ui:use FieldForm; ];
             
-            ui:case [ ui:for ui:Options; ui:use [a ui:Multiple; ui:property ui:case; ui:element CaseForm]];
+            ui:case [ ui:for ui:Options; ui:use [a ui:Multiple; ui:property ui:case; ui:part CaseForm]];
 
             ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty], # @@ restsriction
                 [ ui:sequence 1; a ui:Choice; ui:property ui:from; ui:label "destination class"; ui:from s:Class; ] # @@ restsriction
                 
-            ] ];
+            ]];
 
-            ui:case [ ui:for ui:Multiple; ui:use FieldForm;  ui:label  "Multiple copies of:"];
+            ui:case [ ui:for ui:Multiple; ui:use [a ui:Group; ui:part
+                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from r:Property], # @@ restsriction  e.g. ui:part
+                FieldForm;
+            ]];
 
         ].
 
