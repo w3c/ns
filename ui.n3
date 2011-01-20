@@ -126,7 +126,9 @@ FormForm a ui:Form;
     is ui:creationForm of Form;
     a ui:Group; ui:part
         [ ui:sequence 1; a ui:SingleLineTextField; ui:property dc:title; ui:length 60 ],
-        [ ui:sequence 2; a ui:Multiple; ui:property ui:part; ui:part FieldForm].
+        FieldList.
+        
+FieldList  ui:sequence 2; a ui:Multiple; ui:property ui:part; ui:part FieldForm .
 
 FieldForm a ui:Group;
     dc:title "Form for selecting a type of field";
@@ -137,7 +139,8 @@ FieldForm a ui:Group;
 
             ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:part
                 [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],  # @@@ Needs inference on current web
-                [ a ui:NumericField; ui:property ui:feildLength; ui:label "length"; ui:min 1; ui:max 4096]
+                [ a ui:NumericField; ui:property ui:size; ui:label "size"; ui:min 1; ui:max 4096]
+                [ a ui:NumericField; ui:property ui:size; ui:label "maxLength"; ui:min 1]
             ]];
 
             ui:case [ ui:for ui:IntergerField, ui:DecimalField, ui:FloatField; ui:use [a ui:Group; ui:part
@@ -162,13 +165,14 @@ FieldForm a ui:Group;
 
             ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty], # @@ restsriction
-                [ ui:sequence 1; a ui:Choice; ui:property ui:from; ui:label "destination class"; ui:from s:Class; ] # @@ restsriction
+                [ ui:sequence 2; a ui:Choice; ui:property ui:from; ui:label "destination class"; ui:from s:Class; ] # @@ restsriction
+                [ ui:sequence 2; a ui:Choice; ui:property ui:use; ui:label "Nested Form (if any)"; ui:from ui:Form; ui:optional true] # @@ optional
                 
             ]];
 
             ui:case [ ui:for ui:Multiple; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from r:Property], # @@ restsriction  e.g. ui:part
-                FieldForm;
+                [ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from r:Property],
+                [ui:sequence 2; a ui:Choice; ui:property ui:part; ui:from ui:Form; ui:use FieldForm] ;  # Form for details of the field part of the multiple
             ]];
 
         ].
