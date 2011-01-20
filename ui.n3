@@ -139,8 +139,8 @@ FieldForm a ui:Group;
 
             ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:part
                 [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],  # @@@ Needs inference on current web
-                [ a ui:NumericField; ui:property ui:size; ui:label "size"; ui:min 1; ui:max 4096],
-                [ a ui:NumericField; ui:property ui:size; ui:label "maxLength"; ui:min 1]
+                [ a ui:NumericField; ui:property ui:size; ui:label "field size"; ui:min 1; ui:max 4096],
+                [ a ui:NumericField; ui:property ui:maxLength; ui:label "Max. length of string"; ui:min 1]
             ]];
 
             ui:case [ ui:for ui:IntergerField, ui:DecimalField, ui:FloatField; ui:use [a ui:Group; ui:part
