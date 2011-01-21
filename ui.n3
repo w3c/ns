@@ -173,7 +173,7 @@ FieldForm a ui:Group;
             ]];
 
             ui:case [ ui:for ui:Classifier; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectPropertyl ui:default r:type], # @@ restsriction
+                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty; ui:default r:type], # @@ restsriction
                 [ ui:sequence 2; a ui:Choice; ui:property ui:category; ui:label "category"; ui:from s:Class] 
                 
             ]];
