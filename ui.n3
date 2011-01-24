@@ -107,7 +107,7 @@ ui:from a r:Property; s:domain ui:Choice; s:range r:Class;
 ui:fieldLength a r:Property; s:domain ui:TextField; s:range xsd:integer;
     s:label "field length".
 
-ui:minValue a r:Property; s:domain ui:NumericField; s:label "min".  // @@ range?
+ui:minValue a r:Property; s:domain ui:NumericField; s:label "min".  # @@ range?
 ui:maxValue a r:Property; s:domain ui:NumericField; s:label "max".
 
 ui:earliest a r:Property; s:domain ui:DateField; s:range xsd:integer; s:label "min".
