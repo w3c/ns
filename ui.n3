@@ -104,8 +104,12 @@ ui:part a r:Property; s:label "part"@en ; s:domain ui:Form; s:range ui:Form.  # 
 ui:from a r:Property; s:domain ui:Choice; s:range r:Class;
     s:label "from"; ui:prompt "from what class".
 
-ui:fieldLength a r:Property; s:domain ui:TextField; s:range xsd:integer;
-    s:label "field length".
+ui:size a r:Property; s:domain ui:TextField; s:range xsd:integer;
+    s:label "size of field";
+    ui:prompt "size of field in characters".
+
+ui:maxLength a r:Property; s:domain ui:TextField; s:range xsd:integer;
+    s:label "max length of value".
 
 ui:minValue a r:Property; s:domain ui:NumericField; s:label "min".  # @@ range?
 ui:maxValue a r:Property; s:domain ui:NumericField; s:label "max".
@@ -169,7 +173,7 @@ FieldForm a ui:Group;
                 [ ui:sequence 2; a ui:BooleanField; ui:property ui:canAddNew; ui:label "user can add new"]
             ]];
 
-            ui:case [ ui:for ui:Group; ui:use FieldForm; ];
+            ui:case [ ui:for ui:Group; ui:use FieldList];
             
             ui:case [ ui:for ui:Options; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:dependingOn; ui:label "depending on"; ui:from r:Property; ui:default r:type],
