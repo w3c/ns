@@ -104,7 +104,7 @@ ui:part a r:Property; s:label "part"@en ; s:domain ui:Form; s:range ui:Form.  # 
 ui:from a r:Property; s:domain ui:Choice; s:range r:Class;
     s:label "from"; ui:prompt "from what class".
 
-ui:size a r:Property; s:domain ui:TextField; s:range xsd:integer;
+ui:size a r:Property; s:domain ui:ValueField; s:range xsd:integer;
     s:label "size of field";
     ui:prompt "size of field in characters".
 
@@ -144,7 +144,7 @@ FieldForm a ui:Group;
             ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:part
                 [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],  # @@@ Needs inference on current web
                 [ a ui:IntegerField; ui:property ui:size; ui:label "field size"; ui:min 1; ui:max 4096],
-                [ a ui:IntegerField; ui:property ui:maxLength; ui:size 6; ui:label "Max. length of string"; ui:min 1]
+                [ a ui:IntegerField; ui:property ui:maxLength; ui:label "Max. length of string"; ui:min 1]
             ]];
 
             ui:case [ ui:for ui:IntegerField; ui:use [a ui:Group; ui:part
