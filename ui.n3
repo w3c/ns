@@ -143,7 +143,7 @@ FieldForm a ui:Group;
 
             ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:part
                 [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],  # @@@ Needs inference on current web
-                [ a ui:IntegerField; ui:property ui:size; ui:label "field size"; ui:size 6; ui:min 1; ui:max 4096],
+                [ a ui:IntegerField; ui:property ui:size; ui:label "field size"; ui:min 1; ui:max 4096],
                 [ a ui:IntegerField; ui:property ui:maxLength; ui:size 6; ui:label "Max. length of string"; ui:min 1]
             ]];
 
