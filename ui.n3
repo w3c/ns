@@ -74,14 +74,14 @@ prompt  a r:Property;
 ui:Form owl:disjointUnionOf ( ui:ValueField ui:LinkField ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ).
 ui:Single owl:disjointUnionOf ( ui:ValueField ui:LinkField ui:Group ui:Choice ui:Classifier ui:Options ).
 ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:DateField ).
-ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:IntergerField ui:DecimalField ui:FloatField).
+ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:IntegerField ui:DecimalField ui:FloatField).
 # ui:Multiple owl:disjointUnionOf ( ui:ZeroOrMore ui:OneOrMore ).
 ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField).
 
 ui:Form a s:Class; is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options, ui:Multiple.
 ui:Single a s:Class; is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options. 
 ui:ValueField a s:Class; is s:subClassOf of  ui:TextField, ui:NumericField, ui:DateField.
-ui:NumericField a s:Class; is s:subClassOf of ui:BooleanField, ui:IntergerField, ui:DecimalField, ui:FloatField.
+ui:NumericField a s:Class; is s:subClassOf of ui:BooleanField, ui:IntegerField, ui:DecimalField, ui:FloatField.
 ui:TextField a s:Class; is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
 
 ui:property a r:Property; s:domain ui:Form; s:range r:Property;
@@ -143,10 +143,10 @@ FieldForm a ui:Group;
                 [ a ui:IntegerField; ui:property ui:maxLength; ui:size 6; ui:label "Max. length of string"; ui:min 1]
             ]];
 
-            ui:case [ ui:for ui:IntergerField; ui:use [a ui:Group; ui:part
+            ui:case [ ui:for ui:IntegerField; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
-                [ ui:sequence 2; a ui:IntergerField; ui:property ui:min; ui:label "minimum value"],
-                [ ui:sequence 3; a ui:IntergerField; ui:property ui:max; ui:label "maximum value"]  ]];
+                [ ui:sequence 2; a ui:IntegerField; ui:property ui:min; ui:label "minimum value"],
+                [ ui:sequence 3; a ui:IntegerField; ui:property ui:max; ui:label "maximum value"]  ]];
 
             ui:case [ ui:for ui:DecimalField; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
