@@ -78,11 +78,11 @@ ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:IntergerField ui:Decimal
 # ui:Multiple owl:disjointUnionOf ( ui:ZeroOrMore ui:OneOrMore ).
 ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField).
 
-ui:Form is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options, ui:Multiple.
-ui:Single is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options. 
-ui:ValueField is s:subClassOf of  ui:TextField, ui:NumericField, ui:DateField.
-ui:NumericField is s:subClassOf of ui:BooleanField, ui:IntergerField, ui:DecimalField, ui:FloatField.
-ui:TextField is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
+ui:Form a s:Class; is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options, ui:Multiple.
+ui:Single a s:Class; is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options. 
+ui:ValueField a s:Class; is s:subClassOf of  ui:TextField, ui:NumericField, ui:DateField.
+ui:NumericField a s:Class; is s:subClassOf of ui:BooleanField, ui:IntergerField, ui:DecimalField, ui:FloatField.
+ui:TextField a s:Class; is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
 
 ui:property a r:Property; s:domain ui:Form; s:range r:Property;
     s:label "property"@en;
@@ -125,7 +125,7 @@ FormForm a ui:Form;
     dc:title "Form for making new forms";
     is ui:creationForm of Form;
     a ui:Group; ui:part
-        [ ui:sequence 1; a ui:SingleLineTextField; ui:property dc:title; ui:length 60 ],
+        [ ui:sequence 1; a ui:SingleLineTextField; ui:property dc:title; ui:size 60 ],
         FieldList.
         
 FieldList  ui:sequence 2; a ui:Multiple; ui:property ui:part; ui:part FieldForm .
