@@ -71,15 +71,15 @@ prompt  a r:Property;
 
 #  A Taxonomy of Field types
 
-ui:Form owl:disjointUnionOf ( ui:ValueField ui:LinkField ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ).
-ui:Single owl:disjointUnionOf ( ui:ValueField ui:LinkField ui:Group ui:Choice ui:Classifier ui:Options ).
+ui:Form owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ).
+ui:Single owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ).
 ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:DateField ).
 ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:IntegerField ui:DecimalField ui:FloatField).
 # ui:Multiple owl:disjointUnionOf ( ui:ZeroOrMore ui:OneOrMore ).
 ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField).
 
-ui:Form a s:Class; is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options, ui:Multiple.
-ui:Single a s:Class; is s:subClassOf of ui:ValueField, ui:LinkField, ui:Group, ui:Choice, ui:Classifier, ui:Options. 
+ui:Form a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice, ui:Classifier, ui:Options, ui:Multiple.
+ui:Single a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice, ui:Classifier, ui:Options. 
 ui:ValueField a s:Class; is s:subClassOf of  ui:TextField, ui:NumericField, ui:DateField.
 ui:NumericField a s:Class; is s:subClassOf of ui:BooleanField, ui:IntegerField, ui:DecimalField, ui:FloatField.
 ui:TextField a s:Class; is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
@@ -168,10 +168,10 @@ FieldForm a ui:Group;
                 [ ui:sequence 3; a ui:DateField; ui:property ui:overBy ; ui:label "over by"]
             ]];
 
-            ui:case [ ui:for ui:LinkField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty],
-                [ ui:sequence 2; a ui:BooleanField; ui:property ui:canAddNew; ui:label "user can add new"]
-            ]];
+#            ui:case [ ui:for ui:LinkField; ui:use [a ui:Group; ui:part
+#                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty],
+#                [ ui:sequence 2; a ui:BooleanField; ui:property ui:canAddNew; ui:label "user can add new"]
+#            ]];
 
             ui:case [ ui:for ui:Group; ui:use FieldList];
             
@@ -182,7 +182,8 @@ FieldForm a ui:Group;
             ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty], # @@ restsriction
                 [ ui:sequence 2; a ui:Choice; ui:property ui:from; ui:label "destination class"; ui:from s:Class; ], # @@ restsriction
-                [ ui:sequence 3; a ui:Choice; ui:property ui:use; ui:label "Nested Form (if any)"; ui:from ui:Form; ui:optional true] # @@ optional
+                [ ui:sequence 3; a ui:BooleanField; ui:property ui:canAddNew; ui:label "user can add new"],
+                [ ui:sequence 4; a ui:Choice; ui:property ui:use; ui:label "Nested Form (if any)"; ui:from ui:Form; ui:optional true] # @@ optional
                 
             ]];
 
