@@ -202,7 +202,11 @@ FieldForm a ui:Group;
                 [ui:sequence 2; a ui:Choice; ui:property ui:part; ui:from ui:Form; ui:use FieldForm] ;  # Form for details of the field part of the multiple
             ]];
 
+            ui:case [ ui:for ui:Heading; ui:use [a ui:SingleLineTextField; ui:property ui:contents]];
+
+            ui:case [ ui:for ui:Comment; ui:use [a ui:MultiLineTextField; ui:property ui:contents]]
         ].
+
 
 CaseForm a ui:Group;
    dc:title "Form for a conditional case in a form";
