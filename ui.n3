@@ -130,6 +130,10 @@ FormForm a ui:Form;
     is ui:creationForm of Form;
     a ui:Group; ui:part
         [ ui:sequence 1; a ui:SingleLineTextField; ui:property dc:title; ui:size 60 ],
+        [ ui:sequence 2; a ui:Classifier; ui:property r:type; ui:category ui:Form], 
+        [ ui:sequence 3; a ui:Comment;  ui:contents
+        """To add a field to the form, press the blue plus at the bottom,
+        and then select what sort of field you want."""@en; ui:style "background-color: #ffe;"], 
         FieldList.
         
 FieldList  ui:sequence 2; a ui:Multiple; ui:property ui:part; ui:part FieldForm .
@@ -138,10 +142,6 @@ FieldForm a ui:Group;
     dc:title "Form for selecting a type of field";
     ui:part
         [ a ui:Comment; ui:sequence 1; ui:contents "Form for editing Forms"@en], 
-        [ a ui:Classifier; ui:sequence 2; ui:property r:type; ui:category ui:Form], 
-        [ a ui:Comment; ui:sequence 3; ui:contents
-        """To add a field to the form, press the blue plus at the bottom,
-        and then select what sort of field you want."""@en; ui:style "background-color: #ffe;"], 
         
         [ a ui:Options; ui:sequence 4; ui:dependingOn r:type; 
 
