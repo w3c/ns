@@ -71,15 +71,15 @@ prompt  a r:Property;
 
 #  A Taxonomy of Field types
 
-ui:Form owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ).
-ui:Single owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ).
+ui:Form owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ui:Heading ui:Comment).
+ui:Single owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Heading ui:Comment).
 ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:DateField ).
 ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:IntegerField ui:DecimalField ui:FloatField).
 # ui:Multiple owl:disjointUnionOf ( ui:ZeroOrMore ui:OneOrMore ).
 ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField).
 
-ui:Form a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice, ui:Classifier, ui:Options, ui:Multiple.
-ui:Single a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice, ui:Classifier, ui:Options. 
+ui:Form a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice,  ui:Heading, ui:Comment, ui:Classifier, ui:Options, ui:Multiple.
+ui:Single a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice, ui:Heading, ui:Comment, ui:Classifier, ui:Options. 
 ui:ValueField a s:Class; is s:subClassOf of  ui:TextField, ui:NumericField, ui:DateField.
 ui:NumericField a s:Class; is s:subClassOf of ui:BooleanField, ui:IntegerField, ui:DecimalField, ui:FloatField.
 ui:TextField a s:Class; is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
@@ -137,9 +137,13 @@ FieldList  ui:sequence 2; a ui:Multiple; ui:property ui:part; ui:part FieldForm 
 FieldForm a ui:Group;
     dc:title "Form for selecting a type of field";
     ui:part
-        [ a ui:Classifier; ui:sequence 1; ui:property r:type; ui:category ui:Form], 
+        [ a ui:Comment; ui:sequence 1; ui:contents "Form for editing Forms"@en], 
+        [ a ui:Classifier; ui:sequence 2; ui:property r:type; ui:category ui:Form], 
+        [ a ui:Comment; ui:sequence 3; ui:contents
+        """To add a field to the form, press the blue plus at the bottom,
+        and then select what sort of field you want."""@en; ui:style "background-color: #ffe;"], 
         
-        [ a ui:Options; ui:sequence 2; ui:dependingOn r:type; 
+        [ a ui:Options; ui:sequence 4; ui:dependingOn r:type; 
 
             ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:part
                 [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],  # @@@ Needs inference on current web
