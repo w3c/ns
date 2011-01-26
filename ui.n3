@@ -175,7 +175,7 @@ FieldForm a ui:Group;
 
 #            ui:case [ ui:for ui:LinkField; ui:use [a ui:Group; ui:part
 #                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty],
-#                [ ui:sequence 2; a ui:BooleanField; ui:property ui:canAddNew; ui:label "user can add new"]
+#                [ ui:sequence 2; a ui:BooleanField; ui:property ui:canMintNew; ui:label "user can add new"]
 #            ]];
 
             ui:case [ ui:for ui:Group; ui:use FieldList];
@@ -187,7 +187,7 @@ FieldForm a ui:Group;
             ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty], # @@ restsriction
                 [ ui:sequence 2; a ui:Choice; ui:property ui:from; ui:label "destination class"; ui:from s:Class; ], # @@ restsriction
-                [ ui:sequence 3; a ui:BooleanField; ui:property ui:canAddNew; ui:label "user can add new"],
+                [ ui:sequence 3; a ui:BooleanField; ui:property ui:canMintNew; ui:label "user can add new"],
                 [ ui:sequence 4; a ui:Choice; ui:property ui:use; ui:label "Nested Form (if any)"; ui:from ui:Form; ui:optional true] # @@ optional
                 
             ]];
@@ -212,8 +212,8 @@ FieldForm a ui:Group;
 CaseForm a ui:Group;
    dc:title "Form for a conditional case in a form";
    ui:part
-        [ ui:sequence 1; a ui:Choice; ui:property ui:for; ui:label "when it is"; ui:canAddNew true; ui:from s:Class] ,    
-        [ui:sequence 2; a ui:Choice; ui:property ui:use; ui:from ui:Form; ui:use FieldForm] . # Form for details of the field part of the multiple
+        [ ui:sequence 1; a ui:Choice; ui:property ui:for; ui:label "when it is"; ui:canMintNew true; ui:from s:Class] ,    
+        [ui:sequence 2; a ui:Choice; ui:property ui:use; ui:from ui:Form; ui:canMintNew true; ui:use FieldForm] . # Form for details of the field part of the multiple
 
 # ENDS
 
