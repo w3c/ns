@@ -129,9 +129,8 @@ FormForm a ui:Form;
     dc:title "Form for making new forms";
     is ui:creationForm of Form;
     a ui:Group; ui:part
-        [ a ui:Heading; ui:sequence 1; ui:contents "Form for editing Forms"@en], 
-        [ ui:sequence 1; a ui:SingleLineTextField; ui:property dc:title; ui:size 60 ],
-        [ ui:sequence 2; a ui:Classifier; ui:property r:type; ui:category ui:Form], 
+        [ ui:sequence 1; a ui:Heading;  ui:contents "Form for editing Forms"@en], 
+        [ ui:sequence 2; a ui:SingleLineTextField; ui:property dc:title; ui:size 60 ],
         [ ui:sequence 3; a ui:Comment;  ui:contents
         """To add a field to the form, press the blue plus at the bottom,
         and then select what sort of field you want."""@en; ui:style "background-color: #ffe;"], 
@@ -142,8 +141,10 @@ FieldList  ui:sequence 2; a ui:Multiple; ui:property ui:part; ui:part FieldForm 
 FieldForm a ui:Group;
     dc:title "Form for selecting a type of field";
     ui:part
+
+        [ ui:sequence 1; a ui:Classifier; ui:property r:type; ui:category ui:Form], 
         
-        [ a ui:Options; ui:sequence 4; ui:dependingOn r:type; 
+        [ a ui:Options; ui:sequence 2; ui:dependingOn r:type; 
 
             ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:part
                 [ a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],  # @@@ Needs inference on current web
