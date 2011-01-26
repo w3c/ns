@@ -136,7 +136,7 @@ FormForm a ui:Form;
         and then select what sort of field you want."""@en; ui:style "background-color: #ffe;"], 
         FieldList.
         
-FieldList  ui:sequence 2; a ui:Multiple; ui:property ui:part; ui:part FieldForm .
+FieldList  ui:sequence 10; a ui:Multiple; ui:property ui:part; ui:part FieldForm .
 
 FieldForm a ui:Group;
     dc:title "Form for selecting a type of field";
