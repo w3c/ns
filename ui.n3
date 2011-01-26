@@ -129,6 +129,7 @@ FormForm a ui:Form;
     dc:title "Form for making new forms";
     is ui:creationForm of Form;
     a ui:Group; ui:part
+        [ a ui:Heading; ui:sequence 1; ui:contents "Form for editing Forms"@en], 
         [ ui:sequence 1; a ui:SingleLineTextField; ui:property dc:title; ui:size 60 ],
         [ ui:sequence 2; a ui:Classifier; ui:property r:type; ui:category ui:Form], 
         [ ui:sequence 3; a ui:Comment;  ui:contents
@@ -141,7 +142,6 @@ FieldList  ui:sequence 2; a ui:Multiple; ui:property ui:part; ui:part FieldForm 
 FieldForm a ui:Group;
     dc:title "Form for selecting a type of field";
     ui:part
-        [ a ui:Comment; ui:sequence 1; ui:contents "Form for editing Forms"@en], 
         
         [ a ui:Options; ui:sequence 4; ui:dependingOn r:type; 
 
