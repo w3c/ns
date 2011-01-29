@@ -31,9 +31,10 @@ FitnessLog  a s:Class; s:label "fitness log";
 fitnessLog      a rdf:Property; s:domain foaf:Person; s:range FitnessLog.
 
 
-Record a s:Class; s:comment """A record of information about a person."""
-reading a rdf:Property; s:label "reading"@en;
-    s:comment """The relationship between a fitness log ad one reading  in it.
+Record a s:Class; s:comment """A record of information about a person.""".
+
+record a rdf:Property; s:label "reading"@en;
+    s:comment """The relationship between a fitness log and one record in it.
     The reading is about the subject of the log.""".
 
 weight  a rdf:Property; s:domain Record; s:range xsd:float;
