@@ -1,0 +1,93 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix dc:	<http://purl.org/dc/elements/1.1/>.
+@prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
+@prefix :	<http://www.w3.org/ns/pim/trip#> .
+
+@prefix dbp: <http://dbpedia.org/resource/>.
+@prefix cal: <http://www.w3.org/2002/12/cal/ical#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix q: <http://www.w3.org/2000/10/swap/pim/qif#> .
+
+@keywords a, is, of.
+
+<>  doc:version "$Id$";
+s:comment """This ontology is for use in describing 
+for fitness records.  Inspired by the anual
+fitfit.mit.edu system which oly runs for a few weeks,
+but records exercise sessions.
+""".
+
+<> s:seeAlso <http://www.w3.org/2002/12/cal/ical>.
+
+FitnessLog  a s:Class; s:label "fitness log";
+    s:comment """This is a cenral class of thing to start at.
+    It can have various different things added to it.""".
+
+fitnessLog      a rdf:Property; s:domain foaf:Person; s:range FitnessLog.
+
+
+Record a s:Class; s:comment """A record of information about a person."""
+reading a rdf:Property; s:label "reading"@en;
+    s:comment """The relationship between a fitness log ad one reading  in it.
+    The reading is about the subject of the log.""".
+
+weight  a rdf:Property; s:domain Record; s:range xsd:float;
+        s:comment """A property not of a person, but of a dated record
+            about a person""";
+        s:label "weight/kg"@en, "poids/kg"@fr. 
+bloodPressureSystolic  a rdf:Property; s:domain Record; s:range xsd:float;
+        s:comment """Blood pressure (the 117 in "117 over 76"). Units: millimeters of mercury.
+         A property not of a person, but of a dated record about a person""";
+        s:label "BP (sys) /mmHg"@en. 
+bloodPressureDiastolic  a rdf:Property; s:domain Record; s:range xsd:float;
+        s:comment """Blood pressure (the 76 in "117 over 76"). Units: millimeters of mercury.
+        A property not of a person, but of a dated record about a person""";
+        s:label "BP (dia) /mmHg"@en. 
+
+distance a rdf:Property; s:range xsd:float.  # @@ elsewhere - trip gps path length?
+
+##   Classifications:
+
+Excericise  a s:Class; s:label "excercise session";
+    ui:example ExcericiseExample.
+
+Intensity owl:disjointUnionOf ( High Medium Low);
+    s:label "Intensity"@en, "Intensité"@fr;
+    s:subClassOf Excercise.
+
+High a s:Class; s:label "high"@en, "haut"; s:subClassOf Intensity.
+Medium a s:Class; s:label "medium"@en, "moyen"@fr; s:subClassOf Intensity.
+Low a s:Class; s:label "low"@en, "bas"@fr;  s:subClassOf Intensity.
+
+Activity a s:Class; s:label "activity"; owl:disjointUnionOf (
+    Walking Cycling Running Skiing Cardio Weights Yoga );
+    s:subClassOf Excercise.
+    
+ExcericiseExample a Running, Medium;
+    cal:dtstart "2004-05-12T12:45:06Z"^^xsd:DateTime;
+    cal:dtend "2004-05-12T12:45:06Z"^^xsd:DateTime.
+    
+StatusExample a Record;
+    cal:DTSTART  "2004-05-12T12:45:12Z"^^xsd:DateTime;
+    weight  123.4;
+    bloodPressureSystolic 117;
+    bloodPressureDiastolic 76.
+    
+Walking a s:Class; s:label "walking"; s:subClassOf Activity.
+Cycling a s:Class; s:label "cycling"; s:subClassOf Activity.
+Running a s:Class; s:label "running"; s:subClassOf Activity.
+XCSkiing a s:Class; s:label "skiing"; s:subClassOf Activity.
+DownhillSkiing a s:Class; s:label "skiing"; s:subClassOf Activity.
+SkateSkiing a s:Class; s:label "skiing"; s:subClassOf Activity.
+Skating a s:Class; s:label "skating"; s:subclassOf Activity.
+
+Cardio a s:Class; s:label "cardio"; s:sibClassOf Activity.
+Weights a s:Class; s:label "weights"; s:sibClassOf Activity.
+Yoga a s:Class; s:label "yoga"; s:sibClassOf Activity.
+
+#ends
