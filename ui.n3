@@ -126,10 +126,10 @@ ui:tooLate a r:Property; s:domain ui:DateField; s:range xsd:integer; s:label "ma
 
 
 FormForm a ui:Form;
-    dc:title "Form for making new forms";
+    dc:title "Form for editing Forms";
     is ui:creationForm of Form;
     a ui:Group; ui:part
-        [ ui:sequence 1; a ui:Heading;  ui:contents "Form for editing Forms"@en], 
+        [ ui:sequence 1; a ui:Heading;  ui:contents "Edit Form"@en], 
         [ ui:sequence 2; a ui:SingleLineTextField; ui:property dc:title; ui:size 60 ],
         [ ui:sequence 3; a ui:Comment;  ui:contents
         """To add a field to the form, press the blue plus at the bottom,
@@ -169,8 +169,8 @@ FieldForm a ui:Group;
 
             ui:case [ ui:for ui:DateField; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty], # @@ restsriction
-                [ ui:sequence 2; a ui:DateField; ui:property ui:start; ui:label "start date"],
-                [ ui:sequence 3; a ui:DateField; ui:property ui:overBy ; ui:label "over by"]
+                [ ui:sequence 2; a ui:DateField; ui:property ui:min; ui:label "earliest"],
+                [ ui:sequence 3; a ui:DateField; ui:property ui:max ; ui:label "latest"]
             ]];
 
 #            ui:case [ ui:for ui:LinkField; ui:use [a ui:Group; ui:part
