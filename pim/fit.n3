@@ -51,6 +51,7 @@ bloodPressureDiastolic  a rdf:Property; s:domain Record; s:range xsd:float;
         s:label "BP (dia) /mmHg"@en. 
 
 distance a rdf:Property; s:range xsd:float.  # @@ elsewhere - trip gps path length?
+duration a rdf:Property; s:range xsd:float.  # @@ elsewhere - ical
 
 ##   Classifications:
 
