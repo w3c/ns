@@ -186,13 +186,13 @@ FieldForm a ui:Group;
 
             ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property";
-                    ui:canMintNew true; ui:from owl:ObjectProperty], # @@ restsriction
+                    ui:canMintNew true; ui:from owl:ObjectProperty], 
                 [ ui:sequence 2; a ui:Choice; ui:property ui:from; ui:label "destination class";
                                     ui:from s:Class; ui:canMintNew true; ], 
-                [ ui:sequence 3; a ui:BooleanField; ui:property ui:canMintNew;
+                [ ui:sequence 3; a ui:BooleanField; ui:property ui:canMintNew; # No class form yet
                             ui:label "user can add new"],
                 [ ui:sequence 4; a ui:Choice; ui:property ui:use; ui:label "Nested Form (if any)";
-                            ui:from ui:Form; ui:optional true; ui:canMintNew true] # @@ optional
+                            ui:from ui:Form; ui:optional true; ui:canMintNew true; ui:use FormForm] # @@ optional
                 
             ]];
 
