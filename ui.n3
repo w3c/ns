@@ -185,10 +185,14 @@ FieldForm a ui:Group;
                 [ ui:sequence 2; a ui:Multiple; ui:property ui:case; ui:part CaseForm]]];
 
             ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty], # @@ restsriction
-                [ ui:sequence 2; a ui:Choice; ui:property ui:from; ui:label "destination class"; ui:from s:Class; ], # @@ restsriction
-                [ ui:sequence 3; a ui:BooleanField; ui:property ui:canMintNew; ui:label "user can add new"],
-                [ ui:sequence 4; a ui:Choice; ui:property ui:use; ui:label "Nested Form (if any)"; ui:from ui:Form; ui:optional true] # @@ optional
+                [ ui:sequence 1; a ui:Choice; ui:property ui:property; ui:label "property";
+                    ui:canMintNew true; ui:from owl:ObjectProperty], # @@ restsriction
+                [ ui:sequence 2; a ui:Choice; ui:property ui:from; ui:label "destination class";
+                                    ui:from s:Class; ui:canMintNew true; ], 
+                [ ui:sequence 3; a ui:BooleanField; ui:property ui:canMintNew;
+                            ui:label "user can add new"],
+                [ ui:sequence 4; a ui:Choice; ui:property ui:use; ui:label "Nested Form (if any)";
+                            ui:from ui:Form; ui:optional true; ui:canMintNew true] # @@ optional
                 
             ]];
 
