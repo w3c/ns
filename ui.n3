@@ -73,14 +73,14 @@ prompt  a r:Property;
 
 ui:Form owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ui:Heading ui:Comment).
 ui:Single owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Heading ui:Comment).
-ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:DateField ).
+ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:DateField ui:DateTimeField ).
 ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:IntegerField ui:DecimalField ui:FloatField).
 # ui:Multiple owl:disjointUnionOf ( ui:ZeroOrMore ui:OneOrMore ).
 ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField).
 
 ui:Form a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice,  ui:Heading, ui:Comment, ui:Classifier, ui:Options, ui:Multiple.
 ui:Single a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice, ui:Heading, ui:Comment, ui:Classifier, ui:Options. 
-ui:ValueField a s:Class; is s:subClassOf of  ui:TextField, ui:NumericField, ui:DateField.
+ui:ValueField a s:Class; is s:subClassOf of  ui:TextField, ui:NumericField, ui:DateField, ui:DateTimeField.
 ui:NumericField a s:Class; is s:subClassOf of ui:BooleanField, ui:IntegerField, ui:DecimalField, ui:FloatField.
 ui:TextField a s:Class; is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
 
@@ -111,11 +111,8 @@ ui:size a r:Property; s:domain ui:ValueField; s:range xsd:integer;
 ui:maxLength a r:Property; s:domain ui:TextField; s:range xsd:integer;
     s:label "max length of value".
 
-ui:minValue a r:Property; s:domain ui:NumericField; s:label "min".  # @@ range?
-ui:maxValue a r:Property; s:domain ui:NumericField; s:label "max".
-
-ui:earliest a r:Property; s:domain ui:DateField; s:range xsd:integer; s:label "min".
-ui:tooLate a r:Property; s:domain ui:DateField; s:range xsd:integer; s:label "max".
+ui:minValue a r:Property; s:domain ui:ValueField; s:label "min".  # @@ range?
+ui:maxValue a r:Property; s:domain ui:ValueField; s:label "max".
 
  ui:creationForm a r:Property; s:domain s:Class; s:range ui:Form;
     s:label "creation form"; 
@@ -169,8 +166,14 @@ FieldForm a ui:Group;
 
             ui:case [ ui:for ui:DateField; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty], # @@ restsriction
-                [ ui:sequence 2; a ui:DateField; ui:property ui:min; ui:label "earliest"],
-                [ ui:sequence 3; a ui:DateField; ui:property ui:max ; ui:label "latest"]
+                [ ui:sequence 2; a ui:DateField; ui:property ui:min; ui:label "min"],
+                [ ui:sequence 3; a ui:DateField; ui:property ui:max ; ui:label "max"]
+            ]];
+
+            ui:case [ ui:for ui:DateTimeField; ui:use [a ui:Group; ui:part
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty], # @@ restsriction
+                [ ui:sequence 2; a ui:DateTimeField; ui:property ui:min; ui:label "min"],
+                [ ui:sequence 3; a ui:DateTimeField; ui:property ui:max ; ui:label "max"]
             ]];
 
 #            ui:case [ ui:for ui:LinkField; ui:use [a ui:Group; ui:part
