@@ -31,6 +31,8 @@ FitnessLog  a s:Class; s:label "fitness log";
 fitnessLog      a rdf:Property, owl:ObjectProperty; s:domain foaf:Person; s:range FitnessLog.
 
 
+##################### Snapshot health data
+
 Record a s:Class; s:comment """A record of information about a person.""".
 
 record a rdf:Property, owl:ObjectProperty; s:label "reading"@en;
@@ -55,9 +57,13 @@ bloodPressureDiastolic  a rdf:Property, owl:DatatypeProperty;
         A property not of a person, but of a dated record about a person""";
         s:label "BP (dia) /mmHg"@en. 
 
-distance a rdf:Property, owl:DatatypeProperty; s:range xsd:float.  # @@ elsewhere
 
-duration a rdf:Property, owl:DatatypeProperty; s:range xsd:float.  # @@ elsewhere
+##################### Activity of a given time
+
+exercise a rdf:Property;
+    s:label "excercise session";
+    s:range Excericise;
+    s:comment """The relationship between a fitnes lof and an exercise session""".
 
 ##   Classifications:
 
@@ -89,13 +95,18 @@ StatusExample a Record;
 Walking a s:Class; s:label "walking"; s:subClassOf Activity.
 Cycling a s:Class; s:label "cycling"; s:subClassOf Activity.
 Running a s:Class; s:label "running"; s:subClassOf Activity.
-XCSkiing a s:Class; s:label "skiing"; s:subClassOf Activity.
-DownhillSkiing a s:Class; s:label "skiing"; s:subClassOf Activity.
-SkateSkiing a s:Class; s:label "skiing"; s:subClassOf Activity.
+XCSkiing a s:Class; s:label "cross-country skiing"; s:subClassOf Activity.
+DownhillSkiing a s:Class; s:label "downhill skiing"; s:subClassOf Activity.
+SkateSkiing a s:Class; s:label "skate-skiing"; s:subClassOf Activity.
 Skating a s:Class; s:label "skating"; s:subclassOf Activity.
 
 Cardio a s:Class; s:label "cardio"; s:sibClassOf Activity.
 Weights a s:Class; s:label "weights"; s:sibClassOf Activity.
 Yoga a s:Class; s:label "yoga"; s:sibClassOf Activity.
+
+distance a rdf:Property, owl:DatatypeProperty; s:range xsd:float.  # @@ elsewhere
+
+duration a rdf:Property, owl:DatatypeProperty; s:range xsd:float.  # @@ elsewhere
+energyBurn a rdf:Property, owl:DatatypeProperty; s:range xsd:float. 
 
 #ends
