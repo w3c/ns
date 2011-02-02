@@ -73,14 +73,14 @@ prompt  a r:Property;
 
 ui:Form owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ui:Heading ui:Comment).
 ui:Single owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Heading ui:Comment).
-ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:DateField ui:DateTimeField ).
+ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:DateField ui:DateTimeField ui:PhoneField ui:EmailField).
 ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:IntegerField ui:DecimalField ui:FloatField).
 # ui:Multiple owl:disjointUnionOf ( ui:ZeroOrMore ui:OneOrMore ).
 ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField).
 
 ui:Form a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice,  ui:Heading, ui:Comment, ui:Classifier, ui:Options, ui:Multiple.
 ui:Single a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice, ui:Heading, ui:Comment, ui:Classifier, ui:Options. 
-ui:ValueField a s:Class; is s:subClassOf of  ui:TextField, ui:NumericField, ui:DateField, ui:DateTimeField.
+ui:ValueField a s:Class; is s:subClassOf of  ui:TextField, ui:NumericField, ui:DateField, ui:DateTimeField, ui:PhoneField, ui:EmailField.
 ui:NumericField a s:Class; is s:subClassOf of ui:BooleanField, ui:IntegerField, ui:DecimalField, ui:FloatField.
 ui:TextField a s:Class; is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
 
@@ -165,21 +165,24 @@ FieldForm a ui:Group;
                 [ ui:sequence 3; a ui:FloatField; ui:property ui:max; ui:label "maximum value"]  ]];
 
             ui:case [ ui:for ui:DateField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty], # @@ restsriction
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
                 [ ui:sequence 2; a ui:DateField; ui:property ui:min; ui:label "min"],
                 [ ui:sequence 3; a ui:DateField; ui:property ui:max ; ui:label "max"]
             ]];
 
             ui:case [ ui:for ui:DateTimeField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty], # @@ restsriction
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
                 [ ui:sequence 2; a ui:DateTimeField; ui:property ui:min; ui:label "min"],
                 [ ui:sequence 3; a ui:DateTimeField; ui:property ui:max ; ui:label "max"]
             ]];
 
-#            ui:case [ ui:for ui:LinkField; ui:use [a ui:Group; ui:part
-#                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty],
-#                [ ui:sequence 2; a ui:BooleanField; ui:property ui:canMintNew; ui:label "user can add new"]
-#            ]];
+            ui:case [ ui:for ui:EmailField; ui:use [a ui:Group; ui:part
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty]
+            ]];
+
+            ui:case [ ui:for ui:PhoneField; ui:use [a ui:Group; ui:part
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty]
+            ]];
 
             ui:case [ ui:for ui:Group; ui:use FieldList];
             
