@@ -28,7 +28,7 @@ at ones home base, or a set of photos taken at home etc.
 """.
 
 Trip a s:Class; s:label "trip";
-    :example  [
+    ui:example  [
             cal:DTSTART "2006-02-01";
             cal:DTEND "2006-02-04";
             dc:title "Jim's trip to New York and Chicago";
@@ -59,11 +59,8 @@ trip a rdf:Property;
     a photo, a meeting, etc.""".
 
 
-Trip ui:initialProperties ( dc:title ).
-
-Trip ui:creationForm TripForm.
-###########################
 # A form for creating a new trip amounts to just capturing its title.
+
 TripForm is ui:creationForm of Trip;
     a ui:Form, ui:TextField;
     ui:property dc:title;

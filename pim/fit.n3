@@ -79,7 +79,7 @@ Medium a s:Class; s:label "medium"@en, "moyen"@fr; s:subClassOf Intensity.
 Low a s:Class; s:label "low"@en, "bas"@fr;  s:subClassOf Intensity.
 
 Activity a s:Class; s:label "activity"; owl:disjointUnionOf (
-    Walking Cycling Running Skiing Cardio Weights Yoga );
+    Walking Cycling Running XCSkiing DownhillSkiing SkateSkiing Skating Cardio Weights Yoga );
     s:subClassOf Excercise.
     
 ExcericiseExample a Running, Medium;
