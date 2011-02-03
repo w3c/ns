@@ -52,7 +52,15 @@ This may be used for constructing URIs for new storage resources.
 
 backgroundColor a rdf:Property, owl:DatatypeProperty;
     s:label "background color";
-    ui:prompt "Pick a background color to recognize this workspace";
+    s:range ui:Color;
+    # ui:prompt "Pick a background color to recognize this workspace";
+    s:comment """The background color of data is a way of spotting
+the policy of data as you are adding it - or reading it.
+""".
+
+color a rdf:Property, owl:DatatypeProperty;
+    s:label "color";
+    s:range ui:Color;
     s:comment """The background color of data is a way of spotting
 the policy of data as you are adding it - or reading it.
 """.
