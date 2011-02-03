@@ -17,7 +17,7 @@
 
 @keywords is, of, a.
 
-style a r:Property, owl:DataProperty;
+style a r:Property, owl:DatatypeProperty;
 	s:label "style";
         prompt "CSS style";
 	s:comment """Must be a valid CSS style string such as one could put in
@@ -27,14 +27,26 @@ style a r:Property, owl:DataProperty;
         of the data it has.  For example, the style of a class may be picked 
         to distinguish information about things in that class.""".
 
-background-color a r:Property, owl:DataProperty;
-	s:label "style";
+backgroundColor a r:Property, owl:DatatypeProperty;
+	s:label "background colour"@en;
+        s:range ui:Color;
 	s:comment """Must be a valid CSS color string such as one could put in
         an HTML style attribute.  This should be in the #xxxxxx form,
         (with 6 digits of hex)  so that it
         can work with Graphviz.""".
 
-sortPriority a r:Property, owl:DataProperty;
+
+color a r:Property, owl:DatatypeProperty;
+    s:label "colour"@en;
+    s:range ui:Color;
+	s:comment """Must be a valid CSS color string such as one could put in
+        an HTML style attribute.  This should be in the #xxxxxx form,
+        (with 6 digits of hex)  so that it
+        can work with Graphviz.""".
+
+
+
+sortPriority a r:Property, owl:DatatypeProperty;
         s:label "sort priority";
         s:range xsd:integer;
         s:comment """When individuals or classes must be sorted, this
@@ -144,38 +156,38 @@ FieldForm a ui:Group;
         [ a ui:Options; ui:sequence 2; ui:dependingOn r:type; 
 
             ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:part
-                [ a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],  # @@@ Needs inference on current web
+                [ a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],  # @@@ Needs inference on current web
                 [ a ui:IntegerField; ui:property ui:size; ui:label "field size"; ui:min 1; ui:max 4096],
                 [ a ui:IntegerField; ui:property ui:maxLength; ui:label "Max. length of string"; ui:min 1]
             ]];
 
             ui:case [ ui:for ui:IntegerField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],
                 [ ui:sequence 2; a ui:IntegerField; ui:property ui:min; ui:label "minimum value"],
                 [ ui:sequence 3; a ui:IntegerField; ui:property ui:max; ui:label "maximum value"]  ]];
 
             ui:case [ ui:for ui:DecimalField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],
                 [ ui:sequence 2; a ui:DecimalField; ui:property ui:min; ui:label "minimum value"],
                 [ ui:sequence 3; a ui:DecimalField; ui:property ui:max; ui:label "maximum value"]  ]];
 
             ui:case [ ui:for ui:FloatField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],
                 [ ui:sequence 2; a ui:FloatField; ui:property ui:min; ui:label "minimum value"],
                 [ ui:sequence 3; a ui:FloatField; ui:property ui:max; ui:label "maximum value"]  ]];
 
             ui:case [ ui:for ui:ColorField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty]
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty]
             ]];
 
             ui:case [ ui:for ui:DateField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],
                 [ ui:sequence 2; a ui:DateField; ui:property ui:min; ui:label "min"],
                 [ ui:sequence 3; a ui:DateField; ui:property ui:max ; ui:label "max"]
             ]];
 
             ui:case [ ui:for ui:DateTimeField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DataProperty],
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],
                 [ ui:sequence 2; a ui:DateTimeField; ui:property ui:min; ui:label "min"],
                 [ ui:sequence 3; a ui:DateTimeField; ui:property ui:max ; ui:label "max"]
             ]];
