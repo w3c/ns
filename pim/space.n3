@@ -37,3 +37,12 @@ Goals then are that the user can
 """.
 
 
+Workspace  a s:Class; s:label "workspace";
+    s:comment """Workspaces are place where data is stored and asscoiated prolices of privacy.
+A given application typically stores information in several different
+workspaces, some being user private, some shared, and some public.
+""".
+
+Workspace owl:disjointUnionOf (Private Shared Public).
+
+
