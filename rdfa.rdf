@@ -8,39 +8,39 @@
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
   <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#prefix">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <dcterms:description xml:lang="en">defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN.</dcterms:description>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#vocabulary">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <dcterms:description xml:lang="en">defines a URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string ‘true’ or ‘True’.</dcterms:description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa.html">
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base.css"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#term">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <dcterms:description xml:lang="en">defines a term mapping for a URI; the value is supposed to be a NMTOKEN</dcterms:description>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#">
-    <dcterms:date xml:lang="en">2011-02-04</dcterms:date>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdfa-core/#s_profiles"/>
-    <owl:versionInfo xml:lang="en">$Date$</owl:versionInfo>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <dcterms:title xml:lang="en">RDFa Vocabulary for Term and Prefix Assignment</dcterms:title>
-    <dcterms:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <dcterms:description xml:lang="en">This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa1.1 processing behavior.</dcterms:description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#vocabulary">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description xml:lang="en">defines a URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string ‘true’ or ‘True’.</dcterms:description>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
     <foaf:title xml:lang="en">Semantic Web Activity Lead</foaf:title>
     <foaf:name xml:lang="en">Ivan Herman</foaf:name>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
     <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa.html">
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base.css"/>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#">
+    <dcterms:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <dcterms:title xml:lang="en">RDFa Vocabulary for Term and Prefix Assignment</dcterms:title>
+    <dcterms:date xml:lang="en">2011-02-04</dcterms:date>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdfa-core/#s_profiles"/>
+    <dcterms:description xml:lang="en">This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa1.1 processing behavior.</dcterms:description>
+    <owl:versionInfo xml:lang="en">$Date$</owl:versionInfo>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
   </rdf:Description>
 </rdf:RDF>
 
