@@ -23,13 +23,12 @@
       <h1 property="dcterms:title">RDFa Vocabulary for Term and Prefix Assignment</h1>
     </div>
 
-    <p><span property="dcterms:description" datatype="">This document describes the RDFa Vocabulary for Term and Prefix Assignment.
-	The Vocabulary is used to modify <a href="http://www.w3.org/TR/rdfa-core/#s_profiles">RDFa&nbsp;1.1 processing behavior</a>.</span>
+    <p><span property="dcterms:description" datatype="">This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify <a href="http://www.w3.org/TR/rdfa-core/#s_profiles">RDFa&nbsp;1.1 processing behavior</a>.</span>
     The URI of the vocabulary is <code>http://www.w3.org/ns/rdfa#</code>. <a href="rdfa.ttl">Turtle</a> and an
 	<a href="rdfa.rdf">RDF/XML</a> versions of the vocabulary are also available.</p>
 	
 	<p>For a precise definition of these vocabulary elements, see the
-	<a rel="rdfs:seeAlso rdfs:isDefinedBy" href="http://www.w3.org/TR/rdfa-core/#s_profiles">RDFa Core&nbsp;1.1</a> specification.</p>
+	<a rel="rdfs:isDefinedBy" href="http://www.w3.org/TR/rdfa-core/#s_profiles">RDFa Core&nbsp;1.1</a> specification.</p>
 	
 	<h2>Term and prefix assignment vocabulary</h2>
 	<p>This vocabulary contains terms to define prefix mappings and term assignments; these can be used
@@ -38,17 +37,13 @@
 	<h3>Properties</h3>
 	<ul>
 	  <li about="[rdfa:prefix]" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:prefix</code>:
-		<span property="dcterms:description">defines a prefix mapping for a URI</span>.
-		<span rel="rdfs:range" resource="[xsd:NMTOKEN]">The value is supposed to be a NMTOKEN.</span>.
+		<span property="dcterms:description">defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN.</span>.
 	  </li>
 	  <li about="[rdfa:term]" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:term</code>:
-		<span property="dcterms:description">defines a term mapping for a URI</span>.
-		<span rel="rdfs:range" resource="[xsd:NMTOKEN]">The value is supposed to be a NMTOKEN</span>.
+		<span property="dcterms:description">defines a term mapping for a URI; the value is supposed to be a NMTOKEN</span>.
 	  </li>
 	  <li about="[rdfa:vocabulary]" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:vocabulary</code>:
-		<span property="dcterms:description" datatype="">defines a URI to be used as a default vocabulary</span>.
-		<span rel="rdfs:range" resource="[xsd:string]">The value is supposed can be any string; for documentation
-		purposed it is advised to use the string “true” or “True”.</span>
+		<span property="dcterms:description" datatype="">defines a URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string ‘true’ or ‘True’.</span>
 	  </li>
 	</ul>
 	
@@ -62,7 +57,7 @@
 			<span rel="rdfs:seeAlso" resource="http://www.ivan-herman.net/foaf" property="foaf:title">Semantic Web Activity Lead</span>,
 		</span>
 	  </span>
-	  <span property="dcterms:date">2010-09-03</span>
+	  <span property="dcterms:date">2011-02-04</span>
 	  <br />
 	  <span property="owl:versionInfo">$Date$</span>
 	</address>

@@ -12,25 +12,20 @@
 
 <http://www.w3.org/ns/rdfa#> a owl:Ontology ;
      dcterms:creator <http://www.ivan-herman.net/foaf#me> ;
-     dcterms:date "2010-09-03"@en ;
-     dcterms:description """This document describes the RDFa Vocabulary for Term and Prefix Assignment.
-	The Vocabulary is used to modify RDFa1.1 processing behavior."""@en ;
+     dcterms:date "2011-02-04"@en ;
+     dcterms:description "This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa1.1 processing behavior."@en ;
      dcterms:title "RDFa Vocabulary for Term and Prefix Assignment"@en ;
      rdfs:isDefinedBy <http://www.w3.org/TR/rdfa-core/#s_profiles> ;
-     rdfs:seeAlso <http://www.w3.org/TR/rdfa-core/#s_profiles> ;
      owl:versionInfo "$Date$"@en . 
 
 rdfa:prefix a rdf:Property, owl:DatatypeProperty ;
-     dcterms:description "defines a prefix mapping for a URI"@en ;
-     rdfs:range xsd:NMTOKEN . 
+     dcterms:description "defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN."@en . 
 
 rdfa:term a rdf:Property, owl:DatatypeProperty ;
-     dcterms:description "defines a term mapping for a URI"@en ;
-     rdfs:range xsd:NMTOKEN . 
+     dcterms:description "defines a term mapping for a URI; the value is supposed to be a NMTOKEN"@en . 
 
 rdfa:vocabulary a rdf:Property, owl:DatatypeProperty ;
-     dcterms:description "defines a URI to be used as a default vocabulary"@en ;
-     rdfs:range xsd:string . 
+     dcterms:description "defines a URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string ‘true’ or ‘True’."@en . 
 
 <http://www.w3.org/ns/rdfa.html> xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base.css> . 
 
