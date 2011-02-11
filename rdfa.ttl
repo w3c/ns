@@ -24,8 +24,11 @@ rdfa:prefix a rdf:Property, owl:DatatypeProperty ;
 rdfa:term a rdf:Property, owl:DatatypeProperty ;
      dcterms:description "defines a term mapping for a URI; the value is supposed to be a NMTOKEN"@en . 
 
+rdfa:uri a rdf:Property, owl:DatatypeProperty ;
+     dcterms:description "defines the URI for either a prefix or a term mapping; the value is supposed to be an absolute URI"@en . 
+
 rdfa:vocabulary a rdf:Property, owl:DatatypeProperty ;
-     dcterms:description "defines a URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string ‘true’ or ‘True’."@en . 
+     dcterms:description "defines an absolute URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string ‘true’ or ‘True’."@en . 
 
 <http://www.w3.org/ns/rdfa.html> xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base.css> . 
 

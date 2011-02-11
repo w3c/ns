@@ -7,40 +7,45 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#prefix">
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#">
+    <owl:versionInfo xml:lang="en">$Date$</owl:versionInfo>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdfa-core/#s_profiles"/>
+    <dcterms:description xml:lang="en">This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa1.1 processing behavior.</dcterms:description>
+    <dcterms:date xml:lang="en">2011-02-04</dcterms:date>
+    <dcterms:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+    <dcterms:title xml:lang="en">RDFa Vocabulary for Term and Prefix Assignment</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <foaf:name xml:lang="en">Ivan Herman</foaf:name>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:title xml:lang="en">Semantic Web Activity Lead</foaf:title>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#uri">
+    <dcterms:description xml:lang="en">defines the URI for either a prefix or a term mapping; the value is supposed to be an absolute URI</dcterms:description>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#prefix">
     <dcterms:description xml:lang="en">defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/rdfa.html">
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base.css"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#term">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <dcterms:description xml:lang="en">defines a term mapping for a URI; the value is supposed to be a NMTOKEN</dcterms:description>
-  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#vocabulary">
+    <dcterms:description xml:lang="en">defines an absolute URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string ‘true’ or ‘True’.</dcterms:description>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <dcterms:description xml:lang="en">defines a URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string ‘true’ or ‘True’.</dcterms:description>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:title xml:lang="en">Semantic Web Activity Lead</foaf:title>
-    <foaf:name xml:lang="en">Ivan Herman</foaf:name>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#">
-    <dcterms:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <dcterms:title xml:lang="en">RDFa Vocabulary for Term and Prefix Assignment</dcterms:title>
-    <dcterms:date xml:lang="en">2011-02-04</dcterms:date>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdfa-core/#s_profiles"/>
-    <dcterms:description xml:lang="en">This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa1.1 processing behavior.</dcterms:description>
-    <owl:versionInfo xml:lang="en">$Date$</owl:versionInfo>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#term">
+    <dcterms:description xml:lang="en">defines a term mapping for a URI; the value is supposed to be a NMTOKEN</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdf:Description>
 </rdf:RDF>
 
