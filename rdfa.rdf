@@ -1,51 +1,85 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dcterms="http://purl.org/dc/terms/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:owl="http://www.w3.org/2002/07/owl#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#">
-    <owl:versionInfo xml:lang="en">$Date$</owl:versionInfo>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#UnresolvedCURIE">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#Warning">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/rdfa#PGClass"/>
+        <dcterms:description>is the class for all warnings</dcterms:description>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <dcterms:description>warning; to be used when a CURIE prefix fails to be resolved</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#DocumentError">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#Error">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/rdfa#PGClass"/>
+        <dcterms:description>is the class for all error conditions</dcterms:description>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <dcterms:description>error condition; to be used when the document fails to be fully processed as a result of non-conformant host language markup</dcterms:description>
+  </rdf:Description>
+  <rdf:Property rdf:about="http://www.w3.org/ns/rdfa#vocabulary">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description>defines an absolute URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string 'true' or 'True'.</dcterms:description>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#Info">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/rdfa#PGClass"/>
+    <dcterms:description>is the class for all informations</dcterms:description>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/rdfa#context">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/rdfa#PGClass"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <dcterms:description>provides extra context for the error, eg, http response, an XPointer/XPath information, or simply the URI that created the error</dcterms:description>
+  </owl:ObjectProperty>
+  <rdf:Property rdf:about="http://www.w3.org/ns/rdfa#uri">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description>defines the URI for either a prefix or a term mapping; the value is supposed to be an absolute URI</dcterms:description>
+  </rdf:Property>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#ProfileReferenceError">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/rdfa#Error"/>
+    <dcterms:description>error condition; to be used when an RDFa Profile document fails to be retrieved and thus, a portion of the document fails to be processed</dcterms:description>
+  </rdf:Description>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/rdfa#">
+    <owl:versionInfo>$Date$</owl:versionInfo>
+    <dcterms:title>RDFa Vocabulary for Term and Prefix Assignment, and for Processor Graph Reporting</dcterms:title>
+    <dcterms:date>2011-02-16</dcterms:date>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdfa-core/#s_profiles"/>
-    <dcterms:description xml:lang="en">This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa1.1 processing behavior.</dcterms:description>
-    <dcterms:date xml:lang="en">2011-02-04</dcterms:date>
-    <dcterms:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
-    <dcterms:title xml:lang="en">RDFa Vocabulary for Term and Prefix Assignment</dcterms:title>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <foaf:name xml:lang="en">Ivan Herman</foaf:name>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:title xml:lang="en">Semantic Web Activity Lead</foaf:title>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#uri">
-    <dcterms:description xml:lang="en">defines the URI for either a prefix or a term mapping; the value is supposed to be an absolute URI</dcterms:description>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#prefix">
-    <dcterms:description xml:lang="en">defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN.</dcterms:description>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
+    <dcterms:description>This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa 1.1 processing behavior.</dcterms:description>
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <foaf:name>Ivan Herman</foaf:name>
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+      </foaf:Person>
+    </dcterms:creator>
+  </owl:Ontology>
   <rdf:Description rdf:about="http://www.w3.org/ns/rdfa.html">
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base.css"/>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#vocabulary">
-    <dcterms:description xml:lang="en">defines an absolute URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string ‘true’ or ‘True’.</dcterms:description>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#UnresolvedTerm">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/rdfa#Warning"/>
+    <dcterms:description>warning; to be used when a Term fails to be resolved</dcterms:description>
   </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#term">
-    <dcterms:description xml:lang="en">defines a term mapping for a URI; the value is supposed to be a NMTOKEN</dcterms:description>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  <rdf:Property rdf:about="http://www.w3.org/ns/rdfa#prefix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdf:Description>
+    <dcterms:description>defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN.</dcterms:description>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/rdfa#term">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+    <dcterms:description>defines a term mapping for a URI; the value is supposed to be a NMTOKEN</dcterms:description>
+  </rdf:Property>
+  <owl:Class rdf:about="http://www.w3.org/ns/rdfa#PGClass">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <dcterms:description>is the top level class of the hierarchy</dcterms:description>
+  </owl:Class>
 </rdf:RDF>
 

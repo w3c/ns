@@ -1,40 +1,65 @@
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dist: <http://www.w3.org/2007/08/pyRdfa/distiller#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfa: <http://www.w3.org/ns/rdfa#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+rdfa: a owl:Ontology;
+    dcterms:creator <http://www.ivan-herman.net/foaf#me>;
+    dcterms:date "2011-02-16";
+    dcterms:description "This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa 1.1 processing behavior.";
+    dcterms:title "RDFa Vocabulary for Term and Prefix Assignment, and for Processor Graph Reporting";
+    rdfs:isDefinedBy <http://www.w3.org/TR/rdfa-core>;
+    owl:versionInfo "$Date$" .
+
+rdfa:prefix a rdf:Property, owl:DatatypeProperty;
+    dcterms:description "defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN." .
+
+rdfa:term a rdf:Property, owl:DatatypeProperty;
+    dcterms:description "defines a term mapping for a URI; the value is supposed to be a NMTOKEN" .
+
+rdfa:uri a rdf:Property, owl:DatatypeProperty;
+    dcterms:description "defines the URI for either a prefix or a term mapping; the value is supposed to be an absolute URI" .
+
+rdfa:vocabulary a rdf:Property, owl:DatatypeProperty;
+    dcterms:description "defines an absolute URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string 'true' or 'True'." .
+
+rdfa:PGClass a rdfs:Class, owl:Class;
+    dcterms:description "is the top level class of the hierarchy" .
+
+rdfa:Error dcterms:description "is the class for all error conditions";
+    rdfs:subClassOf rdfa:PGClass .
+
+rdfa:Warning dcterms:description "is the class for all warnings";
+    rdfs:subClassOf rdfa:PGClass .
+
+rdfa:Info dcterms:description "is the class for all informations";
+    rdfs:subClassOf rdfa:PGClass .
+
+rdfa:DocumentError dcterms:description "error condition; to be used when the document fails to be fully processed as a result of non-conformant host language markup";
+    rdfs:subClassOf rdfa:Error .
+
+rdfa:ProfileReferenceError dcterms:description "error condition; to be used when an RDFa Profile document fails to be retrieved and thus, a portion of the document fails to be processed";
+    rdfs:subClassOf rdfa:Error .
+
+rdfa:UnresolvedTerm dcterms:description "warning; to be used when a Term fails to be resolved";
+    rdfs:subClassOf rdfa:Warning .
+
+rdfa:UnresolvedCURIE dcterms:description "warning; to be used when a CURIE prefix fails to be resolved";
+    rdfs:subClassOf rdfa:Warning .
+
+rdfa:context a owl:ObjectProperty, rdf:Property;
+    dcterms:description "provides extra context for the error, eg, http response, an XPointer/XPath information, or simply the URI that created the error";
+    rdfs:domain rdfa:PGClass .
+
+<http://www.ivan-herman.net/foaf#me> a foaf:Person;
+    rdfs:seeAlso <http://www.ivan-herman.net/foaf>;
+    foaf:mbox <mailto:ivan@w3.org>;
+    foaf:name "Ivan Herman";
+    foaf:title "Semantic Web Activity Lead";
+    foaf:workplaceHomepage <http://www.w3.org> .
 
 
-<http://www.w3.org/ns/rdfa#> a owl:Ontology ;
-     dcterms:creator <http://www.ivan-herman.net/foaf#me> ;
-     dcterms:date "2011-02-04"@en ;
-     dcterms:description "This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa1.1 processing behavior."@en ;
-     dcterms:title "RDFa Vocabulary for Term and Prefix Assignment"@en ;
-     rdfs:isDefinedBy <http://www.w3.org/TR/rdfa-core/#s_profiles> ;
-     owl:versionInfo "$Date$"@en . 
 
-rdfa:prefix a rdf:Property, owl:DatatypeProperty ;
-     dcterms:description "defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN."@en . 
-
-rdfa:term a rdf:Property, owl:DatatypeProperty ;
-     dcterms:description "defines a term mapping for a URI; the value is supposed to be a NMTOKEN"@en . 
-
-rdfa:uri a rdf:Property, owl:DatatypeProperty ;
-     dcterms:description "defines the URI for either a prefix or a term mapping; the value is supposed to be an absolute URI"@en . 
-
-rdfa:vocabulary a rdf:Property, owl:DatatypeProperty ;
-     dcterms:description "defines an absolute URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string ‘true’ or ‘True’."@en . 
-
-<http://www.w3.org/ns/rdfa.html> xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base.css> . 
-
-<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
-     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
-     foaf:mbox <mailto:ivan@w3.org> ;
-     foaf:name "Ivan Herman"@en ;
-     foaf:title "Semantic Web Activity Lead"@en ;
-     foaf:workplaceHomepage <http://www.w3.org> . 
