@@ -1,11 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-	  prefix="dcterms: http://purl.org/dc/terms/
+	  prefix="
+	  dcterms: http://purl.org/dc/terms/
 	  rdfs: http://www.w3.org/2000/01/rdf-schema# 
 	  foaf: http://xmlns.com/foaf/0.1/
 	  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
 	  owl: http://www.w3.org/2002/07/owl#
+	  rdfs: http://www.w3.org/2000/01/rdf-schema#
 	  rdfa: http://www.w3.org/ns/rdfa#
 	  "
   >
@@ -37,16 +39,33 @@
 	<p>This vocabulary contains terms to define prefix mappings and term assignments; these can be used
 	as part of the <code>@profile</code> mechanism of RDFa 1.1.</p>
 	
+	<p>The vocabulary defines three classes :</p>
+	<ul>
+	  <li about="rdfa:PrefixOrTermMapping" typeof="rdfs:Class owl:Class"><code>rdfa:PrefixOrTermMapping</code>
+		<span property="dcterms:description">is the top level class for prefix or term mappings</span>.
+	  </li>
+	  <li about="rdfa:PrefixMapping"><code rel="rdfs:subClassOf" resource="rdfa:PrefixOrTermMapping">rdfa:PrefixMapping</code>
+		<span property="dcterms:description">is the class for prefix mappings</span>.
+	  </li>
+	  <li about="rdfa:TermMapping"><code rel="rdfs:subClassOf" resource="rdfa:PrefixOrTermMapping">rdfa:PrefixMapping</code>
+		<span property="dcterms:description">is the class for term mappings</span>.
+	  </li>
+	  
+	</ul>
+	
 	<h3>Properties</h3>
 	<ul>
 	  <li about="rdfa:prefix" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:prefix</code>:
-		<span property="dcterms:description">defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN.</span>.
+		<span property="dcterms:description">defines a prefix mapping for a URI; the value is supposed to be a NMTOKEN</span>;
+		it is used on <span rel="rdfs:domain" resource="rdfa:PrefixMapping">prefix mapping instances</span>.
 	  </li>
 	  <li about="rdfa:term" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:term</code>:
-		<span property="dcterms:description">defines a term mapping for a URI; the value is supposed to be a NMTOKEN</span>.
+		<span property="dcterms:description">defines a term mapping for a URI; the value is supposed to be a NMTOKEN</span>;
+		it is used on <span rel="rdfs:domain" resource="rdfa:TermMapping">prefix mapping instances</span>.
 	  </li>
 	  <li about="rdfa:uri" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:uri</code>:
-		<span property="dcterms:description">defines the URI for either a prefix or a term mapping; the value is supposed to be an absolute URI</span>.
+		<span property="dcterms:description">defines the URI for either a prefix or a term mapping; the value is supposed to be an absolute URI</span>;
+		it is used on <span rel="rdfs:domain" resource="rdfa:PrefixOrTermMapping">either prefix or term mapping instances</span>.
 	  </li>
 	  <li about="rdfa:vocabulary" typeof="rdf:Property owl:DatatypeProperty"><code>rdfa:vocabulary</code>:
 		<span property="dcterms:description" datatype="">defines an absolute URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string 'true' or 'True'.</span>
