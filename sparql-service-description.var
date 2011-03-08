@@ -1,0 +1,10 @@
+URI: sparql-service-description
+
+URI: sparql-service-description.html
+Content-Type: text/html
+
+URI: sparql-service-description.rdf
+Content-Type: application/rdf+xml; qs=0.4
+
+URI: sparql-service-description.ttl
+Content-Type: text/turtle; qs=0.5
