@@ -2,3 +2,15 @@
 ForceType 'text/turtle; charset=UTF-8'
 </Files>
 
+<Files ~ "r2rml.html">
+ForceType 'text/html; charset=utf-8'
+</Files>
+<Files ~ "rdfa.html">
+ForceType 'text/html; charset=utf-8'
+</Files>
+<Files ~ "sparql-service-description.html">
+ForceType 'text/html; charset=utf-8'
+</Files>
+<Files ~ "sparql.html">
+ForceType 'text/html; charset=utf-8'
+</Files>
