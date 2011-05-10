@@ -1,22 +1,153 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
-@prefix dc: <http://purl.org/dc/terms/> . 
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-### Classes
 
-<http://www.w3.org/ns/sparql-service-description#> 
-     dc:creator <http://kasei.us/about/foaf.xrdf#greg> ;
-     dc:creator <http://www.ivan-herman.net/foaf#me> ;
-     dc:date "2010-10-31" .
+sd:Aggregate a rdfs:Class ;
+     rdfs:label "An instance of sd:Aggregate represents an aggregate operation that may be used in a SPARQL aggregate query HAVING clause or project expression." . 
+
+sd:Dataset a rdfs:Class ;
+     rdfs:label "An instance of sd:Dataset represents a SPARQL Dataset comprised of a default graph and zero or more named graphs." ;
+     rdfs:subClassOf sd:GraphCollection . 
+
+sd:EntailmentProfile a rdfs:Class ;
+     rdfs:label "An instance of sd:EntailmentProfile represents a profile of an entailment regime. An entailment profile may imply restrictions on what constitutes valid RDF with respect to entailment." . 
+
+sd:EntailmentRegime a rdfs:Class ;
+     rdfs:label "An instance of sd:EntailmentRegime represents an entailment regime used in basic graph pattern matching (as described in SPARQL 12.6 @@ updated section and add link when Query1.1 doc stabilizes)." . 
+
+sd:Function a rdfs:Class ;
+     rdfs:label "An instance of sd:Function represents a function that may be used in a SPARQL FILTER/HAVING clause or a project expression." . 
+
+sd:Graph a rdfs:Class ;
+     rdfs:label "An instance of sd:Graph represents the description of an RDF graph." . 
+
+sd:GraphCollection a rdfs:Class ;
+     rdfs:label "An instance of sd:GraphCollection represents a collection of zero or more named graph descriptions. Each named graph belonging to an sd:GraphCollection should be linked with the sd:namedGraph predicate." . 
+
+sd:Language a rdfs:Class ;
+     rdfs:label "An instance of sd:Language represents one of the SPARQL language, including specific configuration providing particular features or extensions. sd:SPARQL10Query, sd:SPARQL11Query, and sd:SPARQL11Update are pre-defined SPARQL language instances." . 
+
+sd:NamedGraph a rdfs:Class ;
+     rdfs:label "An instance of sd:NamedGraph represents a named graph having a name (via sd:name) and a graph description (via sd:graph)." . 
+
+sd:Service a rdfs:Class ;
+     rdfs:label "An instance of sd:Service represents a SPARQL service made available via the SPARQL Protocol." . 
+
+<http://www.w3.org/ns/sparql-service-description#> dc:creator <http://kasei.us/about/foaf.xrdf#greg>, <http://www.ivan-herman.net/foaf#me> ;
+     dc:date "2011-05-10" . 
+
+sd:DereferencesURIs rdfs:label "When used as the object of the sd:feature property, indicates that a SPARQL service will dereference URIs used in a FROM or FROM NAMED clause and use the resulting RDF in the dataset during query evaluation." . 
+
+sd:EmptyGraphs rdfs:label "When used as the object of the sd:feature property, indicates that the underlying graph store supports empty graphs. Such support impacts operations that might otherwise trigger the removal of a graph from the graph store." . 
+
+sd:RequiresDataset rdfs:label "When used as the object of the sd:feature property, indicates that the query processor requires an explicit dataset declaration (based on either FROM/FROM NAMED clauses in the query or the appropriate SPARQL Protocol parameters)." . 
+
+sd:SPARQL10Query a sd:Language ;
+     rdfs:label "The sd:Language representing the SPARQL 1.0 Query language." . 
+
+sd:SPARQL11Query a sd:Language ;
+     rdfs:label "The sd:Language representing the SPARQL 1.1 Query language." . 
+
+sd:SPARQL11Update a sd:Language ;
+     rdfs:label "The sd:Language representing the SPARQL 1.1 Update language." . 
+
+sd:UnionDefaultGraph rdfs:label "When used as the object of the sd:feature property, indicates that the default graph of the dataset used during query evaluation is comprised of the union of all the named graphs in the dataset." . 
+
+sd:availableGraphDescriptions a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Service to a description of the graphs that may be used in the construction of a dataset either via the SPARQL Protocol or with FROM/FROM NAMED clauses in the query." ;
+     rdfs:domain sd:Service ;
+     rdfs:range sd:GraphCollection . 
+
+sd:defaultDatasetDescription a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Service to a description of the default dataset available when no explicit dataset is specified." ;
+     rdfs:domain sd:Service ;
+     rdfs:range sd:Dataset . 
+
+sd:defaultEntailmentRegime a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Service with a resource representing an entailment regime used for basic graph pattern matching. This property is intended for use when a single entailment regime by default applies to all graphs in the dataset. In situations where a different entailment regime applies to a specific graph in the dataset, the sd:entailmentRegime should be used to indicate this fact in the description of that graph." ;
+     rdfs:domain sd:Service ;
+     rdfs:range sd:EntailmentRegime ;
+     rdfs:subPropertyOf sd:feature . 
+
+sd:defaultGraph a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Dataset to the description of its default graph." ;
+     rdfs:domain sd:Dataset ;
+     rdfs:range sd:Graph . 
+
+sd:entailmentRegime a rdf:Property ;
+     rdfs:label "Relates a named graph with a resource representing an entailment regime used for basic graph pattern matching over that graph." ;
+     rdfs:domain sd:NamedGraph ;
+     rdfs:range sd:EntailmentRegime . 
+
+sd:extensionAggregate a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Service to an aggregate operation that may be used in a SPARQL HAVING clause or project expression." ;
+     rdfs:domain sd:Service ;
+     rdfs:range sd:Aggregate ;
+     rdfs:subPropertyOf sd:feature . 
+
+sd:extensionFunction a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Service to a function that may be used in a SPARQL FILTER/HAVING clause or a project expression." ;
+     rdfs:domain sd:Service ;
+     rdfs:range sd:Function ;
+     rdfs:subPropertyOf sd:feature . 
+
+sd:graph a rdf:Property ;
+     rdfs:label "Relates a named graph to its graph description." ;
+     rdfs:domain sd:NamedGraph . 
+
+sd:inputFormat a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Service to a format that is supported for parsing RDF input (for example, via a SPARQL 1.1 Update LOAD statement or an HTTP PUT as described by SPARQL 1.1 Uniform HTTP Protocol for Managing RDF Graphs)." ;
+     rdfs:domain sd:Service . 
+
+sd:languageExtension a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Service to a resource representing an implemented extension to the SPARQL Query or Update language." ;
+     rdfs:domain sd:Service ;
+     rdfs:subPropertyOf sd:feature . 
+
+sd:name a rdf:Property ;
+     rdfs:label "Relates a named graph to the name by which it may be referenced in a FROM/FROM NAMED clause." ;
+     rdfs:domain sd:NamedGraph . 
+
+sd:namedGraph a rdf:Property ;
+     rdfs:label "Relates an instance of sd:GraphCollection to the description of one of its named graphs. The description of such a named graph must include the sd:name and sd:graph properties." ;
+     rdfs:domain sd:GraphCollection ;
+     rdfs:range sd:NamedGraph . 
+
+sd:propertyFeature a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Service to a resource representing an implemented feature to the SPARQL Query or Update language that is accessed by using the named property." ;
+     rdfs:domain sd:Service ;
+     rdfs:subPropertyOf sd:feature . 
+
+sd:resultFormat a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Service to a format that is supported for serializing query results." ;
+     rdfs:domain sd:Service . 
+
+sd:supportedEntailmentProfile a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Service with a resource representing a supported profile of the default entailment regime (as declared by sd:defaultEntailmentRegime)." ;
+     rdfs:domain sd:Service ;
+     rdfs:range sd:EntailmentProfile ;
+     rdfs:subPropertyOf sd:feature . 
+
+sd:supportedLanguage a rdf:Property ;
+     rdfs:label "Relates an instance of sd:Service to a SPARQL language subset (e.g. Query and Update) that it implements." ;
+     rdfs:domain sd:Service ;
+     rdfs:range sd:Language ;
+     rdfs:subPropertyOf sd:feature . 
+
+sd:url a rdf:Property, owl:InverseFunctionalProperty ;
+     rdfs:label "The service URL of an sd:Service supporting the SparqlQuery interface." ;
+     rdfs:domain sd:Service . 
 
 <http://kasei.us/about/foaf.xrdf#greg> a foaf:Person ;
-	foaf:name "Gregory Todd Williams" ;
-	rdfs:seeAlso <http://kasei.us/about/foaf.xrdf> ;
-	rdfs:seeAlso <http://www.cs.rpi.edu/%7Ewillig4/> ;
-    foaf:workplaceHomepage <http://tw.rpi.edu> . 
+     rdfs:seeAlso <http://kasei.us/about/foaf.xrdf>, <http://www.cs.rpi.edu/%7Ewillig4/> ;
+     foaf:name "Gregory Todd Williams" ;
+     foaf:workplaceHomepage <http://tw.rpi.edu> . 
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;
      rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
@@ -25,148 +156,6 @@
      foaf:title "Semantic Web Activity Lead" ;
      foaf:workplaceHomepage <http://www.w3.org> . 
 
-
-sd:Service a rdfs:Class ;
-	rdfs:label "An instance of sd:Service represents a SPARQL service made available via the SPARQL Protocol." .
-
-sd:Language a rdfs:Class ;
-	rdfs:label "An instance of sd:Language represents one of the SPARQL language, including specific configuration providing particular features or extensions. sd:SPARQL10Query, sd:SPARQL11Query, and sd:SPARQL11Update are pre-defined SPARQL language instances." .
-
-sd:Function a rdfs:Class ;
-	rdfs:label "An instance of sd:Function represents a function that may be used in a SPARQL FILTER/HAVING clause or a project expression." .
-
-sd:Aggregate a rdfs:Class ;
-	rdfs:label "An instance of sd:Aggregate represents an aggregate operation that may be used in a SPARQL aggregate query HAVING clause or project expression." .
-
-sd:EntailmentRegime a rdfs:Class ;
-	rdfs:label "An instance of sd:EntailmentRegime represents an entailment regime used in basic graph pattern matching (as described in SPARQL 12.6 @@ updated section and add link when Query1.1 doc stabilizes)." .
-
-sd:EntailmentProfile a rdfs:Class ;
-	rdfs:label "An instance of sd:EntailmentProfile represents a profile of an entailment regime. An entailment profile may imply restrictions on what constitutes valid RDF with respect to entailment." .
-
-sd:GraphCollection a rdfs:Class ;
-	rdfs:label "An instance of sd:GraphCollection represents a collection of zero or more named graph descriptions. Each named graph belonging to an sd:GraphCollection should be linked with the sd:namedGraph predicate." .
-
-sd:Dataset a rdfs:Class ;
-	rdfs:subClassOf sd:GraphCollection ;
-	rdfs:label "An instance of sd:Dataset represents a SPARQL Dataset comprised of a default graph and zero or more named graphs." .
-
-sd:Graph a rdfs:Class ;
-	rdfs:label "An instance of sd:Graph represents the description of an RDF graph." .
-
-sd:NamedGraph a rdfs:Class ;
-	rdfs:label "An instance of sd:NamedGraph represents a named graph having a name (via sd:name) and a graph description (via sd:graph)." .
-	
-### Instances
-
-sd:SPARQL10Query a sd:Language ;
-	rdfs:label "The sd:Language representing the SPARQL 1.0 Query language." .
-
-sd:SPARQL11Query a sd:Language ;
-	rdfs:label "The sd:Language representing the SPARQL 1.1 Query language." .
-
-sd:SPARQL11Update a sd:Language ;
-	rdfs:label "The sd:Language representing the SPARQL 1.1 Update language." .
-
-sd:DereferencesURIs
-	rdfs:label "When used as the object of the sd:feature property, indicates that a SPARQL service will dereference URIs used in a FROM or FROM NAMED clause and use the resulting RDF in the dataset during query evaluation." .
-
-sd:UnionDefaultGraph
-	rdfs:label "When used as the object of the sd:feature property, indicates that the default graph of the dataset used during query evaluation is comprised of the union of all the named graphs in the dataset." .
-
-sd:RequiresDataset
-	rdfs:label "When used as the object of the sd:feature property, indicates that the query processor requires an explicit dataset declaration (based on either FROM/FROM NAMED clauses in the query or the appropriate SPARQL Protocol parameters)." .
-
-sd:EmptyGraphs
-	rdfs:label "When used as the object of the sd:feature property, indicates that the underlying graph store supports empty graphs. Such support impacts operations that might otherwise trigger the removal of a graph from the graph store." .
-
-### Properties
-
-sd:url a rdf:Property , owl:InverseFunctionalProperty ;
-	rdfs:domain sd:Service ;
-	rdfs:label "The service URL of an sd:Service supporting the SparqlQuery interface." .
-
 sd:feature a rdf:Property ;
-	rdfs:domain sd:Service ;
-	rdfs:label "Relates an instance of sd:Service with a resource representing a supported feature." .
-
-sd:defaultEntailmentRegime a rdf:Property ;
-	rdfs:subPropertyOf sd:feature ;
-	rdfs:domain sd:Service ;
-	rdfs:range sd:EntailmentRegime ;
-	rdfs:label "Relates an instance of sd:Service with a resource representing an entailment regime used for basic graph pattern matching. This property is intended for use when a single entailment regime by default applies to all graphs in the dataset. In situations where a different entailment regime applies to a specific graph in the dataset, the sd:entailmentRegime should be used to indicate this fact in the description of that graph." .
-
-sd:supportedEntailmentProfile a rdf:Property ;
-	rdfs:subPropertyOf sd:feature ;
-	rdfs:domain sd:Service ;
-	rdfs:range sd:EntailmentProfile ;
-	rdfs:label "Relates an instance of sd:Service with a resource representing a supported profile of the default entailment regime (as declared by sd:defaultEntailmentRegime)." .
-
-sd:entailmentRegime a rdf:Property ;
-	rdfs:domain sd:NamedGraph ;
-	rdfs:range sd:EntailmentRegime ;
-	rdfs:label "Relates a named graph with a resource representing an entailment regime used for basic graph pattern matching over that graph." .
-
-sd:extensionFunction a rdf:Property ;
-	rdfs:subPropertyOf sd:feature ;
-	rdfs:domain sd:Service ;
-	rdfs:range sd:Function ;
-	rdfs:label "Relates an instance of sd:Service to a function that may be used in a SPARQL FILTER/HAVING clause or a project expression." .
-
-sd:extensionAggregate a rdf:Property ;
-	rdfs:subPropertyOf sd:feature ;
-	rdfs:domain sd:Service ;
-	rdfs:range sd:Aggregate ;
-	rdfs:label "Relates an instance of sd:Service to an aggregate operation that may be used in a SPARQL HAVING clause or project expression." .
-
-sd:languageExtension a rdf:Property ;
-	rdfs:subPropertyOf sd:feature ;
-	rdfs:domain sd:Service ;
-	rdfs:label "Relates an instance of sd:Service to a resource representing an implemented extension to the SPARQL Query or Update language." .
-
-sd:supportedLanguage a rdf:Property ;
-	rdfs:subPropertyOf sd:feature ;
-	rdfs:domain sd:Service ;
-	rdfs:range sd:Language ;
-	rdfs:label "Relates an instance of sd:Service to a SPARQL language subset (e.g. Query and Update) that it implements." .
-
-sd:propertyFeature a rdf:Property ;
-	rdfs:subPropertyOf sd:feature ;
-	rdfs:domain sd:Service ;
-	rdfs:label "Relates an instance of sd:Service to a resource representing an implemented feature to the SPARQL Query or Update language that is accessed by using the named property." .
-
-sd:defaultDatasetDescription a rdf:Property ;
-	rdfs:domain sd:Service ;
-	rdfs:range sd:Dataset ;
-	rdfs:label "Relates an instance of sd:Service to a description of the default dataset available when no explicit dataset is specified." .
-
-sd:availableGraphDescriptions a rdf:Property ;
-	rdfs:domain sd:Service ;
-	rdfs:range sd:GraphCollection ;
-	rdfs:label "Relates an instance of sd:Service to a description of the graphs that may be used in the construction of a dataset either via the SPARQL Protocol or with FROM/FROM NAMED clauses in the query." .
-
-sd:resultFormat a rdf:Property ;
-	rdfs:domain sd:Service ;
-	rdfs:label "Relates an instance of sd:Service to a format that is supported for serializing query results." .
-
-sd:inputFormat a rdf:Property ;
-	rdfs:domain sd:Service ;
-	rdfs:label "Relates an instance of sd:Service to a format that is supported for parsing RDF input (for example, via a SPARQL 1.1 Update LOAD statement or an HTTP PUT as described by SPARQL 1.1 Uniform HTTP Protocol for Managing RDF Graphs)." .
-
-sd:defaultGraph a rdf:Property ;
-	rdfs:domain sd:Dataset ;
-	rdfs:range sd:Graph ;
-	rdfs:label "Relates an instance of sd:Dataset to the description of its default graph." .
-
-sd:namedGraph a rdf:Property ;
-	rdfs:domain sd:GraphCollection ;
-	rdfs:range sd:NamedGraph ;
-	rdfs:label "Relates an instance of sd:GraphCollection to the description of one of its named graphs. The description of such a named graph must include the sd:name and sd:graph properties." .
-
-sd:name a rdf:Property ;
-	rdfs:domain sd:NamedGraph ;
-	rdfs:label "Relates a named graph to the name by which it may be referenced in a FROM/FROM NAMED clause." .
-
-sd:graph a rdf:Property ;
-	rdfs:domain sd:NamedGraph ;
-	rdfs:label "Relates a named graph to its graph description." .
+     rdfs:label "Relates an instance of sd:Service with a resource representing a supported feature." ;
+     rdfs:domain sd:Service . 

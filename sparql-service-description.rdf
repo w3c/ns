@@ -38,7 +38,7 @@
     <rdfs:label>The sd:Language representing the SPARQL 1.0 Query language.</rdfs:label>
   </sd:Language>
   <rdf:Description rdf:about="http://www.w3.org/ns/sparql-service-description#">
-    <dc:date>2010-10-31</dc:date>
+    <dc:date>2011-05-10</dc:date>
     <dc:creator>
       <foaf:Person rdf:about="http://kasei.us/about/foaf.xrdf#greg">
         <foaf:workplaceHomepage rdf:resource="http://tw.rpi.edu"/>
