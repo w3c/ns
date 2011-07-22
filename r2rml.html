@@ -13,6 +13,13 @@
 	<base href="http://www.w3.org/ns/"/>
     <title>R2RML: RDB to RDF Mapping Language Schema</title>
     <link type="text/css" rel="stylesheet" href="/StyleSheets/TR/base.css"/>
+    <style type="text/css">
+        .issue { background-color: #fdd; border: 1px solid #800; margin: 1em 0em; padding: 1em; page-break-inside: avoid ; font-style: italic; }
+        .issue a.tracker { font-style: normal; font-weight: bold; }
+        th { text-align: left; }
+        table.term-index th code { font-weight: normal; }
+        table.term-index th, table.term-index td { padding: 0.1em 0.5em; }
+    </style>
   </head>
   <body about="[r2rml:]">
     <div class="head">
@@ -33,6 +40,9 @@
 	data to RDF.
 	</p>
 	
+  <p class="issue">
+  <a class="tracker" href="http://www.w3.org/2001/sw/rdb2rdf/track/issues/53">ISSUE-53</a>: This document is still work in progress. An RDFS/OWL version of the vocabulary should be made too.</p>
+
 	<h2>Usage</h2>
 	<dl>
 	 	<dt>The namespace URI is:</dt>
@@ -47,7 +57,402 @@
 	 <a href="http://lists.w3.org/Archives/Public/public-rdb2rdf-comments/">public archive</a>.
 	</p>
 
-	
+  <h2 id="index">Index of R2RML Vocabulary Terms</h2>
+
+    <h3 id="class-index">Classes</h3>
+
+    <table class="term-index">
+      <tr><th>Class</th><th>Represents</th></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#GraphMap"><code>rr:GraphMap</code></a></th>
+      <td><a href="http://www.w3.org/TR/r2rml/dfn-graph-map">graph map</a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#Join"><code>rr:Join</code></a></th>
+      <td><a href="http://www.w3.org/TR/r2rml/dfn-join-condition">join condition</a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#LogicalTable"><code>rr:LogicalTable</code></a></th>
+      <td><a href="http://www.w3.org/TR/r2rml/dfn-logical-table">logical table</a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#ObjectMap"><code>rr:ObjectMap</code></a></th>
+      <td><a href="http://www.w3.org/TR/r2rml/dfn-object-map">object map</a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#PredicateMap"><code>rr:PredicateMap</code></a></th>
+      <td><a href="http://www.w3.org/TR/r2rml/dfn-predicate-map">predicate map</a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#PredicateObjectMap"><code>rr:PredicateObjectMap</code></a></th>
+      <td><a href="http://www.w3.org/TR/r2rml/dfn-predicate-object-map">predicate-object map</a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#RefObjectMap"><code>rr:RefObjectMap</code></a></th>
+      <td><a href="http://www.w3.org/TR/r2rml/dfn-referencing-object-map">referencing object map</a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#SubjectMap"><code>rr:SubjectMap</code></a></th>
+      <td><a href="http://www.w3.org/TR/r2rml/dfn-subject-map">subject map</a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#TriplesMap"><code>rr:TriplesMap</code></a></th>
+      <td><a href="http://www.w3.org/TR/r2rml/dfn-triples-map">triples map</a></td></tr>
+    </table>
+
+    <h3 id="property-index">Properties</h3>
+
+    <p>The cardinality column indicates how often this property
+    occurs within its context. Note that additional constraints
+    not stated in this table might apply, and making a property
+    forbidden or required in certain situations.</p>
+
+    <table class="term-index">
+      <tr><th>Property</th><th>Represents</th><th>Context</th><th>Cardinality</th></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#child"><code>rr:child</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-child-column">child column</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-join-condition">join condition</a></td>
+        <td>1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#class"><code>rr:class</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-class-iri">class IRI</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-subject-map">subject map</a></td>
+        <td>0…∞</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#column"><code>rr:column</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-column-valued-term-map">column name</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-column-valued-term-map">column-valued term map</a></td><td>1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#datatype"><code>rr:datatype</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-applicable-datatype">applicable datatype</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-term-map">term map</a></td>
+        <td>0…1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#graph"><code>rr:graph</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-constant-value">constant value</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-graph-map">graph map</a></td>
+        <td>0…1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#graphMap"><code>rr:graphMap</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-graph-map">graph map</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-subject-map">subject map</a>, <a href="http://www.w3.org/TR/r2rml/dfn-object-map">object map</a></td>
+        <td>0…∞</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#inverseExpression"><code>rr:inverseExpression</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-inverse-expression">inverse-expression</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-term-map">term map</a></td>
+        <td>0…1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#joinCondition"><code>rr:joinCondition</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-join-condition">join condition</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-referencing-object-map">referencing object map</a></td>
+        <td>0…∞</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#language"><code>rr:language</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-specified-langauge-tag">specified language tag</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-term-map">term map</a></td>
+        <td>0…1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#logicalTable"><code>rr:logicalTable</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-triples-map">logical table</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-triples-map">triples map</a></td>
+        <td>1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#object"><code>rr:object</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-constant-value">constant value</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-object-map">object map</a></td>
+        <td>0…1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#objectMap"><code>rr:objectMap</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-object-map">object map</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-predicate-object-map">predicate-object map</a></td>
+        <td>1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#parent"><code>rr:parent</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-parent-column">parent column</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-join-condition">join condition</a></td>
+        <td>1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#parentTriplesMap"><code>rr:parentTriplesMap</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-parent-triples-map">parent triples map</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-referencing-object-map">referencing object map</a></td>
+        <td>1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#predicate"><code>rr:predicate</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-constant-value">constant value</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-predicate-map">predicate map</a></td>
+        <td>0…1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#predicateMap"><code>rr:predicateMap</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-predicate-map">predicate map</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-predicate-object-map">predicate-object map</a></td>
+        <td>1…∞</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#predicateObjectMap"><code>rr:predicateObjectMap</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-triples-map">predicate-object map</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-triples-map">triples map</a></td>
+        <td>0…∞</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#sqlQuery"><code>rr:sqlQuery</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-sql-query-based-table">SQL query</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-sql-query-based-table">SQL query-based table</a></td>
+        <td>1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#sqlVersion"><code>rr:sqlVersion</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-sql-version-identifier">SQL version identifier</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-sql-query-based-table">SQL query-based table</a></td>
+        <td>0…∞</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#subject"><code>rr:subject</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-constant-value">constant value</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-subject-map">subject map</a></td>
+        <td>0…1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#subjectMap"><code>rr:subjectMap</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-triples-map">subject map</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-triples-map">triples map</a></td>
+        <td>1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#tableName"><code>rr:tableName</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-table-or-view-name">table or view name</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-sql-base-table-or-view">SQL base table or view</a></td>
+        <td>1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#template"><code>rr:template</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-string-template">string template</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-template-valued-term-map">template-valued term map</a></td>
+        <td>1</td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#termType"><code>rr:termType</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-term-type">term type</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-term-map">term map</a></td>
+        <td>0…1</td></tr>
+    </table>
+
+
+    <h3 id="other-index">Other Terms</h3>
+
+    <table class="term-index">
+      <tr><th>Term</th><th>Denotes</th><th>Used with property</th></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#defaultGraph"><code>rr:defaultGraph</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-default-graph">default graph</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/named-graphs"><code>rr:graph</code></a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#SQL2008"><code>rr:SQL2008</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/conformance">Core SQL 2008</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-sql-version-identifier"><code>rr:sqlVersion</code></a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#IRI"><code>rr:IRI</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-iri">IRI</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-term-type"><code>rr:termType</code></a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#BlankNode"><code>rr:BlankNode</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-blank-node">blank node</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-term-type"><code>rr:termType</code></a></td></tr>
+      <tr><th><a href="http://www.w3.org/ns/r2rml#Literal"><code>rr:Literal</code></a></th>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-literal">literal</a></td>
+        <td><a href="http://www.w3.org/TR/r2rml/dfn-term-type"><code>rr:termType</code></a></td></tr>
+    </table>
+  <h2>Table of Properties</h2>
+
+      <table style="border-collapse: collapse; border-color: #000000" border="1"
+      cellpadding="5" summary="R2RML Properties">
+        <tr>
+          <th>Property Name</th>
+          <th>Domain</th>
+          <th>Range</th>
+          <th>Cardinality</th>
+          <th>Notes</th>
+        </tr>
+
+        <tr>
+          <td><code>rr:logicalTable</code></td>
+          <td><code>rr:TriplesMap</code></td>
+          <td><code>rr:LogicalTable</code></td>
+          <td><code>1</code></td>
+          <td><code>Definition of logical table to be mapped.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:tableName</code></td>
+          <td><code>rr:LogicalTable</code></td>
+          <td><code>xsd:string</code></td>
+          <td><code>1 (only if rr:sqlQuery is absent), else 0</code></td>
+          <td><code>Schema-qualified name of a table or view.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:sqlQuery</code></td>
+          <td><code>rr:LogicalTable</code></td>
+          <td><code>xsd:string</code></td>
+          <td><code>1 (only if rr:tableName is absent), else 0</code></td>
+          <td><code>A valid SQL query.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:sqlVersion</code></td>
+          <td><code>rr:LogicalTable</code></td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>min=0, max=unlimited (only if rr:tableName is absent, else 0)</code></td>
+          <td><code>An identifier for a SQL version.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:subjectMap</code></td>
+          <td><code>rr:TriplesMap</code></td>
+          <td><code>rr:SubjectMap</code></td>
+          <td><code>1 </code></td>
+          <td><code>A SubjectMap element to generate a subject from a logical table row.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:predicateObjectMap</code></td>
+          <td><code>rr:TriplesMap</code></td>
+          <td><code>rr:PredicateObjectMap</code></td>
+          <td><code>min=0, max=unlimited</code></td>
+          <td><code>A PredicateObjectMap element to generate (predicate, object) pair 
+              from a logical table row.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:subject</code></td>
+          <td><code>rr:SubjectMap</code></td>
+          <td><code>Set of valid RDF blank nodes and IRI references.</code></td>
+          <td><code>min=0, max=1 (only if rr:column is absent)</code></td>
+          <td><code>An IRI reference for use as subject for all 
+          the RDF triples generated from a logical table row.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:column</code></td>
+          <td><code>Union of rr:SubjectMap, rr:PredicateMap, rr:ObjectMap, rr:GraphMap</code></td>
+          <td><code>xsd:string</code></td>
+          <td><code>min=0, max=1 (only if rr:subject/rr:predicate/rr:object is absent)</code></td>
+          <td><code>Name of a column in the logical table. When generating RDF triples from
+              a logical table row, value from the specified column is used as the subject,
+              predicate, or object (based upon the specific domain).</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:termType</code></td>
+          <td><code>Union of rr:SubjectMap, rr:PredicateMap, rr:ObjectMap, rr:GraphMap</code></td>
+          <td><code>{rr:IRI,rr:BlankNode,rr:Literal}, but rr:Literal is only valid for 
+              an ObjectMap, and rr:BlankNode only for SubjectMap and ObjectMap</code></td>
+          <td><code>min=0, max=1</code></td>
+          <td><code>A string indicating whether subject or object generated using
+              the value from column name specified for rr:column should be 
+              an IRI reference, blank node, or a literal.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:class</code></td>
+          <td><code>rr:SubjectMap</code></td>
+          <td><code>rdfs:Class</code></td>
+          <td><code>min=0, max=unlimited</code></td>
+          <td><code>The subject value generated for a logical table row will be 
+              asserted as an instance of this RDFS class.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:graphMap</code></td>
+          <td><code>Union of rr:SubjectMap, rr:PredicateObjectMap</code></td>
+          <td><code>rr:GraphMap</code></td>
+          <td><code>min=0, max=unlimited</code></td>
+          <td><code>Specifies a GraphMap. When used with a SubjectMap element,
+              all the RDF triples generated from a logical row will be stored in
+              the specified named graph. Otherwise, the RDF triple generated using
+              the (predicate, object) pair will be stored in the specified named
+              graph.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:graph</code></td>
+          <td><code>rr:GraphMap</code></td>
+          <td><code>Set of valid IRI references</code></td>
+          <td><code>min=0, max=1 (only if rr:column and rr:template are absent)</code></td>
+          <td><code>An IRI reference for use as the graph name of all triples
+              generated with the GraphMap.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:inverseExpression</code></td>
+          <td><code>Union of rr:SubjectMap, rr:PredicateMap, rr:ObjectMap, rr:GraphMap</code></td>
+          <td><code>xsd:string</code></td>
+          <td><code>min=0, max=1</code></td>
+          <td><code>An expression that allows, at query processing time, use of 
+              index-based access to the the (underlying) relational tables, instead
+              of simply retrieving the table rows first and then applying a 
+              filter. This property is useful for retrieval based on conditions
+              involving subject, predicate, or object generated from
+              logical table column(s) and involves some transformation.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:template</code></td>
+          <td><code>Union of rr:SubjectMap, rr:PredicateMap, rr:ObjectMap, rr:GraphMap</code></td>
+          <td><code>xsd:string</code></td>
+          <td><code>min=0, max=1 (only if rr:subject/rr:predicate/rr:object and rr:column are absent)</code></td>
+          <td><code>A template (format string) to specify how to generate a value for a subject,
+              predicate, or object, using one or more columns from 
+              a logical table row.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:predicateMap</code></td>
+          <td><code>rr:PredicateObjectMap</code></td>
+          <td><code>rr:PredicateMap</code></td>
+          <td><code>min=1, max=unlimited</code></td>
+          <td><code>A PredicateMap element to generate the predicate component of the (predicate, object) pair
+                    from a logical table row.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:objectMap</code></td>
+          <td><code>rr:PredicateObjectMap</code></td>
+          <td><code>rr:ObjectMap</code></td>
+          <td><code>1</code></td>
+          <td><code>An ObjectMap element to generate the object component of the (predicate, object) pair 
+                    from a logical table row.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:predicate</code></td>
+          <td><code>rr:PredicateMap</code></td>
+          <td><code>rdf:Property</code></td>
+          <td><code>min=0, max=1 (only if rr:column is absent)</code></td>
+          <td><code>Specifies the predicate for the generated triple from the logical
+                    table row.</code></td>
+        </tr>
+
+
+        <tr>
+          <td><code>rr:object</code></td>
+          <td><code>rr:ObjectMap</code></td>
+          <td><code>rdfs:Resource</code></td>
+          <td><code>min=0, max=1 (only if rr:column is absent)</code></td> 
+          <td><code>Specifies the object for the generated triple from the logical table row.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:datatype</code></td>
+          <td><code>rr:ObjectMap</code></td>
+          <td><code>rdfs:Datatype</code></td>
+          <td><code>min=0, max=1 (only if rr:termType is not rr:IRI or rr:BlankNode)</code></td> 
+          <td><code> Specifies the datatype of the object component for the generated triple
+                     from a logical table row.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:language</code></td>
+          <td><code>rr:ObjectMap</code></td>
+          <td><code>xsd:string</code></td>
+          <td><code>min=0, max=1 (only if rr:dataype is absent and rr:termType is not rr:IRI or rr:BlankNode)</code></td> 
+          <td><code>Specified the language for the object component for the generated triple 
+                    from a logical table row.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:refObjectMap</code></td>
+          <td><code>rr:PredicateObjectMap</code></td>
+          <td><code>rr:RefObjectMap</code></td>
+          <td><code>1</code></td>
+          <td><code>A RefObjectMap element to generate the object component of the (predicate, object)
+                    pair from a logical table row using a foreign key constraint definition.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:parentTriplesMap</code></td>
+          <td><code>rr:RefObjectMap</code></td>
+          <td><code>rr:TriplesMap</code></td>
+          <td><code>1</code></td>
+          <td><code>Specifies the TriplesMap element corresponding to the parent logical table of the foreign
+                     key constraint.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:joinCondition</code></td>
+          <td><code>rr:RefObjectMap</code></td>
+          <td><code>rr:Join</code></td>
+          <td><code>min=0,max=unlimited</code></td>
+          <td><code>Specifies the join condition for joining the child logical table with the parent 
+                     logical table of the foreign key constraint.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:child</code></td>
+          <td><code>rr:Join</code></td>
+          <td><code>xsd:string</code></td>
+          <td><code>min=1,max=1</code></td>
+          <td><code>Names a column in the child table of a join.</code></td>
+        </tr>
+
+        <tr>
+          <td><code>rr:parent</code></td>
+          <td><code>rr:Join</code></td>
+          <td><code>xsd:string</code></td>
+          <td><code>min=1,max=1</code></td>
+          <td><code>Names a column in the parent table of a join.</code></td>
+        </tr>
+
+      </table>
+
 	<hr />
 	<address >
 	  <span rel="dcterms:creator" >
