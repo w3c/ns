@@ -1,25 +1,489 @@
-@prefix dcterms: <http://purl.org/dc/terms/> .
-@prefix dist: <http://www.w3.org/2007/08/pyRdfa/distiller#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix r2rml: <http://www.w3.org/ns/r2rml#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix : <http://www.w3.org/ns/r2rml##> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+
+<http://www.w3.org/ns/r2rml#> rdf:type owl:Ontology .
 
 
-<http://www.w3.org/ns/r2rml#> dcterms:creator <http://www.ivan-herman.net/foaf#me> ;
-     dcterms:date "2010-10-27"@en ;
-     dcterms:title "R2RML: RDB to RDF Mapping Language Schema"@en ;
-     owl:versionInfo "$Date$"@en . 
+#################################################################
+#
+#    Datatypes
+#
+#################################################################
 
-<http://www.w3.org/ns/r2rml.html> xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base.css> . 
 
-<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
-     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
-     foaf:mbox <mailto:ivan@w3.org> ;
-     foaf:name "Ivan Herman"@en ;
-     foaf:title "Semantic Web Activity Lead"@en ;
-     foaf:workplaceHomepage <http://www.w3.org> . 
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://www.w3.org/ns/r2rml#class
+
+<http://www.w3.org/ns/r2rml#class> rdf:type owl:ObjectProperty ;
+                                   
+                                   rdfs:domain <http://www.w3.org/ns/r2rml#SubjectMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#datatype
+
+<http://www.w3.org/ns/r2rml#datatype> rdf:type owl:ObjectProperty ;
+                                      
+                                      rdfs:domain <http://www.w3.org/ns/r2rml#ObjectMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#graph
+
+<http://www.w3.org/ns/r2rml#graph> rdf:type owl:ObjectProperty ;
+                                   
+                                   rdfs:domain <http://www.w3.org/ns/r2rml#GraphMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#graphMap
+
+<http://www.w3.org/ns/r2rml#graphMap> rdf:type owl:ObjectProperty ;
+                                      
+                                      rdfs:range <http://www.w3.org/ns/r2rml#GraphMap> ;
+                                      
+                                      rdfs:domain <http://www.w3.org/ns/r2rml#PredicateObjectMap> ,
+                                                  <http://www.w3.org/ns/r2rml#SubjectMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#joinCondition
+
+<http://www.w3.org/ns/r2rml#joinCondition> rdf:type owl:ObjectProperty ;
+                                           
+                                           rdfs:range <http://www.w3.org/ns/r2rml#Join> ;
+                                           
+                                           rdfs:domain <http://www.w3.org/ns/r2rml#RefObjectMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#logicalTable
+
+<http://www.w3.org/ns/r2rml#logicalTable> rdf:type owl:ObjectProperty ;
+                                          
+                                          rdfs:range <http://www.w3.org/ns/r2rml#LogicalTable> ;
+                                          
+                                          rdfs:domain <http://www.w3.org/ns/r2rml#TriplesMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#object
+
+<http://www.w3.org/ns/r2rml#object> rdf:type owl:ObjectProperty ;
+                                    
+                                    rdfs:domain <http://www.w3.org/ns/r2rml#ObjectMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#objectMap
+
+<http://www.w3.org/ns/r2rml#objectMap> rdf:type owl:ObjectProperty ;
+                                       
+                                       rdfs:range <http://www.w3.org/ns/r2rml#ObjectMap> ;
+                                       
+                                       rdfs:domain <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#parentTriplesMap
+
+<http://www.w3.org/ns/r2rml#parentTriplesMap> rdf:type owl:ObjectProperty ;
+                                              
+                                              rdfs:domain <http://www.w3.org/ns/r2rml#RefObjectMap> ;
+                                              
+                                              rdfs:range <http://www.w3.org/ns/r2rml#TriplesMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#predicate
+
+<http://www.w3.org/ns/r2rml#predicate> rdf:type owl:ObjectProperty ;
+                                       
+                                       rdfs:domain <http://www.w3.org/ns/r2rml#PredicateMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#predicateMap
+
+<http://www.w3.org/ns/r2rml#predicateMap> rdf:type owl:ObjectProperty ;
+                                          
+                                          rdfs:range <http://www.w3.org/ns/r2rml#PredicateMap> ;
+                                          
+                                          rdfs:domain <http://www.w3.org/ns/r2rml#PredicateObjectMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#predicateObjectMap
+
+<http://www.w3.org/ns/r2rml#predicateObjectMap> rdf:type owl:ObjectProperty ;
+                                                
+                                                rdfs:range <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+                                                
+                                                rdfs:domain <http://www.w3.org/ns/r2rml#TriplesMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#refObjectMap
+
+<http://www.w3.org/ns/r2rml#refObjectMap> rdf:type owl:ObjectProperty ;
+                                          
+                                          rdfs:domain <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+                                          
+                                          rdfs:range <http://www.w3.org/ns/r2rml#RefObjectMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#sqlVersion
+
+<http://www.w3.org/ns/r2rml#sqlVersion> rdf:type owl:ObjectProperty ;
+                                        
+                                        rdfs:domain <http://www.w3.org/ns/r2rml#LogicalTable> .
+
+
+
+###  http://www.w3.org/ns/r2rml#subject
+
+<http://www.w3.org/ns/r2rml#subject> rdf:type owl:ObjectProperty ;
+                                     
+                                     rdfs:domain <http://www.w3.org/ns/r2rml#SubjectMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#subjectMap
+
+<http://www.w3.org/ns/r2rml#subjectMap> rdf:type owl:ObjectProperty ;
+                                        
+                                        rdfs:range <http://www.w3.org/ns/r2rml#SubjectMap> ;
+                                        
+                                        rdfs:domain <http://www.w3.org/ns/r2rml#TriplesMap> .
+
+
+
+###  http://www.w3.org/ns/r2rml#termType
+
+<http://www.w3.org/ns/r2rml#termType> rdf:type owl:ObjectProperty ;
+                                      
+                                      rdfs:domain [ rdf:type owl:Class ;
+                                                    owl:unionOf ( <http://www.w3.org/ns/r2rml#GraphMap>
+                                                                  <http://www.w3.org/ns/r2rml#ObjectMap>
+                                                                  <http://www.w3.org/ns/r2rml#PredicateMap>
+                                                                  <http://www.w3.org/ns/r2rml#SubjectMap>
+                                                                )
+                                                  ] .
+
+
+
+
+
+#################################################################
+#
+#    Data properties
+#
+#################################################################
+
+
+###  http://www.w3.org/ns/r2rml#child
+
+<http://www.w3.org/ns/r2rml#child> rdf:type owl:DatatypeProperty ;
+                                   
+                                   rdfs:range xsd:string ;
+                                   
+                                   rdfs:domain <http://www.w3.org/ns/r2rml#Join> .
+
+
+
+###  http://www.w3.org/ns/r2rml#column
+
+<http://www.w3.org/ns/r2rml#column> rdf:type owl:DatatypeProperty ;
+                                    
+                                    rdfs:range xsd:string ;
+                                    
+                                    rdfs:domain [ rdf:type owl:Class ;
+                                                  owl:unionOf ( <http://www.w3.org/ns/r2rml#GraphMap>
+                                                                <http://www.w3.org/ns/r2rml#ObjectMap>
+                                                                <http://www.w3.org/ns/r2rml#PredicateMap>
+                                                                <http://www.w3.org/ns/r2rml#SubjectMap>
+                                                              )
+                                                ] .
+
+
+
+###  http://www.w3.org/ns/r2rml#inverseExpression
+
+<http://www.w3.org/ns/r2rml#inverseExpression> rdf:type owl:DatatypeProperty ;
+                                               
+                                               rdfs:domain [ rdf:type owl:Class ;
+                                                             owl:unionOf ( <http://www.w3.org/ns/r2rml#GraphMap>
+                                                                           <http://www.w3.org/ns/r2rml#ObjectMap>
+                                                                           <http://www.w3.org/ns/r2rml#PredicateMap>
+                                                                           <http://www.w3.org/ns/r2rml#SubjectMap>
+                                                                         )
+                                                           ] .
+
+
+
+###  http://www.w3.org/ns/r2rml#language
+
+<http://www.w3.org/ns/r2rml#language> rdf:type owl:DatatypeProperty .
+
+
+
+###  http://www.w3.org/ns/r2rml#parent
+
+<http://www.w3.org/ns/r2rml#parent> rdf:type owl:DatatypeProperty ;
+                                    
+                                    rdfs:range xsd:string ;
+                                    
+                                    rdfs:domain <http://www.w3.org/ns/r2rml#Join> .
+
+
+
+###  http://www.w3.org/ns/r2rml#sqlQuery
+
+<http://www.w3.org/ns/r2rml#sqlQuery> rdf:type owl:DatatypeProperty ;
+                                      
+                                      rdfs:range xsd:string ;
+                                      
+                                      rdfs:domain <http://www.w3.org/ns/r2rml#LogicalTable> .
+
+
+
+###  http://www.w3.org/ns/r2rml#tableName
+
+<http://www.w3.org/ns/r2rml#tableName> rdf:type owl:DatatypeProperty ;
+                                       
+                                       rdfs:range xsd:string ;
+                                       
+                                       rdfs:domain <http://www.w3.org/ns/r2rml#LogicalTable> .
+
+
+
+###  http://www.w3.org/ns/r2rml#template
+
+<http://www.w3.org/ns/r2rml#template> rdf:type owl:DatatypeProperty ;
+                                      
+                                      rdfs:range xsd:string ;
+                                      
+                                      rdfs:domain [ rdf:type owl:Class ;
+                                                    owl:unionOf ( <http://www.w3.org/ns/r2rml#GraphMap>
+                                                                  <http://www.w3.org/ns/r2rml#ObjectMap>
+                                                                  <http://www.w3.org/ns/r2rml#PredicateMap>
+                                                                  <http://www.w3.org/ns/r2rml#SubjectMap>
+                                                                )
+                                                  ] .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://www.w3.org/1999/02/22-rdf-syntax-ns#Property
+
+rdf:Property rdf:type owl:Class .
+
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Class
+
+rdfs:Class rdf:type owl:Class .
+
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Datatype
+
+rdfs:Datatype rdf:type owl:Class .
+
+
+
+###  http://www.w3.org/2000/01/rdf-schema#Resource
+
+rdfs:Resource rdf:type owl:Class .
+
+
+
+###  http://www.w3.org/ns/r2rml#GraphMap
+
+<http://www.w3.org/ns/r2rml#GraphMap> rdf:type owl:Class .
+
+
+
+###  http://www.w3.org/ns/r2rml#Join
+
+<http://www.w3.org/ns/r2rml#Join> rdf:type owl:Class ;
+                                  
+                                  rdfs:subClassOf owl:Thing ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/ns/r2rml#child> ;
+                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onDataRange xsd:string
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/ns/r2rml#child> ;
+                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onDataRange xsd:string
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/ns/r2rml#parent> ;
+                                                    owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onDataRange xsd:string
+                                                  ] ,
+                                                  [ rdf:type owl:Restriction ;
+                                                    owl:onProperty <http://www.w3.org/ns/r2rml#parent> ;
+                                                    owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                    owl:onDataRange xsd:string
+                                                  ] .
+
+
+
+###  http://www.w3.org/ns/r2rml#LogicalTable
+
+<http://www.w3.org/ns/r2rml#LogicalTable> rdf:type owl:Class ;
+                                          
+                                          rdfs:subClassOf owl:Thing ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://www.w3.org/ns/r2rml#sqlVersion> ;
+                                                            owl:onClass rdfs:Resource ;
+                                                            owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+                                                          ] .
+
+
+
+###  http://www.w3.org/ns/r2rml#ObjectMap
+
+<http://www.w3.org/ns/r2rml#ObjectMap> rdf:type owl:Class ;
+                                       
+                                       rdfs:subClassOf owl:Thing ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/ns/r2rml#object> ;
+                                                         owl:onClass rdfs:Resource ;
+                                                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/ns/r2rml#language> ;
+                                                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                                                         owl:onDataRange xsd:string
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/ns/r2rml#datatype> ;
+                                                         owl:onClass rdfs:Datatype ;
+                                                         owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+                                                       ] ,
+                                                       [ rdf:type owl:Restriction ;
+                                                         owl:onProperty <http://www.w3.org/ns/r2rml#object> ;
+                                                         owl:onClass rdfs:Resource ;
+                                                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                       ] .
+
+
+
+###  http://www.w3.org/ns/r2rml#PredicateMap
+
+<http://www.w3.org/ns/r2rml#PredicateMap> rdf:type owl:Class ;
+                                          
+                                          rdfs:subClassOf owl:Thing ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://www.w3.org/ns/r2rml#predicate> ;
+                                                            owl:onClass rdf:Property ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                          ] .
+
+
+
+###  http://www.w3.org/ns/r2rml#PredicateObjectMap
+
+<http://www.w3.org/ns/r2rml#PredicateObjectMap> rdf:type owl:Class ;
+                                                
+                                                rdfs:subClassOf owl:Thing ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.w3.org/ns/r2rml#refObjectMap> ;
+                                                                  owl:onClass <http://www.w3.org/ns/r2rml#RefObjectMap> ;
+                                                                  owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.w3.org/ns/r2rml#objectMap> ;
+                                                                  owl:onClass <http://www.w3.org/ns/r2rml#ObjectMap> ;
+                                                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                ] ,
+                                                                [ rdf:type owl:Restriction ;
+                                                                  owl:onProperty <http://www.w3.org/ns/r2rml#predicateMap> ;
+                                                                  owl:onClass <http://www.w3.org/ns/r2rml#PredicateMap> ;
+                                                                  owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                                ] .
+
+
+
+###  http://www.w3.org/ns/r2rml#RefObjectMap
+
+<http://www.w3.org/ns/r2rml#RefObjectMap> rdf:type owl:Class ;
+                                          
+                                          rdfs:subClassOf owl:Thing ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://www.w3.org/ns/r2rml#joinCondition> ;
+                                                            owl:onClass <http://www.w3.org/ns/r2rml#Join> ;
+                                                            owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+                                                          ] ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty <http://www.w3.org/ns/r2rml#refObjectMap> ;
+                                                            owl:onClass <http://www.w3.org/ns/r2rml#TriplesMap> ;
+                                                            owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                          ] .
+
+
+
+###  http://www.w3.org/ns/r2rml#SubjectMap
+
+<http://www.w3.org/ns/r2rml#SubjectMap> rdf:type owl:Class ;
+                                        
+                                        rdfs:subClassOf owl:Thing ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/ns/r2rml#class> ;
+                                                          owl:onClass rdfs:Class ;
+                                                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+                                                        ] .
+
+
+
+###  http://www.w3.org/ns/r2rml#TriplesMap
+
+<http://www.w3.org/ns/r2rml#TriplesMap> rdf:type owl:Class ;
+                                        
+                                        rdfs:subClassOf owl:Thing ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/ns/r2rml#logicalTable> ;
+                                                          owl:onClass <http://www.w3.org/ns/r2rml#LogicalTable> ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/ns/r2rml#predicateObjectMap> ;
+                                                          owl:onClass <http://www.w3.org/ns/r2rml#PredicateObjectMap> ;
+                                                          owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty <http://www.w3.org/ns/r2rml#subjectMap> ;
+                                                          owl:onClass <http://www.w3.org/ns/r2rml#SubjectMap> ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                                        ] .
+
+
+
+
+###  Generated by the OWL API (version 3.2.3.1824) http://owlapi.sourceforge.net
+
