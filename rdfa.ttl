@@ -45,7 +45,7 @@ rdfa:context a rdf:Property,
     dc:description "provides extra context for the error, eg, http response, an XPointer/XPath information, or simply the URI that created the error";
     rdfs:domain rdfa:PGClass .
 
-rdfa:has-vocab a rdf:Property,
+rdfa:usesVocabulary a rdf:Property,
         owl:ObjectProperty;
     dc:description """provides a relationship between the host document and a vocabulary
 	defined using the @vocab facility of RDFa1.1""" .

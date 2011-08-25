@@ -67,7 +67,7 @@
   <rdf:Description rdf:about="http://www.w3.org/ns/rdfa.html">
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base.css"/>
   </rdf:Description>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/rdfa#has-vocab">
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/rdfa#usesVocabulary">
     <dc:description>provides a relationship between the host document and a vocabulary
 	defined using the @vocab facility of RDFa1.1</dc:description>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
