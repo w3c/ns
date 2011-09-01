@@ -22,8 +22,8 @@
     dct:created "2010-05-28"^^xsd:date;
     dct:modified "2010-06-09"^^xsd:date;
     dct:modified "2010-10-08"^^xsd:date;
-    dct:title "Core organization ontology@en";
-    dct:title "Ontologie des organisations@fr";
+    dct:title "Core organization ontology"@en;
+    dct:title "Ontologie des organisations"@fr;
     dct:contributor [foaf:mbox "dave@epimorphics.com"; foaf:name "Dave Reynolds"];
     dct:contributor [foaf:mbox "dguardiola@quinode.fr"; foaf:name "Dominique Guardiola"];
     dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;

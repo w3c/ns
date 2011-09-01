@@ -13,26 +13,26 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="http://www.w3.org/ns/org#">
     <rdfs:comment xml:lang="en">Vocabulary for describing organizational structures, specializable to a broad variety of types of organization.</rdfs:comment>
+    <dct:title xml:lang="en">Core organization ontology</dct:title>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-05-28</dct:created>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2010-10-08</dct:modified>
     <dct:contributor rdf:parseType="Resource">
       <foaf:mbox>dave@epimorphics.com</foaf:mbox>
       <foaf:name>Dave Reynolds</foaf:name>
     </dct:contributor>
-    <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
-    <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
-    <dct:title>Core organization ontology@en</dct:title>
-    <rdfs:seeAlso rdf:resource="http://www.epimorphics.com/public/vocabulary/org.html"/>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2010-06-09</dct:modified>
-    <dct:title>Ontologie des organisations@fr</dct:title>
-    <owl:versionInfo>0.4</owl:versionInfo>
+    >2010-10-08</dct:modified>
     <dct:contributor rdf:parseType="Resource">
       <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
       <foaf:name>Dominique Guardiola</foaf:name>
     </dct:contributor>
+    <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
+    <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
+    <rdfs:seeAlso rdf:resource="http://www.epimorphics.com/public/vocabulary/org.html"/>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2010-06-09</dct:modified>
+    <dct:title xml:lang="fr">Ontologie des organisations</dct:title>
+    <owl:versionInfo>0.4</owl:versionInfo>
   </owl:Ontology>
   <rdfs:Class rdf:about="http://www.w3.org/ns/org#Organization">
     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
@@ -44,12 +44,12 @@
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent"/>
     </owl:disjointWith>
-    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-    <rdfs:comment xml:lang="en">Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary (possibly legally recognized name), `skos:altLabel` for alternative names (trading names, colloquial names) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_</rdfs:comment>
-    <rdfs:comment xml:lang="fr">Represente un groupe de personnes organisé en communauté où tout autre forme de structure sociale, commerciale ou politique. Le groupe a un but commun ou une raison d’être qui va au-delà de la somme des personnes qui en font partie et peut agir en tant que "Agent". Les organisations sont souvent décomposables en structures hierarchisées. Il est recommandé que des labels lexicaux SKOS soient utilisés pour nommer l'Organisation. En particulier `skos:prefLabel` pour le nom principal (en général le nom légal), `skos:altLabel` pour les noms alternatifs (marques, sigles, appelations familières) et `skos:notation` pour indiquer un code provenant d'une liste de code.</rdfs:comment>
     <owl:hasKey rdf:parseType="Collection">
       <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
     </owl:hasKey>
+    <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
+    <rdfs:comment xml:lang="en">Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary (possibly legally recognized name), `skos:altLabel` for alternative names (trading names, colloquial names) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Represente un groupe de personnes organisé en communauté où tout autre forme de structure sociale, commerciale ou politique. Le groupe a un but commun ou une raison d’être qui va au-delà de la somme des personnes qui en font partie et peut agir en tant que "Agent". Les organisations sont souvent décomposables en structures hierarchisées. Il est recommandé que des labels lexicaux SKOS soient utilisés pour nommer l'Organisation. En particulier `skos:prefLabel` pour le nom principal (en général le nom légal), `skos:altLabel` pour les noms alternatifs (marques, sigles, appelations familières) et `skos:notation` pour indiquer un code provenant d'une liste de code.</rdfs:comment>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#Membership"/>
     </owl:disjointWith>
