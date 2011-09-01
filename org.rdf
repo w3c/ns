@@ -3,45 +3,53 @@
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:org="http://www.w3.org/ns/org#"
+    xmlns:owlTime="http://www.w3.org/2006/time"
     xmlns:gr="http://purl.org/goodrelations/v1#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:owlTime="http://www.w3.org/2006/time#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:opmv="http://purl.org/net/opmv/ns#"
     xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="http://www.w3.org/ns/org#">
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2011-02-10</dct:modified>
     <rdfs:comment xml:lang="en">Vocabulary for describing organizational structures, specializable to a broad variety of types of organization.</rdfs:comment>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-05-28</dct:created>
-    <owl:versionInfo>0.4.1</owl:versionInfo>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2010-10-08</dct:modified>
     <dct:contributor rdf:parseType="Resource">
       <foaf:mbox>dave@epimorphics.com</foaf:mbox>
       <foaf:name>Dave Reynolds</foaf:name>
     </dct:contributor>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2010-10-08</dct:modified>
     <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
     <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
     <dct:title>Core organization ontology@en</dct:title>
     <rdfs:seeAlso rdf:resource="http://www.epimorphics.com/public/vocabulary/org.html"/>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-06-09</dct:modified>
+    <dct:title>Ontologie des organisations@fr</dct:title>
+    <owl:versionInfo>0.4</owl:versionInfo>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
+      <foaf:name>Dominique Guardiola</foaf:name>
+    </dct:contributor>
   </owl:Ontology>
   <rdfs:Class rdf:about="http://www.w3.org/ns/org#Organization">
     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <owl:disjointWith>
-      <owl:Class rdf:about="http://www.w3.org/ns/org#Role"/>
+      <rdfs:Class rdf:about="http://www.w3.org/ns/org#Role"/>
     </owl:disjointWith>
+    <rdfs:label xml:lang="fr">Organisation</rdfs:label>
     <rdfs:label xml:lang="en">Organization</rdfs:label>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent"/>
     </owl:disjointWith>
     <owl:equivalentClass rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
     <rdfs:comment xml:lang="en">Represents a collection of people organized together into a community or other social, commercial or political structure. The group has some common purpose or reason for existence which goes beyond the set of people belonging to it and can act as an Agent. Organizations are often decomposable into hierarchical structures.  It is recommended that SKOS lexical labels should be used to label the Organization. In particular `skos:prefLabel` for the primary (possibly legally recognized name), `skos:altLabel` for alternative names (trading names, colloquial names) and `skos:notation` to denote a code from a code list. Alternative names: _Collective_ _Body_ _Org_ _Group_</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Represente un groupe de personnes organisé en communauté où tout autre forme de structure sociale, commerciale ou politique. Le groupe a un but commun ou une raison d’être qui va au-delà de la somme des personnes qui en font partie et peut agir en tant que "Agent". Les organisations sont souvent décomposables en structures hierarchisées. Il est recommandé que des labels lexicaux SKOS soient utilisés pour nommer l'Organisation. En particulier `skos:prefLabel` pour le nom principal (en général le nom légal), `skos:altLabel` pour les noms alternatifs (marques, sigles, appelations familières) et `skos:notation` pour indiquer un code provenant d'une liste de code.</rdfs:comment>
+    <owl:hasKey rdf:parseType="Collection">
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
+    </owl:hasKey>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#Membership"/>
     </owl:disjointWith>
@@ -50,9 +58,24 @@
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#Site"/>
     </owl:disjointWith>
-    <owl:hasKey rdf:parseType="Collection">
-      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
-    </owl:hasKey>
+  </rdfs:Class>
+  <rdfs:Class rdf:about="http://www.w3.org/ns/org#Role">
+    <rdfs:label xml:lang="fr">Rôle</rdfs:label>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent"/>
+    </owl:disjointWith>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.w3.org/ns/org#Site"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:about="http://www.w3.org/ns/org#Membership"/>
+    </owl:disjointWith>
+    <rdfs:label xml:lang="en">Role</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:comment xml:lang="fr">Indique le role qu'une Personne ou un autre Agent peut avoir dans une Organisation. Les instances de cette classe décrivent le rôle dans l'absolu; pour indiquer une personne ayant ce rôle spécifique dans une Organisation, utilisez une instance de `org:Membership`. Il est courant que les rôles soient organisés dans une sorte de taxonomie, ce qui peut être représenté avec SKOS. Les propriétés de libellés standards de SKOS devraient être utilisées pour libeller le Role. D'autres propriétés additionnelles pour ce rôle, comme une fourchette de Salaire peut être ajoutée par une extension de ce vocabulaire.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">Denotes a role that a Person or other Agent can take in an organization. Instances of this class describe the abstract role; to denote a specific instance of a person playing that role in a specific organization use an instance of `org:Membership`. It is common for roles to be arranged in some taxonomic structure and we use SKOS to represent that. The normal SKOS lexical properties should be used when labelling the Role. Additional descriptive properties for the Role, such as a Salary band, may be added by extension vocabularies.</rdfs:comment>
   </rdfs:Class>
   <owl:Class rdf:about="http://www.w3.org/ns/org#OrganizationalCollaboration">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
@@ -71,13 +94,17 @@
       </owl:Class>
     </owl:equivalentClass>
     <rdfs:label xml:lang="en">Endeavour</rdfs:label>
+    <rdfs:label xml:lang="fr">Partenariat</rdfs:label>
     <rdfs:comment xml:lang="en">A collaboration between two or more Organizations such as a project. It meets the criteria for being an Organization in that it has an identity and defining purpose independent of its particular members but is neither a formally recognized legal entity nor a sub-unit within some larger organization. Might typically have a shorter lifetime than the Organizations within it, but not necessarily. All members are `org:Organization`s rather than individuals and those Organizations can play particular roles within the venture. Alternative names: _Project_ _Venture_  _Endeavour_ _Consortium_ _Endeavour_</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une collaboration entre deux ou plusieurs Organisations, telle qu'un projet commun. Un partenariat peut être considéré comme Organisation dans le sens ou il possède une identité et un But propre indépendant de ceux de ses membres, mais ce n'est ni une entité légale ni une sous-unité d'une Organisation plus grande. Typiquement, elle peut avoir une durée de vie plus courte que les Organisations qui la compose, mais pas nécessairement. Tous les membressont des `org:Organization`s plutôt que des individus et ces Organisations peuvent jouer des Rôles partculiers au sein du Partenariat. </rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.w3.org/ns/org#Site">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:label xml:lang="en">Site</rdfs:label>
+    <rdfs:label xml:lang="fr">Site</rdfs:label>
     <rdfs:comment xml:lang="en">An office or other premise at which the organization is located. Many organizations are spread across multiple sites and many sites will host multiple locations. In most cases a Site will be a physical location. However, we don't exclude the possibility of non-physical sites such as a virtual office with an associated post box and phone reception service. Extensions may provide subclasses to denote particular types of site.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Un établissement ou tout autre lieu dans lequel une Organisation est localisé. Beaucoup d'organisations sont dispersées à travers plusieurs sites. Dans la plupart des cas un Site sera un lieu physique. Toutefois, nous n'excluons pas la possibilité de sites non-physiques comme un bureau virtuel avec une boite postale et un service de secrétariat mutualisé. Des extensions pourrait fournir des sous-classes pour décrire des types de sites particuliers.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent"/>
@@ -86,22 +113,28 @@
   <owl:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:subClassOf rdf:resource="http://purl.org/net/opmv/ns#Process"/>
-    <rdfs:label xml:lang="en">ChangeEvent</rdfs:label>
+    <rdfs:label xml:lang="en">Change Event</rdfs:label>
+    <rdfs:label xml:lang="fr">Évènement</rdfs:label>
     <rdfs:comment xml:lang="en">Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `opmv:wasGeneratedAt`, a description should be given by `dct:description`. </rdfs:comment>
+    <rdfs:comment xml:lang="fr">Représente un Évènement impliquant un changement majeur dans l'Organisation, comme une fusion ou une restructuration. Prévu pour des situations ou l'organisation finale est suffisamment différente des Organisations originales pour qu'elle aie une identité et une URI distincte. Des vocabulaires d'extension vocabularies devrait définir des sous-classes de celle-ci pour annoter les différentes catégories d'Évènemenents. Le moment ou l'intervalle de l'Évènement devrait être indiqué avec `opmv:wasGeneratedAt`, et une description avec la classe `dct:description`. </rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Organization"/>
-    <rdfs:label xml:lang="en">FormalOrganization</rdfs:label>
+    <rdfs:label xml:lang="en">Formal Organization</rdfs:label>
+    <rdfs:label xml:lang="fr">Organisation Formelle</rdfs:label>
     <rdfs:comment xml:lang="en">An Organization which is recognized in the world at large, in particular in legal jurisdictions, with associated rights and responsibilities. Examples include a Corporation, Charity, Government or Church. Note that this is a super class of `gr:BusinessEntity` and it is recommended to use the GoodRelations vocabulary to denote Business classifications such as DUNS or NAICS.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une Organisation reconnue, en particulier par les juridictions locales, ayant des droits et des responsabilités. Exemples : entreprises, association à but non-lucratif, collectivité, église. Notez que c'est une super-classe de `gr:BusinessEntity` et qu'il est recommandé d'utiliser le vocabulaire GoodRelations pour indiquer les classifications économiques comme le code NACE.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.w3.org/ns/org#Membership">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:label xml:lang="en">Membership</rdfs:label>
+    <rdfs:label xml:lang="fr">Engagement</rdfs:label>
     <rdfs:comment xml:lang="en">Indicates the nature of an Agent's membership of an organization. Represents an n-ary relation between an Agent, an Organzation and a Role. It is possible to directly indicate membership, independent of the specific Role, through use of the `org:memberOf` property.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique la nature de l'engagement d'un Agent dans une Organisation. Représente une relation n-aire entre un Agent, une Organisation et un Role. Il est possible d'indiquer directment l'appartenance à une organisation, independemment d'un rôle spécifique, à travers l'usage de la propriété `org:memberOf`.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Site"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
@@ -110,302 +143,358 @@
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <rdfs:label xml:lang="en">OrganizationalUnit</rdfs:label>
+    <rdfs:label xml:lang="fr">Unité opérationnelle</rdfs:label>
     <rdfs:comment xml:lang="en">An Organization such as a University Support Unit which is part of some larger FormalOrganization and only has full recognition within the context of that FormalOrganization, it is not a Legal Entity in its own right. Units can be large and complex containing other Units and even FormalOrganizations. Alternative names: _OU_ _Unit_ _Department_</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Une organisation telle que le support informatique d'une université, qui fait partie d'une Organisation Formelle plus importante et qui ne peut être reconnue qu'en tant que membre de cette organisation supérieure, ce n'est pas une entité légale en elle-même. Les unités opérationnelles peuvent être étendues, complexes et inclure elle-même d'autres branches ou Unités Opérationnelles, voire des Organisations Formelles.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-  </owl:Class>
-  <owl:Class rdf:about="http://www.w3.org/ns/org#Role">
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:label xml:lang="en">Role</rdfs:label>
-    <rdfs:comment xml:lang="en">Denotes a role that a Person or other Agent can take in an organization. Instances of this class describe the abstract role; to denote a specific instance of a person playing that role in a specific organization use an instance of `org:Membership`. It is common for roles to be arranged in some taxonomic structure and we use SKOS to represent that. The normal SKOS lexical properties should be used when labelling the Role. Additional descriptive properties for the Role, such as a Salary band, may be added by extension vocabularies.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Membership"/>
-    <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#Site"/>
-    <owl:disjointWith rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
   </owl:Class>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#originalOrganization">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">original organization</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/net/opmv/ns#used"/>
     <rdfs:comment xml:lang="en">Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`. Note that in specializing the OPMV vocabulary we are treating an `org:Organization` as an `opmv:Artifact`, which is consistent with the OPM model.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#changedBy"/>
+      <rdf:Property rdf:about="http://www.w3.org/ns/org#changedBy"/>
     </owl:inverseOf>
+    <rdfs:label xml:lang="en">original organization</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/net/opmv/ns#used"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
+    <rdfs:comment xml:lang="fr">Indique une ou plusieurs organisations qui ont existées avant un évenement de changement. Selon l'évènement, ces organisations ont pu continuer à exister ou non. Inverse de `org:changedBy`. Notez qu'en spécialisant le vocabulaire OPMV nous triatons `org:Organization` comme un `opmv:Artifact`, ce qui est cohérent avec le modèle OPM.</rdfs:comment>
+    <rdfs:label xml:lang="fr">organisation originelle</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#classification">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:label xml:lang="en">classification</rdfs:label>
+    <rdfs:label xml:lang="fr">classification</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <rdfs:range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">Indicates a classification for this Organization within some classification scheme. Extension vocabularies may wish to specialize this property to have a range corresponding to a specific `skos:ConceptScheme`. This property is under discussion and may be revised or removed - in many cases organizations are best categorized by defining a sub-class hierarchy in an extension vocabulary.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique une classification pour cette Organisation dans le cadre d'un schéma de classification. Il est possible de spécialiser cette propriété en utilisant un vocabulaire spécialisé pour que le champ corresponde à un concept spécifique `skos:ConceptScheme`. Cette propriété est en discussion est pourrait être révisée ou supprimée - dans de nombreux cas, les organisations sont mieux catégorisées par une hierarchie de sous-classe dans un vocabulaire externe.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#memberDuring">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">member During</rdfs:label>
+    <rdfs:label xml:lang="fr">durée d'engagement</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Membership"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2006/timeInterval"/>
+    <rdfs:comment xml:lang="en">Optional property to indicate the interval for which the membership is/was valid.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Propriété optionnelle pour indiquer l'intervalle durant lequel l'engagemnet est ou était valide.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasSite">
+    <owl:inverseOf>
+      <rdf:Property rdf:about="http://www.w3.org/ns/org#siteOf"/>
+    </owl:inverseOf>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:comment xml:lang="fr">Indique un site sur lequel l'Organisation possède une présence, même indirecte (domiciliation, boite postale). Inverse de `org:siteOf`.</rdfs:comment>
+    <rdfs:label xml:lang="fr">a un site</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">has site</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:comment xml:lang="en">Indicates a site at which the Organization has some presence even if only indirect (e.g. virtual office or a professional service which is acting as the registered address for a company). Inverse of `org:siteOf`.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#location">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">location</rdfs:label>
+    <rdfs:label xml:lang="fr">localisation</rdfs:label>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:comment xml:lang="en">Gives a location description for a person within the organization, for example a _Mail Stop_ for internal posting purposes.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique la description de l'endroit ou est basé une personne de l'Organisation, par exemple pour des besoins de messagerie interne (Bureau 42).</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#reportsTo">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">reportsTo</rdfs:label>
+    <rdfs:label xml:lang="en">reports to</rdfs:label>
+    <rdfs:label xml:lang="fr">est subordonné à</rdfs:label>
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <rdfs:comment xml:lang="en">Indicates a reporting relationship as might be depicted on an organizational chart. The precise semantics of the reporting relationship will vary by organization but is intended to encompass both direct supervisory relationships (e.g. carrying objective and salary setting authority) and more general reporting or accountability relationships (e.g. so called _dotted line_ reporting).</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique une relation de subordination comme elle pourrait l'être dans un organigramme. La sémantique précise de cette subordination pourra varier selon l'Organisation mais vise à englober aussi bien les relations hierarchiques directes (définition d'objectifs, montant du salaire) que des relations plus générales ou organisationnelles (les liens en pointillés dans les organigrammes).</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#linkedTo">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">linked to</rdfs:label>
+    <rdfs:label xml:lang="fr">relié à</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:comment xml:lang="en">Indicates an arbitrary relationship between two organizations. Specializations of this can be used to, for example, denote funding or supply chain relationships.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique une relation arbitraire entre deux Organisations. Des spécialisations peuvent être utilisées pour, par exemple, qualifier une relation de fournisseur ou de financeur.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasRegisteredSite">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
+    <rdfs:comment xml:lang="fr">Indique l'établissement principal légalement enregistré pour l'Organisation. Dans de nombreuses juridictions existe l'obligation pour une Organisation Formelle d'avoir un tel site principal. </rdfs:comment>
+    <rdfs:comment xml:lang="en">Indicates the legally registered site for the organization, in many legal jurisdictions there is a requirement that FormalOrganizations such as Companies or Charities have such a primary designed site. </rdfs:comment>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasPrimarySite"/>
+    </rdfs:subPropertyOf>
+    <rdfs:label xml:lang="en">registered Site</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+    <rdfs:label xml:lang="fr">siège social</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#remuneration">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:label xml:lang="en">remuneration</rdfs:label>
+    <rdfs:label xml:lang="fr">rémuneration</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Role"/>
     <rdfs:comment xml:lang="en">Indicates a salary or other reward associated with the role. Typically this will be denoted using an existing representation scheme such as `gr:PriceSpecification` but the range is left open to allow applications to specialize it (e.g. to remunerationInGBP).</rdfs:comment>
+    <rdfs:comment xml:lang="fr">INdique un salaire ou tout autre compensation associée au Rôle. Typiquement, ceci sera annoté en utilisant un schéma existant comme  `gr:PriceSpecification` mais le champ de cette propriété est laissé ouvert afin de permettre aux applications de la spécialiser (par exemple remunerationEuro).</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#resultingOrganization">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <owl:inverseOf>
+      <rdf:Property rdf:about="http://www.w3.org/ns/org#resultedFrom"/>
+    </owl:inverseOf>
     <rdfs:label xml:lang="en">resulted in</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
+    <rdfs:comment xml:lang="fr">Indique une organisation qui a été créée ou a été modifiée à la suite d'un Évènement de changement. Inverse de `org:resultedFrom`.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:label xml:lang="fr">a donné naissance à</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <rdfs:comment xml:lang="en">Indicates an organization which was created or changed as a result of the event. Inverse of `org:resultedFrom`.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#resultedFrom"/>
-    </owl:inverseOf>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasMember">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">member</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/member"/>
     <rdfs:comment xml:lang="en">Indicates a person who is a member of the subject Organization. Inverse of `org:memberOf`, see that property for further clarification. Provided for compatibility with `foaf:member`.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#memberOf"/>
+      <rdf:Property rdf:about="http://www.w3.org/ns/org#memberOf"/>
     </owl:inverseOf>
+    <owl:equivalentProperty rdf:resource="http://xmlns.com/foaf/0.1/member"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="en">has member</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:comment xml:lang="fr">Indique une personne membre de l'Organisation sujet. Inverse de `org:memberOf`, voyez la description de cette propriété pour plus de précisions. Fourni pour la compatibilité avec `foaf:member`.</rdfs:comment>
+    <rdfs:label xml:lang="fr">possède un membre</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#siteAddress">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">siteAddress</rdfs:label>
+    <rdfs:label xml:lang="en">site Address</rdfs:label>
+    <rdfs:label xml:lang="fr">adresse du Site</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Site"/>
     <rdfs:range rdf:resource="http://www.w3.org/2006/vcard/ns#VCard"/>
     <rdfs:comment xml:lang="en">Indicates a VCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) for the site. This can include email, telephone, and geo-location details as well as an address. </rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique une VCard (utilisant le vocabulaire http://www.w3.org/TR/vcard-rdf/) pour le Site. Peut inclure un email, un téléphone, et des détails de geo-localisation au côtés de l'adresse. </rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#resultedFrom">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">resulted from</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/net/opmv/ns#wasGeneratedBy"/>
-    <rdfs:comment xml:lang="en">Indicates an event which resulted in this organization. Note that in specializing the OPMV vocabulary we are treating an `org:Organization` as an `opmv:Artifact`, which is consistent with the OPM model. Inverse of `org:resultingOrganization`.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#resultingOrganization"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#headOf">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">head of</rdfs:label>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <rdfs:subPropertyOf>
-      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#memberOf"/>
+      <rdf:Property rdf:about="http://www.w3.org/ns/org#memberOf"/>
     </rdfs:subPropertyOf>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:label xml:lang="fr">responsable de</rdfs:label>
     <rdfs:comment xml:lang="en">Indicates that a person is the leader or formal head of the Organization. This will normally mean that they are the root of the `org:reportsTo` (acyclic) graph, though an organization may have more than one head.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:comment xml:lang="fr">Indique qu'une personne est le directeur ou le responsable formel d'une Organisation. Ceci indique souvent qu'il est au sommet de du graphe acyclique des `org:reportsTo`, m^me si une organisation petu avoir plus d'un responsable.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <rdfs:label xml:lang="en">head of</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasUnit">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#unitOf"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <rdf:Property rdf:about="http://www.w3.org/ns/org#hasSubOrganization"/>
+    </rdfs:subPropertyOf>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:label xml:lang="fr">possède une Unité</rdfs:label>
+    <rdfs:comment xml:lang="fr">Indique une Unité qui fait partie d'une Organisation, par exemple un Départment au sein d'une Organisation Formelle plus large. Inverse de `org:unitOf`.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Indicates a unit which is part of this Organization, e.g. a Department within a larger FormalOrganization. Inverse of `org:unitOf`.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+    <rdfs:label xml:lang="en">has Unit</rdfs:label>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#member">
+    <rdfs:label xml:lang="en">member</rdfs:label>
+    <rdfs:label xml:lang="fr">member</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasMembership"/>
+    </owl:inverseOf>
+    <rdfs:comment xml:lang="en">Indicates the Person (or other Agent including Organization) involved in the Membership relationship. Inverse of `org:hasMembership`</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Membership"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment xml:lang="fr">Indique une personne (ou tout autre Agent, y compris une Organisation) impliqué dans la relation d'Engagement. Inverse de `org:hasMembership`</rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasMembership">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">membership</rdfs:label>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Membership"/>
     <rdfs:comment xml:lang="en">Indicates a membership relationship that the Agent plays. Inverse of `org:member`.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique pour cet Agent une engagement dans une Organisation. Inverse de `org:member`.</rdfs:comment>
+    <rdfs:label xml:lang="en">membership</rdfs:label>
+    <rdfs:label xml:lang="fr">engagement</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#member"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#member"/>
-    </owl:inverseOf>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Membership"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#basedAt">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">basedAt</rdfs:label>
+    <rdfs:label xml:lang="en">based At</rdfs:label>
+    <rdfs:label xml:lang="fr">basé à</rdfs:label>
     <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
     <rdfs:comment xml:lang="en">Indicates the site at which a person is based. We do not restrict the possibility that a person is based at multiple sites.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique le site sur lequel une personne est basée. Nous ne limitons pas le nombre de sites sur lesquels une personne peut être basée.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#unitOf">
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasPrimarySite">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">unit Of</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#subOrganzationOf"/>
-    <rdfs:comment xml:lang="en">Indicates an Organization of which this Unit is a part, e.g. a Department within a larger FormalOrganization. This is the inverse of `org:hasUnit`.</rdfs:comment>
+    <rdfs:label xml:lang="en">primary Site</rdfs:label>
+    <rdfs:label xml:lang="fr">site principal</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
+    <rdfs:comment xml:lang="en">Indicates a primary site for the Organization, this is the default means by which an Organization can be contacted and is not necessarily the formal headquarters.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique le site principal d'une Organisation, le moyen par défatu par lequel l'Organisation peut être contactée et pas nécessairement le siège social légal.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasUnit"/>
-    </owl:inverseOf>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#role">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:label xml:lang="en">role</rdfs:label>
+    <rdfs:label xml:lang="fr">rôle</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Membership"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Role"/>
     <rdfs:comment xml:lang="en">Indicates the Role that the Agent plays in a Membership relationship with an Organization.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique le Rôle de l'Agent dans son Engagement avec  l'Organisation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#unitOf">
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#hasUnit"/>
+    <rdfs:comment xml:lang="fr">Indique l'Organisation dont cette Organisation ou Unité fait partie of which this Unit is a part, par exemple un Départment au sein d'une Organisation Formelle plus large. Inverse de `org:hasUnit`.</rdfs:comment>
+    <rdfs:label xml:lang="en">unit Of</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#subOrganzationOf"/>
+    <rdfs:label xml:lang="fr">unité de</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
+    <rdfs:comment xml:lang="en">Indicates an Organization of which this Unit is a part, e.g. a Department within a larger FormalOrganization. This is the inverse of `org:hasUnit`.</rdfs:comment>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#organization">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:label xml:lang="en">organization</rdfs:label>
+    <rdfs:label xml:lang="fr">organisation</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Membership"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <rdfs:comment xml:lang="en">Indicates Organization in which the Agent is a member.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasSubOrganization">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">subOrganization</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:comment xml:lang="en">Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization. Inverse of `org:subOrganizationOf`. Alternative names: hasSubOrg</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#subOrganizationOf"/>
-    </owl:inverseOf>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#memberDuring">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">memberDuring</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Membership"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
-    <rdfs:comment xml:lang="en">Optional property to indicate the interval for which the membership is/was valid.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasSite">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">site</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
-    <rdfs:comment xml:lang="en">Indicates a site at which the Organization has some presence even if only indirect (e.g. virtual office or a professional service which is acting as the registered address for a company). Inverse of `org:siteOf`.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf>
-      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#siteOf"/>
-    </owl:inverseOf>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#linkedTo">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">linkedTo</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:comment xml:lang="en">Indicates an arbitrary relationship between two organizations. Specializations of this can be used to, for example, denote funding or supply chain relationships.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasRegisteredSite">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">registeredSite</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
-    <rdfs:subPropertyOf>
-      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasPrimarySite"/>
-    </rdfs:subPropertyOf>
-    <rdfs:comment xml:lang="en">Indicates the legally registered site for the organization, in many legal jurisdictions there is a requirement that FormalOrganizations such as Companies or Charities have such a primary designed site. </rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasUnit">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">unit</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#OrganizationalUnit"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasSubOrganization"/>
-    <rdfs:comment xml:lang="en">Indicates a unit which is part of this Organization, e.g. a Department within a larger FormalOrganization. Inverse of `org:unitOf`.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#unitOf"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#subOrganizationOf">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">subOrganization of</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:subPropertyOf>
-      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#transitiveSubOrganizationOf"/>
-    </rdfs:subPropertyOf>
-    <rdfs:comment xml:lang="en">Represents hierarchical containment of Organizations or Organizational Units; indicates an organization which is a sub-part or child of this organization.  Inverse of `org:hasSubOrganization`.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#hasSubOrganization"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#transitiveSubOrganizationOf">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">transitive sub-organization</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:comment xml:lang="en">The transitive closure of subOrganizationOf, giving a representation of all organizations that contain this one. Note that technically this is a super property of the transitive closure so it could contain additional assertions but such usage is discouraged.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#member">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">member</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Membership"/>
-    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdfs:comment xml:lang="en">Indicates the Person (or other Agent including Organization) involved in the Membership relationship. Inverse of `org:hasMembership`</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#hasMembership"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#changedBy">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">changed by</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
-    <rdfs:comment xml:lang="en">Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganzation`.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#originalOrganization"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#memberOf">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">member of</rdfs:label>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:comment xml:lang="en">Indicates that a person is a member of the Organization with no indication of the nature of that membership or the role played. Note that the choice of property name is not meant to limit the property to only formal membership arrangements, it is also indended to cover related concepts such as affilliation or other involvement in the organization. Extensions can specialize this relationship to indicate particular roles within the organization or more nuanced relationships to the organization. Has an optional inverse, `org:hasmember`.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#hasMember"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#siteOf">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">site Of</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Site"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:comment xml:lang="en">Indicates an Organization which has some presence at the given site. This is the inverse of `org:hasSite`.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#hasSite"/>
-  </owl:ObjectProperty>
-  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasPrimarySite">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">primarySite</rdfs:label>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Site"/>
-    <rdfs:comment xml:lang="en">Indicates a primary site for the Organization, this is the default means by which an Organization can be contacted and is not necessarily the formal headquarters.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique l'Organization dont l'agent est membre.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:ObjectProperty>
   <rdf:Property rdf:about="http://www.w3.org/ns/org#purpose">
     <rdfs:label xml:lang="en">purpose</rdfs:label>
+    <rdfs:label xml:lang="fr">but</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <rdfs:comment xml:lang="en">Indicates the purpose of this Organization. There can be many purposes at different levels of abstraction but the nature of an organization is to have a reason for existence and this property is a means to document that reason. An Organization may have multiple purposes. It is recommended that the purpose be denoted by a controlled term or code list, ideally a `skos:Concept`. However, the range is left open to allow for other types of descriptive schemes. It is expected that specializations or application profiles of this vocabulary will constrain the range of the purpose. Alternative names: _remit_ _responsibility_ (esp. if applied to OrganizationalUnits such as Government Departments).</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique le but de cette Organisation. Il peut exister plusieurs buts à différents niveaux d'abstraction mais la nature d'une organisation est d'avoir une raison d'exister et cette propriété doit servir à documenter cette raison d'être. Une Organisation peut avoir plusieurs Buts. Il est recommandé que le but soit libellé à l'aide d'un vocabulaire contrôlé ou autre code établi, idéalement avec un concept `skos:Concept`. Toutefois, le champ de cette propriété est laissé ouvert et pourrait accepter d'autres schémas de description. Il est préférable que les spécialisations ou le profil d'application de ce vocabulaire contraindra le champ de cette propriété.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/org#hasSubOrganization">
+    <rdfs:comment xml:lang="en">Represents hierarchical containment of Organizations or OrganizationalUnits; indicates an Organization which contains this Organization. Inverse of `org:subOrganizationOf`. Alternative names: hasSubOrg</rdfs:comment>
+    <rdfs:label xml:lang="en">has SubOrganization</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <owl:inverseOf>
+      <rdf:Property rdf:about="http://www.w3.org/ns/org#subOrganizationOf"/>
+    </owl:inverseOf>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="fr">a une Sous-Organization</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:comment xml:lang="fr">Représente une relation hierarchique des Organisations ou des Unités Opérationnelles; indique une Organisation sujet qui contient cette Organisation. Inverse de `org:subOrganizationOf`.</rdfs:comment>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/org#resultedFrom">
+    <rdfs:comment xml:lang="en">Indicates an event which resulted in this organization. Note that in specializing the OPMV vocabulary we are treating an `org:Organization` as an `opmv:Artifact`, which is consistent with the OPM model. Inverse of `org:resultingOrganization`.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:label xml:lang="en">resulted from</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:subPropertyOf rdf:resource="http://purl.org/net/opmv/ns#wasGeneratedBy"/>
+    <rdfs:comment xml:lang="fr">Indique un évènement dont est issue l'Organisation. Notez qu'en spécialisant le vocabulaire OPMV nous triatons `org:Organization` comme un `opmv:Artifact`, ce qui est cohérent avec le modèle OPM. Inverse de `org:resultingOrganization`.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="fr">issue de</rdfs:label>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#resultingOrganization"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/org#subOrganizationOf">
+    <rdfs:comment xml:lang="en">Represents hierarchical containment of Organizations or Organizational Units; indicates an organization which is a sub-part or child of this organization.  Inverse of `org:hasSubOrganization`.</rdfs:comment>
+    <rdfs:label xml:lang="fr">sous-Organization de</rdfs:label>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#hasSubOrganization"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:comment xml:lang="fr">Indique le statut de dépendance hierarchique pour des Organisations ou des Unités Opérationnelles; indique une Organisation qui est une sous-partie ou une branche d'une Organisation plus large. C'est la propriété inverse de `org:hasSubOrganization`.</rdfs:comment>
+    <rdfs:label xml:lang="en">subOrganization of</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:TransitiveProperty rdf:about="http://www.w3.org/ns/org#transitiveSubOrganizationOf"/>
+    </rdfs:subPropertyOf>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/org#changedBy">
+    <rdfs:label xml:lang="en">changed by</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
+    <rdfs:comment xml:lang="fr">Indique un évènement qui a impliqué un changement dans l'Organisation. Selon l'évènement, l'Organisation a continué à exister après l'évènement, ou pas. Inverse de `org:originalOrganization`.</rdfs:comment>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#originalOrganization"/>
+    <rdfs:comment xml:lang="en">Indicates a change event which resulted in a change to this organization. Depending on the event the organization may or may not have continued to exist after the event. Inverse of `org:originalOrganization`.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:label xml:lang="fr">modifiée par</rdfs:label>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/org#memberOf">
+    <rdfs:comment xml:lang="fr">Indique qu'une personne est membre de l'Organisation sans précision sur la nature de cet engagement ou du rôle joué. Notez que le choix du nom de cette propriété ne vise pas à la limiter aux seuls engagements formels, elle peut également couvrir des concepts reliés comme l'affiliation ou le bénévolat. Des extensions peuvent spécialiser cette relation pour indiquer des rôles particuliers au sein de l'Organisation or des relations plus nuancées avec elle. Possède une propriété inverse optionnelle, `org:hasmember`.</rdfs:comment>
+    <rdfs:label xml:lang="fr">membre de</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates that a person is a member of the Organization with no indication of the nature of that membership or the role played. Note that the choice of property name is not meant to limit the property to only formal membership arrangements, it is also indended to cover related concepts such as affilliation or other involvement in the organization. Extensions can specialize this relationship to indicate particular roles within the organization or more nuanced relationships to the organization. Has an optional inverse, `org:hasmember`.</rdfs:comment>
+    <rdfs:label xml:lang="en">member of</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#hasMember"/>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+  </rdf:Property>
+  <rdf:Property rdf:about="http://www.w3.org/ns/org#siteOf">
+    <rdfs:comment xml:lang="en">Indicates an Organization which has some presence at the given site. This is the inverse of `org:hasSite`.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Site"/>
+    <rdfs:comment xml:lang="fr">Indique une Organisation qui a une présence sur le site en question. Inverse de `org:hasSite`.</rdfs:comment>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#hasSite"/>
+    <rdfs:label xml:lang="fr">site de</rdfs:label>
+    <rdfs:label xml:lang="en">site Of</rdfs:label>
   </rdf:Property>
   <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:label xml:lang="en">identifier</rdfs:label>
+    <rdfs:label xml:lang="fr">identifiant</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2004/02/skos/core#notation"/>
     <rdfs:comment xml:lang="en">Gives an identifier, such as a company registration number, that can be used to used to uniquely identify the organization. Many different national and international identier schemes are available. The org ontology is neutral to which schemes are used. The particular identifier scheme should be indicated by the datatype of the identifier value.  Using datatypes to distinguish the notation scheme used is consistent with recommended best practice for `skos:notation` of which this property is a specialization.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Donne un identifiant, comme par exemple le numéro d'enregistrement d'une entreprise, qui peut être utilisé comme identifiant unique pour l'Organisation. De nombreux schémas nationaux et internationaux sont disponibles. Cette ontologie reste neutre par rapport au schéma utilisé. Le schéma particulier utilisé devrait être indiqué par le `datatype` de la valeur de l'identifiant. Utiliser les datatypes pour distinguer les schémas de notation est cohérent avec les bonnes pratiques pour `skos:notation` dont cette propriété est une sépcialisation.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#location">
+  <owl:TransitiveProperty rdf:about="http://www.w3.org/ns/org#transitiveSubOrganizationOf">
+    <rdfs:label xml:lang="en">transitive sub-organization</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdfs:comment xml:lang="fr">La version transitive de la propriété subOrganizationOf, renvoie une représentation de toutes les organisations qui contiennent celle-ci. Notez que ceci est une super-propriété de la relation transitive donc elle pourrait contenir des assertions additionnelles mais cet usage n'est pas recommandé.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The transitive closure of subOrganizationOf, giving a representation of all organizations that contain this one. Note that technically this is a super property of the transitive closure so it could contain additional assertions but such usage is discouraged.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en"></rdfs:label>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-    <rdfs:comment xml:lang="en">Gives a location description for a person within the organization, for example a _Mail Stop_ for internal posting purposes.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-  </owl:DatatypeProperty>
+    <rdfs:label xml:lang="fr">sous-Organization transitive de</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+  </owl:TransitiveProperty>
   <org:Role rdf:about="http://www.w3.org/ns/org#Head">
     <skos:prefLabel xml:lang="en">head</skos:prefLabel>
+    <skos:prefLabel xml:lang="fr">responsable</skos:prefLabel>
     <rdfs:comment xml:lang="en">A role corresponding to the `org:headOf` property</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Un rôle correspondant à la propriété `org:headOf`</rdfs:comment>
     <org:roleProperty rdf:resource="http://www.w3.org/ns/org#headOf"/>
   </org:Role>
   <rdf:Description rdf:about="http://purl.org/goodrelations/v1#BusinessEntity">
@@ -413,10 +502,12 @@
   </rdf:Description>
   <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/org#roleProperty">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">roleProperty</rdfs:label>
+    <rdfs:label xml:lang="en">role (property)</rdfs:label>
+    <rdfs:label xml:lang="fr">rôle (propriété)</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Role"/>
     <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:comment xml:lang="en">This is a metalevel property which is used to annotate an `org:Role` instance with a sub-property of `org:memberOf` that can be used to directly indicate the role for easy of query. The intended semantics is a Membership relation involving the Role implies the existence of a direct property relationship through an inference rule of the form:  `{ [] org:member ?p; org:organization ?o; org:role [org:roleProperty ?r] } -&gt; {?p ?r ?o}`.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Ceci est une méta-propriété utilisée pour annoter une instance de `org:Role` ayant une sous-propriété `org:memberOf` qui peut être utilisée pour indiquer directement le rôle et pouvoir faire des requêtes plus facilement. La sémantique visée est un Engagement impliquant l'existence d'une relation de propriété directe à travers d'une règle d'inférence de la forme:  `{ [] org:member ?p; org:organization ?o; org:role [org:roleProperty ?r] } -&gt; {?p ?r ?o}`.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:AnnotationProperty>
 </rdf:RDF>
