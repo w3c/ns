@@ -34,12 +34,8 @@
       </rdf:Description>
     </rdfs:domain>
   </owl:DatatypeProperty>
-  <rdf:Description rdf:about="">
-    <rdfa:hasSource>
-      <rdf:Description rdf:about="http://www.w3.org/ns/rdfa.html">
-        <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base.css"/>
-      </rdf:Description>
-    </rdfa:hasSource>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa.html">
+	<xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base.css"/>
   </rdf:Description>
   <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/rdfa#term">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>

@@ -17,8 +17,6 @@ rdfa:PrefixOrTermMapping a rdfs:Class,
         owl:Class;
     dc:description "is the top level class for prefix or term mappings" .
 
-<> rdfa:hasSource <http://www.w3.org/ns/rdfa.html> .
-
 rdfa: a owl:Ontology;
     dc:creator ns3:me;
     dc:date "2011-08-25";
