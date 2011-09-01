@@ -2,7 +2,7 @@
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix ns1: <http://www.ivan-herman.net/foaf#> .
 @prefix ns2: <http://www.w3.org/TR/rdfa-core/#> .
-@prefix ns3: <http://www.ivan-herman.net/> .
+@prefix ns4: <http://www.ivan-herman.net/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfa: <http://www.w3.org/ns/rdfa#> .
@@ -17,6 +17,8 @@ rdfa:PrefixOrTermMapping a rdfs:Class,
         owl:Class;
     dc:description "is the top level class for prefix or term mappings" .
 
+<> rdfa:hasSource <http://www.w3.org/ns/rdfa.html> .
+
 rdfa: a owl:Ontology;
     dc:creator ns1:me;
     dc:date "2011-08-25";
@@ -26,29 +28,30 @@ rdfa: a owl:Ontology;
     owl:versionInfo "$Date$" .
 
 rdfa:DocumentError dc:description "error condition; to be used when the document fails to be fully processed as a result of non-conformant host language markup";
-    rdfs:subClassOf rdfa:Error .
+    rdfs:subClassOf rdfa:Error,
+        rdfa:PGClass .
 
 rdfa:Info dc:description "is the class for all informations";
     rdfs:subClassOf rdfa:PGClass .
 
-rdfa:ProfileReferenceError dc:description "error condition; to be used when an RDFa Profile document fails to be retrieved and thus, a portion of the document fails to be processed";
-    rdfs:subClassOf rdfa:Error .
+rdfa:ProfileReferenceError dc:description "error condition; to be used when a default RDFa Profile document fails to be retrieved and thus the document fails to be processed",
+        "warning; to be used when the value of a @vocab attribute cannot be dereferenced, hence the vocabulary expansion cannot be completed";
+    rdfs:subClassOf rdfa:Error,
+        rdfa:PGClass,
+        rdfa:Warning .
 
 rdfa:UnresolvedCURIE dc:description "warning; to be used when a CURIE prefix fails to be resolved";
-    rdfs:subClassOf rdfa:Warning .
+    rdfs:subClassOf rdfa:PGClass,
+        rdfa:Warning .
 
 rdfa:UnresolvedTerm dc:description "warning; to be used when a Term fails to be resolved";
-    rdfs:subClassOf rdfa:Warning .
+    rdfs:subClassOf rdfa:PGClass,
+        rdfa:Warning .
 
 rdfa:context a rdf:Property,
         owl:ObjectProperty;
     dc:description "provides extra context for the error, eg, http response, an XPointer/XPath information, or simply the URI that created the error";
     rdfs:domain rdfa:PGClass .
-
-rdfa:usesVocabulary a rdf:Property,
-        owl:ObjectProperty;
-    dc:description """provides a relationship between the host document and a vocabulary
-	defined using the @vocab facility of RDFa1.1""" .
 
 rdfa:prefix a rdf:Property,
         owl:DatatypeProperty;
@@ -65,6 +68,11 @@ rdfa:uri a rdf:Property,
     dc:description "defines the URI for either a prefix or a term mapping; the value is supposed to be an absolute URI";
     rdfs:domain rdfa:PrefixOrTermMapping .
 
+rdfa:usesVocabulary a rdf:Property,
+        owl:ObjectProperty;
+    dc:description """provides a relationship between the host document and a vocabulary
+	defined using the @vocab facility of RDFa1.1""" .
+
 rdfa:vocabulary a rdf:Property,
         owl:DatatypeProperty;
     dc:description "defines an absolute URI to be used as a default vocabulary; the value is can be any string; for documentation purposes it is advised to use the string 'true' or 'True'." .
@@ -72,7 +80,7 @@ rdfa:vocabulary a rdf:Property,
 <http://www.w3.org/ns/rdfa.html> xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base.css> .
 
 ns1:me a foaf:Person;
-    rdfs:seeAlso ns3:foaf;
+    rdfs:seeAlso ns4:foaf;
     foaf:mbox <mailto:ivan@w3.org>;
     foaf:name "Ivan Herman";
     foaf:title "Semantic Web Activity Lead";
