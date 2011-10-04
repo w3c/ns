@@ -7,15 +7,15 @@
 <rdf:RDF xmlns="http://www.w3.org/ns/ma-ont#"
      xml:base="http://www.w3.org/ns/ma-ont"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:rdfs="&rdfs;"
-     xmlns:xsd="&xsd;"
+     xmlns:rdfs=""
+     xmlns:xsd=""
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
 >
 
     <owl:Ontology rdf:about="">
         <rdfs:comment>Created by Tobias Buerger, Jean Pierre Evain and Pierre-Antoine Champin with the RDFS Taskforce within the W3C Media Annotation Working Group.</rdfs:comment>
-        <dc:date rdf:datatype="&xsd;date">2011-04-06</dc:date>
+        <dc:date rdf:datatype="date">2011-04-06</dc:date>
         <owl:versionInfo>R34</owl:versionInfo>
     </owl:Ontology>
 
@@ -55,7 +55,7 @@
     
 
     <owl:Class rdf:about="#DataTrack">
-        <rdfs:comment>Ancillary data track e.g. Â¨captioning"  in addition to video and audio tracks. Specialisation is made through the use of appropriate object properties.</rdfs:comment>
+        <rdfs:comment>Ancillary data track e.g. ¨captioning"  in addition to video and audio tracks. Specialisation is made through the use of appropriate object properties.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#Track"/>
     </owl:Class>
     
@@ -434,7 +434,7 @@
 
     <owl:DatatypeProperty rdf:about="#averageBitRate">
         <rdfs:comment>Corresponds to 'averageBitRate' in the Ontology for Media Resources, expressed in kilobits/second.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:range rdf:resource="decimal"/>
         <rdfs:domain> <owl:Class>
             <owl:intersectionOf rdf:parseType="Collection">
                 <owl:Class rdf:about="#MediaResource"/>
@@ -448,7 +448,7 @@
 
     <owl:DatatypeProperty rdf:about="#collectionName">
         <rdfs:comment>The name by which a collection (e.g. series) is known.</rdfs:comment>
-        <rdfs:subClassOf rdfs:subClassOf="&rdfs;label"/>
+        <rdfs:subClassOf rdfs:subClassOf="label"/>
         <rdfs:domain rdf:resource="#Collection"/>
     </owl:DatatypeProperty>
     
@@ -479,7 +479,7 @@
 
     <owl:DatatypeProperty rdf:about="#duration">
         <rdfs:comment>Corresponds to 'duration' in the Ontology for Media Resources.</rdfs:comment>
-        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:range rdf:resource="decimal"/>
         <rdfs:domain> <owl:Class>
             <owl:intersectionOf rdf:parseType="Collection">
                 <rdf:Description rdf:about="#MediaResource"/>
@@ -506,14 +506,14 @@
     <owl:DatatypeProperty rdf:about="#frameHeight">
         <rdfs:comment>Corresponds to 'frameSize.height' in the Ontology for Media Resources, measured in frameSizeUnit.</rdfs:comment>
         <rdfs:domain rdf:resource="#MediaResource"/>
-        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:range rdf:resource="integer"/>
     </owl:DatatypeProperty>
     
 
     <owl:DatatypeProperty rdf:about="#frameRate">
         <rdfs:comment>Corresponds to 'frameRate' in the Ontology for Media Resources, in frame per second.</rdfs:comment>
         <rdfs:domain rdf:resource="#MediaResource"/>
-        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:range rdf:resource="decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -526,28 +526,35 @@
     <owl:DatatypeProperty rdf:about="#frameWidth">
         <rdfs:comment>Corresponds to 'frameSize.width' in the Ontology for Media Resources measured in frameSizeUnit.</rdfs:comment>
         <rdfs:domain rdf:resource="#MediaResource"/>
-        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:range rdf:resource="integer"/>
     </owl:DatatypeProperty>
+    
 
+    <owl:DatatypeProperty rdf:about="#identifier">
+        <rdfs:comment>Corresponds to 'identifier' in the Ontology for Media Resources. The value being a URI, it is recommended to use owl:sameAs when appropriate, in order to maximize interoperability.</rdfs:comment>
+        <rdfs:domain rdf:resource="#MediaResource"/>
+        <rdfs:range rdf:resource="anyURI"/>
+    </owl:DatatypeProperty>
+    
 
     <owl:DatatypeProperty rdf:about="#locationAltitude">
         <rdfs:comment>Corresponds to 'location.altitude' in the Ontology for Media Resources.</rdfs:comment>
         <rdfs:domain rdf:resource="#Location"/>
-        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:range rdf:resource="decimal"/>
     </owl:DatatypeProperty>
     
 
     <owl:DatatypeProperty rdf:about="#locationLatitude">
         <rdfs:comment>Corresponds to 'location.latitude' in the Ontology for Media Resources.</rdfs:comment>
         <rdfs:domain rdf:resource="#Location"/>
-        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:range rdf:resource="decimal"/>
     </owl:DatatypeProperty>
     
 
     <owl:DatatypeProperty rdf:about="#locationLongitude">
         <rdfs:comment>Corresponds to 'location.longitude' in the Ontology for Media Resources.</rdfs:comment>
         <rdfs:domain rdf:resource="#Location"/>
-        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:range rdf:resource="decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -560,7 +567,7 @@
     <owl:DatatypeProperty rdf:about="#locator">
         <rdfs:comment>Corresponds to 'locator' in the Ontology for Media Resources.</rdfs:comment>
         <rdfs:domain rdf:resource="#MediaResource"/>
-        <rdfs:range rdf:resource="&xsd;anyURI"/>
+        <rdfs:range rdf:resource="anyURI"/>
     </owl:DatatypeProperty>
     
 
@@ -573,28 +580,28 @@
     <owl:DatatypeProperty rdf:about="#numberOfTracks">
         <rdfs:comment>Corresponds to 'numTracks.number' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'numTracks.type'.</rdfs:comment>
         <rdfs:domain rdf:resource="#MediaResource"/>
-        <rdfs:range rdf:resource="&xsd;integer"/>
+        <rdfs:range rdf:resource="integer"/>
     </owl:DatatypeProperty>
     
 
     <owl:DatatypeProperty rdf:about="#ratingScaleMax">
         <rdfs:comment>Corresponds to 'rating.max' in the Ontology for Media Resources.</rdfs:comment>
         <rdfs:domain rdf:resource="#Rating"/>
-        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:range rdf:resource="decimal"/>
     </owl:DatatypeProperty>
     
 
     <owl:DatatypeProperty rdf:about="#ratingScaleMin">
         <rdfs:comment>Corresponds to 'rating.min' in the Ontology for Media Resources.</rdfs:comment>
         <rdfs:domain rdf:resource="#Rating"/>
-        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:range rdf:resource="decimal"/>
     </owl:DatatypeProperty>
     
 
     <owl:DatatypeProperty rdf:about="#ratingValue">
         <rdfs:comment>Corresponds to 'rating.value' in the Ontology for Media Resources.</rdfs:comment>
         <rdfs:domain rdf:resource="#Rating"/>
-        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:range rdf:resource="decimal"/>
     </owl:DatatypeProperty>
     
 
@@ -613,7 +620,7 @@
     <owl:DatatypeProperty rdf:about="#samplingRate">
         <rdfs:comment>Corresponds to 'samplingRate' in the Ontology for Media Resources, in samples per second.</rdfs:comment>
         <rdfs:domain rdf:resource="#MediaResource"/>
-        <rdfs:range rdf:resource="&xsd;decimal"/>
+        <rdfs:range rdf:resource="decimal"/>
     </owl:DatatypeProperty>
     
 
