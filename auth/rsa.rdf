@@ -11,78 +11,78 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">
 
-    <owl:Ontology rdf:about="rsa">
+    <owl:Ontology rdf:about="http://www.w3.org/ns/auth/rsa">
         <dc:contributor rdf:parseType="Resource">
             <foaf:homepage rdf:resource="http://ii.uwb.edu.pl/~dtomaszuk/card"/>
         </dc:contributor>
         <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-11-13</dc:created>
         <comment xml:lang="en">ontology for the RSA public private keys </comment>
-        <seeAlso rdf:resource="X509Uml.svg"/>
         <seeAlso rdf:resource="http://en.wikipedia.org/wiki/RSA"/>
         <seeAlso rdf:resource="http://lists.foaf-project.org/mailman/listinfo/foaf-protocols"/>
+        <seeAlso rdf:resource="http://www.w3.org/ns/auth/X509Uml.svg"/>
         <vs:term_status>unstable</vs:term_status>
         <foaf:maker rdf:resource="http://bblfish.net/people/henry/card#me"/>
     </owl:Ontology>
 
-    <rdf:Description rdf:about="rsa#RSAKey">
+    <rdf:Description rdf:about="http://www.w3.org/ns/auth/rsa#RSAKey">
         <comment xml:lang="en">
     The union of the public and private components of an RSAKey.
     Usually those pieces are not kept together
     </comment>
-        <subClassOf rdf:resource="cert#Key"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#Key"/>
         <vs:term_status>unstable</vs:term_status>
     </rdf:Description>
 
-    <rdf:Description rdf:about="rsa#RSAPrivateKey">
+    <rdf:Description rdf:about="http://www.w3.org/ns/auth/rsa#RSAPrivateKey">
         <comment xml:lang="en">
     A Private Key in the RSA framework 
     </comment>
         <seeAlso rdf:resource="http://en.wikipedia.org/wiki/RSA"/>
-        <subClassOf rdf:resource="cert#PrivateKey"/>
-        <subClassOf rdf:resource="rsa#RSAKey"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#PrivateKey"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/rsa#RSAKey"/>
         <vs:term_status>unstable</vs:term_status>
     </rdf:Description>
 
-    <rdf:Description rdf:about="rsa#RSAPublicKey">
+    <rdf:Description rdf:about="http://www.w3.org/ns/auth/rsa#RSAPublicKey">
         <comment xml:lang="en">
     The RSA public key.  Padded message m are encrypted by applying the function
       modulus(power(m,exponent),modulus)
     </comment>
         <seeAlso rdf:resource="http://en.wikipedia.org/wiki/RSA"/>
-        <subClassOf rdf:resource="cert#PublicKey"/>
-        <subClassOf rdf:resource="rsa#RSAKey"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#PublicKey"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/rsa#RSAKey"/>
         <vs:term_status>unstable</vs:term_status>
     </rdf:Description>
 
-    <owl:DatatypeProperty rdf:about="rsa#modulus">
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/auth/rsa#modulus">
         <comment xml:lang="en">    
    The modulus of an RSA public and private key. 
    This is defined as n = p*q
    </comment>
-        <domain rdf:resource="rsa#RSAKey"/>
-        <range rdf:resource="cert#int"/>
+        <domain rdf:resource="http://www.w3.org/ns/auth/rsa#RSAKey"/>
+        <range rdf:resource="http://www.w3.org/ns/auth/cert#int"/>
         <vs:term_status>unstable</vs:term_status>
     </owl:DatatypeProperty>
 
-    <owl:DatatypeProperty rdf:about="rsa#private_exponent">
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/auth/rsa#private_exponent">
         <comment xml:lang="en">
        The exponent used to decrypt the message
        calculated as 
           public_exponent*private_exponent ≡ 1 modulo totient(p*q)
        The private exponent is often named 'd'
     </comment>
-        <domain rdf:resource="rsa#RSAPrivateKey"/>
-        <range rdf:resource="cert#int"/>
+        <domain rdf:resource="http://www.w3.org/ns/auth/rsa#RSAPrivateKey"/>
+        <range rdf:resource="http://www.w3.org/ns/auth/cert#int"/>
         <vs:term_status>unstable</vs:term_status>
     </owl:DatatypeProperty>
 
-    <owl:DatatypeProperty rdf:about="rsa#public_exponent">
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/auth/rsa#public_exponent">
         <comment xml:lang="en">
        The exponent used to encrypt the message. Number chosen between
        1 and the totient(p*q). Often named 'e' .
     </comment>
-        <domain rdf:resource="rsa#RSAPublicKey"/>
-        <range rdf:resource="cert#int"/>
+        <domain rdf:resource="http://www.w3.org/ns/auth/rsa#RSAPublicKey"/>
+        <range rdf:resource="http://www.w3.org/ns/auth/cert#int"/>
         <vs:term_status>unstable</vs:term_status>
     </owl:DatatypeProperty>
 </rdf:RDF>
