@@ -8,21 +8,23 @@
 @prefix cert: <cert#> .
 @prefix : <rsa#> .
 
+
 <rsa> a owl:Ontology ;
    dc:created "2008-11-13"^^xsd:date;
    foaf:maker <http://bblfish.net/people/henry/card#me>;
+   dc:contributor [ foaf:homepage <http://ii.uwb.edu.pl/~dtomaszuk/card> ] ;
    vs:term_status "unstable";
    rdfs:seeAlso <http://en.wikipedia.org/wiki/RSA>;
    rdfs:seeAlso <http://lists.foaf-project.org/mailman/listinfo/foaf-protocols>;
    rdfs:seeAlso <X509Uml.svg>;
-   rdfs:comment """ontology for the RSA public private keys """ .
+   rdfs:comment "ontology for the RSA public private keys "@en .
 
 :RSAKey rdfs:subClassOf cert:Key;
     vs:term_status "unstable";
     rdfs:comment """
     The union of the public and private components of an RSAKey.
     Usually those pieces are not kept together
-    """.
+    """@en.
      
 :RSAPublicKey rdfs:subClassOf cert:PublicKey, :RSAKey;
     vs:term_status "unstable";
@@ -30,23 +32,23 @@
     rdfs:comment """
     The RSA public key.  Padded message m are encrypted by applying the function
       modulus(power(m,exponent),modulus)
-    """ .
+    """@en .
 
-:modulus a rdf:Property;
+:modulus a owl:DatatypeProperty;
    vs:term_status "unstable";
    rdfs:comment """    
    The modulus of an RSA public and private key. 
    This is defined as n = p*q
-   """;
+   """@en;
    rdfs:domain :RSAKey;
    rdfs:range cert:int .
 
-:public_exponent a rdf:Property;
+:public_exponent a owl:DatatypeProperty;
    vs:term_status "unstable";
    rdfs:comment """
        The exponent used to encrypt the message. Number chosen between
        1 and the totient(p*q). Often named 'e' .
-    """;
+    """@en;
    rdfs:domain :RSAPublicKey;
    rdfs:range cert:int .
 
@@ -55,16 +57,16 @@
     rdfs:seeAlso <http://en.wikipedia.org/wiki/RSA>;
     rdfs:comment """
     A Private Key in the RSA framework 
-    """.
+    """@en.
 
-:private_exponent a rdf:Property;
+:private_exponent a owl:DatatypeProperty ;
     vs:term_status "unstable";
     rdfs:comment """
        The exponent used to decrypt the message
        calculated as 
           public_exponent*private_exponent ≡ 1 modulo totient(p*q)
        The private exponent is often named 'd'
-    """;
+    """@en;
    rdfs:domain :RSAPrivateKey;
    rdfs:range cert:int .
 

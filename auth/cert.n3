@@ -1,3 +1,5 @@
+@base <http://www.w3.org/ns/auth/cert> .
+
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -43,7 +45,7 @@
      - also create html version of the spec by using this as a template.
      - should comments such as this be in html?
      - add more todos
-   """.
+   """@en.
 
 :Certificate a owl:Class;
     vs:term_status "unstable";
@@ -56,7 +58,7 @@
         * Certificate information. ('Identity' information about the  
           user, such as name, user ID, and so on.)
         * One or more digital signatures.'
-    """ .
+    """@en .
 
 
 :X509Certificate a owl:Class;
@@ -64,23 +66,23 @@
    rdfs:label "X509Certificate";
    rdfs:subClassOf :Certificate;
    rdfs:seeAlso <http://en.wikipedia.org/wiki/X509>;
-   rdfs:comment "the class of X509 Certificates".   
+   rdfs:comment "the class of X509 Certificates"@en .   
 
 :PGPCertificate a owl:Class;
    rdfs:label "PGPCertificate";
    vs:term_status "unstable";
    rdfs:subClassOf :Certificate;
    owl:equivalentClass wot:PubKey;
-   rdfs:comment "the class of PGP Certificates".   
+   rdfs:comment "the class of PGP Certificates"@en .   
       
 :Signature a owl:Class;
    rdfs:label "Signature";
    vs:term_status "unstable";
-   rdfs:comment "the class of signtatures" .
+   rdfs:comment "the class of signtatures"@en .
 
 :Key a owl:Class;
    vs:term_status "unstable";
-   rdfs:comment "the class of keys" .
+   rdfs:comment "the class of keys"@en .
 
 :PublicKey a owl:Class;
    rdfs:label "PublicKey";
@@ -90,7 +92,7 @@
 
 :PrivateKey a owl:Class;
    rdfs:label "PrivateKey";
-   rdfs:comment "Private Key" ;
+   rdfs:comment "Private Key"@en ;
    rdfs:subClassOf :Key .
 
 # badly named, removing
@@ -136,6 +138,18 @@
   1. remove all non hexadecimal characters
   2. treat the resulting as a hexadecimal representation of a number
  This will allow people to make an ascii - better yet a UTF-8 - picture of their public key when publishing it on the web.
+
+  Cert hex is also a datatype property because we used to write it out like this
+ <pre>
+   [] a rsa:RSAPublicKey;
+     rsa:public_exponent [ cert:hex "e1 dc d5 ..."] 
+ </pre> 
+  The above notation is now deprecated. Now we prefer the literal format below
+ <pre>
+   [] a rsa:RSAPublicKey;
+     rsa:public_exponent "e1 dc d5 ..."^^cert:hex .
+ </pre> 
+ 
    """@en;
   vs:term_status "unstable" .
 
@@ -148,6 +162,16 @@
    skos:editorialNote """
       The name for this relation is not good. Even though Decimal is clearly defined as numbers in base 10 notation ( conf http://en.wikipedia.org/wiki/Decimal ), it is most often understood as refering to numbers with decimal fractions, which in cryptgraphic integer arithmetic do not turn up. 
     Instead one should use cert:int
+    The following is necessarily true.
+    <pre>
+    [] :decimal "10" ;
+       owl:sameAs "10"^^xsd:integer .
+    </pre>
+   This was used like this
+   <pre>
+   [] a rsa:RSAPublicKey;
+     rsa:exponent [ cert:decimal "105 " ]
+   </pre>
    """@en;
    rdfs:comment """
       An encoding of an integer in base 10 notation. Use cert:int instead.
@@ -159,28 +183,30 @@
    owl:equivalentClass xsd:nonNegativeInteger;
    skos:editorialNote """
       We may decide to make it easier to write integers than what xsd:integer provides, if needed.
+      It is arguable that this is needed at all.
    """@en;
    rdfs:comment """
       A positive integer in base 10 notation.
       xsd:nonNegativeInteger could be used, but is a bit long to write, and may be too strictly defined. 
-      This is here to provice a pair with cert:hex, to avoid needing to import a new namespace, and to give a bit more flexibility in the future.
+      This is here to provice a pair with cert:hex, to avoid needing to import a new namespace, and to give a bit more flexibility in the future. It is more flexible writing than xsd:int, as it allows white space.
    """@en .
 
-:identity a rdf:Property;
+:identity a rdf:Property, owl:ObjectProperty;
     vs:term_status "archaic";
     rdfs:label "identity"@en;
     skos:editorialNote """
          It turns out that this relation is unintuitive to write out and to name.
          One should instead use :public_key
-    """;
+    """@en;
     rdfs:comment """
     the identity of the public key. This is the entity that knows the private key and 
     so can decrypt messages encrypted with the public key, or encrypt messages that can 
     be decrypted with the public key. 
-    """;
+    """@en;
+    owl:inverseOf :public_key;
     rdfs:domain :PublicKey .
 
-:public_key a rdf:Property;
+:public_key a rdf:Property, owl:ObjectProperty;
     vs:term_status "unstable";
     rdfs:label "public_key"@en; 
     owl:inverseOf :identity;
@@ -189,7 +215,7 @@
       the private key. This public key identifies that agent, allows him
       to decrypt messages sent to him with that key, and is able to sign
       messages with it too.
-    """ ;
+    """@en ;
    rdfs:domain foaf:Agent;
    rdfs:range :PublicKey .
 
