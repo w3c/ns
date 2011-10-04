@@ -24,35 +24,38 @@
         <foaf:maker rdf:resource="http://bblfish.net/people/henry/card#me"/>
     </owl:Ontology>
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/auth/rsa#RSAKey">
+    <owl:Class rdf:about="http://www.w3.org/ns/auth/rsa#RSAKey">
         <comment xml:lang="en">
     The union of the public and private components of an RSAKey.
     Usually those pieces are not kept together
     </comment>
+        <label xml:lang="en">RSA Key</label>
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#Key"/>
         <vs:term_status>unstable</vs:term_status>
-    </rdf:Description>
+    </owl:Class>
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/auth/rsa#RSAPrivateKey">
+    <owl:Class rdf:about="http://www.w3.org/ns/auth/rsa#RSAPrivateKey">
         <comment xml:lang="en">
     A Private Key in the RSA framework 
     </comment>
+        <label xml:lang="en">RSA Private Key</label>
         <seeAlso rdf:resource="http://en.wikipedia.org/wiki/RSA"/>
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#PrivateKey"/>
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/rsa#RSAKey"/>
         <vs:term_status>unstable</vs:term_status>
-    </rdf:Description>
+    </owl:Class>
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/auth/rsa#RSAPublicKey">
+    <owl:Class rdf:about="http://www.w3.org/ns/auth/rsa#RSAPublicKey">
         <comment xml:lang="en">
     The RSA public key.  Padded message m are encrypted by applying the function
       modulus(power(m,exponent),modulus)
     </comment>
+        <label xml:lang="en">RSA Public Key</label>
         <seeAlso rdf:resource="http://en.wikipedia.org/wiki/RSA"/>
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#PublicKey"/>
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/rsa#RSAKey"/>
         <vs:term_status>unstable</vs:term_status>
-    </rdf:Description>
+    </owl:Class>
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/auth/rsa#modulus">
         <comment xml:lang="en">    
@@ -60,6 +63,7 @@
    This is defined as n = p*q
    </comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/rsa#RSAKey"/>
+        <label xml:lang="en">modulus</label>
         <range rdf:resource="http://www.w3.org/ns/auth/cert#int"/>
         <vs:term_status>unstable</vs:term_status>
     </owl:DatatypeProperty>
@@ -68,10 +72,11 @@
         <comment xml:lang="en">
        The exponent used to decrypt the message
        calculated as 
-          public_exponent*private_exponent ≡ 1 modulo totient(p*q)
+          public_exponent*private_exponent = 1 modulo totient(p*q)
        The private exponent is often named 'd'
     </comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/rsa#RSAPrivateKey"/>
+        <label xml:lang="en">private</label>
         <range rdf:resource="http://www.w3.org/ns/auth/cert#int"/>
         <vs:term_status>unstable</vs:term_status>
     </owl:DatatypeProperty>
@@ -82,6 +87,7 @@
        1 and the totient(p*q). Often named 'e' .
     </comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/rsa#RSAPublicKey"/>
+        <label xml:lang="en">public_exponent</label>
         <range rdf:resource="http://www.w3.org/ns/auth/cert#int"/>
         <vs:term_status>unstable</vs:term_status>
     </owl:DatatypeProperty>

@@ -21,14 +21,18 @@
    rdfs:seeAlso <X509Uml.svg>;
    rdfs:comment "ontology for the RSA public private keys "@en .
 
-:RSAKey rdfs:subClassOf cert:Key;
+:RSAKey a owl:Class;
+    rdfs:label "RSA Key"@en;
+    rdfs:subClassOf cert:Key;
     vs:term_status "unstable";
     rdfs:comment """
     The union of the public and private components of an RSAKey.
     Usually those pieces are not kept together
     """@en.
      
-:RSAPublicKey rdfs:subClassOf cert:PublicKey, :RSAKey;
+:RSAPublicKey a owl:Class;
+    rdfs:label "RSA Public Key"@en;
+    rdfs:subClassOf cert:PublicKey, :RSAKey;
     vs:term_status "unstable";
     rdfs:seeAlso <http://en.wikipedia.org/wiki/RSA>;
     rdfs:comment """
@@ -37,6 +41,7 @@
     """@en .
 
 :modulus a owl:DatatypeProperty;
+   rdfs:label "modulus"@en;
    vs:term_status "unstable";
    rdfs:comment """    
    The modulus of an RSA public and private key. 
@@ -46,6 +51,7 @@
    rdfs:range cert:int .
 
 :public_exponent a owl:DatatypeProperty;
+   rdfs:label "public_exponent"@en;
    vs:term_status "unstable";
    rdfs:comment """
        The exponent used to encrypt the message. Number chosen between
@@ -54,7 +60,9 @@
    rdfs:domain :RSAPublicKey;
    rdfs:range cert:int .
 
-:RSAPrivateKey rdfs:subClassOf cert:PrivateKey, :RSAKey;
+:RSAPrivateKey a owl:Class;
+    rdfs:label "RSA Private Key"@en;
+    rdfs:subClassOf cert:PrivateKey, :RSAKey;
     vs:term_status "unstable";
     rdfs:seeAlso <http://en.wikipedia.org/wiki/RSA>;
     rdfs:comment """
@@ -62,11 +70,12 @@
     """@en.
 
 :private_exponent a owl:DatatypeProperty ;
+    rdfs:label "private"@en;
     vs:term_status "unstable";
     rdfs:comment """
        The exponent used to decrypt the message
        calculated as 
-          public_exponent*private_exponent ≡ 1 modulo totient(p*q)
+          public_exponent*private_exponent = 1 modulo totient(p*q)
        The private exponent is often named 'd'
     """@en;
    rdfs:domain :RSAPrivateKey;
