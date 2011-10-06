@@ -46,6 +46,12 @@
 
 
 
+###  http://www.w3.org/ns/r2rml#constant
+
+:constant rdf:type owl:ObjectProperty .
+
+
+
 ###  http://www.w3.org/ns/r2rml#datatype
 
 :datatype rdf:type owl:ObjectProperty ;
@@ -268,20 +274,20 @@
           
           rdfs:comment "A string indicating whether subject or object generated using the value from column name specified for rr:column should be an IRI reference, blank node, or a literal."@en ;
           
-          rdfs:range [ rdf:type owl:Class ;
-                       owl:unionOf ( :BlankNode
-                                     :IRI
-                                     :Literal
-                                   )
-                     ] ;
-          
           rdfs:domain [ rdf:type owl:Class ;
                         owl:unionOf ( :GraphMap
                                       :ObjectMap
                                       :PredicateMap
                                       :SubjectMap
                                     )
-                      ] .
+                      ] ;
+          
+          rdfs:range [ rdf:type owl:Class ;
+                       owl:unionOf ( :BlankNode
+                                     :IRI
+                                     :Literal
+                                   )
+                     ] .
 
 
 
@@ -488,21 +494,21 @@ rdfs:Resource rdf:type owl:Class .
       rdfs:subClassOf owl:Thing ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :parent ;
-                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onDataRange xsd:string
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :child ;
                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onDataRange xsd:string
                       ] ,
                       [ rdf:type owl:Restriction ;
+                        owl:onProperty :parent ;
+                        owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
                         owl:onProperty :child ;
                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onDataRange xsd:string
                       ] ,
                       [ rdf:type owl:Restriction ;
-                        owl:onProperty :parent ;
+                        owl:onProperty :child ;
                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onDataRange xsd:string
                       ] ;
@@ -537,24 +543,24 @@ rdfs:Resource rdf:type owl:Class .
            
            rdfs:subClassOf owl:Thing ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty :language ;
-                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                             owl:onDataRange xsd:string
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :object ;
-                             owl:onClass rdfs:Resource ;
-                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
                              owl:onProperty :object ;
                              owl:onClass rdfs:Resource ;
                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
                            ] ,
                            [ rdf:type owl:Restriction ;
+                             owl:onProperty :object ;
+                             owl:onClass rdfs:Resource ;
+                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
                              owl:onProperty :datatype ;
                              owl:onClass rdfs:Datatype ;
                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :language ;
+                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
                            ] ;
            
            rdfs:comment "Represents an object map."@en .
@@ -582,14 +588,14 @@ rdfs:Resource rdf:type owl:Class .
                     
                     rdfs:subClassOf owl:Thing ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty :predicateMap ;
-                                      owl:onClass :PredicateMap ;
-                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
                                       owl:onProperty :objectMap ;
                                       owl:onClass :ObjectMap ;
                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :predicateMap ;
+                                      owl:onClass :PredicateMap ;
+                                      owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :refObjectMap ;
@@ -637,17 +643,42 @@ rdfs:Resource rdf:type owl:Class .
             
             rdfs:subClassOf owl:Thing ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :logicalTable ;
-                              owl:onClass :LogicalTable ;
+                              owl:onProperty :subjectMap ;
+                              owl:onClass :SubjectMap ;
                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :subjectMap ;
-                              owl:onClass :SubjectMap ;
+                              owl:onProperty :logicalTable ;
+                              owl:onClass :LogicalTable ;
                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
                             ] ;
             
             rdfs:comment "Represents a triples map."@en .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://www.w3.org/ns/r2rml#SQL2008
+
+:SQL2008 rdf:type owl:NamedIndividual ;
+         
+         rdfs:comment "Core SQL 2008"@en .
+
+
+
+###  http://www.w3.org/ns/r2rml#defaultGraph
+
+:defaultGraph rdf:type owl:NamedIndividual ;
+              
+              rdfs:comment "Denotes a default graph"@en .
 
 
 
