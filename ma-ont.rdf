@@ -1,14 +1,10 @@
- <?xml version="1.0"?>
-<!DOCTYPE rdf:RDF [
-    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
-    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
-]>
-
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF []>
 <rdf:RDF xmlns="http://www.w3.org/ns/ma-ont#"
      xml:base="http://www.w3.org/ns/ma-ont"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:rdfs=""
-     xmlns:xsd=""
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:dc="http://purl.org/dc/elements/1.1/"
 >
@@ -57,7 +53,7 @@
     
 
     <owl:Class rdf:about="#DataTrack">
-        <rdfs:comment>Ancillary data track e.g. ¨captioning"  in addition to video and audio tracks. 
+        <rdfs:comment>Ancillary data track e.g. Â¨captioning"  in addition to video and audio tracks. 
         Specialisation is made through the use of appropriate object properties.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#Track"/>
     </owl:Class>
