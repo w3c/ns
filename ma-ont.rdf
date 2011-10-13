@@ -53,7 +53,7 @@
     
 
     <owl:Class rdf:about="#DataTrack">
-        <rdfs:comment>Ancillary data track e.g. ¨captioning"  in addition to video and audio tracks. 
+        <rdfs:comment>Ancillary data track e.g. "captioning"  in addition to video and audio tracks. 
         Specialisation is made through the use of appropriate object properties.</rdfs:comment>
         <rdfs:subClassOf rdf:resource="#Track"/>
     </owl:Class>
