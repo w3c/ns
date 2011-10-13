@@ -28,7 +28,7 @@
                 :TargetAudience .
     
     :DataTrack     a owl:Class;
-         rdfs:comment """Ancillary data track e.g. ¨captioning"  in addition to video and audio tracks. Specialisation is made through the use of appropriate object properties.""";
+         rdfs:comment """Ancillary data track e.g. Â¨captioning"  in addition to video and audio tracks. Specialisation is made through the use of appropriate object properties.""";
          rdfs:subClassOf :Track .
     
     :Image     a owl:Class;
