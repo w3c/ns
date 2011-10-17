@@ -112,16 +112,16 @@
    owl:equivalentClass xsd:nonNegativeInteger;
    rdfs:domain xsd:nonNegativeInteger;
    rdfs:range xsd:string;
-   skos:editorialNote """
-     This relation should slowly be transited to just being a datatype.
-     Being a datatype and a property is legal as explained here
-   http://lists.w3.org/Archives/Public/semantic-web/2010Mar/0037.html 
- But it may be somewhat confusing, especially if it goes against a pattern - still to be set - by the xsd datatypes as the follow up email makes clear. 
+   skos:editorialNote """<span ns="http://www.w3.org/1999/xhtml"><p> 
+     This relation should slowly be transited to just being a datatype.</p>
+     <p>Being a datatype and a property is legal as explained here
+  <a href="http://lists.w3.org/Archives/Public/semantic-web/2010Mar/0037.html">on the semantic web mailing list in March 2010</a>. 
+ But it may be somewhat confusing, especially if it goes against a pattern - still to be set - by the xsd datatypes as the follow up email makes clear. </p></span>
    """@en;
-   rdfs:comment """
-   An encoding of a positive integer (from 0 to infinity) as a hexadecimal string that makes it easy to read and/or fun to present on the web. 
-   The purpose of this way of representing hexadecimals is to enable users to copy and paste hexadecimal notations as shown by most browsers, keychains or tools such as opensso, into their rdf representation of choice.  There are a wide variety of ways in which such strings can be presented. One finds the following 
-
+   rdfs:comment """<span ns="http://www.w3.org/1999/xhtml"><p>
+   An encoding of a positive integer (from 0 to infinity) as a hexadecimal string that makes it easy to read and/or fun to present on the web.</p>
+   <p>The purpose of this way of representing hexadecimals is to enable users to copy and paste hexadecimal notations as shown by most browsers, keychains or tools such as opensso, into their rdf representation of choice.  There are a wide variety of ways in which such strings can be presented. One finds the following:</p>
+<pre>
   e1 dc d5 e1 00 8f 21 5e d5 cc 7c 7e c4 9c ad 86 
   64 aa dc 29 f2 8d d9 56 7f 31 b6 bd 1b fd b8 ee 
   51 0d 3c 84 59 a2 45 d2 13 59 2a 14 82 1a 0f 6e 
@@ -130,27 +130,32 @@
   fd 9f 0f 82 16 67 9f 67 fa 91 e4 0d 55 4e 52 c0 
   66 64 2f fe 98 8f ae f8 96 21 5e ea 38 9e 5c 4f 
   27 e2 48 ca ca f2 90 23 ad 99 4b cc 38 32 6d bf  
-
- Or the same as the above, with ':' instead of spaces. We can't guarantee that these are the only ways such tools will present hexadecimals, so we are very lax.
- The letters can be uppercase or lowercase, or mixed.  
- Some strings may start with initial 00's, and can be stripped in this notation as they often are. Doing this could, in complement of 2 notation turn a positive number into a negative one, if the first hexadecimal character happens to be one of  the set {'8', '9', 'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E', 'f', 'F'} .  As we interpret this string as a hexadecimal number leading 00s are not important  (Complement of 2 notation and hexadecimal overlap for positive numbers)
- In order to make this fun, we allow any unicode characters in the string. A parser should 
-  1. remove all non hexadecimal characters
-  2. treat the resulting as a hexadecimal representation of a number
+</pre>
+<p>
+ Or the same as the above, with ':' instead of spaces. We can't guarantee that these are the only ways such tools will present hexadecimals, so we are very lax.</p>
+ <p>The letters can be uppercase or lowercase, or mixed.  </p>
+ <p>Some strings may start with initial 00's, and can be stripped in this notation as they often are. Doing this could, in complement of 2 notation turn a positive number into a negative one, if the first hexadecimal character happens to be one of  the set {'8', '9', 'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E', 'f', 'F'} .  As we interpret this string as a hexadecimal number leading 00s are not important  (Complement of 2 notation and hexadecimal overlap for positive numbers)</p>
+<p> In order to make this fun, we allow any unicode characters in the string. A parser should </p>
+  <ol>
+<li>remove all non hexadecimal characters</li>
+<li>treat the resulting as a hexadecimal representation of a number</li>
+</ol>
+<p>
  This will allow people to make an ascii - better yet a UTF-8 - picture of their public key when publishing it on the web.
-
+</p>
+<p>
   Cert hex is also a datatype property because we used to write it out like this
+</p>
  <pre>
    [] a rsa:RSAPublicKey;
      rsa:public_exponent [ cert:hex "e1 dc d5 ..."] 
  </pre> 
-  The above notation is now deprecated. Now we prefer the literal format below
+<p> The above notation is now deprecated. Now we prefer the literal format below.</p>
  <pre>
    [] a rsa:RSAPublicKey;
      rsa:public_exponent "e1 dc d5 ..."^^cert:hex .
  </pre> 
- 
-   """@en;
+   </span>"""^^rdf:XMLLiteral;
   vs:term_status "unstable" .
 
 :decimal a owl:DatatypeProperty,
@@ -196,26 +201,21 @@
     rdfs:label "identity"@en;
     skos:editorialNote """
          It turns out that this relation is unintuitive to write out and to name.
-         One should instead use :public_key
+         One should instead use cert:key
     """@en;
     rdfs:comment """
     the identity of the public key. This is the entity that knows the private key and 
     so can decrypt messages encrypted with the public key, or encrypt messages that can 
     be decrypted with the public key. 
     """@en;
-    owl:inverseOf :public_key;
+    owl:inverseOf :key;
     rdfs:domain :PublicKey .
 
-:public_key a rdf:Property, owl:ObjectProperty;
+:key a rdf:Property, owl:ObjectProperty;
     vs:term_status "unstable";
-    rdfs:label "public_key"@en; 
+    rdfs:label "key"@en; 
     owl:inverseOf :identity;
-    rdfs:comment """
-      a relation from an agent to a public key for which he alone has 
-      the private key. This public key identifies that agent, allows him
-      to decrypt messages sent to him with that key, and is able to sign
-      messages with it too.
-    """@en ;
-   rdfs:domain foaf:Agent;
-   rdfs:range :PublicKey .
+    rdfs:comment """relates an agent to a key - most often the public key."""@en ;
+    rdfs:domain foaf:Agent;
+    rdfs:range :Key, :PublicKey .
 

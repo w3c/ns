@@ -26,19 +26,16 @@ version="XHTML+RDFa 1.0" typeof="owl:Ontology" about="http://www.w3.org/ns/auth/
 
 <dl>
 <dt>This version:</dt>
-<dd><a href="http://www.w3.org/ns/auth/cert#">http://www.w3.org/ns/auth/cert#</a> (<a href="http://www.w3.org/ns/auth/cert.n3">N3</a>)</dd>
+<dd><a href="http://www.w3.org/ns/auth/cert#">http://www.w3.org/ns/auth/cert#</a> (<a href="http://www.w3.org/ns/auth/cert.n3">N3</a>, <a href="http://www.w3.org/ns/auth/cert.rdf">RDF/XML</a>)</dd>
 
 <dt>Latest version:</dt>
-<dd><a href="http://www.w3.org/ns/auth/cert#">http://www.w3.org/ns/auth/cert#</a> (<a href="http://www.w3.org/ns/auth/cert.n3">N3</a>)</dd>
+<dd><a href="http://www.w3.org/ns/auth/cert#">http://www.w3.org/ns/auth/cert#</a> (<a href="http://www.w3.org/ns/auth/cert.n3">N3</a>, <a href="http://www.w3.org/ns/auth/cert.rdf">RDF/XML</a>)</dd>
 
 <dt>Authors:</dt>
 <dd><a href="http://bblfish.net/">Henry Story</a> </dd>
-
-<dt>Contributors:</dt>
-<dd><a href="http://ii.uwb.edu.pl/~dtomaszuk/">Dominik Tomaszuk</a> (<a href="http://ii.uwb.edu.pl/">University of Bialystok</a>)</dd>
 </dl>
 
-<p class="copyright"><span>Copyright © 2010-2011 W3C® (MIT, ERCIM, Keio), All Rights Reserved. W3C liability, trademark and document use rules apply.</span></p>
+<p class="copyright"><a rel="license" href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010-2011 <span rel="dcterms:publisher"><span typeof="foaf:Organization"><a rel="foaf:homepage" property="foaf:name" content="World Wide Web Consotrium" href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup></span></span> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
 
 <hr />
 
@@ -80,7 +77,7 @@ URI: <a href="https://dvcs.w3.org/hg/WebID">https://dvcs.w3.org/hg/WebID</a>
 <div class="azlist">
 <p>Classes: | <a href="#Certificate">Certificate</a> |  <a href="#PGPCertificate">PGPCertificate</a> |  <a href="#PrivateKey">PrivateKey</a> |  <a href="#PublicKey">PublicKey</a> |  <a href="#Signature">Signature</a> |  <a href="#X509Certificate">X509Certificate</a> | 
 </p>
-<p>Properties: | <a href="#decimal">decimal</a> |  <a href="#hex">hex</a> |  <a href="#identity">identity</a> |  <a href="#public_key">public_key</a> | 
+<p>Properties: | <a href="#decimal">decimal</a> |  <a href="#hex">hex</a> |  <a href="#identity">identity</a> |  <a href="#key">key</a> | 
 </p>
 </div>
 
@@ -111,30 +108,27 @@ documentation, they progress through the categories
 
  :me a foaf:Person;
      foaf:name "Joe" .
-
- [] a rsa:RSAPublicKey;
-    rsa:modulus """
-      00:cb:24:ed:85:d6:4d:79:4b:69:c7:01:c1:86:ac:
-      c0:59:50:1e:85:60:00:f6:61:c9:32:04:d8:38:0e:
-      07:19:1c:5c:8b:36:8d:2a:c3:2a:42:8a:cb:97:03:
-      98:66:43:68:dc:2a:86:73:20:22:0f:75:5e:99:ca:
-      2e:ec:da:e6:2e:8d:15:fb:58:e1:b7:6a:e5:9c:b7:
-      ac:e8:83:83:94:d5:9e:72:50:b4:49:17:6e:51:a4:
-      94:95:1a:1c:36:6c:62:17:d8:76:8d:68:2d:de:78:
-      dd:4d:55:e6:13:f8:83:9c:f2:75:d4:c8:40:37:43:
-      e7:86:26:01:f3:c4:9a:63:66:e1:2b:b8:f4:98:26:
-      2c:3c:77:de:19:bc:e4:0b:32:f8:9a:e6:2c:37:80:
-      f5:b6:27:5b:e3:37:e2:b3:15:3a:e2:ba:72:a9:97:
-      5a:e7:1a:b7:24:64:94:97:06:6b:66:0f:cf:77:4b:
-      75:43:d9:80:95:2d:2e:85:86:20:0e:da:41:58:b0:
-      14:e7:54:65:d9:1e:cf:93:ef:c7:ac:17:0c:11:fc:
-      72:46:fc:6d:ed:79:c3:77:80:00:0a:c4:e0:79:f6:
-      71:fd:4f:20:7a:d7:70:80:9e:0e:2d:7b:0e:f5:49:
-      3b:ef:e7:35:44:d8:e1:be:3d:dd:b5:24:55:c6:13:
-      91:a1
-    """^^cert:hex;
-    rsa:public_exponent "65537"^^cert:int;
-    cert:identity :me .
+     cert:key [ a rsa:RSAPublicKey;
+                rsa:modulus """
+            00:cb:24:ed:85:d6:4d:79:4b:69:c7:01:c1:86:ac:
+            c0:59:50:1e:85:60:00:f6:61:c9:32:04:d8:38:0e:
+            07:19:1c:5c:8b:36:8d:2a:c3:2a:42:8a:cb:97:03:
+            98:66:43:68:dc:2a:86:73:20:22:0f:75:5e:99:ca:
+            2e:ec:da:e6:2e:8d:15:fb:58:e1:b7:6a:e5:9c:b7:
+            ac:e8:83:83:94:d5:9e:72:50:b4:49:17:6e:51:a4:
+            94:95:1a:1c:36:6c:62:17:d8:76:8d:68:2d:de:78:
+            dd:4d:55:e6:13:f8:83:9c:f2:75:d4:c8:40:37:43:
+            e7:86:26:01:f3:c4:9a:63:66:e1:2b:b8:f4:98:26:
+            2c:3c:77:de:19:bc:e4:0b:32:f8:9a:e6:2c:37:80:
+            f5:b6:27:5b:e3:37:e2:b3:15:3a:e2:ba:72:a9:97:
+            5a:e7:1a:b7:24:64:94:97:06:6b:66:0f:cf:77:4b:
+            75:43:d9:80:95:2d:2e:85:86:20:0e:da:41:58:b0:
+            14:e7:54:65:d9:1e:cf:93:ef:c7:ac:17:0c:11:fc:
+            72:46:fc:6d:ed:79:c3:77:80:00:0a:c4:e0:79:f6:
+            71:fd:4f:20:7a:d7:70:80:9e:0e:2d:7b:0e:f5:49:
+            3b:ef:e7:35:44:d8:e1:be:3d:dd:b5:24:55:c6:13:
+            91:a1"""^^cert:hex;
+                rsa:public_exponent "65537"^^cert:int ] .
 </pre>
 
 <h2 id="sec-crossref">Cross-reference for Cert classes and properties</h2>
@@ -149,7 +143,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
 <div class="azlist">
 <p>Classes: | <a href="#Certificate">Certificate</a> |  <a href="#PGPCertificate">PGPCertificate</a> |  <a href="#PrivateKey">PrivateKey</a> |  <a href="#PublicKey">PublicKey</a> |  <a href="#Signature">Signature</a> |  <a href="#X509Certificate">X509Certificate</a> | 
 </p>
-<p>Properties: | <a href="#decimal">decimal</a> |  <a href="#hex">hex</a> |  <a href="#identity">identity</a> |  <a href="#public_key">public_key</a> | 
+<p>Properties: | <a href="#decimal">decimal</a> |  <a href="#hex">hex</a> |  <a href="#identity">identity</a> |  <a href="#key">key</a> | 
 </p>
 </div>
 
@@ -161,7 +155,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
  
 
 <div class="specterm" id="Certificate" about="http://www.w3.org/ns/auth/cert#Certificate" typeof="owl:Class">
-  			<h4>Class: http://www.w3.org/ns/auth/cert#:Certificate</h4> 
+  			<h4>Class: cert:Certificate</h4> 
   			<em property="rdfs:label" >Certificate</em> - <span property="rdfs:comment" >A certificate is a Document that is signed.
     As explained here http://www.pgpi.org/doc/pgpintro/#p16
     'A digital certificate consists of three things:
@@ -176,8 +170,8 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<tr><th>Sub class of</th>
  <td>  <span rel="rdfs:subClassOf" href="http://xmlns.com/foaf/0.1/Document"><a href="http://xmlns.com/foaf/0.1/Document">foaf:Document</a></span>
  </td></tr><tr><th>Has sub class</th>
- <td>  <a href="#PGPCertificate">PGPCertificate</a>
- <a href="#X509Certificate">X509Certificate</a>
+ <td>  <a href="#PGPCertificate">cert:PGPCertificate</a>
+ <a href="#X509Certificate">cert:X509Certificate</a>
  </td></tr><tr><th colspan="2">OWL Class</th>
  <td>  </td></tr>
   			</table>
@@ -185,13 +179,13 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<p style="float: right; font-size: small;">[<a href="#Certificate">#</a>] <!-- Certificate --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div><div class="specterm" id="PGPCertificate" about="http://www.w3.org/ns/auth/cert#PGPCertificate" typeof="owl:Class">
-  			<h4>Class: http://www.w3.org/ns/auth/cert#:PGPCertificate</h4> 
+  			<h4>Class: cert:PGPCertificate</h4> 
   			<em property="rdfs:label" >PGPCertificate</em> - <span property="rdfs:comment" >the class of PGP Certificates</span> <br /><table style="float: top;">
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
   			
   			<tr><th>Sub class of</th>
- <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Certificate"><a href="#Certificate">Certificate</a></span>
+ <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Certificate"><a href="#Certificate">cert:Certificate</a></span>
  </td></tr><tr><th colspan="2">OWL Class</th>
  <td>  </td></tr>
   			</table>
@@ -199,17 +193,17 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<p style="float: right; font-size: small;">[<a href="#PGPCertificate">#</a>] <!-- PGPCertificate --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div><div class="specterm" id="PublicKey" about="http://www.w3.org/ns/auth/cert#PublicKey" typeof="owl:Class">
-  			<h4>Class: http://www.w3.org/ns/auth/cert#:PublicKey</h4> 
+  			<h4>Class: cert:PublicKey</h4> 
   			<em property="rdfs:label" >PublicKey</em> - <span property="rdfs:comment" >Public Key</span> <br /><table style="float: top;">
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
   			<tr><th>Properties include:</th>
- <td>  <a href="#identity">identity</a>
+ <td>  <a href="#identity">cert:identity</a>
  </td></tr>
   			<tr><th>Used with:</th>
- <td>  <a href="#public_key">public_key</a>
+ <td>  <a href="#key">cert:key</a>
 </td></tr> <tr><th>Sub class of</th>
- <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Key"><a href="http://www.w3.org/ns/auth/cert#Key">http://www.w3.org/ns/auth/cert#:Key</a></span>
+ <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Key"><a href="http://www.w3.org/ns/auth/cert#Key">cert:Key</a></span>
  </td></tr><tr><th colspan="2">OWL Class</th>
  <td>  </td></tr>
   			</table>
@@ -217,7 +211,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<p style="float: right; font-size: small;">[<a href="#PublicKey">#</a>] <!-- PublicKey --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div><div class="specterm" id="Signature" about="http://www.w3.org/ns/auth/cert#Signature" typeof="owl:Class">
-  			<h4>Class: http://www.w3.org/ns/auth/cert#:Signature</h4> 
+  			<h4>Class: cert:Signature</h4> 
   			<em property="rdfs:label" >Signature</em> - <span property="rdfs:comment" >the class of signtatures</span> <br /><table style="float: top;">
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
@@ -229,13 +223,13 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<p style="float: right; font-size: small;">[<a href="#Signature">#</a>] <!-- Signature --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div><div class="specterm" id="X509Certificate" about="http://www.w3.org/ns/auth/cert#X509Certificate" typeof="owl:Class">
-  			<h4>Class: http://www.w3.org/ns/auth/cert#:X509Certificate</h4> 
+  			<h4>Class: cert:X509Certificate</h4> 
   			<em property="rdfs:label" >X509Certificate</em> - <span property="rdfs:comment" >the class of X509 Certificates</span> <br /><table style="float: top;">
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
   			
   			<tr><th>Sub class of</th>
- <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Certificate"><a href="#Certificate">Certificate</a></span>
+ <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Certificate"><a href="#Certificate">cert:Certificate</a></span>
  </td></tr><tr><th colspan="2">OWL Class</th>
  <td>  </td></tr>
   			</table>
@@ -244,13 +238,13 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<br/>
   			</div>
 <div class="specterm" id="PrivateKey" about="http://www.w3.org/ns/auth/cert#PrivateKey" typeof="owl:Class">
-  			<h4>Class: http://www.w3.org/ns/auth/cert#:PrivateKey</h4> 
+  			<h4>Class: cert:PrivateKey</h4> 
   			<em property="rdfs:label" >PrivateKey</em> - <span property="rdfs:comment" >Private Key</span> <br /><table style="float: top;">
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unknown</span></td></tr>
   			
   			<tr><th>Sub class of</th>
- <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Key"><a href="http://www.w3.org/ns/auth/cert#Key">http://www.w3.org/ns/auth/cert#:Key</a></span>
+ <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Key"><a href="http://www.w3.org/ns/auth/cert#Key">cert:Key</a></span>
  </td></tr><tr><th colspan="2">OWL Class</th>
  <td>  </td></tr>
   			</table>
@@ -260,12 +254,12 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			</div><h3>Properties</h3>
  
 
-<div class="specterm" id="hex" about="http://www.w3.org/ns/auth/cert#hex" typeof="owl:DatatypeProperty">
-  			<h4>Property: http://www.w3.org/ns/auth/cert#:hex</h4> 
-  			<em property="rdfs:label" >hexadecimal</em> - <span property="rdfs:comment" >
-   An encoding of a positive integer (from 0 to infinity) as a hexadecimal string that makes it easy to read and/or fun to present on the web. 
-   The purpose of this way of representing hexadecimals is to enable users to copy and paste hexadecimal notations as shown by most browsers, keychains or tools such as opensso, into their rdf representation of choice.  There are a wide variety of ways in which such strings can be presented. One finds the following 
-
+<div class="specterm" id="hex" about="http://www.w3.org/ns/auth/cert#hex" typeof="owl:InverseFunctionalProperty">
+  			<h4>Property: cert:hex</h4> 
+  			<em property="rdfs:label" >hexadecimal</em> - <span property="rdfs:comment" ><rdfs:span xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" ns="http://www.w3.org/1999/xhtml"><rdfs:p>
+   An encoding of a positive integer (from 0 to infinity) as a hexadecimal string that makes it easy to read and/or fun to present on the web.</rdfs:p>
+   <rdfs:p>The purpose of this way of representing hexadecimals is to enable users to copy and paste hexadecimal notations as shown by most browsers, keychains or tools such as opensso, into their rdf representation of choice.  There are a wide variety of ways in which such strings can be presented. One finds the following:</rdfs:p>
+<rdfs:pre>
   e1 dc d5 e1 00 8f 21 5e d5 cc 7c 7e c4 9c ad 86 
   64 aa dc 29 f2 8d d9 56 7f 31 b6 bd 1b fd b8 ee 
   51 0d 3c 84 59 a2 45 d2 13 59 2a 14 82 1a 0f 6e 
@@ -274,27 +268,33 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   fd 9f 0f 82 16 67 9f 67 fa 91 e4 0d 55 4e 52 c0 
   66 64 2f fe 98 8f ae f8 96 21 5e ea 38 9e 5c 4f 
   27 e2 48 ca ca f2 90 23 ad 99 4b cc 38 32 6d bf  
-
- Or the same as the above, with ':' instead of spaces. We can't guarantee that these are the only ways such tools will present hexadecimals, so we are very lax.
- The letters can be uppercase or lowercase, or mixed.  
- Some strings may start with initial 00's, and can be stripped in this notation as they often are. Doing this could, in complement of 2 notation turn a positive number into a negative one, if the first hexadecimal character happens to be one of  the set {'8', '9', 'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E', 'f', 'F'} .  As we interpret this string as a hexadecimal number leading 00s are not important  (Complement of 2 notation and hexadecimal overlap for positive numbers)
- In order to make this fun, we allow any unicode characters in the string. A parser should 
-  1. remove all non hexadecimal characters
-  2. treat the resulting as a hexadecimal representation of a number
+</rdfs:pre>
+<rdfs:p>
+ Or the same as the above, with ':' instead of spaces. We can't guarantee that these are the only ways such tools will present hexadecimals, so we are very lax.</rdfs:p>
+ <rdfs:p>The letters can be uppercase or lowercase, or mixed.  </rdfs:p>
+ <rdfs:p>Some strings may start with initial 00's, and can be stripped in this notation as they often are. Doing this could, in complement of 2 notation turn a positive number into a negative one, if the first hexadecimal character happens to be one of  the set {'8', '9', 'a', 'A', 'b', 'B', 'c', 'C', 'd', 'D', 'e', 'E', 'f', 'F'} .  As we interpret this string as a hexadecimal number leading 00s are not important  (Complement of 2 notation and hexadecimal overlap for positive numbers)</rdfs:p>
+<rdfs:p> In order to make this fun, we allow any unicode characters in the string. A parser should </rdfs:p>
+  <rdfs:ol>
+<rdfs:li>remove all non hexadecimal characters</rdfs:li>
+<rdfs:li>treat the resulting as a hexadecimal representation of a number</rdfs:li>
+</rdfs:ol>
+<rdfs:p>
  This will allow people to make an ascii - better yet a UTF-8 - picture of their public key when publishing it on the web.
-
+</rdfs:p>
+<rdfs:p>
   Cert hex is also a datatype property because we used to write it out like this
- <pre>
+</rdfs:p>
+ <rdfs:pre>
    [] a rsa:RSAPublicKey;
      rsa:public_exponent [ cert:hex "e1 dc d5 ..."] 
- </pre> 
-  The above notation is now deprecated. Now we prefer the literal format below
- <pre>
+ </rdfs:pre> 
+<rdfs:p> The above notation is now deprecated. Now we prefer the literal format below.</rdfs:p>
+ <rdfs:pre>
    [] a rsa:RSAPublicKey;
      rsa:public_exponent "e1 dc d5 ..."^^cert:hex .
- </pre> 
- 
-   </span> <br /><table style="float: top;">
+ </rdfs:pre> 
+   </rdfs:span>
+        </span> <br /><table style="float: top;">
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
   			<tr><th>Domain:</th>
@@ -303,39 +303,36 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<tr><th>Range:</th>
  <td>  <span rel="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string"><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></span>
  </td></tr><tr><th colspan="2">Datatype Property</th>
- <td>  </td></tr><tr><th colspan="2">Inverse Functional Property</th>
- <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"></span> </td></tr>
+ <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#DatatypeProperty"></span> </td></tr><tr><th colspan="2">Inverse Functional Property</th>
+ <td>  </td></tr>
   			</table>
   			
   			<p style="float: right; font-size: small;">[<a href="#hex">#</a>] <!-- hex --> [<a href="#glance">back to top</a>]</p>
   			<br/>
-  			</div><div class="specterm" id="public_key" about="http://www.w3.org/ns/auth/cert#public_key" typeof="owl:ObjectProperty">
-  			<h4>Property: http://www.w3.org/ns/auth/cert#:public_key</h4> 
-  			<em property="rdfs:label" >public_key</em> - <span property="rdfs:comment" >
-      a relation from an agent to a public key for which he alone has 
-      the private key. This public key identifies that agent, allows him
-      to decrypt messages sent to him with that key, and is able to sign
-      messages with it too.
-    </span> <br /><table style="float: top;">
+  			</div><div class="specterm" id="key" about="http://www.w3.org/ns/auth/cert#key" typeof="rdf:Property">
+  			<h4>Property: cert:key</h4> 
+  			<em property="rdfs:label" >key</em> - <span property="rdfs:comment" >relates an agent to a key - most often the public key.</span> <br /><table style="float: top;">
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
   			<tr><th>Domain:</th>
  <td>  <span rel="rdfs:domain" href="http://xmlns.com/foaf/0.1/Agent"><a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a></span>
  </td></tr>
   			<tr><th>Range:</th>
- <td> <span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#PublicKey"><a href="#PublicKey">PublicKey</a></span>
+ <td> <span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#PublicKey"><a href="#PublicKey">cert:PublicKey</a></span>
 </td>	</tr><tr><th>Inverse property of</th>
- <td>  <span rel="owl:inverseOf" href="http://www.w3.org/ns/auth/cert#identity"><a href="#identity">identity</a></span>
+ <td>  <span rel="owl:inverseOf" href="http://www.w3.org/ns/auth/cert#identity"><a href="#identity">cert:identity</a></span>
+ </td></tr><tr><th>Has inverse property</th>
+ <td>  <a href="#identity">cert:identity</a>
  </td></tr><tr><th colspan="2">RDF Property</th>
- <td> <span rel="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"></span> </td></tr><tr><th colspan="2">Object Property</th>
- <td>  </td></tr>
+ <td>  </td></tr><tr><th colspan="2">Object Property</th>
+ <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span> </td></tr>
   			</table>
   			
-  			<p style="float: right; font-size: small;">[<a href="#public_key">#</a>] <!-- public_key --> [<a href="#glance">back to top</a>]</p>
+  			<p style="float: right; font-size: small;">[<a href="#key">#</a>] <!-- key --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div>
-<div class="specterm" id="decimal" about="http://www.w3.org/ns/auth/cert#decimal" typeof="owl:DatatypeProperty">
-  			<h4>Property: http://www.w3.org/ns/auth/cert#:decimal</h4> 
+<div class="specterm" id="decimal" about="http://www.w3.org/ns/auth/cert#decimal" typeof="owl:InverseFunctionalProperty">
+  			<h4>Property: cert:decimal</h4> 
   			<em property="rdfs:label" >decimal</em> - <span property="rdfs:comment" >
       An encoding of an integer in base 10 notation. Use cert:int instead.
     </span> <br /><table style="float: top;">
@@ -347,14 +344,14 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<tr><th>Range:</th>
  <td>  <span rel="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string"><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></span>
  </td></tr><tr><th colspan="2">Datatype Property</th>
- <td>  </td></tr><tr><th colspan="2">Inverse Functional Property</th>
- <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"></span> </td></tr>
+ <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#DatatypeProperty"></span> </td></tr><tr><th colspan="2">Inverse Functional Property</th>
+ <td>  </td></tr>
   			</table>
   			
   			<p style="float: right; font-size: small;">[<a href="#decimal">#</a>] <!-- decimal --> [<a href="#glance">back to top</a>]</p>
   			<br/>
-  			</div><div class="specterm" id="identity" about="http://www.w3.org/ns/auth/cert#identity" typeof="owl:ObjectProperty">
-  			<h4>Property: http://www.w3.org/ns/auth/cert#:identity</h4> 
+  			</div><div class="specterm" id="identity" about="http://www.w3.org/ns/auth/cert#identity" typeof="rdf:Property">
+  			<h4>Property: cert:identity</h4> 
   			<em property="rdfs:label" >identity</em> - <span property="rdfs:comment" >
     the identity of the public key. This is the entity that knows the private key and 
     so can decrypt messages encrypted with the public key, or encrypt messages that can 
@@ -363,13 +360,15 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >archaic</span></td></tr>
   			<tr><th>Domain:</th>
- <td> <span rel="rdfs:domain" href="http://www.w3.org/ns/auth/cert#PublicKey"><a href="#PublicKey">PublicKey</a></span>
+ <td> <span rel="rdfs:domain" href="http://www.w3.org/ns/auth/cert#PublicKey"><a href="#PublicKey">cert:PublicKey</a></span>
 </td></tr>
-  			<tr><th>Has inverse property</th>
- <td>  <a href="#public_key">public_key</a>
+  			<tr><th>Inverse property of</th>
+ <td>  <span rel="owl:inverseOf" href="http://www.w3.org/ns/auth/cert#key"><a href="#key">cert:key</a></span>
+ </td></tr><tr><th>Has inverse property</th>
+ <td>  <a href="#key">cert:key</a>
  </td></tr><tr><th colspan="2">RDF Property</th>
- <td> <span rel="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"></span> </td></tr><tr><th colspan="2">Object Property</th>
- <td>  </td></tr>
+ <td>  </td></tr><tr><th colspan="2">Object Property</th>
+ <td> <span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span> </td></tr>
   			</table>
   			
   			<p style="float: right; font-size: small;">[<a href="#identity">#</a>] <!-- identity --> [<a href="#glance">back to top</a>]</p>
@@ -386,6 +385,8 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
 
 <!-- dirty hack for specgen -->
 <div style="display: none"><span about="http://www.w3.org/ns/auth/cert#PGPCertificate" rel="owl:equivalentClass" href="http://xmlns.com/wot/0.1/PubKey"></span></div>
+<div style="display: none"><span about="http://www.w3.org/ns/auth/cert#hex" rel="owl:equivalentClass" href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"></span></div>
+<div style="display: none"><span about="http://www.w3.org/ns/auth/cert#int" rel="owl:equivalentClass" href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"></span></div>
 
 
 <h2 id="sec-ack">Acknowledgments</h2>
@@ -407,6 +408,8 @@ reviews, criticism and input in the creation of this specification:</p>
 <li>Toby Inkster</li>
 <li>Bruno Harbulot</li>
 <li>Reto Bachmann-Gmür</li>
+<li>Sergio Fernandez</li>
+<li><a href="http://ii.uwb.edu.pl/~dtomaszuk/">Dominik Tomaszuk</a> (<a href="http://ii.uwb.edu.pl/">University of Bialystok</a>)</li>
 </ul>
 
 </body>

@@ -26,18 +26,16 @@ version="XHTML+RDFa 1.0" typeof="owl:Ontology" about="http://www.w3.org/ns/auth/
 
 <dl>
 <dt>This version:</dt>
-<dd><a href="http://www.w3.org/ns/auth/rsa#">http://www.w3.org/ns/auth/rsa#</a> (<a href="http://www.w3.org/ns/auth/rsa.n3">N3</a>)</dd>
+<dd><a href="http://www.w3.org/ns/auth/rsa#">http://www.w3.org/ns/auth/rsa#</a> (<a href="http://www.w3.org/ns/auth/rsa.n3">N3</a>, <a href="http://www.w3.org/ns/auth/rsa.rdf">RDF/XML</a>)</dd>
 
 <dt>Latest version:</dt>
-<dd><a href="http://www.w3.org/ns/auth/rsa#">http://www.w3.org/ns/auth/rsa#</a> (<a href="http://www.w3.org/ns/auth/rsa.n3">N3</a>)</dd>
+<dd><a href="http://www.w3.org/ns/auth/rsa#">http://www.w3.org/ns/auth/rsa#</a> (<a href="http://www.w3.org/ns/auth/rsa.n3">N3</a>, <a href="http://www.w3.org/ns/auth/rsa.rdf">RDF/XML</a>)</dd>
 
 <dt>Authors:</dt>
 <dd><a href="http://bblfish.net/">Henry Story</a> </dd>
 
-<dt>Contributors:</dt>
-<dd><a href="http://ii.uwb.edu.pl/~dtomaszuk/">Dominik Tomaszuk</a> (<a href="http://ii.uwb.edu.pl/">University of Bialystok</a>)</dd>
 </dl>
-<p class="copyright"><span>Copyright © 2010-2011 W3C® (MIT, ERCIM, Keio), All Rights Reserved. W3C liability, trademark and document use rules apply.</span></p>
+<p class="copyright"><a rel="license" href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2010-2011 <span rel="dcterms:publisher"><span typeof="foaf:Organization"><a rel="foaf:homepage" property="foaf:name" content="World Wide Web Consotrium" href="http://www.w3.org/"><acronym title="World Wide Web Consortium">W3C</acronym></a><sup>®</sup></span></span> (<a href="http://www.csail.mit.edu/"><acronym title="Massachusetts Institute of Technology">MIT</acronym></a>, <a href="http://www.ercim.eu/"><acronym title="European Research Consortium for Informatics and Mathematics">ERCIM</acronym></a>, <a href="http://www.keio.ac.jp/">Keio</a>), All Rights Reserved. W3C <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>, <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.</p>
 
 <hr />
 
@@ -109,31 +107,29 @@ documentation, they progress through the categories
  @prefix : &lt;https://joe.example/profile#&gt; .
 
  :me a foaf:Person;
-     foaf:name "Joe" .
-
- [] a rsa:RSAPublicKey;
-    rsa:modulus """
-      00:cb:24:ed:85:d6:4d:79:4b:69:c7:01:c1:86:ac:
-      c0:59:50:1e:85:60:00:f6:61:c9:32:04:d8:38:0e:
-      07:19:1c:5c:8b:36:8d:2a:c3:2a:42:8a:cb:97:03:
-      98:66:43:68:dc:2a:86:73:20:22:0f:75:5e:99:ca:
-      2e:ec:da:e6:2e:8d:15:fb:58:e1:b7:6a:e5:9c:b7:
-      ac:e8:83:83:94:d5:9e:72:50:b4:49:17:6e:51:a4:
-      94:95:1a:1c:36:6c:62:17:d8:76:8d:68:2d:de:78:
-      dd:4d:55:e6:13:f8:83:9c:f2:75:d4:c8:40:37:43:
-      e7:86:26:01:f3:c4:9a:63:66:e1:2b:b8:f4:98:26:
-      2c:3c:77:de:19:bc:e4:0b:32:f8:9a:e6:2c:37:80:
-      f5:b6:27:5b:e3:37:e2:b3:15:3a:e2:ba:72:a9:97:
-      5a:e7:1a:b7:24:64:94:97:06:6b:66:0f:cf:77:4b:
-      75:43:d9:80:95:2d:2e:85:86:20:0e:da:41:58:b0:
-      14:e7:54:65:d9:1e:cf:93:ef:c7:ac:17:0c:11:fc:
-      72:46:fc:6d:ed:79:c3:77:80:00:0a:c4:e0:79:f6:
-      71:fd:4f:20:7a:d7:70:80:9e:0e:2d:7b:0e:f5:49:
-      3b:ef:e7:35:44:d8:e1:be:3d:dd:b5:24:55:c6:13:
-      91:a1
-    """^^cert:hex;
-    rsa:public_exponent "65537"^^cert:int;
-    cert:identity :me .
+     foaf:name "Joe" .  
+     cert:key [ a rsa:RSAPublicKey;
+                rsa:modulus """
+         00:cb:24:ed:85:d6:4d:79:4b:69:c7:01:c1:86:ac:
+         c0:59:50:1e:85:60:00:f6:61:c9:32:04:d8:38:0e:
+         07:19:1c:5c:8b:36:8d:2a:c3:2a:42:8a:cb:97:03:
+         98:66:43:68:dc:2a:86:73:20:22:0f:75:5e:99:ca:
+         2e:ec:da:e6:2e:8d:15:fb:58:e1:b7:6a:e5:9c:b7:
+         ac:e8:83:83:94:d5:9e:72:50:b4:49:17:6e:51:a4:
+         94:95:1a:1c:36:6c:62:17:d8:76:8d:68:2d:de:78:
+         dd:4d:55:e6:13:f8:83:9c:f2:75:d4:c8:40:37:43:
+         e7:86:26:01:f3:c4:9a:63:66:e1:2b:b8:f4:98:26:
+         2c:3c:77:de:19:bc:e4:0b:32:f8:9a:e6:2c:37:80:
+         f5:b6:27:5b:e3:37:e2:b3:15:3a:e2:ba:72:a9:97:
+         5a:e7:1a:b7:24:64:94:97:06:6b:66:0f:cf:77:4b:
+         75:43:d9:80:95:2d:2e:85:86:20:0e:da:41:58:b0:
+         14:e7:54:65:d9:1e:cf:93:ef:c7:ac:17:0c:11:fc:
+         72:46:fc:6d:ed:79:c3:77:80:00:0a:c4:e0:79:f6:
+         71:fd:4f:20:7a:d7:70:80:9e:0e:2d:7b:0e:f5:49:
+         3b:ef:e7:35:44:d8:e1:be:3d:dd:b5:24:55:c6:13:
+         91:a1"""^^cert:hex;
+               rsa:public_exponent "65537"^^cert:int;
+       ] .
 </pre>
 
 <h2 id="sec-crossref">Cross-reference for Cert classes and properties</h2>
@@ -160,7 +156,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
  
 
 <div class="specterm" id="RSAKey" about="http://www.w3.org/ns/auth/rsa#RSAKey" typeof="owl:Class">
-  			<h4>Class: http://www.w3.org/ns/auth/rsa#:RSAKey</h4> 
+  			<h4>Class: rsa:RSAKey</h4> 
   			<em property="rdfs:label" >RSA Key</em> - <span property="rdfs:comment" >
     The union of the public and private components of an RSAKey.
     Usually those pieces are not kept together
@@ -168,13 +164,13 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
   			<tr><th>Properties include:</th>
- <td>  <a href="#modulus">modulus</a>
+ <td>  <a href="#modulus">rsa:modulus</a>
  </td></tr>
   			<tr><th>Sub class of</th>
- <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Key"><a href="http://www.w3.org/ns/auth/cert#Key">http://www.w3.org/ns/auth/cert#:Key</a></span>
+ <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Key"><a href="http://www.w3.org/ns/auth/cert#Key">cert:Key</a></span>
  </td></tr><tr><th>Has sub class</th>
- <td>  <a href="#RSAPrivateKey">RSA Private Key</a>
- <a href="#RSAPublicKey">RSA Public Key</a>
+ <td>  <a href="#RSAPublicKey">rsa:RSAPublicKey</a>
+ <a href="#RSAPrivateKey">rsa:RSAPrivateKey</a>
  </td></tr><tr><th colspan="2">OWL Class</th>
  <td>  </td></tr>
   			</table>
@@ -182,17 +178,17 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<p style="float: right; font-size: small;">[<a href="#RSAKey">#</a>] <!-- RSAKey --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div><div class="specterm" id="RSAPrivateKey" about="http://www.w3.org/ns/auth/rsa#RSAPrivateKey" typeof="owl:Class">
-  			<h4>Class: http://www.w3.org/ns/auth/rsa#:RSAPrivateKey</h4> 
+  			<h4>Class: rsa:RSAPrivateKey</h4> 
   			<em property="rdfs:label" >RSA Private Key</em> - <span property="rdfs:comment" >
     A Private Key in the RSA framework 
     </span> <br /><table style="float: top;">
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
   			<tr><th>Properties include:</th>
- <td>  <a href="#private_exponent">private_exponent</a>
+ <td>  <a href="#private_exponent">rsa:private_exponent</a>
  </td></tr>
   			<tr><th>Sub class of</th>
- <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">RSA Key</a></span>
+ <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">rsa:RSAKey</a></span>
  </td></tr><tr><th colspan="2">OWL Class</th>
  <td>  </td></tr>
   			</table>
@@ -200,7 +196,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<p style="float: right; font-size: small;">[<a href="#RSAPrivateKey">#</a>] <!-- RSAPrivateKey --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div><div class="specterm" id="RSAPublicKey" about="http://www.w3.org/ns/auth/rsa#RSAPublicKey" typeof="owl:Class">
-  			<h4>Class: http://www.w3.org/ns/auth/rsa#:RSAPublicKey</h4> 
+  			<h4>Class: rsa:RSAPublicKey</h4> 
   			<em property="rdfs:label" >RSA Public Key</em> - <span property="rdfs:comment" >
     The RSA public key.  Padded message m are encrypted by applying the function
       modulus(power(m,exponent),modulus)
@@ -208,10 +204,10 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
   			<tr><th>Properties include:</th>
- <td>  <a href="#public_exponent">public_exponent</a>
+ <td>  <a href="#public_exponent">rsa:public_exponent</a>
  </td></tr>
   			<tr><th>Sub class of</th>
- <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">RSA Key</a></span>
+ <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">rsa:RSAKey</a></span>
  </td></tr><tr><th colspan="2">OWL Class</th>
  <td>  </td></tr>
   			</table>
@@ -223,7 +219,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
  
 
 <div class="specterm" id="modulus" about="http://www.w3.org/ns/auth/rsa#modulus" typeof="owl:DatatypeProperty">
-  			<h4>Property: http://www.w3.org/ns/auth/rsa#:modulus</h4> 
+  			<h4>Property: rsa:modulus</h4> 
   			<em property="rdfs:label" >modulus</em> - <span property="rdfs:comment" >    
    The modulus of an RSA public and private key. 
    This is defined as n = p*q
@@ -231,10 +227,10 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
   			<tr><th>Domain:</th>
- <td> <span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">RSA Key</a></span>
+ <td> <span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">rsa:RSAKey</a></span>
 </td></tr>
   			<tr><th>Range:</th>
- <td>  <span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">http://www.w3.org/ns/auth/cert#:int</a></span>
+ <td>  <span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">cert:int</a></span>
  </td></tr><tr><th colspan="2">Datatype Property</th>
  <td>  </td></tr>
   			</table>
@@ -242,7 +238,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<p style="float: right; font-size: small;">[<a href="#modulus">#</a>] <!-- modulus --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div><div class="specterm" id="private_exponent" about="http://www.w3.org/ns/auth/rsa#private_exponent" typeof="owl:DatatypeProperty">
-  			<h4>Property: http://www.w3.org/ns/auth/rsa#:private_exponent</h4> 
+  			<h4>Property: rsa:private_exponent</h4> 
   			<em property="rdfs:label" >private</em> - <span property="rdfs:comment" >
        The exponent used to decrypt the message
        calculated as 
@@ -252,10 +248,10 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
   			<tr><th>Domain:</th>
- <td> <span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAPrivateKey"><a href="#RSAPrivateKey">RSA Private Key</a></span>
+ <td> <span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAPrivateKey"><a href="#RSAPrivateKey">rsa:RSAPrivateKey</a></span>
 </td></tr>
   			<tr><th>Range:</th>
- <td>  <span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">http://www.w3.org/ns/auth/cert#:int</a></span>
+ <td>  <span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">cert:int</a></span>
  </td></tr><tr><th colspan="2">Datatype Property</th>
  <td>  </td></tr>
   			</table>
@@ -263,7 +259,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<p style="float: right; font-size: small;">[<a href="#private_exponent">#</a>] <!-- private_exponent --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div><div class="specterm" id="public_exponent" about="http://www.w3.org/ns/auth/rsa#public_exponent" typeof="owl:DatatypeProperty">
-  			<h4>Property: http://www.w3.org/ns/auth/rsa#:public_exponent</h4> 
+  			<h4>Property: rsa:public_exponent</h4> 
   			<em property="rdfs:label" >public_exponent</em> - <span property="rdfs:comment" >
        The exponent used to encrypt the message. Number chosen between
        1 and the totient(p*q). Often named 'e' .
@@ -271,10 +267,10 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<tr><th>Status:</th>
   			<td><span property="vs:term_status" >unstable</span></td></tr>
   			<tr><th>Domain:</th>
- <td> <span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAPublicKey"><a href="#RSAPublicKey">RSA Public Key</a></span>
+ <td> <span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAPublicKey"><a href="#RSAPublicKey">rsa:RSAPublicKey</a></span>
 </td></tr>
   			<tr><th>Range:</th>
- <td>  <span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">http://www.w3.org/ns/auth/cert#:int</a></span>
+ <td>  <span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">cert:int</a></span>
  </td></tr><tr><th colspan="2">Datatype Property</th>
  <td>  </td></tr>
   			</table>
@@ -315,6 +311,8 @@ reviews, criticism and input in the creation of this specification:</p>
 <li>Toby Inkster</li>
 <li>Bruno Harbulot</li>
 <li>Reto Bachmann-Gmür</li>
+<li>Sergio Fernandez</li>
+<li><a href="http://ii.uwb.edu.pl/~dtomaszuk/">Dominik Tomaszuk</a> (<a href="http://ii.uwb.edu.pl/">University of Bialystok</a>)</li>
 </ul>
 
 </body>
