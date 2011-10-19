@@ -9,17 +9,17 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 
-formats:SPARQL_Results_XML a formats:Format ;
+formats:SPARQL_Results_CSV a formats:Format ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
-     dc:date "2010-05-03" ;
-     dc:description "Unique identifier for the SPARQL Results in XML file format" ;
-     rdfs:comment "SPARQL Results in XML is defined by the “SPARQL Query Results XML Format” W3C Recommendation." ;
-     rdfs:isDefinedBy <http://www.w3.org/TR/rdf-sparql-XMLres/> ;
-     rdfs:seeAlso <http://www.w3.org/TR/rdf-sparql-XMLres/#mime> ;
-     formats:media_type "application/sparql-results+xml" ;
-     formats:preferred_suffix ".srx" . 
+     dc:date "2011-10-19" ;
+     dc:description "Unique identifier for the SPARQL Results in CSV file format" ;
+     rdfs:comment "SPARQL Results in CSV is defined by the “SPARQL 1.1 Query Results CSV and TSV Formats” W3C Recommendation." ;
+     rdfs:isDefinedBy <http://www.w3.org/TR/sparql11-results-csv-tsv/> ;
+     rdfs:seeAlso <http://www.rfc-editor.org/rfc/rfc4180.txt> ;
+     formats:media_type "text/csv" ;
+     formats:preferred_suffix ".csv" . 
 
-<http://www.w3.org/ns/formats/data/SPARQL_Results_XML.html> dc:title "Information Resource for the SPARQL Results File Format in XML" ;
+<http://www.w3.org/ns/formats/data/SPARQL_Results_CSV.html> dc:title "Information Resource for the SPARQL Results File Format in CSV" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;

@@ -23,7 +23,9 @@ formats:Format a rdfs:Class, owl:Class ;
          formats:RDF_XML,
          formats:RDFa,
          formats:RIF_XML,
+         formats:SPARQL_Results_CSV,
          formats:SPARQL_Results_JSON,
+         formats:SPARQL_Results_TSV,
          formats:SPARQL_Results_XML,
          formats:Turtle . 
 
@@ -43,7 +45,7 @@ formats:preferred_suffix a rdfs:Property, owl:DatatypeProperty .
 
 <http://www.w3.org/ns/formats/> a owl:Ontology ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
-     dc:date "2010-05-03" ;
+     dc:date "2010-10-19" ;
      dc:description "Unique URIs for File Formats" ;
      owl:versionIRI <http://www.w3.org/ns/formats/> ;
      owl:versionInfo "$Date$" . 
