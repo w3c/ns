@@ -112,13 +112,13 @@
    owl:equivalentClass xsd:nonNegativeInteger;
    rdfs:domain xsd:nonNegativeInteger;
    rdfs:range xsd:string;
-   skos:editorialNote """<span ns="http://www.w3.org/1999/xhtml"><p> 
+   skos:editorialNote """<span xmlns="http://www.w3.org/1999/xhtml"><p> 
      This relation should slowly be transited to just being a datatype.</p>
      <p>Being a datatype and a property is legal as explained here
   <a href="http://lists.w3.org/Archives/Public/semantic-web/2010Mar/0037.html">on the semantic web mailing list in March 2010</a>. 
  But it may be somewhat confusing, especially if it goes against a pattern - still to be set - by the xsd datatypes as the follow up email makes clear. </p></span>
    """@en;
-   rdfs:comment """<span ns="http://www.w3.org/1999/xhtml"><p>
+   rdfs:comment """<span xmlns="http://www.w3.org/1999/xhtml"><p>
    An encoding of a positive integer (from 0 to infinity) as a hexadecimal string that makes it easy to read and/or fun to present on the web.</p>
    <p>The purpose of this way of representing hexadecimals is to enable users to copy and paste hexadecimal notations as shown by most browsers, keychains or tools such as opensso, into their rdf representation of choice.  There are a wide variety of ways in which such strings can be presented. One finds the following:</p>
 <pre>

@@ -1,6 +1,6 @@
 
 <!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
-<!--     using base file:///Volumes/Dev/Programming/w3.org/WWW/ns/auth/cert.n3-->
+<!--     using base file:///Volumes/Dev/Programming/w3.org/hg/WebID/ontologies/cert.n3-->
 
 
 <rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
@@ -130,7 +130,7 @@
     <Datatype rdf:about="http://www.w3.org/ns/auth/cert#hex">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
-        <comment rdf:parseType="Literal"><span ns="http://www.w3.org/1999/xhtml"><p>
+        <comment rdf:parseType="Literal"><span xmlns="http://www.w3.org/1999/xhtml"><p>
    An encoding of a positive integer (from 0 to infinity) as a hexadecimal string that makes it easy to read and/or fun to present on the web.</p>
    <p>The purpose of this way of representing hexadecimals is to enable users to copy and paste hexadecimal notations as shown by most browsers, keychains or tools such as opensso, into their rdf representation of choice.  There are a wide variety of ways in which such strings can be presented. One finds the following:</p>
 <pre>
@@ -175,7 +175,7 @@
         <seeAlso rdf:resource="http://en.wikipedia.org/wiki/Hexadecimal"/>
         <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
         <vs:term_status>unstable</vs:term_status>
-        <skos:editorialNote xml:lang="en">&#60;span ns="http://www.w3.org/1999/xhtml"&#62;&#60;p&#62; 
+        <skos:editorialNote xml:lang="en">&#60;span xmlns="http://www.w3.org/1999/xhtml"&#62;&#60;p&#62; 
      This relation should slowly be transited to just being a datatype.&#60;/p&#62;
      &#60;p&#62;Being a datatype and a property is legal as explained here
   &#60;a href="http://lists.w3.org/Archives/Public/semantic-web/2010Mar/0037.html"&#62;on the semantic web mailing list in March 2010&#60;/a&#62;. 

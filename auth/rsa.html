@@ -160,20 +160,27 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<em property="rdfs:label" >RSA Key</em> - <span property="rdfs:comment" >
     The union of the public and private components of an RSAKey.
     Usually those pieces are not kept together
-    </span> <br /><table style="float: top;">
-  			<tr><th>Status:</th>
-  			<td><span property="vs:term_status" >unstable</span></td></tr>
-  			<tr><th>Properties include:</th>
- <td>  <a href="#modulus">rsa:modulus</a>
- </td></tr>
-  			<tr><th>Sub class of</th>
- <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Key"><a href="http://www.w3.org/ns/auth/cert#Key">cert:Key</a></span>
- </td></tr><tr><th>Has sub class</th>
- <td>  <a href="#RSAPublicKey">rsa:RSAPublicKey</a>
- <a href="#RSAPrivateKey">rsa:RSAPrivateKey</a>
- </td></tr><tr><th colspan="2">OWL Class</th>
- <td>  </td></tr>
-  			</table>
+    </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Properties include:</dt>
+ 
+  
+ <dd><a href="#modulus">rsa:modulus</a></dd>
+  			<dt>Sub class of</dt>
+ 
+  
+ <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Key"><a href="http://www.w3.org/ns/auth/cert#Key">cert:Key</a></span></dd> <dt>Has sub class</dt>
+ 
+  
+ <dd><a href="#RSAPublicKey">rsa:RSAPublicKey</a>
+</dd> 
+ <dd><a href="#RSAPrivateKey">rsa:RSAPrivateKey</a>
+</dd><dt>OWL Class</dt>
+ 
+ 
+  			</dl>
   			
   			<p style="float: right; font-size: small;">[<a href="#RSAKey">#</a>] <!-- RSAKey --> [<a href="#glance">back to top</a>]</p>
   			<br/>
@@ -181,17 +188,21 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<h4>Class: rsa:RSAPrivateKey</h4> 
   			<em property="rdfs:label" >RSA Private Key</em> - <span property="rdfs:comment" >
     A Private Key in the RSA framework 
-    </span> <br /><table style="float: top;">
-  			<tr><th>Status:</th>
-  			<td><span property="vs:term_status" >unstable</span></td></tr>
-  			<tr><th>Properties include:</th>
- <td>  <a href="#private_exponent">rsa:private_exponent</a>
- </td></tr>
-  			<tr><th>Sub class of</th>
- <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">rsa:RSAKey</a></span>
- </td></tr><tr><th colspan="2">OWL Class</th>
- <td>  </td></tr>
-  			</table>
+    </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Properties include:</dt>
+ 
+  
+ <dd><a href="#private_exponent">rsa:private_exponent</a></dd>
+  			<dt>Sub class of</dt>
+ 
+  
+ <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">rsa:RSAKey</a></span></dd><dt>OWL Class</dt>
+ 
+ 
+  			</dl>
   			
   			<p style="float: right; font-size: small;">[<a href="#RSAPrivateKey">#</a>] <!-- RSAPrivateKey --> [<a href="#glance">back to top</a>]</p>
   			<br/>
@@ -200,17 +211,21 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<em property="rdfs:label" >RSA Public Key</em> - <span property="rdfs:comment" >
     The RSA public key.  Padded message m are encrypted by applying the function
       modulus(power(m,exponent),modulus)
-    </span> <br /><table style="float: top;">
-  			<tr><th>Status:</th>
-  			<td><span property="vs:term_status" >unstable</span></td></tr>
-  			<tr><th>Properties include:</th>
- <td>  <a href="#public_exponent">rsa:public_exponent</a>
- </td></tr>
-  			<tr><th>Sub class of</th>
- <td>  <span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">rsa:RSAKey</a></span>
- </td></tr><tr><th colspan="2">OWL Class</th>
- <td>  </td></tr>
-  			</table>
+    </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Properties include:</dt>
+ 
+  
+ <dd><a href="#public_exponent">rsa:public_exponent</a></dd>
+  			<dt>Sub class of</dt>
+ 
+  
+ <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">rsa:RSAKey</a></span></dd><dt>OWL Class</dt>
+ 
+ 
+  			</dl>
   			
   			<p style="float: right; font-size: small;">[<a href="#RSAPublicKey">#</a>] <!-- RSAPublicKey --> [<a href="#glance">back to top</a>]</p>
   			<br/>
@@ -223,17 +238,22 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<em property="rdfs:label" >modulus</em> - <span property="rdfs:comment" >    
    The modulus of an RSA public and private key. 
    This is defined as n = p*q
-   </span> <br /><table style="float: top;">
-  			<tr><th>Status:</th>
-  			<td><span property="vs:term_status" >unstable</span></td></tr>
-  			<tr><th>Domain:</th>
- <td> <span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">rsa:RSAKey</a></span>
-</td></tr>
-  			<tr><th>Range:</th>
- <td>  <span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">cert:int</a></span>
- </td></tr><tr><th colspan="2">Datatype Property</th>
- <td>  </td></tr>
-  			</table>
+   </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Domain:</dt>
+ 
+  
+ <dd><span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAKey"><a href="#RSAKey">rsa:RSAKey</a></span>
+</dd>
+  			<dt>Range:</dt>
+ 
+  <dd><span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">cert:int</a></span>
+</dd><dt>Datatype Property</dt>
+ 
+ 
+  			</dl>
   			
   			<p style="float: right; font-size: small;">[<a href="#modulus">#</a>] <!-- modulus --> [<a href="#glance">back to top</a>]</p>
   			<br/>
@@ -244,17 +264,22 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
        calculated as 
           public_exponent*private_exponent = 1 modulo totient(p*q)
        The private exponent is often named 'd'
-    </span> <br /><table style="float: top;">
-  			<tr><th>Status:</th>
-  			<td><span property="vs:term_status" >unstable</span></td></tr>
-  			<tr><th>Domain:</th>
- <td> <span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAPrivateKey"><a href="#RSAPrivateKey">rsa:RSAPrivateKey</a></span>
-</td></tr>
-  			<tr><th>Range:</th>
- <td>  <span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">cert:int</a></span>
- </td></tr><tr><th colspan="2">Datatype Property</th>
- <td>  </td></tr>
-  			</table>
+    </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Domain:</dt>
+ 
+  
+ <dd><span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAPrivateKey"><a href="#RSAPrivateKey">rsa:RSAPrivateKey</a></span>
+</dd>
+  			<dt>Range:</dt>
+ 
+  <dd><span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">cert:int</a></span>
+</dd><dt>Datatype Property</dt>
+ 
+ 
+  			</dl>
   			
   			<p style="float: right; font-size: small;">[<a href="#private_exponent">#</a>] <!-- private_exponent --> [<a href="#glance">back to top</a>]</p>
   			<br/>
@@ -263,17 +288,22 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<em property="rdfs:label" >public_exponent</em> - <span property="rdfs:comment" >
        The exponent used to encrypt the message. Number chosen between
        1 and the totient(p*q). Often named 'e' .
-    </span> <br /><table style="float: top;">
-  			<tr><th>Status:</th>
-  			<td><span property="vs:term_status" >unstable</span></td></tr>
-  			<tr><th>Domain:</th>
- <td> <span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAPublicKey"><a href="#RSAPublicKey">rsa:RSAPublicKey</a></span>
-</td></tr>
-  			<tr><th>Range:</th>
- <td>  <span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">cert:int</a></span>
- </td></tr><tr><th colspan="2">Datatype Property</th>
- <td>  </td></tr>
-  			</table>
+    </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Domain:</dt>
+ 
+  
+ <dd><span rel="rdfs:domain" href="http://www.w3.org/ns/auth/rsa#RSAPublicKey"><a href="#RSAPublicKey">rsa:RSAPublicKey</a></span>
+</dd>
+  			<dt>Range:</dt>
+ 
+  <dd><span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#int"><a href="http://www.w3.org/ns/auth/cert#int">cert:int</a></span>
+</dd><dt>Datatype Property</dt>
+ 
+ 
+  			</dl>
   			
   			<p style="float: right; font-size: small;">[<a href="#public_exponent">#</a>] <!-- public_exponent --> [<a href="#glance">back to top</a>]</p>
   			<br/>

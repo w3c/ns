@@ -1,6 +1,6 @@
 
 <!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
-<!--     using base file:///Volumes/Dev/Programming/w3.org/WWW/ns/auth/rsa.n3-->
+<!--     using base file:///Volumes/Dev/Programming/w3.org/hg/WebID/ontologies/rsa.n3-->
 
 
 <rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
