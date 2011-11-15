@@ -232,18 +232,7 @@
 
     <owl:ObjectProperty rdf:about="&r2rml;sqlVersion">
         <rdfs:comment xml:lang="en">An identifier for a SQL version.</rdfs:comment>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&r2rml;LogicalTable"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&r2rml;tableName"/>
-                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:maxQualifiedCardinality>
-                        <owl:onDataRange rdf:resource="&xsd;string"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="&r2rml;R2RMLView"/>
     </owl:ObjectProperty>
     
 
@@ -389,18 +378,7 @@
     <owl:DatatypeProperty rdf:about="&r2rml;sqlQuery">
         <rdfs:comment xml:lang="en">A valid SQL query.</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&r2rml;LogicalTable"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&r2rml;tableName"/>
-                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:maxQualifiedCardinality>
-                        <owl:onDataRange rdf:resource="&xsd;string"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="&r2rml;R2RMLView"/>
     </owl:DatatypeProperty>
     
 
@@ -410,18 +388,7 @@
     <owl:DatatypeProperty rdf:about="&r2rml;tableName">
         <rdfs:comment xml:lang="en">Schema-qualified name of a table or view.</rdfs:comment>
         <rdfs:range rdf:resource="&xsd;string"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="&r2rml;LogicalTable"/>
-                    <owl:Restriction>
-                        <owl:onProperty rdf:resource="&r2rml;sqlQuery"/>
-                        <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:maxQualifiedCardinality>
-                        <owl:onDataRange rdf:resource="&xsd;string"/>
-                    </owl:Restriction>
-                </owl:intersectionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="&r2rml;BaseTableOrView"/>
     </owl:DatatypeProperty>
     
 
@@ -480,6 +447,14 @@
     
 
 
+    <!-- http://www.w3.org/ns/r2rml#BaseTableOrView -->
+
+    <owl:Class rdf:about="&r2rml;BaseTableOrView">
+        <rdfs:subClassOf rdf:resource="&r2rml;LogicalTable"/>
+    </owl:Class>
+    
+
+
     <!-- http://www.w3.org/ns/r2rml#BlankNode -->
 
     <owl:Class rdf:about="&r2rml;BlankNode">
@@ -510,6 +485,13 @@
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
+                <owl:onProperty rdf:resource="&r2rml;child"/>
+                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
                 <owl:onProperty rdf:resource="&r2rml;parent"/>
                 <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
@@ -526,13 +508,6 @@
             <owl:Restriction>
                 <owl:onProperty rdf:resource="&r2rml;child"/>
                 <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:minQualifiedCardinality>
-                <owl:onDataRange rdf:resource="&xsd;string"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="&r2rml;child"/>
-                <owl:maxQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:maxQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -572,13 +547,6 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&r2rml;object"/>
-                <owl:onClass rdf:resource="&rdfs;Resource"/>
-                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-        <rdfs:subClassOf>
-            <owl:Restriction>
                 <owl:onProperty rdf:resource="&r2rml;datatype"/>
                 <owl:onClass rdf:resource="&rdfs;Datatype"/>
                 <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
@@ -589,6 +557,13 @@
                 <owl:onProperty rdf:resource="&r2rml;language"/>
                 <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
                 <owl:onDataRange rdf:resource="&xsd;string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="&r2rml;object"/>
+                <owl:onClass rdf:resource="&rdfs;Resource"/>
+                <owl:minQualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">0</owl:minQualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Represents an object map.</rdfs:comment>
@@ -618,8 +593,8 @@
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&r2rml;objectMap"/>
-                <owl:onClass rdf:resource="&r2rml;ObjectMap"/>
+                <owl:onProperty rdf:resource="&r2rml;refObjectMap"/>
+                <owl:onClass rdf:resource="&r2rml;RefObjectMap"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
@@ -632,12 +607,20 @@
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&r2rml;refObjectMap"/>
-                <owl:onClass rdf:resource="&r2rml;RefObjectMap"/>
+                <owl:onProperty rdf:resource="&r2rml;objectMap"/>
+                <owl:onClass rdf:resource="&r2rml;ObjectMap"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Represents a predicate-object map.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/r2rml#R2RMLView -->
+
+    <owl:Class rdf:about="&r2rml;R2RMLView">
+        <rdfs:subClassOf rdf:resource="&r2rml;LogicalTable"/>
     </owl:Class>
     
 
@@ -680,15 +663,15 @@
         <rdfs:subClassOf rdf:resource="&owl;Thing"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&r2rml;subjectMap"/>
-                <owl:onClass rdf:resource="&r2rml;SubjectMap"/>
+                <owl:onProperty rdf:resource="&r2rml;logicalTable"/>
+                <owl:onClass rdf:resource="&r2rml;LogicalTable"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="&r2rml;logicalTable"/>
-                <owl:onClass rdf:resource="&r2rml;LogicalTable"/>
+                <owl:onProperty rdf:resource="&r2rml;subjectMap"/>
+                <owl:onClass rdf:resource="&r2rml;SubjectMap"/>
                 <owl:qualifiedCardinality rdf:datatype="&xsd;nonNegativeInteger">1</owl:qualifiedCardinality>
             </owl:Restriction>
         </rdfs:subClassOf>

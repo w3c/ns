@@ -6,6 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 
+
 <http://www.w3.org/ns/r2rml#> rdf:type owl:Ontology .
 
 
@@ -226,15 +227,7 @@
             
             rdfs:comment "An identifier for a SQL version."@en ;
             
-            rdfs:domain [ rdf:type owl:Class ;
-                          owl:intersectionOf ( :LogicalTable
-                                               [ rdf:type owl:Restriction ;
-                                                 owl:onProperty :tableName ;
-                                                 owl:maxQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                 owl:onDataRange xsd:string
-                                               ]
-                                             )
-                        ] .
+            rdfs:domain :R2RMLView .
 
 
 
@@ -380,15 +373,7 @@
           
           rdfs:range xsd:string ;
           
-          rdfs:domain [ rdf:type owl:Class ;
-                        owl:intersectionOf ( :LogicalTable
-                                             [ rdf:type owl:Restriction ;
-                                               owl:onProperty :tableName ;
-                                               owl:maxQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                               owl:onDataRange xsd:string
-                                             ]
-                                           )
-                      ] .
+          rdfs:domain :R2RMLView .
 
 
 
@@ -400,15 +385,7 @@
            
            rdfs:range xsd:string ;
            
-           rdfs:domain [ rdf:type owl:Class ;
-                         owl:intersectionOf ( :LogicalTable
-                                              [ rdf:type owl:Restriction ;
-                                                owl:onProperty :sqlQuery ;
-                                                owl:maxQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
-                                                owl:onDataRange xsd:string
-                                              ]
-                                            )
-                       ] .
+           rdfs:domain :BaseTableOrView .
 
 
 
@@ -463,6 +440,14 @@ rdfs:Resource rdf:type owl:Class .
 
 
 
+###  http://www.w3.org/ns/r2rml#BaseTableOrView
+
+:BaseTableOrView rdf:type owl:Class ;
+                 
+                 rdfs:subClassOf :LogicalTable .
+
+
+
 ###  http://www.w3.org/ns/r2rml#BlankNode
 
 :BlankNode rdf:type owl:Class ;
@@ -493,6 +478,11 @@ rdfs:Resource rdf:type owl:Class .
       
       rdfs:subClassOf owl:Thing ,
                       [ rdf:type owl:Restriction ;
+                        owl:onProperty :child ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
                         owl:onProperty :parent ;
                         owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onDataRange xsd:string
@@ -505,11 +495,6 @@ rdfs:Resource rdf:type owl:Class .
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :child ;
                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onDataRange xsd:string
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :child ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onDataRange xsd:string
                       ] ;
       
@@ -548,11 +533,6 @@ rdfs:Resource rdf:type owl:Class .
                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
                            ] ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty :object ;
-                             owl:onClass rdfs:Resource ;
-                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
                              owl:onProperty :datatype ;
                              owl:onClass rdfs:Datatype ;
                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
@@ -561,6 +541,11 @@ rdfs:Resource rdf:type owl:Class .
                              owl:onProperty :language ;
                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger ;
                              owl:onDataRange xsd:string
+                           ] ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :object ;
+                             owl:onClass rdfs:Resource ;
+                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
                            ] ;
            
            rdfs:comment "Represents an object map."@en .
@@ -588,8 +573,8 @@ rdfs:Resource rdf:type owl:Class .
                     
                     rdfs:subClassOf owl:Thing ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty :objectMap ;
-                                      owl:onClass :ObjectMap ;
+                                      owl:onProperty :refObjectMap ;
+                                      owl:onClass :RefObjectMap ;
                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
@@ -598,12 +583,20 @@ rdfs:Resource rdf:type owl:Class .
                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty :refObjectMap ;
-                                      owl:onClass :RefObjectMap ;
+                                      owl:onProperty :objectMap ;
+                                      owl:onClass :ObjectMap ;
                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
                                     ] ;
                     
                     rdfs:comment "Represents a predicate-object map."@en .
+
+
+
+###  http://www.w3.org/ns/r2rml#R2RMLView
+
+:R2RMLView rdf:type owl:Class ;
+           
+           rdfs:subClassOf :LogicalTable .
 
 
 
@@ -643,13 +636,13 @@ rdfs:Resource rdf:type owl:Class .
             
             rdfs:subClassOf owl:Thing ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :subjectMap ;
-                              owl:onClass :SubjectMap ;
+                              owl:onProperty :logicalTable ;
+                              owl:onClass :LogicalTable ;
                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
                             ] ,
                             [ rdf:type owl:Restriction ;
-                              owl:onProperty :logicalTable ;
-                              owl:onClass :LogicalTable ;
+                              owl:onProperty :subjectMap ;
+                              owl:onClass :SubjectMap ;
                               owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
                             ] ;
             

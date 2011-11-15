@@ -63,12 +63,62 @@
 	<div class="toc" id="classes">
 	<h2>Classes</h2>
 	<p>
-	  	    <a href="#BlankNode">Blank Node</a>, 	  	    <a href="#GraphMap">Graph Map</a>, 	  	    <a href="#IRI">IRI</a>, 	  	    <a href="#Join">Join</a>, 	  	    <a href="#Literal">Literal</a>, 	  	    <a href="#LogicalTable">Logical Table</a>, 	  	    <a href="#ObjectMap">Object Map</a>, 	  	    <a href="#PredicateMap">Predicate Map</a>, 	  	    <a href="#PredicateObjectMap">Predicate Object Map</a>, 	  	    <a href="#RefObjectMap">Ref Object Map</a>, 	  	    <a href="#SubjectMap">Subject Map</a>, 	  	    <a href="#TriplesMap">Triples Map</a>	  	</p>
+	  	    <a href="#BaseTableOrView">Base Table Or View</a>,	<a href="#BlankNode">Blank Node</a>, 	  	    <a href="#GraphMap">Graph Map</a>, 	  	    <a href="#IRI">IRI</a>, 	  	    <a href="#Join">Join</a>, 	  	    <a href="#Literal">Literal</a>, 	  	    <a href="#LogicalTable">Logical Table</a>, 	  	    <a href="#ObjectMap">Object Map</a>, 	  	    <a href="#PredicateMap">Predicate Map</a>, 	  	    <a href="#PredicateObjectMap">Predicate Object Map</a>, 	  	    <a href="#RefObjectMap">Ref Object Map</a>,	<a href="#R2RMLView">R2RML View</a>,	  	    <a href="#SubjectMap">Subject Map</a>, 	  	    <a href="#TriplesMap">Triples Map</a>	  	</p>
 	</div>
+
+
+		  <div class="details classes">
+
+	<div class="term" id="md5-1ce7b7d44a62ccd5547840f8407047f4" about="http://www.w3.org/ns/r2rml#BaseTableOrView">
+
+
+  <h3 id="anchor808242413"> <a id="BaseTableOrView"></a><span class="parrot-element-title parrot-class-title">Base Table Or View</span>
+
+			<span rel="rdf:type" href="http://www.w3.org/2002/07/owl#Class">(OWL Class)</span> 
 	
+  
+      <span class="menu"> 
+	  	  <span class="ti-menu">Definition</span> 	  	      </span> 
+  </h3>
+  
+        <p class="description">Denotes a base database table or view</p>
+    
+  <div>
+  
+  
+    <div class="ti"> 
+  <h4>Definition</h4> 
+			<p>The <strong>URI</strong> of this class is <span><code>http://www.w3.org/ns/r2rml#BaseTableOrView</code></span></p>
+
+	
+		    
+  </div>
+  
+<div class="inuse">
+  <h4>In use</h4>
+  		  
+   	    <table>
+	  			  <tr>
+		  <td>This class is used in</td>
+		  <td> 	  
+		  		  <span class="parrot-element-ref parrot-property-ref"><a href="#tableName">table Name</a></span>
+		  		  </td>
+		  </tr>
+				
+			
+			</table>
+	  </div> 
+
+    
+  </div>
+</div> 
+  </div>
+
+  <hr />  	
 		  <div class="details classes">
 
 
+		  
 
 
 	<div class="term" id="md5-1ce7b7d44a62ccd5547840f8407047f4" about="http://www.w3.org/ns/r2rml#BlankNode">
@@ -532,6 +582,60 @@
 </div> 
   </div>
 		<hr />
+
+  <div class="details classes">
+
+
+
+
+	<div class="term" id="md5-8ed90311cd9932751a68f063b08282b" about="http://www.w3.org/ns/r2rml#R2RMLView">
+
+
+  <h3 id="anchor-806731689"> <a id="R2RMLView"></a><span class="parrot-element-title parrot-class-title">R2RML View</span>
+
+			<span rel="rdf:type" href="http://www.w3.org/2002/07/owl#Class">(OWL Class)</span> 
+	
+  
+      <span class="menu"> 
+	  	  <span class="ti-menu">Definition</span> 	  <span class="inuse-menu">In use</span> 	      </span> 
+  </h3>
+  
+        <p class="description">Represents a R2RML view.</p>
+    
+  <div>
+  
+  
+    <div class="ti"> 
+  <h4>Definition</h4> 
+			<p>The <strong>URI</strong> of this class is <span><code>http://www.w3.org/ns/r2rml#R2RMLView</code></span></p>
+
+	
+		    
+  </div>
+  
+    <div class="inuse">
+  <h4>In use</h4>
+  		  
+   	    <table>
+	  			  <tr>
+		  <td>This class is used in</td>
+		  <td> 	  
+		  		  <span class="parrot-element-ref parrot-property-ref"><a href="#sqlQuery">sql Query</a></span>
+		  		  <span class="parrot-element-ref parrot-property-ref"><a href="#sqlVersion">sql Version</a></span>
+		  		  </td>
+		  </tr>
+				
+			
+			</table>
+	  </div>
+    
+    
+  </div>
+</div> 
+  </div>
+		<hr />
+		
+  
   <div class="details classes">
 
 
@@ -1768,7 +1872,12 @@
     	    	<strong>data</strong> property.    
     	    	    	    	</p>
         <table>
-    
+
+          <tr>
+      <td>The domain of this property is</td>
+      <td><span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://www.w3.org/ns/r2rml#R2RMLView">            	<a href="#R2RMLView">R2RML View</a>
+      </span></td>
+      </tr>		
     
           <tr>
       <td>The range of this property is</td>
@@ -1821,6 +1930,20 @@
     	    	    	    	    	    	    	    
     	    	    	<strong>object</strong> property.  
     	    	    	</p>
+						
+        <table>
+
+          <tr>
+      <td>The domain of this property is</td>
+      <td><span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://www.w3.org/ns/r2rml#R2RMLView">            	<a href="#R2RMLView">R2RML View</a>
+      </span></td>
+      </tr>		
+    
+    
+       
+    
+        </table>
+						
        </div>
     
     
@@ -1969,7 +2092,13 @@
     	    	    	    	</p>
    
         <table>
-    
+
+          <tr>
+      <td>The domain of this property is</td>
+      <td><span class="parrot-element-ref parrot-class-ref" rel="rdfs:domain" href="http://www.w3.org/ns/r2rml#BaseTableOrView">            	<a href="#BaseTableOrView">Base Table Or View</a>
+      </span></td>
+      </tr>
+		
     
           <tr>
       <td>The range of this property is</td>
@@ -2182,6 +2311,13 @@
    <div class="description" about="http://www.w3.org/2000/01/rdf-schema#Resource"
         typeof="owl:Class"/>
    <div class="description" about="http://www.w3.org/ns/r2rml#" typeof="owl:Ontology"/>
+   <div class="description" about="http://www.w3.org/ns/r2rml#BaseTableOrView"
+        typeof="owl:Class">
+      <div rel="rdfs:subClassOf">
+         <div class="description" about="http://www.w3.org/ns/r2rml#LogicalTable"
+              typeof="owl:Class"/>
+      </div>
+   </div>
    <div class="description" about="http://www.w3.org/ns/r2rml#BlankNode"
         typeof="owl:Class">
       <div property="rdfs:comment" content="Denotes a blank node, used with termType"
@@ -2199,17 +2335,6 @@
       <div property="rdfs:comment" content="Represents a join condition." xml:lang="en"/>
       <div rel="rdfs:subClassOf">
          <div class="description" typeof="owl:Restriction">
-            <div property="owl:maxQualifiedCardinality" content="1"
-                 datatype="xsd:nonNegativeInteger"/>
-            <div rel="owl:onDataRange" resource="http://www.w3.org/2001/XMLSchema#string"/>
-            <div rel="owl:onProperty">
-               <div class="description" about="http://www.w3.org/ns/r2rml#child"
-                    typeof="owl:DatatypeProperty"/>
-            </div>
-         </div>
-      </div>
-      <div rel="rdfs:subClassOf">
-         <div class="description" typeof="owl:Restriction">
             <div property="owl:minQualifiedCardinality" content="1"
                  datatype="xsd:nonNegativeInteger"/>
             <div rel="owl:onDataRange" resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -2237,6 +2362,17 @@
             <div rel="owl:onDataRange" resource="http://www.w3.org/2001/XMLSchema#string"/>
             <div rel="owl:onProperty">
                <div class="description" about="http://www.w3.org/ns/r2rml#parent"
+                    typeof="owl:DatatypeProperty"/>
+            </div>
+         </div>
+      </div>
+      <div rel="rdfs:subClassOf">
+         <div class="description" typeof="owl:Restriction">
+            <div property="owl:maxQualifiedCardinality" content="1"
+                 datatype="xsd:nonNegativeInteger"/>
+            <div rel="owl:onDataRange" resource="http://www.w3.org/2001/XMLSchema#string"/>
+            <div rel="owl:onProperty">
+               <div class="description" about="http://www.w3.org/ns/r2rml#child"
                     typeof="owl:DatatypeProperty"/>
             </div>
          </div>
@@ -2261,6 +2397,17 @@
          <div class="description" typeof="owl:Restriction">
             <div property="owl:minQualifiedCardinality" content="0"
                  datatype="xsd:nonNegativeInteger"/>
+            <div rel="owl:onClass" resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+            <div rel="owl:onProperty">
+               <div class="description" about="http://www.w3.org/ns/r2rml#object"
+                    typeof="owl:ObjectProperty"/>
+            </div>
+         </div>
+      </div>
+      <div rel="rdfs:subClassOf">
+         <div class="description" typeof="owl:Restriction">
+            <div property="owl:minQualifiedCardinality" content="0"
+                 datatype="xsd:nonNegativeInteger"/>
             <div rel="owl:onDataRange" resource="http://www.w3.org/2001/XMLSchema#string"/>
             <div rel="owl:onProperty">
                <div class="description" about="http://www.w3.org/ns/r2rml#language"
@@ -2278,17 +2425,6 @@
             </div>
             <div rel="owl:onProperty">
                <div class="description" about="http://www.w3.org/ns/r2rml#datatype"
-                    typeof="owl:ObjectProperty"/>
-            </div>
-         </div>
-      </div>
-      <div rel="rdfs:subClassOf">
-         <div class="description" typeof="owl:Restriction">
-            <div property="owl:minQualifiedCardinality" content="0"
-                 datatype="xsd:nonNegativeInteger"/>
-            <div rel="owl:onClass" resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-            <div rel="owl:onProperty">
-               <div class="description" about="http://www.w3.org/ns/r2rml#object"
                     typeof="owl:ObjectProperty"/>
             </div>
          </div>
@@ -2331,9 +2467,9 @@
            xml:lang="en"/>
       <div rel="rdfs:subClassOf">
          <div class="description" typeof="owl:Restriction">
-            <div rel="owl:onClass" resource="http://www.w3.org/ns/r2rml#RefObjectMap"/>
+            <div rel="owl:onClass" resource="http://www.w3.org/ns/r2rml#ObjectMap"/>
             <div rel="owl:onProperty">
-               <div class="description" about="http://www.w3.org/ns/r2rml#refObjectMap"
+               <div class="description" about="http://www.w3.org/ns/r2rml#objectMap"
                     typeof="owl:ObjectProperty"/>
             </div>
             <div property="owl:qualifiedCardinality" content="1"
@@ -2353,9 +2489,9 @@
       </div>
       <div rel="rdfs:subClassOf">
          <div class="description" typeof="owl:Restriction">
-            <div rel="owl:onClass" resource="http://www.w3.org/ns/r2rml#ObjectMap"/>
+            <div rel="owl:onClass" resource="http://www.w3.org/ns/r2rml#RefObjectMap"/>
             <div rel="owl:onProperty">
-               <div class="description" about="http://www.w3.org/ns/r2rml#objectMap"
+               <div class="description" about="http://www.w3.org/ns/r2rml#refObjectMap"
                     typeof="owl:ObjectProperty"/>
             </div>
             <div property="owl:qualifiedCardinality" content="1"
@@ -2363,6 +2499,13 @@
          </div>
       </div>
       <div rel="rdfs:subClassOf" resource="http://www.w3.org/2002/07/owl#Thing"/>
+   </div>
+   <div class="description" about="http://www.w3.org/ns/r2rml#R2RMLView"
+        typeof="owl:Class">
+      <div rel="rdfs:subClassOf">
+         <div class="description" about="http://www.w3.org/ns/r2rml#LogicalTable"
+              typeof="owl:Class"/>
+      </div>
    </div>
    <div class="description" about="http://www.w3.org/ns/r2rml#RefObjectMap"
         typeof="owl:Class">
@@ -2410,11 +2553,11 @@
       <div rel="rdfs:subClassOf">
          <div class="description" typeof="owl:Restriction">
             <div rel="owl:onClass">
-               <div class="description" about="http://www.w3.org/ns/r2rml#LogicalTable"
+               <div class="description" about="http://www.w3.org/ns/r2rml#SubjectMap"
                     typeof="owl:Class"/>
             </div>
             <div rel="owl:onProperty">
-               <div class="description" about="http://www.w3.org/ns/r2rml#logicalTable"
+               <div class="description" about="http://www.w3.org/ns/r2rml#subjectMap"
                     typeof="owl:ObjectProperty"/>
             </div>
             <div property="owl:qualifiedCardinality" content="1"
@@ -2424,11 +2567,11 @@
       <div rel="rdfs:subClassOf">
          <div class="description" typeof="owl:Restriction">
             <div rel="owl:onClass">
-               <div class="description" about="http://www.w3.org/ns/r2rml#SubjectMap"
+               <div class="description" about="http://www.w3.org/ns/r2rml#LogicalTable"
                     typeof="owl:Class"/>
             </div>
             <div rel="owl:onProperty">
-               <div class="description" about="http://www.w3.org/ns/r2rml#subjectMap"
+               <div class="description" about="http://www.w3.org/ns/r2rml#logicalTable"
                     typeof="owl:ObjectProperty"/>
             </div>
             <div property="owl:qualifiedCardinality" content="1"
@@ -2774,72 +2917,14 @@
    <div class="description" about="http://www.w3.org/ns/r2rml#sqlQuery"
         typeof="owl:DatatypeProperty">
       <div property="rdfs:comment" content="A valid SQL query." xml:lang="en"/>
-      <div rel="rdfs:domain">
-         <div class="description" typeof="owl:Class">
-            <div rel="owl:intersectionOf">
-               <div xmlns="" typeof="rdf:List">
-                  <div rel="rdf:first">
-                     <div xmlns="http://www.w3.org/1999/xhtml" class="description"
-                          about="http://www.w3.org/ns/r2rml#LogicalTable"
-                          typeof="owl:Class"/>
-                  </div>
-                  <div rel="rdf:rest">
-                     <div typeof="rdf:List">
-                        <div rel="rdf:first">
-                           <div xmlns="http://www.w3.org/1999/xhtml" class="description"
-                                typeof="owl:Restriction">
-                              <div property="owl:maxQualifiedCardinality" content="0"
-                                   datatype="xsd:nonNegativeInteger"/>
-                              <div rel="owl:onDataRange" resource="http://www.w3.org/2001/XMLSchema#string"/>
-                              <div rel="owl:onProperty">
-                                 <div class="description" about="http://www.w3.org/ns/r2rml#tableName"
-                                      typeof="owl:DatatypeProperty"/>
-                              </div>
-                           </div>
-                        </div>
-                        <div rel="rdf:rest" resource="[rdf:nil]"/>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+      <div rel="rdfs:domain" resource="http://www.w3.org/ns/r2rml#R2RMLView"/>
       <div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#string"/>
    </div>
    <div class="description" about="http://www.w3.org/ns/r2rml#sqlVersion"
         typeof="owl:ObjectProperty">
       <div property="rdfs:comment" content="An identifier for a SQL version."
            xml:lang="en"/>
-      <div rel="rdfs:domain">
-         <div class="description" typeof="owl:Class">
-            <div rel="owl:intersectionOf">
-               <div xmlns="" typeof="rdf:List">
-                  <div rel="rdf:first">
-                     <div xmlns="http://www.w3.org/1999/xhtml" class="description"
-                          about="http://www.w3.org/ns/r2rml#LogicalTable"
-                          typeof="owl:Class"/>
-                  </div>
-                  <div rel="rdf:rest">
-                     <div typeof="rdf:List">
-                        <div rel="rdf:first">
-                           <div xmlns="http://www.w3.org/1999/xhtml" class="description"
-                                typeof="owl:Restriction">
-                              <div property="owl:maxQualifiedCardinality" content="0"
-                                   datatype="xsd:nonNegativeInteger"/>
-                              <div rel="owl:onDataRange" resource="http://www.w3.org/2001/XMLSchema#string"/>
-                              <div rel="owl:onProperty">
-                                 <div class="description" about="http://www.w3.org/ns/r2rml#tableName"
-                                      typeof="owl:DatatypeProperty"/>
-                              </div>
-                           </div>
-                        </div>
-                        <div rel="rdf:rest" resource="[rdf:nil]"/>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+      <div rel="rdfs:domain" resource="http://www.w3.org/ns/r2rml#R2RMLView"/>
    </div>
    <div class="description" about="http://www.w3.org/ns/r2rml#subject"
         typeof="owl:ObjectProperty">
@@ -2889,33 +2974,7 @@
         typeof="owl:DatatypeProperty">
       <div property="rdfs:comment" content="Schema-qualified name of a table or view."
            xml:lang="en"/>
-      <div rel="rdfs:domain">
-         <div class="description" typeof="owl:Class">
-            <div rel="owl:intersectionOf">
-               <div xmlns="" typeof="rdf:List">
-                  <div rel="rdf:first">
-                     <div xmlns="http://www.w3.org/1999/xhtml" class="description"
-                          about="http://www.w3.org/ns/r2rml#LogicalTable"
-                          typeof="owl:Class"/>
-                  </div>
-                  <div rel="rdf:rest">
-                     <div typeof="rdf:List">
-                        <div rel="rdf:first">
-                           <div xmlns="http://www.w3.org/1999/xhtml" class="description"
-                                typeof="owl:Restriction">
-                              <div property="owl:maxQualifiedCardinality" content="0"
-                                   datatype="xsd:nonNegativeInteger"/>
-                              <div rel="owl:onDataRange" resource="http://www.w3.org/2001/XMLSchema#string"/>
-                              <div rel="owl:onProperty" resource="http://www.w3.org/ns/r2rml#sqlQuery"/>
-                           </div>
-                        </div>
-                        <div rel="rdf:rest" resource="[rdf:nil]"/>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
+      <div rel="rdfs:domain" resource="http://www.w3.org/ns/r2rml#BaseTableOrView"/>
       <div rel="rdfs:range" resource="http://www.w3.org/2001/XMLSchema#string"/>
    </div>
    <div class="description" about="http://www.w3.org/ns/r2rml#template"
@@ -3064,7 +3123,7 @@ Ivan Herman,
 		</span>
 	  </span>
 	  <br/>
-	  <span >2011-10-05</span>
+	  <span >2011-10-15</span>
 	  <br />
 	  <span property="owl:versionInfo">$Date$</span>
 	</address>
