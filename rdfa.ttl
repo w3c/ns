@@ -19,10 +19,10 @@ rdfa:PrefixOrTermMapping a rdfs:Class,
 
 rdfa: a owl:Ontology;
     dc:creator ns3:me;
-    dc:date "2011-08-25";
+    dc:date "2011-11-22";
     dc:description "This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa 1.1 processing behavior.";
     dc:title "RDFa Vocabulary for Term and Prefix Assignment, and for Processor Graph Reporting";
-    rdfs:isDefinedBy ns7:s_profiles;
+    rdfs:isDefinedBy ns7:s_initialcontexts;
     owl:versionInfo "$Date$" .
 
 rdfa:DocumentError dc:description "error condition; to be used when the document fails to be fully processed as a result of non-conformant host language markup";
@@ -31,10 +31,6 @@ rdfa:DocumentError dc:description "error condition; to be used when the document
 
 rdfa:Info dc:description "is the class for all informations";
     rdfs:subClassOf rdfa:PGClass .
-
-rdfa:ProfileReferenceError dc:description "error condition; to be used when a default RDFa Profile document fails to be retrieved and thus the document fails to be processed";
-    rdfs:subClassOf rdfa:Error,
-        rdfa:PGClass .
 
 rdfa:UnresolvedCURIE dc:description "warning; to be used when a CURIE prefix fails to be resolved";
     rdfs:subClassOf rdfa:PGClass,
