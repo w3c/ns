@@ -266,8 +266,8 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<dt>Sub class of</dt>
  
   
- <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#PublicKey"><a href="#PublicKey">cert:PublicKey</a></span></dd> 
- <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#RSAKey"><a href="#RSAKey">cert:RSAKey</a></span></dd><dt>OWL Class</dt>
+ <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#RSAKey"><a href="#RSAKey">cert:RSAKey</a></span></dd> 
+ <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#PublicKey"><a href="#PublicKey">cert:PublicKey</a></span></dd><dt>OWL Class</dt>
  
  
   			</dl>
@@ -350,7 +350,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			
   			<p style="float: right; font-size: small;">[<a href="#exponent">#</a>] <!-- exponent --> [<a href="#glance">back to top</a>]</p>
   			<br/>
-  			</div><div class="specterm" id="key" about="http://www.w3.org/ns/auth/cert#key" typeof="rdf:Property">
+  			</div><div class="specterm" id="key" about="http://www.w3.org/ns/auth/cert#key" typeof="owl:ObjectProperty">
   			<h4>Property: cert:key</h4> 
   			<em property="rdfs:label" >key</em> - <span property="rdfs:comment" >relates an agent to a key - most often the public key.</span> <br />
 			<dl>
@@ -371,9 +371,9 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   <dd><a href="#identity">cert:identity</a>
 </dd><dt>RDF Property</dt>
  
-  <dt>Object Property</dt>
+ <dd><span rel="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"></span></dd> <dt>Object Property</dt>
  
- <dd><span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span></dd>
+ 
   			</dl>
   			
   			<p style="float: right; font-size: small;">[<a href="#key">#</a>] <!-- key --> [<a href="#glance">back to top</a>]</p>
@@ -381,8 +381,16 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			</div><div class="specterm" id="modulus" about="http://www.w3.org/ns/auth/cert#modulus" typeof="owl:DatatypeProperty">
   			<h4>Property: cert:modulus</h4> 
   			<em property="rdfs:label" >modulus</em> - <span property="rdfs:comment" >    
-   The modulus of an RSA public and private key. 
+   <p>The modulus of an RSA public and private key. 
    Or the modulus of a DSA Key.
+   The modulus is encoded as a hex binary. The binary is the same as the one encoded in the 
+  <a href="http://www.w3.org/TR/xmldsig-core/#sec-CryptoBinary">XML DSIG CryptoBinary</a>
+  </p>
+  <blockquote>
+   This specification defines the ds:CryptoBinary simple type for representing arbitrary-length integers (e.g. "bignums") in XML as octet strings. The integer value is first converted to a "big endian" bitstring. The bitstring is then padded with leading zero bits so that the total number of bits == 0 mod 8 (so that there are an integral number of octets). If the bitstring contains entire leading octets that are zero, these are removed (so the high-order octet is always non-zero).
+  </blockquote>
+ <p>The only difference is that the octet string is then encoded using either xsd:base64Binary or xsd:hexBinary. Currently for all usages of this relation, the xsd:hexBinary datatype should be used until the SPARQL working group specifies specifies in its <a href="http://www.w3.org/TR/sparql11-entailment/#DEntRegime">D-Entailment</a> that those two types are equivalent.</p>
+ <p>It would have been better had there been a hexInteger datatype that was standard and supported by all tools.</p>
    </span> <br />
 			<dl>
   			<dt>Status:</dt>
@@ -394,7 +402,8 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
 </dd>
   			<dt>Range:</dt>
  
-  <dd><span rel="rdfs:range" href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"><a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">xsd:nonNegativeInteger</a></span>
+  <dd><span rel="rdfs:range" href="http://www.w3.org/2001/XMLSchema#base64Binary"><a href="http://www.w3.org/2001/XMLSchema#base64Binary">xsd:base64Binary</a></span>
+</dd> <dd><span rel="rdfs:range" href="http://www.w3.org/2001/XMLSchema#hexBinary"><a href="http://www.w3.org/2001/XMLSchema#hexBinary">xsd:hexBinary</a></span>
 </dd><dt>Datatype Property</dt>
  
  
@@ -428,7 +437,7 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			<p style="float: right; font-size: small;">[<a href="#privateExponent">#</a>] <!-- privateExponent --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div>
-<div class="specterm" id="identity" about="http://www.w3.org/ns/auth/cert#identity" typeof="rdf:Property">
+<div class="specterm" id="identity" about="http://www.w3.org/ns/auth/cert#identity" typeof="owl:ObjectProperty">
   			<h4>Property: cert:identity</h4> 
   			<em property="rdfs:label" >identity</em> - <span property="rdfs:comment" >
     the identity of the public key. This is the entity that knows the private key and 
@@ -450,9 +459,9 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   <dd><a href="#key">cert:key</a>
 </dd><dt>RDF Property</dt>
  
-  <dt>Object Property</dt>
+ <dd><span rel="rdf:type" href="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"></span></dd> <dt>Object Property</dt>
  
- <dd><span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span></dd><dt>Editorial Note</dt>
+ <dt>Editorial Note</dt>
  
  <dd property="skos:editorialNote">
          It turns out that this relation is unintuitive to write out and to name.
