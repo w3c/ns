@@ -39,7 +39,6 @@
        by two numbers.
      - also create html version of the spec by using this as a template.
      - should comments such as this be in html?
-     - add more todos
    </comment>
         <seeAlso rdf:resource="http://lists.foaf-project.org/mailman/listinfo/foaf-protocols"/>
         <seeAlso rdf:resource="http://www.w3.org/ns/auth/X509Uml.svg"/>
@@ -88,6 +87,28 @@
         <vs:term_status>unstable</vs:term_status>
     </owl:Class>
 
+    <owl:Class rdf:about="http://www.w3.org/ns/auth/cert#RSAKey">
+        <comment xml:lang="en">
+    The union of the public and private components of an RSAKey.
+    Usually those pieces are not kept together
+    </comment>
+        <label xml:lang="en">RSA Key</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#Key"/>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:Class>
+
+    <owl:Class rdf:about="http://www.w3.org/ns/auth/cert#RSAPublicKey">
+        <comment xml:lang="en">
+    The RSA public key.  Padded message m are encrypted by applying the function
+      modulus(power(m,exponent),modulus)
+    </comment>
+        <label xml:lang="en">RSA Public Key</label>
+        <seeAlso rdf:resource="http://en.wikipedia.org/wiki/RSA"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#PublicKey"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#RSAKey"/>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:Class>
+
     <owl:Class rdf:about="http://www.w3.org/ns/auth/cert#Signature">
         <comment xml:lang="en">the class of signtatures</comment>
         <label>Signature</label>
@@ -102,34 +123,18 @@
         <vs:term_status>unstable</vs:term_status>
     </owl:Class>
 
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/auth/cert#decimal">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/auth/cert#exponent">
         <comment xml:lang="en">
-      An encoding of an integer in base 10 notation. Use cert:int instead.
+       The exponent used to encrypt the message. Number chosen between
+       1 and the totient(p*q). Often named 'e' .
     </comment>
-        <domain rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-        <label xml:lang="en">decimal</label>
-        <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
-        <vs:term_status>archaic</vs:term_status>
-        <skos:editorialNote xml:lang="en">
-      The name for this relation is not good. Even though Decimal is clearly defined as numbers in base 10 notation ( conf http://en.wikipedia.org/wiki/Decimal ), it is most often understood as refering to numbers with decimal fractions, which in cryptgraphic integer arithmetic do not turn up. 
-    Instead one should use cert:int
-    The following is necessarily true.
-    &#60;pre&#62;
-    [] :decimal "10" ;
-       owl:sameAs "10"^^xsd:integer .
-    &#60;/pre&#62;
-   This was used like this
-   &#60;pre&#62;
-   [] a rsa:RSAPublicKey;
-     rsa:exponent [ cert:decimal "105 " ]
-   &#60;/pre&#62;
-   </skos:editorialNote>
+        <domain rdf:resource="http://www.w3.org/ns/auth/cert#RSAPublicKey"/>
+        <label xml:lang="en">exponent</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <vs:term_status>unstable</vs:term_status>
     </owl:DatatypeProperty>
 
     <Datatype rdf:about="http://www.w3.org/ns/auth/cert#hex">
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <comment rdf:parseType="Literal"><span xmlns="http://www.w3.org/1999/xhtml"><p>
    An encoding of a positive integer (from 0 to infinity) as a hexadecimal string that makes it easy to read and/or fun to present on the web.</p>
    <p>The purpose of this way of representing hexadecimals is to enable users to copy and paste hexadecimal notations as shown by most browsers, keychains or tools such as opensso, into their rdf representation of choice.  There are a wide variety of ways in which such strings can be presented. One finds the following:</p>
@@ -169,12 +174,10 @@
  </pre> 
    </span>
         </comment>
-        <domain rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
         <label xml:lang="en">hexadecimal</label>
-        <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <seeAlso rdf:resource="http://en.wikipedia.org/wiki/Hexadecimal"/>
         <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-        <vs:term_status>unstable</vs:term_status>
+        <vs:term_status>archaic</vs:term_status>
         <skos:editorialNote xml:lang="en">&#60;span xmlns="http://www.w3.org/1999/xhtml"&#62;&#60;p&#62; 
      This relation should slowly be transited to just being a datatype.&#60;/p&#62;
      &#60;p&#62;Being a datatype and a property is legal as explained here
@@ -200,21 +203,6 @@
     </skos:editorialNote>
     </rdf:Property>
 
-    <Datatype rdf:about="http://www.w3.org/ns/auth/cert#int">
-        <comment xml:lang="en">
-      A positive integer in base 10 notation.
-      xsd:nonNegativeInteger could be used, but is a bit long to write, and may be too strictly defined. 
-      This is here to provice a pair with cert:hex, to avoid needing to import a new namespace, and to give a bit more flexibility in the future. It is more flexible writing than xsd:int, as it allows white space.
-   </comment>
-        <label xml:lang="en">int</label>
-        <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
-        <vs:term_status>unstable</vs:term_status>
-        <skos:editorialNote xml:lang="en">
-      We may decide to make it easier to write integers than what xsd:integer provides, if needed.
-      It is arguable that this is needed at all.
-   </skos:editorialNote>
-    </Datatype>
-
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/cert#key">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <comment xml:lang="en">relates an agent to a key - most often the public key.</comment>
@@ -225,4 +213,29 @@
         <owl:inverseOf rdf:resource="http://www.w3.org/ns/auth/cert#identity"/>
         <vs:term_status>unstable</vs:term_status>
     </rdf:Property>
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/auth/cert#modulus">
+        <comment xml:lang="en">    
+   The modulus of an RSA public and private key. 
+   Or the modulus of a DSA Key.
+   </comment>
+        <domain rdf:resource="http://www.w3.org/ns/auth/cert#DSAKey"/>
+        <domain rdf:resource="http://www.w3.org/ns/auth/cert#RSAKey"/>
+        <label xml:lang="en">modulus</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:DatatypeProperty>
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/auth/cert#privateExponent">
+        <comment xml:lang="en">
+       The exponent used to decrypt the message
+       calculated as 
+          public_exponent*private_exponent = 1 modulo totient(p*q)
+       The private exponent is often named 'd'
+    </comment>
+        <domain rdf:resource="http://www.w3.org/ns/auth/cert#RSAPrivateKey"/>
+        <label xml:lang="en">private</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
+        <vs:term_status>unstable</vs:term_status>
+    </owl:DatatypeProperty>
 </rdf:RDF>

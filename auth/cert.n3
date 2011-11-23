@@ -44,7 +44,6 @@
        by two numbers.
      - also create html version of the spec by using this as a template.
      - should comments such as this be in html?
-     - add more todos
    """@en.
 
 :Certificate a owl:Class;
@@ -105,13 +104,10 @@
 #    rdfs:domain :PrivateKey;
 #    rdfs:range :PublicKey .  
 
-:hex a owl:DatatypeProperty, rdfs:Datatype,
-      owl:InverseFunctionalProperty;
+:hex a rdfs:Datatype;
    rdfs:label "hexadecimal"@en;  
    rdfs:seeAlso <http://en.wikipedia.org/wiki/Hexadecimal>;
    owl:equivalentClass xsd:nonNegativeInteger;
-   rdfs:domain xsd:nonNegativeInteger;
-   rdfs:range xsd:string;
    skos:editorialNote """<span xmlns="http://www.w3.org/1999/xhtml"><p> 
      This relation should slowly be transited to just being a datatype.</p>
      <p>Being a datatype and a property is legal as explained here
@@ -156,45 +152,7 @@
      rsa:public_exponent "e1 dc d5 ..."^^cert:hex .
  </pre> 
    </span>"""^^rdf:XMLLiteral;
-  vs:term_status "unstable" .
-
-:decimal a owl:DatatypeProperty,
-           owl:InverseFunctionalProperty;
-   vs:term_status "archaic";
-   rdfs:label "decimal"@en;
-   rdfs:domain xsd:nonNegativeInteger;
-   rdfs:range xsd:string; 
-   skos:editorialNote """
-      The name for this relation is not good. Even though Decimal is clearly defined as numbers in base 10 notation ( conf http://en.wikipedia.org/wiki/Decimal ), it is most often understood as refering to numbers with decimal fractions, which in cryptgraphic integer arithmetic do not turn up. 
-    Instead one should use cert:int
-    The following is necessarily true.
-    <pre>
-    [] :decimal "10" ;
-       owl:sameAs "10"^^xsd:integer .
-    </pre>
-   This was used like this
-   <pre>
-   [] a rsa:RSAPublicKey;
-     rsa:exponent [ cert:decimal "105 " ]
-   </pre>
-   """@en;
-   rdfs:comment """
-      An encoding of an integer in base 10 notation. Use cert:int instead.
-    """@en.
-
-:int a rdfs:Datatype;
-   vs:term_status "unstable";
-   rdfs:label "int"@en;
-   owl:equivalentClass xsd:nonNegativeInteger;
-   skos:editorialNote """
-      We may decide to make it easier to write integers than what xsd:integer provides, if needed.
-      It is arguable that this is needed at all.
-   """@en;
-   rdfs:comment """
-      A positive integer in base 10 notation.
-      xsd:nonNegativeInteger could be used, but is a bit long to write, and may be too strictly defined. 
-      This is here to provice a pair with cert:hex, to avoid needing to import a new namespace, and to give a bit more flexibility in the future. It is more flexible writing than xsd:int, as it allows white space.
-   """@en .
+  vs:term_status "archaic" .
 
 :identity a rdf:Property, owl:ObjectProperty;
     vs:term_status "archaic";
@@ -218,4 +176,56 @@
     rdfs:comment """relates an agent to a key - most often the public key."""@en ;
     rdfs:domain foaf:Agent;
     rdfs:range :Key, :PublicKey .
+
+:RSAKey a owl:Class;
+    rdfs:label "RSA Key"@en;
+    rdfs:subClassOf :Key;
+    vs:term_status "unstable";
+    rdfs:comment """
+    The union of the public and private components of an RSAKey.
+    Usually those pieces are not kept together
+    """@en.
+     
+:RSAPublicKey a owl:Class;
+    rdfs:label "RSA Public Key"@en;
+    rdfs:subClassOf :PublicKey, :RSAKey;
+    vs:term_status "unstable";
+    rdfs:seeAlso <http://en.wikipedia.org/wiki/RSA>;
+    rdfs:comment """
+    The RSA public key.  Padded message m are encrypted by applying the function
+      modulus(power(m,exponent),modulus)
+    """@en .
+
+:modulus a owl:DatatypeProperty;
+   rdfs:label "modulus"@en;
+   vs:term_status "unstable";
+   rdfs:comment """    
+   The modulus of an RSA public and private key. 
+   Or the modulus of a DSA Key.
+   """@en;
+   rdfs:domain :RSAKey, :DSAKey;
+   rdfs:range xsd:nonNegativeInteger .
+
+:exponent a owl:DatatypeProperty;
+   rdfs:label "exponent"@en;
+   vs:term_status "unstable";
+   rdfs:comment """
+       The exponent used to encrypt the message. Number chosen between
+       1 and the totient(p*q). Often named 'e' .
+    """@en;
+   rdfs:domain :RSAPublicKey;
+   rdfs:range xsd:nonNegativeInteger .
+
+:privateExponent a owl:DatatypeProperty ;
+    rdfs:label "private"@en;
+    vs:term_status "unstable";
+    rdfs:comment """
+       The exponent used to decrypt the message
+       calculated as 
+          public_exponent*private_exponent = 1 modulo totient(p*q)
+       The private exponent is often named 'd'
+    """@en;
+   rdfs:domain :RSAPrivateKey;
+   rdfs:range xsd:nonNegativeInteger .
+
 

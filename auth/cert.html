@@ -77,10 +77,12 @@ URI: <a href="https://dvcs.w3.org/hg/WebID">https://dvcs.w3.org/hg/WebID</a>
  
  
 <div class="azlist">
-<p>Classes: | <a href="#Certificate">Certificate</a> |  <a href="#PGPCertificate">PGPCertificate</a> |  <a href="#PrivateKey">PrivateKey</a> |  <a href="#PublicKey">PublicKey</a> |  <a href="#Signature">Signature</a> |  <a href="#X509Certificate">X509Certificate</a> | 
-</p>
-<p>Properties: | <a href="#decimal">decimal</a> |  <a href="#hex">hex</a> |  <a href="#identity">identity</a> |  <a href="#key">key</a> | 
-</p>
+<p><span style="font-weight: bold;">Classes:</span> <a href="#Certificate">Certificate</a> | <a href="#PGPCertificate">PGPCertificate</a> | <a href="#PrivateKey">PrivateKey</a> | <a href="#PublicKey">PublicKey</a> | <a href="#RSAKey">RSAKey</a> | <a href="#RSAPublicKey">RSAPublicKey</a> | <a href="#Signature">Signature</a> | <a href="#X509Certificate">X509Certificate</a> </p> 
+
+<p><span style="font-weight: bold;">Properties:</span> <a href="#exponent">exponent</a> | <a href="#identity">identity</a> | <a href="#key">key</a> | <a href="#modulus">modulus</a> | <a href="#privateExponent">privateExponent</a> </p> 
+
+<p><span style="font-weight: bold;">Datatypes:</span> <a href="#hex">hex</a> </p>
+
 </div>
 
 <div style="clear: left;"></div>
@@ -103,38 +105,23 @@ documentation, they progress through the categories
 </div>
 
 <h2 id="sec-example">Examples</h2>
-<pre> @prefix cert: &lt;http://www.w3.org/ns/auth/cert#&gt; .
- @prefix rsa: &lt;http://www.w3.org/ns/auth/rsa#&gt; .
+<pre class="example" style="word-wrap: break-word; white-space: pre-wrap;">
+ @prefix : &lt;http://www.w3.org/ns/auth/cert#&gt; .
+ @prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
  @prefix foaf: &lt;http://xmlns.com/foaf/0.1/&gt; .
- @prefix : &lt;https://joe.example/profile#&gt; .
+ @prefix bob: &lt;https://bob.example/profile#&gt; .
+ @prefix rdfs: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt; .
 
- :me a foaf:Person;
-     foaf:name "Joe" .
-     cert:key [ a rsa:RSAPublicKey;
-                rsa:modulus """
-            00:cb:24:ed:85:d6:4d:79:4b:69:c7:01:c1:86:ac:
-            c0:59:50:1e:85:60:00:f6:61:c9:32:04:d8:38:0e:
-            07:19:1c:5c:8b:36:8d:2a:c3:2a:42:8a:cb:97:03:
-            98:66:43:68:dc:2a:86:73:20:22:0f:75:5e:99:ca:
-            2e:ec:da:e6:2e:8d:15:fb:58:e1:b7:6a:e5:9c:b7:
-            ac:e8:83:83:94:d5:9e:72:50:b4:49:17:6e:51:a4:
-            94:95:1a:1c:36:6c:62:17:d8:76:8d:68:2d:de:78:
-            dd:4d:55:e6:13:f8:83:9c:f2:75:d4:c8:40:37:43:
-            e7:86:26:01:f3:c4:9a:63:66:e1:2b:b8:f4:98:26:
-            2c:3c:77:de:19:bc:e4:0b:32:f8:9a:e6:2c:37:80:
-            f5:b6:27:5b:e3:37:e2:b3:15:3a:e2:ba:72:a9:97:
-            5a:e7:1a:b7:24:64:94:97:06:6b:66:0f:cf:77:4b:
-            75:43:d9:80:95:2d:2e:85:86:20:0e:da:41:58:b0:
-            14:e7:54:65:d9:1e:cf:93:ef:c7:ac:17:0c:11:fc:
-            72:46:fc:6d:ed:79:c3:77:80:00:0a:c4:e0:79:f6:
-            71:fd:4f:20:7a:d7:70:80:9e:0e:2d:7b:0e:f5:49:
-            3b:ef:e7:35:44:d8:e1:be:3d:dd:b5:24:55:c6:13:
-            91:a1"""^^cert:hex;
-                rsa:public_exponent "65537"^^cert:int ] .
+ bob:me a foaf:Person;
+   foaf:name "Bob";
+   :key [ a :RSAPublicKey;
+     rdfs:label "made on 23 November 2011 on my laptop";
+     :modulus "00cb24ed85d64d794b69c701c186acc059501e856000f661c93204d8380e07191c5c8b368d2ac32a428acb970398664368dc2a867320220f755e99ca2eecdae62e8d15fb58e1b76ae59cb7ace8838394d59e7250b449176e51a494951a1c366c6217d8768d682dde78dd4d55e613f8839cf275d4c8403743e7862601f3c49a6366e12bb8f498262c3c77de19bce40b32f89ae62c3780f5b6275be337e2b3153ae2ba72a9975ae71ab724649497066b660fcf774b7543d980952d2e8586200eda4158b014e75465d91ecf93efc7ac170c11fc7246fc6ded79c37780000ac4e079f671fd4f207ad770809e0e2d7b0ef5493befe73544d8e1be3dddb52455c61391a1"^^xsd:hexBinary;
+     :exponent 65537 ;
+    ] .
 </pre>
 
 <h2 id="sec-crossref">Cross-reference for Cert classes and properties</h2>
-
 <p>The <em>Cert Ontology</em> introduces the following classes and properties. There is a link at the 
 top of this document to the RDF/XML and RDF/N3 versions.</p>
 
@@ -143,10 +130,12 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
 
 <!-- this is the a-z listing -->
 <div class="azlist">
-<p>Classes: | <a href="#Certificate">Certificate</a> |  <a href="#PGPCertificate">PGPCertificate</a> |  <a href="#PrivateKey">PrivateKey</a> |  <a href="#PublicKey">PublicKey</a> |  <a href="#Signature">Signature</a> |  <a href="#X509Certificate">X509Certificate</a> | 
-</p>
-<p>Properties: | <a href="#decimal">decimal</a> |  <a href="#hex">hex</a> |  <a href="#identity">identity</a> |  <a href="#key">key</a> | 
-</p>
+<p><span style="font-weight: bold;">Classes:</span> <a href="#Certificate">Certificate</a> | <a href="#PGPCertificate">PGPCertificate</a> | <a href="#PrivateKey">PrivateKey</a> | <a href="#PublicKey">PublicKey</a> | <a href="#RSAKey">RSAKey</a> | <a href="#RSAPublicKey">RSAPublicKey</a> | <a href="#Signature">Signature</a> | <a href="#X509Certificate">X509Certificate</a> </p> 
+
+<p><span style="font-weight: bold;">Properties:</span> <a href="#exponent">exponent</a> | <a href="#identity">identity</a> | <a href="#key">key</a> | <a href="#modulus">modulus</a> | <a href="#privateExponent">privateExponent</a> </p> 
+
+<p><span style="font-weight: bold;">Datatypes:</span> <a href="#hex">hex</a> </p>
+
 </div>
 
 <!-- and this is the bulk of the vocab descriptions -->
@@ -223,12 +212,67 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
  <dd><a href="#key">cert:key</a></dd> <dt>Sub class of</dt>
  
   
- <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Key"><a href="http://www.w3.org/ns/auth/cert#Key">cert:Key</a></span></dd> <dt>OWL Class</dt>
+ <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Key"><a href="http://www.w3.org/ns/auth/cert#Key">cert:Key</a></span></dd> <dt>Has sub class</dt>
+ 
+  
+ <dd><a href="#RSAPublicKey">cert:RSAPublicKey</a>
+</dd><dt>OWL Class</dt>
  
  
   			</dl>
   			
   			<p style="float: right; font-size: small;">[<a href="#PublicKey">#</a>] <!-- PublicKey --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="RSAKey" about="http://www.w3.org/ns/auth/cert#RSAKey" typeof="owl:Class">
+  			<h4>Class: cert:RSAKey</h4> 
+  			<em property="rdfs:label" >RSA Key</em> - <span property="rdfs:comment" >
+    The union of the public and private components of an RSAKey.
+    Usually those pieces are not kept together
+    </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Properties include:</dt>
+ 
+  
+ <dd><a href="#modulus">cert:modulus</a></dd>
+  			<dt>Sub class of</dt>
+ 
+  
+ <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#Key"><a href="http://www.w3.org/ns/auth/cert#Key">cert:Key</a></span></dd> <dt>Has sub class</dt>
+ 
+  
+ <dd><a href="#RSAPublicKey">cert:RSAPublicKey</a>
+</dd><dt>OWL Class</dt>
+ 
+ 
+  			</dl>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#RSAKey">#</a>] <!-- RSAKey --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="RSAPublicKey" about="http://www.w3.org/ns/auth/cert#RSAPublicKey" typeof="owl:Class">
+  			<h4>Class: cert:RSAPublicKey</h4> 
+  			<em property="rdfs:label" >RSA Public Key</em> - <span property="rdfs:comment" >
+    The RSA public key.  Padded message m are encrypted by applying the function
+      modulus(power(m,exponent),modulus)
+    </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Properties include:</dt>
+ 
+  
+ <dd><a href="#exponent">cert:exponent</a></dd>
+  			<dt>Sub class of</dt>
+ 
+  
+ <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#PublicKey"><a href="#PublicKey">cert:PublicKey</a></span></dd> 
+ <dd><span rel="rdfs:subClassOf" href="http://www.w3.org/ns/auth/cert#RSAKey"><a href="#RSAKey">cert:RSAKey</a></span></dd><dt>OWL Class</dt>
+ 
+ 
+  			</dl>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#RSAPublicKey">#</a>] <!-- RSAPublicKey --> [<a href="#glance">back to top</a>]</p>
   			<br/>
   			</div><div class="specterm" id="Signature" about="http://www.w3.org/ns/auth/cert#Signature" typeof="owl:Class">
   			<h4>Class: cert:Signature</h4> 
@@ -282,8 +326,148 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
   			</div><h3>Properties</h3>
  
 
-<div class="specterm" id="hex" about="http://www.w3.org/ns/auth/cert#hex" typeof="owl:InverseFunctionalProperty">
-  			<h4>Property: cert:hex</h4> 
+<div class="specterm" id="exponent" about="http://www.w3.org/ns/auth/cert#exponent" typeof="owl:DatatypeProperty">
+  			<h4>Property: cert:exponent</h4> 
+  			<em property="rdfs:label" >exponent</em> - <span property="rdfs:comment" >
+       The exponent used to encrypt the message. Number chosen between
+       1 and the totient(p*q). Often named 'e' .
+    </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Domain:</dt>
+ 
+  
+ <dd><span rel="rdfs:domain" href="http://www.w3.org/ns/auth/cert#RSAPublicKey"><a href="#RSAPublicKey">cert:RSAPublicKey</a></span>
+</dd>
+  			<dt>Range:</dt>
+ 
+  <dd><span rel="rdfs:range" href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"><a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">xsd:nonNegativeInteger</a></span>
+</dd><dt>Datatype Property</dt>
+ 
+ 
+  			</dl>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#exponent">#</a>] <!-- exponent --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="key" about="http://www.w3.org/ns/auth/cert#key" typeof="rdf:Property">
+  			<h4>Property: cert:key</h4> 
+  			<em property="rdfs:label" >key</em> - <span property="rdfs:comment" >relates an agent to a key - most often the public key.</span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Domain:</dt>
+ 
+  <dd><span rel="rdfs:domain" href="http://xmlns.com/foaf/0.1/Agent"><a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a></span>
+</dd>
+  			<dt>Range:</dt>
+ 
+  
+ <dd><span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#PublicKey"><a href="#PublicKey">cert:PublicKey</a></span>
+</dd><dt>Inverse property of</dt>
+ 
+  <dd><span rel="owl:inverseOf" href="http://www.w3.org/ns/auth/cert#identity"><a href="#identity">cert:identity</a></span></dd><dt>Has inverse property</dt>
+ 
+  <dd><a href="#identity">cert:identity</a>
+</dd><dt>RDF Property</dt>
+ 
+  <dt>Object Property</dt>
+ 
+ <dd><span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span></dd>
+  			</dl>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#key">#</a>] <!-- key --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="modulus" about="http://www.w3.org/ns/auth/cert#modulus" typeof="owl:DatatypeProperty">
+  			<h4>Property: cert:modulus</h4> 
+  			<em property="rdfs:label" >modulus</em> - <span property="rdfs:comment" >    
+   The modulus of an RSA public and private key. 
+   Or the modulus of a DSA Key.
+   </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Domain:</dt>
+ 
+  
+ <dd><span rel="rdfs:domain" href="http://www.w3.org/ns/auth/cert#RSAKey"><a href="#RSAKey">cert:RSAKey</a></span>
+</dd>
+  			<dt>Range:</dt>
+ 
+  <dd><span rel="rdfs:range" href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"><a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">xsd:nonNegativeInteger</a></span>
+</dd><dt>Datatype Property</dt>
+ 
+ 
+  			</dl>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#modulus">#</a>] <!-- modulus --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><div class="specterm" id="privateExponent" about="http://www.w3.org/ns/auth/cert#privateExponent" typeof="owl:DatatypeProperty">
+  			<h4>Property: cert:privateExponent</h4> 
+  			<em property="rdfs:label" >private</em> - <span property="rdfs:comment" >
+       The exponent used to decrypt the message
+       calculated as 
+          public_exponent*private_exponent = 1 modulo totient(p*q)
+       The private exponent is often named 'd'
+    </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >unstable</dd>
+  			<dt>Domain:</dt>
+ 
+  <dd><span rel="rdfs:domain" href="http://www.w3.org/ns/auth/cert#RSAPrivateKey"><a href="http://www.w3.org/ns/auth/cert#RSAPrivateKey">cert:RSAPrivateKey</a></span>
+</dd>
+  			<dt>Range:</dt>
+ 
+  <dd><span rel="rdfs:range" href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"><a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">xsd:nonNegativeInteger</a></span>
+</dd><dt>Datatype Property</dt>
+ 
+ 
+  			</dl>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#privateExponent">#</a>] <!-- privateExponent --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div>
+<div class="specterm" id="identity" about="http://www.w3.org/ns/auth/cert#identity" typeof="rdf:Property">
+  			<h4>Property: cert:identity</h4> 
+  			<em property="rdfs:label" >identity</em> - <span property="rdfs:comment" >
+    the identity of the public key. This is the entity that knows the private key and 
+    so can decrypt messages encrypted with the public key, or encrypt messages that can 
+    be decrypted with the public key. 
+    </span> <br />
+			<dl>
+  			<dt>Status:</dt>
+  			<dd property="vs:term_status" >archaic</dd>
+  			<dt>Domain:</dt>
+ 
+  
+ <dd><span rel="rdfs:domain" href="http://www.w3.org/ns/auth/cert#PublicKey"><a href="#PublicKey">cert:PublicKey</a></span>
+</dd>
+  			<dt>Inverse property of</dt>
+ 
+  <dd><span rel="owl:inverseOf" href="http://www.w3.org/ns/auth/cert#key"><a href="#key">cert:key</a></span></dd><dt>Has inverse property</dt>
+ 
+  <dd><a href="#key">cert:key</a>
+</dd><dt>RDF Property</dt>
+ 
+  <dt>Object Property</dt>
+ 
+ <dd><span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span></dd><dt>Editorial Note</dt>
+ 
+ <dd property="skos:editorialNote">
+         It turns out that this relation is unintuitive to write out and to name.
+         One should instead use cert:key
+    </dd>
+  			</dl>
+  			
+  			<p style="float: right; font-size: small;">[<a href="#identity">#</a>] <!-- identity --> [<a href="#glance">back to top</a>]</p>
+  			<br/>
+  			</div><h3>Datatypes</h3>
+ 
+
+
+<div class="specterm" id="hex" about="http://www.w3.org/ns/auth/cert#hex" typeof="http://www.w3.org/2000/01/rdf-schema#Datatype">
+  			<h4>Datatype: cert:hex</h4> 
   			<em property="rdfs:label" >hexadecimal</em> - <span property="rdfs:comment" ><span xmlns="http://www.w3.org/1999/xhtml"><p>
    An encoding of a positive integer (from 0 to infinity) as a hexadecimal string that makes it easy to read and/or fun to present on the web.</p>
    <p>The purpose of this way of representing hexadecimals is to enable users to copy and paste hexadecimal notations as shown by most browsers, keychains or tools such as opensso, into their rdf representation of choice.  There are a wide variety of ways in which such strings can be presented. One finds the following:</p>
@@ -325,133 +509,23 @@ top of this document to the RDF/XML and RDF/N3 versions.</p>
         </span> <br />
 			<dl>
   			<dt>Status:</dt>
-  			<dd property="vs:term_status" >unstable</dd>
-  			<dt>Domain:</dt>
- 
-  <dd><span rel="rdfs:domain" href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"><a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">xsd:nonNegativeInteger</a></span>
-</dd>
-  			<dt>Range:</dt>
- 
-  <dd><span rel="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string"><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></span>
-</dd><dt>Datatype Property</dt>
- 
- <dd><span rel="rdf:type" href="http://www.w3.org/2002/07/owl#DatatypeProperty"></span></dd><dt>Inverse Functional Property</dt>
- 
- <dt>Editorial Note</dt>
- 
- <dd property="skos:editorialNote"><span xmlns="http://www.w3.org/1999/xhtml"><p> 
+  			<dd property="vs:term_status" >archaic</dd>
+  			
+  			<dt> Equivalent Class: </dt> 
+ <dd> <a href="#nonNegativeInteger">xsd:nonNegativeInteger</a> </dd><dt> Editorial Note: </dt> 
+ <dd> <span xmlns="http://www.w3.org/1999/xhtml"><p> 
      This relation should slowly be transited to just being a datatype.</p>
      <p>Being a datatype and a property is legal as explained here
   <a href="http://lists.w3.org/Archives/Public/semantic-web/2010Mar/0037.html">on the semantic web mailing list in March 2010</a>. 
  But it may be somewhat confusing, especially if it goes against a pattern - still to be set - by the xsd datatypes as the follow up email makes clear. </p></span>
-   </dd>
+    </dd>
   			</dl>
   			
   			<p style="float: right; font-size: small;">[<a href="#hex">#</a>] <!-- hex --> [<a href="#glance">back to top</a>]</p>
   			<br/>
-  			</div><div class="specterm" id="key" about="http://www.w3.org/ns/auth/cert#key" typeof="rdf:Property">
-  			<h4>Property: cert:key</h4> 
-  			<em property="rdfs:label" >key</em> - <span property="rdfs:comment" >relates an agent to a key - most often the public key.</span> <br />
-			<dl>
-  			<dt>Status:</dt>
-  			<dd property="vs:term_status" >unstable</dd>
-  			<dt>Domain:</dt>
- 
-  <dd><span rel="rdfs:domain" href="http://xmlns.com/foaf/0.1/Agent"><a href="http://xmlns.com/foaf/0.1/Agent">foaf:Agent</a></span>
-</dd>
-  			<dt>Range:</dt>
- 
-  
- <dd><span rel="rdfs:range" href="http://www.w3.org/ns/auth/cert#PublicKey"><a href="#PublicKey">cert:PublicKey</a></span>
-</dd><dt>Inverse property of</dt>
- 
-  <dd><span rel="owl:inverseOf" href="http://www.w3.org/ns/auth/cert#identity"><a href="#identity">cert:identity</a></span></dd><dt>Has inverse property</dt>
- 
-  <dd><a href="#identity">cert:identity</a>
-</dd><dt>RDF Property</dt>
- 
-  <dt>Object Property</dt>
- 
- <dd><span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span></dd>
-  			</dl>
-  			
-  			<p style="float: right; font-size: small;">[<a href="#key">#</a>] <!-- key --> [<a href="#glance">back to top</a>]</p>
-  			<br/>
   			</div>
-<div class="specterm" id="decimal" about="http://www.w3.org/ns/auth/cert#decimal" typeof="owl:InverseFunctionalProperty">
-  			<h4>Property: cert:decimal</h4> 
-  			<em property="rdfs:label" >decimal</em> - <span property="rdfs:comment" >
-      An encoding of an integer in base 10 notation. Use cert:int instead.
-    </span> <br />
-			<dl>
-  			<dt>Status:</dt>
-  			<dd property="vs:term_status" >archaic</dd>
-  			<dt>Domain:</dt>
- 
-  <dd><span rel="rdfs:domain" href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"><a href="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">xsd:nonNegativeInteger</a></span>
-</dd>
-  			<dt>Range:</dt>
- 
-  <dd><span rel="rdfs:range" href="http://www.w3.org/2001/XMLSchema#string"><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></span>
-</dd><dt>Datatype Property</dt>
- 
- <dd><span rel="rdf:type" href="http://www.w3.org/2002/07/owl#DatatypeProperty"></span></dd><dt>Inverse Functional Property</dt>
- 
- <dt>Editorial Note</dt>
- 
- <dd property="skos:editorialNote">
-      The name for this relation is not good. Even though Decimal is clearly defined as numbers in base 10 notation ( conf http://en.wikipedia.org/wiki/Decimal ), it is most often understood as refering to numbers with decimal fractions, which in cryptgraphic integer arithmetic do not turn up. 
-    Instead one should use cert:int
-    The following is necessarily true.
-    <pre>
-    [] :decimal "10" ;
-       owl:sameAs "10"^^xsd:integer .
-    </pre>
-   This was used like this
-   <pre>
-   [] a rsa:RSAPublicKey;
-     rsa:exponent [ cert:decimal "105 " ]
-   </pre>
-   </dd>
-  			</dl>
-  			
-  			<p style="float: right; font-size: small;">[<a href="#decimal">#</a>] <!-- decimal --> [<a href="#glance">back to top</a>]</p>
-  			<br/>
-  			</div><div class="specterm" id="identity" about="http://www.w3.org/ns/auth/cert#identity" typeof="rdf:Property">
-  			<h4>Property: cert:identity</h4> 
-  			<em property="rdfs:label" >identity</em> - <span property="rdfs:comment" >
-    the identity of the public key. This is the entity that knows the private key and 
-    so can decrypt messages encrypted with the public key, or encrypt messages that can 
-    be decrypted with the public key. 
-    </span> <br />
-			<dl>
-  			<dt>Status:</dt>
-  			<dd property="vs:term_status" >archaic</dd>
-  			<dt>Domain:</dt>
- 
-  
- <dd><span rel="rdfs:domain" href="http://www.w3.org/ns/auth/cert#PublicKey"><a href="#PublicKey">cert:PublicKey</a></span>
-</dd>
-  			<dt>Inverse property of</dt>
- 
-  <dd><span rel="owl:inverseOf" href="http://www.w3.org/ns/auth/cert#key"><a href="#key">cert:key</a></span></dd><dt>Has inverse property</dt>
- 
-  <dd><a href="#key">cert:key</a>
-</dd><dt>RDF Property</dt>
- 
-  <dt>Object Property</dt>
- 
- <dd><span rel="rdf:type" href="http://www.w3.org/2002/07/owl#ObjectProperty"></span></dd><dt>Editorial Note</dt>
- 
- <dd property="skos:editorialNote">
-         It turns out that this relation is unintuitive to write out and to name.
-         One should instead use cert:key
-    </dd>
-  			</dl>
-  			
-  			<p style="float: right; font-size: small;">[<a href="#identity">#</a>] <!-- identity --> [<a href="#glance">back to top</a>]</p>
-  			<br/>
-  			</div>
+
+
 
 
 
