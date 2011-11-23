@@ -12,10 +12,11 @@
 @prefix : <cert#> .
 
 
-<cert> a owl:Ontology ;
+<cert#> a owl:Ontology ;
    dc:created "2008-11-13"^^xsd:date;
    foaf:maker <http://bblfish.net/people/henry/card#me>;
    vs:term_status "unstable";
+   rdfs:label "Ontology for Certificates and crypto stuff.";
    rdfs:seeAlso <http://lists.foaf-project.org/mailman/listinfo/foaf-protocols>;
    rdfs:seeAlso <X509Uml.svg>;
    rdfs:seeAlso <rsa>;
@@ -48,6 +49,7 @@
 
 :Certificate a owl:Class;
     vs:term_status "unstable";
+    rdfs:isDefinedBy <cert#>;
     rdfs:label "Certificate"@en;
     rdfs:subClassOf foaf:Document;
     rdfs:comment """A certificate is a Document that is signed.
@@ -62,6 +64,7 @@
 
 :X509Certificate a owl:Class;
    vs:term_status "unstable";
+   rdfs:isDefinedBy <cert#>;
    rdfs:label "X509Certificate";
    rdfs:subClassOf :Certificate;
    rdfs:seeAlso <http://en.wikipedia.org/wiki/X509>;
@@ -70,21 +73,25 @@
 :PGPCertificate a owl:Class;
    rdfs:label "PGPCertificate";
    vs:term_status "unstable";
+   rdfs:isDefinedBy <cert#>;
    rdfs:subClassOf :Certificate;
    owl:equivalentClass wot:PubKey;
    rdfs:comment "the class of PGP Certificates"@en .   
       
 :Signature a owl:Class;
    rdfs:label "Signature";
+   rdfs:isDefinedBy <cert#>;
    vs:term_status "unstable";
    rdfs:comment "the class of signtatures"@en .
 
 :Key a owl:Class;
    vs:term_status "unstable";
+   rdfs:isDefinedBy <cert#>;
    rdfs:comment "the class of keys"@en .
 
 :PublicKey a owl:Class;
    rdfs:label "PublicKey";
+   rdfs:isDefinedBy <cert#>;
    vs:term_status "unstable";
    rdfs:comment "Public Key";
    rdfs:subClassOf :Key .
@@ -92,6 +99,7 @@
 :PrivateKey a owl:Class;
    rdfs:label "PrivateKey";
    rdfs:comment "Private Key"@en ;
+   rdfs:isDefinedBy <cert#>;
    rdfs:subClassOf :Key .
 
 # badly named, removing
@@ -106,6 +114,7 @@
 
 :hex a rdfs:Datatype;
    rdfs:label "hexadecimal"@en;  
+   rdfs:isDefinedBy <cert#>;
    rdfs:seeAlso <http://en.wikipedia.org/wiki/Hexadecimal>;
    owl:equivalentClass xsd:nonNegativeInteger;
    skos:editorialNote """<span xmlns="http://www.w3.org/1999/xhtml"><p> 
@@ -157,6 +166,7 @@
 :identity a rdf:Property, owl:ObjectProperty;
     vs:term_status "archaic";
     rdfs:label "identity"@en;
+    rdfs:isDefinedBy <cert#>;
     skos:editorialNote """
          It turns out that this relation is unintuitive to write out and to name.
          One should instead use cert:key
@@ -172,6 +182,7 @@
 :key a rdf:Property, owl:ObjectProperty;
     vs:term_status "unstable";
     rdfs:label "key"@en; 
+	rdfs:isDefinedBy <cert#>;
     owl:inverseOf :identity;
     rdfs:comment """relates an agent to a key - most often the public key."""@en ;
     rdfs:domain foaf:Agent;
@@ -179,6 +190,7 @@
 
 :RSAKey a owl:Class;
     rdfs:label "RSA Key"@en;
+	rdfs:isDefinedBy <cert#>;
     rdfs:subClassOf :Key;
     vs:term_status "unstable";
     rdfs:comment """
@@ -188,6 +200,7 @@
      
 :RSAPublicKey a owl:Class;
     rdfs:label "RSA Public Key"@en;
+	rdfs:isDefinedBy <cert#>;
     rdfs:subClassOf :PublicKey, :RSAKey;
     vs:term_status "unstable";
     rdfs:seeAlso <http://en.wikipedia.org/wiki/RSA>;
@@ -198,6 +211,7 @@
 
 :modulus a owl:DatatypeProperty;
    rdfs:label "modulus"@en;
+   rdfs:isDefinedBy <cert#>;
    vs:term_status "unstable";
    rdfs:comment """    
    <p>The modulus of an RSA public and private key. 
@@ -216,6 +230,7 @@
 
 :exponent a owl:DatatypeProperty;
    rdfs:label "exponent"@en;
+   rdfs:isDefinedBy <cert#>;
    vs:term_status "unstable";
    rdfs:comment """
        The exponent used to encrypt the message. Number chosen between
@@ -226,6 +241,7 @@
 
 :privateExponent a owl:DatatypeProperty ;
     rdfs:label "private"@en;
+	rdfs:isDefinedBy <cert#>;
     vs:term_status "unstable";
     rdfs:comment """
        The exponent used to decrypt the message
@@ -235,5 +251,4 @@
     """@en;
    rdfs:domain :RSAPrivateKey;
    rdfs:range xsd:nonNegativeInteger .
-
 

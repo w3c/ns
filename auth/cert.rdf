@@ -12,7 +12,7 @@
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:vs="http://www.w3.org/2003/06/sw-vocab-status/ns#">
 
-    <owl:Ontology rdf:about="http://www.w3.org/ns/auth/cert">
+    <owl:Ontology rdf:about="http://www.w3.org/ns/auth/cert#">
         <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2008-11-13</dc:created>
         <comment xml:lang="en">
    Ontology for Certificates and crypto stuff.
@@ -40,6 +40,7 @@
      - also create html version of the spec by using this as a template.
      - should comments such as this be in html?
    </comment>
+        <label>Ontology for Certificates and crypto stuff.</label>
         <seeAlso rdf:resource="http://lists.foaf-project.org/mailman/listinfo/foaf-protocols"/>
         <seeAlso rdf:resource="http://www.w3.org/ns/auth/X509Uml.svg"/>
         <seeAlso rdf:resource="http://www.w3.org/ns/auth/rsa"/>
@@ -56,6 +57,7 @@
           user, such as name, user ID, and so on.)
         * One or more digital signatures.'
     </comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label xml:lang="en">Certificate</label>
         <subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Document"/>
         <vs:term_status>unstable</vs:term_status>
@@ -63,11 +65,13 @@
 
     <owl:Class rdf:about="http://www.w3.org/ns/auth/cert#Key">
         <comment xml:lang="en">the class of keys</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <vs:term_status>unstable</vs:term_status>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.w3.org/ns/auth/cert#PGPCertificate">
         <comment xml:lang="en">the class of PGP Certificates</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label>PGPCertificate</label>
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#Certificate"/>
         <owl:equivalentClass rdf:resource="http://xmlns.com/wot/0.1/PubKey"/>
@@ -76,12 +80,14 @@
 
     <owl:Class rdf:about="http://www.w3.org/ns/auth/cert#PrivateKey">
         <comment xml:lang="en">Private Key</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label>PrivateKey</label>
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#Key"/>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.w3.org/ns/auth/cert#PublicKey">
         <comment>Public Key</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label>PublicKey</label>
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#Key"/>
         <vs:term_status>unstable</vs:term_status>
@@ -92,6 +98,7 @@
     The union of the public and private components of an RSAKey.
     Usually those pieces are not kept together
     </comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label xml:lang="en">RSA Key</label>
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#Key"/>
         <vs:term_status>unstable</vs:term_status>
@@ -102,6 +109,7 @@
     The RSA public key.  Padded message m are encrypted by applying the function
       modulus(power(m,exponent),modulus)
     </comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label xml:lang="en">RSA Public Key</label>
         <seeAlso rdf:resource="http://en.wikipedia.org/wiki/RSA"/>
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#PublicKey"/>
@@ -111,12 +119,14 @@
 
     <owl:Class rdf:about="http://www.w3.org/ns/auth/cert#Signature">
         <comment xml:lang="en">the class of signtatures</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label>Signature</label>
         <vs:term_status>unstable</vs:term_status>
     </owl:Class>
 
     <owl:Class rdf:about="http://www.w3.org/ns/auth/cert#X509Certificate">
         <comment xml:lang="en">the class of X509 Certificates</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label>X509Certificate</label>
         <seeAlso rdf:resource="http://en.wikipedia.org/wiki/X509"/>
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/cert#Certificate"/>
@@ -129,6 +139,7 @@
        1 and the totient(p*q). Often named 'e' .
     </comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/cert#RSAPublicKey"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label xml:lang="en">exponent</label>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
         <vs:term_status>unstable</vs:term_status>
@@ -174,6 +185,7 @@
  </pre> 
    </span>
         </comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label xml:lang="en">hexadecimal</label>
         <seeAlso rdf:resource="http://en.wikipedia.org/wiki/Hexadecimal"/>
         <owl:equivalentClass rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
@@ -194,6 +206,7 @@
     be decrypted with the public key. 
     </comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/cert#PublicKey"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label xml:lang="en">identity</label>
         <owl:inverseOf rdf:resource="http://www.w3.org/ns/auth/cert#key"/>
         <vs:term_status>archaic</vs:term_status>
@@ -207,6 +220,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <comment xml:lang="en">relates an agent to a key - most often the public key.</comment>
         <domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label xml:lang="en">key</label>
         <range rdf:resource="http://www.w3.org/ns/auth/cert#Key"/>
         <range rdf:resource="http://www.w3.org/ns/auth/cert#PublicKey"/>
@@ -229,6 +243,7 @@
    </comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/cert#DSAKey"/>
         <domain rdf:resource="http://www.w3.org/ns/auth/cert#RSAKey"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label xml:lang="en">modulus</label>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#base64Binary"/>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#hexBinary"/>
@@ -243,6 +258,7 @@
        The private exponent is often named 'd'
     </comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/cert#RSAPrivateKey"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/auth/cert#"/>
         <label xml:lang="en">private</label>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
         <vs:term_status>unstable</vs:term_status>
