@@ -1,491 +1,491 @@
 <?xml version="1.0"?>
-&lt;rdf:RDF
+<rdf:RDF
     xmlns="http://www.w3.org/ns/ma-ont#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xml:base="http://www.w3.org/ns/ma-ont"&gt;
-  &lt;owl:Ontology rdf:about=""&gt;
-    &lt;owl:versionInfo&gt;R34&lt;/owl:versionInfo&gt;
-    &lt;dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    &gt;2011-04-06&lt;/dc:date&gt;
-    &lt;rdfs:comment&gt;Created by Tobias Buerger, Jean Pierre Evain and Pierre-Antoine Champin with the RDFS Taskforce within the W3C Media Annotation Working Group.&lt;/rdfs:comment&gt;
-    &lt;owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/&gt;
-  &lt;/owl:Ontology&gt;
-  &lt;owl:Class rdf:ID="Rating"&gt;
-    &lt;owl:disjointWith&gt;
-      &lt;owl:Class rdf:ID="TargetAudience"/&gt;
-    &lt;/owl:disjointWith&gt;
-    &lt;rdfs:comment&gt;Information about the rating given to a media resource.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:ID="Collection"&gt;
-    &lt;owl:disjointWith&gt;
-      &lt;owl:Class rdf:about="#TargetAudience"/&gt;
-    &lt;/owl:disjointWith&gt;
-    &lt;owl:disjointWith rdf:resource="#Rating"/&gt;
-    &lt;owl:disjointWith&gt;
-      &lt;owl:Class rdf:ID="MediaResource"/&gt;
-    &lt;/owl:disjointWith&gt;
-    &lt;owl:disjointWith&gt;
-      &lt;owl:Class rdf:ID="Location"/&gt;
-    &lt;/owl:disjointWith&gt;
-    &lt;rdfs:comment&gt;Any group of media resource e.g. a series.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:ID="AudioTrack"&gt;
-    &lt;rdfs:subClassOf&gt;
-      &lt;owl:Class rdf:ID="Track"/&gt;
-    &lt;/rdfs:subClassOf&gt;
-    &lt;rdfs:comment&gt;A specialisation of Track for Audio to provide a link to specific data properties such as sampleRate, etc. Specialisation is defined through object properties.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:ID="VideoTrack"&gt;
-    &lt;rdfs:subClassOf&gt;
-      &lt;owl:Class rdf:about="#Track"/&gt;
-    &lt;/rdfs:subClassOf&gt;
-    &lt;rdfs:comment&gt;A specialisation of Track for Video to provide a link to specific data properties such as frameRate, etc. Signing is another possible example of video track. Specialisation is defined through object properties.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:ID="Person"&gt;
-    &lt;rdfs:subClassOf&gt;
-      &lt;owl:Class rdf:ID="Agent"/&gt;
-    &lt;/rdfs:subClassOf&gt;
-    &lt;rdfs:comment&gt;A physical person.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:ID="Image"&gt;
-    &lt;rdfs:subClassOf&gt;
-      &lt;owl:Class rdf:about="#MediaResource"/&gt;
-    &lt;/rdfs:subClassOf&gt;
-    &lt;rdfs:comment&gt;A still image / thumbnail / key frame related to the media resource or being the media resource itself.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:about="#MediaResource"&gt;
-    &lt;owl:disjointWith&gt;
-      &lt;owl:Class rdf:about="#TargetAudience"/&gt;
-    &lt;/owl:disjointWith&gt;
-    &lt;owl:disjointWith rdf:resource="#Rating"/&gt;
-    &lt;rdfs:comment&gt;An image or an audiovisual media resource, which can be composed of one or more fragment / track.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:about="#Location"&gt;
-    &lt;owl:disjointWith&gt;
-      &lt;owl:Class rdf:about="#TargetAudience"/&gt;
-    &lt;/owl:disjointWith&gt;
-    &lt;owl:disjointWith rdf:resource="#Rating"/&gt;
-    &lt;owl:disjointWith rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;A location related to the media resource, e.g. depicted in the resource (possibly fictional) or where the resource was created (shooting location), etc.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:ID="DataTrack"&gt;
-    &lt;rdfs:subClassOf&gt;
-      &lt;owl:Class rdf:about="#Track"/&gt;
-    &lt;/rdfs:subClassOf&gt;
-    &lt;rdfs:comment&gt;Ancillary data track e.g. ¨captioning"  in addition to video and audio tracks. Specialisation is made through the use of appropriate object properties.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:about="#TargetAudience"&gt;
-    &lt;rdfs:comment&gt;Information about The target audience (target region, target audience category but also parental guidance recommendation) for which a media resource is intended.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:about="#Track"&gt;
-    &lt;rdfs:subClassOf&gt;
-      &lt;owl:Class rdf:ID="MediaFragment"/&gt;
-    &lt;/rdfs:subClassOf&gt;
-    &lt;rdfs:comment&gt;A specialisation of MediaFragment for audiovisual content.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:about="#Agent"&gt;
-    &lt;owl:disjointWith rdf:resource="#TargetAudience"/&gt;
-    &lt;owl:disjointWith rdf:resource="#Rating"/&gt;
-    &lt;owl:disjointWith rdf:resource="#MediaResource"/&gt;
-    &lt;owl:disjointWith rdf:resource="#Location"/&gt;
-    &lt;owl:disjointWith rdf:resource="#Collection"/&gt;
-    &lt;rdfs:comment&gt;A person or organisation contributing to the media resource.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:ID="Organisation"&gt;
-    &lt;owl:disjointWith rdf:resource="#Person"/&gt;
-    &lt;rdfs:subClassOf rdf:resource="#Agent"/&gt;
-    &lt;rdfs:comment&gt;An organisation or moral agent.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:Class rdf:about="#MediaFragment"&gt;
-    &lt;rdfs:subClassOf rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;A media fragment (spatial, temporal, track...) composing a media resource. In other ontologies fragment is sometimes referred to as a 'part' or 'segment'.&lt;/rdfs:comment&gt;
-  &lt;/owl:Class&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasRatingSystem"&gt;
-    &lt;rdfs:domain rdf:resource="#Rating"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'rating.type' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasCreator"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="hasCreated"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:subPropertyOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="hasContributor"/&gt;
-    &lt;/rdfs:subPropertyOf&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'creator.creator' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'creator.role'. Note that this property is semantically a subproperty of 'hasContributor'.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasFragment"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="isFragmentOf"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:range rdf:resource="#MediaFragment"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'fragment' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'fragment.role'.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="features"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="playsIn"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:range rdf:resource="#Person"/&gt;
-    &lt;rdfs:subPropertyOf&gt;
-      &lt;owl:ObjectProperty rdf:about="#hasContributor"/&gt;
-    &lt;/rdfs:subPropertyOf&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'contributor.contributor' in the Ontology for Media Resources with a 'contributor.role' meaning "actor".&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="createdIn"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="isCreationLocationOf"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:subPropertyOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="hasRelatedLocation"/&gt;
-    &lt;/rdfs:subPropertyOf&gt;
-    &lt;rdfs:comment&gt;A subproperty of 'hasRelatedLocation" used to specify where material shooting took place.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="depictsFictionalLocation"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="isFictionalLocationDepictedIn"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:subPropertyOf&gt;
-      &lt;owl:ObjectProperty rdf:about="#hasRelatedLocation"/&gt;
-    &lt;/rdfs:subPropertyOf&gt;
-    &lt;rdfs:comment&gt;A subproperty of 'hasRelatedLocation' used to specify where the action depicted in the media is supposed to take place, as opposed to the location where shooting actually took place (see 'createdIn').&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasNamedFragment"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="isNamedFragmentOf"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#hasFragment"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'namedFragment' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasTrack"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="isTrackOf"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:range rdf:resource="#Track"/&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#hasFragment"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "track".&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="isProvidedBy"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="provides"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:range rdf:resource="#Agent"/&gt;
-    &lt;rdfs:domain rdf:resource="#Rating"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'rating.identifier' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="isMemberOf"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="hasMember"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:range rdf:resource="#Collection"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'collection' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasPolicy"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'policy' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'policy.type'.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasLocationCoordinateSystem"&gt;
-    &lt;rdfs:domain rdf:resource="#Location"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'location.coordinateSystem' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:about="#hasContributor"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="hasContributedTo"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:range rdf:resource="#Agent"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'contributor.contributor' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'contributor.role'.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasClassification"&gt;
-    &lt;rdfs:domain rdf:resource="#TargetAudience"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'targetAudience.classification' in the Ontology for Media Resources. This property is used to provide a value characterising the target audience.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="isChapterOf"/&gt;
-  &lt;owl:ObjectProperty rdf:ID="isSourceOf"/&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasLanguage"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'language' in the Ontology for Media Resources. The language used in the resource. A controlled vocabulary such as defined in BCP 47 SHOULD be used. This property can also be used to identify the presence of sign language (RFC 5646). By inheritance, the hasLanguage property applies indifferently at the media resource / fragment / track levels.  Best practice recommends to use to best possible level of granularity fo describe the usage of language within a media resource including at fragment and track levels.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasCaptioning"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="isCaptioningOf"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#hasFragment"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "captioning". This property can for example point to a spatial fragment, a VideoTrack or a DataTrack. The language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasGenre"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'genre' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="isCopyrightedBy"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="hasCopyrightOver"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:range rdf:resource="#Agent"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'copyright.identifier' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasFormat"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'format' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="isTargetAudienceOf"/&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasPublished"/&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasCompression"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'compression' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasSource"&gt;
-    &lt;owl:inverseOf rdf:resource="#isSourceOf"/&gt;
-    &lt;rdfs:subPropertyOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="hasRelatedResource"/&gt;
-    &lt;/rdfs:subPropertyOf&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'relation' and in the Ontology for Media Resources with a 'relation.type' meaning "source".&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="isLocationRelatedTo"/&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasSigning"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="isSigningOf"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#hasFragment"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "signing". This property can for example point to a spatial fragment or a VideoTrack. The sign language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasPublisher"&gt;
-    &lt;owl:inverseOf rdf:resource="#hasPublished"/&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#hasContributor"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'publisher' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="isRelatedTo"/&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasRelatedImage"&gt;
-    &lt;owl:inverseOf&gt;
-      &lt;owl:ObjectProperty rdf:ID="isImageRelatedTo"/&gt;
-    &lt;/owl:inverseOf&gt;
-    &lt;rdfs:range rdf:resource="#Image"/&gt;
-    &lt;rdfs:subPropertyOf&gt;
-      &lt;owl:ObjectProperty rdf:about="#hasRelatedResource"/&gt;
-    &lt;/rdfs:subPropertyOf&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'relation' and in the Ontology for Media Resources with a 'relation.type' meaning "related image".&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasSubtitling"&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#hasCaptioning"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "subtitling".&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="IsRatingOf"/&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasRating"&gt;
-    &lt;owl:inverseOf rdf:resource="#IsRatingOf"/&gt;
-    &lt;rdfs:range rdf:resource="#Rating"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'rating' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasClassificationSystem"&gt;
-    &lt;rdfs:domain rdf:resource="#TargetAudience"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'targetAudience.identifier' in the Ontology for Media Resources. This is used to identify the reference sheme against which the target audience has been characterised.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:about="#hasRelatedLocation"&gt;
-    &lt;owl:inverseOf rdf:resource="#isLocationRelatedTo"/&gt;
-    &lt;rdfs:range rdf:resource="#Location"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'location' in the Ontology for Media Resources. Subproperties are provided to specify, when possible, the relation between the media resource and the location.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:about="#hasRelatedResource"&gt;
-    &lt;owl:inverseOf rdf:resource="#isRelatedTo"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'relation' and in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'relation.type'.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasChapter"&gt;
-    &lt;owl:inverseOf rdf:resource="#isChapterOf"/&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#hasFragment"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "actor".&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasAccessConditions"&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#hasPolicy"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'policy' in the Ontology for Media Resources with a 'policy.type' "access conditions".&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasPermissions"&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#hasPolicy"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'policy' in the Ontology for Media Resources with a  'policy.type' meaning "permissions".&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasKeyword"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'keyword' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasTargetAudience"&gt;
-    &lt;owl:inverseOf rdf:resource="#isTargetAudienceOf"/&gt;
-    &lt;rdfs:range rdf:resource="#TargetAudience"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'targetAudience' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:ObjectProperty rdf:ID="hasAudioDescription"&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#hasCaptioning"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "audio-description".&lt;/rdfs:comment&gt;
-  &lt;/owl:ObjectProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="locationLatitude"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/&gt;
-    &lt;rdfs:domain rdf:resource="#Location"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'location.latitude' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="samplingRate"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'samplingRate' in the Ontology for Media Resources, in samples per second.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="identifier"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'identifier' in the Ontology for Media Resources. The value being a URI, it is recommended to use owl:sameAs when appropriate, in order to maximize interoperability.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="locationName"&gt;
-    &lt;rdfs:domain rdf:resource="#Location"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'location.name' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="fragmentName"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaFragment"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'namedFragment.label' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="releaseDate"&gt;
-    &lt;rdfs:subPropertyOf&gt;
-      &lt;owl:DatatypeProperty rdf:ID="date"/&gt;
-    &lt;/rdfs:subPropertyOf&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "releaseDate".&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="locator"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'locator' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="locationAltitude"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/&gt;
-    &lt;rdfs:domain rdf:resource="#Location"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'location.altitude' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="recordDate"&gt;
-    &lt;rdfs:subPropertyOf&gt;
-      &lt;owl:DatatypeProperty rdf:about="#date"/&gt;
-    &lt;/rdfs:subPropertyOf&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "recordDate".&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:about="#date"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to date.date in the ontology for Media Resources. Subproperties can be used to distinguish different values of 'date.type'. The recommended range is 'xsd:dateTime' (for compliance with OWL2-QL and OWL2-RL) but other time-related datatypes may be used (e.g. 'xsd:gYear', 'xsd:date'...).&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="numberOfTracks"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'numTracks.number' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'numTracks.type'.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="ratingValue"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/&gt;
-    &lt;rdfs:domain rdf:resource="#Rating"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'rating.value' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="trackName"&gt;
-    &lt;rdfs:domain rdf:resource="#Track"/&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#fragmentName"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'fragment.name' in the Ontology for Media Resources, for Track fragments.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="frameWidth"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'frameSize.width' in the Ontology for Media Resources measured in frameSizeUnit.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="frameSizeUnit"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'frameSize.unit' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="editDate"&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#date"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "editDate".&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="frameRate"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'frameRate' in the Ontology for Media Resources, in frame per second.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="averageBitRate"&gt;
-    &lt;rdfs:domain&gt;
-      &lt;owl:Class&gt;
-        &lt;owl:intersectionOf rdf:parseType="Collection"&gt;
-          &lt;owl:Class rdf:about="#MediaResource"/&gt;
-          &lt;owl:Class&gt;
-            &lt;owl:complementOf rdf:resource="#Image"/&gt;
-          &lt;/owl:Class&gt;
-        &lt;/owl:intersectionOf&gt;
-      &lt;/owl:Class&gt;
-    &lt;/rdfs:domain&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'averageBitRate' in the Ontology for Media Resources, expressed in kilobits/second.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="copyright"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'copyright.copyright' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="description"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'description' in the Ontology for Media Resources. This can be specialised by using sub-properties e.g. 'summary' or 'script'.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="duration"&gt;
-    &lt;rdfs:domain&gt;
-      &lt;owl:Class&gt;
-        &lt;owl:intersectionOf rdf:parseType="Collection"&gt;
-          &lt;owl:Class rdf:about="#MediaResource"/&gt;
-          &lt;owl:Class&gt;
-            &lt;owl:complementOf rdf:resource="#Image"/&gt;
-          &lt;/owl:Class&gt;
-        &lt;/owl:intersectionOf&gt;
-      &lt;/owl:Class&gt;
-    &lt;/rdfs:domain&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'duration' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="mainOriginalTitle"&gt;
-    &lt;rdfs:subPropertyOf&gt;
-      &lt;owl:DatatypeProperty rdf:ID="title"/&gt;
-    &lt;/rdfs:subPropertyOf&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'title.title' in the Ontology for Media Resources with a 'title.type' meaning "original".&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:about="#title"&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'title.title' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'title.type'.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="creationDate"&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#date"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "creationDate".&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="alternativeTitle"&gt;
-    &lt;rdfs:subPropertyOf rdf:resource="#title"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'title.title' in the Ontology for Media Resources with a 'title.type' meaning "alternative".&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="locationLongitude"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/&gt;
-    &lt;rdfs:domain rdf:resource="#Location"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'location.longitude' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="collectionName"&gt;
-    &lt;rdfs:domain rdf:resource="#Collection"/&gt;
-    &lt;rdfs:subClassOf rdf:parseType="Resource"&gt;
-      &lt;rdfs:subClassOf&gt;http://www.w3.org/2000/01/rdf-schema#label&lt;/rdfs:subClassOf&gt;
-    &lt;/rdfs:subClassOf&gt;
-    &lt;rdfs:comment&gt;The name by which a collection (e.g. series) is known.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="frameHeight"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/&gt;
-    &lt;rdfs:domain rdf:resource="#MediaResource"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'frameSize.height' in the Ontology for Media Resources, measured in frameSizeUnit.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="ratingScaleMin"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/&gt;
-    &lt;rdfs:domain rdf:resource="#Rating"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'rating.min' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-  &lt;owl:DatatypeProperty rdf:ID="ratingScaleMax"&gt;
-    &lt;rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/&gt;
-    &lt;rdfs:domain rdf:resource="#Rating"/&gt;
-    &lt;rdfs:comment&gt;Corresponds to 'rating.max' in the Ontology for Media Resources.&lt;/rdfs:comment&gt;
-  &lt;/owl:DatatypeProperty&gt;
-&lt;/rdf:RDF&gt;
+  xml:base="http://www.w3.org/ns/ma-ont">
+  <owl:Ontology rdf:about="">
+    <owl:versionInfo>R34</owl:versionInfo>
+    <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2011-04-06</dc:date>
+    <rdfs:comment>Created by Tobias Buerger, Jean Pierre Evain and Pierre-Antoine Champin with the RDFS Taskforce within the W3C Media Annotation Working Group.</rdfs:comment>
+    <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
+  </owl:Ontology>
+  <owl:Class rdf:ID="Rating">
+    <owl:disjointWith>
+      <owl:Class rdf:ID="TargetAudience"/>
+    </owl:disjointWith>
+    <rdfs:comment>Information about the rating given to a media resource.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Collection">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TargetAudience"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Rating"/>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="MediaResource"/>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <owl:Class rdf:ID="Location"/>
+    </owl:disjointWith>
+    <rdfs:comment>Any group of media resource e.g. a series.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="AudioTrack">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Track"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A specialisation of Track for Audio to provide a link to specific data properties such as sampleRate, etc. Specialisation is defined through object properties.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="VideoTrack">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Track"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A specialisation of Track for Video to provide a link to specific data properties such as frameRate, etc. Signing is another possible example of video track. Specialisation is defined through object properties.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Person">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="Agent"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A physical person.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Image">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#MediaResource"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A still image / thumbnail / key frame related to the media resource or being the media resource itself.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#MediaResource">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TargetAudience"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Rating"/>
+    <rdfs:comment>An image or an audiovisual media resource, which can be composed of one or more fragment / track.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Location">
+    <owl:disjointWith>
+      <owl:Class rdf:about="#TargetAudience"/>
+    </owl:disjointWith>
+    <owl:disjointWith rdf:resource="#Rating"/>
+    <owl:disjointWith rdf:resource="#MediaResource"/>
+    <rdfs:comment>A location related to the media resource, e.g. depicted in the resource (possibly fictional) or where the resource was created (shooting location), etc.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="DataTrack">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="#Track"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>Ancillary data track e.g. ¨captioning"  in addition to video and audio tracks. Specialisation is made through the use of appropriate object properties.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#TargetAudience">
+    <rdfs:comment>Information about The target audience (target region, target audience category but also parental guidance recommendation) for which a media resource is intended.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Track">
+    <rdfs:subClassOf>
+      <owl:Class rdf:ID="MediaFragment"/>
+    </rdfs:subClassOf>
+    <rdfs:comment>A specialisation of MediaFragment for audiovisual content.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#Agent">
+    <owl:disjointWith rdf:resource="#TargetAudience"/>
+    <owl:disjointWith rdf:resource="#Rating"/>
+    <owl:disjointWith rdf:resource="#MediaResource"/>
+    <owl:disjointWith rdf:resource="#Location"/>
+    <owl:disjointWith rdf:resource="#Collection"/>
+    <rdfs:comment>A person or organisation contributing to the media resource.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:ID="Organisation">
+    <owl:disjointWith rdf:resource="#Person"/>
+    <rdfs:subClassOf rdf:resource="#Agent"/>
+    <rdfs:comment>An organisation or moral agent.</rdfs:comment>
+  </owl:Class>
+  <owl:Class rdf:about="#MediaFragment">
+    <rdfs:subClassOf rdf:resource="#MediaResource"/>
+    <rdfs:comment>A media fragment (spatial, temporal, track...) composing a media resource. In other ontologies fragment is sometimes referred to as a 'part' or 'segment'.</rdfs:comment>
+  </owl:Class>
+  <owl:ObjectProperty rdf:ID="hasRatingSystem">
+    <rdfs:domain rdf:resource="#Rating"/>
+    <rdfs:comment>Corresponds to 'rating.type' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCreator">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasCreated"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="hasContributor"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment>Corresponds to 'creator.creator' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'creator.role'. Note that this property is semantically a subproperty of 'hasContributor'.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasFragment">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isFragmentOf"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#MediaFragment"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'fragment' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'fragment.role'.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="features">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="playsIn"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Person"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#hasContributor"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment>Corresponds to 'contributor.contributor' in the Ontology for Media Resources with a 'contributor.role' meaning "actor".</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="createdIn">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isCreationLocationOf"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="hasRelatedLocation"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment>A subproperty of 'hasRelatedLocation" used to specify where material shooting took place.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="depictsFictionalLocation">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isFictionalLocationDepictedIn"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#hasRelatedLocation"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment>A subproperty of 'hasRelatedLocation' used to specify where the action depicted in the media is supposed to take place, as opposed to the location where shooting actually took place (see 'createdIn').</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasNamedFragment">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isNamedFragmentOf"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="#hasFragment"/>
+    <rdfs:comment>Corresponds to 'namedFragment' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasTrack">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isTrackOf"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Track"/>
+    <rdfs:subPropertyOf rdf:resource="#hasFragment"/>
+    <rdfs:comment>Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "track".</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isProvidedBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="provides"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Agent"/>
+    <rdfs:domain rdf:resource="#Rating"/>
+    <rdfs:comment>Corresponds to 'rating.identifier' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isMemberOf">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasMember"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Collection"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'collection' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPolicy">
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'policy' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'policy.type'.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasLocationCoordinateSystem">
+    <rdfs:domain rdf:resource="#Location"/>
+    <rdfs:comment>Corresponds to 'location.coordinateSystem' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasContributor">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasContributedTo"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Agent"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'contributor.contributor' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'contributor.role'.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasClassification">
+    <rdfs:domain rdf:resource="#TargetAudience"/>
+    <rdfs:comment>Corresponds to 'targetAudience.classification' in the Ontology for Media Resources. This property is used to provide a value characterising the target audience.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isChapterOf"/>
+  <owl:ObjectProperty rdf:ID="isSourceOf"/>
+  <owl:ObjectProperty rdf:ID="hasLanguage">
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'language' in the Ontology for Media Resources. The language used in the resource. A controlled vocabulary such as defined in BCP 47 SHOULD be used. This property can also be used to identify the presence of sign language (RFC 5646). By inheritance, the hasLanguage property applies indifferently at the media resource / fragment / track levels.  Best practice recommends to use to best possible level of granularity fo describe the usage of language within a media resource including at fragment and track levels.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasCaptioning">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isCaptioningOf"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="#hasFragment"/>
+    <rdfs:comment>Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "captioning". This property can for example point to a spatial fragment, a VideoTrack or a DataTrack. The language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasGenre">
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'genre' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isCopyrightedBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="hasCopyrightOver"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Agent"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'copyright.identifier' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasFormat">
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'format' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isTargetAudienceOf"/>
+  <owl:ObjectProperty rdf:ID="hasPublished"/>
+  <owl:ObjectProperty rdf:ID="hasCompression">
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'compression' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasSource">
+    <owl:inverseOf rdf:resource="#isSourceOf"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:ID="hasRelatedResource"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment>Corresponds to 'relation' and in the Ontology for Media Resources with a 'relation.type' meaning "source".</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isLocationRelatedTo"/>
+  <owl:ObjectProperty rdf:ID="hasSigning">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isSigningOf"/>
+    </owl:inverseOf>
+    <rdfs:subPropertyOf rdf:resource="#hasFragment"/>
+    <rdfs:comment>Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "signing". This property can for example point to a spatial fragment or a VideoTrack. The sign language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPublisher">
+    <owl:inverseOf rdf:resource="#hasPublished"/>
+    <rdfs:subPropertyOf rdf:resource="#hasContributor"/>
+    <rdfs:comment>Corresponds to 'publisher' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="isRelatedTo"/>
+  <owl:ObjectProperty rdf:ID="hasRelatedImage">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:ID="isImageRelatedTo"/>
+    </owl:inverseOf>
+    <rdfs:range rdf:resource="#Image"/>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="#hasRelatedResource"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment>Corresponds to 'relation' and in the Ontology for Media Resources with a 'relation.type' meaning "related image".</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasSubtitling">
+    <rdfs:subPropertyOf rdf:resource="#hasCaptioning"/>
+    <rdfs:comment>Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "subtitling".</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="IsRatingOf"/>
+  <owl:ObjectProperty rdf:ID="hasRating">
+    <owl:inverseOf rdf:resource="#IsRatingOf"/>
+    <rdfs:range rdf:resource="#Rating"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'rating' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasClassificationSystem">
+    <rdfs:domain rdf:resource="#TargetAudience"/>
+    <rdfs:comment>Corresponds to 'targetAudience.identifier' in the Ontology for Media Resources. This is used to identify the reference sheme against which the target audience has been characterised.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasRelatedLocation">
+    <owl:inverseOf rdf:resource="#isLocationRelatedTo"/>
+    <rdfs:range rdf:resource="#Location"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'location' in the Ontology for Media Resources. Subproperties are provided to specify, when possible, the relation between the media resource and the location.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="#hasRelatedResource">
+    <owl:inverseOf rdf:resource="#isRelatedTo"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'relation' and in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'relation.type'.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasChapter">
+    <owl:inverseOf rdf:resource="#isChapterOf"/>
+    <rdfs:subPropertyOf rdf:resource="#hasFragment"/>
+    <rdfs:comment>Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "actor".</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasAccessConditions">
+    <rdfs:subPropertyOf rdf:resource="#hasPolicy"/>
+    <rdfs:comment>Corresponds to 'policy' in the Ontology for Media Resources with a 'policy.type' "access conditions".</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasPermissions">
+    <rdfs:subPropertyOf rdf:resource="#hasPolicy"/>
+    <rdfs:comment>Corresponds to 'policy' in the Ontology for Media Resources with a  'policy.type' meaning "permissions".</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasKeyword">
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'keyword' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasTargetAudience">
+    <owl:inverseOf rdf:resource="#isTargetAudienceOf"/>
+    <rdfs:range rdf:resource="#TargetAudience"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'targetAudience' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:ID="hasAudioDescription">
+    <rdfs:subPropertyOf rdf:resource="#hasCaptioning"/>
+    <rdfs:comment>Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning "audio-description".</rdfs:comment>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:ID="locationLatitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#Location"/>
+    <rdfs:comment>Corresponds to 'location.latitude' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="samplingRate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'samplingRate' in the Ontology for Media Resources, in samples per second.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="identifier">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'identifier' in the Ontology for Media Resources. The value being a URI, it is recommended to use owl:sameAs when appropriate, in order to maximize interoperability.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="locationName">
+    <rdfs:domain rdf:resource="#Location"/>
+    <rdfs:comment>Corresponds to 'location.name' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="fragmentName">
+    <rdfs:domain rdf:resource="#MediaFragment"/>
+    <rdfs:comment>Corresponds to 'namedFragment.label' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="releaseDate">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:ID="date"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment>Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "releaseDate".</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="locator">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'locator' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="locationAltitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#Location"/>
+    <rdfs:comment>Corresponds to 'location.altitude' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="recordDate">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:about="#date"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment>Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "recordDate".</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#date">
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to date.date in the ontology for Media Resources. Subproperties can be used to distinguish different values of 'date.type'. The recommended range is 'xsd:dateTime' (for compliance with OWL2-QL and OWL2-RL) but other time-related datatypes may be used (e.g. 'xsd:gYear', 'xsd:date'...).</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="numberOfTracks">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'numTracks.number' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'numTracks.type'.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="ratingValue">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#Rating"/>
+    <rdfs:comment>Corresponds to 'rating.value' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="trackName">
+    <rdfs:domain rdf:resource="#Track"/>
+    <rdfs:subPropertyOf rdf:resource="#fragmentName"/>
+    <rdfs:comment>Corresponds to 'fragment.name' in the Ontology for Media Resources, for Track fragments.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="frameWidth">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'frameSize.width' in the Ontology for Media Resources measured in frameSizeUnit.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="frameSizeUnit">
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'frameSize.unit' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="editDate">
+    <rdfs:subPropertyOf rdf:resource="#date"/>
+    <rdfs:comment>Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "editDate".</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="frameRate">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'frameRate' in the Ontology for Media Resources, in frame per second.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="averageBitRate">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#MediaResource"/>
+          <owl:Class>
+            <owl:complementOf rdf:resource="#Image"/>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>Corresponds to 'averageBitRate' in the Ontology for Media Resources, expressed in kilobits/second.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="copyright">
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'copyright.copyright' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="description">
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'description' in the Ontology for Media Resources. This can be specialised by using sub-properties e.g. 'summary' or 'script'.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="duration">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:intersectionOf rdf:parseType="Collection">
+          <owl:Class rdf:about="#MediaResource"/>
+          <owl:Class>
+            <owl:complementOf rdf:resource="#Image"/>
+          </owl:Class>
+        </owl:intersectionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:comment>Corresponds to 'duration' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="mainOriginalTitle">
+    <rdfs:subPropertyOf>
+      <owl:DatatypeProperty rdf:ID="title"/>
+    </rdfs:subPropertyOf>
+    <rdfs:comment>Corresponds to 'title.title' in the Ontology for Media Resources with a 'title.type' meaning "original".</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="#title">
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'title.title' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'title.type'.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="creationDate">
+    <rdfs:subPropertyOf rdf:resource="#date"/>
+    <rdfs:comment>Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning "creationDate".</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="alternativeTitle">
+    <rdfs:subPropertyOf rdf:resource="#title"/>
+    <rdfs:comment>Corresponds to 'title.title' in the Ontology for Media Resources with a 'title.type' meaning "alternative".</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="locationLongitude">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#Location"/>
+    <rdfs:comment>Corresponds to 'location.longitude' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="collectionName">
+    <rdfs:domain rdf:resource="#Collection"/>
+    <rdfs:subClassOf rdf:parseType="Resource">
+      <rdfs:subClassOf>http://www.w3.org/2000/01/rdf-schema#label</rdfs:subClassOf>
+    </rdfs:subClassOf>
+    <rdfs:comment>The name by which a collection (e.g. series) is known.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="frameHeight">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    <rdfs:domain rdf:resource="#MediaResource"/>
+    <rdfs:comment>Corresponds to 'frameSize.height' in the Ontology for Media Resources, measured in frameSizeUnit.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="ratingScaleMin">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#Rating"/>
+    <rdfs:comment>Corresponds to 'rating.min' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:ID="ratingScaleMax">
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    <rdfs:domain rdf:resource="#Rating"/>
+    <rdfs:comment>Corresponds to 'rating.max' in the Ontology for Media Resources.</rdfs:comment>
+  </owl:DatatypeProperty>
+</rdf:RDF>
 
-&lt;!-- Created with TopBraid --&gt;
+<!-- Created with TopBraid -->
