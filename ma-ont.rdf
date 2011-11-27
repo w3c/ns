@@ -8,9 +8,9 @@
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xml:base="http://www.w3.org/ns/ma-ont">
   <owl:Ontology rdf:about="">
-    <owl:versionInfo>R34</owl:versionInfo>
+    <owl:versionInfo>R35</owl:versionInfo>
     <dc:date rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2011-04-06</dc:date>
+    >2011-11-25</dc:date>
     <rdfs:comment>Created by Tobias Buerger, Jean Pierre Evain and Pierre-Antoine Champin with the RDFS Taskforce within the W3C Media Annotation Working Group.</rdfs:comment>
     <owl:imports rdf:resource="http://purl.org/dc/elements/1.1/"/>
   </owl:Ontology>
@@ -333,11 +333,6 @@
     <rdfs:domain rdf:resource="#MediaResource"/>
     <rdfs:comment>Corresponds to 'samplingRate' in the Ontology for Media Resources, in samples per second.</rdfs:comment>
   </owl:DatatypeProperty>
-  <owl:DatatypeProperty rdf:ID="identifier">
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
-    <rdfs:domain rdf:resource="#MediaResource"/>
-    <rdfs:comment>Corresponds to 'identifier' in the Ontology for Media Resources. The value being a URI, it is recommended to use owl:sameAs when appropriate, in order to maximize interoperability.</rdfs:comment>
-  </owl:DatatypeProperty>
   <owl:DatatypeProperty rdf:ID="locationName">
     <rdfs:domain rdf:resource="#Location"/>
     <rdfs:comment>Corresponds to 'location.name' in the Ontology for Media Resources.</rdfs:comment>
@@ -488,4 +483,3 @@
   </owl:DatatypeProperty>
 </rdf:RDF>
 
-<!-- Created with TopBraid -->
