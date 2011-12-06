@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+   xmlns:dc="http://purl.org/dc/terms/"
+   xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+>
+  <rdf:Description rdf:about="http://www.w3.org/ns/owl-profile/Full">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/owl2-syntax/"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/owl2-rdf-based-semantics/"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/2009/REC-owl2-overview-20091027/"/>
+    <dc:date>2011-12-06</dc:date>
+    <rdf:type rdf:resource="http://www.w3.org/ns/owl-profile/Profile"/>
+    <dc:description>Unique identifier for OWL 2 Full</dc:description>
+    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
+    <rdfs:comment>OWL Full is defined by the OWL 2 Structural Specification and Functional-Style Syntax and the OWL 2 Web Ontology Language, RDF-Based Semantics documents, part of the the OWL 2 W3C Recommendation.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/owl-profile/data/DL.html">
+    <dc:title>Information Resource for OWL 2 Full</dc:title>
+    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <foaf:name>Ivan Herman</foaf:name>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+  </rdf:Description>
+</rdf:RDF>
+

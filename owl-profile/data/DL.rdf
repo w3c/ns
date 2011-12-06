@@ -6,26 +6,27 @@
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
    xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
 >
+  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
+    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+    <foaf:name>Ivan Herman</foaf:name>
+    <foaf:title>Semantic Web Activity Lead</foaf:title>
+    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+  </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/owl-profile/data/DL.html">
     <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
     <dc:title>Information Resource for OWL 2 DL</dc:title>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/owl-profile/DL">
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/2009/REC-owl2-overview-20091027/"/>
-    <rdfs:comment>OWL DL is defined by the OWL 2 Structural Specification and Functional-Style Syntax document, part of the the OWL 2 W3C Recommendation.</rdfs:comment>
-    <dc:date>2010-05-03</dc:date>
-    <dc:description>Unique identifier for OWL 2 DL</dc:description>
-    <rdf:type rdf:resource="http://www.w3.org/ns/owl-profile/Profile"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/owl2-syntax/"/>
     <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:name>Ivan Herman</foaf:name>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+    <rdf:type rdf:resource="http://www.w3.org/ns/owl-profile/Profile"/>
+    <rdfs:comment>OWL DL is defined by the OWL 2 Structural Specification and Functional-Style Syntax and the OWL 2 Web Ontology Language, Direct Semantics documents, part of the the OWL 2 W3C Recommendation.</rdfs:comment>
+    <dc:date>2011-12-06</dc:date>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/2009/REC-owl2-overview-20091027/"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/owl2-direct-semantics/"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/owl2-syntax/"/>
+    <dc:description>Unique identifier for OWL 2 DL</dc:description>
   </rdf:Description>
 </rdf:RDF>
 
