@@ -217,6 +217,7 @@
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/cert#key">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
         <comment xml:lang="en">relates an agent to a key - most often the public key.</comment>
         <domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>

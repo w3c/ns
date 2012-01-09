@@ -179,7 +179,7 @@
     owl:inverseOf :key;
     rdfs:domain :PublicKey .
 
-:key a rdf:Property, owl:ObjectProperty;
+:key a rdf:Property, owl:ObjectProperty, owl:InverseFunctionalProperty;
     vs:term_status "unstable";
     rdfs:label "key"@en; 
 	rdfs:isDefinedBy <cert#>;
