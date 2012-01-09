@@ -15,3 +15,6 @@ ForceType 'text/html; charset=utf-8'
 <Files ~ "sparql.html">
 ForceType 'text/html; charset=utf-8'
 </Files>
+<Files ~ "md.json">
+ForceType 'application/json'
+</Files>
