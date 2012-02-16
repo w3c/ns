@@ -42,7 +42,7 @@
 :collectionName a owl:DatatypeProperty;
     rdfs:comment "The name by which a collection (e.g. series) is known.";
     rdfs:domain :Collection;
-    rdfs:subClassOf [ rdfs:subClassOf "http://www.w3.org/2000/01/rdf-schema#label" ] .
+    rdfs:subPropertyOf rdfs:label .
 
 :copyright a owl:DatatypeProperty;
     rdfs:comment "Corresponds to 'copyright.copyright' in the Ontology for Media Resources.";
