@@ -21,7 +21,7 @@
       "tracks": {"multipleValues": "list"}
     }
   },
-  "http://microformats.org/profile/hcard": {
+  "http://microformats.org/profile/hcard#": {
     "propertyURI":    "vocabulary",
     "multipleValues": "unordered"
   },
