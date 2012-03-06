@@ -7,6 +7,7 @@
 @prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
 @prefix :	<http://www.w3.org/ns/pim/trip#> .
 
+@prefix cal: <http://www.w3.org/2002/12/cal/ical#>.
 @prefix dbp: <http://dbpedia.org/resource/>.
 @prefix cal: <http://www.w3.org/2002/12/cal/ical#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.
@@ -27,20 +28,23 @@ A trip could be used to collate expenses relating to an activity or event
 at ones home base, or a set of photos taken at home etc.
 """.
 
-Trip a s:Class; s:label "trip";
-    ui:example  [
-            cal:DTSTART "2006-02-01";
-            cal:DTEND "2006-02-04";
-            dc:title "Jim's trip to New York and Chicago";
-            :part [
-                cal:DTSTART "2006-02-03";
-                cal:DTEND "2006-02-04";
-                :location dbp:Chicago];
-            is :trip of 
-                [q:amount -20.56; q:payee "Ardvark Taxis"; q:date  "2006-02-01"],
-                [q:amount -21.79; q:payee "Bert Taxis"; q:date  "2006-02-04"],
-                [q:amount 40.00; q:payee "Acme Inc"; q:date  "2006-04-23"]
-            ].
+Trip a s:Class; s:label "trip" ; s:isDefinedBy <>.
+
+# The example crops up in lists of trips! Demote it to a comment here.
+#    ui:example  [
+#            cal:DTSTART "2006-02-01";
+#            cal:DTEND "2006-02-04";
+#            dc:title "Jim's trip to New York and Chicago";
+#            :part [
+#                cal:DTSTART "2006-02-03";
+#                cal:DTEND "2006-02-04";
+#                :location dbp:Chicago];
+#            is :trip of 
+#                [q:amount -20.56; q:payee "Ardvark Taxis"; q:date  "2006-02-01"],
+#                [q:amount -21.79; q:payee "Bert Taxis"; q:date  "2006-02-04"],
+#                [q:amount 40.00; q:payee "Acme Inc"; q:date  "2006-04-23"]
+#            ].
+
 
 part a rdf:Property; s:label "part".   # @@ Use a common part from another generic vocabulary?
 
@@ -59,12 +63,27 @@ trip a rdf:Property;
     a photo, a meeting, etc.""".
 
 
-# A form for creating a new trip amounts to just capturing its title.
+# A simple form for creating a new trip amounts to just capturing its title.
 
-TripForm is ui:creationForm of Trip;
-    a ui:Form, ui:TextField;
-    ui:property dc:title;
-    ui:length 60.
+#TripForm is ui:creationForm of Trip;
+#    a ui:Form, ui:TextField;
+#    ui:property dc:title;
+#    ui:size 60.
+
+# A more complex form:   Title, start, end, comment.
+#
+TripForm3 a ui:Form;
+    dc:title "Basic trip details";
+    is ui:creationForm of Trip;
+    a ui:Group; ui:part
+        [ ui:sequence 1; a ui:Heading;  ui:contents "Edit Trip"@en], 
+        [ ui:sequence 2; a ui:SingleLineTextField; ui:property dc:title; ui:size 60 ],
+        [ ui:sequence 3; a ui:Comment;  ui:contents
+        """The start and end dates are the first travel date and last travel date,
+         or the same date for a one-day event."""@en; ui:style "background-color: #ffe;"],
+        [ ui:sequence 4; a ui:DateField; ui:property cal:dtstart ],
+        [ ui:sequence 4; a ui:DateField; ui:property cal:dtend ],
+        [ ui:sequence 4; a ui:MultiLineTextField; ui:property s:comment ].
 
 
 

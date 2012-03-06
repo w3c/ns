@@ -1,18 +1,15 @@
 
 
 
-<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:cal="http://www.w3.org/2002/12/cal/ical#"
+<rdf:RDF xmlns="http://www.w3.org/ns/ui#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#"
-    xmlns:q="http://www.w3.org/2000/10/swap/pim/qif#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:s="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:t="http://www.w3.org/ns/pim/trip#"
     xmlns:ui="http://www.w3.org/ns/ui#">
 
     <rdf:Description rdf:about="">
-        <comment>This ontology is for use in describing trips,
+        <s:comment>This ontology is for use in describing trips,
 such as business trips.
 Trips connect where we are at a given point in time,
 meetings which are part of the trip, and who pays for the trip 
@@ -22,77 +19,73 @@ for working out expenses, and for categoizing photographs.
 Trips do not in fact logically have to involve travel.
 A trip could be used to collate expenses relating to an activity or event
 at ones home base, or a set of photos taken at home etc.
-</comment>
+</s:comment>
         <doc:version>$Id$</doc:version>
     </rdf:Description>
 
-    <Class rdf:about="http://www.w3.org/ns/pim/trip#Trip">
-        <label>trip</label>
-        <t:example rdf:nodeID="b1"/>
-        <ui:creationForm rdf:resource="http://www.w3.org/ns/pim/trip#TripForm"/>
-        <ui:initialProperties rdf:parseType="Resource">
-            <rdf:first rdf:resource="http://purl.org/dc/elements/1.1/title"/>
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </ui:initialProperties>
-    </Class>
+    <s:Class rdf:about="http://www.w3.org/ns/pim/trip#Trip">
+        <s:isDefinedBy rdf:resource=""/>
+        <s:label>trip</s:label>
+        <creationForm rdf:resource="http://www.w3.org/ns/pim/trip#TripForm3"/>
+    </s:Class>
 
-    <ui:Form rdf:about="http://www.w3.org/ns/pim/trip#TripForm">
-        <rdf:type rdf:resource="http://www.w3.org/ns/ui#TextField"/>
-        <ui:length rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</ui:length>
-        <ui:property rdf:resource="http://purl.org/dc/elements/1.1/title"/>
-    </ui:Form>
+    <Form rdf:about="http://www.w3.org/ns/pim/trip#TripForm3">
+        <rdf:type rdf:resource="http://www.w3.org/ns/ui#Group"/>
+        <dc:title>Basic trip details</dc:title>
+        <part rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/ns/ui#Heading"/>
+            <contents xml:lang="en">Edit Trip</contents>
+            <sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+        </part>
+        <part rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/ns/ui#SingleLineTextField"/>
+            <property rdf:resource="http://purl.org/dc/elements/1.1/title"/>
+            <sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+            <size rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</size>
+        </part>
+        <part rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/ns/ui#Comment"/>
+            <contents xml:lang="en">The start and end dates are the first travel date and last travel date,
+         or the same date for a one-day event.</contents>
+            <sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
+            <style>background-color: #ffe;</style>
+        </part>
+        <part rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/ns/ui#DateField"/>
+            <property rdf:resource="http://www.w3.org/2002/12/cal/ical#dtstart"/>
+            <sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sequence>
+        </part>
+        <part rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/ns/ui#DateField"/>
+            <property rdf:resource="http://www.w3.org/2002/12/cal/ical#dtend"/>
+            <sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sequence>
+        </part>
+        <part rdf:parseType="Resource">
+            <rdf:type rdf:resource="http://www.w3.org/ns/ui#MultiLineTextField"/>
+            <property rdf:resource="http://www.w3.org/2000/01/rdf-schema#comment"/>
+            <sequence rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sequence>
+        </part>
+    </Form>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#funder">
-        <comment>Who pays for the this? An organization or individual.
-     Could apply to a trip (or a doap:Project, or a cal:Event, etc)</comment>
-        <label>funder</label>
-        <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <s:comment>Who pays for the this? An organization or individual.
+     Could apply to a trip (or a doap:Project, or a cal:Event, etc)</s:comment>
+        <s:label>funder</s:label>
+        <s:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#location">
-        <label>location</label>
+        <s:label>location</s:label>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#part">
-        <label>part</label>
+        <s:label>part</s:label>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#trip">
-        <comment>The trip associated with an expense (a financial transaction), 
-    a photo, a meeting, etc.</comment>
-        <label>trip</label>
-        <range rdf:resource="http://www.w3.org/ns/pim/trip#Trip"/>
+        <s:comment>The trip associated with an expense (a financial transaction), 
+    a photo, a meeting, etc.</s:comment>
+        <s:label>trip</s:label>
+        <s:range rdf:resource="http://www.w3.org/ns/pim/trip#Trip"/>
     </rdf:Property>
-
-    <rdf:Description rdf:nodeID="b1">
-        <dc:title>Jim's trip to New York and Chicago</dc:title>
-        <cal:DTEND>2006-02-04</cal:DTEND>
-        <cal:DTSTART>2006-02-01</cal:DTSTART>
-        <t:part rdf:parseType="Resource">
-            <cal:DTEND>2006-02-04</cal:DTEND>
-            <cal:DTSTART>2006-02-03</cal:DTSTART>
-            <t:location rdf:resource="http://dbpedia.org/resource/Chicago"/>
-        </t:part>
-    </rdf:Description>
-
-    <rdf:Description>
-        <q:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-20.56</q:amount>
-        <q:date>2006-02-01</q:date>
-        <q:payee>Ardvark Taxis</q:payee>
-        <t:trip rdf:nodeID="b1"/>
-    </rdf:Description>
-
-    <rdf:Description>
-        <q:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">-21.79</q:amount>
-        <q:date>2006-02-04</q:date>
-        <q:payee>Bert Taxis</q:payee>
-        <t:trip rdf:nodeID="b1"/>
-    </rdf:Description>
-
-    <rdf:Description>
-        <q:amount rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">40</q:amount>
-        <q:date>2006-04-23</q:date>
-        <q:payee>Acme Inc</q:payee>
-        <t:trip rdf:nodeID="b1"/>
-    </rdf:Description>
 </rdf:RDF>
