@@ -1,4 +1,4 @@
 RewriteEngine on
 
 RewriteBase /ns/adms/
-RewriteRule ^(.*)$ /ns/adms.html [R=301] 
+RewriteRule ^(.*)$ /ns/adms.html$1 [R=301] 
