@@ -1,0 +1,7 @@
+# POSIX sysctl v0
+#
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+<> rdfs:comment "sysctl is used to modify kernel parameters at runtime. The parameters available are those listed under /proc/sys/." ;
+   rdfs:seeAlso <http://www.kernel.org/doc/Documentation/sysctl/> .
