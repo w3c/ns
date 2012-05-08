@@ -1,0 +1,10 @@
+URI: prov
+
+URI: prov.html
+Content-Type: text/html
+
+URI: prov.rdf
+Content-Type: application/rdf+xml; qs=0.4
+
+URI: prov.ttl
+Content-Type: text/turtle; qs=0.5
