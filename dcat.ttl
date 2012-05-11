@@ -1,0 +1,136 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dctype: <http://purl.org/dc/dcmitype/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+
+<http://www.w3.org/ns/dcat>
+    a owl:Ontology;
+    rdfs:label "The data catalog vocabulary";
+    rdfs:comment "DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web.";
+    dcterms:modified "2012-04-24"^^xsd:date;
+    .
+
+dcat:CatalogRecord a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "Catalog Record";
+    rdfs:comment "A record in a data catalog, describing a single dataset" .
+
+dcat:Catalog a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "Catalog";
+    rdfs:comment "A  curated collection of metadata about datasets" .
+
+dcat:Dataset a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "Dataset";
+    rdfs:comment "A collection of data, published or curated by a single source, and available for access or download in one or more formats";
+    rdfs:subClassOf dctype:Dataset .
+
+dcat:Feed a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "Feed";
+    rdfs:comment "represents availability of a dataset as a feed";
+    rdfs:subClassOf dcat:Distribution .
+
+dcat:WebService a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "Web Service";
+    rdfs:comment "represents a web service that enables access to the data of a dataset";
+    rdfs:subClassOf dcat:Distribution .
+
+dcat:Distribution a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "Distribution";
+    rdfs:comment "represents a specific available form of a dataset. Each dataset might be available in different forms, these forms might represent different formats of the dataset, different endpoints,... Examples of Distribution include a downloadable CSV file, an XLS file representing the dataset, an RSS feed…" .
+
+dcat:Download a rdfs:Class, owl:Class;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "Download";
+    rdfs:comment "represents a downloadable distribution of a dataset";
+    rdfs:subClassOf dcat:Distribution .
+
+dcat:themeTaxonomy a rdf:Property;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "themes";
+    rdfs:comment "the knowledge organization system (KOS) used to classify catalog's datasets";
+    rdfs:domain dcat:Catalog;
+    rdfs:range skos:ConceptScheme .
+
+dcat:dataset a rdf:Property;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "dataset";
+    rdfs:comment "a dataset that is part of the catalog";
+    rdfs:domain dcat:Catalog;
+    rdfs:range dcat:Dataset .
+
+dcat:distribution a rdf:Property;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "distribution";
+    rdfs:comment "connects a dataset to one of its available distributions";
+    rdfs:domain dcat:Dataset;
+    rdfs:range dcat:Distribution .
+
+dcat:dataQuality a rdf:Property;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "data quality";
+    rdfs:comment "describes the quality of data e.g. precision. This should not be used to describe the data collection characteristics, other more specialized statistical properties can be used instead.";
+    rdfs:domain dcat:Dataset .
+
+dcat:theme a rdf:Property;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "theme";
+    rdfs:comment "the main category of the dataset. A dataset can have multiple themes";
+    rdfs:range skos:Concept;
+    rdfs:subPropertyOf dct:subject .
+
+dcat:dataDictionary a rdf:Property;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "data dictionary";
+    rdfs:comment "links a dataset to a dictionary that helps interpreting the data";
+    rdfs:domain dcat:Dataset .
+
+dcat:granularity a rdf:Property;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "granularity";
+    rdfs:comment "describes the level of granularity of data in a dataset. The granularity can be in time, place etc";
+    rdfs:domain dcat:Dataset .
+
+dcat:size a rdf:Property;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "size";
+    rdfs:comment "the size of a distribution";
+    rdfs:domain dcat:Distribution;
+    rdfs:subPropertyOf dct:extent .
+
+dcat:keyword a rdf:Property;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "keyword";
+    rdfs:comment "a keyword or tag describing the datase";
+    rdfs:range rdfs:Literal;
+    rdfs:subPropertyOf dct:subject .
+
+dcat:bytes a rdf:Property, owl:DatatypeProperty;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "size in bytes";
+    rdfs:comment "describe size of resource in bytes";
+    rdfs:domain dcat:Distribution;
+    rdfs:range xsd:integer .
+
+dcat:record a rdf:Property;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "record";
+    rdfs:comment "links a catalog to its records";
+    rdfs:domain dcat:Catalog;
+    rdfs:range dcat:CatalogRecord .
+
+dcat:accessURL a rdf:Property;
+    rdfs:isDefinedBy <http://www.w3.org/ns/dcat>;
+    rdfs:label "access URL";
+    rdfs:range rdfs:Resource;
+    rdfs:comment "points to the location of a distribution. This can be a direct download link, a link to an HTML page containing a link to the actual data, Feed, Web Service etc. the semantic is determined by its domain (Distribution, Feed, WebService, Download)" .
