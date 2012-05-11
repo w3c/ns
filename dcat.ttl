@@ -13,7 +13,7 @@
     a owl:Ontology;
     rdfs:label "The data catalog vocabulary";
     rdfs:comment "DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web.";
-    dcterms:modified "2012-04-24"^^xsd:date;
+    dct:modified "2012-04-24"^^xsd:date;
     .
 
 dcat:CatalogRecord a rdfs:Class, owl:Class;
