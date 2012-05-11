@@ -1,0 +1,163 @@
+
+<!-- Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp -->
+<!--     using base file:///home/sandro/cvs/cvs.w3.org/WWW/ns/dcat.ttl-->
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="http://www.w3.org/ns/dcat">
+        <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-04-24</dct:modified>
+        <comment>DCAT is an RDF vocabulary designed to facilitate interoperability between data catalogs published on the Web.</comment>
+        <label>The data catalog vocabulary</label>
+    </owl:Ontology>
+
+    <Class rdf:about="http://www.w3.org/ns/dcat#Catalog">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <comment>A  curated collection of metadata about datasets</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>Catalog</label>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/dcat#CatalogRecord">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <comment>A record in a data catalog, describing a single dataset</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>Catalog Record</label>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/dcat#Dataset">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <comment>A collection of data, published or curated by a single source, and available for access or download in one or more formats</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>Dataset</label>
+        <subClassOf rdf:resource="http://purl.org/dc/dcmitype/Dataset"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/dcat#Distribution">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <comment>represents a specific available form of a dataset. Each dataset might be available in different forms, these forms might represent different formats of the dataset, different endpoints,... Examples of Distribution include a downloadable CSV file, an XLS file representing the dataset, an RSS feed…</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>Distribution</label>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/dcat#Download">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <comment>represents a downloadable distribution of a dataset</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>Download</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/dcat#Feed">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <comment>represents availability of a dataset as a feed</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>Feed</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/dcat#WebService">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+        <comment>represents a web service that enables access to the data of a dataset</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>Web Service</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </Class>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#accessURL">
+        <comment>points to the location of a distribution. This can be a direct download link, a link to an HTML page containing a link to the actual data, Feed, Web Service etc. the semantic is determined by its domain (Distribution, Feed, WebService, Download)</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>access URL</label>
+        <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#bytes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment>describe size of resource in bytes</comment>
+        <domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>size in bytes</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#dataDictionary">
+        <comment>links a dataset to a dictionary that helps interpreting the data</comment>
+        <domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>data dictionary</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#dataQuality">
+        <comment>describes the quality of data e.g. precision. This should not be used to describe the data collection characteristics, other more specialized statistical properties can be used instead.</comment>
+        <domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>data quality</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#dataset">
+        <comment>a dataset that is part of the catalog</comment>
+        <domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>dataset</label>
+        <range rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#distribution">
+        <comment>connects a dataset to one of its available distributions</comment>
+        <domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>distribution</label>
+        <range rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#granularity">
+        <comment>describes the level of granularity of data in a dataset. The granularity can be in time, place etc</comment>
+        <domain rdf:resource="http://www.w3.org/ns/dcat#Dataset"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>granularity</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#keyword">
+        <comment>a keyword or tag describing the datase</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>keyword</label>
+        <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+        <subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#record">
+        <comment>links a catalog to its records</comment>
+        <domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>record</label>
+        <range rdf:resource="http://www.w3.org/ns/dcat#CatalogRecord"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#size">
+        <comment>the size of a distribution</comment>
+        <domain rdf:resource="http://www.w3.org/ns/dcat#Distribution"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>size</label>
+        <subPropertyOf rdf:resource="http://purl.org/dc/terms/extent"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#theme">
+        <comment>the main category of the dataset. A dataset can have multiple themes</comment>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>theme</label>
+        <range rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <subPropertyOf rdf:resource="http://purl.org/dc/terms/subject"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/dcat#themeTaxonomy">
+        <comment>the knowledge organization system (KOS) used to classify catalog's datasets</comment>
+        <domain rdf:resource="http://www.w3.org/ns/dcat#Catalog"/>
+        <isDefinedBy rdf:resource="http://www.w3.org/ns/dcat"/>
+        <label>themes</label>
+        <range rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    </rdf:Property>
+</rdf:RDF>
