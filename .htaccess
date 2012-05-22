@@ -21,3 +21,15 @@ ForceType 'application/json'
 <Files ~ "adms.html">
 ForceType 'text/html; charset=utf-8'
 </Files>
+<Files ~ "radion.html">
+ForceType 'text/html; charset=utf-8'
+</Files>
+<Files ~ "person.html">
+ForceType 'text/html; charset=utf-8'
+</Files>
+<Files ~ "legal.html">
+ForceType 'text/html; charset=utf-8'
+</Files>
+<Files ~ "locn.html">
+ForceType 'text/html; charset=utf-8'
+</Files>
