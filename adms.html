@@ -1,46 +1,1591 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" lang="en-GB" xml:lang="en-GB">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width" />
-  <!--[if lt IE 9]>
-    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-  <![endif]-->
-  <meta name="viewport" content="width=device-width" />
-  <title>ADMS Vocabulary Holding Page</title>
-  <link rel="stylesheet" href="http://www.w3.org/StyleSheets/TR/base.css" type="text/css" />
-  <style type="text/css">
-  footer p {text-align:right; font-style:italic}
+  <!DOCTYPE html>
+  <html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+      <meta charset="utf-8">
+      <title>Asset Description Metadata Schema (ADMS)</title>
+      <!--
+          [if lt IE 9]>
+            <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+          <![endif]
+       -->
+      <meta name="viewport" content="width=device-width">
+      <meta charset="utf-8">
+      <link rel="license" href="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v10">
+      <link href="http://www.w3.org/StyleSheets/TR/base.css" rel="stylesheet" type="text/css" title="base W3C /TR styles">
+      <style type="text/css">
+          table.term {
+            width:100%;
+            border-collapse:collapse;
+            margin-bottom:2em;
+          }
+          table.term th, table.term td {
+            padding: 0.2em 0.5em;
+          }
+          table.term th {
+            text-align:left;
+            padding-left:0;
+          }
+          table.term tbody th {
+            width:8em;
+          }
+          table.term thead th {
+            color: #005A9C;
+          }
+          section#generator {
+            margin:1em 0;
+            border-top: 1px solid #999;
+          }
 
-  p.question {font-style:italic}
-  p.question span {font-weight:bold}
+          section#generator p {
+            text-align:right;
+            font-style:italic;
+          }
+          ul.summaryList {
+            list-style-type:none;
+            display:block;
+            width: 90%;
+            margin: 0 auto;
+            border: 1px solid black;
+            padding: 1em;
+            background-color: #ccc;
+          }
+          ul.summaryList li {
+            display:inline-block; 
+            margin: 0 0.3em;
+            line-height:1.5em;
+          }
+          figure {
+            display:block;
+            text-align:center;
+          }
+          figcaption {
+            display:block;
+            font-style: italic;
+            font-size: smaller;
+            font-weight: bold;
+            margin:0.5em 0;
+          }
+        </style>
+    </head>
+    <body>
+      <header id="docHeader">
+        <p><a href="/"><img src="/Icons/w3c_home" alt="W3C" height="48" width="72" /></a></p>
+        <hgroup>
+          <h1 id="docTitle">Asset Description Metadata Schema (ADMS)</h1>
+          <h2 id="versionHeader">Namespace Document <time datetime="2012-05-22">22 May 2012</time></h2>
+        </hgroup>
+        <dl id="versionLinks">
+<!--          <dt>Latest version:</dt>
+          <dd>
+            <a href="http://www.w3.org/ns/adms#">http://www.w3.org/ns/adms#</a>
+          </dd>-->
+          <dt>Editors:</dt>
+          <dd>
+            <a href="http://makxdekkers.com/">Makx Dekkers</a> Independent                  
+          </dd>
+          <dd>
+            <a href="http://andrea-perego.name/">Andrea Perego</a>
+             Digital Earth and Reference Data (DE) Unit, Institute for Environment and Sustainability (IES) of the EC DG Joint Research Centre (JRC)
+          </dd>
+          <dd>
+            <a href="http://www.w3.org/People/all#phila">Phil Archer</a> W3C/ERCIM
+          </dd>
+        </dl>
+      </header>
+      <section id="copyright">
+        <p>
+          Copyright © 2012 European Commission. This vocabulary is published under the <a href="http://ec.europa.eu/">European Commission</a> / 
+            <a rel="license" href="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v10">ISA Open Metadata Licence v1.0</a>
+        </p>
+      </section>
+      <hr title="Separator for top matter">
+      <section id="abstract">
+        <header>
+          <h1>Abstract</h1>
+        </header>
+        <p>ADMS is intended as a model that facilitates federation 
+    and co-operation. It is not the primary intention that repository owners 
+    redesign or convert their current systems and data to conform to ADMS, but 
+    rather that ADMS can act as a common layer among repositories that want to 
+    exchange data.
+    </p>
+      </section>
+      <section id="status">
+        <header>
+          <h1>Status of this document</h1>
+          <p>
+            <em>This section describes the status of this document at the time of its publication. Other documents may supersede it.</em>
+          </p>
+        </header>
+        <p>This document was originally produced by the <a href="http://joinup.ec.europa.eu/asset/adms/home">ADMS Working Group</a> following the
+          <a href="https://joinup.ec.europa.eu/elibrary/document/isa-deliverable-process-and-methodology-developing-core-vocabularies">Process and Methodology for Developing Core Vocabularies</a>.</p>
+        <p>This document has been reviewed by representatives of the Member States of the European Union, <abbr title="Public Sector Information">PSI</abbr>
+           publishers, and by other interested parties. Publication of this document does not imply endorsement by the European Commission or its representatives.
+  This is a draft document and may be updated, replaced or made obsolete by other documents at any time. It is inappropriate to cite this
+  document as other than work in progress. The ADMS Working Group will seek further endorsement by the Member State representatives in the ISA Coordination Group or the Trusted Information Exchange Cluster.
+        </p>
+        <p>As of this publication, ADMS is a work item of the W3C <a href="http://www.w3.org/2011/gld/">Government Linked Data Working Group</a>. 
+        If you wish to make comments regarding this document, please send them to <a href="mailto:public-gld-comments@w3.org">public-gld-comments@w3.org</a> 
+        (<a href="mailto:public-gld-comments-request@w3.org?subject=subscribe">subscribe</a>, 
+        <a href="http://lists.w3.org/Archives/Public/public-gld-comments/">archives</a>). 
+        All feedback is welcome.</p><p>Publication of this document does not imply endorsement by the 
+        <acronym title="World Wide Web Consortium">W3C</acronym> Membership. This is a draft document and may be updated, 
+        replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress.</p>
+        <p>The GLD Working Group operates under the <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5 February 2004 
+        <acronym title="World Wide Web Consortium">W3C</acronym> Patent Policy</a>. <acronym title="World Wide Web Consortium">W3C</acronym> 
+        maintains a <a href="http://www.w3.org/2004/01/pp-impl/47663/status" rel="disclosure">public list of any patent disclosures</a> made 
+        in connection with the deliverables of the group; that page also includes instructions for disclosing a patent. An 
+        individual who has actual knowledge of a patent which the individual believes contains 
+        <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential Claim(s)</a> must disclose the information in 
+        accordance with <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section 6 of the 
+        <acronym title="World Wide Web Consortium">W3C</acronym> Patent Policy</a>.</p></section>
+      <section role="main">
+        <header id="toc">
+          <h1>Table of Contents</h1>
+          <nav>
+            <ul>
+              <li>
+                <a href="#intro">Introduction</a>
+              </li>
+              <li>
+                <a href="#namespace">Namespace</a>
+              </li>
+              <li>
+                <a href="#glance">Vocabulary Terms at a Glance</a>
+              </li>
+              <li>
+                <a href="#classes">Classes</a>
+              </li>
+              <li>
+                <a href="#properties">Properties</a>
+              </li>
+              <li>
+                <a href="#conformance">Conformance Statement</a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <h1 id="intro">Introduction</h1>
+        <p>
+          Asset Description Metadata Schema (ADMS) was developed under the European 
+          Commission's ISA Programme. This is the namespace document, generated
+          from the associated RDF schema. Full documentation is provided in the
+          
+          <a href="https://joinup.ec.europa.eu/system/files/project/ADMS_Specification_v1.00.zip">ADMS Specification</a>
+          
+          specification document itself. This includes background information,
+          use cases, the conceptual model and full definitions for all terms used.
+        </p>
+        <h1 id="namespace">Namespace</h1>
+        <p>The URI for this vocabulary is</p>
+        <pre>http://www.w3.org/ns/adms#</pre>
+        <p>
+          When abbreviating terms the suggested prefix is 
+          <code>adms</code>
+        </p>
+        <p>Each class or property in the vocabulary has a URI constructed by appending a term name to the vocabulary URI. For example:</p>
+        <pre>http://www.w3.org/ns/adms#Identifier</pre>
+        <section id="glance">
+          <header>
+            <h1>Vocabulary Terms at a Glance</h1>
+          </header>
+          <section id="umlDiagram">
+            <figure>
+              <img src="http://www.w3.org/2012/05/ADMS_Conceptual_Model.png" alt="Asset Description Metadata Schema (ADMS) UML Class Diagram">
+              <figcaption>Asset Description Metadata Schema (ADMS) UML Class Diagram</figcaption>
+            </figure>
+          </section>
+          <dl>
+            <dt>Classes:</dt>
+            <dd>
+              <ul class="summaryList">
+                <li>
+                  <a href="#AssetType">
+                    <var>Asset Type</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#Code">
+                    <var>Code</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#ContactInformation">
+                    <var>Contact Information</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#Documentation">
+                    <var>Documentation</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#FileFormat">
+                    <var>File Format</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#Identifier">
+                    <var>Identifier</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#InteroperabilityLevel">
+                    <var>Interoperability Level</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#Item">
+                    <var>Item</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#PeriodOfTime">
+                    <var>Period Of Time</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#RepresentationTechnique">
+                    <var>Representation Technique</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#SemanticAsset">
+                    <var>Semantic Asset</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#SemanticAssetDistribution">
+                    <var>Semantic Asset Distribution</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#SemanticAssetRepository">
+                    <var>Semantic Asset Repository</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#Status">
+                    <var>Status</var>
+                  </a>
+                </li>
+              </ul>
+            </dd>
+            <dt>Properties:</dt>
+            <dd>
+              <ul class="summaryList">
+                <li>
+                  <a href="#adms:accessURL">
+                    <var>access URL</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:contactPoint">
+                    <var>contact point</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#wdrs:describedby">
+                    <var>documentation</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#schema:endDate">
+                    <var>end</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#foaf:homepage">
+                    <var>homepage</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#dcterms:identifier">
+                    <var>identifier</var>
+                  </a>
+                </li>
+<li>
+                  <a href="#adms:identifies">
+                    <var>identifies</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:includedAsset">
+                    <var>included asset</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:includedItem">
+                    <var>included item</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:interoperabilityLevel">
+                    <var>interoperability level</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:metadataDate">
+                    <var>metadata date</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:metadataLanguage">
+                    <var>metadata language</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:metadataPublisher">
+                    <var>metadata publisher</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:relatedDocumentation">
+                    <var>related documentation</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:relatedWebPage">
+                    <var>related web page</var>
+                  </a>
+                </li>
+ <li>
+                  <a href="#adms:representationTechnique">
+                    <var>representation technique</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:sample">
+                    <var>sample</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:schemeAgency">
+                    <var>scheme agency</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:schemeVersion">
+                    <var>scheme version</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#schema:startDate">
+                    <var>start</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:status">
+                    <var>status</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:supportedSchema">
+                    <var>supported schema</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#dcterms:temporal">
+                    <var>temporal coverage</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#adms:translation">
+                    <var>translation</var>
+                  </a>
+                </li>
+                <li>
+                  <a href="#dcterms:type">
+                    <var>type</var>
+                  </a>
+                </li>
+              </ul>
+            </dd>
+          </dl>
+        </section>
+        <h1 id="classes">Classes</h1>
+        <p>This section provides the formal definition of each class in the vocabulary.</p>
+        <h2 id="AssetType">Asset Type</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>skos:Concept</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/2004/02/skos/core#Concept</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                The skos:Concept class fully represents the ADMS class of Asset Type (see section on the 
+                <a href="#Code">Code</a>
+                 datatype for details).
+              </td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>Used in ADMS to provide a classification of a Semantic Asset according to a controlled vocabulary, e.g. code list, metadata schema.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="Code">Code</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>skos:Concept</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/2004/02/skos/core#Concept</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                <p>
+                  The Conceptual Model includes a 'Code' datatype that 
+      is used by several classes. This is expressed using the 
+                  <a href="http://www.w3.org/TR/skos-primer/">SKOS vocabulary</a>
+                   with
+      a particular 'code' usually being a skos:Concept thatis part of a scheme. 
+      The intention is that the skos:Concept class be used as follows;
+                </p>
+                <ul>
+                  <li>for the content property, use skos:notation</li>
+                  <li>the 'list' property will be taken care of by means of the skos:inScheme property;</li>
+                  <li>the list agency property is likely to be applied to the scheme as a whole for which dcterms:creator is appropriate;</li>
+                  <li>
+                    the list version property can be fulfilled using schema:version (see 
+                    <a href="http://schema.org/CreativeWork">http://schema.org/CreativeWork</a>
+                    )
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="ContactInformation">Contact Information</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>vcard:VCard</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/2006/vcard/ns#VCard</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>VCard fully represents the ADMS class of Contact Information</td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>
+                ADMS uses VCard to provide contact information regarding a Semantic Asset, including e-mail, address, name and associated Web page information. See 
+                <a href="http://www.w3.org/TR/vcard-rdf/">Representing vCard Objects in RDF</a>
+                 for details of this widely used specification.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="Documentation">Documentation</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>foaf:Documentation</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://xmlns.com/foaf/0.1/Document</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>The foaf:Document class fully represents the ADMS concept of documentation.</td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>
+                Used in ADMS specifically for the class of documents that further describe a Semantic Asset or give guidelines for its use. ADMS expects all documents to have a title (use 
+                <a href="http://purl.org/dc/terms/title">dcterms:title</a>
+                ).
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="FileFormat">File Format</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>dcterms:FileFormat</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://purl.org/dc/terms/FileFormat</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>The dcterms:FileFormat class fully represents the ADMS concept of a file format.</td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>Used in ADMS to provide the technical format that a Distribution is available in, e.g. PDF for a document, XML for a schema.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="Identifier">Identifier</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:Identifier</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#Identifier</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                <p>
+                  This class is based on 
+      the UN/CEFACT Identifier complex type defined in See Section 5.8 of 
+                  <a href="http://www.unece.org/fileadmin/DAM/cefact/codesfortrade/CCTS/CCTS-DTCatalogueVersion3p1.pdf">Core Components Data Type Catalogue Version 3.1</a>
+                </p>
+                <p>The various properties can be fulfilled as follows:</p>
+                <ul>
+                  <li>
+                    use 
+                    <a href="http://www.w3.org/2004/02/skos/core#notation">skos:notation</a>
+                     to provide the actual identifier (the Identifier class is effectively meaningless without this property and conceptually it is mandatory);
+                  </li>
+                  <li>
+                    use 
+                    <a href="http://purl.org/dc/terms/type">dcterms:type</a>
+                     to provide an identifier for the type of identifier issued (the identifier scheme);
+                  </li>
+                  <li>
+                    use 
+                    <a href="#schemeversion">adms:schemeVersion</a>
+                     to identify the version of the identifier scheme;
+                  </li>
+                  <li>
+                    use 
+                    <a href="#schemeagency">adms:schemeAgency</a>
+                     to provide the name of the agency that created the identifier (as an rdfs:Literal).
+                  </li>
+                </ul>
+                <p>Although not part of the ADMS conceptual model, it may be useful to provide further properties to the Identifier class:</p>
+                <ul>
+                  <li>
+                    use 
+                    <a href="http://purl.org/dc/terms/creator">dcterms:creator</a>
+                     to link to a URI of an Agent class describing the issuing Agency;
+                  </li>
+                  <li>
+                    use 
+                    <a href="http://purl.org/dc/terms/created">dcterms:created</a>
+                     to provide the date on which the identifier was issued.
+                  </li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="InteroperabilityLevel">Interoperability Level</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>skos:Concept</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/2004/02/skos/core#Concept</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                The skos:Concept class fully represents the ADMS class of Interoperability Level (see section on the 
+                <a href="#Code">Code</a>
+                 datatype for details).
+              </td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>ADMS uses SKOS Concepts to provide the level according to the European Interoperability Framework (EIF 2.0) for which an Asset is relevant.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="Item">Item</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:Item</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#Item</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>An item that is contained inside an Asset, e.g. an individual term in a vocabulary, an individual code in a code list or some other ‘atomic’ element of an Asset.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="PeriodOfTime">Period Of Time</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>dcterms:PeriodOfTime</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://purl.org/dc/terms/PeriodOfTime</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>The dcterms:PeriodOfTime class fully represents the ADMS concept of the same name.</td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>Used in ADMS to provide a time period relevant for an Asset, e.g. for its validity.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="RepresentationTechnique">Representation Technique</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>skos:Concept</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/2004/02/skos/core#Concept</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                The skos:Concept class fully represents the ADMS class of Representation Technique (see section on the 
+                <a href="#Code">Code</a>
+                 datatype for details).
+              </td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>ADMS uses SKOS Concepts to represent the machine-readable language in which a Distribution is expressed. This differs from File Format in that, for example, the XML File Format can be used to represent a number of different langauges including UML, RDF and more.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="SemanticAsset">Semantic Asset</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:SemanticAsset</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#SemanticAsset</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Subclass of</th>
+              <td>
+                <code>http://www.w3.org/ns/rad#Asset</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>A Semantic Asset in the model is an abstract entity that reflects the intellectual content of the asset and represents those characteristics of the asset that are independent of its physical embodiment. This abstract entity combines the FRBR entities work (a distinct intellectual or artistic creation) and expression (the intellectual or artistic realization of a work). Assets can be versioned. Every time the intellectual content of an asset changes, the result is considered to be a new asset that can be linked to previous and next versions of the Asset. The physical embodiment of an Asset is called a Distribution. A particular Asset may have zero or more Distributions.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="SemanticAssetDistribution">Semantic Asset Distribution</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:SemanticDistribution</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#SemanticAssetDistribution</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Subclass of</th>
+              <td>
+                <code>http://www.w3.org/ns/rad#Distribution</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>A Semantic Asset Distribution in the model represents a particular physical embodiment of a Semantic Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work). A Distribution is typically a downloadable computer file (but in principle it could also be a paper document) that implements the intellectual content of an Asset. A particular Distribution is associated with one and only one Asset, while all Distributions of an Asset share the same intellectual content in different physical formats. Distributions themselves are not versioned.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="SemanticAssetRepository">Semantic Asset Repository</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:SemanticAssetRepository</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#SemanticAssetRepository</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Subclass of</th>
+              <td>
+                <code>http://www.w3.org/ns/rad#Repository</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>A Semantic Asset Repository is a system or service that provides facilities for storage and maintenance of descriptions of Semantic Assets and Semantic Asset Distributions, and functionality that allows users to search and access these descriptions. A Semantic Asset Repository will typically contain descriptions of several Semantic Assets and related Semantic Asset Distributions.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="Status">Status</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Class</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>skos:Concept</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/2004/02/skos/core#Concept</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                The skos:Concept class fully represents the ADMS class of Status (see section on the 
+                <a href="#Code">Code</a>
+                 datatype for details).
+              </td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>ADMS uses SKOS Concepts to provide an indication of the maturity of an Asset or Distribution.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1 id="properties">Properties</h1>
+        <h2 id="adms:accessURL">access URL</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:accessURL</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#accessURL</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>The URL of the Repository or Distribution. The range of adms:accessURL is xsd:anyURI</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:contactPoint">contact point</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:contactPoint</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#contactPoint</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                Links a Semantic Asset to relevant 
+                <a href="#ContactInformation">Contact Information</a>
+                 which is provided using VCard.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="wdrs:describedby">documentation</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>wdrs:describedby</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/2007/05/powder-s#describedby</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                The 
+                <a href="http://www.w3.org/2007/05/powder-s#describedby">wdrs:describedby</a>
+                 property fully represents the ADMS relationship of main documentation.
+              </td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>Used in ADMS to link to the main documentation or specification of the Asset.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="schema:endDate">end</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>schema:endDate</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://schema.org/endDate</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                The schema:endDate fully represents the ADMS property that gives the end of the 
+                <a href="#PeriodOfTime">Period of Time</a>
+                .
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="foaf:homepage">homepage</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>foaf:homepage</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://xmlns.com/foaf/0.1/homepage</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>The foaf:homepage property fully represents the ADMS relationship of the same name.</td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>Used in ADMS to link to a Web page that is fully dedicated to the Asset.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="dcterms:identifier">identifier</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>dcterms:identifier</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://purl.org/dc/terms/identifier</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>The dcterms:identifier property fully represents the ADMS property of the same name</td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>ADMS uses this to provide any identifier for the Asset.</td>
+            </tr>
+          </tbody>
+        </table>
+<h2 id="adms:identifies">identifies</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:identifies</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#identifies</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>The identifies relation is used to link an <a href="#Identifier">adms:Identifier</a> class to whatever resource it identifies.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:includedAsset">included asset</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:includedAsset</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#includedAsset</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>Links to a Semantic Asset that is contained in the Asset being described, e.g. when there are several vocabularies defined in a single document.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:includedItem">included item</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:includedItem</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#includedItem</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                Links a Semantic Asset to an item that is contained within it (e.g. a concept in a controlled vocabulary). The range of adms:includedItem is 
+                <a href="#Item">adms:Item</a>
+                .
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:interoperabilityLevel">interoperability level</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:InteroperabilityLevel</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#interoperabilityLevel</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                Links a resource to its 
+                <a href="#InteroperabilityLevel">adms:InteroperabilityLevel</a>
+                . Since this is encoded using skos:Concept, that is the defined range for this property.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:metadataDate">metadata date</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:metadataDate</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#metadataDate</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>The date of the most recent update of the metadata for the Asset.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:metadataLanguage">metadata language</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:metadataLanguage</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#metadataLanguage</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>Links to the language of the metadata for the Asset. The range of adms:metadataLanguage is dcterms:LinguisticSystem which is used by RADion (and therefore ADMS) to represent the Language class.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:metadataPublisher">metadata publisher</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:metadataPublisher</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#metadataPublisher</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>Links to the organisation making the metadata for the Asset available. The range of adms:metadataPublisher as dcterms:Agent which is used by RADion, and therefore ADMS, for the Publisher class.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:relatedDocumentation">related documentation</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:relatedDocumentation</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#relatedDocumentation</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>Links to documentation that contains information related to the asset. The range of adms:relatedDocumentation is foaf:Document</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:relatedWebPage">related web page</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:relatedWebPage</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#relatedWebPage</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>Links to a Web page that contains information related to the asset. The range of adms:relatedWebPage is foaf:Document</td>
+            </tr>
+          </tbody>
+        </table>
 
-  </style>
-</head>
+        <h2 id="adms:representationTechnique">representation technique</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:representationTechnique</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#representationTechnique</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                Links an adms:Distribution to a skos:Concept that is its 
+                <a href="#RepresentationTechnique">Representation Technique</a>
+                .
+              </td>
+            </tr>
+          </tbody>
+        </table>
 
-<header>
-<a href="http://www.w3.org/"><img src="http://www.w3.org/Icons/w3c_home" alt="W3C" height="48" width="72"></a> 
-<h1>ADMS Vocabulary Holding Page</h1>
-</header>
-
-
-<p>This is a holding page for the Asset Description Metadata Schema (ADMS) namespace document.</p>
-
-<p>ADMS is due to become a work item for the <a href="http://www.w3.org/2011/gld/">Government Linked Data WG</a> 
-in the very near future at which point we expect to publish the 
-namspace document in various formats at this URI (<code>http://www.w3.org/ns/adms#</code>).</p>
-
-<p>ADMS has been developed under the <a href="http://ec.europa.eu/isa/">ISA Programme</a> of the European Union and
-all documentation, including the current version of the namespace document, is available on the European Commission's
-<a href="https://joinup.ec.europa.eu/asset/adms/description">Joinup Platform</a>.
-
-<p>For background, see this blog post: <a href="http://www.w3.org/QA/2012/03/interoperable_governments.html">Interoperable Governments?</a>.</p>
-
-
-
-<footer>
-<p>Last updated: $Date$</p>
-<p><a href="http://www.w3.org/People/all#phila">Phil Archer</a>, <a href="mailto:phila@w3.org">phila@w3.org</a>.</p>
-</footer>
-
-</body></html>
+        <h2 id="adms:sample">sample</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:sample</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#sample</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>Links to a sample of the Semantic Asset (which is itself a Semantic Asset, i.e the range is adms:Asset).</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:schemeAgency">scheme agency</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:schemeAgency</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#schemeAgency</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>The name of the agency responsible for issuing the identifier</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:schemeVersion">scheme version</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:schemeVersion</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#schemeVersion</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>The version number of the identifier for the scheme used to create the identifier</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="schema:startDate">start</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>schema:startDate</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://schema.org/startDate</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>The schema:startDate fully represents the ADMS property of start.</td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>
+                Used in ADMS to provide the beginning of the 
+                <a href="#PeriodOfTime">Period of Time</a>
+                 relevant to a Semantic Asset. The term is defined as part of schema.org's 
+                <a href="http://schema.org/Event">Event vocabulary</a>
+                 but has no defined domain and range and so is suitable for use in this context.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:status">status</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:status</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#status</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                Links to the status of the Asset or Distribution in the context of a particular workflow process. Since 
+                <a href="#Status">Status</a>
+                 is defined using a skos:Concept, that is the defined range for this property.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:supportedSchema">supported schema</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:supportedSchema</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#supportedSchema</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>A schema according to which the Repository can provide data about its content, e.g. ADMS</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="dcterms:temporal">temporal coverage</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>dcterms:temporal</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://purl.org/dc/terms/temporal</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                The 
+                <a href="http://purl.org/dc/terms/temporal">dcterms:temporal</a>
+                 property fully represents the ADMS relationship of temporal coverage.
+              </td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>Used in ADMS to link to the Period of Time class. Note that the range is dcterms:PeriodOfTime</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="adms:translation">translation</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>adms:translation</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://www.w3.org/ns/adms#translation</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>Links to a translation of the Semantic Asset (which is itself a Semantic Asset, i.e the range is adms:Asset).</td>
+            </tr>
+          </tbody>
+        </table>
+        <h2 id="dcterms:type">type</h2>
+        <table class="term">
+          <tbody>
+            <tr>
+              <th>Type of Term</th>
+              <td>Property</td>
+            </tr>
+            <tr>
+              <th>QName</th>
+              <td>
+                <code>dcterms:type</code>
+              </td>
+            </tr>
+            <tr>
+              <th>URI</th>
+              <td>
+                <code>http://purl.org/dc/terms/type</code>
+              </td>
+            </tr>
+            <tr>
+              <th>Definition</th>
+              <td>
+                The 
+                <a href="http://purl.org/dc/terms/type">dcterms:type</a>
+                 property fully represents the ADMS property of asset type, and the type properties of both the Licence and Publisher classes. The range of dcterms:type is rdfs:Class.
+              </td>
+            </tr>
+            <tr>
+              <th>Usage Note</th>
+              <td>Used in ADMS to link an Asset to its Asset Type.</td>
+            </tr>
+          </tbody>
+        </table>
+        <h1 id="conformance">Conformance Statement</h1>
+        <p>A conformant implementation of this vocabulary MUST understand all vocabulary terms defined in this document.</p>
+      </section>
+    </body>
+  </html>

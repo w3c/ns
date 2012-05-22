@@ -3,3 +3,5 @@ URI: adms
 URI: adms.html
 Content-Type: text/html
 
+URI: adms.rdf
+Content-Type: application/rdf+xml
