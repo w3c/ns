@@ -72,7 +72,7 @@
         <p><a href="/"><img src="/Icons/w3c_home" alt="W3C" height="48" width="72" /></a></p>
         <hgroup>
           <h1 id="docTitle">Asset Description Metadata Schema (ADMS)</h1>
-          <h2 id="versionHeader">Namespace Document <time datetime="2012-05-22">22 May 2012</time></h2>
+          <h2 id="versionHeader">Namespace Document <time datetime="2012-05-25">25 May 2012</time></h2>
         </hgroup>
         <dl id="versionLinks">
 <!--          <dt>Latest version:</dt>
@@ -129,16 +129,8 @@
         (<a href="mailto:public-gld-comments-request@w3.org?subject=subscribe">subscribe</a>, 
         <a href="http://lists.w3.org/Archives/Public/public-gld-comments/">archives</a>). 
         All feedback is welcome.</p><p>Publication of this document does not imply endorsement by the 
-        <acronym title="World Wide Web Consortium">W3C</acronym> Membership. This is a draft document and may be updated, 
-        replaced or obsoleted by other documents at any time. It is inappropriate to cite this document as other than work in progress.</p>
-        <p>The GLD Working Group operates under the <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/">5 February 2004 
-        <acronym title="World Wide Web Consortium">W3C</acronym> Patent Policy</a>. <acronym title="World Wide Web Consortium">W3C</acronym> 
-        maintains a <a href="http://www.w3.org/2004/01/pp-impl/47663/status" rel="disclosure">public list of any patent disclosures</a> made 
-        in connection with the deliverables of the group; that page also includes instructions for disclosing a patent. An 
-        individual who has actual knowledge of a patent which the individual believes contains 
-        <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#def-essential">Essential Claim(s)</a> must disclose the information in 
-        accordance with <a href="http://www.w3.org/Consortium/Patent-Policy-20040205/#sec-Disclosure">section 6 of the 
-        <acronym title="World Wide Web Consortium">W3C</acronym> Patent Policy</a>.</p></section>
+        <acronym title="World Wide Web Consortium">W3C</acronym> Membership. This document and may be updated, 
+        replaced or obsoleted by other documents at any time.</p></section>
       <section role="main">
         <header id="toc">
           <h1>Table of Contents</h1>
@@ -161,6 +153,12 @@
               </li>
               <li>
                 <a href="#conformance">Conformance Statement</a>
+              </li>
+              <li>
+                <a href="#ack">Acknowledgements</a>
+              </li>
+              <li>
+                <a href="#change">Change Log</a>
               </li>
             </ul>
           </nav>
@@ -802,10 +800,10 @@
               <th>Type of Term</th>
               <td>Class</td>
             </tr>
-            <tr>
+            <tr id="cor1">
               <th>QName</th>
               <td>
-                <code>adms:SemanticDistribution</code>
+                <code>adms:SemanticAssetDistribution</code>
               </td>
             </tr>
             <tr>
@@ -1587,5 +1585,44 @@
         <h1 id="conformance">Conformance Statement</h1>
         <p>A conformant implementation of this vocabulary MUST understand all vocabulary terms defined in this document.</p>
       </section>
+
+      <section id="ack"><header><h1>Acknowledgements</h1></header>
+      <p>Significant contributions to the original work on ADMS were made by: 
+      Adam Arndt,
+      John Borras,
+      Robin Cover,
+      Massimo Craglia,
+      Debora Di Giacomo,
+      João Rodrigues Frade (ADMS WG Chair),
+      Andreas Gehlert,
+      Stijn Goedertier,
+      Bart Hanssens,
+      Douglas Hill,
+      Josef Hruška,
+      Baden Hughes,
+      Peep Küngas,
+      Nikos Loutas,
+      Michael Lutz,
+      Arnold van Overeem,
+      Priit Parmakson,
+      Vassilios Peristeras,
+      Gofran Shukair,
+      Sebastian Sklarß,
+      Willem Van Gemert,
+      Niels Van Hee,
+      Rob Walker,
+      Rigo Wenning,
+      Marcia Zeng. 
+      </section>
+
+    <section id="ack"><header><h1>Change Log</h1></header>
+    <p>Changes since this namespace document was first installed on <time datetime="2012-05-22">22 May 2012</time> are recorded here.</p>
+    <ul>
+      <li><time datetime="2012-05-25">25 May 2012</time> Added acknowledgement section, this change log.
+      <a href="#cor1">Corrected Qname</a> of SemanticAssetDistribution. Removed unnecessary text around use of
+      W3C Patent Policy.</li>
+    </ul></section>
+      
+
     </body>
   </html>
