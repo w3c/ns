@@ -258,7 +258,7 @@
     <rdfs:comment xml:lang="en">A Semantic Asset Distribution in the model represents a particular physical embodiment of a Semantic Asset, which is an example of the FRBR entity manifestation (the physical embodiment of an expression of a work). A Distribution is typically a downloadable computer file (but in principle it could also be a paper document) that implements the intellectual content of an Asset. A particular Distribution is associated with one and only one Asset, while all Distributions of an Asset share the same intellectual content in different physical formats. Distributions themselves are not versioned.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="&rad;Distribution" />
     <rdfs:isDefinedBy rdf:resource="&documentation;" />
-    <dcterms:identifier>adms:SemanticDistribution</dcterms:identifier>
+    <dcterms:identifier>adms:SemanticAssetDistribution</dcterms:identifier>
   </rdfs:Class>
 
   <rdfs:Class rdf:about="&adms;SemanticAssetRepository">
