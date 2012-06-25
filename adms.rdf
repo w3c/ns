@@ -59,8 +59,8 @@
   <owl:Ontology rdf:about="&adms;">
     <rdfs:label xml:lang="en">Asset Description Metadata Schema (ADMS)</rdfs:label>
     <rdfs:comment xml:lang="en">This file specifies the set of RDF classes and properties used in ADMS</rdfs:comment>
-    <owl:versionInfo xml:lang="en">22 May 2012</owl:versionInfo>
-    <dcterms:modified rdf:datatype="&xsd;date">2012-05-07</dcterms:modified>
+    <owl:versionInfo xml:lang="en">25 June 2012</owl:versionInfo>
+    <dcterms:modified rdf:datatype="&xsd;date">2012-06-25</dcterms:modified>
 <!--    
     <xhv:prev rdf:resource=""/>
     <xhv:next rdf:resource=""/>
@@ -79,7 +79,7 @@
       <foaf:name>Andrea Perego</foaf:name>
       <foaf:homepage rdf:resource="http://andrea-perego.name/"/>
       <schema:affiliation rdf:parseType="Resource">
-        <foaf:name>Digital Earth and Reference Data (DE) Unit, Institute for Environment and Sustainability (IES) of the EC DG Joint Research Centre (JRC)</foaf:name>
+        <foaf:name>European Commission, Joint Research Centre </foaf:name>
         <foaf:homepage rdf:resource="http://ies.jrc.ec.europa.eu/DE"/>
       </schema:affiliation>
     </dcterms:creator>
@@ -99,8 +99,7 @@
     <dcterms:description>This is the RDF encoding of the Asset Description 
       Metadata Schema, developed under the European Union's ISA Programme,
       specifically under SEMIC Phase II, directed by Vassilios Peristeras of
-      DG DIGIT. It re-uses terms from several other vocabularues, notably DCAT 
-      (The Data Catalog Vocabulary) and Dublin Core with elements of SKOS, FOAF 
+      DG DIGIT. It re-uses terms from several other vocabularues, notably Dublin Core with elements of SKOS, FOAF 
       and more. The ADMS Concept Scheme, available at &admsUrl;.html, defines
       its own lexical terms for its classes, properties and relationships.
     </dcterms:description>
@@ -113,7 +112,8 @@
     and co-operation. It is not the primary intention that repository owners 
     redesign or convert their current systems and data to conform to ADMS, but 
     rather that ADMS can act as a common layer among repositories that want to 
-    exchange data.
+    exchange data. A change log for this namespace document is maintained in the
+    HTML representation of this document, available at &admsUrl;.html.
     </dcterms:abstract>
     <wdrs:describedby>
       <rdf:Description rdf:about="&documentation;">
@@ -319,12 +319,22 @@
     <dcterms:identifier>foaf:homepage</dcterms:identifier>
   </rdf:Description>
 
+<!--
   <rdf:Description rdf:about="&dcterms;identifier">
     <rdfs:label xml:lang="en">identifier</rdfs:label>
     <rdfs:comment xml:lang="en">The dcterms:identifier property fully represents the ADMS property of the same name</rdfs:comment>
     <vann:usageNote xml:lang="en">ADMS uses this to provide any identifier for the Asset.</vann:usageNote>
     <rdfs:isDefinedBy rdf:resource="&dcterms;" />
     <dcterms:identifier>dcterms:identifier</dcterms:identifier>
+  </rdf:Description>
+-->
+  <rdf:Description rdf:about="&adms;identifier">
+    <rdfs:label xml:lang="en">identifier</rdfs:label>
+    <rdfs:comment xml:lang="en">adms:identifier is used to link any resource to an instance of adms:Identifier which is its range. N.B. it is not appropriate to use dcterms:identifer to link to the Identifier class as its range is rdfs:Literal.</rdfs:comment>
+    <vann:usageNote xml:lang="en">ADMS uses this to provide any identifier for the Asset.</vann:usageNote>
+    <rdfs:isDefinedBy rdf:resource="&documentation;" />
+    <rdfs:range rdf:resource="&adms;Identifier" />
+    <dcterms:identifier>adms:identifier</dcterms:identifier>
   </rdf:Description>
 
   <rdf:Property rdf:about="&adms;identifies">

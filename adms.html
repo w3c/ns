@@ -85,7 +85,7 @@
           </dd>
           <dd>
             <a href="http://andrea-perego.name/">Andrea Perego</a>
-             Digital Earth and Reference Data (DE) Unit, Institute for Environment and Sustainability (IES) of the EC DG Joint Research Centre (JRC)
+             <a href="http://ies.jrc.ec.europa.eu/DE">European Commission, Joint Research Centre</a>
           </dd>
           <dd>
             <a href="http://www.w3.org/People/all#phila">Phil Archer</a> W3C/ERCIM
@@ -298,7 +298,7 @@
                   </a>
                 </li>
                 <li>
-                  <a href="#dcterms:identifier">
+                  <a href="#adms:identifier">
                     <var>identifier</var>
                   </a>
                 </li>
@@ -1034,7 +1034,7 @@
             </tr>
           </tbody>
         </table>
-        <h2 id="dcterms:identifier">identifier</h2>
+        <h2 id="adms:identifier">identifier</h2>
         <table class="term">
           <tbody>
             <tr>
@@ -1044,18 +1044,18 @@
             <tr>
               <th>QName</th>
               <td>
-                <code>dcterms:identifier</code>
+                <code>adms:identifier</code>
               </td>
             </tr>
             <tr>
               <th>URI</th>
               <td>
-                <code>http://purl.org/dc/terms/identifier</code>
+                <code>http://www.w3.org/ns/adms#identifier</code>
               </td>
             </tr>
             <tr>
               <th>Definition</th>
-              <td>The dcterms:identifier property fully represents the ADMS property of the same name</td>
+              <td>adms:identifier is used to link any resource to an instance of adms:Identifier which is its range. N.B. it is not appropriate to use dcterms:identifer to link to the Identifier class as its range is rdfs:Literal.</td>
             </tr>
             <tr>
               <th>Usage Note</th>
@@ -1615,12 +1615,16 @@
       Marcia Zeng. 
       </section>
 
-    <section id="ack"><header><h1>Change Log</h1></header>
+    <section id="change"><header><h1>Change Log</h1></header>
     <p>Changes since this namespace document was first installed on <time datetime="2012-05-22">22 May 2012</time> are recorded here.</p>
     <ul>
       <li><time datetime="2012-05-25">25 May 2012</time> Added acknowledgement section, this change log.
       <a href="#cor1">Corrected Qname</a> of SemanticAssetDistribution. Removed unnecessary text around use of
       W3C Patent Policy.</li>
+      <li><time datetime="2012-06-25">25 June 2012</time> Introduced new <a href="#adms:identifier">adms:identifier</a>
+    property, replacing use of dcterms:identifier as this has a range of rdfs:Literal. adms:identifier has a range of 
+    <a href="#Identifier">adms:Identifier</a>. Also the description of Andrea Perego's affiliation was updated in
+    line with EC requirements.</li>
     </ul></section>
       
 
