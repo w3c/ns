@@ -13,9 +13,9 @@ formats:Turtle a formats:Format ;
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
      dc:date "2010-05-03" ;
      dc:description "Unique identifier for the RDF Serialization in Turtle" ;
-     rdfs:comment "Turtle is defined by the “Turtle - Terse RDF Triple Language” W3C Team Submission." ;
-     rdfs:isDefinedBy <http://www.w3.org/TeamSubmission/turtle/> ;
-     rdfs:seeAlso <http://www.w3.org/TeamSubmission/turtle/#sec-mediaReg> ;
+     rdfs:comment "Turtle is defined by the “Turtle - Terse RDF Triple Language” W3C Working Draft." ;
+     rdfs:isDefinedBy <http://www.w3.org/TR/turtle/> ;
+     rdfs:seeAlso <http://www.w3.org/TR/turtle/#sec-mediaReg> ;
      formats:media_type "text/turtle" ;
      formats:preferred_suffix ".ttl" . 
 

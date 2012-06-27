@@ -20,11 +20,11 @@
     <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/formats/Turtle">
-    <rdfs:comment>Turtle is defined by the “Turtle - Terse RDF Triple Language” W3C Team Submission.</rdfs:comment>
+    <rdfs:comment>Turtle is defined by the “Turtle - Terse RDF Triple Language” W3C Working Draft.</rdfs:comment>
     <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TeamSubmission/turtle/#sec-mediaReg"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/turtle/#sec-mediaReg"/>
     <formats:media_type>text/turtle</formats:media_type>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TeamSubmission/turtle/"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/turtle/"/>
     <dc:date>2010-05-03</dc:date>
     <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
     <dc:description>Unique identifier for the RDF Serialization in Turtle</dc:description>
