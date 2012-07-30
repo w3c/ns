@@ -1,14 +1,42 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix : <http://www.w3.org/ns/r2rml#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix : <http://www.w3.org/ns/r2rml#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix r2rml: <http://www.w3.org/ns/r2rml#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix cc: <http://creativecommons.org/ns#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix vaem: <http://www.linkedmodel.org/schema/vaem#> .
+@base <http://www.w3.org/ns/r2rml#> .
 
+<http://www.w3.org/ns/r2rml#> 	rdf:type owl:Ontology ;
+								dc:title "R2RML vocabulary"@en ;
+								rdf:type <http://purl.org/vocommons/voaf#Vocabulary> ;
+								dc:issued "2012-01-24"^^<http://www.w3.org/2001/XMLSchema#date> ;
+								dc:modified "2012-07-16"^^<http://www.w3.org/2001/XMLSchema#date> ;
+								dc:descripion "RDB to RDF Mapping Language - Vocabulary"@en ;
+								dc:creator <http://richard.cyganiak.de/foaf.rdf#cygri> ;
+								dc:contributor <http://boris.villazon.terrazas.name> , <http://www.w3.org/People/Ivan/> ;
+								dc:publisher <http://www.w3.org/> ;
+								cc:license <http://creativecommons.org/licenses/by/3.0/> ;
+								vann:preferredNamespacePrefix "rr" ;
+								vann:preferredNamespaceUri "http://www.w3.org/ns/r2rml#" .
 
-<http://www.w3.org/ns/r2rml#> rdf:type owl:Ontology .
+<http://richard.cyganiak.de/foaf.rdf#cygri> a foaf:Person ;
+								foaf:name	"Richard Cyganiak" .
 
+<http://boris.villazon.terrazas.name> a foaf:Person ;
+								foaf:name	"Boris Villazon-Terrazas" .
+
+<http://www.w3.org/People/Ivan/> a foaf:Person ;
+								foaf:name	"Ivan Herman" .
+ 
+<http://www.w3.org/> a foaf:Organization ;
+					 rdfs:label "The World Wide Web Consortium (W3C)"@en ;
+					 vaem:acronym "W3C" .
 
 #################################################################
 #
@@ -149,9 +177,13 @@
            
            rdfs:comment "An ObjectMap element to generate the object component of the (predicate, object) pair from a logical table row."@en ;
            
-           rdfs:range :ObjectMap ;
+           rdfs:domain :PredicateObjectMap ;
            
-           rdfs:domain :PredicateObjectMap .
+           rdfs:range [ rdf:type owl:Class ;
+                        owl:unionOf ( :ObjectMap
+                                      :RefObjectMap
+                                    )
+                      ] .
 
 
 
@@ -209,18 +241,6 @@
 
 
 
-###  http://www.w3.org/ns/r2rml#refObjectMap
-
-:refObjectMap rdf:type owl:ObjectProperty ;
-              
-              rdfs:comment "A RefObjectMap element to generate the object component of the (predicate, object) pair from a logical table row using a foreign key constraint definition."@en ;
-              
-              rdfs:domain :PredicateObjectMap ;
-              
-              rdfs:range :RefObjectMap .
-
-
-
 ###  http://www.w3.org/ns/r2rml#sqlVersion
 
 :sqlVersion rdf:type owl:ObjectProperty ;
@@ -267,13 +287,7 @@
           
           rdfs:comment "A string indicating whether subject or object generated using the value from column name specified for rr:column should be an IRI reference, blank node, or a literal."@en ;
           
-          rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( :GraphMap
-                                      :ObjectMap
-                                      :PredicateMap
-                                      :SubjectMap
-                                    )
-                      ] ;
+          rdfs:domain :TermMap ;
           
           rdfs:range [ rdf:type owl:Class ;
                        owl:unionOf ( :BlankNode
@@ -313,13 +327,7 @@
         
         rdfs:range xsd:string ;
         
-        rdfs:domain [ rdf:type owl:Class ;
-                      owl:unionOf ( :GraphMap
-                                    :ObjectMap
-                                    :PredicateMap
-                                    :SubjectMap
-                                  )
-                    ] .
+        rdfs:domain :TermMap .
 
 
 
@@ -331,13 +339,7 @@
                    
                    rdfs:range xsd:string ;
                    
-                   rdfs:domain [ rdf:type owl:Class ;
-                                 owl:unionOf ( :GraphMap
-                                               :ObjectMap
-                                               :PredicateMap
-                                               :SubjectMap
-                                             )
-                               ] .
+                   rdfs:domain :TermMap .
 
 
 
@@ -397,13 +399,7 @@
           
           rdfs:range xsd:string ;
           
-          rdfs:domain [ rdf:type owl:Class ;
-                        owl:unionOf ( :GraphMap
-                                      :ObjectMap
-                                      :PredicateMap
-                                      :SubjectMap
-                                    )
-                      ] .
+          rdfs:domain :TermMap .
 
 
 
@@ -460,6 +456,8 @@ rdfs:Resource rdf:type owl:Class .
 
 :GraphMap rdf:type owl:Class ;
           
+          rdfs:subClassOf :TermMap ;
+          
           rdfs:comment "Represents a graph map."@en .
 
 
@@ -478,18 +476,18 @@ rdfs:Resource rdf:type owl:Class .
       
       rdfs:subClassOf owl:Thing ,
                       [ rdf:type owl:Restriction ;
-                        owl:onProperty :child ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onDataRange xsd:string
-                      ] ,
-                      [ rdf:type owl:Restriction ;
-                        owl:onProperty :parent ;
-                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                        owl:onDataRange xsd:string
-                      ] ,
-                      [ rdf:type owl:Restriction ;
                         owl:onProperty :parent ;
                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :parent ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                        owl:onDataRange xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :child ;
+                        owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                         owl:onDataRange xsd:string
                       ] ,
                       [ rdf:type owl:Restriction ;
@@ -527,15 +525,16 @@ rdfs:Resource rdf:type owl:Class .
 :ObjectMap rdf:type owl:Class ;
            
            rdfs:subClassOf owl:Thing ,
+                           :TermMap ,
+                           [ rdf:type owl:Restriction ;
+                             owl:onProperty :object ;
+                             owl:onClass rdfs:Resource ;
+                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
+                           ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :object ;
                              owl:onClass rdfs:Resource ;
                              owl:maxQualifiedCardinality "1"^^xsd:nonNegativeInteger
-                           ] ,
-                           [ rdf:type owl:Restriction ;
-                             owl:onProperty :datatype ;
-                             owl:onClass rdfs:Datatype ;
-                             owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
                            ] ,
                            [ rdf:type owl:Restriction ;
                              owl:onProperty :language ;
@@ -543,8 +542,8 @@ rdfs:Resource rdf:type owl:Class .
                              owl:onDataRange xsd:string
                            ] ,
                            [ rdf:type owl:Restriction ;
-                             owl:onProperty :object ;
-                             owl:onClass rdfs:Resource ;
+                             owl:onProperty :datatype ;
+                             owl:onClass rdfs:Datatype ;
                              owl:minQualifiedCardinality "0"^^xsd:nonNegativeInteger
                            ] ;
            
@@ -557,6 +556,7 @@ rdfs:Resource rdf:type owl:Class .
 :PredicateMap rdf:type owl:Class ;
               
               rdfs:subClassOf owl:Thing ,
+                              :TermMap ,
                               [ rdf:type owl:Restriction ;
                                 owl:onProperty :predicate ;
                                 owl:onClass rdf:Property ;
@@ -573,19 +573,14 @@ rdfs:Resource rdf:type owl:Class .
                     
                     rdfs:subClassOf owl:Thing ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty :refObjectMap ;
-                                      owl:onClass :RefObjectMap ;
+                                      owl:onProperty :objectMap ;
+                                      owl:onClass :ObjectMap ;
                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
                                     ] ,
                                     [ rdf:type owl:Restriction ;
                                       owl:onProperty :predicateMap ;
                                       owl:onClass :PredicateMap ;
                                       owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger
-                                    ] ,
-                                    [ rdf:type owl:Restriction ;
-                                      owl:onProperty :objectMap ;
-                                      owl:onClass :ObjectMap ;
-                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
                                     ] ;
                     
                     rdfs:comment "Represents a predicate-object map."@en .
@@ -604,12 +599,7 @@ rdfs:Resource rdf:type owl:Class .
 
 :RefObjectMap rdf:type owl:Class ;
               
-              rdfs:subClassOf owl:Thing ,
-                              [ rdf:type owl:Restriction ;
-                                owl:onProperty :refObjectMap ;
-                                owl:onClass :TriplesMap ;
-                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger
-                              ] ;
+              rdfs:subClassOf owl:Thing ;
               
               rdfs:comment "Denotes a reference to an object map."@en .
 
@@ -620,6 +610,7 @@ rdfs:Resource rdf:type owl:Class .
 :SubjectMap rdf:type owl:Class ;
             
             rdfs:subClassOf owl:Thing ,
+                            :TermMap ,
                             [ rdf:type owl:Restriction ;
                               owl:onProperty :class ;
                               owl:onClass rdfs:Class ;
@@ -627,6 +618,16 @@ rdfs:Resource rdf:type owl:Class .
                             ] ;
             
             rdfs:comment "Represents a subject map."@en .
+
+
+
+###  http://www.w3.org/ns/r2rml#TermMap
+
+:TermMap rdf:type owl:Class ;
+         
+         rdfs:label "Term Map"@en ;
+         
+         rdfs:comment "A function that generates an RDF term from a logical table row."@en .
 
 
 
