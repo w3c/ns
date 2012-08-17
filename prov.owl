@@ -19,7 +19,7 @@
         <rdfs:comment xml:lang="en">This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome.</rdfs:comment>
-        <owl:versionIRI rdf:resource="http://www.w3.org/TR/2012/WD-prov-o-20120724/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/TR/2012/WD-prov-o-20120724"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov#"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov-o/"/>
     </owl:Ontology>
@@ -652,15 +652,7 @@ These two properties are used to encode the PROV-DM&#39;s Mention construct (htt
         <inverse>qualifiedInfluenceOf</inverse>
         <component>derivations</component>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-        <rdfs:domain>
-            <owl:Class>
-                <owl:unionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Activity"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Agent"/>
-                    <rdf:Description rdf:about="http://www.w3.org/ns/prov#Entity"/>
-                </owl:unionOf>
-            </owl:Class>
-        </rdfs:domain>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <rdfs:range rdf:resource="http://www.w3.org/ns/prov#Influence"/>
         <sharesDefinitionWith rdf:resource="http://www.w3.org/ns/prov#Influence"/>
         <unqualifiedForm rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
