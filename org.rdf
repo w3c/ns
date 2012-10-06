@@ -1,18 +1,25 @@
 <rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:org="http://www.w3.org/ns/org#"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:owlTime="http://www.w3.org/2006/time#"
+    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:foaf="http://xmlns.com/foaf/0.1/"
     xmlns:gr="http://purl.org/goodrelations/v1#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:owlTime="http://www.w3.org/2006/time#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:opmv="http://purl.org/net/opmv/ns#"
-    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="http://www.w3.org/ns/org#">
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2012-10-06</dct:modified>
     <rdfs:comment xml:lang="en">Vocabulary for describing organizational structures, specializable to a broad variety of types of organization.</rdfs:comment>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
+      <foaf:name>Dave Reynolds</foaf:name>
+    </dct:contributor>
     <dct:title xml:lang="en">Core organization ontology</dct:title>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-05-28</dct:created>
@@ -22,13 +29,9 @@
     </dct:contributor>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2012-09-30</dct:modified>
-    <owl:versionInfo>0.5</owl:versionInfo>
+    <owl:versionInfo>0.6</owl:versionInfo>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-10-08</dct:modified>
-    <dct:contributor rdf:parseType="Resource">
-      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
-      <foaf:name>Dave Reynolds</foaf:name>
-    </dct:contributor>
     <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
     <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
     <rdfs:seeAlso rdf:resource="http://www.epimorphics.com/public/vocabulary/org.html"/>
@@ -115,10 +118,11 @@
   <owl:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:subClassOf rdf:resource="http://purl.org/net/opmv/ns#Process"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
     <rdfs:label xml:lang="en">Change Event</rdfs:label>
     <rdfs:label xml:lang="fr">Évènement</rdfs:label>
-    <rdfs:comment xml:lang="en">Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `opmv:wasGeneratedAt`, a description should be given by `dct:description`. </rdfs:comment>
-    <rdfs:comment xml:lang="fr">Représente un Évènement impliquant un changement majeur dans l'Organisation, comme une fusion ou une restructuration. Prévu pour des situations ou l'organisation finale est suffisamment différente des Organisations originales pour qu'elle ait une identité et une URI distinctes. Des vocabulaires d'extension devraient définir des sous-classes de celle-ci pour annoter les différentes catégories d'Évènemenents. Le moment ou l'intervalle de l'Évènement devrait être indiqué avec `opmv:wasGeneratedAt`, et une description avec la classe `dct:description`. </rdfs:comment>
+    <rdfs:comment xml:lang="en">Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. </rdfs:comment>
+    <rdfs:comment xml:lang="fr">Représente un Évènement impliquant un changement majeur dans l'Organisation, comme une fusion ou une restructuration. Prévu pour des situations ou l'organisation finale est suffisamment différente des Organisations originales pour qu'elle ait une identité et une URI distinctes. Des vocabulaires d'extension devraient définir des sous-classes de celle-ci pour annoter les différentes catégories d'Évènemenents. Le moment ou l'intervalle de l'Évènement devrait être indiqué avec `prov:startAtTime` et `prov:endedAtTime`, et une description avec la classe `dct:description`. </rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:Class>
   <owl:Class rdf:about="http://www.w3.org/ns/org#FormalOrganization">
@@ -167,18 +171,18 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:Class>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#originalOrganization">
-    <rdfs:comment xml:lang="fr">Indique une ou plusieurs organisations qui ont existé avant un évènement de changement. Selon l'évènement, ces organisations ont pu continuer à exister ou non. Inverse de `org:changedBy`. Notez qu'en spécialisant le vocabulaire OPMV nous traitons `org:Organization` comme un `opmv:Artifact`, ce qui est cohérent avec le modèle OPM.</rdfs:comment>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:comment xml:lang="en">Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`. Note that in specializing the OPMV vocabulary we are treating an `org:Organization` as an `opmv:Artifact`, which is consistent with the OPM model.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <owl:inverseOf>
       <rdf:Property rdf:about="http://www.w3.org/ns/org#changedBy"/>
     </owl:inverseOf>
     <rdfs:label xml:lang="en">original organization</rdfs:label>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/net/opmv/ns#used"/>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
+    <rdfs:comment xml:lang="fr">Indique une ou plusieurs organisations qui ont existé avant un évènement de changement. Selon l'évènement, ces organisations ont pu continuer à exister ou non. Inverse de `org:changedBy`. </rdfs:comment>
     <rdfs:label xml:lang="fr">organisation originelle</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`.</rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#classification">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -490,14 +494,14 @@
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/org#resultedFrom">
-    <rdfs:comment xml:lang="en">Indicates an event which resulted in this organization. Note that in specializing the OPMV vocabulary we are treating an `org:Organization` as an `opmv:Artifact`, which is consistent with the OPM model. Inverse of `org:resultingOrganization`.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:comment xml:lang="fr">Indique un évènement dont est issue l'Organisation. Inverse de `org:resultingOrganization`.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`.</rdfs:comment>
     <rdfs:label xml:lang="en">resulted from</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:subPropertyOf rdf:resource="http://purl.org/net/opmv/ns#wasGeneratedBy"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#ChangeEvent"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="fr">Indique un évènement dont est issue l'Organisation. Notez qu'en spécialisant le vocabulaire OPMV nous traitons `org:Organization` comme un `opmv:Artifact`, ce qui est cohérent avec le modèle OPM. Inverse de `org:resultingOrganization`.</rdfs:comment>
     <rdfs:label xml:lang="fr">issue de</rdfs:label>
     <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#resultingOrganization"/>
   </rdf:Property>

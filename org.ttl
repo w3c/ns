@@ -10,19 +10,21 @@
 @prefix org:        <http://www.w3.org/ns/org#> .
 @prefix vcard:      <http://www.w3.org/2006/vcard/ns#> .
 @prefix opmv:       <http://purl.org/net/opmv/ns#> .
+@prefix prov:       <http://www.w3.org/ns/prov#> .
 @prefix :           <http://www.w3.org/ns/org#> .
 
 # -- Meta data -----------------------------------------------------------
 
 <http://www.w3.org/ns/org#>
     a owl:Ontology;
-    owl:versionInfo "0.5";
+    owl:versionInfo "0.6";
     rdfs:label "Core organization ontology"@en;
     rdfs:comment "Vocabulary for describing organizational structures, specializable to a broad variety of types of organization."@en;
     dct:created "2010-05-28"^^xsd:date;
     dct:modified "2010-06-09"^^xsd:date;
     dct:modified "2010-10-08"^^xsd:date;
     dct:modified "2012-09-30"^^xsd:date;
+    dct:modified "2012-10-06"^^xsd:date;
     dct:title "Core organization ontology"@en;
     dct:title "Ontologie des organisations"@fr;
     dct:contributor [foaf:mbox "dave@epimorphics.com"; foaf:name "Dave Reynolds"];
@@ -415,11 +417,11 @@ org:OrganizationalCollaboration a owl:Class, rdfs:Class;
 # -- Historical information -----------------------------------------------------------
 
 org:ChangeEvent a owl:Class, rdfs:Class;
-    rdfs:subClassOf opmv:Process;
+    rdfs:subClassOf opmv:Process, prov:Activity;
     rdfs:label "Change Event"@en;
     rdfs:label "Évènement"@fr;
-    rdfs:comment """Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `opmv:wasGeneratedAt`, a description should be given by `dct:description`. """@en;    
-    rdfs:comment """Représente un Évènement impliquant un changement majeur dans l'Organisation, comme une fusion ou une restructuration. Prévu pour des situations ou l'organisation finale est suffisamment différente des Organisations originales pour qu'elle ait une identité et une URI distinctes. Des vocabulaires d'extension devraient définir des sous-classes de celle-ci pour annoter les différentes catégories d'Évènemenents. Le moment ou l'intervalle de l'Évènement devrait être indiqué avec `opmv:wasGeneratedAt`, et une description avec la classe `dct:description`. """@fr;
+    rdfs:comment """Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. """@en;    
+    rdfs:comment """Représente un Évènement impliquant un changement majeur dans l'Organisation, comme une fusion ou une restructuration. Prévu pour des situations ou l'organisation finale est suffisamment différente des Organisations originales pour qu'elle ait une identité et une URI distinctes. Des vocabulaires d'extension devraient définir des sous-classes de celle-ci pour annoter les différentes catégories d'Évènemenents. Le moment ou l'intervalle de l'Évènement devrait être indiqué avec `prov:startAtTime` et `prov:endedAtTime`, et une description avec la classe `dct:description`. """@fr;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
@@ -428,9 +430,9 @@ org:originalOrganization a owl:ObjectProperty, rdf:Property;
     rdfs:label "organisation originelle"@fr;
     rdfs:domain org:ChangeEvent;
     rdfs:range  org:Organization;
-    rdfs:subPropertyOf opmv:used;
-    rdfs:comment """Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`. Note that in specializing the OPMV vocabulary we are treating an `org:Organization` as an `opmv:Artifact`, which is consistent with the OPM model."""@en;
-    rdfs:comment """Indique une ou plusieurs organisations qui ont existé avant un évènement de changement. Selon l'évènement, ces organisations ont pu continuer à exister ou non. Inverse de `org:changedBy`. Notez qu'en spécialisant le vocabulaire OPMV nous traitons `org:Organization` comme un `opmv:Artifact`, ce qui est cohérent avec le modèle OPM."""@fr;    
+    rdfs:subPropertyOf prov:used;
+    rdfs:comment """Indicates one or more organizations that existed before the change event. Depending on the event they may or may not have continued to exist after the event. Inverse of `org:changedBy`."""@en;
+    rdfs:comment """Indique une ou plusieurs organisations qui ont existé avant un évènement de changement. Selon l'évènement, ces organisations ont pu continuer à exister ou non. Inverse de `org:changedBy`. """@fr;    
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
@@ -452,9 +454,9 @@ org:resultedFrom a owl:ObjectProperty, rdf:Property;
     rdfs:label "issue de"@fr;
     rdfs:domain org:Organization;
     rdfs:range  org:ChangeEvent;
-    rdfs:subPropertyOf opmv:wasGeneratedBy;
-    rdfs:comment """Indicates an event which resulted in this organization. Note that in specializing the OPMV vocabulary we are treating an `org:Organization` as an `opmv:Artifact`, which is consistent with the OPM model. Inverse of `org:resultingOrganization`."""@en;
-    rdfs:comment """Indique un évènement dont est issue l'Organisation. Notez qu'en spécialisant le vocabulaire OPMV nous traitons `org:Organization` comme un `opmv:Artifact`, ce qui est cohérent avec le modèle OPM. Inverse de `org:resultingOrganization`."""@fr;    
+    rdfs:subPropertyOf prov:wasGeneratedBy;
+    rdfs:comment """Indicates an event which resulted in this organization. Inverse of `org:resultingOrganization`."""@en;
+    rdfs:comment """Indique un évènement dont est issue l'Organisation. Inverse de `org:resultingOrganization`."""@fr;    
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ; 
     .
 
