@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<?xml-stylesheet type="text/xsl" href="rdf2html0.8.2.xsl"?>
 <!DOCTYPE rdf:RDF [
   <!ENTITY xsd     "http://www.w3.org/2001/XMLSchema#">
   <!ENTITY rdf     "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
@@ -22,8 +21,8 @@
   <!ENTITY documentationTitle "RADion RDF Schema">
   <!ENTITY methodology "https://joinup.ec.europa.eu/elibrary/document/isa-deliverable-process-and-methodology-developing-core-vocabularies">
   <!ENTITY methodologyTitle "Process and Methodology for Developing Core Vocabularies">
-  <!ENTITY forum "https://joinup.ec.europa.eu/asset/adms/topic/public-comments-adms-specification-v10">
-  <!ENTITY forumTitle "Public comments on RADion Specification v1.0">
+  <!ENTITY forum "http://joinup.ec.europa.eu/asset/radion/forum/all">
+  <!ENTITY forumTitle "Public comments on RADion">
 ]>
 
 <rdf:RDF xmlns:xsd     = "&xsd;"
@@ -49,15 +48,15 @@
   <owl:Ontology rdf:about="&rad;">
     <rdfs:label xml:lang="en">Repository Asset Distribution (RADion)</rdfs:label>
     <rdfs:comment xml:lang="en">This file specifies the set of RDF classes and properties used in RADion</rdfs:comment>
-    <owl:versionInfo xml:lang="en">Version 1.1 17 June 2012</owl:versionInfo>
-    <dcterms:modified rdf:datatype="&xsd;date">2012-06-17</dcterms:modified>
+    <owl:versionInfo xml:lang="en">Version 1.2 11 October 2012</owl:versionInfo>
+    <dcterms:modified rdf:datatype="&xsd;date">2012-10-11</dcterms:modified>
     <xhv:last rdf:resource="&rad;"/>
 <!--    
     <xhv:prev rdf:resource=""/>
     <xhv:next rdf:resource=""/>
 -->    
     <vann:preferredNamespaceUri>&rad;</vann:preferredNamespaceUri>
-    <vann:preferredNamespacePrefix>rad</vann:preferredNamespacePrefix>
+    <vann:preferredNamespacePrefix>radion</vann:preferredNamespacePrefix>
     <dcterms:creator rdf:parseType="Resource">
       <rdfs:seeAlso rdf:resource="http://makxdekkers.com/makxdekkers.rdf#me"/>
       <foaf:name>Makx Dekkers</foaf:name>
@@ -83,14 +82,10 @@
       <foaf:name>ADMS Working Group</foaf:name>
       <foaf:page rdf:resource="http://joinup.ec.europa.eu/asset/adms/home"/>
     </foaf:maker>
-    <dcterms:description>This is the RDF encoding of the Repository Asset Distribution vocabulary (RADion), 
-     developed as a foundation for the Asset Description Metadata Schema (ADMS) under the European Union's ISA Programme,
-      specifically under SEMIC Phase II, directed by Vassilios Peristeras of
-      DG DIGIT. It re-uses terms from several other vocabularies, notably  
-      Dublin Core. It has been designed so that it can readily be extnded to meet the needs of any
-      Repository - Asset - Distribution system including ADMS, ADMS.F/OSS (ADMS for Free and Open Source Software) and DCAT (the Data Catalog).
-      The Concept Scheme, available at &rad;.html, defines
-      its own lexical terms for its classes, properties and relationships. 
+    <dcterms:description rdf:parseType="Literal"><p>The Repository Asset Distribution (RADion) was developed under the European 
+          Commission's <a href="http://ec.europa.eu/isa/">ISA Programme</a>. More information is available from the European Commission's
+          <a href="http://joinup.ec.europa.eu/asset/radion/description">Joinup portal</a>. This includes background information,
+          use cases, the conceptual model and full definitions for all terms used.</p> 
     </dcterms:description>
     <dcterms:abstract>RADion, and the higher level vocabularies that build upon it, are 
     intended as a model that facilitates federation 
@@ -99,11 +94,6 @@
     rather that it acts as a common layer among repositories that want to 
     exchange data.
     </dcterms:abstract>
-    <foaf:depiction>
-      <rdf:Description rdf:about="RADion v0.10.png">
-        <rdfs:label>RADion UML Class Diagram</rdfs:label>
-      </rdf:Description>
-    </foaf:depiction>
     <wdrs:describedby>
       <rdf:Description rdf:about="&documentation;">
         <dcterms:title>&documentationTitle;</dcterms:title>
@@ -174,7 +164,7 @@
   <rdf:Description rdf:about="&dcterms;Location">
     <rdfs:label xml:lang="en">Location</rdfs:label>
     <rdfs:comment xml:lang="en">The dcterms:Location class fully represents the RADion class of Geographic Coverage.</rdfs:comment>
-    <vann:usageNote xml:lang="en">The <a href="https://joinup.ec.europa.eu/asset/core_location/description">Location Core Vocabulary</a> also uses dcterms:Location.</vann:usageNote>
+    <vann:usageNote xml:lang="en" rdf:parseType="Literal">The <a href="https://joinup.ec.europa.eu/asset/core_location/description">Location Core Vocabulary</a> also uses dcterms:Location.</vann:usageNote>
     <rdfs:isDefinedBy rdf:resource="&dcDoc;" />
     <dcterms:identifier>dcterms:Location</dcterms:identifier>
   </rdf:Description>
