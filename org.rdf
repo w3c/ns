@@ -16,40 +16,40 @@
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2012-10-06</dct:modified>
     <rdfs:comment xml:lang="en">Vocabulary for describing organizational structures, specializable to a broad variety of types of organization.</rdfs:comment>
-    <dct:contributor rdf:parseType="Resource">
-      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
-      <foaf:name>Dave Reynolds</foaf:name>
-    </dct:contributor>
     <dct:title xml:lang="en">Core organization ontology</dct:title>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-05-28</dct:created>
-    <dct:contributor rdf:parseType="Resource">
-      <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
-      <foaf:name>Dominique Guardiola</foaf:name>
-    </dct:contributor>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2012-09-30</dct:modified>
     <owl:versionInfo>0.6</owl:versionInfo>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-10-08</dct:modified>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
+      <foaf:name>Dominique Guardiola</foaf:name>
+    </dct:contributor>
     <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
     <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
     <rdfs:seeAlso rdf:resource="http://www.epimorphics.com/public/vocabulary/org.html"/>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-06-09</dct:modified>
     <dct:title xml:lang="fr">Ontologie des organisations</dct:title>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
+      <foaf:name>Dave Reynolds</foaf:name>
+    </dct:contributor>
   </owl:Ontology>
   <rdfs:Class rdf:about="http://www.w3.org/ns/org#Organization">
     <rdfs:comment xml:lang="fr">Représente un groupe de personnes organisées en communauté où tout autre forme de structure sociale, commerciale ou politique. Le groupe a un but commun ou une raison d'être qui va au-delà de la somme des personnes qui en font partie et peut agir en tant que "Agent". Les organisations sont souvent décomposables en structures hiérarchisées. Il est recommandé que des labels lexicaux SKOS soient utilisés pour nommer l'Organisation. En particulier `skos:prefLabel` pour le nom principal (en général le nom légal), `skos:altLabel` pour les noms alternatifs (marques, sigles, appellations familières) et `skos:notation` pour indiquer un code provenant d'une liste de code.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <owl:hasKey rdf:parseType="Collection">
-      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
-    </owl:hasKey>
     <owl:disjointWith>
       <rdfs:Class rdf:about="http://www.w3.org/ns/org#Role"/>
     </owl:disjointWith>
     <rdfs:label xml:lang="fr">Organisation</rdfs:label>
     <rdfs:label xml:lang="en">Organization</rdfs:label>
+    <owl:hasKey rdf:parseType="Collection">
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
+    </owl:hasKey>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent"/>
     </owl:disjointWith>
@@ -138,6 +138,7 @@
   <owl:Class rdf:about="http://www.w3.org/ns/org#Post">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdfs:label xml:lang="en">Post</rdfs:label>
+    <rdfs:label xml:lang="fr">Poste</rdfs:label>
     <rdfs:comment xml:lang="en">&#xD;
       A Post represents some position within an organization that&#xD;
       exists independently of the person or persons filling it. Posts&#xD;
@@ -147,6 +148,16 @@
       Secretary of State for Scotland, not as an individual person). A&#xD;
       post can be held by multiple people and hence can be treated as&#xD;
       a organization in its own right.&#xD;
+    </rdfs:comment>
+    <rdfs:comment xml:lang="fr">&#xD;
+       Un Poste représente une position au sein d'une Organisation qui&#xD;
+       existe indépendamment de la personne ou des personnes qui le remplissent. Les postes&#xD;
+       peuvent être utilisés pour représenter des situations où une personne est membre&#xD;
+       d'une Organisation d'office (par exemple, le Secrétaire d'Etat pour l'Ecosse &#xD;
+	   fait partie du Cabinet du Royaume-Uni du fait d'être&#xD;
+       Secrétaire d'Etat pour l'Ecosse, non pas comme une personne physique). Un poste&#xD;
+       après peut être occupé par plusieurs personnes et peut donc être considéré comme&#xD;
+       une Organisation à part entière.&#xD;
     </rdfs:comment>
     <rdfs:subClasOf rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
@@ -219,15 +230,17 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#postIn">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:label xml:lang="en">post in</rdfs:label>
-    <rdfs:comment xml:lang="en">Indicates the Organization in which the Post exists.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Post"/>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
     <owl:inverseOf>
       <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasPost"/>
     </owl:inverseOf>
+    <rdfs:label xml:lang="fr">poste chez</rdfs:label>
+    <rdfs:comment xml:lang="en">Indicates the Organization in which the Post exists.</rdfs:comment>
+    <rdfs:label xml:lang="en">post in</rdfs:label>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/org#Organization"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Post"/>
+    <rdfs:comment xml:lang="fr">Indicate l'Organisation dans laquelle le Poste existe.</rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#remuneration">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -314,19 +327,23 @@
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasPost">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:label xml:lang="en">post</rdfs:label>
+    <rdfs:label xml:lang="fr">possède un poste</rdfs:label>
     <rdfs:comment xml:lang="en">Indicates a Post which exists within the Organization.</rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indicate un Poste qui existe dans l'Organisation.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Organization"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Post"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#heldBy">
+    <rdfs:comment xml:lang="en">Indicates an Agent which holds a Post.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Post"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasMember"/>
+    <rdfs:label xml:lang="fr">occupé par</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:label xml:lang="en">held by</rdfs:label>
-    <rdfs:comment xml:lang="en">Indicates an Agent which holds a Post.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Post"/>
-    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/org#hasMember"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:comment xml:lang="fr">Indicate un Agent qui occupe le Poste.</rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#organization">
     <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -426,16 +443,18 @@
     <rdfs:label xml:lang="fr">siège social</rdfs:label>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#holds">
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#heldBy"/>
     <rdfs:label xml:lang="en">holds</rdfs:label>
-    <rdfs:comment xml:lang="en">Indicates a Post held by some Agent.</rdfs:comment>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Post"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:label xml:lang="fr">occupe</rdfs:label>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:comment xml:lang="fr">Indicate un Poste occupé par un Agent.</rdfs:comment>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     <rdfs:subPropertyOf>
       <rdf:Property rdf:about="http://www.w3.org/ns/org#memberOf"/>
     </rdfs:subPropertyOf>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <owl:inverseOf rdf:resource="http://www.w3.org/ns/org#heldBy"/>
+    <rdfs:comment xml:lang="en">Indicates a Post held by some Agent.</rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasUnit">
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#FormalOrganization"/>

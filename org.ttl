@@ -477,6 +477,7 @@ org:resultingOrganization owl:inverseOf org:resultedFrom .
 
 org:Post a owl:Class, rdfs:Class;
     rdfs:label "Post"@en;
+	rdfs:label "Poste"@fr;
     rdfs:comment """
       A Post represents some position within an organization that
       exists independently of the person or persons filling it. Posts
@@ -487,13 +488,25 @@ org:Post a owl:Class, rdfs:Class;
       post can be held by multiple people and hence can be treated as
       a organization in its own right.
     """@en;
+	rdfs:comment """
+       Un Poste représente une position au sein d'une Organisation qui
+       existe indépendamment de la personne ou des personnes qui le remplissent. Les postes
+       peuvent être utilisés pour représenter des situations où une personne est membre
+       d'une Organisation d'office (par exemple, le Secrétaire d'Etat pour l'Ecosse 
+	   fait partie du Cabinet du Royaume-Uni du fait d'être
+       Secrétaire d'Etat pour l'Ecosse, non pas comme une personne physique). Un poste
+       après peut être occupé par plusieurs personnes et peut donc être considéré comme
+       une Organisation à part entière.
+    """@fr;
     rdfs:subClasOf org:Organization;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
 org:holds a owl:ObjectProperty, rdf:Property;
     rdfs:label "holds"@en;
+	rdfs:label "occupe"@fr;
     rdfs:comment """Indicates a Post held by some Agent."""@en;
+        rdfs:comment """Indicate un Poste occupé par un Agent."""@fr;
     rdfs:domain foaf:Agent;
     rdfs:range  org:Post;
     rdfs:subPropertyOf org:memberOf;
@@ -502,7 +515,9 @@ org:holds a owl:ObjectProperty, rdf:Property;
 
 org:heldBy a owl:ObjectProperty, rdf:Property;
     rdfs:label "held by"@en;
+	rdfs:label "occupé par"@fr;
     rdfs:comment """Indicates an Agent which holds a Post."""@en;
+	rdfs:comment """Indicate un Agent qui occupe le Poste."""@fr;
     rdfs:domain  org:Post;
     rdfs:range foaf:Agent;
     rdfs:subPropertyOf org:hasMember;
@@ -513,7 +528,9 @@ org:holds owl:inverseOf org:heldBy .
 
 org:postIn a owl:ObjectProperty, rdf:Property;
     rdfs:label "post in"@en;
+	rdfs:label "poste chez"@fr;
     rdfs:comment """Indicates the Organization in which the Post exists."""@en;
+	rdfs:comment """Indicate l'Organisation dans laquelle le Poste existe."""@fr;
     rdfs:domain org:Post;
     rdfs:range  org:Organization;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
@@ -521,7 +538,9 @@ org:postIn a owl:ObjectProperty, rdf:Property;
 
 org:hasPost a owl:ObjectProperty, rdf:Property;
     rdfs:label "post"@en;
+	rdfs:label "possède un poste"@fr;
     rdfs:comment """Indicates a Post which exists within the Organization."""@en;
+	rdfs:comment """Indicate un Poste qui existe dans l'Organisation."""@fr;
     rdfs:domain  org:Organization;
     rdfs:range   org:Post;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
