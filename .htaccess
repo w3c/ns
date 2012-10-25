@@ -1,35 +1,9 @@
 <Files ~ "\.ttl">
 ForceType 'text/turtle; charset=UTF-8'
 </Files>
-
-
-<Files ~ "r2rml.html">
-ForceType 'text/html; charset=utf-8'
-</Files>
-<Files ~ "rdfa.html">
-ForceType 'text/html; charset=utf-8'
-</Files>
-<Files ~ "sparql-service-description.html">
-ForceType 'text/html; charset=utf-8'
-</Files>
-<Files ~ "sparql.html">
-ForceType 'text/html; charset=utf-8'
-</Files>
 <Files ~ "md.json">
 ForceType 'application/json'
 </Files>
-<Files ~ "adms.html">
-ForceType 'text/html; charset=utf-8'
-</Files>
-<Files ~ "radion.html">
-ForceType 'text/html; charset=utf-8'
-</Files>
-<Files ~ "person.html">
-ForceType 'text/html; charset=utf-8'
-</Files>
-<Files ~ "legal.html">
-ForceType 'text/html; charset=utf-8'
-</Files>
-<Files ~ "locn.html">
-ForceType 'text/html; charset=utf-8'
-</Files>
+<FilesMatch "^(ma-ont|mediaont)\.html$">
+ForceType 'text/html; charset=iso-8859-1'
+</FilesMatch>
