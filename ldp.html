@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  prefix="
+	  dcterms: http://purl.org/dc/terms/
+	  rdfs: http://www.w3.org/2000/01/rdf-schema# 
+	  foaf: http://xmlns.com/foaf/0.1/
+	  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+	  owl: http://www.w3.org/2002/07/owl#
+	  rdfs: http://www.w3.org/2000/01/rdf-schema#
+	  rdfa: http://www.w3.org/ns/rdfa#
+	  ldp: http://www.w3.org/ns/ldp#
+	  "
+  >
+  <head about="http://www.w3.org/ns/ldp.html">
+	<base href="http://www.w3.org/ns/"/>
+    <title>Linked Data Platform Namespace</title>
+    <link type="text/css" rel="stylesheet" href="/StyleSheets/TR/base.css"/>
+	<style type="text/css">
+	  code {font-weight: bold}
+	</style>
+  </head>
+  <body about="ldp:" typeof="owl:Ontology">
+    <div class="head">
+      <p><a href="http://www.w3.org/">
+		  <img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/>
+		</a>
+      </p>
+      <h1 property="dcterms:title">Linked Data Platform Namespace</h1>
+    </div>
+
+    <p><span property="dcterms:description" datatype="">This document describes the terms used in the Linked Data Platform.</span>
+    The URI of the vocabulary is <code>http://www.w3.org/ns/ldp#</code> (abbreviated by <code>ldp:</code> in this document).
+	<a href="ldp.ttl">Turtle</a> and an <a href="ldp.rdf">RDF/XML</a> versions of the vocabulary are also available.
+	The vocabulary is published by <a property="dcterms:publisher" href="http://www.w3.org" resource="http://www.w3.org/data#W3C">W3C</a></p>
+	
+	<p>For a precise definition of these vocabulary elements, see the
+	<a rel="rdfs:isDefinedBy" href="http://www.w3.org/TR/2012/WD-ldp-20121025/">Linked Data Platform</a> specification.</p>
+	
+	<p>The vocabulary defines three classes :</p>
+	<ul>
+	  <li about="ldp:Container" typeof="rdfs:Class owl:Class"><code>ldp:Container</code>:
+		<span property="dcterms:description">a @@</span> (see <a href="http://www.w3.org/TR/2012/WD-ldp-20121025/#linked-data-platform-container">LDP §5. Linked Data Platform Container</a>).
+	  </li>
+	  <li about="ldp:Page"><code rel="rdfs:subClassOf" resource="ldp:Container">ldp:Page</code>:
+		<span property="dcterms:description">a @@</span> (see <a href="http://www.w3.org/TR/2012/WD-ldp-20121025/#ldpc-paging">LDP §5.1.3 Paging</a>).
+	  </li>
+	  
+	</ul>
+	
+	<h3>Properties</h3>
+	<ul>
+	  <li about="ldp:membershipSubject" typeof="rdf:Property owl:DatatypeProperty"><code>ldp:membershipSubject</code>:
+		<span property="dcterms:description">indicates the subject of the membership triples when container subject is not the LDPC itself</span> (see <a href="http://www.w3.org/TR/2012/WD-ldp-20121025/#ldpc-5_2_4"> §5.2.5</a>);
+		it is used on <span rel="rdfs:domain" resource="ldp:Container">ldp:Container</span>.
+	  </li>
+	  <li about="ldp:membershipPredicate" typeof="rdf:Property owl:DatatypeProperty"><code>ldp:membershipPredicate</code>:
+		<span property="dcterms:description">indicates the predicate of the membership triple when the container predicate is not <code>rdfs:member</code></span> (see <a href="http://www.w3.org/TR/2012/WD-ldp-20121025/#ldpc-5_2_5"> §5.2.5</a>);
+		it is used on <span rel="rdfs:domain" resource="ldp:Container">ldp:Container</span>.
+	  </li>
+	  <li about="ldp:pageOf" typeof="rdf:Property owl:DatatypeProperty"><code>ldp:pageOf</code>:
+		<span property="dcterms:description">indicates the container in which the subject is a page</span> (see <a href="http://www.w3.org/TR/2012/WD-ldp-20121025/#ldpc-5_3_6_1"> §5.3.6.1</a>);
+		it is used on <span rel="rdfs:domain" resource="ldp:Page">ldp:Page</span>.
+	  </li>
+	  <li about="ldp:nextPage" typeof="rdf:Property owl:DatatypeProperty"><code>ldp:nextPage</code>:
+		<span property="dcterms:description">the URL for the subsequent page</span> (see <a href="http://www.w3.org/TR/2012/WD-ldp-20121025/#ldpc-5_3_6_2"> §5.3.6.2</a>);
+		it is used on <span rel="rdfs:domain" resource="ldp:Page">ldp:Page</span>.
+	  </li>
+	  <li about="ldp:containerSortPredicates" typeof="rdf:Property owl:DatatypeProperty"><code>ldp:containerSortPredicates</code>:
+		<span property="dcterms:description">a list of LDPC ordinal predicates</span> (see <a href="http://www.w3.org/TR/2012/WD-ldp-20121025/#ldpc-5_3_7">LDP §5.1.4 Ordering</a>);
+		it is used on <span rel="rdfs:domain" resource="ldp:Page">ldp:Page</span>.
+	  </li>
+	</ul>
+
+<p><b>Warning</b>: Until the specification reaches W3C Candidate Recommendation
+ (CR) status, this namespace name may be reused by any update in such
+ a way as to cause documents written using the namespace to become
+ invalid or to change in meaning.
+</p>
+
+<p><em>This document is intended to comply with <a
+href="http://www.w3.org/1999/10/nsuri">W3C policy for XML namespace
+names</a>.</em></p>
+
+	<hr />
+	<address >
+	  <span rel="dcterms:creator" >
+		<span about="http://www.ivan-herman.net/foaf#me" typeof="foaf:Person">
+			<span property="foaf:name" datatype=""><a href="http://www.w3.org/People/Ivan">Ivan Herman</a></span>,
+			<a rel="foaf:mbox" href="mailto:ivan@w3.org">ivan@w3.org</a>,
+			<a rel="foaf:workplaceHomepage" href="http://www.w3.org">W3C</a>,
+			<span rel="rdfs:seeAlso" resource="http://www.ivan-herman.net/foaf" property="foaf:title">Semantic Web Activity Lead</span>,
+		</span>
+	  </span>
+	  <span property="dcterms:date">2011-11-22</span>
+	  <br />
+	  <span property="owl:versionInfo">$Date$</span>
+	</address>
+  </body>
+</html>
