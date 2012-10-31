@@ -3,9 +3,11 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-@prefix ui: <http://www.w3.org/ns/ui#>.
 @prefix dc:	<http://purl.org/dc/elements/1.1/>.
 @prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
+@prefix foaf:   <http://xmlns.com/foaf/0.1/>.
+@prefix gen:	<http://www.w3.org/2006/gen/ont#> .
+@prefix ui:     <http://www.w3.org/ns/ui#>.
 @prefix :	<http://www.w3.org/ns/pim/space#> .
 @prefix ws:	<http://www.w3.org/ns/pim/space#> .
 
@@ -38,13 +40,12 @@ Goals then are that the user can
 
 
 Workspace  a s:Class; s:label "workspace";
-    s:comment """Workspaces are place where data is stored and asscoiated prolices of privacy.
+    s:comment """Workspaces are place where data is stored, and asscoiated polices of privacy.
 A given application typically stores information in several different
 workspaces, some being user private, some shared, and some public.
 """.
 
 Workspace owl:disjointUnionOf (Private Shared Public).
-
 
 uriPrefix a rdf:Property, owl:DatatypeProperty;
     s:label "URI prefix";
@@ -52,6 +53,43 @@ uriPrefix a rdf:Property, owl:DatatypeProperty;
     s:comment """URIs which start with this string are in this woprkspace.
 This may be used for constructing URIs for new storage resources.
 """.
+
+MasterWorkspace s:subClassOf Private;
+    s:label "Master Workspace"@en;
+    s:comment """This is a workspace for storing the 
+    information about the other workspaces.
+    As a user, you normally don't have to worry about it.""".
+
+masterWorkspace a rdf:Property;
+    s:label "master workspace"@en;
+    s:domain foaf:Agent;
+    s:range MasterWorkspace.
+
+workspace a rdf:Property;
+    s:label "workspace"@en;
+    s:domain foaf:Agent;
+    s:range Workspace.
+    
+Private s:subClassOf Workspace;
+    s:label "Private workspace".
+
+Shared s:subClassOf Workspace;
+    s:label "Shared workspace".
+
+Public s:subClassOf Workspace;
+    s:label "Public workspace".
+
+#########################
+#
+#  Configuration files
+#
+
+ConfigurationFile s:subClassOf gen:InformationResource.
+
+preferencesFile a rdf:Property;
+    s:label "preferences file";
+    s:domain foaf:Agent;
+    s:range ConfigurationFile.
 
 
 # ends
