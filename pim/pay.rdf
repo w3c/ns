@@ -1,0 +1,192 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#Contrib_401k_Plan">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>401k contribution</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#Dental_Plan">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>dental plan</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#FED_Earnings">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>federal earnings</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#Health_Plan">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>health plan</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#Life_Insurance_Plan">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>life insurance plan</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#MA_Earnings">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>MA earnings</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#Social_Security">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>social security</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#Tax_Fed_Income">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>tax: federal income</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#Tax_MA_Income">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>tax: MA income</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#Tax_Medicare">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>tax: Medicare</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_Contrib_401k_Plan">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>401k plan (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_Dental_Plan">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>dental plan (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_FED_Earnings">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>federal earnings (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_Gross_Pay">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>gross pay (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_Health_Plan">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>health plan (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_Life_Insurance_Plan">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>life insurance plan (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_MA_Earnings">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>MA earnings (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_Medicare_Earnings">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>Mecicare earnings (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_ParkingFee">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>parking fee (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_SS_Earnings">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>social security earnings (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_Tax_Fed_Income">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>tax: federal income (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_Tax_MA_Income">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>tax: MA Income (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_Tax_Medicare">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>tax: Medicare (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#YTD_dining">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>dining (year to date)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#deductions">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>deductions</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#dining">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>dining</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#grossPay">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>gross pay</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#netPay">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>net pay</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#paymentDate">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>payment date</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#date"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#regularSalary">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>regular salary</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/pay#taxes">
+        <domain rdf:resource="http://www.w3.org/ns/pim/pay#PayPeriod"/>
+        <label>taxes</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+    </rdf:Property>
+</rdf:RDF>
