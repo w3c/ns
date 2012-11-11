@@ -49,9 +49,16 @@ color a r:Property, owl:DatatypeProperty;
 sortPriority a r:Property, owl:DatatypeProperty;
         s:label "sort priority";
         s:range xsd:integer;
-        s:comment """When individuals or classes must be sorted, this
+        s:comment """When individuals or classes must be sorted, then
         if they are given different values of sortPriority a user agent can
         use this as a hint to how to present information.""".
+
+sortBy a r:Property;
+        s:label "sort by";
+        s:domain s:Class;
+        s:range r:Property;
+        s:comment """A property which typically is used to sort
+        members of a given class.""".
 
 initialProperties a r:Property;
         s:label "initial properties";
