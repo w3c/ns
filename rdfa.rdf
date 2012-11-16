@@ -20,6 +20,12 @@
       </rdf:Description>
     </rdfs:subClassOf>
   </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#PrefixRedefinition">
+    <dcterm:description>warning; to be used when a prefix, either from the initial context or inherited from an ancestor node, is redefined in an element</dcterm:description>
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#Warning"></rdf:Description>
+    </rdfs:subClassOf>
+  </rdf:Description>
   <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/rdfa#prefix">
     <rdfs:domain>
       <rdf:Description rdf:about="http://www.w3.org/ns/rdfa#PrefixMapping">

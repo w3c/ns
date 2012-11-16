@@ -99,6 +99,8 @@
 		<span about="rdfa:UnresolvedCURIE" rel="rdfs:subClassOf" resource="rdfa:Warning" property="dcterms:description">warning; to be used when a CURIE prefix fails to be resolved</span></li>
 	  <li><code>rdfa:UnresolvedTerm</code>:
 		<span about="rdfa:UnresolvedTerm" rel="rdfs:subClassOf" resource="rdfa:Warning" property="dcterms:description">warning; to be used when a Term fails to be resolved</span></li>
+	  <li><code>rdfa:PrefixRedefinition</code>:
+		<span about="rdfa:PrefixRedefinition" rel="rdfs:subClassOf" resource="rdfa:Warning" property="dcterms:description">warning; to be used when a prefix, either from the initial context or inherited from an ancestor node, is redefined in an element</span></li>
 	</ul>
 	
 	<p>RDFa processors may add their own subclasses in their own namespace.</p>

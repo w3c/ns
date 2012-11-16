@@ -37,6 +37,10 @@ rdfa:UnresolvedTerm dcterm:description "warning; to be used when a Term fails to
 rdfa:VocabReferenceError dcterm:description "warning; to be used when the value of a @vocab attribute cannot be dereferenced, hence the vocabulary expansion cannot be completed";
     rdfs:subClassOf rdfa:Warning .
 
+rdfa:PrefixRedefinition dcterm:description "warning; to be used when a prefix, either from the initial context or inherited from an ancestor node, is redefined in an element";
+    rdfs:subClassOf rdfa:Warning .
+
+
 rdfa:context a rdf:Property,
         owl:ObjectProperty;
     dcterm:description "provides extra context for the error, eg, http response, an XPointer/XPath information, or simply the URI that created the error";
