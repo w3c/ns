@@ -28,14 +28,7 @@ owl:versionInfo
     a owl:AnnotationProperty .
 
 <http://www.w3.org/ns/prov#>
-    a owl:Ontology ;
-    rdfs:comment """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
-
-If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
-    rdfs:label "PROV-O"@en ;
-    rdfs:seeAlso <http://www.w3.org/TR/prov#>, <http://www.w3.org/TR/prov-o/> ;
-    owl:versionIRI <http://www.w3.org/TR/2012/WD-prov-o-20121111/prov.owl> ;
-    :wasRevisionOf <http://www.w3.org/TR/2012/WD-prov-o-20120724/prov.owl> .
+    a owl:Ontology .
 
 :Activity
     a owl:Class ;
@@ -706,6 +699,7 @@ A primary source relation is a particular case of derivation of secondary materi
     rdfs:domain :Influence ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
     rdfs:label "influencer" ;
+    rdfs:range owl:Thing ;
     :category "qualified" ;
     :dm "http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-influence"^^xsd:anyURI ;
     :editorialNote "This property and its subproperties are used in the same way as the rdf:object property, i.e. to reference the object of an unqualified prov:wasInfluencedBy or prov:influenced triple."@en ;
@@ -986,7 +980,7 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
     rdfs:subPropertyOf rdfs:seeAlso .
 
 :specializationOf
-    a owl:ObjectProperty ;
+    a owl:AnnotationProperty, owl:ObjectProperty ;
     rdfs:domain :Entity ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
     rdfs:label "specializationOf" ;
@@ -1085,6 +1079,7 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 
 :wasDerivedFrom
     a owl:ObjectProperty ;
+    rdfs:comment "The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable."@en ;
     rdfs:domain :Entity ;
     rdfs:isDefinedBy <http://www.w3.org/ns/prov#> ;
     rdfs:label "wasDerivedFrom" ;
@@ -1132,7 +1127,7 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 
 :wasInfluencedBy
     a owl:ObjectProperty ;
-    rdfs:comment "Because prov:wasInfluencedBy is a broad relation, its more specific subproperties (prov:wasInformedBy, prov:actedOnBehalfOf, prov:wasEndedBy, etc.) should be used when applicable."@en, "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#prov-o-owl-profile\">PROV-O OWL Profile</a>." ;
+    rdfs:comment "Because prov:wasInfluencedBy is a broad relation, its more specific subproperties (e.g. prov:wasInformedBy, prov:actedOnBehalfOf, prov:wasEndedBy, etc.) should be used when applicable."@en, "This property has multiple RDFS domains to suit multiple OWL Profiles. See <a href=\"#prov-o-owl-profile\">PROV-O OWL Profile</a>." ;
     rdfs:domain [
         a owl:Class ;
         owl:unionOf (:Activity
@@ -1158,6 +1153,7 @@ Subproperties of prov:wasInfluencedBy may also be asserted directly without bein
 prov:wasInfluencedBy should not be used without also using one of its subproperties. 
 """@en ;
     :inverse "influenced" ;
+    :qualifiedForm :Influence, :qualifiedInfluence ;
     :sharesDefinitionWith :Influence .
 
 :wasInformedBy
@@ -1239,6 +1235,17 @@ prov:wasInfluencedBy should not be used without also using one of its subpropert
     :inverse "started" ;
     :qualifiedForm :Start, :qualifiedStart .
 
+<http://www.w3.org/ns/prov-o#>
+    a owl:Ontology ;
+    rdfs:comment """This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
+
+If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome."""@en ;
+    rdfs:label "PROV-O"@en ;
+    rdfs:seeAlso <http://www.w3.org/TR/prov-o/>, <http://www.w3.org/ns/prov> ;
+    owl:versionIRI <http://www.w3.org/ns/prov-o-20121211> ;
+    :specializationOf <http://www.w3.org/ns/prov-o> ;
+    :wasRevisionOf <http://www.w3.org/ns/prov-o-20120724> .
+
 []
     a owl:Axiom ;
     rdfs:comment "A collection is an entity that provides a structure to some constituents, which are themselves entities. These constituents are said to be member of the collections."@en ;
@@ -1271,20 +1278,6 @@ prov:wasInfluencedBy should not be used without also using one of its subpropert
 
 []
     a owl:Axiom ;
-    owl:annotatedProperty rdfs:range ;
-    owl:annotatedSource :wasInfluencedBy ;
-    owl:annotatedTarget [
-        a owl:Class ;
-        owl:unionOf (:Activity
-            :Agent
-            :Entity
-        )
-    ] ;
-    :definition "influencer: an identifier (o1) for an ancestor entity, activity, or agent that the former depends on;" ;
-    :dm "http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-influence" .
-
-[]
-    a owl:Axiom ;
     owl:annotatedProperty rdfs:domain ;
     owl:annotatedSource :wasInfluencedBy ;
     owl:annotatedTarget [
@@ -1295,6 +1288,20 @@ prov:wasInfluencedBy should not be used without also using one of its subpropert
         )
     ] ;
     :definition "influencee: an identifier (o2) for an entity, activity, or agent; " ;
+    :dm "http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-influence" .
+
+[]
+    a owl:Axiom ;
+    owl:annotatedProperty rdfs:range ;
+    owl:annotatedSource :wasInfluencedBy ;
+    owl:annotatedTarget [
+        a owl:Class ;
+        owl:unionOf (:Activity
+            :Agent
+            :Entity
+        )
+    ] ;
+    :definition "influencer: an identifier (o1) for an ancestor entity, activity, or agent that the former depends on;" ;
     :dm "http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-influence" .
 
 []

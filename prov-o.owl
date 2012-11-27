@@ -15,17 +15,19 @@
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.w3.org/ns/prov#">
+    <owl:Ontology rdf:about="http://www.w3.org/ns/prov-o#">
         <rdfs:label xml:lang="en">PROV-O</rdfs:label>
         <rdfs:comment xml:lang="en">This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
 
 If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome.</rdfs:comment>
-        <wasRevisionOf rdf:resource="http://www.w3.org/TR/2012/WD-prov-o-20120724/prov.owl"/>
-        <owl:versionIRI rdf:resource="http://www.w3.org/TR/2012/WD-prov-o-20121111/prov.owl"/>
-        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov#"/>
         <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov-o/"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov"/>
+        <specializationOf rdf:resource="http://www.w3.org/ns/prov-o"/>
+        <wasRevisionOf rdf:resource="http://www.w3.org/ns/prov-o-20120724"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/prov-o-20121211"/>
     </owl:Ontology>
     
+    <owl:Ontology rdf:about="http://www.w3.org/ns/prov#"/>
 
 
     <!-- 
@@ -89,6 +91,18 @@ If you wish to make comments regarding this document, please send them to public
         <rdfs:comment xml:lang="en"></rdfs:comment>
     </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
+    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#specializationOf">
+        <rdfs:label>specializationOf</rdfs:label>
+        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-specialization</dm>
+        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-specialization</n>
+        <component>alternate</component>
+        <inverse>generalizationOf</inverse>
+        <category>expanded</category>
+        <definition xml:lang="en">An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity.</definition>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#alternateOf"/>
+    </owl:AnnotationProperty>
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#dm">
         <rdfs:comment xml:lang="en">A reference to the principal section of the PROV-DM document that describes this concept.</rdfs:comment>
         <rdfs:subPropertyOf rdf:resource="&rdfs;seeAlso"/>
@@ -347,8 +361,8 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
         <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
     </owl:ObjectProperty>
     <owl:Axiom>
-        <dm>http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-collection</dm>
         <rdfs:comment xml:lang="en">A collection is an entity that provides a structure to some constituents, which are themselves entities. These constituents are said to be member of the collections.</rdfs:comment>
+        <dm>http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-collection</dm>
         <owl:annotatedProperty rdf:resource="&rdfs;range"/>
         <owl:annotatedTarget rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <owl:annotatedSource rdf:resource="http://www.w3.org/ns/prov#hadMember"/>
@@ -404,11 +418,11 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#hadRole">
         <rdfs:label>hadRole</rdfs:label>
         <component>agents-responsibility</component>
-        <editorsDefinition xml:lang="en">prov:hadRole references the Role (i.e. the function of an entity with respect to an activity), in the context of an instantaneous usage, generation, association, start, and end.</editorsDefinition>
         <inverse>wasRoleIn</inverse>
         <rdfs:comment>This property has multiple RDFS domains to suit multiple OWL Profiles. See &lt;a href=&quot;#prov-o-owl-profile&quot;&gt;PROV-O OWL Profile&lt;/a&gt;.</rdfs:comment>
         <category>qualified</category>
         <rdfs:comment xml:lang="en">The _optional_ Role that an Entity assumed in the context of an Activity. For example, :baking prov:used :spoon; prov:qualified [ a prov:Usage; prov:entity :spoon; prov:hadRole roles:mixing_implement ].</rdfs:comment>
+        <editorsDefinition xml:lang="en">prov:hadRole references the Role (i.e. the function of an entity with respect to an activity), in the context of an instantaneous usage, generation, association, start, and end.</editorsDefinition>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Influence"/>
         <sharesDefinitionWith rdf:resource="http://www.w3.org/ns/prov#Role"/>
@@ -465,6 +479,7 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
         <rdfs:comment xml:lang="en">Subproperties of prov:influencer are used to cite the object of an unqualified PROV-O triple whose predicate is a subproperty of prov:wasInfluencedBy (e.g. prov:used, prov:wasGeneratedBy). prov:influencer is used much like rdf:object is used.</rdfs:comment>
         <editorialNote xml:lang="en">This property and its subproperties are used in the same way as the rdf:object property, i.e. to reference the object of an unqualified prov:wasInfluencedBy or prov:influenced triple.</editorialNote>
         <editorsDefinition xml:lang="en">This property is used as part of the qualified influence pattern. Subclasses of prov:Influence use these subproperties to reference the resource (Entity, Agent, or Activity) whose influence is being qualified.</editorsDefinition>
+        <rdfs:range rdf:resource="&owl;Thing"/>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
         <rdfs:domain rdf:resource="http://www.w3.org/ns/prov#Influence"/>
     </owl:ObjectProperty>
@@ -849,6 +864,7 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
         <inverse>hadDerivation</inverse>
         <definition xml:lang="en">A derivation is a transformation of an entity into another, a construction of an entity into another, or an update of an entity, resulting in a new one.</definition>
         <category>starting-point</category>
+        <rdfs:comment xml:lang="en">The more specific subproperties of prov:wasDerivedFrom (i.e., prov:wasQuotedFrom, prov:wasRevisionOf, prov:hadPrimarySource) should be used when applicable.</rdfs:comment>
         <component>derivations</component>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
         <qualifiedForm rdf:resource="http://www.w3.org/ns/prov#Derivation"/>
@@ -917,7 +933,7 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#wasInfluencedBy">
         <rdfs:label>wasInfluencedBy</rdfs:label>
-        <rdfs:comment xml:lang="en">Because prov:wasInfluencedBy is a broad relation, its more specific subproperties (prov:wasInformedBy, prov:actedOnBehalfOf, prov:wasEndedBy, etc.) should be used when applicable.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Because prov:wasInfluencedBy is a broad relation, its more specific subproperties (e.g. prov:wasInformedBy, prov:actedOnBehalfOf, prov:wasEndedBy, etc.) should be used when applicable.</rdfs:comment>
         <rdfs:comment>This property has multiple RDFS domains to suit multiple OWL Profiles. See &lt;a href=&quot;#prov-o-owl-profile&quot;&gt;PROV-O OWL Profile&lt;/a&gt;.</rdfs:comment>
         <editorialNote xml:lang="en">The sub-properties of prov:wasInfluencedBy can be elaborated in more detail using the Qualification Pattern. For example, the binary relation :baking prov:used :spoon can be qualified by asserting :baking prov:qualifiedUsage [ a prov:Usage; prov:entity :spoon; prov:atLocation :kitchen ] .
 
@@ -929,7 +945,9 @@ prov:wasInfluencedBy should not be used without also using one of its subpropert
         <inverse>influenced</inverse>
         <component>agents-responsibility</component>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
+        <qualifiedForm rdf:resource="http://www.w3.org/ns/prov#Influence"/>
         <sharesDefinitionWith rdf:resource="http://www.w3.org/ns/prov#Influence"/>
+        <qualifiedForm rdf:resource="http://www.w3.org/ns/prov#qualifiedInfluence"/>
         <rdfs:domain>
             <owl:Class>
                 <owl:unionOf rdf:parseType="Collection">
@@ -950,9 +968,9 @@ prov:wasInfluencedBy should not be used without also using one of its subpropert
         </rdfs:range>
     </owl:ObjectProperty>
     <owl:Axiom>
+        <definition>influencee: an identifier (o2) for an entity, activity, or agent; </definition>
         <dm>http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-influence</dm>
-        <definition>influencer: an identifier (o1) for an ancestor entity, activity, or agent that the former depends on;</definition>
-        <owl:annotatedProperty rdf:resource="&rdfs;range"/>
+        <owl:annotatedProperty rdf:resource="&rdfs;domain"/>
         <owl:annotatedSource rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
         <owl:annotatedTarget>
             <owl:Class>
@@ -965,9 +983,9 @@ prov:wasInfluencedBy should not be used without also using one of its subpropert
         </owl:annotatedTarget>
     </owl:Axiom>
     <owl:Axiom>
-        <definition>influencee: an identifier (o2) for an entity, activity, or agent; </definition>
         <dm>http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-influence</dm>
-        <owl:annotatedProperty rdf:resource="&rdfs;domain"/>
+        <definition>influencer: an identifier (o1) for an ancestor entity, activity, or agent that the former depends on;</definition>
+        <owl:annotatedProperty rdf:resource="&rdfs;range"/>
         <owl:annotatedSource rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
         <owl:annotatedTarget>
             <owl:Class>
