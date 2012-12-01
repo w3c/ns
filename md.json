@@ -5,7 +5,6 @@
     "properties": {
       "additionalType": {"subPropertyOf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#type"},
       "blogPosts": {"multipleValues": "list"},
-      "blogPosts": {"multipleValues": "list"},
       "breadcrumb": {"multipleValues": "list"},
       "byArtist": {"multipleValues": "list"},
       "creator": {"multipleValues": "list"},
