@@ -1,0 +1,11 @@
+{
+  "@context": {
+    "label": "http://www.w3.org/2000/01/rdf-schema#label",
+    "description": "http://www.w3.org/2000/01/rdf-schema#comment",
+    "seeAlso": { "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso", "@type": "@id" }
+  },
+  "@id": "http://www.w3.org/ns/json-ld#context",
+  "label": "JSON-LD context",
+  "description": "This link relation is used to reference a JSON-LD context from a JSON document so that it can be interpreted as JSON-LD.",
+  "seeAlso": "http://www.w3.org/TR/json-ld-syntax/#referencing-contexts-from-json-documents"
+}
