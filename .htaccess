@@ -2,7 +2,7 @@
 ForceType 'application/json'
 </Files>
 <Files ~ "json-ld.json">
-ForceType 'application/json'
+ForceType 'application/ld+json'
 </Files>
 <FilesMatch "^(ma-ont|mediaont)\.html$">
 ForceType 'text/html; charset=iso-8859-1'
