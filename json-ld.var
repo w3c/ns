@@ -1,4 +1,10 @@
 URI: json-ld
 
 URI: json-ld.json
-Content-Type: application/json
+Content-Type: application/json; qs=0.4
+
+URI: json-ld.jsonld
+Content-Type: application/ld+json; qs=0.5
+
+URI: rdfa.html
+Content-Type: text/html
