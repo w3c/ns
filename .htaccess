@@ -2,6 +2,9 @@
 ForceType 'application/json'
 </Files>
 <Files ~ "json-ld.json">
+ForceType 'application/json'
+</Files>
+<Files ~ "json-ld.jsonld">
 ForceType 'application/ld+json'
 </Files>
 <FilesMatch "^(ma-ont|mediaont)\.html$">
