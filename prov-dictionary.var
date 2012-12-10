@@ -1,7 +1,7 @@
-URI: prov-dc-dictionary
+URI: prov-dictionary
 
-URI: prov-dc-dictionary.ttl
-Content-Type: text/turtle; qs=0.5
+URI: prov-dictionary.ttl
+Content-Type: text/turtle
 
-URI: prov-dc-dictionary.owl
+URI: prov-dictionary.owl
 Content-Type: application/rdf+xml; qs=0.4

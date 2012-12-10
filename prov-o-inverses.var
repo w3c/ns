@@ -1,0 +1,7 @@
+URI: prov-o-inverses
+
+URI: prov-o-inverses.ttl
+Content-Type: text/turtle
+
+URI: prov-o-inverses.owl
+Content-Type: application/rdf+xml; qs=0.4
