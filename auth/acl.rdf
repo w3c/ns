@@ -88,7 +88,7 @@
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#agentClass">
         <comment>A class of persons or social entities to being given the right</comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
-        <label>agent</label>
+        <label>agent class</label>
         <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </rdf:Property>
 
