@@ -1,0 +1,7 @@
+URI: regorg
+
+URI: regorg.ttl
+Content-Type: text/turtle
+
+URI: regorg.rdf
+Content-Type: application/rdf+xml
