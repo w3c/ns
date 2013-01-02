@@ -1,52 +1,21 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!DOCTYPE rdf:RDF [
-  <!ENTITY xsd     "http://www.w3.org/2001/XMLSchema#">
-  <!ENTITY rdf     "http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-  <!ENTITY rdfs    "http://www.w3.org/2000/01/rdf-schema#">
-  <!ENTITY owl     "http://www.w3.org/2002/07/owl#">
-  <!ENTITY dcterms "http://purl.org/dc/terms/">
-  <!ENTITY dcDoc   "dublincore.org/documents/dcmi-terms/">
-  <!ENTITY foaf    "http://xmlns.com/foaf/0.1/">
-  <!ENTITY foafSpec "http://xmlns.com/foaf/spec/">
-  <!ENTITY sioc    "http://rdfs.org/sioc/ns#">
-  <!ENTITY schema  "http://schema.org/">
-  <!ENTITY cc      "http://creativecommons.org/ns#">
-  <!ENTITY org     "http://www.w3.org/ns/org#">
-  <!ENTITY skos    "http://www.w3.org/2004/02/skos/core#">
-  <!ENTITY skosDoc "http://www.w3.org/TR/skos-primer/">
-  <!ENTITY xhv     "http://www.w3.org/1999/xhtml/vocab#">
-  <!ENTITY wdrs    "http://www.w3.org/2007/05/powder-s#">
-  <!ENTITY vann    "http://purl.org/vocab/vann/">
-  <!ENTITY regorg   "http://www.w3.org/ns/regorg#">
-  <!ENTITY regorgDoc "http://www.w3.org/TR/vocab-regorg/">
-  <!ENTITY adms    "http://www.w3.org/ns/adms#">
-  <!ENTITY admsDoc "http://www.w3.org/TR/vocab-adms/">
-  <!ENTITY title   "Registered Organization Vocabulary vocabulary">
-  <!ENTITY documentation "http://www.w3.org/TR/vocab-regorg/">
-  <!ENTITY documentationTitle "Registered Organization Vocabulary">
-  <!ENTITY forum "http://lists.w3.org/Archives/Public/public-gld-comments/">
-  <!ENTITY forumTitle "Public GLD comments">
-]>
-
-
-<rdf:RDF xmlns:xsd     = "&xsd;"
-         xmlns:rdf     = "&rdf;"
-         xmlns:rdfs    = "&rdfs;"
-         xmlns:owl     = "&owl;"
-         xmlns:dcterms = "&dcterms;"
-         xmlns:foaf    = "&foaf;"
-         xmlns:sioc    = "&sioc;"
-         xmlns:schema  = "&schema;"
-         xmlns:org     = "&org;"
-         xmlns:skos    = "&skos;"
-         xmlns:wdrs    = "&wdrs;"
-         xmlns:vann    = "&vann;"
-         xmlns:adms    = "&adms;"
-         xmlns:rov     = "&regorg;"
-         xmlns         = "&regorg;"
-         xml:base      = "&regorg;"
-         xml:lang = "en">
-
+<rdf:RDF
+ xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+ xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+ xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+ xmlns:owl="http://www.w3.org/2002/07/owl#"
+ xmlns:dcterms="http://purl.org/dc/terms/"
+ xmlns:foaf="http://xmlns.com/foaf/0.1/"
+ xmlns:sioc="http://rdfs.org/sioc/ns#"
+ xmlns:schema="http://schema.org/"
+ xmlns:org="http://www.w3.org/ns/org#"
+ xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+ xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
+ xmlns:vann="http://purl.org/vocab/vann/"
+ xmlns:adms="http://www.w3.org/ns/adms#"
+ xmlns:rov="http://www.w3.org/ns/regorg#"
+ xmlns="http://www.w3.org/ns/regorg#"
+ xml:base="http://www.w3.org/ns/regorg#"
+ xml:lang="en">
 <!-- Document metadata -->
 
   <owl:Ontology rdf:about="&regorg;">
