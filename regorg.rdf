@@ -58,7 +58,7 @@
         <dcterms:title>Public GLD comments</dcterms:title>
       </sioc:Forum>
     </dcterms:relation>
-    <dcterms:rights>Original Copyright &#169; 2012 European Commission.</dcterms:rights>
+    <dcterms:rights>Original Copyright © 2012 European Commission.</dcterms:rights>
   </owl:Ontology>  
 
 <!-- This vocabulary defines just one class of its own -->
