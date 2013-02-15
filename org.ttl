@@ -17,7 +17,7 @@
 
 <http://www.w3.org/ns/org#>
     a owl:Ontology;
-    owl:versionInfo "0.6";
+    owl:versionInfo "0.7";
     rdfs:label "Core organization ontology"@en;
     rdfs:comment "Vocabulary for describing organizational structures, specializable to a broad variety of types of organization."@en;
     dct:created "2010-05-28"^^xsd:date;
@@ -25,6 +25,7 @@
     dct:modified "2010-10-08"^^xsd:date;
     dct:modified "2012-09-30"^^xsd:date;
     dct:modified "2012-10-06"^^xsd:date;
+    dct:modified "2013-02-15"^^xsd:date;
     dct:title "Core organization ontology"@en;
     dct:title "Ontologie des organisations"@fr;
     dct:contributor [foaf:mbox "dave@epimorphics.com"; foaf:name "Dave Reynolds"];
@@ -192,10 +193,10 @@ org:hasMember owl:inverseOf org:memberOf  .
 org:reportsTo a owl:ObjectProperty, rdf:Property;
     rdfs:label "reports to"@en;
     rdfs:label "est subordonné à"@fr;
-#    rdfs:domain foaf:Agent;
-#    rdfs:range  foaf:Agent;
-    rdfs:domain [a owl:Class; owl:unionOf (foaf:Agent org:Post)];
-    rdfs:range  [a owl:Class; owl:unionOf (foaf:Agent org:Post)];
+    rdfs:domain foaf:Agent;
+    rdfs:range  foaf:Agent;
+#    rdfs:domain [a owl:Class; owl:unionOf (foaf:Agent org:Post)];
+#    rdfs:range  [a owl:Class; owl:unionOf (foaf:Agent org:Post)];
     rdfs:comment """Indicates a reporting relationship as might be depicted on an organizational chart. The precise semantics of the reporting relationship will vary by organization but is intended to encompass both direct supervisory relationships (e.g. carrying objective and salary setting authority) and more general reporting or accountability relationships (e.g. so called _dotted line_ reporting)."""@en;
     rdfs:comment """Indique une relation de subordination comme elle pourrait figurer dans un organigramme. La sémantique précise de cette subordination pourra varier selon l'Organisation mais vise à englober aussi bien les relations hiérarchiques directes (définition d'objectifs, montant du salaire) que des relations plus générales ou organisationnelles (les liens en pointillés dans les organigrammes)."""@fr;    
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
@@ -323,9 +324,9 @@ org:siteAddress a owl:ObjectProperty, rdf:Property;
     rdfs:label "site Address"@en;
     rdfs:label "adresse du Site"@fr;
     rdfs:domain org:Site;
-    rdfs:range  vcard:VCard;
-    rdfs:comment """Indicates a VCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) for the site. This can include email, telephone, and geo-location details as well as an address. """@en;
-    rdfs:comment """Indique une VCard (utilisant le vocabulaire http://www.w3.org/TR/vcard-rdf/) pour le Site. Peut inclure un email, un téléphone, et des détails de geo-localisation au côtés de l'adresse. """@fr;    
+ #   rdfs:range  vcard:VCard;
+    rdfs:comment """Indicates an addess for the site in a suitable encoding. Use of vCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) is encouraged but the range is left open to allow other encodings to be used. The address may include email, telephone, and geo-location information and is not restricted to a physical address. """@en;
+#    rdfs:comment """Indique une VCard (utilisant le vocabulaire http://www.w3.org/TR/vcard-rdf/) pour le Site. Peut inclure un email, un téléphone, et des détails de geo-localisation au côtés de l'adresse. """@fr;    
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
