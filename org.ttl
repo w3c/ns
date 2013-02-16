@@ -474,6 +474,9 @@ org:resultingOrganization a owl:ObjectProperty, rdf:Property;
 org:resultedFrom          owl:inverseOf org:resultingOrganization .
 org:resultingOrganization owl:inverseOf org:resultedFrom .
 
+# Property chain to license derivation relation
+prov:wasDerivedFrom owl:propertyChainAxiom (org:resultedFrom org:originalOrganization) .
+    
 # -- Posts - added 2012-09-30 -----------------------------------------------------------
 
 org:Post a owl:Class, rdfs:Class;

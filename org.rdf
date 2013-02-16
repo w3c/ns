@@ -19,6 +19,10 @@
     <dct:title xml:lang="en">Core organization ontology</dct:title>
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-05-28</dct:created>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
+      <foaf:name>Dave Reynolds</foaf:name>
+    </dct:contributor>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2012-09-30</dct:modified>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
@@ -27,14 +31,10 @@
     >2010-10-08</dct:modified>
     <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
     <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
+    <owl:versionInfo>0.7</owl:versionInfo>
     <dct:contributor rdf:parseType="Resource">
       <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
       <foaf:name>Dominique Guardiola</foaf:name>
-    </dct:contributor>
-    <owl:versionInfo>0.7</owl:versionInfo>
-    <dct:contributor rdf:parseType="Resource">
-      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
-      <foaf:name>Dave Reynolds</foaf:name>
     </dct:contributor>
     <rdfs:seeAlso rdf:resource="http://www.epimorphics.com/public/vocabulary/org.html"/>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
@@ -42,11 +42,11 @@
     <dct:title xml:lang="fr">Ontologie des organisations</dct:title>
   </owl:Ontology>
   <rdfs:Class rdf:about="http://www.w3.org/ns/org#Organization">
-    <rdfs:comment xml:lang="fr">Représente un groupe de personnes organisées en communauté où tout autre forme de structure sociale, commerciale ou politique. Le groupe a un but commun ou une raison d'être qui va au-delà de la somme des personnes qui en font partie et peut agir en tant que "Agent". Les organisations sont souvent décomposables en structures hiérarchisées. Il est recommandé que des labels lexicaux SKOS soient utilisés pour nommer l'Organisation. En particulier `skos:prefLabel` pour le nom principal (en général le nom légal), `skos:altLabel` pour les noms alternatifs (marques, sigles, appellations familières) et `skos:notation` pour indiquer un code provenant d'une liste de code.</rdfs:comment>
-    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <owl:hasKey rdf:parseType="Collection">
       <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
     </owl:hasKey>
+    <rdfs:comment xml:lang="fr">Représente un groupe de personnes organisées en communauté où tout autre forme de structure sociale, commerciale ou politique. Le groupe a un but commun ou une raison d'être qui va au-delà de la somme des personnes qui en font partie et peut agir en tant que "Agent". Les organisations sont souvent décomposables en structures hiérarchisées. Il est recommandé que des labels lexicaux SKOS soient utilisés pour nommer l'Organisation. En particulier `skos:prefLabel` pour le nom principal (en général le nom légal), `skos:altLabel` pour les noms alternatifs (marques, sigles, appellations familières) et `skos:notation` pour indiquer un code provenant d'une liste de code.</rdfs:comment>
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <owl:disjointWith>
       <rdfs:Class rdf:about="http://www.w3.org/ns/org#Role"/>
     </owl:disjointWith>
@@ -600,4 +600,10 @@
     <rdfs:comment xml:lang="fr">Ceci est une méta-propriété utilisée pour annoter une instance de `org:Role` ayant une sous-propriété `org:memberOf` qui peut être utilisée pour indiquer directement le rôle et pouvoir faire des requêtes plus facilement. La sémantique visée est un Engagement impliquant l'existence d'une relation de propriété directe à travers d'une règle d'inférence de la forme:  `{ [] org:member ?p; org:organization ?o; org:role [org:roleProperty ?r] } -&gt; {?p ?r ?o}`.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:AnnotationProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/prov#wasDerivedFrom">
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Property rdf:about="http://www.w3.org/ns/org#resultedFrom"/>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#originalOrganization"/>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
 </rdf:RDF>
