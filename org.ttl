@@ -9,7 +9,6 @@
 @prefix owlTime:    <http://www.w3.org/2006/time#> .
 @prefix org:        <http://www.w3.org/ns/org#> .
 @prefix vcard:      <http://www.w3.org/2006/vcard/ns#> .
-@prefix opmv:       <http://purl.org/net/opmv/ns#> .
 @prefix prov:       <http://www.w3.org/ns/prov#> .
 @prefix :           <http://www.w3.org/ns/org#> .
 
@@ -418,7 +417,7 @@ org:OrganizationalCollaboration a owl:Class, rdfs:Class;
 # -- Historical information -----------------------------------------------------------
 
 org:ChangeEvent a owl:Class, rdfs:Class;
-    rdfs:subClassOf opmv:Process, prov:Activity;
+    rdfs:subClassOf prov:Activity;
     rdfs:label "Change Event"@en;
     rdfs:label "Évènement"@fr;
     rdfs:comment """Represents an event which resulted in a major change to an organization such as a merger or complete restructuring. It is intended for situations where the resulting organization is sufficient distinct from the original organizations that it has a distinct identity and distinct URI. Extension vocabularies should define sub-classes of this to denote particular categories of event. The instant or interval at which the event occurred should be given by `prov:startAtTime` and `prov:endedAtTime`, a description should be given by `dct:description`. """@en;    

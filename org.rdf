@@ -1,16 +1,15 @@
 <rdf:RDF
-    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
-    xmlns:org="http://www.w3.org/ns/org#"
-    xmlns:prov="http://www.w3.org/ns/prov#"
-    xmlns:owlTime="http://www.w3.org/2006/time#"
-    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:skos="http://www.w3.org/2004/02/skos/core#"
     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+    xmlns:org="http://www.w3.org/ns/org#"
     xmlns:gr="http://purl.org/goodrelations/v1#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:prov="http://www.w3.org/ns/prov#"
+    xmlns:owlTime="http://www.w3.org/2006/time#"
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:opmv="http://purl.org/net/opmv/ns#"
+    xmlns:vcard="http://www.w3.org/2006/vcard/ns#"
     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
   <owl:Ontology rdf:about="http://www.w3.org/ns/org#">
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
@@ -23,20 +22,20 @@
     >2012-09-30</dct:modified>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2013-02-15</dct:modified>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2010-10-08</dct:modified>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/vocab-org/"/>
-    <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
-    <dct:contributor rdf:parseType="Resource">
-      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
-      <foaf:name>Dave Reynolds</foaf:name>
-    </dct:contributor>
-    <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
-    <owl:versionInfo>0.7</owl:versionInfo>
     <dct:contributor rdf:parseType="Resource">
       <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
       <foaf:name>Dominique Guardiola</foaf:name>
     </dct:contributor>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2010-10-08</dct:modified>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/vocab-org/"/>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
+      <foaf:name>Dave Reynolds</foaf:name>
+    </dct:contributor>
+    <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
+    <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
+    <owl:versionInfo>0.7</owl:versionInfo>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-06-09</dct:modified>
     <dct:title xml:lang="fr">Ontologie des organisations</dct:title>
@@ -49,9 +48,6 @@
     </owl:disjointWith>
     <rdfs:label xml:lang="fr">Organisation</rdfs:label>
     <rdfs:label xml:lang="en">Organization</rdfs:label>
-    <owl:hasKey rdf:parseType="Collection">
-      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
-    </owl:hasKey>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent"/>
     </owl:disjointWith>
@@ -62,6 +58,9 @@
     </owl:disjointWith>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <owl:hasKey rdf:parseType="Collection">
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
+    </owl:hasKey>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#Site"/>
     </owl:disjointWith>
@@ -119,7 +118,6 @@
   </owl:Class>
   <owl:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-    <rdfs:subClassOf rdf:resource="http://purl.org/net/opmv/ns#Process"/>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
     <rdfs:label xml:lang="en">Change Event</rdfs:label>
     <rdfs:label xml:lang="fr">Évènement</rdfs:label>
