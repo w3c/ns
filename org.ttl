@@ -324,7 +324,7 @@ org:siteAddress a owl:ObjectProperty, rdf:Property;
     rdfs:label "adresse du Site"@fr;
     rdfs:domain org:Site;
  #   rdfs:range  vcard:VCard;
-    rdfs:comment """Indicates an addess for the site in a suitable encoding. Use of vCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) is encouraged but the range is left open to allow other encodings to be used. The address may include email, telephone, and geo-location information and is not restricted to a physical address. """@en;
+    rdfs:comment """Indicates an address for the site in a suitable encoding. Use of vCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) is encouraged but the range is left open to allow other encodings to be used. The address may include email, telephone, and geo-location information and is not restricted to a physical address. """@en;
 #    rdfs:comment """Indique une VCard (utilisant le vocabulaire http://www.w3.org/TR/vcard-rdf/) pour le Site. Peut inclure un email, un téléphone, et des détails de geo-localisation au côtés de l'adresse. """@fr;    
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
