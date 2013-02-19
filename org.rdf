@@ -22,23 +22,23 @@
     >2012-09-30</dct:modified>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2013-02-15</dct:modified>
-    <dct:contributor rdf:parseType="Resource">
-      <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
-      <foaf:name>Dominique Guardiola</foaf:name>
-    </dct:contributor>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-10-08</dct:modified>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/vocab-org/"/>
-    <dct:contributor rdf:parseType="Resource">
-      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
-      <foaf:name>Dave Reynolds</foaf:name>
-    </dct:contributor>
     <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
     <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
     <owl:versionInfo>0.7</owl:versionInfo>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-06-09</dct:modified>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:mbox>dave@epimorphics.com</foaf:mbox>
+      <foaf:name>Dave Reynolds</foaf:name>
+    </dct:contributor>
     <dct:title xml:lang="fr">Ontologie des organisations</dct:title>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
+      <foaf:name>Dominique Guardiola</foaf:name>
+    </dct:contributor>
   </owl:Ontology>
   <rdfs:Class rdf:about="http://www.w3.org/ns/org#Organization">
     <rdfs:comment xml:lang="fr">Représente un groupe de personnes organisées en communauté où tout autre forme de structure sociale, commerciale ou politique. Le groupe a un but commun ou une raison d'être qui va au-delà de la somme des personnes qui en font partie et peut agir en tant que "Agent". Les organisations sont souvent décomposables en structures hiérarchisées. Il est recommandé que des labels lexicaux SKOS soient utilisés pour nommer l'Organisation. En particulier `skos:prefLabel` pour le nom principal (en général le nom légal), `skos:altLabel` pour les noms alternatifs (marques, sigles, appellations familières) et `skos:notation` pour indiquer un code provenant d'une liste de code.</rdfs:comment>
@@ -48,6 +48,9 @@
     </owl:disjointWith>
     <rdfs:label xml:lang="fr">Organisation</rdfs:label>
     <rdfs:label xml:lang="en">Organization</rdfs:label>
+    <owl:hasKey rdf:parseType="Collection">
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
+    </owl:hasKey>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent"/>
     </owl:disjointWith>
@@ -58,9 +61,6 @@
     </owl:disjointWith>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:hasKey rdf:parseType="Collection">
-      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
-    </owl:hasKey>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#Site"/>
     </owl:disjointWith>
@@ -341,7 +341,8 @@
     <rdfs:label xml:lang="en">site Address</rdfs:label>
     <rdfs:label xml:lang="fr">adresse du Site</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Site"/>
-    <rdfs:comment xml:lang="en">Indicates an addess for the site in a suitable encoding. Use of vCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) is encouraged but the range is left open to allow other encodings to be used. The address may include email, telephone, and geo-location information and is not restricted to a physical address. </rdfs:comment>
+    <rdfs:comment xml:lang="en">Indicates an address for the site in a suitable encoding. Use of vCard (using the http://www.w3.org/TR/vcard-rdf/ vocabulary) is encouraged but the range is left open to allow other encodings to be used. The address may include email, telephone, and geo-location information and is not restricted to a physical address. </rdfs:comment>
+    <rdfs:comment xml:lang="fr">Indique une adresse pour le site dans un encodage approprié. L'usage du vocabulaire vCard ( http://www.w3.org/TR/vcard-rdf/) est encouragé, mais le range est ouvert pour permettre l'utilisation d'autres vocabulaires. L'adresse peut comporter le courriel, le téléphone, et l'information de géolocalisation; et n'est donc pas seulement limitée à une adresse physique. </rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#hasUnit">
