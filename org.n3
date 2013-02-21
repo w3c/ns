@@ -194,8 +194,8 @@ org:reportsTo a owl:ObjectProperty, rdf:Property;
     rdfs:label "est subordonné à"@fr;
     rdfs:domain foaf:Agent;
     rdfs:range  foaf:Agent;
-#    rdfs:domain [a owl:Class; owl:unionOf (foaf:Agent org:Post)];
-#    rdfs:range  [a owl:Class; owl:unionOf (foaf:Agent org:Post)];
+    rdfs:domain [a owl:Class; owl:unionOf (foaf:Agent org:Post)];
+    rdfs:range  [a owl:Class; owl:unionOf (foaf:Agent org:Post)];
     rdfs:comment """Indicates a reporting relationship as might be depicted on an organizational chart. The precise semantics of the reporting relationship will vary by organization but is intended to encompass both direct supervisory relationships (e.g. carrying objective and salary setting authority) and more general reporting or accountability relationships (e.g. so called _dotted line_ reporting)."""@en;
     rdfs:comment """Indique une relation de subordination comme elle pourrait figurer dans un organigramme. La sémantique précise de cette subordination pourra varier selon l'Organisation mais vise à englober aussi bien les relations hiérarchiques directes (définition d'objectifs, montant du salaire) que des relations plus générales ou organisationnelles (les liens en pointillés dans les organigrammes)."""@fr;    
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
@@ -501,7 +501,6 @@ org:Post a owl:Class, rdfs:Class;
        après peut être occupé par plusieurs personnes et peut donc être considéré comme
        une Organisation à part entière.
     """@fr;
-    rdfs:subClasOf org:Organization;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
