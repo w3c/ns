@@ -218,7 +218,7 @@ org:Membership a owl:Class, rdfs:Class;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
-org:member a owl:ObjectProperty, rdf:Property;
+org:member a owl:ObjectProperty, rdf:Property, owl:FunctionalProperty;
     rdfs:label "member"@en;
     rdfs:label "membre"@fr;
     rdfs:domain org:Membership;
@@ -228,7 +228,7 @@ org:member a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
-org:organization a owl:ObjectProperty, rdf:Property;
+org:organization a owl:ObjectProperty, rdf:Property, owl:FunctionalProperty;
     rdfs:label "organization"@en;
     rdfs:label "organisation"@fr;
     rdfs:domain org:Membership;
