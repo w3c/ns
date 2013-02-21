@@ -3,13 +3,13 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 
- prov:PublicationActivity      rdfs:subClassOf     prov:Activity .
- prov:ContributionActivity     rdfs:subClassOf     prov:Activity .
- prov:CreationActivity         rdfs:subClassOf     prov:Activity, prov:ContributionActivity .
- prov:ModificationActivity     rdfs:subClassOf     prov:Activity .
- prov:AcceptanceActivity       rdfs:subClassOf     prov:Activity .
- prov:CopyrightingActivity     rdfs:subClassOf     prov:Activity .
- prov:SubmissionActivity       rdfs:subClassOf     prov:Activity .
- prov:PublisherRole            rdfs:subClassOf     prov:Role .
- prov:ContributorRole          rdfs:subClassOf     prov:Role . 
- prov:CreatorRole              rdfs:subClassOf     prov:Role, prov:ContributorRole .
+ prov:Publish                  rdfs:subClassOf     prov:Activity .
+ prov:Contribute               rdfs:subClassOf     prov:Activity .
+ prov:Create                   rdfs:subClassOf     prov:Activity, prov:Contribute .
+ prov:Modify                   rdfs:subClassOf     prov:Activity .
+ prov:Accept                   rdfs:subClassOf     prov:Activity .
+ prov:Copyright                rdfs:subClassOf     prov:Activity .
+ prov:Submit                   rdfs:subClassOf     prov:Activity .
+ prov:Publisher                rdfs:subClassOf     prov:Role .
+ prov:Contributor              rdfs:subClassOf     prov:Role . 
+ prov:Creator                  rdfs:subClassOf     prov:Role, prov:Contributor .

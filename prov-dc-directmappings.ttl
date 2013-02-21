@@ -8,8 +8,8 @@
  dct:creator         rdfs:subPropertyOf        prov:wasAttributedTo .
  dct:publisher       rdfs:subPropertyOf        prov:wasAttributedTo .
  dct:contributor     rdfs:subPropertyOf        prov:wasAttributedTo .
- dct:isVersionOf     rdfs:subPropertyOf        prov:wasDerivedFrom .
- dct:hasVersion      rdfs:subPropertyOf        prov:hadDerivation .
+ dct:isVersionOf     owl:equivalentProperty    prov:wasRevisionOf .
+ dct:hasVersion      owl:equivalentProperty    prov:hadRevision .
  dct:hasFormat       rdfs:subPropertyOf        prov:alternateOf .
  dct:isFormatOf      rdfs:subPropertyOf        prov:alternateOf .
  dct:replaces        rdfs:subPropertyOf        prov:wasInfluencedBby .
@@ -18,7 +18,6 @@
  dct:type            owl:equivalentProperty    prov:type .
  
  prov:hadPrimarySource rdfs:subPropertyOf dct:source .
- prov:wasRevisionOf     rdfs:subPropertyOf dct:isVersionOf .
  
  dct:created         rdfs:subPropertyOf    prov:generatedAtTime .
  dct:issued          rdfs:subPropertyOf    prov:generatedAtTime .
