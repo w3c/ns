@@ -10,6 +10,7 @@
  prov:Accept                   rdfs:subClassOf     prov:Activity .
  prov:Copyright                rdfs:subClassOf     prov:Activity .
  prov:Submit                   rdfs:subClassOf     prov:Activity .
+ prov:Replace                  rdfs:subClassOf     prov:Activity .
  prov:Publisher                rdfs:subClassOf     prov:Role .
  prov:Contributor              rdfs:subClassOf     prov:Role . 
  prov:Creator                  rdfs:subClassOf     prov:Role, prov:Contributor .

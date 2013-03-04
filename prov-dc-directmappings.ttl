@@ -12,10 +12,7 @@
  dct:hasVersion      owl:equivalentProperty    prov:hadRevision .
  dct:hasFormat       rdfs:subPropertyOf        prov:alternateOf .
  dct:isFormatOf      rdfs:subPropertyOf        prov:alternateOf .
- dct:replaces        rdfs:subPropertyOf        prov:wasInfluencedBby .
- dct:isReplacedBy    rdfs:subPropertyOf        prov:influenced .
  dct:source          rdfs:subPropertyOf        prov:wasDerivedFrom .
- dct:type            owl:equivalentProperty    prov:type .
  
  prov:hadPrimarySource rdfs:subPropertyOf dct:source .
  
