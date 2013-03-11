@@ -48,7 +48,7 @@
 	  <li about="rdfa:PrefixMapping"><code rel="rdfs:subClassOf" resource="rdfa:PrefixOrTermMapping">rdfa:PrefixMapping</code>
 		<span property="dcterms:description">is the class for prefix mappings</span>.
 	  </li>
-	  <li about="rdfa:TermMapping"><code rel="rdfs:subClassOf" resource="rdfa:PrefixOrTermMapping">rdfa:PrefixMapping</code>
+	  <li about="rdfa:TermMapping"><code rel="rdfs:subClassOf" resource="rdfa:PrefixOrTermMapping">rdfa:TermMapping</code>
 		<span property="dcterms:description">is the class for term mappings</span>.
 	  </li>
 	  
@@ -115,7 +115,21 @@
 	<span about="rdfa:usesVocabulary" typeof="owl:ObjectProperty rdf:Property"
 		  property="dcterms:description">provides a relationship between the host document and a vocabulary
 	defined using the @vocab facility of RDFa1.1</span>.</p>
-	
+
+	<h2>Property Copying Terms</h2>
+
+	<p>The terms for property copying allow properties associated with a resource to be copied to another resource; for more details see the <a href="http://www.w3.org/TR/rdfa-in-html/#property-copying">relevant section in the HTML+RDFa 1.1</a> document. The terms being used are:</p>
+
+	<ul>
+		<li>
+		<code>rdfa:Pattern</code>:
+		<span about="rdfa:Pattern" typeof="rdfs:Class owl:Class" property="dcterms:description">Class to identify an (RDF) resource whose properties are to be copied to another resource</span></li>
+		</li>
+		<li>
+        <code>rdfa:copy</code>:
+		<span about="rdfa:copy" typeof="owl:ObjectProperty rdf:Property" property="dcterms:description">identifies the resource (i.e., pattern) whose properties and values should be copied to replace the current triple (retaining the subject of the triple).</span></li>
+		</li>
+	</ul>
 
 	<hr />
 	<address >
@@ -127,7 +141,7 @@
 			<span rel="rdfs:seeAlso" resource="http://www.ivan-herman.net/foaf" property="foaf:title">Semantic Web Activity Lead</span>,
 		</span>
 	  </span>
-	  <span property="dcterms:date">2011-11-22</span>
+	  <span property="dcterms:date">2013-01-18</span>
 	  <br />
 	  <span property="owl:versionInfo">$Date$</span>
 	</address>
