@@ -6,46 +6,46 @@
   xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
+  <owl:Class rdf:about="http://www.w3.org/ns/formats/Format">
+    <dcterms:description>a unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification.</dcterms:description>
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_Functional"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_XML"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_CSV"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/RIF_XML"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/RDFa"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_JSON"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/POWDER-S"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/N-Triples"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/N3"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/POWDER"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_TSV"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_Manchester"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_XML"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/RDF_XML"/>
+  </owl:Class>
+  <rdfs:Property rdf:about="http://www.w3.org/ns/formats/media_type">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdfs:Property>
   <owl:Ontology rdf:about="http://www.w3.org/ns/formats/">
+    <dcterms:description>Unique URIs for File Formats</dcterms:description>
     <dcterms:created>2010-10-19</dcterms:created>
     <owl:versionIRI rdf:resource="http://www.w3.org/ns/formats/"/>
-    <dcterms:modified>2013-03-25</dcterms:modified>
-    <dcterms:description>Unique URIs for File Formats</dcterms:description>
     <owl:versionInfo>$Date$</owl:versionInfo>
     <dcterms:creator>
       <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
         <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
         <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
         <foaf:name>Ivan Herman</foaf:name>
-        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
         <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
       </foaf:Person>
     </dcterms:creator>
+    <dcterms:modified>2013-03-25</dcterms:modified>
   </owl:Ontology>
-  <rdfs:Property rdf:about="http://www.w3.org/ns/formats/media_type">
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-  </rdfs:Property>
   <rdfs:Property rdf:about="http://www.w3.org/ns/formats/preferred_suffix">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
   </rdfs:Property>
-  <owl:Class rdf:about="http://www.w3.org/ns/formats/Format">
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_CSV"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_TSV"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_XML"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/Turtle"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_Manchester"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/POWDER"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/N3"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/RDF_XML"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/RDFa"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/N-Triples"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_Functional"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/OWL_XML"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/POWDER-S"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/RIF_XML"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/formats/SPARQL_Results_JSON"/>
-    <dcterms:description>a unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification.</dcterms:description>
-    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-  </owl:Class>
 </rdf:RDF>
 
