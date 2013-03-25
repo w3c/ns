@@ -1,33 +1,28 @@
-<?xml version="1.0"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dc="http://purl.org/dc/terms/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:formats="http://www.w3.org/ns/formats/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:formats="http://www.w3.org/ns/formats/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/N3.html">
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-    <dc:title>Information Resource for the N3 RDF Syntax</dc:title>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/N3">
-    <dc:date>2010-05-04</dc:date>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TeamSubmission/n3/#mimetype"/>
-    <dc:description>Unique identifier for the N3 RDF syntax</dc:description>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/N3">
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:name>Ivan Herman</foaf:name>
+      </foaf:Person>
+    </dcterms:creator>
     <rdfs:comment>N3 is defined by the “Notation3 (N3): A readable RDF syntax” W3C Team Submission.</rdfs:comment>
-    <formats:media_type>text/rdf+n3</formats:media_type>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TeamSubmission/n3/#mimetype"/>
+    <dcterms:modified>2013-03-25</dcterms:modified>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TeamSubmission/n3/"/>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <foaf:name>Ivan Herman</foaf:name>
-  </rdf:Description>
+    <dcterms:description>Unique identifier for the N3 RDF syntax</dcterms:description>
+    <dcterms:created>2010-05-04</dcterms:created>
+    <formats:media_type>text/rdf+n3</formats:media_type>
+  </formats:Format>
 </rdf:RDF>
 

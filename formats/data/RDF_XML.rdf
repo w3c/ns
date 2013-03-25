@@ -1,34 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dc="http://purl.org/dc/terms/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:formats="http://www.w3.org/ns/formats/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:formats="http://www.w3.org/ns/formats/"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/RDF_XML.html">
-    <dc:title>Information Resource for the RDF Serialization in XML</dc:title>
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/RDF_XML">
-    <dc:description>Unique identifier for the RDF serialization in XML (RDF/XML)</dc:description>
-    <rdfs:comment>RDF/XML is defined by the “RDF/XML Syntax Specification” W3C Recommendation.</rdfs:comment>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <formats:preferred_suffix>.rdf</formats:preferred_suffix>
-    <formats:media_type>application/rdf+xml</formats:media_type>
-    <dc:date>2010-05-04</dc:date>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdf-syntax-grammar/"/>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/RDF_XML">
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/rdf-syntax-grammar/#section-MIME-Type"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:name>Ivan Herman</foaf:name>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-  </rdf:Description>
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <foaf:name>Ivan Herman</foaf:name>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+      </foaf:Person>
+    </dcterms:creator>
+    <dcterms:description>Unique identifier for the RDF serialization in XML (RDF/XML)</dcterms:description>
+    <formats:preferred_suffix>.rdf</formats:preferred_suffix>
+    <dcterms:modified>2013-03-25</dcterms:modified>
+    <rdfs:comment>RDF/XML is defined by the “RDF/XML Syntax Specification” W3C Recommendation.</rdfs:comment>
+    <dcterms:created>2010-05-04</dcterms:created>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdf-syntax-grammar/"/>
+    <formats:media_type>application/rdf+xml</formats:media_type>
+  </formats:Format>
 </rdf:RDF>
 

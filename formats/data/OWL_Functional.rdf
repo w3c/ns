@@ -1,34 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dc="http://purl.org/dc/terms/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:formats="http://www.w3.org/ns/formats/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:formats="http://www.w3.org/ns/formats/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/OWL_Functional">
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/owl-syntax/"/>
-    <formats:media_type>text/owl-functional</formats:media_type>
-    <dc:description>Unique identifier for the OWL Serialization in Functional Syntax</dc:description>
-    <rdfs:comment>OWL Functional Syntax is defined by the “OWL 2 Web Ontology Language, Structural Specification and Functional-Style Syntax” W3C Recommendation.</rdfs:comment>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/OWL_Functional">
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:name>Ivan Herman</foaf:name>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+      </foaf:Person>
+    </dcterms:creator>
+    <dcterms:created>2010-05-04</dcterms:created>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/owl-syntax/#Appendix:_Internet_Media_Type.2C_File_Extension.2C_and_Macintosh_File_Type"/>
-    <dc:date>2010-05-04</dc:date>
+    <rdfs:comment>OWL Functional Syntax is defined by the “OWL 2 Web Ontology Language, Structural Specification and Functional-Style Syntax” W3C Recommendation.</rdfs:comment>
+    <dcterms:description>Unique identifier for the OWL Serialization in Functional Syntax</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/owl-syntax/"/>
+    <dcterms:modified>2013-03-25</dcterms:modified>
     <formats:preferred_suffix>.ofn</formats:preferred_suffix>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/OWL_Functional.html">
-    <dc:title>Information Resource for the OWL Serialization in Functional Syntax</dc:title>
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:name>Ivan Herman</foaf:name>
-  </rdf:Description>
+    <formats:media_type>text/owl-functional</formats:media_type>
+  </formats:Format>
 </rdf:RDF>
 

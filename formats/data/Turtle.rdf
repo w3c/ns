@@ -1,34 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dc="http://purl.org/dc/terms/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:formats="http://www.w3.org/ns/formats/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:formats="http://www.w3.org/ns/formats/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/Turtle.html">
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-    <dc:title>Information Resource for the RDF Serialiation in Turtle</dc:title>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:name>Ivan Herman</foaf:name>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/Turtle">
-    <rdfs:comment>Turtle is defined by the “Turtle - Terse RDF Triple Language” W3C Working Draft.</rdfs:comment>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/turtle/#sec-mediaReg"/>
-    <formats:media_type>text/turtle</formats:media_type>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/Turtle">
+    <dcterms:created>2010-05-03</dcterms:created>
+    <dcterms:modified>2013-03-25</dcterms:modified>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/turtle/"/>
-    <dc:date>2010-05-03</dc:date>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
-    <dc:description>Unique identifier for the RDF Serialization in Turtle</dc:description>
     <formats:preferred_suffix>.ttl</formats:preferred_suffix>
-  </rdf:Description>
+    <formats:media_type>text/turtle</formats:media_type>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/turtle/#sec-mediaReg"/>
+    <dcterms:description>Unique identifier for the RDF Serialization in Turtle</dcterms:description>
+    <rdfs:comment>Turtle is defined by the “Turtle - Terse RDF Triple Language” W3C Candidate Recommendation.</rdfs:comment>
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:name>Ivan Herman</foaf:name>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+      </foaf:Person>
+    </dcterms:creator>
+  </formats:Format>
 </rdf:RDF>
 

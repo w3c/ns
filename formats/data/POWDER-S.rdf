@@ -1,33 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dc="http://purl.org/dc/terms/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:formats="http://www.w3.org/ns/formats/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:formats="http://www.w3.org/ns/formats/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/POWDER-S">
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
-    <dc:description>Unique identifier for the POWDER-S file format</dc:description>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/POWDER-S">
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/powder-dr/"/>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/powder-dr/#appC"/>
-    <rdfs:comment>POWDER-S is defined by the “Protocol for Web Description Resources (POWDER): Description Resources” W3C Recommendation.</rdfs:comment>
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:name>Ivan Herman</foaf:name>
+      </foaf:Person>
+    </dcterms:creator>
+    <dcterms:description>Unique identifier for the POWDER-S file format</dcterms:description>
     <formats:media_type>powder-s+xml</formats:media_type>
-    <dc:date>2010-05-03</dc:date>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <foaf:name>Ivan Herman</foaf:name>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/POWDER-S.html">
-    <dc:title>Information Resource for the POWDER-S File Format</dc:title>
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-  </rdf:Description>
+    <dcterms:created>2010-05-03</dcterms:created>
+    <rdfs:comment>POWDER-S is defined by the “Protocol for Web Description Resources (POWDER): Description Resources” W3C Recommendation.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/powder-dr/#appC"/>
+    <dcterms:modified>2013-03-25</dcterms:modified>
+  </formats:Format>
 </rdf:RDF>
 

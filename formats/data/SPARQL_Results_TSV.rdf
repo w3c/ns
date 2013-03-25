@@ -1,33 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dc="http://purl.org/dc/terms/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:formats="http://www.w3.org/ns/formats/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:formats="http://www.w3.org/ns/formats/"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/SPARQL_Results_TSV">
-    <rdfs:comment>SPARQL Results in TSV is defined by the “SPARQL 1.1 Query Results CSV and TSV Formats” W3C Recommendation.</rdfs:comment>
-    <formats:media_type>text/tab-separated-values</formats:media_type>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
-    <dc:description>Unique identifier for the SPARQL Results in TSV file format</dc:description>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <dc:date>2011-10-19</dc:date>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/sparql11-results-csv-tsv/"/>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/SPARQL_Results_TSV">
     <rdfs:seeAlso rdf:resource="http://www.iana.org/assignments/media-types/text/tab-separated-values"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/SPARQL_Results_TSV.html">
-    <dc:title>Information Resource for the SPARQL Results File Format in TSV</dc:title>
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <foaf:name>Ivan Herman</foaf:name>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-  </rdf:Description>
+    <formats:media_type>text/tab-separated-values</formats:media_type>
+    <dcterms:modified>2013-03-25</dcterms:modified>
+    <dcterms:created>2011-10-19</dcterms:created>
+    <dcterms:description>Unique identifier for the SPARQL Results in TSV file format</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/sparql11-results-csv-tsv/"/>
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:name>Ivan Herman</foaf:name>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+      </foaf:Person>
+    </dcterms:creator>
+    <rdfs:comment>SPARQL Results in TSV is defined by the “SPARQL 1.1 Query Results CSV and TSV Formats” W3C Recommendation.</rdfs:comment>
+  </formats:Format>
 </rdf:RDF>
 

@@ -1,30 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dc="http://purl.org/dc/terms/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:formats="http://www.w3.org/ns/formats/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/RDFa">
-    <rdfs:comment>RDFa is defined by the “RDFa in XHTML: Syntax and Processing” W3C Recommendation.</rdfs:comment>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <dc:date>2010-05-04</dc:date>
-    <dc:description>Unique Identifier for the RDFa RDF Serialization Format</dc:description>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdfa-syntax/"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:name>Ivan Herman</foaf:name>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/RDF_XML.html">
-    <dc:title>Information Resource for the RDFa RDF Serialization Format</dc:title>
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/RDFa">
+    <dcterms:description>Unique Identifier for the RDFa RDF Serialization Format</dcterms:description>
+    <dcterms:created>2010-05-04</dcterms:created>
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:name>Ivan Herman</foaf:name>
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+      </foaf:Person>
+    </dcterms:creator>
+    <rdfs:comment>RDFa is defined by the “RDFa Core 1.1: Syntax and processing rules for embedding RDF through attributes” W3C Recommendation.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdfa-core/"/>
+    <dcterms:modified>2013-03-25</dcterms:modified>
+  </formats:Format>
+  <rdf:Description rdf:about="file:///Users/ivan/W3C/WWW/ns/formats/data/RDFa.html">
+    <dcterms:title>Information Resource for the RDFa RDF Serialization Format</dcterms:title>
   </rdf:Description>
 </rdf:RDF>
 

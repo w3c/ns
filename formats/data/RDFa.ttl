@@ -1,27 +1,23 @@
-@prefix dc: <http://purl.org/dc/terms/> .
-@prefix dist: <http://www.w3.org/2007/08/pyRdfa/distiller#> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix formats: <http://www.w3.org/ns/formats/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
+<file:///Users/ivan/W3C/WWW/ns/formats/data/RDFa.html> dcterms:title "Information Resource for the RDFa RDF Serialization Format" .
 
 formats:RDFa a formats:Format ;
-     dc:creator <http://www.ivan-herman.net/foaf#me> ;
-     dc:date "2010-05-04" ;
-     dc:description "Unique Identifier for the RDFa RDF Serialization Format" ;
-     rdfs:comment "RDFa is defined by the “RDFa in XHTML: Syntax and Processing” W3C Recommendation." ;
-     rdfs:isDefinedBy <http://www.w3.org/TR/rdfa-syntax/> . 
-
-<http://www.w3.org/ns/formats/data/RDF_XML.html> dc:title "Information Resource for the RDFa RDF Serialization Format" ;
-     xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
+    dcterms:created "2010-05-04" ;
+    dcterms:creator <http://www.ivan-herman.net/foaf#me> ;
+    dcterms:description "Unique Identifier for the RDFa RDF Serialization Format" ;
+    dcterms:modified "2013-03-25" ;
+    rdfs:comment "RDFa is defined by the “RDFa Core 1.1: Syntax and processing rules for embedding RDF through attributes” W3C Recommendation." ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/rdfa-core/> .
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;
-     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
-     foaf:mbox <mailto:ivan@w3.org> ;
-     foaf:name "Ivan Herman" ;
-     foaf:title "Semantic Web Activity Lead" ;
-     foaf:workplaceHomepage <http://www.w3.org> . 
+    rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
+    foaf:mbox <mailto:ivan@w3.org> ;
+    foaf:name "Ivan Herman" ;
+    foaf:title "Semantic Web Activity Lead" ;
+    foaf:workplaceHomepage <http://www.w3.org> .
+
+

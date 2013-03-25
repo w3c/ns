@@ -1,34 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
-   xmlns:dc="http://purl.org/dc/terms/"
-   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-   xmlns:formats="http://www.w3.org/ns/formats/"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-   xmlns:xhv="http://www.w3.org/1999/xhtml/vocab#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:formats="http://www.w3.org/ns/formats/"
 >
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/SPARQL_Results_JSON.html">
-    <dc:title>Information Resource for the SPARQL Results File Format in JSON</dc:title>
-    <xhv:stylesheet rdf:resource="http://www.w3.org/StyleSheets/TR/base"/>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.w3.org/ns/formats/SPARQL_Results_JSON">
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/SPARQL_Results_JSON">
     <formats:preferred_suffix>.srj</formats:preferred_suffix>
-    <dc:date>2010-05-03</dc:date>
-    <dc:description>Unique identifier for the SPARQL Results in JSON file format</dc:description>
-    <rdf:type rdf:resource="http://www.w3.org/ns/formats/Format"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdf-sparql-json-res/"/>
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:name>Ivan Herman</foaf:name>
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+      </foaf:Person>
+    </dcterms:creator>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/sparql11-results-json/#content-type"/>
+    <rdfs:comment>SPARQL Results in JSON is defined by the “SPARQL 1.1 Query Results JSON Format” W3C Recommendation.</rdfs:comment>
+    <dcterms:created>2010-05-03</dcterms:created>
     <formats:media_type>application/sparql-results+json</formats:media_type>
-    <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/rdf-sparql-json-res/#mediaType"/>
-    <rdfs:comment>SPARQL Results in JSON is defined by the “Serializing SPARQL Query Results in JSON” W3C Note.</rdfs:comment>
-  </rdf:Description>
-  <rdf:Description rdf:about="http://www.ivan-herman.net/foaf#me">
-    <foaf:title>Semantic Web Activity Lead</foaf:title>
-    <rdf:type rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
-    <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-    <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-    <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-    <foaf:name>Ivan Herman</foaf:name>
-  </rdf:Description>
+    <dcterms:modified>2013-03-25</dcterms:modified>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/sparql11-results-json/"/>
+    <dcterms:description>Unique identifier for the SPARQL Results in JSON file format</dcterms:description>
+  </formats:Format>
 </rdf:RDF>
 
