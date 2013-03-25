@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:formats="http://www.w3.org/ns/formats/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/PROV-N">
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:name>Ivan Herman</foaf:name>
+      </foaf:Person>
+    </dcterms:creator>
+    <formats:media_type>text/provenance-notation</formats:media_type>
+    <dcterms:description>Unique identifier for the PROV-N Provenance Notation</dcterms:description>
+    <dcterms:modified>2013-03-25</dcterms:modified>
+    <rdfs:comment>PROV-N is defined by the “PROV-N: The Provenance Notation” W3C Proposed Recommendation.</rdfs:comment>
+    <dcterms:created>2013-03-25</dcterms:created>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov-n/#media-type"/>
+    <formats:preferred_suffix>.provn</formats:preferred_suffix>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/prov-n/"/>
+  </formats:Format>
+</rdf:RDF>
+

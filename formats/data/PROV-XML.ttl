@@ -1,0 +1,24 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+formats:PROV-XML a formats:Format ;
+    dcterms:created "2013-03-25" ;
+    dcterms:creator <http://www.ivan-herman.net/foaf#me> ;
+    dcterms:description "Unique identifier for the PROV-XML Provenance Notation" ;
+    dcterms:modified "2013-03-25" ;
+    rdfs:comment "PROV-XML is defined by the “PROV-XML: The PROV XML Schema” W3C Working Draft." ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/prov-xml/> ;
+    rdfs:seeAlso <http://www.w3.org/TR/prov-xml/#media-type> ;
+    formats:media_type "application/provenance+xml" ;
+    formats:preferred_suffix ".provx" .
+
+<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
+    rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
+    foaf:mbox <mailto:ivan@w3.org> ;
+    foaf:name "Ivan Herman" ;
+    foaf:title "Semantic Web Activity Lead" ;
+    foaf:workplaceHomepage <http://www.w3.org> .
+
+

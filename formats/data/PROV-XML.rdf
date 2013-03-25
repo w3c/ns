@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:formats="http://www.w3.org/ns/formats/"
+>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/PROV-XML">
+    <formats:media_type>application/provenance+xml</formats:media_type>
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:name>Ivan Herman</foaf:name>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+      </foaf:Person>
+    </dcterms:creator>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/prov-xml/"/>
+    <formats:preferred_suffix>.provx</formats:preferred_suffix>
+    <dcterms:modified>2013-03-25</dcterms:modified>
+    <dcterms:description>Unique identifier for the PROV-XML Provenance Notation</dcterms:description>
+    <rdfs:comment>PROV-XML is defined by the “PROV-XML: The PROV XML Schema” W3C Working Draft.</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov-xml/#media-type"/>
+    <dcterms:created>2013-03-25</dcterms:created>
+  </formats:Format>
+</rdf:RDF>
+
