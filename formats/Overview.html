@@ -1,22 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"
-	  xmlns:dc="http://purl.org/dc/terms/"
-	  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" 
-	  xmlns:foaf="http://xmlns.com/foaf/0.1/"
-	  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-	  xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-	  xmlns:owl="http://www.w3.org/2002/07/owl#"
-	  xmlns:formats="http://www.w3.org/ns/formats/"
-	  version="XHTML+RDFa 1.0"
->
-  <head about="http://www.w3.org/ns/formats/Overview.html">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" prefix="formats: http://www.w3.org/ns/formats/">
+  <head>
 	<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
-	<title property="dc:title">Unique URIs for File Formats</title>
+	<title>Unique URIs for File Formats</title>
 	<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/base"/>
   </head>
 	
-  <body about="http://www.w3.org/ns/formats/" typeof="owl:Ontology">
+  <body resource="formats:" typeof="owl:Ontology">
 	<p class="banner">
 		<a href="/2001/sw/">
 			<img src="/Icons/SW/sw-horz-w3c.png" width="241" height="48" alt="W3C SW Logo"/>
@@ -25,8 +16,8 @@
 	
 	<h1 property="dc:description">Unique URIs for File Formats</h1>
 		
-	<div about="[formats:Format]" typeof="rdfs:Class owl:Class">
-	  <p >'<code>http://www.w3.org/ns/formats/Format</code>' is <span property="dc:description" datatype="">a unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification.</span></p>
+	<div resource="formats:Format" typeof="rdfs:Class owl:Class">
+	  <p >'<code>http://www.w3.org/ns/formats/Format</code>' is <span property="dc:description">a unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification.</span></p>
 	  
 	  <p>Although the URI-s themselves refer to non-informational resources (ie, they are abstract identifiers), they can be dereferenced. Dereferencing leads to informational resources in XHTML, RDF/XML, or Turtle equivalents, depending on content negotiation.</p>
 	  
@@ -51,24 +42,21 @@
 	</div>
 	
 	<p>In RDF the description of a file format may use the properties
-	<span about="[formats:media_type]" typeof="rdfs:Property owl:DatatypeProperty">'http://www.w3.org/ns/formats/media_type'</span> and
-	<span about="[formats:preferred_suffix]" typeof="rdfs:Property owl:DatatypeProperty">'http://www.w3.org/ns/formats/preferred_suffix'</span>,
+	<span resource="formats:media_type" typeof="rdfs:Property owl:DatatypeProperty">'http://www.w3.org/ns/formats/media_type'</span> and
+	<span resource="formats:preferred_suffix" typeof="rdfs:Property owl:DatatypeProperty">'http://www.w3.org/ns/formats/preferred_suffix'</span>,
 	if defined for that specific file format.</p>
 	
 	<hr />
 	<address >
-	  <span rel="dc:creator" >
-		<span about="http://www.ivan-herman.net/foaf#me" typeof="foaf:Person">
-			<span property="foaf:name" datatype=""><a href="http://www.w3.org/People/Ivan">Ivan Herman</a></span>,
-			<a rel="foaf:mbox" href="mailto:ivan@w3.org">ivan@w3.org</a>,
-			<a rel="foaf:workplaceHomepage" href="http://www.w3.org">W3C</a>,
-			<span rel="rdfs:seeAlso" resource="http://www.ivan-herman.net/foaf" property="foaf:title">Semantic Web Activity Lead</span>,
-		</span>
+	  <span property="dc:creator" resource="http://www.ivan-herman.net/foaf#me" typeof="foaf:Person">
+		<span property="foaf:name" datatype=""><a href="http://www.w3.org/People/Ivan">Ivan Herman</a></span>,
+		<a property="foaf:mbox" href="mailto:ivan@w3.org">ivan@w3.org</a>,
+		<a property="foaf:workplaceHomepage" href="http://www.w3.org">W3C</a>,
+		<span property="rdfs:seeAlso" resource="http://www.ivan-herman.net/foaf"><span property="foaf:title">Semantic Web Activity Lead</span></span>,
 	  </span>
-	  <span property="dc:date">2010-10-19</span>
-	  <br />
+	  created: <span property="dc:created">2010-10-19</span>, modified: <span property="dc:modified">2013-03-25</span>. 
 	  <span property="owl:versionInfo">$Date$</span>
-	  <span style="display:none" rel="owl:versionIRI" resource="http://www.w3.org/ns/formats/"/>
+	  <span style="display:none" property="owl:versionIRI" resource="formats:"/>
 	</address>
   </body>
 </html>
