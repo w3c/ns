@@ -6,27 +6,24 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.w3.org/ns/ma-ont> a owl:Ontology;
-    dc:date "2011-11-25"^^xsd:date;
-    rdfs:comment "Created by Tobias Buerger, Jean Pierre Evain and Pierre-Antoine Champin with the RDFS Taskforce within the W3C Media Annotation Working Group.";
-    owl:imports dc:;
-    owl:versionInfo "R35" .
+    dc:date "2013-03-20"^^xsd:date;
+    rdfs:comment "Created by Tobias Buerger, Jean Pierre Evain and Pierre-Antoine Champin with the RDFS Taskforce within the W3C Media Annotation Working Group.",
+        "THE CONTENT OF THIS MA-ONT.RDF AND DERIVED MA-ONT.TTL FILES PREVAIL OVER THE SPECIFICATION.";
+    owl:imports <http://dublincore.org/2008/01/14/dcelements.rdf>;
+    owl:versionInfo "R36" .
+
+#### Properties
 
 :AudioTrack a owl:Class;
     rdfs:comment "A specialisation of Track for Audio to provide a link to specific data properties such as sampleRate, etc. Specialisation is defined through object properties.";
-    rdfs:subClassOf :Track .
-
-:DataTrack a owl:Class;
-    rdfs:comment "Ancillary data track e.g. ¨captioning\"  in addition to video and audio tracks. Specialisation is made through the use of appropriate object properties.";
-    rdfs:subClassOf :Track .
+    rdfs:subClassOf :Track;
+    owl:disjointWith :DataTrack,
+        :VideoTrack .
 
 :Organisation a owl:Class;
     rdfs:comment "An organisation or moral agent.";
     rdfs:subClassOf :Agent;
     owl:disjointWith :Person .
-
-:VideoTrack a owl:Class;
-    rdfs:comment "A specialisation of Track for Video to provide a link to specific data properties such as frameRate, etc. Signing is another possible example of video track. Specialisation is defined through object properties.";
-    rdfs:subClassOf :Track .
 
 :alternativeTitle a owl:DatatypeProperty;
     rdfs:comment "Corresponds to 'title.title' in the Ontology for Media Resources with a 'title.type' meaning \"alternative\".";
@@ -41,8 +38,7 @@
 
 :collectionName a owl:DatatypeProperty;
     rdfs:comment "The name by which a collection (e.g. series) is known.";
-    rdfs:domain :Collection;
-    rdfs:subPropertyOf rdfs:label .
+    rdfs:domain :Collection .
 
 :copyright a owl:DatatypeProperty;
     rdfs:comment "Corresponds to 'copyright.copyright' in the Ontology for Media Resources.";
@@ -56,6 +52,10 @@
 :creationDate a owl:DatatypeProperty;
     rdfs:comment "Corresponds to 'date.date' in the Ontology for Media Resources with a 'date.type' meaning \"creationDate\".";
     rdfs:subPropertyOf :date .
+
+:date a owl:DatatypeProperty;
+    rdfs:comment "Corresponds to date.date in the ontology for Media Resources. Subproperties can be used to distinguish different values of 'date.type'. The recommended range is 'xsd:dateTime' (for compliance with OWL2-QL and OWL2-RL) but other time-related datatypes may be used (e.g. 'xsd:gYear', 'xsd:date'...).";
+    rdfs:domain :MediaResource .
 
 :depictsFictionalLocation a owl:ObjectProperty;
     rdfs:comment "A subproperty of 'hasRelatedLocation' used to specify where the action depicted in the media is supposed to take place, as opposed to the location where shooting actually took place (see 'createdIn').";
@@ -82,6 +82,10 @@
     rdfs:range :Person;
     rdfs:subPropertyOf :hasContributor;
     owl:inverseOf :playsIn .
+
+:fragmentName a owl:DatatypeProperty;
+    rdfs:comment "Corresponds to 'namedFragment.label' in the Ontology for Media Resources.";
+    rdfs:domain :MediaFragment .
 
 :frameHeight a owl:DatatypeProperty;
     rdfs:comment "Corresponds to 'frameSize.height' in the Ontology for Media Resources, measured in frameSizeUnit.";
@@ -110,8 +114,13 @@
     rdfs:comment "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"audio-description\".";
     rdfs:subPropertyOf :hasCaptioning .
 
+:hasCaptioning a owl:ObjectProperty;
+    rdfs:comment "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"captioning\". This property can for example point to a spatial fragment, a VideoTrack or a DataTrack. The language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track.";
+    rdfs:subPropertyOf :hasFragment;
+    owl:inverseOf :isCaptioningOf .
+
 :hasChapter a owl:ObjectProperty;
-    rdfs:comment "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"actor\".";
+    rdfs:comment "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"chapter\".";
     rdfs:subPropertyOf :hasFragment;
     owl:inverseOf :isChapterOf .
 
@@ -127,10 +136,22 @@
     rdfs:comment "Corresponds to 'compression' in the Ontology for Media Resources.";
     rdfs:domain :MediaResource .
 
+:hasContributor a owl:ObjectProperty;
+    rdfs:comment "Corresponds to 'contributor.contributor' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'contributor.role'.";
+    rdfs:domain :MediaResource;
+    rdfs:range :Agent;
+    owl:inverseOf :hasContributedTo .
+
 :hasCreator a owl:ObjectProperty;
     rdfs:comment "Corresponds to 'creator.creator' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'creator.role'. Note that this property is semantically a subproperty of 'hasContributor'.";
     rdfs:subPropertyOf :hasContributor;
     owl:inverseOf :hasCreated .
+
+:hasFragment a owl:ObjectProperty;
+    rdfs:comment "Corresponds to 'fragment' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'fragment.role'.";
+    rdfs:domain :MediaResource;
+    rdfs:range :MediaFragment;
+    owl:inverseOf :isFragmentOf .
 
 :hasFormat a owl:ObjectProperty;
     rdfs:comment "Corresponds to 'format' in the Ontology for Media Resources.";
@@ -161,6 +182,10 @@
     rdfs:comment "Corresponds to 'policy' in the Ontology for Media Resources with a  'policy.type' meaning \"permissions\".";
     rdfs:subPropertyOf :hasPolicy .
 
+:hasPolicy a owl:ObjectProperty;
+    rdfs:comment "Corresponds to 'policy' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'policy.type'.";
+    rdfs:domain :MediaResource .
+
 :hasPublisher a owl:ObjectProperty;
     rdfs:comment "Corresponds to 'publisher' in the Ontology for Media Resources.";
     rdfs:subPropertyOf :hasContributor;
@@ -170,7 +195,7 @@
     rdfs:comment "Corresponds to 'rating' in the Ontology for Media Resources.";
     rdfs:domain :MediaResource;
     rdfs:range :Rating;
-    owl:inverseOf :IsRatingOf .
+    owl:inverseOf :isRatingOf .
 
 :hasRatingSystem a owl:ObjectProperty;
     rdfs:comment "Corresponds to 'rating.type' in the Ontology for Media Resources.";
@@ -181,6 +206,17 @@
     rdfs:range :Image;
     rdfs:subPropertyOf :hasRelatedResource;
     owl:inverseOf :isImageRelatedTo .
+
+:hasRelatedLocation a owl:ObjectProperty;
+    rdfs:comment "Corresponds to 'location' in the Ontology for Media Resources. Subproperties are provided to specify, when possible, the relation between the media resource and the location.";
+    rdfs:domain :MediaResource;
+    rdfs:range :Location;
+    owl:inverseOf :isLocationRelatedTo .
+
+:hasRelatedResource a owl:ObjectProperty;
+    rdfs:comment "Corresponds to 'relation' and in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'relation.type'.";
+    rdfs:domain :MediaResource;
+    owl:inverseOf :isRelatedTo .
 
 :hasSigning a owl:ObjectProperty;
     rdfs:comment "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"signing\". This property can for example point to a spatial fragment or a VideoTrack. The sign language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track.";
@@ -287,16 +323,16 @@
     rdfs:domain :MediaResource;
     rdfs:range xsd:decimal .
 
+:title a owl:DatatypeProperty;
+    rdfs:comment "Corresponds to 'title.title' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'title.type'.";
+    rdfs:domain :MediaResource .
+
 :trackName a owl:DatatypeProperty;
     rdfs:comment "Corresponds to 'fragment.name' in the Ontology for Media Resources, for Track fragments.";
     rdfs:domain :Track;
     rdfs:subPropertyOf :fragmentName .
 
-:IsRatingOf a owl:ObjectProperty .
-
-:fragmentName a owl:DatatypeProperty;
-    rdfs:comment "Corresponds to 'namedFragment.label' in the Ontology for Media Resources.";
-    rdfs:domain :MediaFragment .
+#### Inverse properties
 
 :hasContributedTo a owl:ObjectProperty .
 
@@ -318,11 +354,14 @@
 
 :isFragmentOf a owl:ObjectProperty .
 
-:isImageRelatedTo a owl:ObjectProperty .
+:isImageRelatedTo a owl:ObjectProperty;
+    rdfs:subPropertyOf :isRelatedTo .
 
 :isLocationRelatedTo a owl:ObjectProperty .
 
 :isNamedFragmentOf a owl:ObjectProperty .
+
+:isRatingOf a owl:ObjectProperty .
 
 :isRelatedTo a owl:ObjectProperty .
 
@@ -338,58 +377,7 @@
 
 :provides a owl:ObjectProperty .
 
-:Person a owl:Class;
-    rdfs:comment "A physical person.";
-    rdfs:subClassOf :Agent .
-
-:hasCaptioning a owl:ObjectProperty;
-    rdfs:comment "Corresponds to 'fragment' in the Ontology for Media Resources with a 'fragment.role' meaning \"captioning\". This property can for example point to a spatial fragment, a VideoTrack or a DataTrack. The language of the captioning track can be expressed by attaching a 'hasLanguage' property to the specific track.";
-    rdfs:subPropertyOf :hasFragment;
-    owl:inverseOf :isCaptioningOf .
-
-:hasPolicy a owl:ObjectProperty;
-    rdfs:comment "Corresponds to 'policy' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'policy.type'.";
-    rdfs:domain :MediaResource .
-
-:hasRelatedLocation a owl:ObjectProperty;
-    rdfs:comment "Corresponds to 'location' in the Ontology for Media Resources. Subproperties are provided to specify, when possible, the relation between the media resource and the location.";
-    rdfs:domain :MediaResource;
-    rdfs:range :Location;
-    owl:inverseOf :isLocationRelatedTo .
-
-:hasRelatedResource a owl:ObjectProperty;
-    rdfs:comment "Corresponds to 'relation' and in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'relation.type'.";
-    rdfs:domain :MediaResource;
-    owl:inverseOf :isRelatedTo .
-
-:title a owl:DatatypeProperty;
-    rdfs:comment "Corresponds to 'title.title' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'title.type'.";
-    rdfs:domain :MediaResource .
-
-:Collection a owl:Class;
-    rdfs:comment "Any group of media resource e.g. a series.";
-    owl:disjointWith :Location,
-        :MediaResource,
-        :Rating,
-        :TargetAudience .
-
-:Image a owl:Class;
-    rdfs:comment "A still image / thumbnail / key frame related to the media resource or being the media resource itself.";
-    rdfs:subClassOf :MediaResource .
-
-:MediaFragment a owl:Class;
-    rdfs:comment "A media fragment (spatial, temporal, track...) composing a media resource. In other ontologies fragment is sometimes referred to as a 'part' or 'segment'.";
-    rdfs:subClassOf :MediaResource .
-
-:hasContributor a owl:ObjectProperty;
-    rdfs:comment "Corresponds to 'contributor.contributor' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'contributor.role'.";
-    rdfs:domain :MediaResource;
-    rdfs:range :Agent;
-    owl:inverseOf :hasContributedTo .
-
-:date a owl:DatatypeProperty;
-    rdfs:comment "Corresponds to date.date in the ontology for Media Resources. Subproperties can be used to distinguish different values of 'date.type'. The recommended range is 'xsd:dateTime' (for compliance with OWL2-QL and OWL2-RL) but other time-related datatypes may be used (e.g. 'xsd:gYear', 'xsd:date'...).";
-    rdfs:domain :MediaResource .
+#### Classes
 
 :Agent a owl:Class;
     rdfs:comment "A person or organisation contributing to the media resource.";
@@ -399,15 +387,21 @@
         :Rating,
         :TargetAudience .
 
-:Track a owl:Class;
-    rdfs:comment "A specialisation of MediaFragment for audiovisual content.";
-    rdfs:subClassOf :MediaFragment .
+:Collection a owl:Class;
+    rdfs:comment "Any group of media resource e.g. a series.";
+    owl:disjointWith :Location,
+        :MediaResource,
+        :Rating,
+        :TargetAudience .
 
-:hasFragment a owl:ObjectProperty;
-    rdfs:comment "Corresponds to 'fragment' in the Ontology for Media Resources. Subproperties can be used to distinguish different values of 'fragment.role'.";
-    rdfs:domain :MediaResource;
-    rdfs:range :MediaFragment;
-    owl:inverseOf :isFragmentOf .
+:DataTrack a owl:Class;
+    rdfs:comment "Ancillary data track e.g. captioning  in addition to video and audio tracks. Specialisation is made through the use of appropriate object properties.";
+    rdfs:subClassOf :Track;
+    owl:disjointWith :VideoTrack .
+
+:Image a owl:Class;
+    rdfs:comment "A still image / thumbnail / key frame related to the media resource or being the media resource itself.";
+    rdfs:subClassOf :MediaResource .
 
 :Location a owl:Class;
     rdfs:comment "A location related to the media resource, e.g. depicted in the resource (possibly fictional) or where the resource was created (shooting location), etc.";
@@ -415,15 +409,37 @@
         :Rating,
         :TargetAudience .
 
-:TargetAudience a owl:Class;
-    rdfs:comment "Information about The target audience (target region, target audience category but also parental guidance recommendation) for which a media resource is intended." .
-
-:Rating a owl:Class;
-    rdfs:comment "Information about the rating given to a media resource.";
-    owl:disjointWith :TargetAudience .
+:MediaFragment a owl:Class;
+    rdfs:comment "A media fragment (spatial, temporal, track...) composing a media resource. In other ontologies fragment is sometimes referred to as a 'part' or 'segment'.";
+    rdfs:subClassOf :MediaResource .
 
 :MediaResource a owl:Class;
     rdfs:comment "An image or an audiovisual media resource, which can be composed of one or more fragment / track.";
     owl:disjointWith :Rating,
         :TargetAudience .
+
+:Person a owl:Class;
+    rdfs:comment "A physical person.";
+    rdfs:subClassOf :Agent .
+
+:Rating a owl:Class;
+    rdfs:comment "Information about the rating given to a media resource.";
+    owl:disjointWith :TargetAudience .
+
+:TargetAudience a owl:Class;
+    rdfs:comment "Information about The target audience (target region, target audience category but also parental guidance recommendation) for which a media resource is intended." .
+
+:Track a owl:Class;
+    rdfs:comment "A specialisation of MediaFragment for audiovisual content.";
+    rdfs:subClassOf :MediaFragment .
+
+:VideoTrack a owl:Class;
+    rdfs:comment "A specialisation of Track for Video to provide a link to specific data properties such as frameRate, etc. Signing is another possible example of video track. Specialisation is defined through object properties.";
+    rdfs:subClassOf :Track .
+
+####
+
+owl:Thing a owl:Class .
+
+dc:date a owl:AnnotationProperty .
 
