@@ -7,7 +7,8 @@
 formats:Format a rdfs:Class,
         owl:Class ;
     dcterms:description "a unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification." ;
-    rdfs:seeAlso formats:N-Triples,
+    rdfs:seeAlso formats:JSON-LD,
+        formats:N-Triples,
         formats:N3,
         formats:OWL_Functional,
         formats:OWL_Manchester,
@@ -42,7 +43,7 @@ formats: a owl:Ontology ;
     dcterms:created "2010-10-19" ;
     dcterms:creator <http://www.ivan-herman.net/foaf#me> ;
     dcterms:description "Unique URIs for File Formats" ;
-    dcterms:modified "2013-03-25" ;
+    dcterms:modified "2013-03-27" ;
     owl:versionIRI formats: ;
     owl:versionInfo "$Date$" .
 
