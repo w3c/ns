@@ -9,13 +9,30 @@
 @prefix  arg: <http://www.w3.org/ns/pim/arg>.
 @prefix  : <http://www.w3.org/ns/pim/arg>.
 
-
+<> a owl:Ontology;
+    dc:title "A simple Argumentation ontology";
+    s:comment """This ontology may be used
+    to capture the relationship between different 
+""".
 
 :Position a s:Class; s:label "position".
+:Conjunction a s:Class; s:subClassOf :Position.
+:Resolution a s:Class; s:subClassOf :Position.
 
 :support a rdf:Property; s:label "support";
+    s:domain :Position;
+    s:range :Position;
     owl:inverse [s:label "supports"].
 
 :opposition a rdf:Property; s:label "opposition";
+    s:domain :Position;
+    s:range :Position;
     owl:inverse [s:label "opposes"].
+    
 
+:requires a rdf:Property ; s:label "requires";
+    s:domain :Conjunction;
+    s:range :Position.
+
+
+#ends

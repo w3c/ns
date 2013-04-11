@@ -2,23 +2,49 @@
 
 
 <rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="">
+        <dc:title>A simple Argumentation ontology</dc:title>
+        <comment>This ontology may be used
+    to capture the relationship between different 
+</comment>
+    </owl:Ontology>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/argConjunction">
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
+    </Class>
 
     <Class rdf:about="http://www.w3.org/ns/pim/argPosition">
         <label>position</label>
     </Class>
 
+    <Class rdf:about="http://www.w3.org/ns/pim/argResolution">
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
+    </Class>
+
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/argopposition">
+        <domain rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
         <label>opposition</label>
+        <range rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
         <owl:inverse rdf:parseType="Resource">
             <label>opposes</label>
         </owl:inverse>
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/argrequires">
+        <domain rdf:resource="http://www.w3.org/ns/pim/argConjunction"/>
+        <label>requires</label>
+        <range rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/argsupport">
+        <domain rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
         <label>support</label>
+        <range rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
         <owl:inverse rdf:parseType="Resource">
             <label>supports</label>
         </owl:inverse>
