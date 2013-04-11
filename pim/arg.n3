@@ -1,0 +1,21 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix dc:	<http://purl.org/dc/elements/1.1/>.
+@prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
+
+@prefix  arg: <http://www.w3.org/ns/pim/arg>.
+@prefix  : <http://www.w3.org/ns/pim/arg>.
+
+
+
+:Position a s:Class; s:label "position".
+
+:support a rdf:Property; s:label "support";
+    owl:inverse [s:label "supports"].
+
+:opposition a rdf:Property; s:label "opposition";
+    owl:inverse [s:label "opposes"].
+

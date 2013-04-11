@@ -1,0 +1,26 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+    <Class rdf:about="http://www.w3.org/ns/pim/argPosition">
+        <label>position</label>
+    </Class>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/argopposition">
+        <label>opposition</label>
+        <owl:inverse rdf:parseType="Resource">
+            <label>opposes</label>
+        </owl:inverse>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/argsupport">
+        <label>support</label>
+        <owl:inverse rdf:parseType="Resource">
+            <label>supports</label>
+        </owl:inverse>
+    </rdf:Property>
+</rdf:RDF>
