@@ -1,0 +1,103 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:ui="http://www.w3.org/ns/ui#">
+
+    <rdf:Description rdf:about="">
+        <dc:title>Workspace Ontology</dc:title>
+        <comment>This ontology is for use in describing 
+Workspaces.  Workspaces are place where data is stored and asscoiated prolices of privacy.
+A given application typically stores information in several different
+workspaces, some being user private, some shared, and some public.
+it is crucial that the user has easy control over the destiny of information.
+
+Goals then are that the user can
+
+      - create workspaces
+      - easily understand which workspace data is going into
+      - understand what the implications of that are
+      - (later) set ACLS on them
+      - publish apropriate use policies for them
+
+</comment>
+        <doc:version>$Id$</doc:version>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#ConfigurationFile">
+        <subClassOf rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#MasterWorkspace">
+        <comment>This is a workspace for storing the 
+    information about the other workspaces.
+    As a user, you normally don't have to worry about it.</comment>
+        <label xml:lang="en">Master Workspace</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Private"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#Private">
+        <label>Private workspace</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#Public">
+        <label>Public workspace</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
+    </rdf:Description>
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#Shared">
+        <label>Shared workspace</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
+    </rdf:Description>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/space#Workspace">
+        <comment>Workspaces are place where data is stored, and asscoiated polices of privacy.
+A given application typically stores information in several different
+workspaces, some being user private, some shared, and some public.
+</comment>
+        <label>workspace</label>
+        <owl:disjointUnionOf rdf:parseType="Resource">
+            <rdf:first rdf:resource="http://www.w3.org/ns/pim/space#Private"/>
+            <rdf:rest rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.w3.org/ns/pim/space#Shared"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.w3.org/ns/pim/space#Public"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:rest>
+            </rdf:rest>
+        </owl:disjointUnionOf>
+    </Class>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/space#masterWorkspace">
+        <domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <label xml:lang="en">master workspace</label>
+        <range rdf:resource="http://www.w3.org/ns/pim/space#MasterWorkspace"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/space#preferencesFile">
+        <domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <label>preferences file</label>
+        <range rdf:resource="http://www.w3.org/ns/pim/space#ConfigurationFile"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/space#uriPrefix">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment>URIs which start with this string are in this woprkspace.
+This may be used for constructing URIs for new storage resources.
+</comment>
+        <label>URI prefix</label>
+        <ui:prompt>Give the first part of the URis in this workspace</ui:prompt>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/space#workspace">
+        <domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+        <label xml:lang="en">workspace</label>
+        <range rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
+    </rdf:Property>
+</rdf:RDF>
