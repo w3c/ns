@@ -53,7 +53,8 @@ location a rdf:Property; s:label "location".
 funder a rdf:Property;
     s:label "funder";
     s:comment """Who pays for the this? An organization or individual.
-     Could apply to a trip (or a doap:Project, or a cal:Event, etc)""";
+     Could apply to a trip (or a doap:Project, or a cal:Event, etc).
+     There may be more than one funder.""";
     s:range foaf:Agent.
 
 trip a rdf:Property;

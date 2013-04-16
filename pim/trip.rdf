@@ -69,7 +69,8 @@ at ones home base, or a set of photos taken at home etc.
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#funder">
         <s:comment>Who pays for the this? An organization or individual.
-     Could apply to a trip (or a doap:Project, or a cal:Event, etc)</s:comment>
+     Could apply to a trip (or a doap:Project, or a cal:Event, etc).
+     There may be more than one funder.</s:comment>
         <s:label>funder</s:label>
         <s:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     </rdf:Property>
