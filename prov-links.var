@@ -1,0 +1,7 @@
+URI: prov-links
+
+URI: prov-links.ttl
+Content-Type: text/turtle
+
+URI: prov-links.owl
+Content-Type: application/rdf+xml; qs=0.4
