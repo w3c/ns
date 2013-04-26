@@ -1,105 +1,581 @@
 <?xml version="1.0"?>
 
 
-<!DOCTYPE rdf:RDF [
-    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+<!DOCTYPE Ontology [
     <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
     <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
     <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
 ]>
 
 
-<rdf:RDF xmlns="http://www.w3.org/ns/prov#"
-     xml:base="http://www.w3.org/ns/prov"
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/ns/prov-aq#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-    <owl:Ontology rdf:about="http://www.w3.org/ns/prov#">
-        <rdfs:label xml:lang="en">PROV Ontology</rdfs:label>
-        <rdfs:comment rdf:datatype="&xsd;string">0.2</rdfs:comment>
-        <rdfs:comment xml:lang="en">This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     ontologyIRI="http://www.w3.org/ns/prov-aq#"
+     versionIRI="http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/">
+    <Prefix name="" IRI="http://www.w3.org/ns/prov#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This document is published by the Provenance Working Group (http://www.w3.org/2011/prov/wiki/Main_Page). 
 
-If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome.</rdfs:comment>
-        <owl:versionIRI rdf:resource="http://www.w3.org/TR/2012/WD-prov-o-20120724/"/>
-        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov#"/>
-        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov-o/"/>
-    </owl:Ontology>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Annotation properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#unqualifiedForm">
-        <rdfs:comment xml:lang="en">Classes and properties used to qualify relationships are annotated with prov:unqualifiedForm to indicate the property used to assert an unqualified provenance relation.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&rdfs;seeAlso"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#aq">
-        <rdfs:subPropertyOf rdf:resource="&rdfs;seeAlso"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#sharesDefinitionWith">
-        <rdfs:subPropertyOf rdf:resource="&rdfs;seeAlso"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#definition">
-        <rdfs:comment xml:lang="en">A definition quoted from PROV-DM or PROV-CONSTRAINTS that describes the concept expressed with this OWL term.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#editorialNote">
-        <rdfs:comment xml:lang="en">A note by the OWL development team about how this term expresses the PROV-DM concept, or how it should be used in context of semantic web or linked data.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&rdfs;label">
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#inverse">
-        <rdfs:comment xml:lang="en">PROV-O does not define all property inverses. The directionalities defined in PROV-O should be given preference over those not defined. However, if users wish to name the inverse of a PROV-O property, the local name given by prov:inverse should be used.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/prov-o/#names-of-inverse-properties"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&rdfs;comment">
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#constraints">
-        <rdfs:comment xml:lang="en">A reference to the principal section of the PROV-CONSTRAINTS document that describes this concept.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&rdfs;seeAlso"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&rdfs;seeAlso">
-        <rdfs:comment xml:lang="en"></rdfs:comment>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#category">
-        <rdfs:comment xml:lang="en">Classify prov-o terms into three categories, including &#39;starting-point&#39;, &#39;qualifed&#39;, and &#39;extended&#39;. This classification is used by the prov-o html document to gently introduce prov-o terms to its users. </rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#dm">
-        <rdfs:comment xml:lang="en">A reference to the principal section of the PROV-DM document that describes this concept.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&rdfs;seeAlso"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="&rdfs;isDefinedBy"/>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#editorsDefinition">
-        <rdfs:comment xml:lang="en">When the prov-o term does not have a definition drawn from prov-dm, and the prov-o editor provides one.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#definition"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#component">
-        <rdfs:comment xml:lang="en">Classify prov-o terms into six components according to prov-dm, including &#39;agents-responsibility&#39;, &#39;alternate&#39;, &#39;annotations&#39;, &#39;collections&#39;, &#39;derivations&#39;, and &#39;entities-activities&#39;. This classification is used so that readers of prov-o specification can find its correspondence with the prov-dm specification.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#qualifiedForm">
-        <rdfs:comment xml:lang="en">This annotation property links a subproperty of prov:wasInfluencedBy with the subclass of prov:Influence and the qualifying property that are used to qualify it. 
+If you wish to make comments regarding this document, please send them to public-prov-comments@w3.org (subscribe public-prov-comments-request@w3.org, archives http://lists.w3.org/Archives/Public/public-prov-comments/). All feedback is welcome.</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PROV Access and Query Ontology</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <Literal datatypeIRI="&xsd;string">0.2</Literal>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.w3.org/TR/prov-aq/</IRI>
+    </Annotation>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <IRI>http://www.w3.org/TR/prov#</IRI>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":DirectQueryService"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ServiceDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":SoftwareAgent"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":describesService"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":hadUsage"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":has_anchor"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":has_provenance"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":has_query_service"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":pingback"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":specializationOf"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":provenanceUriTemplate"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="owl:versionInfo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":aq"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":component"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":constraints"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":definition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":dm"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":editorialNote"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":editorsDefinition"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":inverse"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":n"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":qualifiedForm"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":sharesDefinitionWith"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":todo"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI=":unqualifiedForm"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI=":DirectQueryService"/>
+        <Class abbreviatedIRI=":SoftwareAgent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ServiceDescription"/>
+        <Class abbreviatedIRI=":SoftwareAgent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":SoftwareAgent"/>
+        <Class abbreviatedIRI="owl:Thing"/>
+    </SubClassOf>
+    <SubObjectPropertyOf>
+        <ObjectProperty abbreviatedIRI=":specializationOf"/>
+        <ObjectProperty abbreviatedIRI="owl:topObjectProperty"/>
+    </SubObjectPropertyOf>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>rdfs:comment</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>rdfs:comment</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>rdfs:label</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>rdfs:label</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>rdfs:seeAlso</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral"></Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:DirectQueryService</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery in linked data environments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:DirectQueryService</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:DirectQueryService</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ProvenanceService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":aq"/>
+        <AbbreviatedIRI>:DirectQueryService</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#provenance-query-service-discovery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+        <AbbreviatedIRI>:DirectQueryService</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">access-and-query</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:ServiceDescription</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery in linked data environments.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:ServiceDescription</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ServiceDescription</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">ServiceDescription</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":aq"/>
+        <AbbreviatedIRI>:ServiceDescription</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#provenance-query-service-discovery</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+        <AbbreviatedIRI>:ServiceDescription</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">access-and-query</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:SoftwareAgent</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:SoftwareAgent</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">SoftwareAgent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+        <AbbreviatedIRI>:SoftwareAgent</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">expanded</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":component"/>
+        <AbbreviatedIRI>:SoftwareAgent</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">agents-responsibility</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":definition"/>
+        <AbbreviatedIRI>:SoftwareAgent</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A software agent is running software.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":dm"/>
+        <AbbreviatedIRI>:SoftwareAgent</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-dm.html#term-agent</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":n"/>
+        <AbbreviatedIRI>:SoftwareAgent</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-n.html#expression-types</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:aq</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:category</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Classify prov-o terms into three categories, including &apos;starting-point&apos;, &apos;qualifed&apos;, and &apos;extended&apos;. This classification is used by the prov-o html document to gently introduce prov-o terms to its users. </Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:category</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:component</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Classify prov-o terms into six components according to prov-dm, including &apos;agents-responsibility&apos;, &apos;alternate&apos;, &apos;annotations&apos;, &apos;collections&apos;, &apos;derivations&apos;, and &apos;entities-activities&apos;. This classification is used so that readers of prov-o specification can find its correspondence with the prov-dm specification.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:component</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:constraints</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A reference to the principal section of the PROV-CONSTRAINTS document that describes this concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:constraints</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:definition</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A definition quoted from PROV-DM or PROV-CONSTRAINTS that describes the concept expressed with this OWL term.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:definition</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:describesService</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">relates a generic provenance query service resource (type prov:ServiceDescription) to a specific query service description (e.g. a prov:DirectQueryService or a sd:Service).</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:describesService</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:describesService</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">describesService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":aq"/>
+        <AbbreviatedIRI>:describesService</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/rovenance-query-service-description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+        <AbbreviatedIRI>:describesService</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">access-and-query</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":inverse"/>
+        <AbbreviatedIRI>:describesService</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">serviceDescribedBy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:dm</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A reference to the principal section of the PROV-DM document that describes this concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:dm</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:editorialNote</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A note by the OWL development team about how this term expresses the PROV-DM concept, or how it should be used in context of semantic web or linked data.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:editorialNote</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:editorsDefinition</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">When the prov-o term does not have a definition drawn from prov-dm, and the prov-o editor provides one.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:editorsDefinition</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:hadUsage</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">The _optional_ Usage involved in an Entity&apos;s Derivation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:hadUsage</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:hadUsage</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hadUsage</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+        <AbbreviatedIRI>:hadUsage</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">qualified</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":component"/>
+        <AbbreviatedIRI>:hadUsage</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">derivations</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":inverse"/>
+        <AbbreviatedIRI>:hadUsage</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">wasUsedInDerivation</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":sharesDefinitionWith"/>
+        <AbbreviatedIRI>:hadUsage</AbbreviatedIRI>
+        <AbbreviatedIRI>:Usage</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:has_anchor</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Indicates anchor URI for a potentially dynamic resource instance.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:has_anchor</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:has_anchor</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">has_anchor</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":aq"/>
+        <AbbreviatedIRI>:has_anchor</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#resource-represented-as-html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+        <AbbreviatedIRI>:has_anchor</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">access-and-query</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":inverse"/>
+        <AbbreviatedIRI>:has_anchor</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">anchorOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:has_provenance</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Indicates a provenance-URI for a resource; the resource identified by this property presents a provenance record about its subject or anchor resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:has_provenance</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:has_provenance</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">has_provenance</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":aq"/>
+        <AbbreviatedIRI>:has_provenance</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#resource-represented-as-html</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+        <AbbreviatedIRI>:has_provenance</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">access-and-query</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":inverse"/>
+        <AbbreviatedIRI>:has_provenance</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">provenanceOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:has_query_service</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Indicates a provenance query service that can access provenance related to its subject or anchor resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:has_query_service</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:has_query_service</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">hasProvenanceService</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":aq"/>
+        <AbbreviatedIRI>:has_query_service</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+        <AbbreviatedIRI>:has_query_service</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">access-and-query</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":inverse"/>
+        <AbbreviatedIRI>:has_query_service</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">provenanceQueryServiceOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:inverse</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PROV-O does not define all property inverses. The directionalities defined in PROV-O should be given preference over those not defined. However, if users wish to name the inverse of a PROV-O property, the local name given by prov:inverse should be used.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:inverse</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <AbbreviatedIRI>:inverse</AbbreviatedIRI>
+        <IRI>http://www.w3.org/TR/prov-o/#names-of-inverse-properties</IRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:n</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">A reference to the principal section of the PROV-M document that describes this concept.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:n</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:pingback</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relates a resource to a provenance pingback service that may receive additional provenance links about the resource.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:pingback</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:pingback</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">provenance pingback</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":aq"/>
+        <AbbreviatedIRI>:pingback</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#provenance-pingback</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+        <AbbreviatedIRI>:pingback</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">access-and-query</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:provenanceUriTemplate</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Relates a provenance service to a URI template string for constructing provenance-URIs.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:provenanceUriTemplate</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:provenanceUriTemplate</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">provenanceUriTemplate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":aq"/>
+        <AbbreviatedIRI>:provenanceUriTemplate</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+        <AbbreviatedIRI>:provenanceUriTemplate</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">access-and-query</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:qualifiedForm</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">This annotation property links a subproperty of prov:wasInfluencedBy with the subclass of prov:Influence and the qualifying property that are used to qualify it. 
 
 Example annotation:
 
@@ -117,175 +593,113 @@ can be qualified by adding:
        prov:activity :activity1;
        :customValue 1337 .
 
-Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1) is mirrored as the value of the prov:activity (or prov:entity, or prov:agent) property on the influence class.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&rdfs;seeAlso"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#todo"/>
-    <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#n">
-        <rdfs:comment xml:lang="en">A reference to the principal section of the PROV-M document that describes this concept.</rdfs:comment>
-        <rdfs:subPropertyOf rdf:resource="&rdfs;seeAlso"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:AnnotationProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Object Properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
-
-    <owl:ObjectProperty rdf:about="&owl;topObjectProperty"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#hadUsage -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#hadUsage">
-        <rdfs:label>hadUsage</rdfs:label>
-        <category>qualified</category>
-        <rdfs:comment xml:lang="en">The _optional_ Usage involved in an Entity&#39;s Derivation.</rdfs:comment>
-        <inverse>wasUsedInDerivation</inverse>
-        <component>derivations</component>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-        <sharesDefinitionWith rdf:resource="http://www.w3.org/ns/prov#Usage"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#hasAnchor -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#hasAnchor">
-        <rdfs:label>hadAnchor</rdfs:label>
-        <aq rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/tip/paq/prov-aq.html#todo</aq>
-        <inverse>anchorOf</inverse>
-        <rdfs:comment xml:lang="en">Indicates anchor URI for a potentially dynamic resource instance.</rdfs:comment>
-        <category>access-and-query</category>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#hasProvenance -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#hasProvenance">
-        <rdfs:label>hasProvenance</rdfs:label>
-        <aq rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/tip/paq/prov-aq.html#todo</aq>
-        <inverse>provenanceOf</inverse>
-        <rdfs:comment xml:lang="en">Relates a resource to its provenance.</rdfs:comment>
-        <category>access-and-query</category>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#hasProvenanceService -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#hasProvenanceService">
-        <rdfs:label>hasProvenanceService</rdfs:label>
-        <aq rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/tip/paq/prov-aq.html#todo</aq>
-        <rdfs:comment xml:lang="en">Relates a resource to a provenance service.</rdfs:comment>
-        <category>access-and-query</category>
-        <inverse>provenanceAnchorOf</inverse>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#specializationOf -->
-
-    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#specializationOf">
-        <rdfs:label>specializationOf</rdfs:label>
-        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2012/WD-prov-dm-20120724/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2012/WD-prov-dm-20120724/prov-dm.html#term-specialization</dm>
-        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2012/WD-prov-dm-20120724/prov-n.html#expression-specialization</n>
-        <component>alternate</component>
-        <category>expanded</category>
-        <inverse>generalizationOf</inverse>
-        <definition xml:lang="en">An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity.</definition>
-        <rdfs:subPropertyOf rdf:resource="&owl;topObjectProperty"/>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-        <rdfs:seeAlso rdf:resource="http://www.w3.org/ns/prov#alternateOf"/>
-    </owl:ObjectProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Data properties
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/ns/prov#provenanceUriTemplate -->
-
-    <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#provenanceUriTemplate">
-        <rdfs:label>provenanceUriTemplate</rdfs:label>
-        <aq rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/tip/paq/prov-aq.html#todo</aq>
-        <rdfs:comment xml:lang="en">Relates a provenance service to a URI template string for constructing provenance-URIs.</rdfs:comment>
-        <category>access-and-query</category>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:DatatypeProperty>
-    
-
-
-    <!-- 
-    ///////////////////////////////////////////////////////////////////////////////////////
-    //
-    // Classes
-    //
-    ///////////////////////////////////////////////////////////////////////////////////////
-     -->
-
-    
-
-
-    <!-- http://www.w3.org/2002/07/owl#Thing -->
-
-    <owl:Class rdf:about="&owl;Thing"/>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#ProvenanceService -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#ProvenanceService">
-        <rdfs:label>ProvenanceService</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#SoftwareAgent"/>
-        <aq rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/tip/paq/prov-aq.html#todo</aq>
-        <category>access-and-query</category>
-        <rdfs:comment>Class for a service described by a provenance service description.</rdfs:comment>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:Class>
-    
-
-
-    <!-- http://www.w3.org/ns/prov#SoftwareAgent -->
-
-    <owl:Class rdf:about="http://www.w3.org/ns/prov#SoftwareAgent">
-        <rdfs:label>SoftwareAgent</rdfs:label>
-        <rdfs:subClassOf rdf:resource="&owl;Thing"/>
-        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2012/WD-prov-dm-20120724/prov-dm.html#term-agent</dm>
-        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2012/WD-prov-dm-20120724/prov-n.html#expression-types</n>
-        <component>agents-responsibility</component>
-        <definition xml:lang="en">A software agent is running software.</definition>
-        <category>expanded</category>
-        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov#"/>
-    </owl:Class>
-</rdf:RDF>
+Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1) is mirrored as the value of the prov:activity (or prov:entity, or prov:agent) property on the influence class.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:qualifiedForm</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:sharesDefinitionWith</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:specializationOf</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:specializationOf</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">specializationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+        <AbbreviatedIRI>:specializationOf</AbbreviatedIRI>
+        <AbbreviatedIRI>:alternateOf</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":category"/>
+        <AbbreviatedIRI>:specializationOf</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">expanded</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":component"/>
+        <AbbreviatedIRI>:specializationOf</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">alternate</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":constraints"/>
+        <AbbreviatedIRI>:specializationOf</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-constraints.html#prov-dm-constraints-fig</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":definition"/>
+        <AbbreviatedIRI>:specializationOf</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An entity that is a specialization of another shares all aspects of the latter, and additionally presents more specific aspects of the same thing as the latter. In particular, the lifetime of the entity being specialized contains that of any specialization. Examples of aspects include a time period, an abstraction, and a context associated with the entity.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":dm"/>
+        <AbbreviatedIRI>:specializationOf</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-dm.html#term-specialization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":inverse"/>
+        <AbbreviatedIRI>:specializationOf</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">generalizationOf</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI=":n"/>
+        <AbbreviatedIRI>:specializationOf</AbbreviatedIRI>
+        <Literal datatypeIRI="&xsd;anyURI">http://www.w3.org/TR/2012/WD-prov-dm-20120703/prov-n.html#expression-specialization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <AbbreviatedIRI>:unqualifiedForm</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Classes and properties used to qualify relationships are annotated with prov:unqualifiedForm to indicate the property used to assert an unqualified provenance relation.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:isDefinedBy"/>
+        <AbbreviatedIRI>:unqualifiedForm</AbbreviatedIRI>
+        <AbbreviatedIRI>:</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI=":aq"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI=":constraints"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI=":dm"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI=":editorsDefinition"/>
+        <AnnotationProperty abbreviatedIRI=":definition"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI=":n"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI=":qualifiedForm"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI=":sharesDefinitionWith"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </SubAnnotationPropertyOf>
+    <SubAnnotationPropertyOf>
+        <AnnotationProperty abbreviatedIRI=":unqualifiedForm"/>
+        <AnnotationProperty abbreviatedIRI="rdfs:seeAlso"/>
+    </SubAnnotationPropertyOf>
+</Ontology>
 
 
 
-<!-- Generated by the OWL API (version 3.1.0.20069) http://owlapi.sourceforge.net -->
+<!-- Generated by the OWL API (version 3.2.5.1928) http://owlapi.sourceforge.net -->
 
