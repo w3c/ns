@@ -261,8 +261,6 @@
 
   <!-- Component 4 -->
 
-  <!-- Is there a way to have this still extend prov:Entity? -->
-
   <xs:complexType name="Bundle">
     <xs:complexContent>
       <xs:extension base="prov:Entity">
@@ -270,11 +268,40 @@
     </xs:complexContent>
   </xs:complexType>
 
+  <!-- bundle container and allowable PROV elements -->
+
   <xs:complexType name="BundleConstructor">
-	<xs:sequence maxOccurs="unbounded">
-		<xs:group ref="prov:documentElements"/>
-		<xs:any namespace="##other" processContents="lax" minOccurs="0"/>
-	</xs:sequence>
+	<xs:choice minOccurs="0" maxOccurs="unbounded">
+	  <xs:element ref="prov:entity"/>
+      <xs:element ref="prov:activity"/>
+      <xs:element ref="prov:wasGeneratedBy"/>
+      <xs:element ref="prov:used"/>
+      <xs:element ref="prov:wasInformedBy"/>
+      <xs:element ref="prov:wasStartedBy"/>
+      <xs:element ref="prov:wasEndedBy"/>
+      <xs:element ref="prov:wasInvalidatedBy"/>
+      <xs:element ref="prov:wasDerivedFrom"/>
+      <xs:element ref="prov:wasRevisionOf"/>
+      <xs:element ref="prov:wasQuotedFrom"/>
+      <xs:element ref="prov:hadPrimarySource"/>
+      <xs:element ref="prov:agent"/>
+      <xs:element ref="prov:person"/>
+      <xs:element ref="prov:organization"/>
+      <xs:element ref="prov:softwareAgent"/>
+      <xs:element ref="prov:wasAttributedTo"/>
+      <xs:element ref="prov:wasAssociatedWith"/>
+      <xs:element ref="prov:actedOnBehalfOf"/>
+      <xs:element ref="prov:wasInfluencedBy"/>
+      <xs:element ref="prov:bundle"/>
+      <xs:element ref="prov:specializationOf"/>
+      <xs:element ref="prov:alternateOf"/>
+      <xs:element ref="prov:collection"/>
+      <xs:element ref="prov:emptyCollection"/>
+      <xs:element ref="prov:hadMember"/>
+      <xs:element ref="prov:plan"/>
+      <xs:element ref="prov:other"/>
+      <xs:element ref="prov:internalElement"/>
+	</xs:choice>
 	<xs:attribute ref="prov:id"/>
   </xs:complexType>
 
@@ -401,52 +428,57 @@
 
   <xs:element name="plan"                 type="prov:Plan"/>
 
-  <!-- document elements -->
-
-  <xs:group name="documentElements">
-    <xs:sequence>
-        <xs:element ref="prov:entity" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:activity" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:wasGeneratedBy" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:used" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:wasInformedBy" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:wasStartedBy" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:wasEndedBy" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:wasInvalidatedBy" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:wasDerivedFrom" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:wasRevisionOf" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:wasQuotedFrom" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:hadPrimarySource" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:agent" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:person" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:organization" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:softwareAgent" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:wasAttributedTo" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:wasAssociatedWith" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:actedOnBehalfOf" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:wasInfluencedBy" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:bundle" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:specializationOf" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:alternateOf" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:collection" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:emptyCollection" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:hadMember" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:plan" minOccurs="0" maxOccurs="unbounded"/>
-        <xs:element ref="prov:internalElement" minOccurs="0" maxOccurs="unbounded" />
-    </xs:sequence>
-  </xs:group>
+  <!-- document container and allowable PROV elements -->
 
   <xs:element name="document" type="prov:Document" />
+
   <xs:complexType name="Document">
-    <xs:sequence maxOccurs="unbounded">
-        <xs:group ref="prov:documentElements" minOccurs="0"/>
-		<xs:element name="bundleContent" type="prov:BundleConstructor" minOccurs="0"/>
-        <xs:any namespace="##other" processContents="lax" minOccurs="0" />
-    </xs:sequence>
+    <xs:choice minOccurs="0" maxOccurs="unbounded">
+	  <xs:element ref="prov:entity"/>
+      <xs:element ref="prov:activity"/>
+      <xs:element ref="prov:wasGeneratedBy"/>
+      <xs:element ref="prov:used"/>
+      <xs:element ref="prov:wasInformedBy"/>
+      <xs:element ref="prov:wasStartedBy"/>
+      <xs:element ref="prov:wasEndedBy"/>
+      <xs:element ref="prov:wasInvalidatedBy"/>
+      <xs:element ref="prov:wasDerivedFrom"/>
+      <xs:element ref="prov:wasRevisionOf"/>
+      <xs:element ref="prov:wasQuotedFrom"/>
+      <xs:element ref="prov:hadPrimarySource"/>
+      <xs:element ref="prov:agent"/>
+      <xs:element ref="prov:person"/>
+      <xs:element ref="prov:organization"/>
+      <xs:element ref="prov:softwareAgent"/>
+      <xs:element ref="prov:wasAttributedTo"/>
+      <xs:element ref="prov:wasAssociatedWith"/>
+      <xs:element ref="prov:actedOnBehalfOf"/>
+      <xs:element ref="prov:wasInfluencedBy"/>
+      <xs:element ref="prov:bundle"/>
+      <xs:element ref="prov:specializationOf"/>
+      <xs:element ref="prov:alternateOf"/>
+      <xs:element ref="prov:collection"/>
+      <xs:element ref="prov:emptyCollection"/>
+      <xs:element ref="prov:hadMember"/>
+      <xs:element ref="prov:plan"/>
+      <xs:element ref="prov:other"/>
+      <xs:element ref="prov:internalElement"/>
+      <xs:element name="bundleContent" type="prov:BundleConstructor"/>
+    </xs:choice>
   </xs:complexType>
 
-  <!-- abstract element used by extensions -->
+  <!-- abstract element used by PROV extensions -->
 
   <xs:element name="internalElement" abstract="true" />
+
+  <!-- 'others' element used to contain non-PROV elements -->
+
+  <xs:element name="other" type="prov:Other"/>
+
+  <xs:complexType name="Other">
+	<xs:sequence>
+		<xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+	</xs:sequence>
+  </xs:complexType>
 
 </xs:schema>
