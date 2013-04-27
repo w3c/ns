@@ -5,3 +5,6 @@ Content-Type: text/turtle
 
 URI: prov-dictionary.owl
 Content-Type: application/rdf+xml; qs=0.4
+
+URI: prov-dictionary.xsd
+Content-Type: application/xml; qs=0.3
