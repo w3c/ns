@@ -94,9 +94,9 @@ If you wish to make comments regarding this document, please send them to public
     <owl:AnnotationProperty rdf:about="&owl;versionInfo"/>
     <owl:AnnotationProperty rdf:about="http://www.w3.org/ns/prov#specializationOf">
         <rdfs:label>specializationOf</rdfs:label>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-specialization</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-specialization</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-specialization</n>
         <component>alternate</component>
         <inverse>generalizationOf</inverse>
         <category>expanded</category>
@@ -228,9 +228,9 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#alternateOf">
         <rdfs:label>alternateOf</rdfs:label>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-alternate</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-alternate</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-alternate</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-alternate</n>
         <definition xml:lang="en">Two alternate entities present aspects of the same thing. These aspects may be the same or different, and the alternate entities may or may not overlap in time.</definition>
         <category>expanded</category>
         <component>alternate</component>
@@ -363,7 +363,7 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
     </owl:ObjectProperty>
     <owl:Axiom>
         <rdfs:comment xml:lang="en">A collection is an entity that provides a structure to some constituents, which are themselves entities. These constituents are said to be member of the collections.</rdfs:comment>
-        <dm>http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-collection</dm>
+        <dm>http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-collection</dm>
         <owl:annotatedProperty rdf:resource="&rdfs;range"/>
         <owl:annotatedTarget rdf:resource="http://www.w3.org/ns/prov#Entity"/>
         <owl:annotatedSource rdf:resource="http://www.w3.org/ns/prov#hadMember"/>
@@ -474,7 +474,7 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#influencer">
         <rdfs:label>influencer</rdfs:label>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-influence</dm>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-influence</dm>
         <category>qualified</category>
         <inverse>hadInfluence</inverse>
         <rdfs:comment xml:lang="en">Subproperties of prov:influencer are used to cite the object of an unqualified PROV-O triple whose predicate is a subproperty of prov:wasInfluencedBy (e.g. prov:used, prov:wasGeneratedBy). prov:influencer is used much like rdf:object is used.</rdfs:comment>
@@ -768,9 +768,9 @@ Note how the value of the unqualified influence (prov:wasGeneratedBy :activity1)
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/ns/prov#specializationOf">
         <rdfs:label>specializationOf</rdfs:label>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-specialization</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-specialization</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-specialization</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-specialization</n>
         <component>alternate</component>
         <category>expanded</category>
         <inverse>generalizationOf</inverse>
@@ -970,7 +970,7 @@ prov:wasInfluencedBy should not be used without also using one of its subpropert
     </owl:ObjectProperty>
     <owl:Axiom>
         <definition>influencer: an identifier (o1) for an ancestor entity, activity, or agent that the former depends on;</definition>
-        <dm>http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-influence</dm>
+        <dm>http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-influence</dm>
         <owl:annotatedProperty rdf:resource="&rdfs;range"/>
         <owl:annotatedSource rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
         <owl:annotatedTarget>
@@ -985,7 +985,7 @@ prov:wasInfluencedBy should not be used without also using one of its subpropert
     </owl:Axiom>
     <owl:Axiom>
         <definition>influencee: an identifier (o2) for an entity, activity, or agent; </definition>
-        <dm>http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-influence</dm>
+        <dm>http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-influence</dm>
         <owl:annotatedProperty rdf:resource="&rdfs;domain"/>
         <owl:annotatedSource rdf:resource="http://www.w3.org/ns/prov#wasInfluencedBy"/>
         <owl:annotatedTarget>
@@ -1093,7 +1093,7 @@ prov:wasInfluencedBy should not be used without also using one of its subpropert
     </owl:ObjectProperty>
     <owl:Axiom>
         <rdfs:comment>Revision is a derivation (see http://www.w3.org/TR/prov-dm/#term-Revision). Moreover, according to 
-http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#term-Revision 23 April 2012 &#39;wasRevisionOf is a strict sub-relation of wasDerivedFrom since two entities e2 and e1 may satisfy wasDerivedFrom(e2,e1) without being a variant of each other.&#39;</rdfs:comment>
+http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#term-Revision 23 April 2012 &#39;wasRevisionOf is a strict sub-relation of wasDerivedFrom since two entities e2 and e1 may satisfy wasDerivedFrom(e2,e1) without being a variant of each other.&#39;</rdfs:comment>
         <owl:annotatedProperty rdf:resource="&rdfs;subPropertyOf"/>
         <owl:annotatedTarget rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
         <owl:annotatedSource rdf:resource="http://www.w3.org/ns/prov#wasRevisionOf"/>
@@ -1225,7 +1225,7 @@ http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#term-Rev
 
     <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/prov#value">
         <rdfs:label>value</rdfs:label>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-attribute-value</dm>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribute-value</dm>
         <category>expanded</category>
         <editorialNote>The editor&#39;s definition comes from http://www.w3.org/TR/rdf-primer/#rdfvalue</editorialNote>
         <definition xml:lang="en">Provides a value that is a direct representation of an entity.</definition>
@@ -1259,9 +1259,9 @@ http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#term-Rev
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Activity">
         <rdfs:label>Activity</rdfs:label>
         <owl:disjointWith rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-Activity</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-Activity</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Activity</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Activity</n>
         <component>entities-activities</component>
         <category>starting-point</category>
         <definition>An activity is something that occurs over a period of time and acts upon or with entities; it may include consuming, processing, transforming, modifying, relocating, using, or generating entities.</definition>
@@ -1297,8 +1297,8 @@ http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#term-Rev
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Agent">
         <rdfs:label>Agent</rdfs:label>
         <owl:disjointWith rdf:resource="http://www.w3.org/ns/prov#InstantaneousEvent"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-agent</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-Agent</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Agent</n>
         <definition xml:lang="en">An agent is something that bears some form of responsibility for an activity taking place, for the existence of an entity, or for another agent&#39;s activity. </definition>
         <category>starting-point</category>
         <component>agents-responsibility</component>
@@ -1327,8 +1327,8 @@ http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#term-Rev
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Association">
         <rdfs:label>Association</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#AgentInfluence"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-Association</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-Association</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Association</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Association</n>
         <component>agents-responsibility</component>
         <rdfs:comment xml:lang="en">An instance of prov:Association provides additional descriptions about the binary prov:wasAssociatedWith relation from an prov:Activity to some prov:Agent that had some responsiblity for it. For example, :baking prov:wasAssociatedWith :baker; prov:qualifiedAssociation [ a prov:Association; prov:agent :baker; :foo :bar ].</rdfs:comment>
         <category>qualified</category>
@@ -1344,9 +1344,9 @@ http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#term-Rev
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Attribution">
         <rdfs:label>Attribution</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#AgentInfluence"/>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-attribution</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-attribution</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribution</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-attribution</n>
         <rdfs:comment xml:lang="en">An instance of prov:Attribution provides additional descriptions about the binary prov:wasAttributedTo relation from an prov:Entity to some prov:Agent that had some responsible for it. For example, :cake prov:wasAttributedTo :baker; prov:qualifiedAttribution [ a prov:Attribution; prov:entity :baker; :foo :bar ].</rdfs:comment>
         <definition xml:lang="en">Attribution is the ascribing of an entity to an agent.
 
@@ -1364,8 +1364,8 @@ When an entity e is attributed to agent ag, entity e was generated by some unspe
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Bundle">
         <rdfs:label>Bundle</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-bundle-entity</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-bundle-declaration</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-bundle-entity</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-bundle-declaration</n>
         <category>expanded</category>
         <definition xml:lang="en">A bundle is a named set of provenance descriptions, and is itself an Entity, so allowing provenance of provenance to be expressed.</definition>
         <rdfs:comment xml:lang="en">Note that there are kinds of bundles (e.g. handwritten letters, audio recordings, etc.) that are not expressed in PROV-O, but can be still be described by PROV-O.</rdfs:comment>
@@ -1379,7 +1379,7 @@ When an entity e is attributed to agent ag, entity e was generated by some unspe
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Collection">
         <rdfs:label>Collection</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-collection</dm>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-collection</dm>
         <component>collections</component>
         <category>expanded</category>
         <definition xml:lang="en">A collection is an entity that provides a structure to some constituents, which are themselves entities. These constituents are said to be member of the collections.</definition>
@@ -1393,9 +1393,9 @@ When an entity e is attributed to agent ag, entity e was generated by some unspe
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Communication">
         <rdfs:label>Communication</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#ActivityInfluence"/>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-Communication</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-wasInformedBy</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Communication</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-wasInformedBy</n>
         <component>entities-activities</component>
         <category>qualified</category>
         <rdfs:comment xml:lang="en">An instance of prov:Communication provides additional descriptions about the binary prov:wasInformedBy relation from an informed prov:Activity to the prov:Activity that informed it. For example, :you_jumping_off_bridge prov:wasInformedBy :everyone_else_jumping_off_bridge; prov:qualifiedCommunication [ a prov:Communication; prov:activity :everyone_else_jumping_off_bridge; :foo :bar ].</rdfs:comment>
@@ -1411,8 +1411,8 @@ When an entity e is attributed to agent ag, entity e was generated by some unspe
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Delegation">
         <rdfs:label>Delegation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#AgentInfluence"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-delegation</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-delegation</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-delegation</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-delegation</n>
         <category>qualified</category>
         <rdfs:comment xml:lang="en">An instance of prov:Delegation provides additional descriptions about the binary prov:actedOnBehalfOf relation from a performing prov:Agent to some prov:Agent for whom it was performed. For example, :mixing prov:wasAssociatedWith :toddler . :toddler prov:actedOnBehalfOf :mother; prov:qualifiedDelegation [ a prov:Delegation; prov:entity :mother; :foo :bar ].</rdfs:comment>
         <definition xml:lang="en">Delegation is the assignment of authority and responsibility to an agent (by itself or by another agent) to carry out a specific activity as a delegate or representative, while the agent it acts on behalf of retains some responsibility for the outcome of the delegated work.
@@ -1430,9 +1430,9 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Derivation">
         <rdfs:label>Derivation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#EntityInfluence"/>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-Derivation</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#Derivation-Relation</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Derivation</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#Derivation-Relation</n>
         <definition xml:lang="en">A derivation is a transformation of an entity into another, an update of an entity resulting in a new one, or the construction of a new entity based on a pre-existing entity.</definition>
         <component>derivations</component>
         <rdfs:comment xml:lang="en">An instance of prov:Derivation provides additional descriptions about the binary prov:wasDerivedFrom relation from some derived prov:Entity to another prov:Entity from which it was derived. For example, :chewed_bubble_gum prov:wasDerivedFrom :unwrapped_bubble_gum; prov:qualifiedDerivation [ a prov:Derivation; prov:entity :unwrapped_bubble_gum; :foo :bar ].</rdfs:comment>
@@ -1463,9 +1463,9 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
         <rdfs:label>End</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#EntityInfluence"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#InstantaneousEvent"/>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-End</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-End</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-End</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-End</n>
         <rdfs:comment xml:lang="en">An instance of prov:End provides additional descriptions about the binary prov:wasEndedBy relation from some ended prov:Activity to an prov:Entity that ended it. For example, :ball_game prov:wasEndedBy :buzzer; prov:qualifiedEnd [ a prov:End; prov:entity :buzzer; :foo :bar; prov:atTime &#39;2012-03-09T08:05:08-05:00&#39;^^xsd:dateTime ].</rdfs:comment>
         <category>qualified</category>
         <definition xml:lang="en">End is when an activity is deemed to have been ended by an entity, known as trigger. The activity no longer exists after its end. Any usage, generation, or invalidation involving an activity precedes the activity&#39;s end. An end may refer to a trigger entity that terminated the activity, or to an activity, known as ender that generated the trigger.</definition>
@@ -1481,9 +1481,9 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Entity">
         <rdfs:label>Entity</rdfs:label>
         <owl:disjointWith rdf:resource="http://www.w3.org/ns/prov#InstantaneousEvent"/>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-entity</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-Entity</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-entity</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Entity</n>
         <component>entities-activities</component>
         <definition xml:lang="en">An entity is a physical, digital, conceptual, or other kind of thing with some fixed aspects; entities may be real or imaginary. </definition>
         <category>starting-point</category>
@@ -1513,9 +1513,9 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
         <rdfs:label>Generation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#ActivityInfluence"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#InstantaneousEvent"/>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-Generation</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-Generation</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Generation</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Generation</n>
         <rdfs:comment xml:lang="en">An instance of prov:Generation provides additional descriptions about the binary prov:wasGeneratedBy relation from a generated prov:Entity to the prov:Activity that generated it. For example, :cake prov:wasGeneratedBy :baking; prov:qualifiedGeneration [ a prov:Generation; prov:activity :baking; :foo :bar ].</rdfs:comment>
         <category>qualified</category>
         <component>entities-activities</component>
@@ -1530,8 +1530,8 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Influence">
         <rdfs:label>Influence</rdfs:label>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-influence</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-influence</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-influence</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-influence</n>
         <component>derivations</component>
         <rdfs:comment xml:lang="en">An instance of prov:Influence provides additional descriptions about the binary prov:wasInfluencedBy relation from some influenced Activity, Entity, or Agent to the influencing Activity, Entity, or Agent. For example, :stomach_ache prov:wasInfluencedBy :spoon; prov:qualifiedInfluence [ a prov:Influence; prov:entity :spoon; :foo :bar ] . Because prov:Influence is a broad relation, the more specific relations (Communication, Delegation, End, etc.) should be used when applicable.</rdfs:comment>
         <rdfs:comment xml:lang="en">Because prov:Influence is a broad relation, its most specific subclasses (e.g. prov:Communication, prov:Delegation, prov:End, prov:Revision, etc.) should be used when applicable.</rdfs:comment>
@@ -1547,7 +1547,7 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#InstantaneousEvent">
         <rdfs:label>InstantaneousEvent</rdfs:label>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#dfn-event</constraints>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#dfn-event</constraints>
         <component>entities-activities</component>
         <rdfs:comment xml:lang="en">An instantaneous event, or event for short, happens in the world and marks a change in the world, in its activities and in its entities. The term &#39;event&#39; is commonly used in process algebra with a similar meaning. Events represent communications or interactions; they are assumed to be atomic and instantaneous.</rdfs:comment>
         <definition xml:lang="en">The PROV data model is implicitly based on a notion of instantaneous events (or just events), that mark transitions in the world. Events include generation, usage, or invalidation of entities, as well as starting or ending of activities. This notion of event is not first-class in the data model, but it is useful for explaining its other concepts and its semantics.</definition>
@@ -1563,9 +1563,9 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
         <rdfs:label>Invalidation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#ActivityInfluence"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#InstantaneousEvent"/>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-Invalidation</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-Invalidation</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Invalidation</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Invalidation</n>
         <component>entities-activities</component>
         <definition>Invalidation is the start of the destruction, cessation, or expiry of an existing entity by an activity. The entity is no longer available for use (or further invalidation) after invalidation. Any generation or usage of an entity precedes its invalidation.</definition>
         <category>qualified</category>
@@ -1580,8 +1580,8 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Location">
         <rdfs:label>Location</rdfs:label>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-attribute-location</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-attribute</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribute-location</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-attribute</n>
         <definition xml:lang="en">A location can be an identifiable geographic place (ISO 19112), but it can also be a non-geographic place such as a directory, row, or column. As such, there are numerous ways in which location can be expressed, such as by a coordinate, address, landmark, and so forth.</definition>
         <category>expanded</category>
         <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/prov-o#"/>
@@ -1595,8 +1595,8 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Organization">
         <rdfs:label>Organization</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-agent</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-types</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types</n>
         <definition>An organization is a social or legal institution such as a company, society, etc.</definition>
         <category>expanded</category>
         <component>agents-responsibility</component>
@@ -1610,8 +1610,8 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Person">
         <rdfs:label>Person</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-agent</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-types</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types</n>
         <category>expanded</category>
         <component>agents-responsibility</component>
         <definition xml:lang="en">Person agents are people.</definition>
@@ -1625,8 +1625,8 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Plan">
         <rdfs:label>Plan</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-Association</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-Association</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Association</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Association</n>
         <definition>A plan is an entity that represents a set of actions or steps intended by one or more agents to achieve some goals.</definition>
         <category>expanded</category>
         <rdfs:comment xml:lang="en">There exist no prescriptive requirement on the nature of plans, their representation, the actions or steps they consist of, or their intended goals. Since plans may evolve over time, it may become necessary to track their provenance, so plans themselves are entities. Representing the plan explicitly in the provenance can be useful for various tasks: for example, to validate the execution as represented in the provenance record, to manage expectation failures, or to provide explanations.</rdfs:comment>
@@ -1642,8 +1642,8 @@ For example, a student acted on behalf of his supervisor, who acted on behalf of
     <owl:Class rdf:about="http://www.w3.org/ns/prov#PrimarySource">
         <rdfs:label>PrimarySource</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Derivation"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-primary-source</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-original-source</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-primary-source</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-original-source</n>
         <category>qualified</category>
         <component>derivations</component>
         <definition xml:lang="en">A primary source for a topic refers to something produced by some agent with direct experience and knowledge about the topic, at the time of the topic&#39;s study, without benefit from hindsight.
@@ -1663,8 +1663,8 @@ A primary source relation is a particular case of derivation of secondary materi
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Quotation">
         <rdfs:label>Quotation</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Derivation"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-quotation</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-quotation</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-quotation</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-quotation</n>
         <rdfs:comment xml:lang="en">An instance of prov:Quotation provides additional descriptions about the binary prov:wasQuotedFrom relation from some taken prov:Entity from an earlier, larger prov:Entity. For example, :here_is_looking_at_you_kid prov:wasQuotedFrom :casablanca_script; prov:qualifiedQuotation [ a prov:Quotation; prov:entity :casablanca_script; :foo :bar ].</rdfs:comment>
         <component>derivations</component>
         <category>qualified</category>
@@ -1680,8 +1680,8 @@ A primary source relation is a particular case of derivation of secondary materi
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Revision">
         <rdfs:label>Revision</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Derivation"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-revision</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-Revision</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-revision</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Revision</n>
         <component>derivations</component>
         <category>qualified</category>
         <definition xml:lang="en">A revision is a derivation for which the resulting entity is a revised version of some original. The implication here is that the resulting entity contains substantial content from the original. Revision is a particular case of derivation.</definition>
@@ -1696,8 +1696,8 @@ A primary source relation is a particular case of derivation of secondary materi
 
     <owl:Class rdf:about="http://www.w3.org/ns/prov#Role">
         <rdfs:label>Role</rdfs:label>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-attribute-role</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-attribute</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-attribute-role</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-attribute</n>
         <definition xml:lang="en">A role is the function of an entity or agent with respect to an activity, in the context of a usage, generation, invalidation, association, start, and end.</definition>
         <category>qualified</category>
         <component>agents-responsibility</component>
@@ -1712,8 +1712,8 @@ A primary source relation is a particular case of derivation of secondary materi
     <owl:Class rdf:about="http://www.w3.org/ns/prov#SoftwareAgent">
         <rdfs:label>SoftwareAgent</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-agent</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-types</n>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-agent</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-types</n>
         <component>agents-responsibility</component>
         <definition xml:lang="en">A software agent is running software.</definition>
         <category>expanded</category>
@@ -1728,9 +1728,9 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdfs:label>Start</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#EntityInfluence"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#InstantaneousEvent"/>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-Start</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-Start</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Start</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Start</n>
         <component>entities-activities</component>
         <category>qualified</category>
         <rdfs:comment xml:lang="en">An instance of prov:Start provides additional descriptions about the binary prov:wasStartedBy relation from some started prov:Activity to an prov:Entity that started it. For example, :foot_race prov:wasStartedBy :bang; prov:qualifiedStart [ a prov:Start; prov:entity :bang; :foo :bar; prov:atTime &#39;2012-03-09T08:05:08-05:00&#39;^^xsd:dateTime ] .</rdfs:comment>
@@ -1747,9 +1747,9 @@ A primary source relation is a particular case of derivation of secondary materi
         <rdfs:label>Usage</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#EntityInfluence"/>
         <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#InstantaneousEvent"/>
-        <constraints rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-constraints.html#prov-dm-constraints-fig</constraints>
-        <dm rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-dm.html#term-Usage</dm>
-        <n rdf:datatype="&xsd;anyURI">http://dvcs.w3.org/hg/prov/raw-file/default/model/prov-n.html#expression-Usage</n>
+        <constraints rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-constraints-20130430/#prov-dm-constraints-fig</constraints>
+        <dm rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-dm-20130430/#term-Usage</dm>
+        <n rdf:datatype="&xsd;anyURI">http://www.w3.org/TR/2013/REC-prov-n-20130430/#expression-Usage</n>
         <rdfs:comment xml:lang="en">An instance of prov:Usage provides additional descriptions about the binary prov:used relation from some prov:Activity to an prov:Entity that it used. For example, :keynote prov:used :podium; prov:qualifiedUsage [ a prov:Usage; prov:entity :podium; :foo :bar ].</rdfs:comment>
         <definition xml:lang="en">Usage is the beginning of utilizing an entity by an activity. Before usage, the activity had not begun to utilize this entity and could not have been affected by the entity.</definition>
         <category>qualified</category>
