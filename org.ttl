@@ -357,6 +357,7 @@ org:hasPrimarySite a owl:ObjectProperty, rdf:Property;
     rdfs:label "site principal"@fr;
     rdfs:domain org:Organization;
     rdfs:range  org:Site;
+    rdfs:subPropertyOf org:hasSite;
     rdfs:comment """Indicates a primary site for the Organization, this is the default means by which an Organization can be contacted and is not necessarily the formal headquarters."""@en;    
     rdfs:comment """Indique le site principal d'une Organisation, le moyen par défaut par lequel l'Organisation peut être contactée et pas nécessairement le siège social légal."""@fr;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
