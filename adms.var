@@ -1,7 +1,7 @@
 URI: adms
 
-URI: adms.html
-Content-Type: text/html
+URI: adms.ttl
+Content-Type: text/turtle
 
 URI: adms.rdf
 Content-Type: application/rdf+xml
