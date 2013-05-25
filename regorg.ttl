@@ -30,7 +30,7 @@ rov: a voaf:Vocabulary, owl:Ontology;
 	dcterms:description "This is the RDF encoding of the Legal Entity vocabulary, originally developed under the European Commission's ISA Programme."@en;
 	dcterms:modified "2013-05-24"^^xsd:date;
 	vann:preferredNamespacePrefix "rov";
-	vann:preferredNamespaceUri "http://www.w3.org/ns/regorg#;
+	vann:preferredNamespaceUri "http://www.w3.org/ns/regorg#";
 	rdfs:comment "This file specifies the set of RDF classes and properties used in the Registered Organization Vocabulary vocabulary"@en;
 	rdfs:label "Registered Organization Vocabulary"@en;
 	dcterms:title "Registered Organization Vocabulary"@en;
