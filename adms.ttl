@@ -18,18 +18,19 @@
 <http://www.w3.org/ns/adms#> 	a voaf:Vocabulary, owl:Ontology;
   voaf:specializes dcat:;
   dcterms:title "Asset Description Metadata Schema (ADMS)"@en;
+  rdfs:label "Asset Description Metadata Schema (ADMS)"@en;
 	dcterms:abstract "ADMS is a profile of DCAT, used to describe semantic assets (or just 'Assets'), defined as highly reusable metadata (e.g. xml schemata, generic data models) and reference data (e.g. code lists, taxonomies, dictionaries, vocabularies) that are used for eGovernment system development."@en;
 	dcterms:creator [schema:affiliation <http://www.w3.org/data#W3C>;
 	  rdfs:seeAlso <http://philarcher.org/foaf.rdf#me>;
   	foaf:homepage <http://www.w3.org/People/all#phila>;
-  	foaf:name "Phil Archer"@en.] ,
-    [schema:affiliation [foaf:homepage <http://ies.jrc.ec.europa.eu/DE>; foaf:name "European Commission, Joint Research Centre "@en.]; 
+  	foaf:name "Phil Archer".] ,
+    [schema:affiliation [foaf:homepage <http://ies.jrc.ec.europa.eu/DE>; foaf:name "European Commission, Joint Research Centre ".]; 
   	rdfs:seeAlso <http://andrea-perego.name/foaf/#me>;
 	  foaf:homepage <http://andrea-perego.name/>;
-	  foaf:name "Andrea Perego"@en.] ,
+	  foaf:name "Andrea Perego".] ,
     [rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me>; foaf:homepage <http://makxdekkers.com/>;
-    	foaf:name "Makx Dekkers"@en.];
-  foaf:maker[foaf:name "Government Linked Data WG, based on output from the ADMS Working Group"@en; foaf:homepage <http://www.w3.org/2011/gld/>.];
+    	foaf:name "Makx Dekkers".];
+  foaf:maker[foaf:name "Government Linked Data WG, based on output from the ADMS Working Group"; foaf:homepage <http://www.w3.org/2011/gld/>.];
 	dcterms:description """This is the RDF encoding of the Asset Description Metadata Schema, originally 
     developed under the European Union's ISA Programme and further developed by the W3C Government Linked Data Working Group.
     It re-uses terms from several other vocabularies, notably Dublin Core, with elements of SKOS, FOAF and more. """;
@@ -37,7 +38,6 @@
 	vann:preferredNamespacePrefix "adms";
 	vann:preferredNamespaceUri "http://www.w3.org/ns/adms#";
 	rdfs:comment "This file specifies the set of RDF classes and properties used in ADMS"@en;
-	rdfs:label "Asset Description Metadata Schema (ADMS)"@en;
 	wdrs:describedby <http://www.w3.org/TR/vocab-adms>.
 
 
