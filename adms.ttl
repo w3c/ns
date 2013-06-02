@@ -69,7 +69,7 @@
 
 <http://www.w3.org/ns/adms#identifier> dcterms:identifier "adms:identifier";
 	a rdf:Property, owl:ObjectProperty;
-	rdfs:comment "adms:identifier is used to link any resource to an instance of adms:Identifier which is its range. N.B. it is not appropriate to use dcterms:identifer to link to the Identifier class as its range is rdfs:Literal. ADMS uses this to provide any identifier for the Asset.";
+	rdfs:comment "adms:identifier is used to link any resource to an instance of adms:Identifier which is its range. N.B. it is not appropriate to use dcterms:identifer to link to the Identifier class as its range is rdfs:Literal. ADMS uses this to provide any identifier for the Asset."@en;
 	rdfs:isDefinedBy <http://www.w3.org/TR/vocab-adms>;
 	rdfs:label "identifier"@en;
 	rdfs:range <http://www.w3.org/ns/adms#Identifier>.
@@ -84,7 +84,7 @@
 
 <http://www.w3.org/ns/adms#interoperabilityLevel> dcterms:identifier "adms:interoperabilityLevel";
 	a rdf:Property, owl:ObjectProperty;
-	rdfs:comment "Links an Asset to its adms:InteroperabilityLevel. Since this is encoded using skos:Concept, that is the defined range for this property.";
+	rdfs:comment "Links an Asset to its adms:InteroperabilityLevel. Since this is encoded using skos:Concept, that is the defined range for this property."@en;
 	rdfs:domain <http://www.w3.org/ns/adms#Asset>;
 	rdfs:isDefinedBy <http://www.w3.org/TR/vocab-adms>;
 	rdfs:label "interoperability level"@en;
@@ -114,14 +114,14 @@
 
 <http://www.w3.org/ns/adms#representationTechnique> dcterms:identifier "adms:representationTechnique";
 	a rdf:Property,	owl:ObjectProperty;
-	rdfs:comment "Links an adms:AssetDistribution to a skos:Concept that is its adms:RepresentationTechnique.";
+	rdfs:comment "Links an adms:AssetDistribution to a skos:Concept that is its adms:RepresentationTechnique."@en;
 	rdfs:isDefinedBy <http://www.w3.org/TR/vocab-adms>;
 	rdfs:label "representation technique"@en;
 	rdfs:range skos:Concept.
 
 <http://www.w3.org/ns/adms#sample> dcterms:identifier "adms:sample";
 	a rdf:Property, owl:ObjectProperty;
-	rdfs:comment "Links to a sample of an Asset (which is itself an Asset).";
+	rdfs:comment "Links to a sample of an Asset (which is itself an Asset)."@en;
 	rdfs:domain <http://www.w3.org/ns/adms#Asset>;
 	rdfs:isDefinedBy <http://www.w3.org/TR/vocab-adms>;
 	rdfs:label "sample"@en;
