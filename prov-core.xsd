@@ -32,6 +32,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>  
 
   <xs:complexType name="Activity">
@@ -45,6 +46,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <xs:complexType name="Generation">
@@ -60,6 +62,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <xs:complexType name="Usage">
@@ -75,6 +78,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <xs:complexType name="Communication">
@@ -87,6 +91,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <xs:complexType name="Start">
@@ -103,6 +108,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <xs:complexType name="End">
@@ -119,6 +125,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <xs:complexType name="Invalidation">
@@ -134,6 +141,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <!-- Component 2 -->
@@ -151,6 +159,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <xs:complexType name="Revision">
@@ -185,6 +194,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <xs:complexType name="Person">
@@ -218,6 +228,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <xs:complexType name="Association">
@@ -232,6 +243,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <xs:complexType name="Delegation">
@@ -245,6 +257,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <xs:complexType name="Influence">
@@ -257,6 +270,7 @@
         <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <!-- Component 4 -->
@@ -303,6 +317,7 @@
       <xs:element ref="prov:internalElement"/>
 	</xs:choice>
 	<xs:attribute ref="prov:id"/>
+	<xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <!-- Component 5 -->
@@ -376,6 +391,7 @@
 
   <xs:complexType name="IDRef">
     <xs:attribute ref="prov:ref" use="required" />
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
   </xs:complexType>
 
   <!--

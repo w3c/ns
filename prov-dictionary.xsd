@@ -58,6 +58,7 @@
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
       </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
 	</xs:complexType>
 	
 	<xs:element name="derivedByInsertionFrom" type="prov:Insertion" substitutionGroup="prov:internalElement"/>
@@ -74,6 +75,7 @@
       <xs:any namespace="##other" processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
 	  </xs:sequence>
     <xs:attribute ref="prov:id"/>
+    <xs:anyAttribute namespace="##other" processContents="lax"/>
 	</xs:complexType>
 	
 	<xs:element name="derivedByRemovalFrom" type="prov:Removal" substitutionGroup="prov:internalElement"/>
