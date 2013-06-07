@@ -256,7 +256,7 @@ names</a>.</p>
 
 <div id="activity"> 
              <h3 id="activity-2">activity</h3>
-<p></p><div class="glossary-ref">The <dfn>prov:activity</dfn> property in PROV-O references an prov:Activity which influenced a resource. This property applies to an prov:ActivityInfluence, which is given by a subproperty of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent. In PROV-XML, prov:activity is used as an element name for the complex type, prov:Activity.</div><p></p> 
+<p></p><div class="glossary-ref">The <dfn>prov:activity</dfn> property in PROV-O references a prov:Activity which influenced a resource. This property applies to a prov:ActivityInfluence, which is given by a sub-property of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent. In PROV-XML, prov:activity is used as an element name for the complex type, prov:Activity.</div><p></p> 
              <p>             </p><table>
              <tbody><tr>
              <td>PROV-O:</td>             <td><a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#p_activity">activity</a></td>             </tr>
@@ -294,7 +294,7 @@ names</a>.</p>
 
 <div id="agent"> 
              <h3>agent</h3>
-<p></p><div class="glossary-ref">The <dfn>prov:agent</dfn> property, in PROV-O, references an prov:Agent which influenced a resource. This property applies to an prov:AgentInfluence, which is given by a subproperty of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent.  In PROV-XML, prov:agent is used as an element name for the complex type, prov:Agent</div><p></p> 
+<p></p><div class="glossary-ref">The <dfn>prov:agent</dfn> property, in PROV-O, references a prov:Agent which influenced a resource. This property applies to a prov:AgentInfluence, which is given by a subproperty of prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity or prov:Agent.  In PROV-XML, prov:agent is used as an element name for the complex type, prov:Agent</div><p></p> 
 <table>
              <tr>
              <td>PROV-O:</td>             
@@ -459,7 +459,7 @@ names</a>.</p>
 
 <div id="Collection"> 
              <h3 id="collection">Collection / collection</h3>
-<p></p><div class="glossary-ref">   A <dfn id="concept-collection" title="Collection">collection</dfn> is an entity that provides a structure to some constituents that must themselves be entities. These constituents are said to be <dfn id="dfn-member">member</dfn> of the collections.  </div><p></p> 
+<p></p><div class="glossary-ref">   A <dfn title="Collection">collection</dfn> is an entity that provides a structure to some constituents that must themselves be entities. These constituents are said to be <dfn >member</dfn> of the collections.  </div><p></p> 
              <p>             </p><table>
              <tbody><tr>
              <td>PROV-O:</td>             <td><a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Collection">Collection</a></td>             </tr>
@@ -597,7 +597,7 @@ names</a>.</p>
 
 <div id="describesService"> 
              <h3 id="describesservice">describesService</h3>
-<p></p><div class="glossary-ref"><dfn>describesService</dfn> relates a generic provenance query service resource (type prov:ServiceDescription) to a specific query service description (e.g. a prov:DirectQueryService or a sd:Service).</div><p></p> 
+<p></p><div class="glossary-ref"><dfn>describesService</dfn> relates a generic provenance query service resource (type <a href="http://www.w3.org/ns/prov#ServiceDescription">prov:ServiceDescription</a>) to a specific query service description (e.g. a <a href="http://www.w3.org/ns/prov#DirectQueryService">prov:DirectQueryService</a> or a <a href="http://www.w3.org/TR/2013/REC-sparql11-service-description-20130321/#sd-Service">sd:Service</a>).</div><p></p> 
              <p>             </p><table>
              <tbody><tr>
              <td>PROV-AQ:</td>             <td><a href="http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#terms-added-to-prov-namespace">describesService</a></td>             </tr>
@@ -1191,7 +1191,7 @@ names</a>.</p>
 
 <div id="mentionOf"> 
              <h3 id="mentionof">mentionOf</h3>
-<p></p><div class="glossary-ref">prov:mentionOf is used to specialize an entity as described in another bundle. It is to be used in conjuction with prov:asInBundle.</div><p></p> 
+<p></p><div class="glossary-ref">prov:mentionOf is used to specialize an entity as described in another bundle. It is to be used in conjunction with prov:asInBundle.</div><p></p> 
              <p>             </p><table>
              <tbody><tr>
              <td>PROV-Links:</td>             <td><a href="http://www.w3.org/TR/2013/NOTE-prov-links-20130430/#term-mention">mentionOf</a></td></tr>
@@ -1249,7 +1249,7 @@ names</a>.</p>
              
 <div id="other"> 
              <h3>other</h3>
-<div class="glossary-ref">In PROV-XML, the prov:other xml-element provides a place to include non-PROV xml-elements inside a prov:document or prov:bundleContent.</div><p></p> 
+<div class="glossary-ref">In PROV-XML, the prov:other XML element provides a place to include non-PROV XML elements inside a prov:document or prov:bundleContent.</div><p></p> 
              <p>             </p><table>
              <tbody>
 <tr>             <td>PROV-XML:</td>              <td><a href="http://www.w3.org/TR/prov-xml/#term-Other">other</a></td>             </tr> 
@@ -1646,7 +1646,7 @@ names</a>.</p>
 
 <div id="Role"> 
              <h3 id="role">role</h3>
-<p></p><div class="glossary-ref">   A <dfn>role</dfn> is the function of an entity or agent with respect to an activity, in the context of a <a title="Usage" href="#concept-usage" class="internalDFN">usage</a>, <a title="Generation" href="#concept-generation" class="internalDFN">generation</a>, <a title="Invalidation" href="#concept-invalidation" class="internalDFN">invalidation</a>,  <a title="Association" href="#concept-association" class="internalDFN">association</a>, <a title="Start" href="#concept-start" class="internalDFN">start</a>, and  <a title="End" href="#concept-end" class="internalDFN">end</a>. </div><p></p> 
+<p></p><div class="glossary-ref">   A <dfn>role</dfn> is the function of an entity or agent with respect to an activity, in the context of a usage, generation, invalidation, association, start, and end. </div><p></p> 
              <p>             </p><table>
              <tbody><tr>
              <td>PROV-O:</td>             <td><a href="http://www.w3.org/TR/2013/REC-prov-o-20130430/#Role">Role</a></td>             </tr>
@@ -1660,7 +1660,7 @@ names</a>.</p>
 
 <div id="ServiceDescription"> 
              <h3 id="servicedescription">ServiceDescription</h3>
-<p></p><div class="glossary-ref">Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery in linked data environments.</div><p></p> 
+<p></p><div class="glossary-ref">Type for a generic provenance query service. Mainly for use in RDF provenance query service descriptions, to facilitate discovery of provenance services in linked data environments.</div><p></p> 
              <p>             </p><table>
              <tbody><tr>
              <td>PROV-AQ:</td>             <td><a href="http://www.w3.org/TR/2013/NOTE-prov-aq-20130430/#terms-added-to-prov-namespace">ServiceDescription</a></td>             </tr>
