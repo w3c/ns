@@ -26,7 +26,7 @@
  dct:MethodOfInstruction    rdfs:subClassOf       prov:Plan .
  dct:RightsStatement        rdfs:subClassOf       prov:Entity .
  dct:PhysicalResource       rdfs:subClassOf       prov:Entity .
- dct:Policy                 rdfs:subClassOf       prov:Policy .
+ dct:Policy                 rdfs:subClassOf       prov:Plan .
  dct:ProvenanceStatement    rdfs:subClassOf       prov:Bundle .
  
   prov:hadPrimarySource rdfs:subPropertyOf dct:source .
