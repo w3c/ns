@@ -482,26 +482,8 @@ prov:wasDerivedFrom owl:propertyChainAxiom (org:resultedFrom org:originalOrganiz
 org:Post a owl:Class, rdfs:Class;
     rdfs:label "Post"@en;
 	rdfs:label "Poste"@fr;
-    rdfs:comment """
-      A Post represents some position within an organization that
-      exists independently of the person or persons filling it. Posts
-      may be used to represent situations where a person is a member
-      of an organization ex officio (for example the Secretary of
-      State for Scotland is part of UK Cabinet by virtue of being
-      Secretary of State for Scotland, not as an individual person). A
-      post can be held by multiple people and hence can be treated as
-      a organization in its own right.
-    """@en;
-	rdfs:comment """
-       Un Poste représente une position au sein d'une Organisation qui
-       existe indépendamment de la personne ou des personnes qui le remplissent. Les postes
-       peuvent être utilisés pour représenter des situations où une personne est membre
-       d'une Organisation d'office (par exemple, le Secrétaire d'Etat pour l'Ecosse 
-	   fait partie du Cabinet du Royaume-Uni du fait d'être
-       Secrétaire d'Etat pour l'Ecosse, non pas comme une personne physique). Un poste
-       après peut être occupé par plusieurs personnes et peut donc être considéré comme
-       une Organisation à part entière.
-    """@fr;
+    rdfs:comment """A Post represents some position within an organization that exists independently of the person or persons filling it. Posts may be used to represent situations where a person is a member of an organization ex officio (for example the Secretary of State for Scotland is part of UK Cabinet by virtue of being Secretary of State for Scotland, not as an individual person). A post can be held by multiple people and hence can be treated as a organization in its own right."""@en;
+	rdfs:comment """ Un Poste représente une position au sein d'une Organisation qui existe indépendamment de la personne ou des personnes qui le remplissent. Les postes peuvent être utilisés pour représenter des situations où une personne est membre d'une Organisation d'office (par exemple, le Secrétaire d'Etat pour l'Ecosse ait partie du Cabinet du Royaume-Uni du fait d'être Secrétaire d'Etat pour l'Ecosse, non pas comme une personne physique). Un poste  après peut être occupé par plusieurs personnes et peut donc être considéré comme une Organisation à part entière."""@fr;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
