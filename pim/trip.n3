@@ -87,5 +87,11 @@ TripForm3 a ui:Form;
         [ ui:sequence 4; a ui:MultiLineTextField; ui:property s:comment ].
 
 
+#################### Airline tickets etc
+# eTickets:
+# An official ticket number (including the airline's 3-digit ticketing code,[1]
+# a 4-digit form number, a 6-digit serial number, and sometimes a check digit).
+# -- http://en.wikipedia.org/wiki/Electronic_ticket
+# -- http://www.kovrik.com/sib/travel/airline-codes.txt
 
 #ends
