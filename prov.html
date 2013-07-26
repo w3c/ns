@@ -4,8 +4,7 @@
     <meta content="text/html; charset=UTF-8" http-equiv="content-type">
     <title>The PROV Namespace</title>
     <!-- 
-      === NOTA BENE ===      For the three scripts below, if your spec resides on dev.w3 you can check them
-      out in the same tree and use relative links so that they'll work offline,     -->
+      === NOTA BENE ===      For the three scripts below, if your spec resides on dev.w3 you can check them      out in the same tree and use relative links so that they'll work offline,     -->
     <!-- PM -->
     <style type="text/css">
       .note { font-size:small; margin-left:50px }
@@ -144,8 +143,7 @@ table.simple {
         <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a>
         and <a href="http://www.w3.org/Consortium/Legal/copyright-documents">document
           use</a> rules apply. </p>
-      <hr>
-    </div>
+      <hr> </div>
     <section id="introduction">
       <!--OddPage-->
       <h2><span class="secno">1. </span>Introduction</h2>
@@ -173,15 +171,13 @@ table.simple {
         <li><a href="http://www.w3.org/TR/2013/NOTE-prov-dc-20130430/">PROV-DC:
             Dublin Core to PROV Mapping</a></li>
       </ul>
-      <p>
-        The index below provides links directly to the definition of the terms
+      <p> The index below provides links directly to the definition of the terms
         within the above specifications. English language definitions are
         provided. However, in some cases we omit the definition when the context
         of a document is needed for understanding. In all cases, the
         specifications above are the definitive source. For machine
         interpretable definitions, content negotiation is supported for multiple
-        formats including:
-      </p>
+        formats including: </p>
       <ul>
         <li>Turtle
           <ul>
@@ -202,23 +198,24 @@ table.simple {
           </ul>
         </li>
       </ul>
-      <p>This document is intended to comply with <a href="http://www.w3.org/1999/10/nsuri"><abbr
+      <p>The OWL ontology can also be accessed directly in RDF/XML and in Turtle
+        formats using the URIs <a href="http://www.w3.org/ns/prov.owl"><code>http://www.w3.org/ns/prov.owl</code></a>
+        and <a href="http://www.w3.org/prov.ttl"><code>http://www.w3.org/prov.ttl</code></a>,
+        respectively).</p>
+      <p> This document is intended to comply with <a href="http://www.w3.org/1999/10/nsuri"><abbr
             title="World Wide Web Consortium">W3C</abbr> policy for XML
-          namespace
-          names</a>.</p>
+          namespace names</a>. </p>
       <p>We suggest the use of <code>prov</code> as a prefix for this
         namespace.</p>
     </section>
     <section id="definitions">
       <!--OddPage-->
       <h2><span class="secno">2. </span>Index</h2>
-      <a href="#A">A</a> | <a href="#B">B</a> | <a href="#C">C</a>
-      | <a href="#D">D</a> | <a href="#E">E</a> | <a href="#G">G</a>
-      | <a href="#H">H</a> | <a href="#I">I</a> | <a href="#K">K</a> | <a href="#L">L</a>
-      | <a href="#M">M</a> | <a href="#N">N</a> | <a href="#O">O</a> | <a href="#P">P</a>
-      | <a href="#Q">Q</a>
-      | <a href="#R">R</a> | <a href="#S">S</a> | <a href="#T">T</a> | <a href="#U">U</a>
-      | <a href="#V">V</a>
+      <a href="#A">A</a> | <a href="#B">B</a> | <a href="#C">C</a> | <a href="#D">D</a>
+      | <a href="#E">E</a> | <a href="#G">G</a> | <a href="#H">H</a> | <a href="#I">I</a>
+      | <a href="#K">K</a> | <a href="#L">L</a> | <a href="#M">M</a> | <a href="#N">N</a>
+      | <a href="#O">O</a> | <a href="#P">P</a> | <a href="#Q">Q</a> | <a href="#R">R</a>
+      | <a href="#S">S</a> | <a href="#T">T</a> | <a href="#U">U</a> | <a href="#V">V</a>
       | <a href="#W">W</a>
       <hr>
       <p id="A" style="font-size: 300%;">A</p>
@@ -232,17 +229,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="actedOnBehalfOf">
         <h2 id="actedonbehalfof">actedOnBehalfOf</h2>
-        <p></p>
         <div class="glossary-ref"> <dfn>Delegation</dfn> is the assignment of
           authority and responsibility to an agent (by itself or by another
           agent) to carry out a specific activity as a delegate or
           representative, while the agent it acts on behalf of retains some
           responsibility for the outcome of the delegated work. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -264,16 +258,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Activity">
         <h3 id="activity-1">Activity</h3>
-        <p></p>
         <div class="glossary-ref"> An <dfn id="concept-activity" title="Activity">activity</dfn>
           is something that occurs over a period of time and acts upon or with
           entities; it may include consuming, processing, transforming,
           modifying, relocating, using, or generating entities. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -295,18 +286,15 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="activity">
         <h3 id="activity-2">activity</h3>
-        <p></p>
         <div class="glossary-ref">The <dfn>prov:activity</dfn> property in
           PROV-O references a prov:Activity which influenced a resource. This
           property applies to a prov:ActivityInfluence, which is given by a
           sub-property of prov:qualifiedInfluence from the influenced
           prov:Entity, prov:Activity or prov:Agent. In PROV-XML, prov:activity
           is used as an element name for the complex type, prov:Activity.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -320,16 +308,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="ActivityInfluence">
         <h3 id="activityinfluence">ActivityInfluence</h3>
-        <p></p>
         <div class="glossary-ref"><dfn>ActivityInfluence</dfn> is the capacity
           of an activity to have an effect on the character, development, or
           behavior of another by means of generation, invalidation,
           communication, or other.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -339,16 +324,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Agent">
         <h3 id="agent-1">Agent</h3>
-        <p></p>
         <div class="glossary-ref"> An <dfn id="concept-agent" title="Agent">agent</dfn>
           is something that bears some form of responsibility for an activity
           taking place, for the existence of an entity, or for another agent's
           activity. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -370,18 +352,15 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="agent">
         <h3>agent</h3>
-        <p></p>
         <div class="glossary-ref">The <dfn>prov:agent</dfn> property, in
           PROV-O, references a prov:Agent which influenced a resource. This
           property applies to a prov:AgentInfluence, which is given by a
           subproperty of prov:qualifiedInfluence from the influenced
           prov:Entity, prov:Activity or prov:Agent. In PROV-XML, prov:agent is
           used as an element name for the complex type, prov:Agent</div>
-        <p></p>
         <table>
           <tbody>
             <tr>
@@ -397,11 +376,9 @@ table.simple {
       </div>
       <div id="AgentInfluence">
         <h3 id="agentinfluence">AgentInfluence</h3>
-        <p></p>
         <div class="glossary-ref"><dfn>AgentInfluence</dfn> is the capacity of
           an agent to have an effect on the character, development, or behavior
           of another by means of attribution, association, delegation, or other.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -411,16 +388,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Alternate">
         <h3>Alternate</h3>
-        <p></p>
         <div class="glossary-ref"> Two <dfn id="concept-alternate" title="Alternate">alternate</dfn>
           entities present aspects of the same thing. These aspects may be the
           same or different, and the alternate entities may or may not overlap
           in time. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -434,13 +408,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="alternate1">
         <h3>alternate1</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -450,13 +420,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="alternate2">
         <h3>alternate2</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -466,16 +432,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="alternateOf">
         <h3 id="alternateof">alternateOf</h3>
-        <p></p>
         <div class="glossary-ref"> Two <dfn title="Alternate">alternate</dfn>
           entities present aspects of the same thing. These aspects may be the
           same or different, and the alternate entities may or may not overlap
           in time. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -497,15 +460,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="asInBundle">
         <h3 id="asinbundle">asInBundle</h3>
-        <p></p>
         <div class="glossary-ref"><dfn>prov:asInBundle</dfn> is used to specify
           which bundle the general entity of a prov:mentionOf property is
           described.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -515,17 +475,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Association">
         <h3 id="association">Association</h3>
-        <p></p>
         <div class="glossary-ref"> An activity <dfn id="concept-association" title="Association">association</dfn>
           is an assignment of responsibility to an agent for an activity,
           indicating that the agent had a role in the activity. It further
           allows for a plan to be specified, which is the plan intended by the
           agent to achieve some goals in the context of this activity. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -547,13 +504,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="atLocation">
         <h3 id="atlocation">atLocation</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -563,13 +516,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="atTime">
         <h3 id="attime">atTime</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -579,14 +528,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Attribution">
         <h3 id="attribution">Attribution</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn id="concept-attribution">Attribution</dfn>
           is the ascribing of an entity to an agent. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -608,16 +554,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="B" style="font-size: 300%;">B</p>
       <div id="Bundle">
         <h3 id="bundle">Bundle</h3>
-        <p></p>
         <div class="glossary-ref"> A <dfn id="concept-bundle" title="Bundle">bundle</dfn>
           is a named set of provenance descriptions, and is itself an entity, so
           allowing provenance of provenance to be expressed. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -639,13 +582,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="BundleConstructor">
         <h3 id="bundleconstructor">BundleConstructor</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -655,13 +594,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="bundleContent">
         <h3 id="bundlecontent">bundleContent</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -671,17 +606,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="C" style="font-size: 300%;">C</p>
       <div id="Collection">
         <h3 id="collection">Collection / collection</h3>
-        <p></p>
         <div class="glossary-ref"> A <dfn title="Collection">collection</dfn>
           is an entity that provides a structure to some constituents that must
           themselves be entities. These constituents are said to be <dfn>member</dfn>
           of the collections. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -704,15 +636,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Communication">
         <h3 id="communication">Communication</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn id="concept-communication">Communication</dfn>
           is the exchange of some unspecified entity by two activities, one
           activity using some entity generated by the other. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -734,13 +663,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Contribute">
         <h3 id="contribute">Contribute</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -750,13 +675,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Contributor">
         <h3 id="contributor">Contributor</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -766,13 +687,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Copyright">
         <h3 id="copyright">Copyright</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -782,13 +699,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Create">
         <h3 id="create">Create</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -798,13 +711,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Creator">
         <h3 id="creator">Creator</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -814,14 +723,10 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="D" style="font-size: 300%;">D</p>
       <div id="delegate">
         <h3>delegate</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -831,17 +736,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Delegation">
         <h3 id="delegation">Delegation</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn id="concept-delegation">Delegation</dfn>
           is the assignment of authority and responsibility to an agent (by
           itself or by another agent) to carry out a specific activity as a
           delegate or representative, while the agent it acts on behalf of
           retains some responsibility for the outcome of the delegated work. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -863,16 +765,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Derivation">
         <h3 id="derivation">Derivation</h3>
-        <p></p>
         <div class="glossary-ref"> A <dfn id="concept-derivation" title="Derivation">derivation</dfn>
           is a transformation of an entity into another, an update of an entity
           resulting in a new one, or the construction of a new entity based on a
           pre-existing entity.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -894,14 +793,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="derivedByInsertionFrom">
         <h3 id="derivedbyinsertionfrom">derivedByInsertionFrom</h3>
-        <p></p>
         <div class="glossary-ref">The dictionary was derived from the other by
           insertion. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -911,14 +807,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="derivedByRemovalFrom">
         <h3 id="derivedbyremovalfrom">derivedByRemovalFrom</h3>
-        <p></p>
         <div class="glossary-ref">The dictionary was derived from the other by
           removal.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -928,16 +821,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="describesService">
         <h3 id="describesservice">describesService</h3>
-        <p></p>
         <div class="glossary-ref"><dfn>describesService</dfn> relates a generic
           provenance query service resource (type <a href="http://www.w3.org/ns/prov#ServiceDescription">prov:ServiceDescription</a>)
           to a specific query service description (e.g. a <a href="http://www.w3.org/ns/prov#DirectQueryService">prov:DirectQueryService</a>
           or a <a href="http://www.w3.org/TR/2013/REC-sparql11-service-description-20130321/#sd-Service">sd:Service</a>).</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -947,15 +837,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Dictionary">
         <h3 id="dictionary-1">Dictionary</h3>
-        <p></p>
         <div class="glossary-ref">A <dfn>dictionary</dfn> is an entity that
           provides a structure to some constituents, which are themselves
           entities. These constituents are said to be members of the dictionary.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -965,16 +852,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="dictionary">
         <h3 id="dictionary-2">dictionary</h3>
-        <p></p>
         <div class="glossary-ref">The property used by a prov:Insertion and
           prov:Removal to cite the prov:Dictionary that was
           prov:derivedByInsertionFrom or prov:derivedByRemovalFrom another
           dictionary.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -984,14 +868,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="DictionaryMembership">
         <h3>DictionaryMembership</h3>
-        <p></p>
         <div class="glossary-ref">The members of a dictionary are specified by
           listing key-entity pairs inside a prov:DictionaryMembership element.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1001,16 +882,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="DirectQueryService">
         <h3 id="directqueryservice">DirectQueryService</h3>
-        <p></p>
         <div class="glossary-ref">Type for a direct HTTP query service
           description. Mainly for use in RDF provenance query service
           descriptions, to distinguish direct HTTP query service descriptions
           from other query service descriptions.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1020,12 +898,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Document">
         <h3 id="document">Document / document</h3>
-        <p></p>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1040,15 +915,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="E" style="font-size: 300%;">E</p>
       <div id="EmptyCollection">
         <h3 id="emptyCollection">EmptyCollection / emptyCollection</h3>
-        <p></p>
         <div class="glossary-ref">An empty collection is a collection without
           members.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1071,14 +943,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="EmptyDictionary">
         <h3 id="emptyDictionary">EmptyDictionary / emptyDictionary</h3>
-        <p></p>
         <div class="glossary-ref">An empty dictionary is a dictionary that has
           no members.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1089,11 +958,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="End">
         <h3 id="end">End</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn id="concept-end">End</dfn> is when an
           activity is deemed to have been ended by an entity, known as <dfn id="concept-end-trigger"
             title="end trigger">trigger</dfn>. The activity no longer exists
@@ -1101,7 +968,6 @@ table.simple {
           activity precedes the activity's end. An end may refer to a trigger
           entity that terminated the activity, or to an activity, known as <dfn
             id="concept-end-ender">ender</dfn> that generated the trigger. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1123,13 +989,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="endTime">
         <h3>endTime</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1139,13 +1001,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="endedAtTime">
         <h3 id="endedattime">endedAtTime</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1155,15 +1013,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Entity">
         <h3 id="entity-1">Entity</h3>
-        <p></p>
         <div class="glossary-ref"> An <dfn id="concept-entity" title="Entity">entity</dfn>
           is a physical, digital, conceptual, or other kind of thing with some
           fixed aspects; entities may be real or imaginary. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1185,18 +1040,15 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="entity">
         <h3 id="entity-2">entity</h3>
-        <p></p>
         <div class="glossary-ref">In PROV-O, the prov:entity property references
           an prov:Entity which influenced a resource. This property applies to
           an prov:EntityInfluence, which is given by a subproperty of
           prov:qualifiedInfluence from the influenced prov:Entity, prov:Activity
           or prov:Agent. In PROV-XML, prov:entity is used as an element name for
           the complex type prov:Entity.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1210,15 +1062,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="EntityInfluence">
         <h3 id="entityinfluence">EntityInfluence</h3>
-        <p></p>
         <div class="glossary-ref">EntityInfluence is the capacity of an entity
           to have an effect on the character, development, or behavior of
           another by means of usage, start, end, derivation, or other.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1228,16 +1077,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="G" style="font-size: 300%;">G</p>
       <div id="generated">
         <h3 id="generated-1">generated</h3>
-        <p></p>
         <div class="glossary-ref">Generation is the completion of production of
           a new entity by an activity. This entity did not exist before
           generation and becomes available for usage after this generation.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1247,13 +1093,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="generatedAtTime">
         <h3 id="generatedattime">generatedAtTime</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1263,13 +1105,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="generatedEntity">
         <h3>generatedEntity</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1279,16 +1117,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Generation">
         <h3>Generation</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn>Generation</dfn> is the completion of
           production of a new entity by an activity. This entity did not exist
           before generation and becomes available for usage after this
           generation. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1310,13 +1145,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="generation">
         <h3>generation</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1326,13 +1157,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="generalEntity">
         <h3>generalEntity</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1350,14 +1177,10 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="H" style="font-size: 300%;">H</p>
       <div id="hadActivity">
         <h3 id="hadactivity">hadActivity</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1367,14 +1190,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="hadDictionaryMember">
         <h3 id="haddictionarymember">hadDictionaryMember</h3>
-        <p></p>
         <div class="glossary-ref">Describes the key-entity pair that was member
           of a prov:Dictionary. A dictionary can have multiple members.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1384,13 +1204,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="hadGeneration">
         <h3 id="hadgeneration">hadGeneration</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1400,14 +1216,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="hadMember">
         <h3 id="hadmember">hadMember</h3>
-        <p></p>
         <div class="glossary-ref"><dfn>Membership</dfn> is the belonging of an
           entity to a collection.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1429,13 +1242,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="hadPlan">
         <h3 id="hadplan">hadPlan</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1445,13 +1254,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="hadPrimarySource">
         <h3 id="hadprimarysource">hadPrimarySource</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1473,13 +1278,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="hadRole">
         <h3 id="hadrole">hadRole</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1489,13 +1290,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="hadUsage">
         <h3 id="hadusage">hadUsage</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1505,14 +1302,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="has_anchor">
         <h3 id="has_anchor-1">has_anchor</h3>
-        <p></p>
         <div class="glossary-ref">Indicates a target-URI for an resource, used
           by an associated provenance record.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1522,15 +1316,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="has_provenance">
         <h3 id="has_provenance-1">has_provenance</h3>
-        <p></p>
         <div class="glossary-ref">Indicates a provenance-URI for a resource; the
           resource identified by this property presents a provenance record
           about its subject or anchor resource.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1540,14 +1331,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="has_query_service">
         <h3 id="has_query_service-1">has_query_service</h3>
-        <p></p>
         <div class="glossary-ref">Indicates a provenance query service that can
           access provenance related to its subject or anchor resource. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1557,14 +1345,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="I" style="font-size: 300%;">I</p>
       <div id="id">
         <h3>id</h3>
         <div class="glossary-ref">In PROV-XML, the xml-attribute used to
           identify an instances of a prov-"type" or prov-"relation".</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1574,17 +1360,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Influence">
         <h3 id="influence">Influence</h3>
-        <p></p>
         <div class="glossary-ref"><dfn>Influence</dfn> is the capacity of an
           entity, activity, or agent to have an effect on the character,
           development, or behavior of another by means of usage, start, end,
           generation, invalidation, communication, derivation, attribution,
           association, or delegation.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1606,13 +1389,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="influenced">
         <h3 id="influenced-1">influenced</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1622,13 +1401,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="influencee">
         <h3>influencee</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1646,13 +1421,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="influencer">
         <h3>influencer</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1674,12 +1445,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="informant">
         <h3>informant</h3>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1689,12 +1457,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="informed">
         <h3>informed</h3>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1704,14 +1469,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="insertedKeyEntityPair">
         <h3 id="insertedkeyentitypair">insertedKeyEntityPair</h3>
-        <p></p>
         <div class="glossary-ref">An object property to refer to the
           prov:KeyEntityPair inserted into a prov:Dictionary.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1721,15 +1483,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Insertion">
         <h3 id="insertion">Insertion</h3>
-        <p></p>
         <div class="glossary-ref">Insertion is a derivation that describes the
           transformation of a dictionary into another, by insertion of one or
           more key-entity pairs.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1739,18 +1498,15 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="InstantaneousEvent">
         <h3 id="instantaneousevent">InstantaneousEvent</h3>
-        <p></p>
         <div class="glossary-ref">The PROV data model is implicitly based on a
           notion of instantaneous events (or just events), that mark transitions
           in the world. Events include generation, usage, or invalidation of
           entities, as well as starting or ending of activities. This notion of
           event is not first-class in the data model, but it is useful for
           explaining its other concepts and its semantics.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1760,12 +1516,10 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="internalElement">
         <h3>internalElement</h3>
         <div class="glossary-ref">In PROV-XML, used for extension of the schema.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1775,12 +1529,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="InternationalizedString">
         <h3>InternationalizedString</h3>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1790,13 +1541,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="invalidated">
         <h3 id="invalidated-1">invalidated</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1806,13 +1553,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="invalidatedAtTime">
         <h3 id="invalidatedattime">invalidatedAtTime</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1822,17 +1565,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Invalidation">
         <h3 id="invalidation">Invalidation</h3>
-        <p></p>
         <div class="glossary-ref"><dfn>Invalidation</dfn> is the start of the
           destruction, cessation, or expiry of an existing entity by an
           activity. The entity is no longer available for use (or further
           invalidation) after invalidation. Any generation or usage of an entity
           precedes its invalidation.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1854,14 +1594,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="K" style="font-size: 300%;">K</p>
       <div id="key">
         <h3>key</h3>
-        <p></p>
         <div class="glossary-ref">A key in a key-entity pair.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1871,13 +1608,10 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="KeyEntityPair">
         <h3 id="keyEntityPair">KeyEntityPair/keyEntityPair</h3>
-        <p></p>
         <div class="glossary-ref">A key-entity pair. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1887,12 +1621,10 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="L" style="font-size: 300%;">L</p>
       <div id="Label">
         <h3 id="label">label</h3>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1910,17 +1642,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="location">
         <h3 id="Location">location</h3>
-        <p></p>
         <div class="glossary-ref">A <dfn>location</dfn> can be an identifiable
           geographic place (ISO 19112), but it can also be a non-geographic
           place such as a directory, row, or column. As such, there are numerous
           ways in which location can be expressed, such as by a coordinate,
           address, landmark, and so forth.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1942,15 +1671,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="M" style="font-size: 300%;">M</p>
       <div id="Membership">
         <h3>Membership</h3>
-        <p></p>
         <div class="glossary-ref">Membership is the belonging of an entity to a
           collection.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -1964,17 +1690,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Mention">
         <h3>Mention</h3>
-        <p></p>
         <div class="glossary-ref">The <dfn>mention</dfn> of an entity in a
           bundle (containing a description of this entity) is another entity
           that is a specialization of the former and that presents at least the
-          bundle as a further additional aspect.
-        </div>
-        <p></p>
+          bundle as a further additional aspect. </div>
         <p> </p>
         <table>
           <tbody>
@@ -1984,15 +1706,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="mentionOf">
         <h3 id="mentionof">mentionOf</h3>
-        <p></p>
         <div class="glossary-ref">prov:mentionOf is used to specialize an entity
           as described in another bundle. It is to be used in conjunction with
           prov:asInBundle.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2002,13 +1721,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Modify">
         <h3 id="modify">Modify</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2018,14 +1733,10 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="N" style="font-size: 300%;">N</p>
       <div id="newDictionary">
         <h3>newDictionary</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2035,14 +1746,10 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="O" style="font-size: 300%;">O</p>
       <div id="oldDictionary">
         <h3>oldDictionary</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2052,14 +1759,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Organization">
         <h3 id="organization">Organization</h3>
-        <p></p>
         <div class="glossary-ref">An <dfn>organization</dfn> is a social or
           legal institution such as a company, society, etc.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2081,14 +1785,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="other">
         <h3>other</h3>
         <div class="glossary-ref">In PROV-XML, the prov:other XML element
           provides a place to include non-PROV XML elements inside a
           prov:document or prov:bundleContent.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2098,15 +1800,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="P" style="font-size: 300%;">P</p>
       <div id="pairEntity">
         <h3 id="pairentity">pairEntity</h3>
-        <p></p>
         <div class="glossary-ref">The entity of a prov:KeyEntityPair, which is
           an element of a prov:Dictionary.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2116,14 +1815,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="pairKey">
         <h3 id="pairkey">pairKey</h3>
-        <p></p>
         <div class="glossary-ref">The key of a prov:KeyEntityPair, which is an
           element of a prov:Dictionary.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2133,13 +1829,10 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Person">
         <h3 id="person">Person</h3>
-        <p></p>
         <div class="glossary-ref">Person agents are people.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2161,15 +1854,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="pingback">
         <h3 id="pingback-1">pingback</h3>
-        <p></p>
         <div class="glossary-ref">Relates a resource to a provenance pingback
           service that may receive additional provenance links about the
           resource.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2179,15 +1869,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Plan">
         <h3 id="plan">Plan/plan</h3>
-        <p></p>
         <div class="glossary-ref"> A <dfn id="concept-plan" title="Plan">plan</dfn>
           is an entity that represents a set of actions or steps intended by one
           or more agents to achieve some goals. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2209,11 +1896,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="PrimarySource">
         <h3 id="primarysource">PrimarySource</h3>
-        <p></p>
         <div class="glossary-ref">A <dfn>primary source</dfn> for a topic
           refers to something produced by some agent with direct experience and
           knowledge about the topic, at the time of the topic's study, without
@@ -2227,7 +1912,6 @@ table.simple {
           determination of primary sources can be up to interpretation, and
           should be done according to conventions accepted within the
           application's domain.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2249,14 +1933,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="provenanceUriTemplate">
         <h3 id="provenanceuritemplate">provenanceUriTemplate</h3>
-        <p></p>
         <div class="glossary-ref">Indicates a URI template string for
           constructing provenance-URIs</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2266,13 +1947,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Publish">
         <h3 id="publish">Publish</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2282,13 +1959,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Publisher">
         <h3 id="publisher">Publisher</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2298,14 +1971,10 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="Q" style="font-size: 300%;">Q</p>
       <div id="qualifiedAssociation">
         <h3 id="qualifiedassociation">qualifiedAssociation</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2315,13 +1984,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedAttribution">
         <h3 id="qualifiedattribution">qualifiedAttribution</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2331,13 +1996,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedCommunication">
         <h3 id="qualifiedcommunication">qualifiedCommunication</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2347,13 +2008,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedDelegation">
         <h3 id="qualifieddelegation">qualifiedDelegation</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2363,13 +2020,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedDerivation">
         <h3 id="qualifiedderivation">qualifiedDerivation</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2379,13 +2032,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedEnd">
         <h3 id="qualifiedend">qualifiedEnd</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2395,13 +2044,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedGeneration">
         <h3 id="qualifiedgeneration">qualifiedGeneration</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2411,13 +2056,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedInfluence">
         <h3 id="qualifiedinfluence">qualifiedInfluence</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2427,14 +2068,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedInsertion">
         <h3 id="qualifiedinsertion">qualifiedInsertion</h3>
-        <p></p>
         <div class="glossary-ref">prov:qualifiedInsertion shows the details of
           an insertion, in particular the inserted key-entity pairs.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2444,13 +2082,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedInvalidation">
         <h3 id="qualifiedinvalidation">qualifiedInvalidation</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2460,13 +2094,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedPrimarySource">
         <h3 id="qualifiedprimarysource">qualifiedPrimarySource</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2476,13 +2106,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedQuotation">
         <h3 id="qualifiedquotation">qualifiedQuotation</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2492,14 +2118,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedRemoval">
         <h3 id="qualifiedremoval">qualifiedRemoval</h3>
-        <p></p>
         <div class="glossary-ref">prov:qualifiedRemoval shows the details of a
           removal, in particular the removed keys.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2509,13 +2132,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedRevision">
         <h3 id="qualifiedrevision">qualifiedRevision</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2525,13 +2144,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedStart">
         <h3 id="qualifiedstart">qualifiedStart</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2541,13 +2156,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="qualifiedUsage">
         <h3 id="qualifiedusage">qualifiedUsage</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2557,15 +2168,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Quotation">
         <h3 id="quotation">Quotation</h3>
-        <p></p>
         <div class="glossary-ref"> A <dfn id="concept-quotation" title="Quotation">quotation</dfn>
           is the repeat of (some or all of) an entity, such as text or image, by
           someone who may or may not be its original author. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2587,14 +2195,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="R" style="font-size: 300%;">R</p>
       <div id="ref">
         <h3>ref</h3>
         <div class="glossary-ref">In PROV-XML, a xml-attribute that denotes a
           reference-by-id to an instance of a prov-"type" or prov-"relation".</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2604,15 +2210,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Removal">
         <h3 id="removal">Removal</h3>
-        <p></p>
         <div class="glossary-ref">Removal is a derivation that describes the
           transformation of a dictionary into another, by removing one or more
           keys.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2622,13 +2225,10 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="removedKey">
         <h3 id="removedkey">removedKey</h3>
-        <p></p>
         <div class="glossary-ref">The key removed in a Removal.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2638,13 +2238,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Replace">
         <h3 id="replace">Replace</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2654,13 +2250,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="responsible">
         <h3>responsible</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2670,15 +2262,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Revision">
         <h3 id="revision">Revision</h3>
-        <p></p>
         <div class="glossary-ref"> A <dfn id="concept-revision" title="Revision">revision</dfn>
           is a derivation for which the resulting entity is a revised version of
           some original. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2700,13 +2289,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="RightsAssignment">
         <h3 id="rightsassignment">RightsAssignment</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2716,13 +2301,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="RightsHolder">
         <h3 id="rightsholder">RightsHolder</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2732,15 +2313,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Role">
         <h3 id="role">role</h3>
-        <p></p>
         <div class="glossary-ref"> A <dfn>role</dfn> is the function of an
           entity or agent with respect to an activity, in the context of a
           usage, generation, invalidation, association, start, and end. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2762,17 +2340,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="S" style="font-size: 300%;">S</p>
       <div id="ServiceDescription">
         <h3 id="servicedescription">ServiceDescription</h3>
-        <p></p>
         <div class="glossary-ref">Type for a generic provenance query service.
           Mainly for use in RDF provenance query service descriptions, to
           facilitate discovery of provenance services in linked data
           environments.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2782,13 +2357,10 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="SoftwareAgent">
         <h3 id="softwareagent">SoftwareAgent</h3>
-        <p></p>
         <div class="glossary-ref">A software agent is running software.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2810,17 +2382,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Specialization">
         <h3>Specialization</h3>
-        <p></p>
         <div class="glossary-ref"> An entity that is a <dfn title="Specialization">specialization</dfn>
           of another shares all aspects of the latter, and additionally presents
           more specific aspects of the same thing as the latter. In particular,
           the lifetime of the entity being specialized contains that of any
           specialization. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2834,17 +2403,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="specializationOf">
         <h3 id="specializationof">specializationOf</h3>
-        <p></p>
         <div class="glossary-ref"> An entity that is a <dfn title="Specialization">specialization</dfn>
           of another shares all aspects of the latter, and additionally presents
           more specific aspects of the same thing as the latter. In particular,
           the lifetime of the entity being specialized contains that of any
           specialization. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2866,13 +2432,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="specificEntity">
         <h3>specificEntity</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2890,11 +2452,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Start">
         <h3 id="start">Start</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn id="concept-start">Start</dfn> is when
           an activity is deemed to have been started by an entity, known as <dfn
             id="concept-start-trigger" title="start trigger">trigger</dfn>. The
@@ -2903,7 +2463,6 @@ table.simple {
           start may refer to a trigger entity that set off the activity, or to
           an activity, known as <dfn id="concept-start-starter">starter</dfn>,
           that generated the trigger. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2925,13 +2484,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="starter">
         <h3>starter</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2941,13 +2496,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="startTime">
         <h3>startTime</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2957,13 +2508,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="startedAtTime">
         <h3 id="startedattime">startedAtTime</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2973,13 +2520,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="Submit">
         <h3 id="submit">Submit</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -2989,15 +2532,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="T" style="font-size: 300%;">T</p>
       <div id="time">
         <h3>time</h3>
-        <p></p>
         <div class="glossary-ref">In PROV-XML, represents <a href="http://www.w3.org/TR/2013/REC-prov-dm-20130430/#dfn-time">time
             instants</a> as defined in PROV-DM.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3007,13 +2547,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="trigger">
         <h3>trigger</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3023,12 +2559,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="type">
         <h3>type</h3>
-        <p></p>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3046,17 +2579,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="U" style="font-size: 300%;">U</p>
       <div id="Usage">
         <h3>Usage</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn id="concept-usage">Usage</dfn> is the
           beginning of utilizing an entity by an activity. Before usage, the
           activity had not begun to utilize this entity and could not have been
           affected by the entity. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3078,13 +2608,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="usage">
         <h3>usage</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3094,16 +2620,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="used">
         <h3 id="used-1">used</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn>Usage</dfn> is the beginning of
           utilizing an entity by an activity. Before usage, the activity had not
           begun to utilize this entity and could not have been affected by the
           entity. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3125,13 +2648,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="usedEntity">
         <h3>usedEntity</h3>
-        <p></p>
-        <div class="glossary-ref"></div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3141,17 +2660,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="V" style="font-size: 300%;">V</p>
       <div id="value">
         <h3 id="value-1">value</h3>
-        <p></p>
         <div class="glossary-ref"> A <dfn id="concept-value" title="value">value</dfn>
           is a constant such as a string, number, time, qualified name, IRI, and
           encoded binary data, whose interpretation is outside the scope of
           PROV. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3173,18 +2689,15 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <p id="W" style="font-size: 300%;">W</p>
       <div id="wasAssociatedWith">
         <h3 id="wasassociatedwith">wasAssociatedWith</h3>
-        <p></p>
         <div class="glossary-ref"> An activity <dfn>association</dfn> is an
           assignment of responsibility to an agent for an activity, indicating
           that the agent had a role in the activity. It further allows for a
           plan to be specified, which is the plan intended by the agent to
           achieve some goals in the context of this activity. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3206,14 +2719,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="wasAttributedTo">
         <h3 id="wasattributedto">wasAttributedTo</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn>Attribution</dfn> is the ascribing of
           an entity to an agent. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3235,16 +2745,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="wasDerivedFrom">
         <h3 id="wasderivedfrom">wasDerivedFrom</h3>
-        <p></p>
         <div class="glossary-ref"> A <dfn>derivation</dfn> is a transformation
           of an entity into another, an update of an entity resulting in a new
           one, or the construction of a new entity based on a pre-existing
           entity.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3266,18 +2773,15 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="wasEndedBy">
         <h3>wasEndedBy</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn>End</dfn> is when an activity is deemed
           to have been ended by an entity, known as <dfn>trigger</dfn>. The
           activity no longer exists after its end. Any usage, generation, or
           invalidation involving an activity precedes the activity's end. An end
           may refer to a trigger entity that terminated the activity, or to an
           activity, known as <dfn>ender</dfn> that generated the trigger. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3299,16 +2803,13 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="wasGeneratedBy">
         <h3 id="wasgeneratedby">wasGeneratedBy</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn>Generation</dfn> is the completion of
           production of a new entity by an activity. This entity did not exist
           before generation and becomes available for usage after this
           generation. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3330,17 +2831,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="wasInfluencedBy">
         <h3 id="wasinfluencedby">wasInfluencedBy</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn>Influence</dfn> is the capacity of an
           entity, activity, or agent to have an effect on the character,
           development, or behavior of another by means of usage, start, end,
           generation, invalidation, communication, derivation, attribution,
           association, or delegation. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3362,15 +2860,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="wasInformedBy">
         <h3 id="wasinformedby">wasInformedBy</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn>Communication</dfn> is the exchange of
           some unspecified entity by two activities, one activity using some
           entity generated by the other. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3392,17 +2887,14 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="wasInvalidatedBy">
         <h3 id="wasinvalidatedby">wasInvalidatedBy</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn>Invalidation</dfn> is the start of the
           destruction, cessation, or expiry of an existing entity by an
           activity. The entity is no longer available for use (or further
           invalidation) after invalidation. Any generation or usage of an entity
           precedes its invalidation.</div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3424,15 +2916,12 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="wasQuotedFrom">
         <h3 id="wasquotedfrom">wasQuotedFrom</h3>
-        <p></p>
         <div class="glossary-ref"> A <dfn>quotation</dfn> is the repeat of
           (some or all of) an entity, such as text or image, by someone who may
           or may not be its original author. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3454,14 +2943,11 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="wasRevisionOf">
         <h3 id="wasrevisionof">wasRevisionOf</h3>
-        <p></p>
         <div class="glossary-ref"> A <dfn>revision</dfn> is a derivation for
           which the resulting entity is a revised version of some original. </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3483,11 +2969,9 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
       <div id="wasStartedBy">
         <h3 id="wasstartedby">wasStartedBy</h3>
-        <p></p>
         <div class="glossary-ref"> <dfn>Start</dfn> is when an activity is
           deemed to have been started by an entity, known as <dfn>trigger</dfn>.
           The activity did not exist before its start. Any usage, generation, or
@@ -3495,7 +2979,6 @@ table.simple {
           start may refer to a trigger entity that set off the activity, or to
           an activity, known as <dfn>starter</dfn>, that generated the trigger.
         </div>
-        <p></p>
         <p> </p>
         <table>
           <tbody>
@@ -3517,7 +3000,6 @@ table.simple {
             </tr>
           </tbody>
         </table>
-        <p></p>
       </div>
     </section>
     <hr>
