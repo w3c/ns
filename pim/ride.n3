@@ -1,0 +1,25 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+  :docket_Number  a rdf:Property; rdfs:label "Docket Number".
+  
+  :account_Number  a rdf:Property; rdfs:label "account number".
+  :account_Name  a rdf:Property; rdfs:label "account name".
+  :docket_Date  a rdf:Property; rdfs:label "docket date"; rdfs:comment " Like 30/04/2013".
+  :docket_Time  a rdf:Property; rdfs:label "docket time".
+  :docket_Reference  a rdf:Property; rdfs:label "docket reference".
+  :contact_Name  a rdf:Property; rdfs:label "Contact Name".
+  :main_Passenger_Name  a rdf:Property; rdfs:label "Main Passenger Name".
+  :waiting_Time  a rdf:Property; rdfs:label "Waiting Time".
+  :docket_Service_Description  a rdf:Property; rdfs:label "Docket Service Description".
+  :pickup_Address  a rdf:Property; rdfs:label "pickup address".
+  :dropoff_Address  a rdf:Property; rdfs:label "dropoff address".
+  :journey_Price  a rdf:Property; rdfs:label "journey price".
+  :waiting_Time_Cost  a rdf:Property; rdfs:label "Waiting Time Cost".
+  :total_Client_Extras  a rdf:Property; rdfs:label "Total Client Extras".
+  :total_Client_Price  a rdf:Property; rdfs:label "Total Client Price".
+  :docket_Invoice_Number  a rdf:Property; rdfs:label "Docket Invoice Number".
+  :docket_Invoice_Date  a rdf:Property; rdfs:label "Docket Invoice Date".
+
+
+# ends

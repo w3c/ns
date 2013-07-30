@@ -1,0 +1,80 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdf:Property rdf:about="#account_Name">
+        <label>account name</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#account_Number">
+        <label>account number</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#contact_Name">
+        <label>Contact Name</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#docket_Date">
+        <comment> Like 30/04/2013</comment>
+        <label>docket date</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#docket_Invoice_Date">
+        <label>Docket Invoice Date</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#docket_Invoice_Number">
+        <label>Docket Invoice Number</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#docket_Number">
+        <label>Docket Number</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#docket_Reference">
+        <label>docket reference</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#docket_Service_Description">
+        <label>Docket Service Description</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#docket_Time">
+        <label>docket time</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#dropoff_Address">
+        <label>dropoff address</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#journey_Price">
+        <label>journey price</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#main_Passenger_Name">
+        <label>Main Passenger Name</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#pickup_Address">
+        <label>pickup address</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#total_Client_Extras">
+        <label>Total Client Extras</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#total_Client_Price">
+        <label>Total Client Price</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#waiting_Time">
+        <label>Waiting Time</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="#waiting_Time_Cost">
+        <label>Waiting Time Cost</label>
+    </rdf:Property>
+</rdf:RDF>
