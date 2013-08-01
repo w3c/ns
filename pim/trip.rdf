@@ -23,6 +23,13 @@ at ones home base, or a set of photos taken at home etc.
         <doc:version>$Id$</doc:version>
     </rdf:Description>
 
+    <s:Class rdf:about="http://www.w3.org/ns/pim/trip#TaxiTransaction">
+        <s:comment>A Taxi transaction is a financial trasction related to a ride in
+    a taxi, car, etc. </s:comment>
+        <s:label>taxi transaction</s:label>
+        <s:subClassOf rdf:resource="http://www.w3.org/2000/10/swap/pim/qif#Transaction"/>
+    </s:Class>
+
     <s:Class rdf:about="http://www.w3.org/ns/pim/trip#Trip">
         <s:isDefinedBy rdf:resource=""/>
         <s:label>trip</s:label>
@@ -81,6 +88,12 @@ at ones home base, or a set of photos taken at home etc.
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#part">
         <s:label>part</s:label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#travelDate">
+        <s:comment>When the travel took place, or started. This should be a datetime (or a date).
+    This may be different fron the date the fare was ivoiced or charged.</s:comment>
+        <s:label>travel date</s:label>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#trip">

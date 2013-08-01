@@ -94,4 +94,20 @@ TripForm3 a ui:Form;
 # -- http://en.wikipedia.org/wiki/Electronic_ticket
 # -- http://www.kovrik.com/sib/travel/airline-codes.txt
 
+####################  Taxis
+#
+
+TaxiTransaction a s:Class;
+    s:label "taxi transaction";
+    s:subClassOf q:Transaction;
+    s:comment """A Taxi transaction is a financial trasction related to a ride in
+    a taxi, car, etc. """.
+
+
+travelDate a rdf:Property;
+    s:label "travel date";
+    s:comment """When the travel took place, or started. This should be a datetime (or a date).
+    This may be different fron the date the fare was ivoiced or charged.""".
+
+
 #ends
