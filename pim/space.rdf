@@ -33,41 +33,75 @@ Goals then are that the user can
         <subClassOf rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
     </rdf:Description>
 
+    <Class rdf:about="http://www.w3.org/ns/pim/space#ControlledStorage">
+        <comment>A  storage is a space of URIs in which you can individually control for each resource
+    who has access to it.
+</comment>
+        <label>access controlled storage</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Storage"/>
+    </Class>
+
     <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#MasterWorkspace">
         <comment>This is a workspace for storing the 
     information about the other workspaces.
     As a user, you normally don't have to worry about it.</comment>
         <label xml:lang="en">Master Workspace</label>
-        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Private"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#PrivateWorkspace"/>
     </rdf:Description>
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#Private">
+    <Class rdf:about="http://www.w3.org/ns/pim/space#PersonalStorage">
+        <comment>A personal storage is a space of URIs in which you and only you have access to data,
+    you cannot give access to anyone else.
+</comment>
+        <label>personal storage</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Storage"/>
+    </Class>
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#PrivateWorkspace">
+        <comment>Access only by the you, the user.</comment>
         <label>Private workspace</label>
         <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
     </rdf:Description>
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#Public">
+    <Class rdf:about="http://www.w3.org/ns/pim/space#PublicStorage">
+        <comment>A public storage is a space of URIs in which you have access to data,
+    and all data is accessible to anyone without control.
+</comment>
+        <label>public storage</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Storage"/>
+    </Class>
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#PublicWorkspace">
+        <comment>Aceess is open to the public. Anything in a public workspace
+    can be accesed by anyone.</comment>
         <label>Public workspace</label>
         <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
     </rdf:Description>
 
-    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#Shared">
+    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#SharedWorkspace">
+        <comment>Access is to some but not all people.</comment>
         <label>Shared workspace</label>
         <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
     </rdf:Description>
 
+    <Class rdf:about="http://www.w3.org/ns/pim/space#Storage">
+        <comment>A storage is a space of URIs in which you have access to data.
+</comment>
+        <label>storage</label>
+    </Class>
+
     <Class rdf:about="http://www.w3.org/ns/pim/space#Workspace">
-        <comment>Workspaces are place where data is stored, and asscoiated polices of privacy.
+        <comment>Workspaces are place where data is stored, and associated polices of privacy.
 A given application typically stores information in several different
 workspaces, some being user private, some shared, and some public.
 </comment>
         <label>workspace</label>
         <owl:disjointUnionOf rdf:parseType="Resource">
-            <rdf:first rdf:resource="http://www.w3.org/ns/pim/space#Private"/>
+            <rdf:first rdf:resource="http://www.w3.org/ns/pim/space#PrivateWorkspace"/>
             <rdf:rest rdf:parseType="Resource">
-                <rdf:first rdf:resource="http://www.w3.org/ns/pim/space#Shared"/>
+                <rdf:first rdf:resource="http://www.w3.org/ns/pim/space#SharedWorkspace"/>
                 <rdf:rest rdf:parseType="Resource">
-                    <rdf:first rdf:resource="http://www.w3.org/ns/pim/space#Public"/>
+                    <rdf:first rdf:resource="http://www.w3.org/ns/pim/space#PublicWorkspace"/>
                     <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                 </rdf:rest>
             </rdf:rest>
@@ -86,9 +120,18 @@ workspaces, some being user private, some shared, and some public.
         <range rdf:resource="http://www.w3.org/ns/pim/space#ConfigurationFile"/>
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/space#storage">
+        <comment>The storage in which this workspace is</comment>
+        <label>storage</label>
+        <range rdf:resource="http://www.w3.org/ns/pim/space#Storage"/>
+        <owl:inverse rdf:parseType="Resource">
+            <label>workspace included</label>
+        </owl:inverse>
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/space#uriPrefix">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <comment>URIs which start with this string are in this woprkspace.
+        <comment>URIs which start with this string are in this workspace or storage.
 This may be used for constructing URIs for new storage resources.
 </comment>
         <label>URI prefix</label>
