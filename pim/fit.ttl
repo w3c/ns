@@ -1,0 +1,160 @@
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix doc: <http://www.w3.org/2000/10/swap/pim/doc#> .
+    @prefix fit: <http://www.w3.org/ns/pim/fit#> .
+    @prefix foaf: <http://xmlns.com/foaf/0.1/> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix ui: <http://www.w3.org/ns/ui#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    
+    <>     :comment """This ontology is for use in describing 
+for fitness records.  Inspired by the anual
+getfit.mit.edu system which oly runs for a few weeks,
+but records exercise sessions.
+""";
+         :seeAlso <http://www.w3.org/2002/12/cal/ical>;
+         doc:version "$Id$" .
+    
+    fit:Activity     a :Class;
+         :label "activity";
+         :subClassOf fit:Excercise;
+         owl:disjointUnionOf  (
+        fit:Walking
+        fit:Cycling
+        fit:Running
+        fit:XCSkiing
+        fit:DownhillSkiing
+        fit:SkateSkiing
+        fit:Skating
+        fit:Cardio
+        fit:Weights
+        fit:Yoga ) .
+    
+    fit:Cardio     a :Class;
+         :label "cardio";
+         :sibClassOf fit:Activity .
+    
+    fit:Cycling     a :Class;
+         :label "cycling";
+         :subClassOf fit:Activity .
+    
+    fit:DownhillSkiing     a :Class;
+         :label "downhill skiing";
+         :subClassOf fit:Activity .
+    
+    fit:Excericise     a :Class;
+         :label "excercise session";
+         ui:example fit:ExcericiseExample .
+    
+    fit:FitnessLog     a :Class;
+         :comment """This is a cenral class of thing to start at.
+    It can have various different things added to it.""";
+         :label "fitness log" .
+    
+    fit:High     a :Class;
+         :label "haut",
+                "high"@en;
+         :subClassOf fit:Intensity .
+    
+    fit:Intensity     :label "Intensity"@en,
+                "Intensité"@fr;
+         :subClassOf fit:Excercise;
+         owl:disjointUnionOf  (
+        fit:High
+        fit:Medium
+        fit:Low ) .
+    
+    fit:Low     a :Class;
+         :label "bas"@fr,
+                "low"@en;
+         :subClassOf fit:Intensity .
+    
+    fit:Medium     a :Class;
+         :label "medium"@en,
+                "moyen"@fr;
+         :subClassOf fit:Intensity .
+    
+    fit:Record     a :Class;
+         :comment "A record of information about a person." .
+    
+    fit:Running     a :Class;
+         :label "running";
+         :subClassOf fit:Activity .
+    
+    fit:SkateSkiing     a :Class;
+         :label "skate-skiing";
+         :subClassOf fit:Activity .
+    
+    fit:Skating     a :Class;
+         :label "skating";
+         :subclassOf fit:Activity .
+    
+    fit:Walking     a :Class;
+         :label "walking";
+         :subClassOf fit:Activity .
+    
+    fit:Weights     a :Class;
+         :label "weights";
+         :sibClassOf fit:Activity .
+    
+    fit:XCSkiing     a :Class;
+         :label "cross-country skiing";
+         :subClassOf fit:Activity .
+    
+    fit:Yoga     a :Class;
+         :label "yoga";
+         :sibClassOf fit:Activity .
+    
+    fit:bloodPressureDiastolic     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment """Blood pressure (the 76 in "117 over 76"). Units: millimeters of mercury.
+        A property not of a person, but of a dated record about a person""";
+         :domain fit:Record;
+         :label "BP (dia) /mmHg"@en;
+         :range xsd:float .
+    
+    fit:bloodPressureSystolic     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment """Blood pressure (the 117 in "117 over 76"). Units: millimeters of mercury.
+         A property not of a person, but of a dated record about a person""";
+         :domain fit:Record;
+         :label "BP (sys) /mmHg"@en;
+         :range xsd:float .
+    
+    fit:distance     a rdf:Property,
+                owl:DatatypeProperty;
+         :range xsd:float .
+    
+    fit:duration     a rdf:Property,
+                owl:DatatypeProperty;
+         :range xsd:float .
+    
+    fit:energyBurn     a rdf:Property,
+                owl:DatatypeProperty;
+         :range xsd:float .
+    
+    fit:exercise     a rdf:Property;
+         :comment "The relationship between a fitnes log and an exercise session";
+         :label "excercise session";
+         :range fit:Excericise .
+    
+    fit:fitnessLog     a rdf:Property,
+                owl:ObjectProperty;
+         :domain foaf:Person;
+         :range fit:FitnessLog .
+    
+    fit:record     a rdf:Property,
+                owl:ObjectProperty;
+         :comment """The relationship between a fitness log and one record in it.
+    The reading is about the subject of the log.""";
+         :label "reading"@en .
+    
+    fit:weight     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment """A property not of a person, but of a dated record
+            about a person""";
+         :domain fit:Record;
+         :label "poids/kg"@fr,
+                "weight/kg"@en;
+         :range xsd:float .
+    
