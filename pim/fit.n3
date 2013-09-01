@@ -67,8 +67,7 @@ exercise a rdf:Property;
 
 ##   Classifications:
 
-Excericise  a s:Class; s:label "excercise session";
-    ui:example ExcericiseExample.
+Excericise  a s:Class; s:label "excercise session".
 
 Intensity owl:disjointUnionOf ( High Medium Low);
     s:label "Intensity"@en, "Intensité"@fr;
@@ -98,11 +97,11 @@ Running a s:Class; s:label "running"; s:subClassOf Activity.
 XCSkiing a s:Class; s:label "cross-country skiing"; s:subClassOf Activity.
 DownhillSkiing a s:Class; s:label "downhill skiing"; s:subClassOf Activity.
 SkateSkiing a s:Class; s:label "skate-skiing"; s:subClassOf Activity.
-Skating a s:Class; s:label "skating"; s:subclassOf Activity.
+Skating a s:Class; s:label "skating"; s:subClassOf Activity.
 
-Cardio a s:Class; s:label "cardio"; s:sibClassOf Activity.
-Weights a s:Class; s:label "weights"; s:sibClassOf Activity.
-Yoga a s:Class; s:label "yoga"; s:sibClassOf Activity.
+Cardio a s:Class; s:label "cardio"; s:subClassOf Activity.
+Weights a s:Class; s:label "weights"; s:subClassOf Activity.
+Yoga a s:Class; s:label "yoga"; s:subClassOf Activity.
 
 distance a rdf:Property, owl:DatatypeProperty; s:range xsd:float.  # @@ elsewhere
 

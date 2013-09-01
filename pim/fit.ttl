@@ -4,7 +4,6 @@
     @prefix foaf: <http://xmlns.com/foaf/0.1/> .
     @prefix owl: <http://www.w3.org/2002/07/owl#> .
     @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-    @prefix ui: <http://www.w3.org/ns/ui#> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
     
     <>     :comment """This ontology is for use in describing 
@@ -32,7 +31,7 @@ but records exercise sessions.
     
     fit:Cardio     a :Class;
          :label "cardio";
-         :sibClassOf fit:Activity .
+         :subClassOf fit:Activity .
     
     fit:Cycling     a :Class;
          :label "cycling";
@@ -43,8 +42,7 @@ but records exercise sessions.
          :subClassOf fit:Activity .
     
     fit:Excericise     a :Class;
-         :label "excercise session";
-         ui:example fit:ExcericiseExample .
+         :label "excercise session" .
     
     fit:FitnessLog     a :Class;
          :comment """This is a cenral class of thing to start at.
@@ -87,7 +85,7 @@ but records exercise sessions.
     
     fit:Skating     a :Class;
          :label "skating";
-         :subclassOf fit:Activity .
+         :subClassOf fit:Activity .
     
     fit:Walking     a :Class;
          :label "walking";
@@ -95,7 +93,7 @@ but records exercise sessions.
     
     fit:Weights     a :Class;
          :label "weights";
-         :sibClassOf fit:Activity .
+         :subClassOf fit:Activity .
     
     fit:XCSkiing     a :Class;
          :label "cross-country skiing";
@@ -103,7 +101,7 @@ but records exercise sessions.
     
     fit:Yoga     a :Class;
          :label "yoga";
-         :sibClassOf fit:Activity .
+         :subClassOf fit:Activity .
     
     fit:bloodPressureDiastolic     a rdf:Property,
                 owl:DatatypeProperty;

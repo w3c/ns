@@ -5,8 +5,7 @@
     xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:s="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:ui="http://www.w3.org/ns/ui#">
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
 
     <rdf:Description rdf:about="">
         <comment>This ontology is for use in describing 
@@ -56,7 +55,7 @@ but records exercise sessions.
 
     <Class rdf:about="http://www.w3.org/ns/pim/fit#Cardio">
         <label>cardio</label>
-        <sibClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
     </Class>
 
     <Class rdf:about="http://www.w3.org/ns/pim/fit#Cycling">
@@ -71,7 +70,6 @@ but records exercise sessions.
 
     <Class rdf:about="http://www.w3.org/ns/pim/fit#Excericise">
         <label>excercise session</label>
-        <ui:example rdf:resource="http://www.w3.org/ns/pim/fit#ExcericiseExample"/>
     </Class>
 
     <Class rdf:about="http://www.w3.org/ns/pim/fit#FitnessLog">
@@ -130,7 +128,7 @@ but records exercise sessions.
 
     <Class rdf:about="http://www.w3.org/ns/pim/fit#Skating">
         <label>skating</label>
-        <subclassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
     </Class>
 
     <Class rdf:about="http://www.w3.org/ns/pim/fit#Walking">
@@ -140,7 +138,7 @@ but records exercise sessions.
 
     <Class rdf:about="http://www.w3.org/ns/pim/fit#Weights">
         <label>weights</label>
-        <sibClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
     </Class>
 
     <Class rdf:about="http://www.w3.org/ns/pim/fit#XCSkiing">
@@ -150,7 +148,7 @@ but records exercise sessions.
 
     <Class rdf:about="http://www.w3.org/ns/pim/fit#Yoga">
         <label>yoga</label>
-        <sibClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
     </Class>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#bloodPressureDiastolic">
