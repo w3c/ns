@@ -34,15 +34,15 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-formats:N-Triples a formats:Format ;
-    dcterms:created "2010-05-04" ;
+formats:N-Quads a formats:Format ;
+    dcterms:created "2013-09-05" ;
     dcterms:creator <http://www.ivan-herman.net/foaf#me> ;
-    dcterms:description "Unique identifier for the RDF serialization in N-Triples" ;
+    dcterms:description "Unique identifier for the RDF serialization in N-Quads" ;
     dcterms:modified "2013-09-05" ;
-    rdfs:comment "N-Quads is defined  the “N-Triples” W3C Recommendation track document. It uses the general media type: ‘application/n-triples’ and a preferred suffix: ‘.nt’." ;
-    rdfs:isDefinedBy <http://www.w3.org/TR/n-triples/> ;
-    formats:media_type "application/n-triples" ;
-    formats:preferred_suffix ".nt" .
+    rdfs:comment "N-Quads is defined  the “N-Quads” W3C Recommendation track document. It uses the general media type: ‘application/n-quads’ and a preferred suffix: ‘.nq’." ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/n-quads/> ;
+    formats:media_type "application/n-quads" ;
+    formats:preferred_suffix ".nq" .
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;
     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;

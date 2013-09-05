@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:formats="http://www.w3.org/ns/formats/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/N-Quads">
+    <dcterms:description>Unique identifier for the RDF serialization in N-Quads</dcterms:description>
+    <rdfs:comment>N-Quads is defined  the “N-Quads” W3C Recommendation track document. It uses the general media type: ‘application/n-quads’ and a preferred suffix: ‘.nq’.</rdfs:comment>
+    <dcterms:created>2013-09-05</dcterms:created>
+    <dcterms:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:name>Ivan Herman</foaf:name>
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+      </foaf:Person>
+    </dcterms:creator>
+    <formats:preferred_suffix>.nq</formats:preferred_suffix>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/n-quads/"/>
+    <dcterms:modified>2013-09-05</dcterms:modified>
+    <formats:media_type>application/n-quads</formats:media_type>
+  </formats:Format>
+</rdf:RDF>
+

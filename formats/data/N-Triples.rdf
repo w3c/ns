@@ -3,26 +3,26 @@
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:dcterms="http://purl.org/dc/terms/"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:formats="http://www.w3.org/ns/formats/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
 >
   <formats:Format rdf:about="http://www.w3.org/ns/formats/N-Triples">
-    <dcterms:description>Unique identifier for the RDF serialization in N-Triples</dcterms:description>
+    <dcterms:modified>2013-09-05</dcterms:modified>
     <dcterms:creator>
       <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
-        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
-        <foaf:name>Ivan Herman</foaf:name>
-        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
-        <foaf:title>Semantic Web Activity Lead</foaf:title>
         <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <foaf:name>Ivan Herman</foaf:name>
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
       </foaf:Person>
     </dcterms:creator>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdf-testcases/#ntriples"/>
-    <formats:preferred_suffix>.nt</formats:preferred_suffix>
-    <rdfs:comment>N-Triples is defined as part of the “RDF Test Cases” W3C Recommendation. It uses the general media type: ‘text/plain’ and a preferred suffix: ‘.nt’.</rdfs:comment>
-    <dcterms:modified>2013-03-25</dcterms:modified>
+    <rdfs:comment>N-Quads is defined  the “N-Triples” W3C Recommendation track document. It uses the general media type: ‘application/n-triples’ and a preferred suffix: ‘.nt’.</rdfs:comment>
+    <formats:media_type>application/n-triples</formats:media_type>
+    <dcterms:description>Unique identifier for the RDF serialization in N-Triples</dcterms:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/n-triples/"/>
     <dcterms:created>2010-05-04</dcterms:created>
-    <formats:media_type>text/plain</formats:media_type>
+    <formats:preferred_suffix>.nt</formats:preferred_suffix>
   </formats:Format>
 </rdf:RDF>
 
