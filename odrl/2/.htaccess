@@ -6,4 +6,4 @@ DirectoryIndex model.var
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule . - [L]
 
-RewriteRule ^/(.*)$		http://www.w3.org/ns/odrl/2/ [R=303,L]
+RewriteRule ^(.+)$		http://www.w3.org/ns/odrl/2/ [R=303,L]
