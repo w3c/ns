@@ -1,0 +1,1075 @@
+@base <http://w3.org/ns/odrl/2/> .
+@prefix : <http://w3.org/ns/odrl/2/> .
+@prefix odrl: <http://w3.org/ns/odrl/2/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix voaf: <http://purl.org/vocommons/voaf#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+
+odrl:
+	a owl:Ontology , voaf:Vocabulary ;
+	rdfs:label "ODRL"@en ;
+	owl:versionInfo "2.0"@en ;
+	vann:preferredNamespaceUri <http://w3.org/ns/odrl/2/> ;
+	vann:preferredNamespacePrefix "odrl" ;
+	vann:example :Asset ;
+	dct:creator "Mo McRoberts", "Víctor Rodríguez Doncel" ;
+	dct:contributor "ODRL Community Group" .
+
+:actions
+	a skos:ConceptScheme ;
+	rdfs:label "ODRL Actions vocabulary"@en ;
+	skos:hasTopConcept :acceptTracking, :adHocShare, :aggregate, :annotate,
+		:anonymize, :append, :archive, :attachPolicy, :attachSource,
+		:attribute, :commercialize, :concurrentUse, :copy, :delete,
+		:derive, :display, :distribute, :ensureExclusivity, :execute,
+		:export, :extract, :give, :include, :index, :inform,
+		:install, :lease, :lend, :license, :modify, :move, :nextPolicy,
+		:obtainConsent, :pay, :play, :present, :preview, :print, :read,
+		:reproduce, :reviewPolicy, :secondaryUse, :sell, :share,
+		:shareAlike, :textToSpeech, :transform, :translate, :uninstall,
+		:watermark, :write .
+
+:scopes
+	a skos:ConceptScheme ;
+	rdfs:label "ODRL Scopes vocabulary"@en ;
+	skos:hasTopConcept :all, :all2ndConnections, :allConnections, :allGroups,
+		:group, :individual .
+
+## Assets
+
+:Asset
+	a rdfs:Class , owl:Class ;
+	owl:equivalentClass owl:Thing ;
+	vs:term_status "testing" ;
+	rdfs:label "Asset"@en ;
+	rdfs:comment "Any thing which can be subject to a policy."@en .
+
+## Parties
+
+:Party
+	a rdfs:Class , owl:Class ;
+	vs:term_status "testing" ;
+	rdfs:label "Party"@en ;
+	rdfs:comment "An entity which can participate in policy transactions. Use an instance of the Party class where it's necessary to associate a Scope with the relationship; in other cases, simply reference the party directly."@en .
+
+:Scope
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf skos:Concept ;
+	rdfs:comment "The scope attribute indicates how to interpret the identified Party and provides contextual information in determining the extent of the policy statement. For example, if a Party is identified as a member of the Acme Social Network (using identifier urn:acme:user:billie) and they are the assignee with \"allConnections\" scope, then the group of individuals that have actually been assigned the permission consists of all the first-level connections (eg friends) that the identified Party has on that social network. That is, the social graph of the party starting from urn:acme:user:billie."@en ;
+	rdfs:label "Scope"@en ;
+	vs:term_status "testing" .
+
+:scope
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Scope"@en ;
+	rdfs:comment "The scope by which the role applies"@en ;
+	rdfs:domain :Party ;
+	rdfs:range :Scope .
+
+## Policies
+
+:Policy
+	a rdfs:Class , owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	vs:term_status "testing" ;
+	rdfs:label "Policy"@en ;
+	rdfs:comment "A top level entity for describing policies."@en .
+
+:ConflictTerm
+	a rdfs:Class, owl:Class ;
+	rdfs:comment "Instances of ConflictTerm describe policies for resolving conflicts."@en ;
+	rdfs:label "Conflict term"@en ;
+	vs:term_status "testing" .
+
+:perm
+	a :ConflictTerm ;
+	vs:term_status "testing" ;
+	rdfs:label "Permissions"@en ;
+	rdfs:comment "Permissions take precedence over prohibitions."@en .
+
+:prohibit
+	a :ConflictTerm ;
+	vs:term_status "testing" ;
+	rdfs:label "Prohibit"@en ;
+	rdfs:comment "Prohibitions take precedence over permissions."@en .
+
+:UndefinedTerm
+	a rdfs:Class, owl:Class ;
+	rdfs:comment "Instances of UndefinedTerm describe policies for processing unsupported actions."@en ;
+	rdfs:label "Undefined values"@en ;
+	vs:term_status "testing" .
+
+:ignore
+	a :UndefinedTerm ;
+	vs:term_status "testing" ;
+	rdfs:label "Ignore"@en ;
+	rdfs:comment "Undefined actions should be ignored."@en .
+
+:invalid
+	a :ConflictTerm, :UndefinedTerm ;
+	vs:term_status "testing" ;
+	rdfs:label "Invalid"@en ;
+	rdfs:comment "The policy is invalidated."@en .
+
+:support
+	a :UndefinedTerm ;
+	vs:term_status "testing" ;
+	rdfs:label "Support"@en ;
+	rdfs:comment "Undefined actions do not invalidate the policy, but notification for review must occur."@en .
+
+:conflict
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Conflict resolution mechanism"@en ;
+	rdfs:comment "Relates a conflict-resolution mechansim to a Policy. If no mechanism is specified, the default is invalid."@en ;
+	rdfs:domain :Policy ;
+	rdfs:range :ConflictTerm .
+
+:undefined
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Undefined action mechanism"@en ;
+	rdfs:comment "Relates the mechanism used for handling undefined actions to a Policy. If no mechanism is specified, the default is invalid."@en ;
+	rdfs:domain :Policy ;
+	rdfs:range :UndefinedTerm .
+
+:permission
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Permission"@en ;
+	rdfs:comment "Relates the description of an individual Permission to a Policy. A permission can be specified either in terms of an Action alone, or an instance of Permission relating an Action and one or more other attributes."@en ;
+	rdfs:domain :Policy ;
+	rdfs:range :Permission , :Action .
+
+:prohibition
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Prohibition"@en ;
+	rdfs:comment "Relates the description of an individual Prohibition to a Policy. A prohibition can be specified either in terms of an Action alone, or an instance of Prohibition relating an Action and one or more other attributes."@en ;
+	rdfs:domain :Policy ;
+	rdfs:range :Prohibition , :Action .
+
+:inheritAllowed
+	a rdf:Property , owl:DatatypeProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Inheritance allowed?"@en ;
+	rdfs:comment "A boolean value indicating whether this policy can be inherited from."@en ;
+	rdfs:domain :Policy ;
+	rdfs:range xsd:boolean .
+
+:inheritFrom
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Inherits from"@en ;
+	rdfs:comment "Relates a policy to another policy from which terms are inherited."@en ;
+	rdfs:domain :Policy ;
+	rdfs:range :Policy .
+
+## Permissions, prohibitions and duties
+
+:Rule
+	a rdfs:Class , owl:Class ;
+	vs:term_status "testing" ;
+	rdfs:label "Rule"@en ;
+	rdfs:comment "An abstract common ancestor to Permissions, Prohibitions and Duties"@en .
+
+:Permission
+	a rdfs:Class , owl:Class ;
+	rdfs:subClassOf :Rule ;
+	vs:term_status "testing" ;
+	rdfs:label "Permission"@en ;
+	rdfs:comment "A permission indicates the actions the assignee is permitted to perform on the associated asset. In other words, what the assigner (supplier) has granted to the assignee (consumer)."@en .
+
+:Prohibition
+	a rdfs:Class , owl:Class ;
+	rdfs:subClassOf :Rule ;
+	vs:term_status "testing" ;
+	rdfs:label "Prohibition"@en ;
+	rdfs:comment "The Prohibition entity indicates the Actions that the assignee is prohibited to perform on the related Asset."@en .
+
+:Duty
+	a rdfs:Class , owl:Class ;
+	rdfs:subClassOf :Rule ;
+	vs:term_status "testing" ;
+	rdfs:label "Duty"@en ;
+	rdfs:comment "A Duty indicates requirements which must be fulfilled in order to receive the permission."@en .
+
+:Action
+	a rdf:Class, owl:Class ;
+	rdfs:subClassOf skos:Concept ;
+	vs:term_status "testing" ;
+	rdfs:comment "Sub-classes of Action are things one might be permitted to do or prohibited from doing to a work."@en ;
+	rdfs:label "Action"@en .
+
+:Constraint
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	vs:term_status "testing" ;
+	rdfs:label "Constraint"@en ;
+	rdfs:comment "Parent class of all Constraints."@en .
+
+:Scope
+	a rdfs:Class , owl:Class ;
+	vs:term_status "testing" ;
+	rdfs:label "Scope"@en ;
+	rdfs:comment """The scope attribute indicates how to interpret the identified Party and provides contextual information in determining the extent of the policy statement. For example, if a Party is identified as a member of the Acme Social Network (using identifier urn:acme:user:billie) and they are the assignee with "allConnections" scope, then the group of individuals that have actually been assigned the permission consists of all the first-level connections (eg friends) that the identified Party has on that social network. That is, the social graph of the party starting from urn:acme:user:billie."""@en .
+
+:relation
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Relation"@en ;
+	rdfs:comment "Relation is an abstract property which creates an explicit link between an Action and an Asset"@en ;
+	rdfs:domain :Action ;
+	rdfs:range :Asset .
+
+:output
+	a rdf:Property , owl:ObjectProperty ;
+	rdfs:subPropertyOf :relation ;
+	vs:term_status "testing" ;
+	rdfs:label "Output"@en ;
+	rdfs:comment "The Asset which is created from the output of the Action."@en ;
+	rdfs:domain :Action ;
+	rdfs:range :Asset . 
+
+:target
+	a rdf:Property , owl:ObjectProperty ;
+	rdfs:subPropertyOf :relation ;
+	vs:term_status "testing" ;
+	rdfs:label "Target"@en ;
+	rdfs:comment "The Asset upon which the Action is performed."@en ;
+	rdfs:domain :Action ;
+	rdfs:range :Asset .
+
+:function
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Function"@en ;
+	rdfs:comment "Functions are roles which may be fulfilled by a party"@en ;
+	skos:definition "Parent property class of all roles"@en ;
+	skos:scopeNote "For the Role entity, the Functions may be used for specific details undertaken by the identified Party in the policy"@en ;
+	rdfs:domain :Rule ;
+	rdfs:range rdfs:Resource .
+
+:action
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Action"@en ;
+	rdfs:comment "The operation relating to the asset for which permission is being granted. A permission must include exactly one action."@en ;
+	rdfs:domain :Rule ;
+	rdfs:range :Action .
+
+:constraint
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Constraint"@en ;
+	rdfs:comment "One or more constraints which affect the validity of the Permission; e.g. if the Action play is only permitted for a certain period of time."@en ;
+	rdfs:domain :Rule ;
+	rdfs:range :Constraint .
+	
+:duty
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Duty"@en ;
+	rdfs:comment "A Duty indicates requirements which must be fulfilled in order to receive the permission."@en ;
+	rdfs:domain :Permission ;
+	rdfs:range :Duty , :Action .
+
+:status
+	a rdf:Property ;
+	vs:term_status "testing" ;
+	rdfs:label "Status"@en ;
+	rdfs:comment "The current value of the constraint."@en ;
+	rdfs:domain :Constraint .
+
+:unit
+	a rdf:Property ;
+	vs:term_status "testing" ;
+	rdfs:domain :Constraint ;
+	rdfs:range rdfs:Literal ;
+	rdfs:label "Unit"@en ;
+	rdfs:comment "The unit of measurement used for the constraint value."@en .
+
+:operator
+	a rdf:Property , owl:ObjectProperty ;
+	vs:term_status "testing" ;
+	rdfs:label "Operator"@en ;
+	rdfs:comment "The Boolean operator applied to a constraint and its operand."@en ;
+	rdfs:domain :Constraint ;
+	rdfs:range :Operator .
+
+:rightOperand
+	a rdf:Property ;
+	vs:term_status "testing" ;
+	rdfs:label "Right operand"@en ;
+	rdfs:comment "The operand applied to an instance of a constraint."@en ;
+	rdfs:domain :Constraint .
+
+## Operators
+
+:Operator
+	a rdfs:Class , owl:Class ;
+	rdfs:subClassOf owl:Thing ;
+	vs:term_status "testing" ;
+	rdfs:label "Operator"@en ;
+	rdfs:comment "Instances of the Operator class represent boolean operators"@en .
+
+:eq
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Equal to"@en ;
+	rdfs:comment "Indicating that a given value equals the rightOperand of the Constraint."@en .
+
+:gt
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Greater than"@en ;
+	rdfs:comment ""@en .
+
+:gteq
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Greater than or equal to"@en ;
+	rdfs:comment ""@en .
+
+:hasPart
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Has part"@en ;
+	rdfs:comment ""@en .
+
+:isA
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Is a"@en ;
+	rdfs:comment ""@en .
+
+:isAllOf
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Is all of"@en ;
+	rdfs:comment ""@en .
+
+:isAnyOf
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Is any of"@en ;
+	rdfs:comment ""@en .
+
+:isNoneOf
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Is none of"@en ;
+	rdfs:comment ""@en .
+
+:isPartOf
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Is part of"@en ;
+	rdfs:comment ""@en .
+
+:lt
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Less than"@en ;
+	rdfs:comment ""@en .
+
+:lteq
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Less than or equal to"@en ;
+	rdfs:comment ""@en .
+
+:neq
+	a :Operator ;
+	vs:term_status "testing" ;
+	rdfs:label "Not equal to"@en ;
+	rdfs:comment ""@en .
+
+## Actions
+
+:acceptTracking
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Accept tracking"@en ;
+	rdfs:comment "The act of accepting that the use of the asset may be recorded."@en ;
+	skos:scopeNote "The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'."@en .
+
+:adHocShare
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Ad-hoc sharing"@en ;
+	rdfs:comment "The act of sharing the asset to parties in close proximity to the owner."@en ;
+	skos:scopeNote "This action may be used to express [OMA] Sharing semantics"@en .
+
+:aggregate
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Aggregate"@en ;
+	rdfs:comment "The act of using the asset (or parts of it) as part of a composite collection."@en .
+
+:annotate
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Annotate"@en ;
+	rdfs:comment "The act of adding notations/commentaries to the asset."@en .
+
+:anonymize
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Anonymize"@en ;
+	rdfs:comment "The act of anonymising the asset."@en .
+
+:append
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Append"@en ;
+	rdfs:comment "The act of adding to the end of an asset."@en .
+
+:archive
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Archive"@en ;
+	rdfs:comment "The act of persistently storing the asset."@en .
+
+:attachPolicy
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Attach policy"@en ;
+	rdfs:comment "The act of keeping the policy notice with the asset."@en .
+
+:attachSource
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Attach source"@en ;
+	rdfs:comment "The act of attaching the source of the asset and its derivatives."@en .
+
+:attribute
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Attribute"@en ;
+	rdfs:comment "The act of attributing the asset to a party."@en .
+
+:comercialize
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Commercialize"@en ;
+	rdfs:comment "The act of using the asset in a business environment."@en .
+
+:concurrentUse
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Concurrent use"@en ;
+	rdfs:comment "The act of multiple concurrent use of the asset."@en .
+
+:copy
+	a :Action ;
+	vs:term_status "testing" ;
+	owl:sameAs :reproduce ;
+	rdfs:label "Copy"@en ;
+	rdfs:comment "The act of making an exact reproduction of the asset."@en .
+
+:delete
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Delete"@en ;
+	rdfs:comment "The act of permanently removing the asset."@en .
+
+:derive
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Derive"@en ;
+	rdfs:comment "The act of creating a new derivative asset from the asset"@en ;
+	owl:sameAs :modify .
+
+:display
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Display"@en ;
+	rdfs:comment "The act of making a transient visible rendering of the asset"@en ;
+	owl:sameAs :execute .
+
+:distribute
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Distribute"@en ;
+	rdfs:comment "The act of publicly distributing, displaying and/or performing the asset."@en .
+
+:ensureExclusivity
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Ensure exclusivity"@en ;
+	rdfs:comment "The act of requiring the Assigner to ensure the Permission on the asset is unique to the Assignee."@en .
+
+:execute
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Execute"@en ;
+	rdfs:comment "The act of making a transient visible rendering of the asset."@en ;
+	owl:sameAs :display .
+
+:export
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Export"@en ;
+	rdfs:comment "The act of transforming the asset into a new form."@en ;
+	owl:sameAs :transform .
+
+:extract
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Extract"@en ;
+	rdfs:comment "The act of extracting (replicating) unchanged parts of the asset."@en .
+
+:extractChar
+	a :Action ;
+	skos:broader :extract ;
+	vs:term_status "testing" ;
+	rdfs:label "Extract character"@en ;
+	rdfs:comment "The act of extracting (replicating) unchanged character(s) from the asset."@en .
+
+:extractPage
+	a :Action ;
+	skos:broader :extract ;
+	vs:term_status "testing" ;
+	rdfs:label "Extract page"@en ;
+	rdfs:comment "The act of extracting (replicating) unchanged page(s) from the asset."@en .
+
+:extractWord
+	a :Action ;
+	skos:broader :extract ;
+	vs:term_status "testing" ;
+	rdfs:label "Extract word"@en ;
+	rdfs:comment "The act of extracting (replicating) unchanged word(s) from the asset."@en .
+
+:give
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Give"@en ;
+	rdfs:comment "The act of giving away the asset in perpetuity without exchange of value."@en .
+
+:include
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Include"@en ;
+	rdfs:comment "The act of including other related assets to fulfill the function."@en .
+
+:index
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Index"@en ;
+	rdfs:comment "The act of indexing the asset into a collection of assets."@en .
+
+:inform
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Inform"@en ;
+	rdfs:comment "The act of informing a party that an action has been performed on the asset."@en .
+
+:install
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Install"@en ;
+	rdfs:comment "The act of loading the asset onto storage device ready for operation."@en .
+
+:lease
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Lease"@en ;
+	rdfs:comment "The act of making available the asset to a third-party for a fixed period of time with exchange of value."@en .
+
+:license
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "License"@en ;
+	rdfs:comment "The act of granting the right to use the asset to a third-party."@en .
+
+:lend
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Lend"@en ;
+	rdfs:comment "The act of making available the asset to a third-party for a fixed period of time without exchange of value."@en .
+
+:modify
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Modify"@en ;
+	rdfs:comment "The act of creating a new derivative asset from the asset."@en ;
+	owl:sameAs :derive .
+
+:move
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Move"@en ;
+	rdfs:comment "The act of moving the asset."@en .
+
+:nextPolicy
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Next policy"@en ;
+	rdfs:comment "The act of specifying an asset (which must be a Policy) as the Policy terms for third-party use of the asset."@en .
+
+:obtainConsent
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Obtain consent"@en ;
+	rdfs:comment "The act of requiring explicit consent from a party to perform the action on the asset."@en .
+
+:pay
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Pay"@en ;
+	rdfs:comment "The act of paying a financial amount to a party for use of the asset."@en .
+
+:play
+	a :Action ;	
+	vs:term_status "testing" ;
+	rdfs:label "Play"@en ;
+	rdfs:comment "The act of rendering the asset into audio and/or video form."@en ;
+	owl:sameAs :present .
+
+:present
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Present"@en ;
+	rdfs:comment "The act of rendering the asset into audio and/or video form."@en ;
+	owl:sameAs :play .
+
+:preview
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Preview"@en ;
+	rdfs:comment "The act of providing a short preview of the asset."@en .
+
+:print
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Print"@en ;
+	rdfs:comment "The act of rendering the asset onto paper or hard copy form."@en .
+
+:read
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Read"@en ;
+	rdfs:comment "The act of obtaining data from the asset."@en .
+
+:reproduce
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Reproduce"@en ;
+	rdfs:comment "The act of making an exact reproduction of the asset."@en ;
+	owl:sameAs :copy .
+
+:reviewPolicy
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Review policy"@en ;
+	rdfs:comment "The act of performing a manual review of the terms associated with the asset."@en .
+
+:secondaryUse
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Secondary use"@en ;
+	rdfs:comment "The act of using the asset for a purpose other than the purpose it was intended for."@en .
+
+:sell
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Sell"@en ;
+	rdfs:comment "The act of trading the asset in exchange of value."@en .
+
+:share
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Share"@en ;
+	rdfs:comment "The act of the non-commercial reproduction and distribution of the asset to third-parties."@en .
+
+:shareAlike
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Share-alike"@en ;
+	rdfs:comment "The act of distributing any derivative asset under the same terms as the original asset."@en .
+
+:textToSpeech
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Text-to-speech"@en ;
+	rdfs:comment "The act of a system reading the text of the asset out loud."@en .
+
+:transform
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Transform"@en ;
+	rdfs:label "The act of transforming the asset into a new form."@en ;
+	owl:sameAs :export .
+
+:translate
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Translate"@en ;
+	rdfs:comment "The act of translating the asset into a new natural language."@en .
+
+:uninstall
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Uninstall"@en ;
+	rdfs:comment "The act of unloading the asset from storage device."@en .
+
+:watermark
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Watermark"@en ;
+	rdfs:comment "The act of applying a watermark to the asset."@en .
+
+:write
+	a :Action ;
+	vs:term_status "testing" ;
+	rdfs:label "Write"@en ;
+	rdfs:comment "The act of writing to the asset."@en .
+
+## Constraints
+
+:absolutePosition
+	a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Absolute position"@en ;
+	rdfs:comment "A point defined with absolute coordinates."@en .
+
+:absoluteSize
+	a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Absolute size"@en ;
+	rdfs:comment "The absolute dimension that the Asset may be resized."@en .
+
+:count
+	a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Count"@en ;
+	rdfs:comment "The numeric count indicating the number of times the corresponding entity may be exercised"@en .
+
+:dateTime
+	a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Date/time"@en ;
+	rdfs:comment "The date (and optional time and timezone) representing a point in time or period."@en ;
+	rdfs:range rdfs:Literal .
+
+:deliveryChannel
+    a rdf:Property , owl:ObjectProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Delivery channel"@en ;
+	rdfs:comment "The delivery channel used for storing or communicating the asset."@en .
+
+:device
+	a rdf:Property , owl:ObjectProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+    owl:equivalentProperty :system ;
+	rdfs:label "Device"@en ;
+	rdfs:comment "An identifiable computing system."@en .
+
+:elapsedTime
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Elapsed time"@en ;
+	rdfs:comment "A period of time in which the policy action can be exercised."@en ;
+	rdfs:range rdfs:Literal .
+
+:event
+	a rdf:Property , owl:ObjectProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Event"@en ;
+	rdfs:comment "Specification of a defined event applicable to the asset usage."@en .
+
+:fileFormat
+    a rdf:Property , owl:ObjectProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "File format"@en ;
+	rdfs:comment "The file format applicable to the Asset."@en .
+
+:industry
+    a rdf:Property ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Industry"@en ;
+	rdfs:comment ""@en .
+
+:language
+    a rdf:Property ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Language"@en ;
+	rdfs:range rdfs:Literal .
+
+:media
+    a rdf:Property ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Media"@en ;
+	rdfs:comment "The media type in which the asset may be used."@en .
+
+:meteredTime
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Metered time"@en ;
+	rdfs:comment "The maximum period of metered usage time."@en ;
+	rdfs:range rdfs:Literal .
+
+:payAmount
+	a rdf:Property, owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Payment amount"@en ;
+	rdfs:range xsd:decimal .
+
+:percentage
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Percentage"@en ;
+	rdfs:comment "The amount (as a percentage) of the action applicable to the asset."@en ;
+	rdfs:range rdfs:Literal .
+
+:product
+    a rdf:Property , owl:ObjectProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Product"@en ;
+	rdfs:comment "The specified Product or Service name."@en .
+
+:proximity
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Proximity"@en ;
+	rdfs:comment "An value indicating the closeness or nearness."@en .
+
+:purpose
+    a rdf:Property , owl:ObjectProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Purpose"@en ;
+	rdfs:comment "Specification of a defined purpose applicable to the asset usage."@en .
+
+:recipient
+    a rdf:Property , owl:ObjectProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Recipient"@en ;
+	rdfs:comment "The party that receives the result of the Action on the Asset."@en .
+
+:relativePosition
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Relative position"@en ;
+	rdfs:comment "A point defined with reference to another position."@en .
+
+:relativeSize
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Relative size"@en ;
+	rdfs:comment "The relative dimension that the Asset may be resized."@en .
+
+:resolution
+    a rdf:Property ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Resolution"@en ;
+	rdfs:comment "The resolution at which the asset may be used."@en .
+
+:spatial
+    a rdf:Property ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Spatial"@en ;
+	rdfs:comment "A code representing a geospatial area."@en .
+
+:system
+    a rdf:Property ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+    owl:equivalentProperty :device ;
+	rdfs:label "System"@en ;
+	rdfs:comment "An identifiable computing system."@en .
+
+:timedCount
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Timed count"@en ;
+	rdfs:comment "The number of seconds after which timed metering use of the asset begins."@en ;
+	rdfs:range rdfs:Literal .	
+
+:timeInterval
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Time interval"@en ;
+	rdfs:comment "Recurring period of time in which the usage may be exercised."@en ;
+	rdfs:range rdfs:Literal .
+
+:version
+    a rdf:Property , owl:ObjectProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Version"@en ;
+	rdfs:comment "The scope of versions for the asset."@en .
+
+:virtualLocation
+    a rdf:Property , owl:ObjectProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	vs:term_status "testing" ;
+	rdfs:label "Virtual location"@en ;
+	rdfs:comment "Specification of a digital locale."@en .
+
+## Functions
+
+:assignee
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:subPropertyOf :function ;
+	vs:term_status "testing" ;
+	rdfs:label "Assignee"@en ;
+	rdfs:comment "The Party is the recipient of the policy statement."@en ;
+	rdfs:range :Party .
+
+:assigner
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:subPropertyOf :function ;
+	vs:term_status "testing" ;
+	rdfs:label "Assigner"@en ;
+	rdfs:comment "The Party is the issuer of the policy statement."@en ;
+	rdfs:range :Party .
+
+:attributedParty
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:subPropertyOf :function ;
+	vs:term_status "testing" ;
+	rdfs:label "Attributed party"@en ;
+	rdfs:comment "The Party to be attributed."@en .
+
+:consentingParty
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:subPropertyOf :function ;
+	vs:term_status "testing" ;
+	rdfs:label "Consenting party"@en ;
+	rdfs:comment "The Party to obtain consent from."@en .
+
+:informedParty
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:subPropertyOf :function ;
+	vs:term_status "testing" ;
+	rdfs:label "Informed party"@en ;
+	rdfs:comment "The Party to be informed of all uses."@en .
+
+:payeeParty
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:subPropertyOf :function ;
+	vs:term_status "testing" ;
+	rdfs:label "Payee party"@en ;
+	rdfs:comment "The Party is the recipient of the payment."@en .
+
+:trackingParty
+    a rdf:Property , owl:ObjectProperty ;
+    rdfs:subPropertyOf :function ;
+	vs:term_status "testing" ;
+	rdfs:label "Tracking party"@en ;
+	rdfs:comment "The Party is the usage tracker."@en .
+
+## Policies
+
+:Agreement
+    a rdfs:Class , owl:Class ;
+	vs:term_status "testing" ;
+    rdfs:subClassOf :Policy ;
+	rdfs:label "Agreement"@en ;
+	rdfs:comment "Policy expressions that are formal contracts (or licenses) stipulating all the terms of usage and all the parties involved."@en .
+
+:Offer
+    a rdfs:Class , owl:Class ;
+	vs:term_status "testing" ;
+    rdfs:subClassOf :Policy ;
+	rdfs:label "Offer"@en ;
+	rdfs:comment "Policy expressions that propose terms of usage from an Asset owner."@en .
+
+:Privacy
+    a rdfs:Class , owl:Class ;
+	vs:term_status "testing" ;
+    rdfs:subClassOf :Policy ;
+	rdfs:label "Privacy"@en ;
+	rdfs:comment "Policy expressions that stipulate the terms of usage over personal information."@en .
+
+:Request
+    a rdfs:Class , owl:Class ;
+	vs:term_status "testing" ;
+    rdfs:subClassOf :Policy ;
+	rdfs:label "Request"@en ;
+	rdfs:comment "Policy expressions that propose terms of usage to an Asset owner."@en .
+
+:Set
+    a rdfs:Class , owl:Class ;
+	vs:term_status "testing" ;
+    rdfs:subClassOf :Policy ;
+	rdfs:label "Set"@en ;
+	rdfs:comment "Policy expressions that consists of entities from the complete model."@en .
+
+:Ticket
+    a rdfs:Class , owl:Class ;
+	vs:term_status "testing" ;
+    rdfs:subClassOf :Policy ;
+	rdfs:label "Ticket"@en ;
+	rdfs:comment "Policy expressions that stipulate the terms of usage and is redeemable by any Party who currently holds the Ticket in their possession."@en .
+
+## Scopes
+
+:all
+	a :Scope ;
+	vs:term_status "testing" ;
+	rdfs:label "All"@en ;
+	rdfs:comment "All the collective individuals within a context."@en .
+
+:all2ndConnections
+	a :Scope ;
+	vs:term_status "testing" ;
+	rdfs:label "All second-level connections"@en ;
+	rdfs:comment "All the second-level connections of the Party."@en .
+
+:allConnections
+	a :Scope ;
+	vs:term_status "testing" ;
+	rdfs:label "All connections"@en ;
+	rdfs:comment "All the first-level connections of the Party."@en .
+
+:allGroups
+	a :Scope ;
+	vs:term_status "testing" ;
+	rdfs:label "All groups"@en ;
+	rdfs:comment "All the group connections of the Party."@en .
+
+:group
+	a :Scope ;
+	vs:term_status "testing" ;
+	rdfs:label "Group"@en ;
+	rdfs:comment "The Party represents a defined group with multiple individual members."@en .
+
+:individual
+	a :Scope ;
+	vs:term_status "testing" ;
+	rdfs:label "Individual"@en ;
+	rdfs:comment "The Party is a single individual."@en .
