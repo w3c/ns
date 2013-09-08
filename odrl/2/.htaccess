@@ -1,3 +1,7 @@
 RewriteEngine On
 RewriteBase /ns/odrl/2
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule . - [L]
+
 RewriteRule ^$		http://www.w3.org/ns/odrl/2/ODRL20.xsd [R,L]
