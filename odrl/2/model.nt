@@ -345,234 +345,288 @@
 <http://w3.org/ns/odrl/2/neq> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/neq> <http://www.w3.org/2000/01/rdf-schema#label> "Not equal to"@en .
 <http://w3.org/ns/odrl/2/neq> <http://www.w3.org/2000/01/rdf-schema#comment> ""@en .
-<http://w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
-<http://w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/2000/01/rdf-schema#label> "Accept tracking"@en .
-<http://w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of accepting that the use of the asset may be recorded."@en .
-<http://w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/2004/02/skos/core#scopeNote> "The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'."@en .
+<http://www.w3.org/2004/02/skos/core#acceptTracking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/2004/02/skos/core#acceptTracking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/2004/02/skos/core#acceptTracking> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/2004/02/skos/core#acceptTracking> <http://www.w3.org/2000/01/rdf-schema#label> "Accept tracking"@en .
+<http://www.w3.org/2004/02/skos/core#acceptTracking> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of accepting that the use of the asset may be recorded."@en .
+<http://www.w3.org/2004/02/skos/core#acceptTracking> <http://www.w3.org/2004/02/skos/core#scopeNote> "The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'."@en .
 <http://w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2000/01/rdf-schema#label> "Ad-hoc sharing"@en .
 <http://w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of sharing the asset to parties in close proximity to the owner."@en .
 <http://w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2004/02/skos/core#scopeNote> "This action may be used to express [OMA] Sharing semantics"@en .
 <http://w3.org/ns/odrl/2/aggregate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/aggregate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/aggregate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/aggregate> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregate"@en .
 <http://w3.org/ns/odrl/2/aggregate> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of using the asset (or parts of it) as part of a composite collection."@en .
 <http://w3.org/ns/odrl/2/annotate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/annotate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/annotate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/annotate> <http://www.w3.org/2000/01/rdf-schema#label> "Annotate"@en .
 <http://w3.org/ns/odrl/2/annotate> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of adding notations/commentaries to the asset."@en .
 <http://w3.org/ns/odrl/2/anonymize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/anonymize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/anonymize> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/anonymize> <http://www.w3.org/2000/01/rdf-schema#label> "Anonymize"@en .
 <http://w3.org/ns/odrl/2/anonymize> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of anonymising the asset."@en .
 <http://w3.org/ns/odrl/2/append> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/append> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/append> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/append> <http://www.w3.org/2000/01/rdf-schema#label> "Append"@en .
 <http://w3.org/ns/odrl/2/append> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of adding to the end of an asset."@en .
 <http://w3.org/ns/odrl/2/archive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/archive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/archive> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/archive> <http://www.w3.org/2000/01/rdf-schema#label> "Archive"@en .
 <http://w3.org/ns/odrl/2/archive> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of persistently storing the asset."@en .
 <http://w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Attach policy"@en .
 <http://w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of keeping the policy notice with the asset."@en .
 <http://w3.org/ns/odrl/2/attachSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/attachSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2000/01/rdf-schema#label> "Attach source"@en .
 <http://w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of attaching the source of the asset and its derivatives."@en .
 <http://w3.org/ns/odrl/2/attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/attribute> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/attribute> <http://www.w3.org/2000/01/rdf-schema#label> "Attribute"@en .
 <http://w3.org/ns/odrl/2/attribute> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of attributing the asset to a party."@en .
 <http://w3.org/ns/odrl/2/comercialize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/comercialize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/comercialize> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/comercialize> <http://www.w3.org/2000/01/rdf-schema#label> "Commercialize"@en .
 <http://w3.org/ns/odrl/2/comercialize> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of using the asset in a business environment."@en .
 <http://w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/2000/01/rdf-schema#label> "Concurrent use"@en .
 <http://w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of multiple concurrent use of the asset."@en .
 <http://w3.org/ns/odrl/2/copy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/copy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/copy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/copy> <http://www.w3.org/2002/07/owl#sameAs> <http://w3.org/ns/odrl/2/reproduce> .
 <http://w3.org/ns/odrl/2/copy> <http://www.w3.org/2000/01/rdf-schema#label> "Copy"@en .
 <http://w3.org/ns/odrl/2/copy> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making an exact reproduction of the asset."@en .
 <http://w3.org/ns/odrl/2/delete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/delete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/delete> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/delete> <http://www.w3.org/2000/01/rdf-schema#label> "Delete"@en .
 <http://w3.org/ns/odrl/2/delete> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of permanently removing the asset."@en .
 <http://w3.org/ns/odrl/2/derive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/derive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/derive> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/derive> <http://www.w3.org/2000/01/rdf-schema#label> "Derive"@en .
 <http://w3.org/ns/odrl/2/derive> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of creating a new derivative asset from the asset"@en .
 <http://w3.org/ns/odrl/2/derive> <http://www.w3.org/2002/07/owl#sameAs> <http://w3.org/ns/odrl/2/modify> .
 <http://w3.org/ns/odrl/2/display> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/display> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/display> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/display> <http://www.w3.org/2000/01/rdf-schema#label> "Display"@en .
 <http://w3.org/ns/odrl/2/display> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making a transient visible rendering of the asset"@en .
 <http://w3.org/ns/odrl/2/display> <http://www.w3.org/2002/07/owl#sameAs> <http://w3.org/ns/odrl/2/execute> .
 <http://w3.org/ns/odrl/2/distribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/distribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/distribute> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/distribute> <http://www.w3.org/2000/01/rdf-schema#label> "Distribute"@en .
 <http://w3.org/ns/odrl/2/distribute> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of publicly distributing, displaying and/or performing the asset."@en .
 <http://w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/2000/01/rdf-schema#label> "Ensure exclusivity"@en .
 <http://w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of requiring the Assigner to ensure the Permission on the asset is unique to the Assignee."@en .
 <http://w3.org/ns/odrl/2/execute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/execute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/execute> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/execute> <http://www.w3.org/2000/01/rdf-schema#label> "Execute"@en .
 <http://w3.org/ns/odrl/2/execute> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making a transient visible rendering of the asset."@en .
 <http://w3.org/ns/odrl/2/execute> <http://www.w3.org/2002/07/owl#sameAs> <http://w3.org/ns/odrl/2/display> .
 <http://w3.org/ns/odrl/2/export> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/export> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/export> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/export> <http://www.w3.org/2000/01/rdf-schema#label> "Export"@en .
 <http://w3.org/ns/odrl/2/export> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of transforming the asset into a new form."@en .
 <http://w3.org/ns/odrl/2/export> <http://www.w3.org/2002/07/owl#sameAs> <http://w3.org/ns/odrl/2/transform> .
 <http://w3.org/ns/odrl/2/extract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/extract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/extract> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/extract> <http://www.w3.org/2000/01/rdf-schema#label> "Extract"@en .
 <http://w3.org/ns/odrl/2/extract> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged parts of the asset."@en .
 <http://w3.org/ns/odrl/2/extractChar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/extractChar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2004/02/skos/core#broader> <http://w3.org/ns/odrl/2/extract> .
 <http://w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2000/01/rdf-schema#label> "Extract character"@en .
 <http://w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged character(s) from the asset."@en .
 <http://w3.org/ns/odrl/2/extractPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/extractPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2004/02/skos/core#broader> <http://w3.org/ns/odrl/2/extract> .
 <http://w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2000/01/rdf-schema#label> "Extract page"@en .
 <http://w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged page(s) from the asset."@en .
 <http://w3.org/ns/odrl/2/extractWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/extractWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2004/02/skos/core#broader> <http://w3.org/ns/odrl/2/extract> .
 <http://w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2000/01/rdf-schema#label> "Extract word"@en .
 <http://w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged word(s) from the asset."@en .
 <http://w3.org/ns/odrl/2/give> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/give> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/give> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/give> <http://www.w3.org/2000/01/rdf-schema#label> "Give"@en .
 <http://w3.org/ns/odrl/2/give> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of giving away the asset in perpetuity without exchange of value."@en .
 <http://w3.org/ns/odrl/2/include> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/include> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/include> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/include> <http://www.w3.org/2000/01/rdf-schema#label> "Include"@en .
 <http://w3.org/ns/odrl/2/include> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of including other related assets to fulfill the function."@en .
 <http://w3.org/ns/odrl/2/index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/index> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/index> <http://www.w3.org/2000/01/rdf-schema#label> "Index"@en .
 <http://w3.org/ns/odrl/2/index> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of indexing the asset into a collection of assets."@en .
 <http://w3.org/ns/odrl/2/inform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/inform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/inform> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/inform> <http://www.w3.org/2000/01/rdf-schema#label> "Inform"@en .
 <http://w3.org/ns/odrl/2/inform> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of informing a party that an action has been performed on the asset."@en .
 <http://w3.org/ns/odrl/2/install> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/install> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/install> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/install> <http://www.w3.org/2000/01/rdf-schema#label> "Install"@en .
 <http://w3.org/ns/odrl/2/install> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of loading the asset onto storage device ready for operation."@en .
 <http://w3.org/ns/odrl/2/lease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/lease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/lease> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/lease> <http://www.w3.org/2000/01/rdf-schema#label> "Lease"@en .
 <http://w3.org/ns/odrl/2/lease> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making available the asset to a third-party for a fixed period of time with exchange of value."@en .
 <http://w3.org/ns/odrl/2/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/license> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/license> <http://www.w3.org/2000/01/rdf-schema#label> "License"@en .
 <http://w3.org/ns/odrl/2/license> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of granting the right to use the asset to a third-party."@en .
 <http://w3.org/ns/odrl/2/lend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/lend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/lend> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/lend> <http://www.w3.org/2000/01/rdf-schema#label> "Lend"@en .
 <http://w3.org/ns/odrl/2/lend> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making available the asset to a third-party for a fixed period of time without exchange of value."@en .
 <http://w3.org/ns/odrl/2/modify> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/modify> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/modify> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/modify> <http://www.w3.org/2000/01/rdf-schema#label> "Modify"@en .
 <http://w3.org/ns/odrl/2/modify> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of creating a new derivative asset from the asset."@en .
 <http://w3.org/ns/odrl/2/modify> <http://www.w3.org/2002/07/owl#sameAs> <http://w3.org/ns/odrl/2/derive> .
 <http://w3.org/ns/odrl/2/move> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/move> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/move> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/move> <http://www.w3.org/2000/01/rdf-schema#label> "Move"@en .
 <http://w3.org/ns/odrl/2/move> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of moving the asset."@en .
 <http://w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Next policy"@en .
 <http://w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of specifying an asset (which must be a Policy) as the Policy terms for third-party use of the asset."@en .
 <http://w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/2000/01/rdf-schema#label> "Obtain consent"@en .
 <http://w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of requiring explicit consent from a party to perform the action on the asset."@en .
 <http://w3.org/ns/odrl/2/pay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/pay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/pay> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/pay> <http://www.w3.org/2000/01/rdf-schema#label> "Pay"@en .
 <http://w3.org/ns/odrl/2/pay> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of paying a financial amount to a party for use of the asset."@en .
 <http://w3.org/ns/odrl/2/play> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/play> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/play> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/play> <http://www.w3.org/2000/01/rdf-schema#label> "Play"@en .
 <http://w3.org/ns/odrl/2/play> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of rendering the asset into audio and/or video form."@en .
 <http://w3.org/ns/odrl/2/play> <http://www.w3.org/2002/07/owl#sameAs> <http://w3.org/ns/odrl/2/present> .
 <http://w3.org/ns/odrl/2/present> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/present> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/present> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/present> <http://www.w3.org/2000/01/rdf-schema#label> "Present"@en .
 <http://w3.org/ns/odrl/2/present> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of rendering the asset into audio and/or video form."@en .
 <http://w3.org/ns/odrl/2/present> <http://www.w3.org/2002/07/owl#sameAs> <http://w3.org/ns/odrl/2/play> .
 <http://w3.org/ns/odrl/2/preview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/preview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/preview> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/preview> <http://www.w3.org/2000/01/rdf-schema#label> "Preview"@en .
 <http://w3.org/ns/odrl/2/preview> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of providing a short preview of the asset."@en .
 <http://w3.org/ns/odrl/2/print> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/print> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/print> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/print> <http://www.w3.org/2000/01/rdf-schema#label> "Print"@en .
 <http://w3.org/ns/odrl/2/print> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of rendering the asset onto paper or hard copy form."@en .
 <http://w3.org/ns/odrl/2/read> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/read> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/read> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/read> <http://www.w3.org/2000/01/rdf-schema#label> "Read"@en .
 <http://w3.org/ns/odrl/2/read> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of obtaining data from the asset."@en .
 <http://w3.org/ns/odrl/2/reproduce> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/reproduce> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/reproduce> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/reproduce> <http://www.w3.org/2000/01/rdf-schema#label> "Reproduce"@en .
 <http://w3.org/ns/odrl/2/reproduce> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making an exact reproduction of the asset."@en .
 <http://w3.org/ns/odrl/2/reproduce> <http://www.w3.org/2002/07/owl#sameAs> <http://w3.org/ns/odrl/2/copy> .
 <http://w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Review policy"@en .
 <http://w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of performing a manual review of the terms associated with the asset."@en .
 <http://w3.org/ns/odrl/2/secondaryUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/secondaryUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/secondaryUse> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/secondaryUse> <http://www.w3.org/2000/01/rdf-schema#label> "Secondary use"@en .
 <http://w3.org/ns/odrl/2/secondaryUse> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of using the asset for a purpose other than the purpose it was intended for."@en .
 <http://w3.org/ns/odrl/2/sell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/sell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/sell> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/sell> <http://www.w3.org/2000/01/rdf-schema#label> "Sell"@en .
 <http://w3.org/ns/odrl/2/sell> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of trading the asset in exchange of value."@en .
 <http://w3.org/ns/odrl/2/share> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/share> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/share> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/share> <http://www.w3.org/2000/01/rdf-schema#label> "Share"@en .
 <http://w3.org/ns/odrl/2/share> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of the non-commercial reproduction and distribution of the asset to third-parties."@en .
 <http://w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2000/01/rdf-schema#label> "Share-alike"@en .
 <http://w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of distributing any derivative asset under the same terms as the original asset."@en .
 <http://w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/2000/01/rdf-schema#label> "Text-to-speech"@en .
 <http://w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of a system reading the text of the asset out loud."@en .
 <http://w3.org/ns/odrl/2/transform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/transform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/transform> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/transform> <http://www.w3.org/2000/01/rdf-schema#label> "Transform"@en .
-<http://w3.org/ns/odrl/2/transform> <http://www.w3.org/2000/01/rdf-schema#label> "The act of transforming the asset into a new form."@en .
+<http://w3.org/ns/odrl/2/transform> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of transforming the asset into a new form."@en .
 <http://w3.org/ns/odrl/2/transform> <http://www.w3.org/2002/07/owl#sameAs> <http://w3.org/ns/odrl/2/export> .
 <http://w3.org/ns/odrl/2/translate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/translate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/translate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/translate> <http://www.w3.org/2000/01/rdf-schema#label> "Translate"@en .
 <http://w3.org/ns/odrl/2/translate> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of translating the asset into a new natural language."@en .
 <http://w3.org/ns/odrl/2/uninstall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/uninstall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/uninstall> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/uninstall> <http://www.w3.org/2000/01/rdf-schema#label> "Uninstall"@en .
 <http://w3.org/ns/odrl/2/uninstall> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of unloading the asset from storage device."@en .
 <http://w3.org/ns/odrl/2/watermark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/watermark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/watermark> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/watermark> <http://www.w3.org/2000/01/rdf-schema#label> "Watermark"@en .
 <http://w3.org/ns/odrl/2/watermark> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of applying a watermark to the asset."@en .
 <http://w3.org/ns/odrl/2/write> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://w3.org/ns/odrl/2/Action> .
+<http://w3.org/ns/odrl/2/write> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/write> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/write> <http://www.w3.org/2000/01/rdf-schema#label> "Write"@en .
 <http://w3.org/ns/odrl/2/write> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of writing to the asset."@en .

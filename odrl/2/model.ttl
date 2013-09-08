@@ -394,341 +394,341 @@ odrl:
 
 ## Actions
 
-:acceptTracking
-	a :Action ;
+skos:acceptTracking
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Accept tracking"@en ;
 	rdfs:comment "The act of accepting that the use of the asset may be recorded."@en ;
 	skos:scopeNote "The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'."@en .
 
 :adHocShare
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Ad-hoc sharing"@en ;
 	rdfs:comment "The act of sharing the asset to parties in close proximity to the owner."@en ;
 	skos:scopeNote "This action may be used to express [OMA] Sharing semantics"@en .
 
 :aggregate
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Aggregate"@en ;
 	rdfs:comment "The act of using the asset (or parts of it) as part of a composite collection."@en .
 
 :annotate
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Annotate"@en ;
 	rdfs:comment "The act of adding notations/commentaries to the asset."@en .
 
 :anonymize
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Anonymize"@en ;
 	rdfs:comment "The act of anonymising the asset."@en .
 
 :append
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Append"@en ;
 	rdfs:comment "The act of adding to the end of an asset."@en .
 
 :archive
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Archive"@en ;
 	rdfs:comment "The act of persistently storing the asset."@en .
 
 :attachPolicy
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Attach policy"@en ;
 	rdfs:comment "The act of keeping the policy notice with the asset."@en .
 
 :attachSource
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Attach source"@en ;
 	rdfs:comment "The act of attaching the source of the asset and its derivatives."@en .
 
 :attribute
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Attribute"@en ;
 	rdfs:comment "The act of attributing the asset to a party."@en .
 
 :comercialize
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Commercialize"@en ;
 	rdfs:comment "The act of using the asset in a business environment."@en .
 
 :concurrentUse
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Concurrent use"@en ;
 	rdfs:comment "The act of multiple concurrent use of the asset."@en .
 
 :copy
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	owl:sameAs :reproduce ;
 	rdfs:label "Copy"@en ;
 	rdfs:comment "The act of making an exact reproduction of the asset."@en .
 
 :delete
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Delete"@en ;
 	rdfs:comment "The act of permanently removing the asset."@en .
 
 :derive
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Derive"@en ;
 	rdfs:comment "The act of creating a new derivative asset from the asset"@en ;
 	owl:sameAs :modify .
 
 :display
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Display"@en ;
 	rdfs:comment "The act of making a transient visible rendering of the asset"@en ;
 	owl:sameAs :execute .
 
 :distribute
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Distribute"@en ;
 	rdfs:comment "The act of publicly distributing, displaying and/or performing the asset."@en .
 
 :ensureExclusivity
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Ensure exclusivity"@en ;
 	rdfs:comment "The act of requiring the Assigner to ensure the Permission on the asset is unique to the Assignee."@en .
 
 :execute
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Execute"@en ;
 	rdfs:comment "The act of making a transient visible rendering of the asset."@en ;
 	owl:sameAs :display .
 
 :export
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Export"@en ;
 	rdfs:comment "The act of transforming the asset into a new form."@en ;
 	owl:sameAs :transform .
 
 :extract
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Extract"@en ;
 	rdfs:comment "The act of extracting (replicating) unchanged parts of the asset."@en .
 
 :extractChar
-	a :Action ;
+	a :Action, skos:Concept ;
 	skos:broader :extract ;
 	vs:term_status "testing" ;
 	rdfs:label "Extract character"@en ;
 	rdfs:comment "The act of extracting (replicating) unchanged character(s) from the asset."@en .
 
 :extractPage
-	a :Action ;
+	a :Action, skos:Concept ;
 	skos:broader :extract ;
 	vs:term_status "testing" ;
 	rdfs:label "Extract page"@en ;
 	rdfs:comment "The act of extracting (replicating) unchanged page(s) from the asset."@en .
 
 :extractWord
-	a :Action ;
+	a :Action, skos:Concept ;
 	skos:broader :extract ;
 	vs:term_status "testing" ;
 	rdfs:label "Extract word"@en ;
 	rdfs:comment "The act of extracting (replicating) unchanged word(s) from the asset."@en .
 
 :give
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Give"@en ;
 	rdfs:comment "The act of giving away the asset in perpetuity without exchange of value."@en .
 
 :include
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Include"@en ;
 	rdfs:comment "The act of including other related assets to fulfill the function."@en .
 
 :index
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Index"@en ;
 	rdfs:comment "The act of indexing the asset into a collection of assets."@en .
 
 :inform
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Inform"@en ;
 	rdfs:comment "The act of informing a party that an action has been performed on the asset."@en .
 
 :install
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Install"@en ;
 	rdfs:comment "The act of loading the asset onto storage device ready for operation."@en .
 
 :lease
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Lease"@en ;
 	rdfs:comment "The act of making available the asset to a third-party for a fixed period of time with exchange of value."@en .
 
 :license
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "License"@en ;
 	rdfs:comment "The act of granting the right to use the asset to a third-party."@en .
 
 :lend
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Lend"@en ;
 	rdfs:comment "The act of making available the asset to a third-party for a fixed period of time without exchange of value."@en .
 
 :modify
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Modify"@en ;
 	rdfs:comment "The act of creating a new derivative asset from the asset."@en ;
 	owl:sameAs :derive .
 
 :move
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Move"@en ;
 	rdfs:comment "The act of moving the asset."@en .
 
 :nextPolicy
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Next policy"@en ;
 	rdfs:comment "The act of specifying an asset (which must be a Policy) as the Policy terms for third-party use of the asset."@en .
 
 :obtainConsent
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Obtain consent"@en ;
 	rdfs:comment "The act of requiring explicit consent from a party to perform the action on the asset."@en .
 
 :pay
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Pay"@en ;
 	rdfs:comment "The act of paying a financial amount to a party for use of the asset."@en .
 
 :play
-	a :Action ;	
+	a :Action, skos:Concept ;	
 	vs:term_status "testing" ;
 	rdfs:label "Play"@en ;
 	rdfs:comment "The act of rendering the asset into audio and/or video form."@en ;
 	owl:sameAs :present .
 
 :present
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Present"@en ;
 	rdfs:comment "The act of rendering the asset into audio and/or video form."@en ;
 	owl:sameAs :play .
 
 :preview
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Preview"@en ;
 	rdfs:comment "The act of providing a short preview of the asset."@en .
 
 :print
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Print"@en ;
 	rdfs:comment "The act of rendering the asset onto paper or hard copy form."@en .
 
 :read
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Read"@en ;
 	rdfs:comment "The act of obtaining data from the asset."@en .
 
 :reproduce
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Reproduce"@en ;
 	rdfs:comment "The act of making an exact reproduction of the asset."@en ;
 	owl:sameAs :copy .
 
 :reviewPolicy
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Review policy"@en ;
 	rdfs:comment "The act of performing a manual review of the terms associated with the asset."@en .
 
 :secondaryUse
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Secondary use"@en ;
 	rdfs:comment "The act of using the asset for a purpose other than the purpose it was intended for."@en .
 
 :sell
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Sell"@en ;
 	rdfs:comment "The act of trading the asset in exchange of value."@en .
 
 :share
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Share"@en ;
 	rdfs:comment "The act of the non-commercial reproduction and distribution of the asset to third-parties."@en .
 
 :shareAlike
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Share-alike"@en ;
 	rdfs:comment "The act of distributing any derivative asset under the same terms as the original asset."@en .
 
 :textToSpeech
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Text-to-speech"@en ;
 	rdfs:comment "The act of a system reading the text of the asset out loud."@en .
 
 :transform
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Transform"@en ;
-	rdfs:label "The act of transforming the asset into a new form."@en ;
+	rdfs:comment "The act of transforming the asset into a new form."@en ;
 	owl:sameAs :export .
 
 :translate
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Translate"@en ;
 	rdfs:comment "The act of translating the asset into a new natural language."@en .
 
 :uninstall
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Uninstall"@en ;
 	rdfs:comment "The act of unloading the asset from storage device."@en .
 
 :watermark
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Watermark"@en ;
 	rdfs:comment "The act of applying a watermark to the asset."@en .
 
 :write
-	a :Action ;
+	a :Action, skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:label "Write"@en ;
 	rdfs:comment "The act of writing to the asset."@en .
