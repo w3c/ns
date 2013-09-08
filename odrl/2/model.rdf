@@ -21,13 +21,13 @@
     <rdfs:label xml:lang="en">ODRL</rdfs:label>
     <owl:versionInfo xml:lang="en">2.0</owl:versionInfo>
   </owl:Ontology>
-  <rdf:Class rdf:about="http://w3.org/ns/odrl/2/Action">
+  <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Action">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">Sub-classes of Action are things one might be permitted to do or prohibited from doing to a work.</rdfs:comment>
     <rdfs:label xml:lang="en">Action</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <vs:term_status>testing</vs:term_status>
-  </rdf:Class>
+  </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Agreement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">Policy expressions that are formal contracts (or licenses) stipulating all the terms of usage and all the parties involved.</rdfs:comment>

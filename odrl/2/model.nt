@@ -197,7 +197,7 @@
 <http://w3.org/ns/odrl/2/Duty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#label> "Duty"@en .
 <http://w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#comment> "A Duty indicates requirements which must be fulfilled in order to receive the permission."@en .
-<http://w3.org/ns/odrl/2/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Class> .
+<http://w3.org/ns/odrl/2/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
 <http://w3.org/ns/odrl/2/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://w3.org/ns/odrl/2/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://w3.org/ns/odrl/2/Action> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .

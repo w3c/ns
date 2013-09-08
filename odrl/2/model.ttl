@@ -202,7 +202,7 @@ odrl:
 	rdfs:comment "A Duty indicates requirements which must be fulfilled in order to receive the permission."@en .
 
 :Action
-	a rdf:Class, owl:Class ;
+	a rdfs:Class, owl:Class ;
 	rdfs:subClassOf skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:comment "Sub-classes of Action are things one might be permitted to do or prohibited from doing to a work."@en ;
