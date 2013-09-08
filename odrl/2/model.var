@@ -1,0 +1,13 @@
+URI: model
+
+URI: ODRL20.xsd
+Content-Type: application/xml;qs=0.9
+
+URI: model.ttl
+Content-Type: text/turtle;qs=0.9
+
+URI: model.nt
+Content-Type: text/plain;qs=0.8
+
+URI: model.rdf
+Content-Type: application/rdf+xml;qs=0.5
