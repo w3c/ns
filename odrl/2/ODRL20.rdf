@@ -14,6 +14,7 @@
     <dct:contributor>ODRL Community Group</dct:contributor>
     <dct:creator>Mo McRoberts</dct:creator>
     <dct:creator>Víctor Rodríguez Doncel</dct:creator>
+    <dct:description xml:lang="en">Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media.</dct:description>
     <vann:example rdf:resource="http://w3.org/ns/odrl/2/Asset"/>
     <vann:preferredNamespacePrefix>odrl</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri rdf:resource="http://w3.org/ns/odrl/2/"/>
@@ -37,7 +38,7 @@
   </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Asset">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Any thing which can be subject to a policy.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Asset is anything which can be subject to a policy. Asserting that something the target of a policy implies that it is an Asset.</rdfs:comment>
     <rdfs:label xml:lang="en">Asset</rdfs:label>
     <owl:equivalentClass rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
     <vs:term_status>testing</vs:term_status>
@@ -57,14 +58,14 @@
   </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Duty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A Duty indicates requirements which must be fulfilled in order to receive the permission.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A Duty is a rule which indicates requirements which must be fulfilled in order to receive the permission.</rdfs:comment>
     <rdfs:label xml:lang="en">Duty</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://w3.org/ns/odrl/2/Rule"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Offer">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Policy expressions that propose terms of usage from an Asset owner.</rdfs:comment>
+    <rdfs:comment xml:lang="en">An instance of Offer is a Policy expression that proposes terms of usage from an Asset owner.</rdfs:comment>
     <rdfs:label xml:lang="en">Offer</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
     <vs:term_status>testing</vs:term_status>
@@ -84,7 +85,7 @@
   </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Permission">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">A permission indicates the actions the assignee is permitted to perform on the associated asset. In other words, what the assigner (supplier) has granted to the assignee (consumer).</rdfs:comment>
+    <rdfs:comment xml:lang="en">A Permission is a rule which indicates the actions the assignee is permitted to perform on the associated asset. In other words, what the assigner (supplier) has granted to the assignee (consumer).</rdfs:comment>
     <rdfs:label xml:lang="en">Permission</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://w3.org/ns/odrl/2/Rule"/>
     <vs:term_status>testing</vs:term_status>
@@ -98,34 +99,35 @@
   </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Privacy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Policy expressions that stipulate the terms of usage over personal information.</rdfs:comment>
+    <rdfs:comment xml:lang="en">An instance of Privacy is a Policy expression that stipulates the terms of usage over personal information.</rdfs:comment>
     <rdfs:label xml:lang="en">Privacy</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Prohibition">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">The Prohibition entity indicates the Actions that the assignee is prohibited to perform on the related Asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">A Prohibition is a rule which indicates the Actions that the assignee is prohibited to perform on the related Asset.</rdfs:comment>
     <rdfs:label xml:lang="en">Prohibition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://w3.org/ns/odrl/2/Rule"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Request">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Policy expressions that propose terms of usage to an Asset owner.</rdfs:comment>
+    <rdfs:comment xml:lang="en">An instance of Request is a Policy expression that proposes terms of usage to an Asset owner.</rdfs:comment>
     <rdfs:label xml:lang="en">Request</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Rule">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">An abstract common ancestor to Permissions, Prohibitions and Duties</rdfs:comment>
+    <rdfs:comment xml:lang="en">An abstract common ancestor to Permissions, Prohibitions and Duties.</rdfs:comment>
     <rdfs:label xml:lang="en">Rule</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Scope">
     <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:comment xml:lang="en">A Scope indicates how to interpret the identified Party and provides contextual information in determining the extent of the policy statement. For example, if a Party is identified as a member of the Acme Social Network (using identifier urn:acme:user:billie) and they are the assignee with "allConnections" scope, then the group of individuals that have actually been assigned the permission consists of all the first-level connections (eg friends) that the identified Party has on that social network. That is, the social graph of the party starting from urn:acme:user:billie.</rdfs:comment>
     <rdfs:comment xml:lang="en">The scope attribute indicates how to interpret the identified Party and provides contextual information in determining the extent of the policy statement. For example, if a Party is identified as a member of the Acme Social Network (using identifier urn:acme:user:billie) and they are the assignee with "allConnections" scope, then the group of individuals that have actually been assigned the permission consists of all the first-level connections (eg friends) that the identified Party has on that social network. That is, the social graph of the party starting from urn:acme:user:billie.</rdfs:comment>
     <rdfs:label xml:lang="en">Scope</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -133,14 +135,14 @@
   </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Set">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Policy expressions that consists of entities from the complete model.</rdfs:comment>
+    <rdfs:comment xml:lang="en">An instance of Set is a Policy expression that consists of entities from the complete model.</rdfs:comment>
     <rdfs:label xml:lang="en">Set</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://w3.org/ns/odrl/2/Ticket">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Policy expressions that stipulate the terms of usage and is redeemable by any Party who currently holds the Ticket in their possession.</rdfs:comment>
+    <rdfs:comment xml:lang="en">An instance of Ticket is a Policy expression that stipulates the terms of usage and is redeemable by any Party who currently holds the Ticket in their possession.</rdfs:comment>
     <rdfs:label xml:lang="en">Ticket</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
     <vs:term_status>testing</vs:term_status>
@@ -165,6 +167,13 @@
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
+  <Action rdf:about="http://w3.org/ns/odrl/2/acceptTracking">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment xml:lang="en">The act of accepting that the use of the asset may be recorded.</rdfs:comment>
+    <rdfs:label xml:lang="en">Accept tracking</rdfs:label>
+    <vs:term_status>testing</vs:term_status>
+    <skos:scopeNote xml:lang="en">The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'.</skos:scopeNote>
+  </Action>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/action">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The operation relating to the asset for which permission is being granted. A permission must include exactly one action.</rdfs:comment>
@@ -241,22 +250,22 @@
     <vs:term_status>testing</vs:term_status>
   </Action>
   <Scope rdf:about="http://w3.org/ns/odrl/2/all">
-    <rdfs:comment xml:lang="en">All the collective individuals within a context.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Specifies that the scope of the relationship is all of the collective individuals within a context.</rdfs:comment>
     <rdfs:label xml:lang="en">All</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </Scope>
   <Scope rdf:about="http://w3.org/ns/odrl/2/all2ndConnections">
-    <rdfs:comment xml:lang="en">All the second-level connections of the Party.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Specifies that the scope of the relationship is all of the second-level connections to the Party.</rdfs:comment>
     <rdfs:label xml:lang="en">All second-level connections</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </Scope>
   <Scope rdf:about="http://w3.org/ns/odrl/2/allConnections">
-    <rdfs:comment xml:lang="en">All the first-level connections of the Party.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Specifies that the scope of the relationship is all of the first-level connections of the Party.</rdfs:comment>
     <rdfs:label xml:lang="en">All connections</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </Scope>
   <Scope rdf:about="http://w3.org/ns/odrl/2/allGroups">
-    <rdfs:comment xml:lang="en">All the group connections of the Party.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Specifies that the scope of the relationship is all of the group connections of the Party.</rdfs:comment>
     <rdfs:label xml:lang="en">All groups</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </Scope>
@@ -447,7 +456,7 @@
     <vs:term_status>testing</vs:term_status>
   </Action>
   <Operator rdf:about="http://w3.org/ns/odrl/2/eq">
-    <rdfs:comment xml:lang="en">Indicating that a given value equals the rightOperand of the Constraint.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Indicating that a given value equals the operand of the Constraint.</rdfs:comment>
     <rdfs:label xml:lang="en">Equal to</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </Operator>
@@ -508,13 +517,12 @@
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/function">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Functions are roles which may be fulfilled by a party</rdfs:comment>
+    <rdfs:comment xml:lang="en">Function is an abstract property whose sub-properties define the roles which may be fulfilled by a party in relation to a Rule.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Rule"/>
     <rdfs:label xml:lang="en">function</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
+    <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Party"/>
     <vs:term_status>testing</vs:term_status>
-    <skos:definition xml:lang="en">Parent property class of all roles</skos:definition>
-    <skos:scopeNote xml:lang="en">For the Role entity, the Functions may be used for specific details undertaken by the identified Party in the policy</skos:scopeNote>
+    <skos:scopeNote xml:lang="en"></skos:scopeNote>
   </rdf:Property>
   <Action rdf:about="http://w3.org/ns/odrl/2/give">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -523,7 +531,7 @@
     <vs:term_status>testing</vs:term_status>
   </Action>
   <Scope rdf:about="http://w3.org/ns/odrl/2/group">
-    <rdfs:comment xml:lang="en">The Party represents a defined group with multiple individual members.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Specifies that the scope of the relationship is the defined group with multiple individual members.</rdfs:comment>
     <rdfs:label xml:lang="en">Group</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </Scope>
@@ -560,7 +568,7 @@
     <vs:term_status>testing</vs:term_status>
   </Action>
   <Scope rdf:about="http://w3.org/ns/odrl/2/individual">
-    <rdfs:comment xml:lang="en">The Party is a single individual.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Specifies that the scope of the relationship is the single Party individual.</rdfs:comment>
     <rdfs:label xml:lang="en">Individual</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </Scope>
@@ -724,7 +732,7 @@
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/output">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">The Asset which is created from the output of the Action.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The output property specifies the Asset which is created from the output of the Action.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Action"/>
     <rdfs:label xml:lang="en">output</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Asset"/>
@@ -849,7 +857,7 @@
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/relation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">Relation is an abstract property which creates an explicit link between an Action and an Asset</rdfs:comment>
+    <rdfs:comment xml:lang="en">Relation is an abstract property which creates an explicit link between an Action and an Asset. Sub-properties of relation are used to define the nature of that link.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Action"/>
     <rdfs:label xml:lang="en">relation</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Asset"/>
@@ -889,14 +897,14 @@
     <vs:term_status>testing</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/rightOperand">
-    <rdfs:comment xml:lang="en">The operand applied to an instance of a constraint.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The operand applied to an instance of a constraint. Do not use the right-operand property directly within a Constraint. Instead, a Constraint instance must contain exactly one triple which makes use of one of the sub-properties of right-operand.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Constraint"/>
     <rdfs:label xml:lang="en">right-operand</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/scope">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">The scope by which the role applies</rdfs:comment>
+    <rdfs:comment xml:lang="en">The scope property is used to specify the scope of the Party instance (which describes the relationship with a party) in a particular context.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Party"/>
     <rdfs:label xml:lang="en">scope</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Scope"/>
@@ -942,7 +950,7 @@
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/status">
-    <rdfs:comment xml:lang="en">The current value of the constraint.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The current value of the constraint. The range of the status property is identical to that of the operand property selected used in the constraint.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Constraint"/>
     <rdfs:label xml:lang="en">status</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -961,7 +969,7 @@
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/target">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:comment xml:lang="en">The Asset upon which the Action is performed.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The target property specifies the Asset upon which the Action is performed.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Action"/>
     <rdfs:label xml:lang="en">target</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Asset"/>
@@ -1028,7 +1036,7 @@
     <rdfs:comment xml:lang="en">The unit of measurement used for the constraint value.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Constraint"/>
     <rdfs:label xml:lang="en">unit</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/version">
@@ -1056,12 +1064,5 @@
     <rdfs:comment xml:lang="en">The act of writing to the asset.</rdfs:comment>
     <rdfs:label xml:lang="en">Write</rdfs:label>
     <vs:term_status>testing</vs:term_status>
-  </Action>
-  <Action rdf:about="http://www.w3.org/2004/02/skos/core#acceptTracking">
-    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of accepting that the use of the asset may be recorded.</rdfs:comment>
-    <rdfs:label xml:lang="en">Accept tracking</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
-    <skos:scopeNote xml:lang="en">The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'.</skos:scopeNote>
   </Action>
 </rdf:RDF>
