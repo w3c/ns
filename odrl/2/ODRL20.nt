@@ -642,19 +642,27 @@
 <http://w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/2000/01/rdf-schema#label> "absolute size"@en .
 <http://w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/2000/01/rdf-schema#comment> "The absolute dimension that the Asset may be resized."@en .
+<http://w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
 <http://w3.org/ns/odrl/2/count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 <http://w3.org/ns/odrl/2/count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3.org/ns/odrl/2/count> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3.org/ns/odrl/2/rightOperand> .
 <http://w3.org/ns/odrl/2/count> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/count> <http://www.w3.org/2000/01/rdf-schema#label> "count"@en .
 <http://w3.org/ns/odrl/2/count> <http://www.w3.org/2000/01/rdf-schema#comment> "The numeric count indicating the number of times the corresponding entity may be exercised"@en .
+<http://w3.org/ns/odrl/2/count> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#date> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/2002/07/owl#unionOf> _:genid2 .
 <http://w3.org/ns/odrl/2/dateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 <http://w3.org/ns/odrl/2/dateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3.org/ns/odrl/2/rightOperand> .
 <http://w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2000/01/rdf-schema#label> "date/time"@en .
 <http://w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The date (and optional time and timezone) representing a point in time or period."@en .
-<http://w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2000/01/rdf-schema#range> _:genid3 .
 <http://w3.org/ns/odrl/2/deliveryChannel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 <http://w3.org/ns/odrl/2/deliveryChannel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://w3.org/ns/odrl/2/deliveryChannel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://w3.org/ns/odrl/2/rightOperand> .

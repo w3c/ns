@@ -747,14 +747,16 @@ odrl:
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "absolute size"@en ;
-	rdfs:comment "The absolute dimension that the Asset may be resized."@en .
+	rdfs:comment "The absolute dimension that the Asset may be resized."@en ;
+	rdfs:range xsd:decimal .
 
 :count
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "count"@en ;
-	rdfs:comment "The numeric count indicating the number of times the corresponding entity may be exercised"@en .
+	rdfs:comment "The numeric count indicating the number of times the corresponding entity may be exercised"@en ;
+	rdfs:range xsd:nonNegativeInteger .
 
 :dateTime
 	a rdf:Property , owl:DatatypeProperty ;
@@ -762,7 +764,10 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "date/time"@en ;
 	rdfs:comment "The date (and optional time and timezone) representing a point in time or period."@en ;
-	rdfs:range rdfs:Literal .
+	rdfs:range [
+		a owl:Class ;
+		owl:unionOf ( xsd:date xsd:dateTime ) ;
+	] .
 
 :deliveryChannel
     a rdf:Property , owl:ObjectProperty ;
