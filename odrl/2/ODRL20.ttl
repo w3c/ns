@@ -194,7 +194,10 @@ odrl:
 	rdfs:label "permission"@en ;
 	rdfs:comment "Relates the description of an individual Permission to a Policy. A permission can be specified either in terms of an Action alone, or an instance of Permission relating an Action and one or more other attributes."@en ;
 	rdfs:domain :Policy ;
-	rdfs:range :Permission , :Action .
+	rdfs:range [
+		a owl:Class ;
+		owl:unionOf ( :Permission :Action ) ;
+	] .
 
 :prohibition
 	a rdf:Property , owl:ObjectProperty ;
@@ -203,7 +206,10 @@ odrl:
 	rdfs:label "prohibition"@en ;
 	rdfs:comment "Relates the description of an individual Prohibition to a Policy. A prohibition can be specified either in terms of an Action alone, or an instance of Prohibition relating an Action and one or more other attributes."@en ;
 	rdfs:domain :Policy ;
-	rdfs:range :Prohibition , :Action .
+	rdfs:range [
+		a owl:Class ;
+		owl:unionOf ( :Prohibition  :Action ) ;
+	] .
 
 :inheritAllowed
 	a rdf:Property , owl:DatatypeProperty ;
@@ -314,7 +320,6 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "function"@en ;
 	rdfs:comment "Function is an abstract property whose sub-properties define the roles which may be fulfilled by a party in relation to a Rule."@en ;
-	skos:scopeNote ""@en ;
 	rdfs:domain :Rule ;
 	rdfs:range :Party .
 
@@ -343,7 +348,10 @@ odrl:
 	rdfs:label "duty"@en ;
 	rdfs:comment "A Duty indicates requirements which must be fulfilled in order to receive the permission."@en ;
 	rdfs:domain :Permission ;
-	rdfs:range :Duty , :Action .
+	rdfs:range [
+		a owl:Class ;
+		owl:unionOf ( :Duty :Action ) ;
+	] .
 
 :unit
 	a rdf:Property ;
@@ -400,78 +408,67 @@ odrl:
 	a :Operator, owl:NamedIndividual ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-	rdfs:label "Greater than"@en ;
-	rdfs:comment ""@en .
+	rdfs:label "Greater than"@en .
 
 :gteq
 	a :Operator, owl:NamedIndividual ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-	rdfs:label "Greater than or equal to"@en ;
-	rdfs:comment ""@en .
+	rdfs:label "Greater than or equal to"@en .
 
 :hasPart
 	a :Operator, owl:NamedIndividual ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-	rdfs:label "Has part"@en ;
-	rdfs:comment ""@en .
+	rdfs:label "Has part"@en .
 
 :isA
 	a :Operator, owl:NamedIndividual ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-	rdfs:label "Is a"@en ;
-	rdfs:comment ""@en .
+	rdfs:label "Is a"@en .
 
 :isAllOf
 	a :Operator, owl:NamedIndividual ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-	rdfs:label "Is all of"@en ;
-	rdfs:comment ""@en .
+	rdfs:label "Is all of"@en .
 
 :isAnyOf
 	a :Operator, owl:NamedIndividual ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-	rdfs:label "Is any of"@en ;
-	rdfs:comment ""@en .
+	rdfs:label "Is any of"@en .
 
 :isNoneOf
 	a :Operator, owl:NamedIndividual ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-	rdfs:label "Is none of"@en ;
-	rdfs:comment ""@en .
+	rdfs:label "Is none of"@en .
 
 :isPartOf
 	a :Operator, owl:NamedIndividual ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-	rdfs:label "Is part of"@en ;
-	rdfs:comment ""@en .
+	rdfs:label "Is part of"@en .
 
 :lt
 	a :Operator, owl:NamedIndividual ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-	rdfs:label "Less than"@en ;
-	rdfs:comment ""@en .
+	rdfs:label "Less than"@en .
 
 :lteq
 	a :Operator, owl:NamedIndividual ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-	rdfs:label "Less than or equal to"@en ;
-	rdfs:comment ""@en .
+	rdfs:label "Less than or equal to"@en .
 
 :neq
 	a :Operator, owl:NamedIndividual ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-	rdfs:label "Not equal to"@en ;
-	rdfs:comment ""@en .
+	rdfs:label "Not equal to"@en .
 
 ## Actions
 
@@ -480,16 +477,14 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Accept tracking"@en ;
-	rdfs:comment "The act of accepting that the use of the asset may be recorded."@en ;
-	skos:scopeNote "The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'."@en .
+	rdfs:comment "The act of accepting that the use of the asset may be recorded. The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'."@en .
 
 :adHocShare
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Ad-hoc sharing"@en ;
-	rdfs:comment "The act of sharing the asset to parties in close proximity to the owner."@en ;
-	skos:scopeNote "This action may be used to express [OMA] Sharing semantics"@en .
+	rdfs:comment "The act of sharing the asset to parties in close proximity to the owner. This action may be used to express [OMA] Sharing semantics."@en .
 
 :aggregate
 	a :Action, skos:Concept ;
@@ -998,15 +993,16 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "percentage"@en ;
 	rdfs:comment "The amount (as a percentage) of the action applicable to the asset."@en ;
-	rdfs:range rdfs:Literal .
+	rdfs:range xsd:decimal .
 
 :product
-    a rdf:Property , owl:ObjectProperty ;
+    a rdf:Property , owl:DatatypeProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "product"@en ;
-	rdfs:comment "The specified Product or Service name."@en .
+	rdfs:comment "The specified Product or Service name."@en ;
+	rdfs:range xsd:string .
 
 :proximity
     a rdf:Property , owl:DatatypeProperty ;

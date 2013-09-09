@@ -5,6 +5,10 @@
     <title>Open Digital Rights Language (ODRL)</title>
 	<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/w3c-unofficial">
 	<link rel="stylesheet" type="text/css" href="local.css">
+	<link rel="alternate" type="text/turtle" href="ODRL20.ttl">
+	<link rel="alternate" type="application/rdf+xml" href="ODRL20.rdf">
+	<link rel="alternate" type="application/xml" href="ODRL20.xsd">
+	<link rel="alternate" type="text/plain" href="ODRL20.nt">
 </head>
 <body>
     <div class="container">
@@ -26,6 +30,7 @@
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/Asset">http://www.w3.org/ns/odrl/2/Asset</a></td></tr>
 <tr><th>Label:</th> <td>Asset</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>In range of:</th> <td><a href="#term-relation">relation</a>, <a href="#term-output">output</a>, <a href="#term-target">target</a></td></tr>
 </table>
 </div>
 <h3 id="term-Party">Party</h3
@@ -35,6 +40,7 @@
 <tr><th>Label:</th> <td>Party</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Properties:</th> <td><a href="#term-scope">scope</a></td></tr>
+<tr><th>In range of:</th> <td><a href="#term-function">function</a>, <a href="#term-assignee">assignee</a>, <a href="#term-assigner">assigner</a></td></tr>
 </table>
 </div>
 <h3 id="term-Scope">Scope</h3
@@ -44,6 +50,7 @@
 <tr><th>Label:</th> <td>Scope</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></td></tr>
+<tr><th>In range of:</th> <td><a href="#term-scope">scope</a></td></tr>
 <tr><th>Instances:</th> <td><a href="#term-all">all</a>, <a href="#term-all2ndConnections">all2ndConnections</a>, <a href="#term-allConnections">allConnections</a>, <a href="#term-allGroups">allGroups</a>, <a href="#term-group">group</a>, <a href="#term-individual">individual</a></td></tr>
 </table>
 </div>
@@ -56,6 +63,7 @@
 <tr><th>Subclasses:</th> <td><a href="#term-Agreement">Agreement</a>, <a href="#term-Offer">Offer</a>, <a href="#term-Privacy">Privacy</a>, <a href="#term-Request">Request</a>, <a href="#term-Set">Set</a>, <a href="#term-Ticket">Ticket</a></td></tr>
 <tr><th>Parent class:</th> <td><a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a></td></tr>
 <tr><th>Properties:</th> <td><a href="#term-conflict">conflict</a>, <a href="#term-undefined">undefined</a>, <a href="#term-permission">permission</a>, <a href="#term-prohibition">prohibition</a>, <a href="#term-inheritAllowed">inheritAllowed</a>, <a href="#term-inheritFrom">inheritFrom</a></td></tr>
+<tr><th>In range of:</th> <td><a href="#term-inheritFrom">inheritFrom</a></td></tr>
 </table>
 </div>
 <h3 id="term-ConflictTerm">ConflictTerm</h3
@@ -64,6 +72,7 @@
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/ConflictTerm">http://www.w3.org/ns/odrl/2/ConflictTerm</a></td></tr>
 <tr><th>Label:</th> <td>Conflict term</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>In range of:</th> <td><a href="#term-conflict">conflict</a></td></tr>
 <tr><th>Instances:</th> <td><a href="#term-perm">perm</a>, <a href="#term-prohibit">prohibit</a>, <a href="#term-invalid">invalid</a></td></tr>
 </table>
 </div>
@@ -73,6 +82,7 @@
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/UndefinedTerm">http://www.w3.org/ns/odrl/2/UndefinedTerm</a></td></tr>
 <tr><th>Label:</th> <td>Undefined values</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>In range of:</th> <td><a href="#term-undefined">undefined</a></td></tr>
 <tr><th>Instances:</th> <td><a href="#term-ignore">ignore</a>, <a href="#term-invalid">invalid</a>, <a href="#term-support">support</a></td></tr>
 </table>
 </div>
@@ -125,6 +135,7 @@
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></td></tr>
 <tr><th>Properties:</th> <td><a href="#term-relation">relation</a>, <a href="#term-output">output</a>, <a href="#term-target">target</a></td></tr>
+<tr><th>In range of:</th> <td><a href="#term-action">action</a></td></tr>
 <tr><th>Instances:</th> <td><a href="#term-acceptTracking">acceptTracking</a>, <a href="#term-adHocShare">adHocShare</a>, <a href="#term-aggregate">aggregate</a>, <a href="#term-annotate">annotate</a>, <a href="#term-anonymize">anonymize</a>, <a href="#term-append">append</a>, <a href="#term-archive">archive</a>, <a href="#term-attachPolicy">attachPolicy</a>, <a href="#term-attachSource">attachSource</a>, <a href="#term-attribute">attribute</a>, <a href="#term-commercialize">commercialize</a>, <a href="#term-concurrentUse">concurrentUse</a>, <a href="#term-copy">copy</a>, <a href="#term-delete">delete</a>, <a href="#term-derive">derive</a>, <a href="#term-display">display</a>, <a href="#term-distribute">distribute</a>, <a href="#term-ensureExclusivity">ensureExclusivity</a>, <a href="#term-execute">execute</a>, <a href="#term-export">export</a>, <a href="#term-extract">extract</a>, <a href="#term-extractChar">extractChar</a>, <a href="#term-extractPage">extractPage</a>, <a href="#term-extractWord">extractWord</a>, <a href="#term-give">give</a>, <a href="#term-include">include</a>, <a href="#term-index">index</a>, <a href="#term-inform">inform</a>, <a href="#term-install">install</a>, <a href="#term-lease">lease</a>, <a href="#term-license">license</a>, <a href="#term-lend">lend</a>, <a href="#term-modify">modify</a>, <a href="#term-move">move</a>, <a href="#term-nextPolicy">nextPolicy</a>, <a href="#term-obtainConsent">obtainConsent</a>, <a href="#term-pay">pay</a>, <a href="#term-play">play</a>, <a href="#term-present">present</a>, <a href="#term-preview">preview</a>, <a href="#term-print">print</a>, <a href="#term-read">read</a>, <a href="#term-reproduce">reproduce</a>, <a href="#term-reviewPolicy">reviewPolicy</a>, <a href="#term-secondaryUse">secondaryUse</a>, <a href="#term-sell">sell</a>, <a href="#term-share">share</a>, <a href="#term-shareAlike">shareAlike</a>, <a href="#term-textToSpeech">textToSpeech</a>, <a href="#term-transform">transform</a>, <a href="#term-translate">translate</a>, <a href="#term-uninstall">uninstall</a>, <a href="#term-watermark">watermark</a>, <a href="#term-write">write</a></td></tr>
 </table>
 </div>
@@ -136,6 +147,7 @@
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a></td></tr>
 <tr><th>Properties:</th> <td><a href="#term-unit">unit</a>, <a href="#term-operator">operator</a>, <a href="#term-rightOperand">rightOperand</a>, <a href="#term-status">status</a></td></tr>
+<tr><th>In range of:</th> <td><a href="#term-constraint">constraint</a></td></tr>
 </table>
 </div>
 <h3 id="term-Operator">Operator</h3
@@ -145,6 +157,7 @@
 <tr><th>Label:</th> <td>Operator</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="http://www.w3.org/2002/07/owl#Thing">owl:Thing</a></td></tr>
+<tr><th>In range of:</th> <td><a href="#term-operator">operator</a></td></tr>
 <tr><th>Instances:</th> <td><a href="#term-eq">eq</a>, <a href="#term-gt">gt</a>, <a href="#term-gteq">gteq</a>, <a href="#term-hasPart">hasPart</a>, <a href="#term-isA">isA</a>, <a href="#term-isAllOf">isAllOf</a>, <a href="#term-isAnyOf">isAnyOf</a>, <a href="#term-isNoneOf">isNoneOf</a>, <a href="#term-isPartOf">isPartOf</a>, <a href="#term-lt">lt</a>, <a href="#term-lteq">lteq</a>, <a href="#term-neq">neq</a></td></tr>
 </table>
 </div>
@@ -428,7 +441,7 @@
 <tr><th>Label:</th> <td>date/time</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent property:</th> <td><a href="#term-rightOperand">rightOperand</a></td></tr>
-<tr><th>Range:</th> <td><a href="#term-genid1">genid1</a></td></tr>
+<tr><th>Range:</th> <td><a href="http://www.w3.org/2001/XMLSchema#date">xsd:date</a>, <a href="http://www.w3.org/2001/XMLSchema#dateTime">xsd:dateTime</a></td></tr>
 </table>
 </div>
 <h3 id="term-deliveryChannel">deliveryChannel</h3
@@ -531,7 +544,7 @@
 <tr><th>Label:</th> <td>percentage</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent property:</th> <td><a href="#term-rightOperand">rightOperand</a></td></tr>
-<tr><th>Range:</th> <td><a href="http://www.w3.org/2000/01/rdf-schema#Literal">rdfs:Literal</a></td></tr>
+<tr><th>Range:</th> <td><a href="http://www.w3.org/2001/XMLSchema#decimal">xsd:decimal</a></td></tr>
 </table>
 </div>
 <h3 id="term-product">product</h3
@@ -541,6 +554,7 @@
 <tr><th>Label:</th> <td>product</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent property:</th> <td><a href="#term-rightOperand">rightOperand</a></td></tr>
+<tr><th>Range:</th> <td><a href="http://www.w3.org/2001/XMLSchema#string">xsd:string</a></td></tr>
 </table>
 </div>
 <h3 id="term-proximity">proximity</h3
@@ -737,7 +751,7 @@
 </div>
 <h2 id="sec-concepts">Concepts</h2>
 <h3 id="term-acceptTracking">acceptTracking</h3
-<p>The act of accepting that the use of the asset may be recorded.</p>
+<p>The act of accepting that the use of the asset may be recorded. The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/acceptTracking">http://www.w3.org/ns/odrl/2/acceptTracking</a></td></tr>
 <tr><th>Label:</th> <td>Accept tracking</td></tr>
@@ -747,7 +761,7 @@
 </table>
 </div>
 <h3 id="term-adHocShare">adHocShare</h3
-<p>The act of sharing the asset to parties in close proximity to the owner.</p>
+<p>The act of sharing the asset to parties in close proximity to the owner. This action may be used to express [OMA] Sharing semantics.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/adHocShare">http://www.w3.org/ns/odrl/2/adHocShare</a></td></tr>
 <tr><th>Label:</th> <td>Ad-hoc sharing</td></tr>
