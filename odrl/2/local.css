@@ -1,0 +1,19 @@
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	text-align: left;
+	font-size: inherit;
+	font: 100%;
+}
+th {
+	font-weight: bold;
+}
+td {
+	font-weight: normal;
+	vertical-align: top;
+}
+th, td {
+	text-align:left;
+	padding:3px 0.25em 5px 0.25em;
+	border-bottom:1px solid #E6E6E6;
+}
