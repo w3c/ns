@@ -154,14 +154,14 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/absolutePosition">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">A point defined with absolute coordinates.</rdfs:comment>
-    <rdfs:label xml:lang="en">Absolute position</rdfs:label>
+    <rdfs:label xml:lang="en">absolute position</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/absoluteSize">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">The absolute dimension that the Asset may be resized.</rdfs:comment>
-    <rdfs:label xml:lang="en">Absolute size</rdfs:label>
+    <rdfs:label xml:lang="en">absolute size</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -169,7 +169,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The operation relating to the asset for which permission is being granted. A permission must include exactly one action.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Rule"/>
-    <rdfs:label xml:lang="en">Action</rdfs:label>
+    <rdfs:label xml:lang="en">action</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Action"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -287,7 +287,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/assignee">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The Party is the recipient of the policy statement.</rdfs:comment>
-    <rdfs:label xml:lang="en">Assignee</rdfs:label>
+    <rdfs:label xml:lang="en">assignee</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Party"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/function"/>
     <vs:term_status>testing</vs:term_status>
@@ -295,7 +295,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/assigner">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The Party is the issuer of the policy statement.</rdfs:comment>
-    <rdfs:label xml:lang="en">Assigner</rdfs:label>
+    <rdfs:label xml:lang="en">assigner</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Party"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/function"/>
     <vs:term_status>testing</vs:term_status>
@@ -321,7 +321,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/attributedParty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The Party to be attributed.</rdfs:comment>
-    <rdfs:label xml:lang="en">Attributed party</rdfs:label>
+    <rdfs:label xml:lang="en">attributed party</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/function"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -341,14 +341,14 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Relates a conflict-resolution mechansim to a Policy. If no mechanism is specified, the default is invalid.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
-    <rdfs:label xml:lang="en">Conflict resolution mechanism</rdfs:label>
+    <rdfs:label xml:lang="en">conflict</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/ConflictTerm"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/consentingParty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The Party to obtain consent from.</rdfs:comment>
-    <rdfs:label xml:lang="en">Consenting party</rdfs:label>
+    <rdfs:label xml:lang="en">consenting party</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/function"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -356,7 +356,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">One or more constraints which affect the validity of the Permission; e.g. if the Action play is only permitted for a certain period of time.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Rule"/>
-    <rdfs:label xml:lang="en">Constraint</rdfs:label>
+    <rdfs:label xml:lang="en">constraint</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Constraint"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -370,14 +370,14 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/count">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">The numeric count indicating the number of times the corresponding entity may be exercised</rdfs:comment>
-    <rdfs:label xml:lang="en">Count</rdfs:label>
+    <rdfs:label xml:lang="en">count</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/dateTime">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">The date (and optional time and timezone) representing a point in time or period.</rdfs:comment>
-    <rdfs:label xml:lang="en">Date/time</rdfs:label>
+    <rdfs:label xml:lang="en">date/time</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
@@ -391,7 +391,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/deliveryChannel">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The delivery channel used for storing or communicating the asset.</rdfs:comment>
-    <rdfs:label xml:lang="en">Delivery channel</rdfs:label>
+    <rdfs:label xml:lang="en">delivery channel</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -405,7 +405,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/device">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">An identifiable computing system.</rdfs:comment>
-    <rdfs:label xml:lang="en">Device</rdfs:label>
+    <rdfs:label xml:lang="en">device</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <owl:equivalentProperty rdf:resource="http://w3.org/ns/odrl/2/system"/>
     <vs:term_status>testing</vs:term_status>
@@ -427,7 +427,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">A Duty indicates requirements which must be fulfilled in order to receive the permission.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Permission"/>
-    <rdfs:label xml:lang="en">Duty</rdfs:label>
+    <rdfs:label xml:lang="en">duty</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Action"/>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Duty"/>
     <vs:term_status>testing</vs:term_status>
@@ -435,7 +435,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/elapsedTime">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">A period of time in which the policy action can be exercised.</rdfs:comment>
-    <rdfs:label xml:lang="en">Elapsed time</rdfs:label>
+    <rdfs:label xml:lang="en">elapsed time</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
@@ -454,7 +454,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/event">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Specification of a defined event applicable to the asset usage.</rdfs:comment>
-    <rdfs:label xml:lang="en">Event</rdfs:label>
+    <rdfs:label xml:lang="en">event</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -502,7 +502,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/fileFormat">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The file format applicable to the Asset.</rdfs:comment>
-    <rdfs:label xml:lang="en">File format</rdfs:label>
+    <rdfs:label xml:lang="en">file format</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -510,7 +510,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Functions are roles which may be fulfilled by a party</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Rule"/>
-    <rdfs:label xml:lang="en">Function</rdfs:label>
+    <rdfs:label xml:lang="en">function</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <vs:term_status>testing</vs:term_status>
     <skos:definition xml:lang="en">Parent property class of all roles</skos:definition>
@@ -566,7 +566,7 @@
   </Scope>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/industry">
     <rdfs:comment xml:lang="en"></rdfs:comment>
-    <rdfs:label xml:lang="en">Industry</rdfs:label>
+    <rdfs:label xml:lang="en">industry</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -579,7 +579,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/informedParty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The Party to be informed of all uses.</rdfs:comment>
-    <rdfs:label xml:lang="en">Informed party</rdfs:label>
+    <rdfs:label xml:lang="en">informed party</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/function"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -587,7 +587,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">A boolean value indicating whether this policy can be inherited from.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
-    <rdfs:label xml:lang="en">Inheritance allowed?</rdfs:label>
+    <rdfs:label xml:lang="en">inheritance allowed</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -595,7 +595,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Relates a policy to another policy from which terms are inherited.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
-    <rdfs:label xml:lang="en">Inherits from</rdfs:label>
+    <rdfs:label xml:lang="en">inherits from</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -637,7 +637,7 @@
     <vs:term_status>testing</vs:term_status>
   </Operator>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/language">
-    <rdfs:label xml:lang="en">Language</rdfs:label>
+    <rdfs:label xml:lang="en">language</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
@@ -672,14 +672,14 @@
   </Operator>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/media">
     <rdfs:comment xml:lang="en">The media type in which the asset may be used.</rdfs:comment>
-    <rdfs:label xml:lang="en">Media</rdfs:label>
+    <rdfs:label xml:lang="en">media</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/meteredTime">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">The maximum period of metered usage time.</rdfs:comment>
-    <rdfs:label xml:lang="en">Metered time</rdfs:label>
+    <rdfs:label xml:lang="en">metered time</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
@@ -718,7 +718,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The Boolean operator applied to a constraint and its operand.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Constraint"/>
-    <rdfs:label xml:lang="en">Operator</rdfs:label>
+    <rdfs:label xml:lang="en">operator</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Operator"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -726,7 +726,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The Asset which is created from the output of the Action.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Action"/>
-    <rdfs:label xml:lang="en">Output</rdfs:label>
+    <rdfs:label xml:lang="en">output</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Asset"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/relation"/>
     <vs:term_status>testing</vs:term_status>
@@ -739,7 +739,7 @@
   </Action>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/payAmount">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-    <rdfs:label xml:lang="en">Payment amount</rdfs:label>
+    <rdfs:label xml:lang="en">payment amount</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
@@ -747,14 +747,14 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/payeeParty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The Party is the recipient of the payment.</rdfs:comment>
-    <rdfs:label xml:lang="en">Payee party</rdfs:label>
+    <rdfs:label xml:lang="en">payee party</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/function"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/percentage">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">The amount (as a percentage) of the action applicable to the asset.</rdfs:comment>
-    <rdfs:label xml:lang="en">Percentage</rdfs:label>
+    <rdfs:label xml:lang="en">percentage</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
@@ -768,7 +768,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Relates the description of an individual Permission to a Policy. A permission can be specified either in terms of an Action alone, or an instance of Permission relating an Action and one or more other attributes.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
-    <rdfs:label xml:lang="en">Permission</rdfs:label>
+    <rdfs:label xml:lang="en">permission</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Action"/>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Permission"/>
     <vs:term_status>testing</vs:term_status>
@@ -802,7 +802,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/product">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The specified Product or Service name.</rdfs:comment>
-    <rdfs:label xml:lang="en">Product</rdfs:label>
+    <rdfs:label xml:lang="en">product</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -815,7 +815,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Relates the description of an individual Prohibition to a Policy. A prohibition can be specified either in terms of an Action alone, or an instance of Prohibition relating an Action and one or more other attributes.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
-    <rdfs:label xml:lang="en">Prohibition</rdfs:label>
+    <rdfs:label xml:lang="en">prohibition</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Action"/>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Prohibition"/>
     <vs:term_status>testing</vs:term_status>
@@ -823,14 +823,14 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/proximity">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">An value indicating the closeness or nearness.</rdfs:comment>
-    <rdfs:label xml:lang="en">Proximity</rdfs:label>
+    <rdfs:label xml:lang="en">proximity</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/purpose">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Specification of a defined purpose applicable to the asset usage.</rdfs:comment>
-    <rdfs:label xml:lang="en">Purpose</rdfs:label>
+    <rdfs:label xml:lang="en">purpose</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -843,7 +843,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/recipient">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The party that receives the result of the Action on the Asset.</rdfs:comment>
-    <rdfs:label xml:lang="en">Recipient</rdfs:label>
+    <rdfs:label xml:lang="en">recipient</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -851,21 +851,21 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Relation is an abstract property which creates an explicit link between an Action and an Asset</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Action"/>
-    <rdfs:label xml:lang="en">Relation</rdfs:label>
+    <rdfs:label xml:lang="en">relation</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Asset"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/relativePosition">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">A point defined with reference to another position.</rdfs:comment>
-    <rdfs:label xml:lang="en">Relative position</rdfs:label>
+    <rdfs:label xml:lang="en">relative position</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/relativeSize">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">The relative dimension that the Asset may be resized.</rdfs:comment>
-    <rdfs:label xml:lang="en">Relative size</rdfs:label>
+    <rdfs:label xml:lang="en">relative size</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -878,7 +878,7 @@
   </Action>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/resolution">
     <rdfs:comment xml:lang="en">The resolution at which the asset may be used.</rdfs:comment>
-    <rdfs:label xml:lang="en">Resolution</rdfs:label>
+    <rdfs:label xml:lang="en">resolution</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -891,14 +891,14 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/rightOperand">
     <rdfs:comment xml:lang="en">The operand applied to an instance of a constraint.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Constraint"/>
-    <rdfs:label xml:lang="en">Right operand</rdfs:label>
+    <rdfs:label xml:lang="en">right-operand</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/scope">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The scope by which the role applies</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Party"/>
-    <rdfs:label xml:lang="en">Scope</rdfs:label>
+    <rdfs:label xml:lang="en">scope</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Scope"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -937,14 +937,14 @@
   </Action>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/spatial">
     <rdfs:comment xml:lang="en">A code representing a geospatial area.</rdfs:comment>
-    <rdfs:label xml:lang="en">Spatial</rdfs:label>
+    <rdfs:label xml:lang="en">spatial</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/status">
     <rdfs:comment xml:lang="en">The current value of the constraint.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Constraint"/>
-    <rdfs:label xml:lang="en">Status</rdfs:label>
+    <rdfs:label xml:lang="en">status</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <UndefinedTerm rdf:about="http://w3.org/ns/odrl/2/support">
@@ -954,7 +954,7 @@
   </UndefinedTerm>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/system">
     <rdfs:comment xml:lang="en">An identifiable computing system.</rdfs:comment>
-    <rdfs:label xml:lang="en">System</rdfs:label>
+    <rdfs:label xml:lang="en">system</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <owl:equivalentProperty rdf:resource="http://w3.org/ns/odrl/2/device"/>
     <vs:term_status>testing</vs:term_status>
@@ -963,7 +963,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The Asset upon which the Action is performed.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Action"/>
-    <rdfs:label xml:lang="en">Target</rdfs:label>
+    <rdfs:label xml:lang="en">target</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/Asset"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/relation"/>
     <vs:term_status>testing</vs:term_status>
@@ -977,7 +977,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/timeInterval">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">Recurring period of time in which the usage may be exercised.</rdfs:comment>
-    <rdfs:label xml:lang="en">Time interval</rdfs:label>
+    <rdfs:label xml:lang="en">time interval</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
@@ -985,7 +985,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/timedCount">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">The number of seconds after which timed metering use of the asset begins.</rdfs:comment>
-    <rdfs:label xml:lang="en">Timed count</rdfs:label>
+    <rdfs:label xml:lang="en">timed count</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
@@ -993,7 +993,7 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/trackingParty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The Party is the usage tracker.</rdfs:comment>
-    <rdfs:label xml:lang="en">Tracking party</rdfs:label>
+    <rdfs:label xml:lang="en">tracking party</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/function"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -1014,7 +1014,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Relates the mechanism used for handling undefined actions to a Policy. If no mechanism is specified, the default is invalid.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Policy"/>
-    <rdfs:label xml:lang="en">Undefined action mechanism</rdfs:label>
+    <rdfs:label xml:lang="en">undefined</rdfs:label>
     <rdfs:range rdf:resource="http://w3.org/ns/odrl/2/UndefinedTerm"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
@@ -1027,21 +1027,21 @@
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/unit">
     <rdfs:comment xml:lang="en">The unit of measurement used for the constraint value.</rdfs:comment>
     <rdfs:domain rdf:resource="http://w3.org/ns/odrl/2/Constraint"/>
-    <rdfs:label xml:lang="en">Unit</rdfs:label>
+    <rdfs:label xml:lang="en">unit</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/version">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">The scope of versions for the asset.</rdfs:comment>
-    <rdfs:label xml:lang="en">Version</rdfs:label>
+    <rdfs:label xml:lang="en">version</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://w3.org/ns/odrl/2/virtualLocation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:comment xml:lang="en">Specification of a digital locale.</rdfs:comment>
-    <rdfs:label xml:lang="en">Virtual location</rdfs:label>
+    <rdfs:label xml:lang="en">virtual location</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://w3.org/ns/odrl/2/rightOperand"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>

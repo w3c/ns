@@ -68,7 +68,7 @@ odrl:
 :scope
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Scope"@en ;
+	rdfs:label "scope"@en ;
 	rdfs:comment "The scope by which the role applies"@en ;
 	rdfs:domain :Party ;
 	rdfs:range :Scope .
@@ -127,7 +127,7 @@ odrl:
 :conflict
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Conflict resolution mechanism"@en ;
+	rdfs:label "conflict"@en ;
 	rdfs:comment "Relates a conflict-resolution mechansim to a Policy. If no mechanism is specified, the default is invalid."@en ;
 	rdfs:domain :Policy ;
 	rdfs:range :ConflictTerm .
@@ -135,7 +135,7 @@ odrl:
 :undefined
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Undefined action mechanism"@en ;
+	rdfs:label "undefined"@en ;
 	rdfs:comment "Relates the mechanism used for handling undefined actions to a Policy. If no mechanism is specified, the default is invalid."@en ;
 	rdfs:domain :Policy ;
 	rdfs:range :UndefinedTerm .
@@ -143,7 +143,7 @@ odrl:
 :permission
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Permission"@en ;
+	rdfs:label "permission"@en ;
 	rdfs:comment "Relates the description of an individual Permission to a Policy. A permission can be specified either in terms of an Action alone, or an instance of Permission relating an Action and one or more other attributes."@en ;
 	rdfs:domain :Policy ;
 	rdfs:range :Permission , :Action .
@@ -151,7 +151,7 @@ odrl:
 :prohibition
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Prohibition"@en ;
+	rdfs:label "prohibition"@en ;
 	rdfs:comment "Relates the description of an individual Prohibition to a Policy. A prohibition can be specified either in terms of an Action alone, or an instance of Prohibition relating an Action and one or more other attributes."@en ;
 	rdfs:domain :Policy ;
 	rdfs:range :Prohibition , :Action .
@@ -159,7 +159,7 @@ odrl:
 :inheritAllowed
 	a rdf:Property , owl:DatatypeProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Inheritance allowed?"@en ;
+	rdfs:label "inheritance allowed"@en ;
 	rdfs:comment "A boolean value indicating whether this policy can be inherited from."@en ;
 	rdfs:domain :Policy ;
 	rdfs:range xsd:boolean .
@@ -167,7 +167,7 @@ odrl:
 :inheritFrom
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Inherits from"@en ;
+	rdfs:label "inherits from"@en ;
 	rdfs:comment "Relates a policy to another policy from which terms are inherited."@en ;
 	rdfs:domain :Policy ;
 	rdfs:range :Policy .
@@ -224,7 +224,7 @@ odrl:
 :relation
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Relation"@en ;
+	rdfs:label "relation"@en ;
 	rdfs:comment "Relation is an abstract property which creates an explicit link between an Action and an Asset"@en ;
 	rdfs:domain :Action ;
 	rdfs:range :Asset .
@@ -233,7 +233,7 @@ odrl:
 	a rdf:Property , owl:ObjectProperty ;
 	rdfs:subPropertyOf :relation ;
 	vs:term_status "testing" ;
-	rdfs:label "Output"@en ;
+	rdfs:label "output"@en ;
 	rdfs:comment "The Asset which is created from the output of the Action."@en ;
 	rdfs:domain :Action ;
 	rdfs:range :Asset . 
@@ -242,7 +242,7 @@ odrl:
 	a rdf:Property , owl:ObjectProperty ;
 	rdfs:subPropertyOf :relation ;
 	vs:term_status "testing" ;
-	rdfs:label "Target"@en ;
+	rdfs:label "target"@en ;
 	rdfs:comment "The Asset upon which the Action is performed."@en ;
 	rdfs:domain :Action ;
 	rdfs:range :Asset .
@@ -250,7 +250,7 @@ odrl:
 :function
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Function"@en ;
+	rdfs:label "function"@en ;
 	rdfs:comment "Functions are roles which may be fulfilled by a party"@en ;
 	skos:definition "Parent property class of all roles"@en ;
 	skos:scopeNote "For the Role entity, the Functions may be used for specific details undertaken by the identified Party in the policy"@en ;
@@ -260,7 +260,7 @@ odrl:
 :action
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Action"@en ;
+	rdfs:label "action"@en ;
 	rdfs:comment "The operation relating to the asset for which permission is being granted. A permission must include exactly one action."@en ;
 	rdfs:domain :Rule ;
 	rdfs:range :Action .
@@ -268,7 +268,7 @@ odrl:
 :constraint
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Constraint"@en ;
+	rdfs:label "constraint"@en ;
 	rdfs:comment "One or more constraints which affect the validity of the Permission; e.g. if the Action play is only permitted for a certain period of time."@en ;
 	rdfs:domain :Rule ;
 	rdfs:range :Constraint .
@@ -276,7 +276,7 @@ odrl:
 :duty
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Duty"@en ;
+	rdfs:label "duty"@en ;
 	rdfs:comment "A Duty indicates requirements which must be fulfilled in order to receive the permission."@en ;
 	rdfs:domain :Permission ;
 	rdfs:range :Duty , :Action .
@@ -284,7 +284,7 @@ odrl:
 :status
 	a rdf:Property ;
 	vs:term_status "testing" ;
-	rdfs:label "Status"@en ;
+	rdfs:label "status"@en ;
 	rdfs:comment "The current value of the constraint."@en ;
 	rdfs:domain :Constraint .
 
@@ -293,13 +293,13 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:domain :Constraint ;
 	rdfs:range rdfs:Literal ;
-	rdfs:label "Unit"@en ;
+	rdfs:label "unit"@en ;
 	rdfs:comment "The unit of measurement used for the constraint value."@en .
 
 :operator
 	a rdf:Property , owl:ObjectProperty ;
 	vs:term_status "testing" ;
-	rdfs:label "Operator"@en ;
+	rdfs:label "operator"@en ;
 	rdfs:comment "The Boolean operator applied to a constraint and its operand."@en ;
 	rdfs:domain :Constraint ;
 	rdfs:range :Operator .
@@ -307,7 +307,7 @@ odrl:
 :rightOperand
 	a rdf:Property ;
 	vs:term_status "testing" ;
-	rdfs:label "Right operand"@en ;
+	rdfs:label "right-operand"@en ;
 	rdfs:comment "The operand applied to an instance of a constraint."@en ;
 	rdfs:domain :Constraint .
 
@@ -739,28 +739,28 @@ skos:acceptTracking
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Absolute position"@en ;
+	rdfs:label "absolute position"@en ;
 	rdfs:comment "A point defined with absolute coordinates."@en .
 
 :absoluteSize
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Absolute size"@en ;
+	rdfs:label "absolute size"@en ;
 	rdfs:comment "The absolute dimension that the Asset may be resized."@en .
 
 :count
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Count"@en ;
+	rdfs:label "count"@en ;
 	rdfs:comment "The numeric count indicating the number of times the corresponding entity may be exercised"@en .
 
 :dateTime
 	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Date/time"@en ;
+	rdfs:label "date/time"@en ;
 	rdfs:comment "The date (and optional time and timezone) representing a point in time or period."@en ;
 	rdfs:range rdfs:Literal .
 
@@ -768,7 +768,7 @@ skos:acceptTracking
     a rdf:Property , owl:ObjectProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Delivery channel"@en ;
+	rdfs:label "delivery channel"@en ;
 	rdfs:comment "The delivery channel used for storing or communicating the asset."@en .
 
 :device
@@ -776,14 +776,14 @@ skos:acceptTracking
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
     owl:equivalentProperty :system ;
-	rdfs:label "Device"@en ;
+	rdfs:label "device"@en ;
 	rdfs:comment "An identifiable computing system."@en .
 
 :elapsedTime
     a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Elapsed time"@en ;
+	rdfs:label "elapsed time"@en ;
 	rdfs:comment "A period of time in which the policy action can be exercised."@en ;
 	rdfs:range rdfs:Literal .
 
@@ -791,42 +791,42 @@ skos:acceptTracking
 	a rdf:Property , owl:ObjectProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Event"@en ;
+	rdfs:label "event"@en ;
 	rdfs:comment "Specification of a defined event applicable to the asset usage."@en .
 
 :fileFormat
     a rdf:Property , owl:ObjectProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "File format"@en ;
+	rdfs:label "file format"@en ;
 	rdfs:comment "The file format applicable to the Asset."@en .
 
 :industry
     a rdf:Property ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Industry"@en ;
+	rdfs:label "industry"@en ;
 	rdfs:comment ""@en .
 
 :language
     a rdf:Property ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Language"@en ;
+	rdfs:label "language"@en ;
 	rdfs:range rdfs:Literal .
 
 :media
     a rdf:Property ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Media"@en ;
+	rdfs:label "media"@en ;
 	rdfs:comment "The media type in which the asset may be used."@en .
 
 :meteredTime
     a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Metered time"@en ;
+	rdfs:label "metered time"@en ;
 	rdfs:comment "The maximum period of metered usage time."@en ;
 	rdfs:range rdfs:Literal .
 
@@ -834,14 +834,14 @@ skos:acceptTracking
 	a rdf:Property, owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Payment amount"@en ;
+	rdfs:label "payment amount"@en ;
 	rdfs:range xsd:decimal .
 
 :percentage
     a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Percentage"@en ;
+	rdfs:label "percentage"@en ;
 	rdfs:comment "The amount (as a percentage) of the action applicable to the asset."@en ;
 	rdfs:range rdfs:Literal .
 
@@ -849,56 +849,56 @@ skos:acceptTracking
     a rdf:Property , owl:ObjectProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Product"@en ;
+	rdfs:label "product"@en ;
 	rdfs:comment "The specified Product or Service name."@en .
 
 :proximity
     a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Proximity"@en ;
+	rdfs:label "proximity"@en ;
 	rdfs:comment "An value indicating the closeness or nearness."@en .
 
 :purpose
     a rdf:Property , owl:ObjectProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Purpose"@en ;
+	rdfs:label "purpose"@en ;
 	rdfs:comment "Specification of a defined purpose applicable to the asset usage."@en .
 
 :recipient
     a rdf:Property , owl:ObjectProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Recipient"@en ;
+	rdfs:label "recipient"@en ;
 	rdfs:comment "The party that receives the result of the Action on the Asset."@en .
 
 :relativePosition
     a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Relative position"@en ;
+	rdfs:label "relative position"@en ;
 	rdfs:comment "A point defined with reference to another position."@en .
 
 :relativeSize
     a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Relative size"@en ;
+	rdfs:label "relative size"@en ;
 	rdfs:comment "The relative dimension that the Asset may be resized."@en .
 
 :resolution
     a rdf:Property ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Resolution"@en ;
+	rdfs:label "resolution"@en ;
 	rdfs:comment "The resolution at which the asset may be used."@en .
 
 :spatial
     a rdf:Property ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Spatial"@en ;
+	rdfs:label "spatial"@en ;
 	rdfs:comment "A code representing a geospatial area."@en .
 
 :system
@@ -906,14 +906,14 @@ skos:acceptTracking
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
     owl:equivalentProperty :device ;
-	rdfs:label "System"@en ;
+	rdfs:label "system"@en ;
 	rdfs:comment "An identifiable computing system."@en .
 
 :timedCount
     a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Timed count"@en ;
+	rdfs:label "timed count"@en ;
 	rdfs:comment "The number of seconds after which timed metering use of the asset begins."@en ;
 	rdfs:range rdfs:Literal .	
 
@@ -921,7 +921,7 @@ skos:acceptTracking
     a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Time interval"@en ;
+	rdfs:label "time interval"@en ;
 	rdfs:comment "Recurring period of time in which the usage may be exercised."@en ;
 	rdfs:range rdfs:Literal .
 
@@ -929,14 +929,14 @@ skos:acceptTracking
     a rdf:Property , owl:ObjectProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Version"@en ;
+	rdfs:label "version"@en ;
 	rdfs:comment "The scope of versions for the asset."@en .
 
 :virtualLocation
     a rdf:Property , owl:ObjectProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
-	rdfs:label "Virtual location"@en ;
+	rdfs:label "virtual location"@en ;
 	rdfs:comment "Specification of a digital locale."@en .
 
 ## Functions
@@ -945,7 +945,7 @@ skos:acceptTracking
     a rdf:Property , owl:ObjectProperty ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
-	rdfs:label "Assignee"@en ;
+	rdfs:label "assignee"@en ;
 	rdfs:comment "The Party is the recipient of the policy statement."@en ;
 	rdfs:range :Party .
 
@@ -953,7 +953,7 @@ skos:acceptTracking
     a rdf:Property , owl:ObjectProperty ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
-	rdfs:label "Assigner"@en ;
+	rdfs:label "assigner"@en ;
 	rdfs:comment "The Party is the issuer of the policy statement."@en ;
 	rdfs:range :Party .
 
@@ -961,35 +961,35 @@ skos:acceptTracking
     a rdf:Property , owl:ObjectProperty ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
-	rdfs:label "Attributed party"@en ;
+	rdfs:label "attributed party"@en ;
 	rdfs:comment "The Party to be attributed."@en .
 
 :consentingParty
     a rdf:Property , owl:ObjectProperty ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
-	rdfs:label "Consenting party"@en ;
+	rdfs:label "consenting party"@en ;
 	rdfs:comment "The Party to obtain consent from."@en .
 
 :informedParty
     a rdf:Property , owl:ObjectProperty ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
-	rdfs:label "Informed party"@en ;
+	rdfs:label "informed party"@en ;
 	rdfs:comment "The Party to be informed of all uses."@en .
 
 :payeeParty
     a rdf:Property , owl:ObjectProperty ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
-	rdfs:label "Payee party"@en ;
+	rdfs:label "payee party"@en ;
 	rdfs:comment "The Party is the recipient of the payment."@en .
 
 :trackingParty
     a rdf:Property , owl:ObjectProperty ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
-	rdfs:label "Tracking party"@en ;
+	rdfs:label "tracking party"@en ;
 	rdfs:comment "The Party is the usage tracker."@en .
 
 ## Policies
