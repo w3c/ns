@@ -267,7 +267,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf skos:Concept ;
 	vs:term_status "testing" ;
-	rdfs:comment "Sub-classes of Action are things one might be permitted to do or prohibited from doing to a work."@en ;
+	rdfs:comment "Instances of Action are things one might be permitted to do or prohibited from doing to a work."@en ;
 	rdfs:label "Action"@en .
 
 :Constraint

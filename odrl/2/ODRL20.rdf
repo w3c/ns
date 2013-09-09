@@ -26,7 +26,7 @@
   </owl:Ontology>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Action">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:comment xml:lang="en">Sub-classes of Action are things one might be permitted to do or prohibited from doing to a work.</rdfs:comment>
+    <rdfs:comment xml:lang="en">Instances of Action are things one might be permitted to do or prohibited from doing to a work.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Action</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
