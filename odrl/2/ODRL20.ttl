@@ -1,29 +1,60 @@
-@base <http://w3.org/ns/odrl/2/> .
-@prefix : <http://w3.org/ns/odrl/2/> .
-@prefix odrl: <http://w3.org/ns/odrl/2/> .
+@base <http://www.w3.org/ns/odrl/2/> .
+@prefix : <http://www.w3.org/ns/odrl/2/> .
+@prefix odrl: <http://www.w3.org/ns/odrl/2/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix dcmit: <http://purl.org/dc/dcmitype/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 
 odrl:
 	a owl:Ontology , voaf:Vocabulary ;
-	rdfs:label "ODRL"@en ;
-	owl:versionInfo "2.0"@en ;
+	rdfs:label "Open Digital Rights Language (ODRL)"@en ;
+	owl:versionInfo "2.0" ;
 	vann:preferredNamespaceUri <http://w3.org/ns/odrl/2/> ;
 	vann:preferredNamespacePrefix "odrl" ;
 	vann:example :Asset ;
 	dct:creator "Mo McRoberts", "Víctor Rodríguez Doncel" ;
 	dct:contributor "ODRL Community Group" ;
-	dct:description "Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media."@en .
+	dct:description "The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media."@en .
+
+<http://www.w3.org/ns/odrl/2/odrl.ttl>
+	a dcmit:Text ;
+	rdfs:label "ODRL 2.0 (Turtle)"@en ;
+	foaf:primaryTopic odrl: ;
+	dct:isVersionOf odrl: ;
+	dct:format <http://purl.org/NET/mediatypes/text/turtle> .
+
+<http://www.w3.org/ns/odrl/2/odrl.rdf>
+	a dcmit:Text ;
+	rdfs:label "ODRL 2.0 (RDF/XML)"@en ;
+	foaf:primaryTopic odrl: ;
+	dct:isVersionOf odrl: ;
+	dct:format <http://purl.org/NET/mediatypes/application/rdf+xml> .
+
+<http://www.w3.org/ns/odrl/2/odrl.xsd>
+	a dcmit:Text ;
+	rdfs:label "ODRL 2.0 (XML Schema Definition)"@en ;
+	foaf:primaryTopic odrl: ;
+	dct:isVersionOf odrl: ;
+	dct:format <http://purl.org/NET/mediatypes/application/xsd> .
+
+<http://www.w3.org/ns/odrl/2/odrl.html>
+	a dcmit:Text ;
+	rdfs:label "ODRL 2.0 (HTML)"@en ;
+	foaf:primaryTopic odrl: ;
+	dct:isVersionOf odrl: ;
+	dct:format <http://purl.org/NET/mediatypes/text/html> .
 
 :actions
 	a skos:ConceptScheme ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:label "ODRL Actions vocabulary"@en ;
 	skos:hasTopConcept :acceptTracking, :adHocShare, :aggregate, :annotate,
 		:anonymize, :append, :archive, :attachPolicy, :attachSource,
@@ -38,6 +69,7 @@ odrl:
 
 :scopes
 	a skos:ConceptScheme ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:label "ODRL Scopes vocabulary"@en ;
 	skos:hasTopConcept :all, :all2ndConnections, :allConnections, :allGroups,
 		:group, :individual .
@@ -46,6 +78,7 @@ odrl:
 
 :Asset
 	a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	owl:equivalentClass owl:Thing ;
 	vs:term_status "testing" ;
 	rdfs:label "Asset"@en ;
@@ -55,12 +88,14 @@ odrl:
 
 :Party
 	a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Party"@en ;
 	rdfs:comment "An entity which can participate in policy transactions. Use an instance of the Party class where it's necessary to associate a Scope with the relationship; in other cases, simply reference the party directly."@en .
 
 :Scope
 	a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf skos:Concept ;
 	rdfs:comment "The scope attribute indicates how to interpret the identified Party and provides contextual information in determining the extent of the policy statement. For example, if a Party is identified as a member of the Acme Social Network (using identifier urn:acme:user:billie) and they are the assignee with \"allConnections\" scope, then the group of individuals that have actually been assigned the permission consists of all the first-level connections (eg friends) that the identified Party has on that social network. That is, the social graph of the party starting from urn:acme:user:billie."@en ;
 	rdfs:label "Scope"@en ;
@@ -68,6 +103,7 @@ odrl:
 
 :scope
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "scope"@en ;
 	rdfs:comment "The scope property is used to specify the scope of the Party instance (which describes the relationship with a party) in a particular context."@en ;
@@ -78,6 +114,7 @@ odrl:
 
 :Policy
 	a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf owl:Thing ;
 	vs:term_status "testing" ;
 	rdfs:label "Policy"@en ;
@@ -85,48 +122,56 @@ odrl:
 
 :ConflictTerm
 	a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:comment "Instances of ConflictTerm describe policies for resolving conflicts."@en ;
 	rdfs:label "Conflict term"@en ;
 	vs:term_status "testing" .
 
 :perm
-	a :ConflictTerm ;
+	a :ConflictTerm, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Permissions"@en ;
 	rdfs:comment "Permissions take precedence over prohibitions."@en .
 
 :prohibit
-	a :ConflictTerm ;
+	a :ConflictTerm, owl:NamedIndividual;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Prohibit"@en ;
 	rdfs:comment "Prohibitions take precedence over permissions."@en .
 
 :UndefinedTerm
 	a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:comment "Instances of UndefinedTerm describe policies for processing unsupported actions."@en ;
 	rdfs:label "Undefined values"@en ;
 	vs:term_status "testing" .
 
 :ignore
-	a :UndefinedTerm ;
+	a :UndefinedTerm, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Ignore"@en ;
 	rdfs:comment "Undefined actions should be ignored."@en .
 
 :invalid
-	a :ConflictTerm, :UndefinedTerm ;
+	a :ConflictTerm, :UndefinedTerm, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Invalid"@en ;
 	rdfs:comment "The policy is invalidated."@en .
 
 :support
-	a :UndefinedTerm ;
+	a :UndefinedTerm, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Support"@en ;
 	rdfs:comment "Undefined actions do not invalidate the policy, but notification for review must occur."@en .
 
 :conflict
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "conflict"@en ;
 	rdfs:comment "Relates a conflict-resolution mechansim to a Policy. If no mechanism is specified, the default is invalid."@en ;
@@ -135,6 +180,7 @@ odrl:
 
 :undefined
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "undefined"@en ;
 	rdfs:comment "Relates the mechanism used for handling undefined actions to a Policy. If no mechanism is specified, the default is invalid."@en ;
@@ -143,6 +189,7 @@ odrl:
 
 :permission
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "permission"@en ;
 	rdfs:comment "Relates the description of an individual Permission to a Policy. A permission can be specified either in terms of an Action alone, or an instance of Permission relating an Action and one or more other attributes."@en ;
@@ -151,6 +198,7 @@ odrl:
 
 :prohibition
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "prohibition"@en ;
 	rdfs:comment "Relates the description of an individual Prohibition to a Policy. A prohibition can be specified either in terms of an Action alone, or an instance of Prohibition relating an Action and one or more other attributes."@en ;
@@ -159,6 +207,7 @@ odrl:
 
 :inheritAllowed
 	a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "inheritance allowed"@en ;
 	rdfs:comment "A boolean value indicating whether this policy can be inherited from."@en ;
@@ -167,6 +216,7 @@ odrl:
 
 :inheritFrom
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "inherits from"@en ;
 	rdfs:comment "Relates a policy to another policy from which terms are inherited."@en ;
@@ -177,12 +227,14 @@ odrl:
 
 :Rule
 	a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Rule"@en ;
 	rdfs:comment "An abstract common ancestor to Permissions, Prohibitions and Duties."@en .
 
 :Permission
 	a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf :Rule ;
 	vs:term_status "testing" ;
 	rdfs:label "Permission"@en ;
@@ -190,6 +242,7 @@ odrl:
 
 :Prohibition
 	a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf :Rule ;
 	vs:term_status "testing" ;
 	rdfs:label "Prohibition"@en ;
@@ -197,6 +250,7 @@ odrl:
 
 :Duty
 	a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf :Rule ;
 	vs:term_status "testing" ;
 	rdfs:label "Duty"@en ;
@@ -204,6 +258,7 @@ odrl:
 
 :Action
 	a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf skos:Concept ;
 	vs:term_status "testing" ;
 	rdfs:comment "Sub-classes of Action are things one might be permitted to do or prohibited from doing to a work."@en ;
@@ -211,6 +266,7 @@ odrl:
 
 :Constraint
 	a rdfs:Class, owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf owl:Thing ;
 	vs:term_status "testing" ;
 	rdfs:label "Constraint"@en ;
@@ -218,12 +274,14 @@ odrl:
 
 :Scope
 	a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Scope"@en ;
 	rdfs:comment """A Scope indicates how to interpret the identified Party and provides contextual information in determining the extent of the policy statement. For example, if a Party is identified as a member of the Acme Social Network (using identifier urn:acme:user:billie) and they are the assignee with "allConnections" scope, then the group of individuals that have actually been assigned the permission consists of all the first-level connections (eg friends) that the identified Party has on that social network. That is, the social graph of the party starting from urn:acme:user:billie."""@en .
 
 :relation
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "relation"@en ;
 	rdfs:comment "Relation is an abstract property which creates an explicit link between an Action and an Asset. Sub-properties of relation are used to define the nature of that link."@en ;
@@ -232,6 +290,7 @@ odrl:
 
 :output
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :relation ;
 	vs:term_status "testing" ;
 	rdfs:label "output"@en ;
@@ -241,6 +300,7 @@ odrl:
 
 :target
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :relation ;
 	vs:term_status "testing" ;
 	rdfs:label "target"@en ;
@@ -250,6 +310,7 @@ odrl:
 
 :function
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "function"@en ;
 	rdfs:comment "Function is an abstract property whose sub-properties define the roles which may be fulfilled by a party in relation to a Rule."@en ;
@@ -259,6 +320,7 @@ odrl:
 
 :action
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "action"@en ;
 	rdfs:comment "The operation relating to the asset for which permission is being granted. A permission must include exactly one action."@en ;
@@ -267,6 +329,7 @@ odrl:
 
 :constraint
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "constraint"@en ;
 	rdfs:comment "One or more constraints which affect the validity of the Permission; e.g. if the Action play is only permitted for a certain period of time."@en ;
@@ -275,6 +338,7 @@ odrl:
 	
 :duty
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "duty"@en ;
 	rdfs:comment "A Duty indicates requirements which must be fulfilled in order to receive the permission."@en ;
@@ -283,6 +347,7 @@ odrl:
 
 :unit
 	a rdf:Property ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:domain :Constraint ;
 	rdfs:range xsd:string ;
@@ -291,6 +356,7 @@ odrl:
 
 :operator
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "operator"@en ;
 	rdfs:comment "The Boolean operator applied to a constraint and its operand."@en ;
@@ -299,6 +365,7 @@ odrl:
 
 :rightOperand
 	a rdf:Property ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "right-operand"@en ;
 	rdfs:comment "The operand applied to an instance of a constraint. Do not use the right-operand property directly within a Constraint. Instead, a Constraint instance must contain exactly one triple which makes use of one of the sub-properties of right-operand."@en ;
@@ -306,6 +373,7 @@ odrl:
 
 :status
 	a rdf:Property ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "status"@en ;
 	rdfs:comment "The current value of the constraint. The range of the status property is identical to that of the operand property selected used in the constraint."@en ;
@@ -315,79 +383,92 @@ odrl:
 
 :Operator
 	a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf owl:Thing ;
 	vs:term_status "testing" ;
 	rdfs:label "Operator"@en ;
 	rdfs:comment "Instances of the Operator class represent boolean operators"@en .
 
 :eq
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Equal to"@en ;
 	rdfs:comment "Indicating that a given value equals the operand of the Constraint."@en .
 
 :gt
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Greater than"@en ;
 	rdfs:comment ""@en .
 
 :gteq
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Greater than or equal to"@en ;
 	rdfs:comment ""@en .
 
 :hasPart
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Has part"@en ;
 	rdfs:comment ""@en .
 
 :isA
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Is a"@en ;
 	rdfs:comment ""@en .
 
 :isAllOf
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Is all of"@en ;
 	rdfs:comment ""@en .
 
 :isAnyOf
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Is any of"@en ;
 	rdfs:comment ""@en .
 
 :isNoneOf
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Is none of"@en ;
 	rdfs:comment ""@en .
 
 :isPartOf
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Is part of"@en ;
 	rdfs:comment ""@en .
 
 :lt
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Less than"@en ;
 	rdfs:comment ""@en .
 
 :lteq
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Less than or equal to"@en ;
 	rdfs:comment ""@en .
 
 :neq
-	a :Operator ;
+	a :Operator, owl:NamedIndividual ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Not equal to"@en ;
 	rdfs:comment ""@en .
@@ -396,6 +477,7 @@ odrl:
 
 :acceptTracking
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Accept tracking"@en ;
 	rdfs:comment "The act of accepting that the use of the asset may be recorded."@en ;
@@ -403,6 +485,7 @@ odrl:
 
 :adHocShare
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Ad-hoc sharing"@en ;
 	rdfs:comment "The act of sharing the asset to parties in close proximity to the owner."@en ;
@@ -410,66 +493,77 @@ odrl:
 
 :aggregate
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Aggregate"@en ;
 	rdfs:comment "The act of using the asset (or parts of it) as part of a composite collection."@en .
 
 :annotate
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Annotate"@en ;
 	rdfs:comment "The act of adding notations/commentaries to the asset."@en .
 
 :anonymize
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Anonymize"@en ;
 	rdfs:comment "The act of anonymising the asset."@en .
 
 :append
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Append"@en ;
 	rdfs:comment "The act of adding to the end of an asset."@en .
 
 :archive
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Archive"@en ;
 	rdfs:comment "The act of persistently storing the asset."@en .
 
 :attachPolicy
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Attach policy"@en ;
 	rdfs:comment "The act of keeping the policy notice with the asset."@en .
 
 :attachSource
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Attach source"@en ;
 	rdfs:comment "The act of attaching the source of the asset and its derivatives."@en .
 
 :attribute
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Attribute"@en ;
 	rdfs:comment "The act of attributing the asset to a party."@en .
 
-:comercialize
+:commercialize
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Commercialize"@en ;
 	rdfs:comment "The act of using the asset in a business environment."@en .
 
 :concurrentUse
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Concurrent use"@en ;
 	rdfs:comment "The act of multiple concurrent use of the asset."@en .
 
 :copy
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	owl:sameAs :reproduce ;
 	rdfs:label "Copy"@en ;
@@ -477,12 +571,14 @@ odrl:
 
 :delete
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Delete"@en ;
 	rdfs:comment "The act of permanently removing the asset."@en .
 
 :derive
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Derive"@en ;
 	rdfs:comment "The act of creating a new derivative asset from the asset"@en ;
@@ -490,6 +586,7 @@ odrl:
 
 :display
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Display"@en ;
 	rdfs:comment "The act of making a transient visible rendering of the asset"@en ;
@@ -497,18 +594,21 @@ odrl:
 
 :distribute
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Distribute"@en ;
 	rdfs:comment "The act of publicly distributing, displaying and/or performing the asset."@en .
 
 :ensureExclusivity
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Ensure exclusivity"@en ;
 	rdfs:comment "The act of requiring the Assigner to ensure the Permission on the asset is unique to the Assignee."@en .
 
 :execute
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Execute"@en ;
 	rdfs:comment "The act of making a transient visible rendering of the asset."@en ;
@@ -516,6 +616,7 @@ odrl:
 
 :export
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Export"@en ;
 	rdfs:comment "The act of transforming the asset into a new form."@en ;
@@ -523,12 +624,14 @@ odrl:
 
 :extract
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Extract"@en ;
 	rdfs:comment "The act of extracting (replicating) unchanged parts of the asset."@en .
 
 :extractChar
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	skos:broader :extract ;
 	vs:term_status "testing" ;
 	rdfs:label "Extract character"@en ;
@@ -536,6 +639,7 @@ odrl:
 
 :extractPage
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	skos:broader :extract ;
 	vs:term_status "testing" ;
 	rdfs:label "Extract page"@en ;
@@ -543,6 +647,7 @@ odrl:
 
 :extractWord
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	skos:broader :extract ;
 	vs:term_status "testing" ;
 	rdfs:label "Extract word"@en ;
@@ -550,54 +655,63 @@ odrl:
 
 :give
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Give"@en ;
 	rdfs:comment "The act of giving away the asset in perpetuity without exchange of value."@en .
 
 :include
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Include"@en ;
 	rdfs:comment "The act of including other related assets to fulfill the function."@en .
 
 :index
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Index"@en ;
 	rdfs:comment "The act of indexing the asset into a collection of assets."@en .
 
 :inform
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Inform"@en ;
 	rdfs:comment "The act of informing a party that an action has been performed on the asset."@en .
 
 :install
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Install"@en ;
 	rdfs:comment "The act of loading the asset onto storage device ready for operation."@en .
 
 :lease
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Lease"@en ;
 	rdfs:comment "The act of making available the asset to a third-party for a fixed period of time with exchange of value."@en .
 
 :license
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "License"@en ;
 	rdfs:comment "The act of granting the right to use the asset to a third-party."@en .
 
 :lend
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Lend"@en ;
 	rdfs:comment "The act of making available the asset to a third-party for a fixed period of time without exchange of value."@en .
 
 :modify
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Modify"@en ;
 	rdfs:comment "The act of creating a new derivative asset from the asset."@en ;
@@ -605,30 +719,35 @@ odrl:
 
 :move
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Move"@en ;
 	rdfs:comment "The act of moving the asset."@en .
 
 :nextPolicy
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Next policy"@en ;
 	rdfs:comment "The act of specifying an asset (which must be a Policy) as the Policy terms for third-party use of the asset."@en .
 
 :obtainConsent
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Obtain consent"@en ;
 	rdfs:comment "The act of requiring explicit consent from a party to perform the action on the asset."@en .
 
 :pay
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Pay"@en ;
 	rdfs:comment "The act of paying a financial amount to a party for use of the asset."@en .
 
 :play
 	a :Action, skos:Concept ;	
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Play"@en ;
 	rdfs:comment "The act of rendering the asset into audio and/or video form."@en ;
@@ -636,6 +755,7 @@ odrl:
 
 :present
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Present"@en ;
 	rdfs:comment "The act of rendering the asset into audio and/or video form."@en ;
@@ -643,24 +763,28 @@ odrl:
 
 :preview
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Preview"@en ;
 	rdfs:comment "The act of providing a short preview of the asset."@en .
 
 :print
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Print"@en ;
 	rdfs:comment "The act of rendering the asset onto paper or hard copy form."@en .
 
 :read
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Read"@en ;
 	rdfs:comment "The act of obtaining data from the asset."@en .
 
 :reproduce
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Reproduce"@en ;
 	rdfs:comment "The act of making an exact reproduction of the asset."@en ;
@@ -668,42 +792,49 @@ odrl:
 
 :reviewPolicy
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Review policy"@en ;
 	rdfs:comment "The act of performing a manual review of the terms associated with the asset."@en .
 
 :secondaryUse
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Secondary use"@en ;
 	rdfs:comment "The act of using the asset for a purpose other than the purpose it was intended for."@en .
 
 :sell
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Sell"@en ;
 	rdfs:comment "The act of trading the asset in exchange of value."@en .
 
 :share
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Share"@en ;
 	rdfs:comment "The act of the non-commercial reproduction and distribution of the asset to third-parties."@en .
 
 :shareAlike
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Share-alike"@en ;
 	rdfs:comment "The act of distributing any derivative asset under the same terms as the original asset."@en .
 
 :textToSpeech
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Text-to-speech"@en ;
 	rdfs:comment "The act of a system reading the text of the asset out loud."@en .
 
 :transform
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Transform"@en ;
 	rdfs:comment "The act of transforming the asset into a new form."@en ;
@@ -711,24 +842,28 @@ odrl:
 
 :translate
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Translate"@en ;
 	rdfs:comment "The act of translating the asset into a new natural language."@en .
 
 :uninstall
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Uninstall"@en ;
 	rdfs:comment "The act of unloading the asset from storage device."@en .
 
 :watermark
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Watermark"@en ;
 	rdfs:comment "The act of applying a watermark to the asset."@en .
 
 :write
 	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Write"@en ;
 	rdfs:comment "The act of writing to the asset."@en .
@@ -737,6 +872,7 @@ odrl:
 
 :absolutePosition
 	a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "absolute position"@en ;
@@ -744,6 +880,7 @@ odrl:
 
 :absoluteSize
 	a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "absolute size"@en ;
@@ -752,6 +889,7 @@ odrl:
 
 :count
 	a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "count"@en ;
@@ -760,6 +898,7 @@ odrl:
 
 :dateTime
 	a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "date/time"@en ;
@@ -771,6 +910,7 @@ odrl:
 
 :deliveryChannel
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "delivery channel"@en ;
@@ -778,6 +918,7 @@ odrl:
 
 :device
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
     owl:equivalentProperty :system ;
@@ -786,6 +927,7 @@ odrl:
 
 :elapsedTime
     a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "elapsed time"@en ;
@@ -794,6 +936,7 @@ odrl:
 
 :event
 	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "event"@en ;
@@ -801,27 +944,31 @@ odrl:
 
 :fileFormat
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "file format"@en ;
 	rdfs:comment "The file format applicable to the Asset."@en .
 
 :industry
-    a rdf:Property ;
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "industry"@en ;
-	rdfs:comment ""@en .
+	rdfs:comment "The defined industry sector applicable to the asset usage"@en .
 
 :language
-    a rdf:Property ;
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "language"@en ;
-	rdfs:range rdfs:Literal .
+	rdfs:comment "The natural language applicable to the asset usage"@en .
 
 :media
     a rdf:Property ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "media"@en ;
@@ -829,6 +976,7 @@ odrl:
 
 :meteredTime
     a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "metered time"@en ;
@@ -837,6 +985,7 @@ odrl:
 
 :payAmount
 	a rdf:Property, owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "payment amount"@en ;
@@ -844,6 +993,7 @@ odrl:
 
 :percentage
     a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "percentage"@en ;
@@ -852,6 +1002,7 @@ odrl:
 
 :product
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "product"@en ;
@@ -859,6 +1010,7 @@ odrl:
 
 :proximity
     a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "proximity"@en ;
@@ -866,6 +1018,7 @@ odrl:
 
 :purpose
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "purpose"@en ;
@@ -873,6 +1026,7 @@ odrl:
 
 :recipient
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "recipient"@en ;
@@ -880,6 +1034,7 @@ odrl:
 
 :relativePosition
     a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "relative position"@en ;
@@ -887,6 +1042,7 @@ odrl:
 
 :relativeSize
     a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "relative size"@en ;
@@ -894,6 +1050,7 @@ odrl:
 
 :resolution
     a rdf:Property ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "resolution"@en ;
@@ -901,6 +1058,7 @@ odrl:
 
 :spatial
     a rdf:Property ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "spatial"@en ;
@@ -908,6 +1066,7 @@ odrl:
 
 :system
     a rdf:Property ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
     owl:equivalentProperty :device ;
@@ -916,6 +1075,7 @@ odrl:
 
 :timedCount
     a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "timed count"@en ;
@@ -924,6 +1084,7 @@ odrl:
 
 :timeInterval
     a rdf:Property , owl:DatatypeProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "time interval"@en ;
@@ -932,6 +1093,7 @@ odrl:
 
 :version
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "version"@en ;
@@ -939,6 +1101,7 @@ odrl:
 
 :virtualLocation
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
 	rdfs:label "virtual location"@en ;
@@ -948,6 +1111,7 @@ odrl:
 
 :assignee
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "assignee"@en ;
@@ -956,6 +1120,7 @@ odrl:
 
 :assigner
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "assigner"@en ;
@@ -964,6 +1129,7 @@ odrl:
 
 :attributedParty
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "attributed party"@en ;
@@ -971,6 +1137,7 @@ odrl:
 
 :consentingParty
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "consenting party"@en ;
@@ -978,6 +1145,7 @@ odrl:
 
 :informedParty
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "informed party"@en ;
@@ -985,6 +1153,7 @@ odrl:
 
 :payeeParty
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "payee party"@en ;
@@ -992,6 +1161,7 @@ odrl:
 
 :trackingParty
     a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
     rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "tracking party"@en ;
@@ -1001,6 +1171,7 @@ odrl:
 
 :Agreement
     a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
 	rdfs:label "Agreement"@en ;
@@ -1008,6 +1179,7 @@ odrl:
 
 :Offer
     a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
 	rdfs:label "Offer"@en ;
@@ -1015,6 +1187,7 @@ odrl:
 
 :Privacy
     a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
 	rdfs:label "Privacy"@en ;
@@ -1022,6 +1195,7 @@ odrl:
 
 :Request
     a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
 	rdfs:label "Request"@en ;
@@ -1029,6 +1203,7 @@ odrl:
 
 :Set
     a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
 	rdfs:label "Set"@en ;
@@ -1036,6 +1211,7 @@ odrl:
 
 :Ticket
     a rdfs:Class , owl:Class ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
 	rdfs:label "Ticket"@en ;
@@ -1044,37 +1220,43 @@ odrl:
 ## Scopes
 
 :all
-	a :Scope ;
+	a :Scope , skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "All"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is all of the collective individuals within a context."@en .
 
 :all2ndConnections
-	a :Scope ;
+	a :Scope , skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "All second-level connections"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is all of the second-level connections to the Party."@en .
 
 :allConnections
-	a :Scope ;
+	a :Scope , skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "All connections"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is all of the first-level connections of the Party."@en .
 
 :allGroups
-	a :Scope ;
+	a :Scope , skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "All groups"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is all of the group connections of the Party."@en .
 
 :group
-	a :Scope ;
+	a :Scope , skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Group"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is the defined group with multiple individual members."@en .
 
 :individual
-	a :Scope ;
+	a :Scope , skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Individual"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is the single Party individual."@en .

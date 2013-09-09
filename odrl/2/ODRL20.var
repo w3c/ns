@@ -1,5 +1,8 @@
 URI: ODRL20
 
+URI: ODRL20.html
+Content-Type: text/html;qs=1.0
+
 URI: ODRL20.xsd
 Content-Type: application/xml;qs=0.9
 
