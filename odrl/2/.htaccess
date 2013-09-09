@@ -1,7 +1,7 @@
 RewriteEngine On
 RewriteBase /ns/odrl/2
 
-DirectoryIndex model.var
+DirectoryIndex ODRL20.var
 
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule . - [L]
