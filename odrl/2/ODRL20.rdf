@@ -1254,7 +1254,7 @@
     <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Constraint"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">unit</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/version">

@@ -316,7 +316,7 @@ _:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
 <http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Constraint> .
-<http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
 <http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit"@en .
 <http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit of measurement used for the constraint value."@en .
 <http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .

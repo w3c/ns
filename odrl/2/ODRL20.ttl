@@ -328,7 +328,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:domain :Constraint ;
-	rdfs:range xsd:string ;
+	rdfs:range rdfs:Resource ;
 	rdfs:label "unit"@en ;
 	rdfs:comment "The unit of measurement used for the constraint value."@en .
 
