@@ -156,6 +156,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Policy</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Privacy">
