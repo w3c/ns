@@ -11,8 +11,6 @@
 	<link rel="alternate" type="text/plain" href="ODRL20.nt">
 </head>
 <body>
-    <div class="container">
-
 <h1>Open Digital Rights Language (ODRL)</h1>
 <em>The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media.</em>
 <dl>
@@ -21,9 +19,72 @@
 <dt>Authors</dt><dd>Mo McRoberts, Víctor Rodríguez Doncel</dd>
 <dt>Contributors</dt><dd>ODRL Community Group</dd>
 </dl>
-<h2 id="sec-toc">Table of Contents</h2><ol class="toc"><li><a href="#sec-summary"><span class="secno">1</span> Summary of Terms</a></li><li><a href="#sec-classes"><span class="secno">2</span> Classes</a></li><li><a href="#sec-properties"><span class="secno">3</span> Properties</a></li><li><a href="#sec-concept-schemes"><span class="secno">4</span> Concept schemes</a></li><li><a href="#sec-concepts"><span class="secno">5</span> Concepts</a></li><li><a href="#sec-named-individuals"><span class="secno">6</span> Named individuals</a></li></ol><h2 id="sec-summary">Summary of Terms</h2>
+
+<h2 id="sec-status">Status of this document</h2>
+<p>This DRAFT specification was published by the <a href="http://www.w3.org/community/odrl/">W3C ODRL Community Group</a>. It is not a W3C Standard nor is it on the W3C Standards Track. Please note that under the <a href="http://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a> there is a limited opt-out and other conditions apply. Learn more about <a href="http://www.w3.org/community/">W3C Community and Business Groups</a>.</p>
+
+<p>The <a href="http://www.w3.org/community/odrl/">W3C ODRL Community Group</a> publishes a Final Specification to indicate that the document is believed to be mature and stable for implementation by the wider community. This Draft Specification is not yet endorsed by the <a href="http://www.w3.org/community/odrl/">W3C ODRL Community Group</a> as appropriate for widespread deployment and that promotes the Community Groups’s mission.</p>
+
+<p>Discussion and feedback of this document takes place on the W3C ODRL Community Group mailing list (see <a href="http://lists.w3.org/Archives/Public/public-odrl-contrib/">Contributor Archive</a>). Feedback from the public is encouraged and can be send to <a href="mailto:public-odrl@w3.org">public-odrl@w3.org</a> (see <a href="http://lists.w3.org/Archives/Public/public-odrl/">Public Archive</a>).</p>
+
+<p>Copyright © 2013 the Contributors to the Final Specification, published by the <a href="http://www.w3.org/community/odrl/">W3C ODRL Community Group</a> under the <a href="http://www.w3.org/community/about/agreements/final/">W3C Community Final Specification Agreement (FSA)</a>. A human-readable summary is <a href="http://www.w3.org/community/about/agreements/fsa-deed/">available</a>.</p>
+
+<h2 id="sec-toc">Table of Contents</h2>
+<ol class="toc">
+<li><a href="#sec-summary"><span class="secno">1</span> Summary of Terms</a></li>
+<li><a href="#sec-groups"><span class="secno">2</span> Groups</a></li>
+<li><a href="#sec-classes"><span class="secno">3</span> Classes</a></li>
+<li><a href="#sec-properties"><span class="secno">4</span> Properties</a></li>
+<li><a href="#sec-concept-schemes"><span class="secno">5</span> Concept schemes</a></li>
+<li><a href="#sec-concepts"><span class="secno">6</span> Concepts</a></li>
+<li><a href="#sec-named-individuals"><span class="secno">7</span> Named individuals</a></li>
+</ol>
+
+<h2 id="sec-summary">Summary of Terms</h2>
 <p>This vocabulary defines 19 classes, 53 properties, 2 concept schemes, 60 concepts and 17 named individuals.</p>
-<dl><dt>Classes</dt><dd><a href="#term-Action">Action</a> | <a href="#term-Agreement">Agreement</a> | <a href="#term-Asset">Asset</a> | <a href="#term-ConflictTerm">ConflictTerm</a> | <a href="#term-Constraint">Constraint</a> | <a href="#term-Duty">Duty</a> | <a href="#term-Offer">Offer</a> | <a href="#term-Operator">Operator</a> | <a href="#term-Party">Party</a> | <a href="#term-Permission">Permission</a> | <a href="#term-Policy">Policy</a> | <a href="#term-Privacy">Privacy</a> | <a href="#term-Prohibition">Prohibition</a> | <a href="#term-Request">Request</a> | <a href="#term-Rule">Rule</a> | <a href="#term-Scope">Scope</a> | <a href="#term-Set">Set</a> | <a href="#term-Ticket">Ticket</a> | <a href="#term-UndefinedTerm">UndefinedTerm</a></dd><dt>Properties</dt><dd><a href="#term-absolutePosition">absolutePosition</a> | <a href="#term-absoluteSize">absoluteSize</a> | <a href="#term-action">action</a> | <a href="#term-assignee">assignee</a> | <a href="#term-assigner">assigner</a> | <a href="#term-attributedParty">attributedParty</a> | <a href="#term-conflict">conflict</a> | <a href="#term-consentingParty">consentingParty</a> | <a href="#term-constraint">constraint</a> | <a href="#term-count">count</a> | <a href="#term-dateTime">dateTime</a> | <a href="#term-deliveryChannel">deliveryChannel</a> | <a href="#term-device">device</a> | <a href="#term-duty">duty</a> | <a href="#term-elapsedTime">elapsedTime</a> | <a href="#term-event">event</a> | <a href="#term-fileFormat">fileFormat</a> | <a href="#term-function">function</a> | <a href="#term-industry">industry</a> | <a href="#term-informedParty">informedParty</a> | <a href="#term-inheritAllowed">inheritAllowed</a> | <a href="#term-inheritFrom">inheritFrom</a> | <a href="#term-language">language</a> | <a href="#term-media">media</a> | <a href="#term-meteredTime">meteredTime</a> | <a href="#term-operator">operator</a> | <a href="#term-output">output</a> | <a href="#term-payeeParty">payeeParty</a> | <a href="#term-payAmount">payAmount</a> | <a href="#term-percentage">percentage</a> | <a href="#term-permission">permission</a> | <a href="#term-product">product</a> | <a href="#term-prohibition">prohibition</a> | <a href="#term-proximity">proximity</a> | <a href="#term-purpose">purpose</a> | <a href="#term-recipient">recipient</a> | <a href="#term-relation">relation</a> | <a href="#term-relativePosition">relativePosition</a> | <a href="#term-relativeSize">relativeSize</a> | <a href="#term-resolution">resolution</a> | <a href="#term-rightOperand">rightOperand</a> | <a href="#term-scope">scope</a> | <a href="#term-spatial">spatial</a> | <a href="#term-status">status</a> | <a href="#term-system">system</a> | <a href="#term-target">target</a> | <a href="#term-timeInterval">timeInterval</a> | <a href="#term-timedCount">timedCount</a> | <a href="#term-trackingParty">trackingParty</a> | <a href="#term-undefined">undefined</a> | <a href="#term-unit">unit</a> | <a href="#term-version">version</a> | <a href="#term-virtualLocation">virtualLocation</a></dd><dt>Concept schemes</dt><dd><a href="#term-actions">actions</a> | <a href="#term-scopes">scopes</a></dd><dt>Concepts</dt><dd><a href="#term-acceptTracking">acceptTracking</a> | <a href="#term-adHocShare">adHocShare</a> | <a href="#term-aggregate">aggregate</a> | <a href="#term-all">all</a> | <a href="#term-allConnections">allConnections</a> | <a href="#term-allGroups">allGroups</a> | <a href="#term-all2ndConnections">all2ndConnections</a> | <a href="#term-annotate">annotate</a> | <a href="#term-anonymize">anonymize</a> | <a href="#term-append">append</a> | <a href="#term-archive">archive</a> | <a href="#term-attachPolicy">attachPolicy</a> | <a href="#term-attachSource">attachSource</a> | <a href="#term-attribute">attribute</a> | <a href="#term-commercialize">commercialize</a> | <a href="#term-concurrentUse">concurrentUse</a> | <a href="#term-copy">copy</a> | <a href="#term-delete">delete</a> | <a href="#term-derive">derive</a> | <a href="#term-display">display</a> | <a href="#term-distribute">distribute</a> | <a href="#term-ensureExclusivity">ensureExclusivity</a> | <a href="#term-execute">execute</a> | <a href="#term-export">export</a> | <a href="#term-extract">extract</a> | <a href="#term-extractChar">extractChar</a> | <a href="#term-extractPage">extractPage</a> | <a href="#term-extractWord">extractWord</a> | <a href="#term-give">give</a> | <a href="#term-group">group</a> | <a href="#term-include">include</a> | <a href="#term-index">index</a> | <a href="#term-individual">individual</a> | <a href="#term-inform">inform</a> | <a href="#term-install">install</a> | <a href="#term-lease">lease</a> | <a href="#term-lend">lend</a> | <a href="#term-license">license</a> | <a href="#term-modify">modify</a> | <a href="#term-move">move</a> | <a href="#term-nextPolicy">nextPolicy</a> | <a href="#term-obtainConsent">obtainConsent</a> | <a href="#term-pay">pay</a> | <a href="#term-play">play</a> | <a href="#term-present">present</a> | <a href="#term-preview">preview</a> | <a href="#term-print">print</a> | <a href="#term-read">read</a> | <a href="#term-reproduce">reproduce</a> | <a href="#term-reviewPolicy">reviewPolicy</a> | <a href="#term-secondaryUse">secondaryUse</a> | <a href="#term-sell">sell</a> | <a href="#term-share">share</a> | <a href="#term-shareAlike">shareAlike</a> | <a href="#term-textToSpeech">textToSpeech</a> | <a href="#term-transform">transform</a> | <a href="#term-translate">translate</a> | <a href="#term-uninstall">uninstall</a> | <a href="#term-watermark">watermark</a> | <a href="#term-write">write</a></dd><dt>Named individuals</dt><dd><a href="#term-eq">eq</a> | <a href="#term-gt">gt</a> | <a href="#term-gteq">gteq</a> | <a href="#term-hasPart">hasPart</a> | <a href="#term-ignore">ignore</a> | <a href="#term-invalid">invalid</a> | <a href="#term-isA">isA</a> | <a href="#term-isAllOf">isAllOf</a> | <a href="#term-isAnyOf">isAnyOf</a> | <a href="#term-isNoneOf">isNoneOf</a> | <a href="#term-isPartOf">isPartOf</a> | <a href="#term-lt">lt</a> | <a href="#term-lteq">lteq</a> | <a href="#term-neq">neq</a> | <a href="#term-perm">perm</a> | <a href="#term-prohibit">prohibit</a> | <a href="#term-support">support</a></dd></dl><h2 id="sec-classes">Classes</h2>
+<dl><dt>Classes</dt><dd><a href="#term-Action">Action</a> | <a href="#term-Agreement">Agreement</a> | <a href="#term-Asset">Asset</a> | <a href="#term-ConflictTerm">ConflictTerm</a> | <a href="#term-Constraint">Constraint</a> | <a href="#term-Duty">Duty</a> | <a href="#term-Offer">Offer</a> | <a href="#term-Operator">Operator</a> | <a href="#term-Party">Party</a> | <a href="#term-Permission">Permission</a> | <a href="#term-Policy">Policy</a> | <a href="#term-Privacy">Privacy</a> | <a href="#term-Prohibition">Prohibition</a> | <a href="#term-Request">Request</a> | <a href="#term-Rule">Rule</a> | <a href="#term-Scope">Scope</a> | <a href="#term-Set">Set</a> | <a href="#term-Ticket">Ticket</a> | <a href="#term-UndefinedTerm">UndefinedTerm</a></dd><dt>Properties</dt><dd><a href="#term-absolutePosition">absolutePosition</a> | <a href="#term-absoluteSize">absoluteSize</a> | <a href="#term-action">action</a> | <a href="#term-assignee">assignee</a> | <a href="#term-assigner">assigner</a> | <a href="#term-attributedParty">attributedParty</a> | <a href="#term-conflict">conflict</a> | <a href="#term-consentingParty">consentingParty</a> | <a href="#term-constraint">constraint</a> | <a href="#term-count">count</a> | <a href="#term-dateTime">dateTime</a> | <a href="#term-deliveryChannel">deliveryChannel</a> | <a href="#term-device">device</a> | <a href="#term-duty">duty</a> | <a href="#term-elapsedTime">elapsedTime</a> | <a href="#term-event">event</a> | <a href="#term-fileFormat">fileFormat</a> | <a href="#term-function">function</a> | <a href="#term-industry">industry</a> | <a href="#term-informedParty">informedParty</a> | <a href="#term-inheritAllowed">inheritAllowed</a> | <a href="#term-inheritFrom">inheritFrom</a> | <a href="#term-language">language</a> | <a href="#term-media">media</a> | <a href="#term-meteredTime">meteredTime</a> | <a href="#term-operator">operator</a> | <a href="#term-output">output</a> | <a href="#term-payeeParty">payeeParty</a> | <a href="#term-payAmount">payAmount</a> | <a href="#term-percentage">percentage</a> | <a href="#term-permission">permission</a> | <a href="#term-product">product</a> | <a href="#term-prohibition">prohibition</a> | <a href="#term-proximity">proximity</a> | <a href="#term-purpose">purpose</a> | <a href="#term-recipient">recipient</a> | <a href="#term-relation">relation</a> | <a href="#term-relativePosition">relativePosition</a> | <a href="#term-relativeSize">relativeSize</a> | <a href="#term-resolution">resolution</a> | <a href="#term-rightOperand">rightOperand</a> | <a href="#term-scope">scope</a> | <a href="#term-spatial">spatial</a> | <a href="#term-status">status</a> | <a href="#term-system">system</a> | <a href="#term-target">target</a> | <a href="#term-timeInterval">timeInterval</a> | <a href="#term-timedCount">timedCount</a> | <a href="#term-trackingParty">trackingParty</a> | <a href="#term-undefined">undefined</a> | <a href="#term-unit">unit</a> | <a href="#term-version">version</a> | <a href="#term-virtualLocation">virtualLocation</a></dd><dt>Concept schemes</dt><dd><a href="#term-actions">actions</a> | <a href="#term-scopes">scopes</a></dd><dt>Concepts</dt><dd><a href="#term-acceptTracking">acceptTracking</a> | <a href="#term-adHocShare">adHocShare</a> | <a href="#term-aggregate">aggregate</a> | <a href="#term-all">all</a> | <a href="#term-allConnections">allConnections</a> | <a href="#term-allGroups">allGroups</a> | <a href="#term-all2ndConnections">all2ndConnections</a> | <a href="#term-annotate">annotate</a> | <a href="#term-anonymize">anonymize</a> | <a href="#term-append">append</a> | <a href="#term-archive">archive</a> | <a href="#term-attachPolicy">attachPolicy</a> | <a href="#term-attachSource">attachSource</a> | <a href="#term-attribute">attribute</a> | <a href="#term-commercialize">commercialize</a> | <a href="#term-concurrentUse">concurrentUse</a> | <a href="#term-copy">copy</a> | <a href="#term-delete">delete</a> | <a href="#term-derive">derive</a> | <a href="#term-display">display</a> | <a href="#term-distribute">distribute</a> | <a href="#term-ensureExclusivity">ensureExclusivity</a> | <a href="#term-execute">execute</a> | <a href="#term-export">export</a> | <a href="#term-extract">extract</a> | <a href="#term-extractChar">extractChar</a> | <a href="#term-extractPage">extractPage</a> | <a href="#term-extractWord">extractWord</a> | <a href="#term-give">give</a> | <a href="#term-group">group</a> | <a href="#term-include">include</a> | <a href="#term-index">index</a> | <a href="#term-individual">individual</a> | <a href="#term-inform">inform</a> | <a href="#term-install">install</a> | <a href="#term-lease">lease</a> | <a href="#term-lend">lend</a> | <a href="#term-license">license</a> | <a href="#term-modify">modify</a> | <a href="#term-move">move</a> | <a href="#term-nextPolicy">nextPolicy</a> | <a href="#term-obtainConsent">obtainConsent</a> | <a href="#term-pay">pay</a> | <a href="#term-play">play</a> | <a href="#term-present">present</a> | <a href="#term-preview">preview</a> | <a href="#term-print">print</a> | <a href="#term-read">read</a> | <a href="#term-reproduce">reproduce</a> | <a href="#term-reviewPolicy">reviewPolicy</a> | <a href="#term-secondaryUse">secondaryUse</a> | <a href="#term-sell">sell</a> | <a href="#term-share">share</a> | <a href="#term-shareAlike">shareAlike</a> | <a href="#term-textToSpeech">textToSpeech</a> | <a href="#term-transform">transform</a> | <a href="#term-translate">translate</a> | <a href="#term-uninstall">uninstall</a> | <a href="#term-watermark">watermark</a> | <a href="#term-write">write</a></dd><dt>Named individuals</dt><dd><a href="#term-eq">eq</a> | <a href="#term-gt">gt</a> | <a href="#term-gteq">gteq</a> | <a href="#term-hasPart">hasPart</a> | <a href="#term-ignore">ignore</a> | <a href="#term-invalid">invalid</a> | <a href="#term-isA">isA</a> | <a href="#term-isAllOf">isAllOf</a> | <a href="#term-isAnyOf">isAnyOf</a> | <a href="#term-isNoneOf">isNoneOf</a> | <a href="#term-isPartOf">isPartOf</a> | <a href="#term-lt">lt</a> | <a href="#term-lteq">lteq</a> | <a href="#term-neq">neq</a> | <a href="#term-perm">perm</a> | <a href="#term-prohibit">prohibit</a> | <a href="#term-support">support</a></dd></dl>
+<h2 id="sec-groups">Groups</h2>
+<p>Some terms can be organised into logical groups, as described below:</p>
+<table>
+	<thead>
+		<tr>
+			<th scope="col">Group</th>
+			<th scope="col">Expressed as</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Policy types</td>
+			<td><a href="#term-Policy">Sub-classes of Policy</a></td>
+		</tr>
+		<tr>
+			<td>Actions</td>
+			<td><a href="#term-Action">Instances of Action</a></td>
+		</tr>
+		<tr>
+			<td>Scopes</td>
+			<td><a href="#term-Scope">Instances of Scope</a></td>
+		</tr>
+		<tr>
+			<td>Operators</td>
+			<td><a href="#term-Operator">Instances of Operator</a></td>
+		</tr>
+		<tr>
+			<td>Operands</td>
+			<td><a href="#term-rightOperand">Sub-properties of rightOperand</a></td>
+		</tr>
+		<tr>
+			<td>Conflict-handling terms</td>
+			<td><a href="#term-ConflictTerm">Instances of ConflictTerm</a></td>
+		</tr>
+		<tr>
+			<td>Unsupported action-handling terms</td>
+			<td><a href="#term-UndefinedTerm">Instances of UndefinedTerm</a></td>
+		</tr>
+	</tbody>
+</table>
+
+<h2 id="sec-classes">Classes</h2>
 <h3 id="term-Asset">Asset</h3
 <p>Asset is anything which can be subject to a policy. Asserting that something the target of a policy implies that it is an Asset.</p>
 <table>
@@ -1501,6 +1562,6 @@
 <tr><th>Class:</th> <td><a href="#term-Operator">Operator</a></td></tr>
 </table>
 </div>
-    </div>
+
 </body>
 </html>
