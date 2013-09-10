@@ -271,7 +271,7 @@ _:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
 <http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#label> "target"@en .
 <http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#comment> "The target property specifies the Asset upon which the Action is performed."@en .
-<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Rule> .
 <http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Asset> .
 <http://www.w3.org/ns/odrl/2/function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 <http://www.w3.org/ns/odrl/2/function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .

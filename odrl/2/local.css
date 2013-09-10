@@ -17,3 +17,16 @@ th, td {
 	padding:3px 0.25em 5px 0.25em;
 	border-bottom:1px solid #E6E6E6;
 }
+code {
+	color: #770000;
+}
+pre {
+	border: solid thin #d3d3d3;
+	background: #fcfcfc;
+	color: black;
+	padding: 0.5em 1em;
+	position: relative;
+}
+pre > code {
+	color: black;
+}

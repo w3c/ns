@@ -38,6 +38,14 @@
 <li><a href="#sec-concept-schemes"><span class="secno">5</span> Concept schemes</a></li>
 <li><a href="#sec-concepts"><span class="secno">6</span> Concepts</a></li>
 <li><a href="#sec-named-individuals"><span class="secno">7</span> Named individuals</a></li>
+<li><a href="#sec-examples"><span class="secno">8</span> Examples</a>
+	<ol class="toc">
+		<li><a href="#sec-example-1"><span class="secno">8.1</span> Set</a></li>
+		<li><a href="#sec-example-2"><span class="secno">8.2</span> Offer</a></li>
+	</ol>
+</li>
+<li><a href="#sec-examples"><span class="secno">9</span> Acknowledgements</a></li>
+<li><a href="#sec-examples"><span class="secno">10</span> References</a></li>
 </ol>
 
 <h2 id="sec-summary">Summary of Terms</h2>
@@ -148,7 +156,7 @@
 <tr><th>Label:</th> <td>Rule</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Sub-classes:</th> <td><a href="#term-Duty">Duty</a>, <a href="#term-Permission">Permission</a>, <a href="#term-Prohibition">Prohibition</a></td></tr>
-<tr><th>Properties:</th> <td><a href="#term-action">action</a>, <a href="#term-constraint">constraint</a>, <a href="#term-function">function</a></td></tr>
+<tr><th>Properties:</th> <td><a href="#term-action">action</a>, <a href="#term-constraint">constraint</a>, <a href="#term-function">function</a>, <a href="#term-target">target</a></td></tr>
 </table>
 </div>
 <h3 id="term-Permission">Permission</h3
@@ -159,7 +167,7 @@
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="#term-Rule">Rule</a></td></tr>
 <tr><th>Properties:</th> <td><a href="#term-duty">duty</a></td></tr>
-  <tr><th>Inherited Properties:</th> <td><a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
+  <tr><th>Inherited Properties:</th> <td><a href="#term-target">target</a>, <a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
 </table>
 </div>
 <h3 id="term-Prohibition">Prohibition</h3
@@ -169,7 +177,7 @@
 <tr><th>Label:</th> <td>Prohibition</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="#term-Rule">Rule</a></td></tr>
-  <tr><th>Inherited Properties:</th> <td><a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
+  <tr><th>Inherited Properties:</th> <td><a href="#term-target">target</a>, <a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
 </table>
 </div>
 <h3 id="term-Duty">Duty</h3
@@ -179,7 +187,7 @@
 <tr><th>Label:</th> <td>Duty</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="#term-Rule">Rule</a></td></tr>
-  <tr><th>Inherited Properties:</th> <td><a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
+  <tr><th>Inherited Properties:</th> <td><a href="#term-target">target</a>, <a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
 </table>
 </div>
 <h3 id="term-Action">Action</h3
@@ -189,7 +197,7 @@
 <tr><th>Label:</th> <td>Action</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></td></tr>
-<tr><th>Properties:</th> <td><a href="#term-output">output</a>, <a href="#term-relation">relation</a>, <a href="#term-target">target</a></td></tr>
+<tr><th>Properties:</th> <td><a href="#term-output">output</a>, <a href="#term-relation">relation</a></td></tr>
 <tr><th>In range of:</th> <td><a href="#term-action">action</a></td></tr>
 <tr><th>Instances:</th> <td><a href="#term-acceptTracking">acceptTracking</a>, <a href="#term-adHocShare">adHocShare</a>, <a href="#term-aggregate">aggregate</a>, <a href="#term-annotate">annotate</a>, <a href="#term-anonymize">anonymize</a>, <a href="#term-append">append</a>, <a href="#term-archive">archive</a>, <a href="#term-attachPolicy">attachPolicy</a>, <a href="#term-attachSource">attachSource</a>, <a href="#term-attribute">attribute</a>, <a href="#term-commercialize">commercialize</a>, <a href="#term-concurrentUse">concurrentUse</a>, <a href="#term-copy">copy</a>, <a href="#term-delete">delete</a>, <a href="#term-derive">derive</a>, <a href="#term-display">display</a>, <a href="#term-distribute">distribute</a>, <a href="#term-ensureExclusivity">ensureExclusivity</a>, <a href="#term-execute">execute</a>, <a href="#term-export">export</a>, <a href="#term-extract">extract</a>, <a href="#term-extractChar">extractChar</a>, <a href="#term-extractPage">extractPage</a>, <a href="#term-extractWord">extractWord</a>, <a href="#term-give">give</a>, <a href="#term-include">include</a>, <a href="#term-index">index</a>, <a href="#term-inform">inform</a>, <a href="#term-install">install</a>, <a href="#term-lease">lease</a>, <a href="#term-lend">lend</a>, <a href="#term-license">license</a>, <a href="#term-modify">modify</a>, <a href="#term-move">move</a>, <a href="#term-nextPolicy">nextPolicy</a>, <a href="#term-obtainConsent">obtainConsent</a>, <a href="#term-pay">pay</a>, <a href="#term-play">play</a>, <a href="#term-present">present</a>, <a href="#term-preview">preview</a>, <a href="#term-print">print</a>, <a href="#term-read">read</a>, <a href="#term-reproduce">reproduce</a>, <a href="#term-reviewPolicy">reviewPolicy</a>, <a href="#term-secondaryUse">secondaryUse</a>, <a href="#term-sell">sell</a>, <a href="#term-share">share</a>, <a href="#term-shareAlike">shareAlike</a>, <a href="#term-textToSpeech">textToSpeech</a>, <a href="#term-transform">transform</a>, <a href="#term-translate">translate</a>, <a href="#term-uninstall">uninstall</a>, <a href="#term-watermark">watermark</a>, <a href="#term-write">write</a></td></tr>
 </table>
@@ -421,7 +429,7 @@
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent property:</th> <td><a href="#term-relation">relation</a></td></tr>
 <tr><th>Range:</th> <td><a href="#term-Asset">Asset</a></td></tr>
-<tr><th>Domain:</th> <td><a href="#term-Action">Action</a></td></tr>
+<tr><th>Domain:</th> <td><a href="#term-Rule">Rule</a></td></tr>
 </table>
 </div>
 <h3 id="term-function">function</h3
@@ -1532,6 +1540,126 @@
 <tr><th>Class:</th> <td><a href="#term-Operator">Operator</a></td></tr>
 </table>
 </div>
+
+<h2 id="sec-examples">Examples</h2>
+<p>
+	The examples in this section are RDF expressions of the scenarios provided
+	by the <a href="http://www.w3.org/community/odrl/two/model/#section-3">ODRL Version 2.0 Core Model</a>.
+</p>
+<h3 id="sec-example-1">Set</h3>
+<p>
+	The following shows an instance of a <a href="#term-Set">set</a> <a href="#term-Policy">policy</a>. The set shows a policy expression, stating that the <a href="#term-Asset">asset</a>, <code>http//example.com/asset:9898</code>, is the target of the <a href="#term-Permission">permission</a> to <a href="#term-reproduce">reproduce</a> and the <a href="#term-Prohibition">prohibition</a> to <a href="#term-modify">modify</a>.
+</p>
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+
+&lt;/policy:0099&gt;
+	a odrl:Set;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:target &lt;/asset:9898&gt; ;
+		odrl:action odrl:reproduce
+	] ;
+	odrl:prohibition [
+		a odrl:Prohibition ;
+		odrl:target &lt;/asset:9898&gt; ;
+		odrl:action odrl:modify
+	] .
+</code></pre>
+<p>Because all of the <a href="#term-Rule">rules</a> associated with this policy have the same target, and do not have any <a href="#term-constraint">constraints</a> or <a href="#term-duty">duties</a> (requirements), one may abbreviate the expression of the policy and use the Dublin Core <a href="http://purl.org/dc/terms/rights">rights</a> or <a href="http://purl.org/dc/terms/license">license</a> predicates to associate the asset with that policy:</p>
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+@prefix dct: &lt;http://purl.org/dc/terms/&gt; .
+
+&lt;/asset:9898&gt; dct:license &lt;/policy:0099&gt; .
+
+&lt;/policy:0099&gt;
+	a odrl:Set;
+	odrl:permission odrl:reproduce ;
+	odrl:prohibition odrl:modify .
+</code></pre>
+<h3 id="sec-example-2">Offer</h3>
+<p>
+	The following shows the instance of an <a href="#term-Offer">offer</a> policy. The offer contains the music file <code>http//example.com/music:4545</code> that is offered by the <a href="#term-Party">party</a> <code>http//example.com/sony:10</code> with the permissions to <a href="#term-play">play</a> and copy the file. The permission to copy is only granted once. The two permissions are offered in exchange for a payment of <code>AUD$0.50</code>.
+</p>
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+
+&lt;/policy:0231&gt;
+	a odrl:Offer ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:target &lt;/music:4545&gt; ;
+		odrl:assigner &lt;/sony:10&gt; ;
+		odrl:action odrl:play ;
+		odrl:duty _:requirements
+	] ;
+	odrl:permission [
+		odrl:target &lt;/music:4545&gt; ;
+		odrl:assigner &lt;/sony:10&gt; ;
+		odrl:action odrl:copy ;
+		odrl:duty _:requirements ;
+		odrl:constraint [
+			a odrl:Constraint ;
+			odrl:count 1 ;
+			odrl:operator odrl:lteq
+		]
+	] .
+
+_:requirements
+	a odrl:Duty ;
+	odrl:action odrl:pay ;
+	odrl:target &lt;/ubl:AUD0.50&gt; .
+
+&lt;/sony:10&gt; a odrl:Party .
+</code></pre>
+<h2 id="sec-acknowledgements">Acknowledgements</h2>
+<p>
+	The authors gratefully acknowledge feedback and contributions to this document from <a href="http://www.w3.org/community/odrl/">members of the W3C ODRL Community Group</a>.
+</p>
+
+<p>
+	This document was generated using <a href="https://github.com/njh/phpspecgen">phpspecgen</a> written by <a href="https://github.com/njh">Nicholas J. Humfrey</a> and modified by <a href="https://github.com/moustaki">Yves Raimond</a>, and subsequently modified by Mo McRoberts.
+</p>
+
+<h2 id="sec-references">References</h2>
+<dl class="bibliography">
+	<dt id="ODRL-MODEL"><a href="http://www.w3.org/community/odrl/two/model/">[ODRL-MODEL]</a></dt>
+	<dd>
+		R. Iannella, S. Guth, D. Paehler &amp; A. Kasten (eds.)
+		Open Digital Rights Language (ODRL) Version 2.0 - Core Model.
+		Final Specification, W3C ODRL Community Group, 24 April 2012.
+		<a href="http://www.w3.org/community/odrl/two/model/">http://www.w3.org/community/odrl/two/model/</a>
+	</dd>
+	<dt id="ODRL-VOCAB"><a href="http://www.w3.org/community/odrl/two/vocab/">[ODRL-VOCAB]</a></dt>
+	<dd>
+		S. Guth &amp; R. Iannella (eds).
+		Open Digital Rights Language (ODRL) Version 2.0 – Common Vocabulary.
+		Final Specification, W3C ODRL Community Group, 19 April 2012.
+		<a href="http://www.w3.org/community/odrl/two/vocab/">http://www.w3.org/community/odrl/two/vocab/</a>
+	</dd>
+	<dt id="ODRL-XML"><a href="http://www.w3.org/community/odrl/two/xml/">[ODRL-XML]</a></dt>
+	<dd>
+		R. Iannella (ed.).
+		Open Digital Rights Language (ODRL) Version 2.0 – XML Encoding.
+		Final Specification, W3C ODRL Community Group, 19 April 2012.
+		<a href="http://www.w3.org/community/odrl/two/xml/">http://www.w3.org/community/odrl/two/xml/</a>
+	</dd>
+	<dt id="RDF-PRIMER"><a href="http://www.w3.org/TR/2004/REC-rdf-primer-20040210/">[RDF-PRIMER]</a></dt>
+	<dd>
+		E. Manola &amp; E. Miller (eds.).
+		RDF Primer.
+		W3C Recommendation, 10 February 2004.
+		<a href="http://www.w3.org/TR/2004/REC-rdf-primer-20040210/">http://www.w3.org/TR/2004/REC-rdf-primer-20040210/</a>
+	</dd>
+	<dt id="TURTLE"><a href="http://www.w3.org/TeamSubmission/turtle/">[TURTLE]</a></dt>
+	<dd>
+		D. Beckett, T. Berners-Lee.
+		Turtle - Terse RDF Triple Language.
+		W3C Team Submission, 28 March 2011.
+		<a href="http://www.w3.org/TeamSubmission/turtle/">http://www.w3.org/TeamSubmission/turtle/</a>
+	</dd>
+</dl>
 
 </body>
 </html>

@@ -280,7 +280,7 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "target"@en ;
 	rdfs:comment "The target property specifies the Asset upon which the Action is performed."@en ;
-	rdfs:domain :Action ;
+	rdfs:domain :Rule ;
 	rdfs:range :Asset .
 
 :function
