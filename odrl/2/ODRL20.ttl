@@ -92,7 +92,6 @@ odrl:
 	a rdfs:Class , owl:Class ;
 	rdfs:subClassOf :Asset ;
 	rdfs:isDefinedBy odrl: ;
-	rdfs:subClassOf owl:Thing ;
 	vs:term_status "testing" ;
 	rdfs:label "Policy"@en ;
 	rdfs:comment "A top level entity for describing policies."@en .
