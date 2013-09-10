@@ -83,15 +83,6 @@
 <http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/uninstall> .
 <http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/watermark> .
 <http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/write> .
-<http://www.w3.org/ns/odrl/2/scopes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
-<http://www.w3.org/ns/odrl/2/scopes> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/scopes> <http://www.w3.org/2000/01/rdf-schema#label> "ODRL Scopes vocabulary"@en .
-<http://www.w3.org/ns/odrl/2/scopes> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/all> .
-<http://www.w3.org/ns/odrl/2/scopes> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/all2ndConnections> .
-<http://www.w3.org/ns/odrl/2/scopes> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/allConnections> .
-<http://www.w3.org/ns/odrl/2/scopes> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/allGroups> .
-<http://www.w3.org/ns/odrl/2/scopes> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/group> .
-<http://www.w3.org/ns/odrl/2/scopes> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/individual> .
 <http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
 <http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
@@ -105,21 +96,6 @@
 <http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/2000/01/rdf-schema#label> "Party"@en .
 <http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity which can participate in policy transactions. Use an instance of the Party class where it's necessary to associate a Scope with the relationship; in other cases, simply reference the party directly."@en .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/2000/01/rdf-schema#comment> "The scope attribute indicates how to interpret the identified Party and provides contextual information in determining the extent of the policy statement. For example, if a Party is identified as a member of the Acme Social Network (using identifier urn:acme:user:billie) and they are the assignee with \"allConnections\" scope, then the group of individuals that have actually been assigned the permission consists of all the first-level connections (eg friends) that the identified Party has on that social network. That is, the social graph of the party starting from urn:acme:user:billie."@en .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/2000/01/rdf-schema#label> "Scope"@en .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/ns/odrl/2/scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.w3.org/ns/odrl/2/scope> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/scope> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/scope> <http://www.w3.org/2000/01/rdf-schema#label> "scope"@en .
-<http://www.w3.org/ns/odrl/2/scope> <http://www.w3.org/2000/01/rdf-schema#comment> "The scope property is used to specify the scope of the Party instance (which describes the relationship with a party) in a particular context."@en .
-<http://www.w3.org/ns/odrl/2/scope> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Party> .
-<http://www.w3.org/ns/odrl/2/scope> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Scope> .
 <http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
 <http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
@@ -271,12 +247,6 @@ _:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
 <http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint"@en .
 <http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Parent class of all Constraints."@en .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/2000/01/rdf-schema#label> "Scope"@en .
-<http://www.w3.org/ns/odrl/2/Scope> <http://www.w3.org/2000/01/rdf-schema#comment> "A Scope indicates how to interpret the identified Party and provides contextual information in determining the extent of the policy statement. For example, if a Party is identified as a member of the Acme Social Network (using identifier urn:acme:user:billie) and they are the assignee with \"allConnections\" scope, then the group of individuals that have actually been assigned the permission consists of all the first-level connections (eg friends) that the identified Party has on that social network. That is, the social graph of the party starting from urn:acme:user:billie."@en .
 <http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 <http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
@@ -1075,39 +1045,45 @@ _:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
 <http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
 <http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2000/01/rdf-schema#label> "Ticket"@en .
 <http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Ticket is a Policy expression that stipulates the terms of usage and is redeemable by any Party who currently holds the Ticket in their possession."@en .
-<http://www.w3.org/ns/odrl/2/all> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Scope> .
-<http://www.w3.org/ns/odrl/2/all> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/all> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/all> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/all> <http://www.w3.org/2000/01/rdf-schema#label> "All"@en .
-<http://www.w3.org/ns/odrl/2/all> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the collective individuals within a context."@en .
-<http://www.w3.org/ns/odrl/2/all2ndConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Scope> .
-<http://www.w3.org/ns/odrl/2/all2ndConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/all2ndConnections> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/all2ndConnections> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/all2ndConnections> <http://www.w3.org/2000/01/rdf-schema#label> "All second-level connections"@en .
-<http://www.w3.org/ns/odrl/2/all2ndConnections> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the second-level connections to the Party."@en .
-<http://www.w3.org/ns/odrl/2/allConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Scope> .
-<http://www.w3.org/ns/odrl/2/allConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/allConnections> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/allConnections> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/allConnections> <http://www.w3.org/2000/01/rdf-schema#label> "All connections"@en .
-<http://www.w3.org/ns/odrl/2/allConnections> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the first-level connections of the Party."@en .
-<http://www.w3.org/ns/odrl/2/allGroups> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Scope> .
-<http://www.w3.org/ns/odrl/2/allGroups> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/allGroups> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/allGroups> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/allGroups> <http://www.w3.org/2000/01/rdf-schema#label> "All groups"@en .
-<http://www.w3.org/ns/odrl/2/allGroups> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the group connections of the Party."@en .
-<http://www.w3.org/ns/odrl/2/group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Scope> .
-<http://www.w3.org/ns/odrl/2/group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/group> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/group> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/group> <http://www.w3.org/2000/01/rdf-schema#label> "Group"@en .
-<http://www.w3.org/ns/odrl/2/group> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is the defined group with multiple individual members."@en .
-<http://www.w3.org/ns/odrl/2/individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Scope> .
-<http://www.w3.org/ns/odrl/2/individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/individual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/individual> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/individual> <http://www.w3.org/2000/01/rdf-schema#label> "Individual"@en .
-<http://www.w3.org/ns/odrl/2/individual> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is the single Party individual."@en .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/2000/01/rdf-schema#label> "All"@en .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the collective individuals within a context."@en .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/2000/01/rdf-schema#label> "All second-level connections"@en .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the second-level connections to the Party."@en .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/2000/01/rdf-schema#label> "All connections"@en .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the first-level connections of the Party."@en .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/2000/01/rdf-schema#label> "All groups"@en .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the group connections of the Party."@en .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/2000/01/rdf-schema#label> "Group"@en .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is the defined group with multiple individual members."@en .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2000/01/rdf-schema#label> "Individual"@en .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is the single Party individual."@en .

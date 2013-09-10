@@ -67,13 +67,6 @@ odrl:
 		:shareAlike, :textToSpeech, :transform, :translate, :uninstall,
 		:watermark, :write .
 
-:scopes
-	a skos:ConceptScheme ;
-	rdfs:isDefinedBy odrl: ;
-	rdfs:label "ODRL Scopes vocabulary"@en ;
-	skos:hasTopConcept :all, :all2ndConnections, :allConnections, :allGroups,
-		:group, :individual .
-
 ## Assets
 
 :Asset
@@ -92,23 +85,6 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "Party"@en ;
 	rdfs:comment "An entity which can participate in policy transactions. Use an instance of the Party class where it's necessary to associate a Scope with the relationship; in other cases, simply reference the party directly."@en .
-
-:Scope
-	a rdfs:Class, owl:Class ;
-	rdfs:isDefinedBy odrl: ;
-	rdfs:subClassOf skos:Concept ;
-	rdfs:comment "The scope attribute indicates how to interpret the identified Party and provides contextual information in determining the extent of the policy statement. For example, if a Party is identified as a member of the Acme Social Network (using identifier urn:acme:user:billie) and they are the assignee with \"allConnections\" scope, then the group of individuals that have actually been assigned the permission consists of all the first-level connections (eg friends) that the identified Party has on that social network. That is, the social graph of the party starting from urn:acme:user:billie."@en ;
-	rdfs:label "Scope"@en ;
-	vs:term_status "testing" .
-
-:scope
-	a rdf:Property , owl:ObjectProperty ;
-	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
-	rdfs:label "scope"@en ;
-	rdfs:comment "The scope property is used to specify the scope of the Party instance (which describes the relationship with a party) in a particular context."@en ;
-	rdfs:domain :Party ;
-	rdfs:range :Scope .
 
 ## Policies
 
@@ -277,13 +253,6 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "Constraint"@en ;
 	rdfs:comment "Parent class of all Constraints."@en .
-
-:Scope
-	a rdfs:Class , owl:Class ;
-	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
-	rdfs:label "Scope"@en ;
-	rdfs:comment """A Scope indicates how to interpret the identified Party and provides contextual information in determining the extent of the policy statement. For example, if a Party is identified as a member of the Acme Social Network (using identifier urn:acme:user:billie) and they are the assignee with "allConnections" scope, then the group of individuals that have actually been assigned the permission consists of all the first-level connections (eg friends) that the identified Party has on that social network. That is, the social graph of the party starting from urn:acme:user:billie."""@en .
 
 :relation
 	a rdf:Property , owl:ObjectProperty ;
@@ -1215,43 +1184,49 @@ odrl:
 
 ## Scopes
 
-:all
-	a :Scope , skos:Concept ;
+:All
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf :Party ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "All"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is all of the collective individuals within a context."@en .
 
-:all2ndConnections
-	a :Scope , skos:Concept ;
+:All2ndConnections
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf :Party ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "All second-level connections"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is all of the second-level connections to the Party."@en .
 
-:allConnections
-	a :Scope , skos:Concept ;
+:AllConnections
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf :Party ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "All connections"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is all of the first-level connections of the Party."@en .
 
-:allGroups
-	a :Scope , skos:Concept ;
+:AllGroups
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf :Party ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "All groups"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is all of the group connections of the Party."@en .
 
-:group
-	a :Scope , skos:Concept ;
+:Group
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf :Party ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Group"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is the defined group with multiple individual members."@en .
 
-:individual
-	a :Scope , skos:Concept ;
+:Individual
+	a rdfs:Class, owl:Class ;
+	rdfs:subClassOf :Party ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Individual"@en ;
