@@ -43,7 +43,7 @@ odrl:
 	rdfs:label "ODRL 2.0 (XML Schema Definition)"@en ;
 	foaf:primaryTopic odrl: ;
 	dct:isVersionOf odrl: ;
-	dct:format <http://purl.org/NET/mediatypes/application/xsd> .
+	dct:format <http://purl.org/NET/mediatypes/application/xml> .
 
 <http://www.w3.org/ns/odrl/2/odrl.html>
 	a dcmit:Text ;

@@ -23,7 +23,7 @@
 <http://www.w3.org/ns/odrl/2/odrl.xsd> <http://www.w3.org/2000/01/rdf-schema#label> "ODRL 2.0 (XML Schema Definition)"@en .
 <http://www.w3.org/ns/odrl/2/odrl.xsd> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/odrl.xsd> <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/odrl.xsd> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/application/xsd> .
+<http://www.w3.org/ns/odrl/2/odrl.xsd> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/application/xml> .
 <http://www.w3.org/ns/odrl/2/odrl.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
 <http://www.w3.org/ns/odrl/2/odrl.html> <http://www.w3.org/2000/01/rdf-schema#label> "ODRL 2.0 (HTML)"@en .
 <http://www.w3.org/ns/odrl/2/odrl.html> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/ns/odrl/2/> .

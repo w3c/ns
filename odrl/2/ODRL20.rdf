@@ -877,7 +877,7 @@
     <foaf:primaryTopic rdf:resource="http://www.w3.org/ns/odrl/2/"/>
   </dcmit:Text>
   <dcmit:Text rdf:about="http://www.w3.org/ns/odrl/2/odrl.xsd">
-    <dct:format rdf:resource="http://purl.org/NET/mediatypes/application/xsd"/>
+    <dct:format rdf:resource="http://purl.org/NET/mediatypes/application/xml"/>
     <dct:isVersionOf rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">ODRL 2.0 (XML Schema Definition)</rdfs:label>
     <foaf:primaryTopic rdf:resource="http://www.w3.org/ns/odrl/2/"/>

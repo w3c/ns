@@ -37,6 +37,15 @@
 	<ol class="toc">
 		<li><a href="#sec-example-1"><span class="secno">3.1</span> Set</a></li>
 		<li><a href="#sec-example-2"><span class="secno">3.2</span> Offer</a></li>
+		<li><a href="#sec-example-3"><span class="secno">3.3</span> Agreement</a></li>
+		<li><a href="#sec-example-4"><span class="secno">3.4</span> Request</a></li>
+		<li><a href="#sec-example-5"><span class="secno">3.5</span> Ticket</a></li>
+		<li><a href="#sec-example-6"><span class="secno">3.6</span> Offer and next policy</a></li>
+		<li><a href="#sec-example-7"><span class="secno">3.7</span> Privacy policy</a></li>
+		<li><a href="#sec-example-8"><span class="secno">3.8</span> Permission and prohibition</a></li>
+		<li><a href="#sec-example-9"><span class="secno">3.9</span> Inheritance</a></li>
+		<li><a href="#sec-example-10"><span class="secno">3.10</span> Social network</a></li>
+		<li><a href="#sec-example-11"><span class="secno">3.11</span> Multiple assets</a></li>		
 	</ol>
 </li>
 <li><a href="#sec-classes"><span class="secno">4</span> Classes</a></li>
@@ -96,7 +105,7 @@
 	</tbody>
 </table>
 
-<h2 id="sec-examples">Examples</h2>
+<h2 id="sec-examples">Examples of use</h2>
 <p>
 	The examples in this section are RDF expressions of the scenarios provided
 	by the <a href="http://www.w3.org/community/odrl/two/model/#section-3">ODRL Version 2.0 Core Model</a>.
@@ -120,7 +129,7 @@
 		odrl:target &lt;/asset:9898&gt; ;
 		odrl:action odrl:modify
 	] .
-</code></pre>
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example1.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example1.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example1.nt">N-Triples</a>.</p>
 <p>Because all of the <a href="#term-Rule">rules</a> associated with this policy have the same target, and do not have any <a href="#term-constraint">constraints</a> or <a href="#term-duty">duties</a> (requirements), one may abbreviate the expression of the policy and use the Dublin Core <a href="http://purl.org/dc/terms/rights">rights</a> or <a href="http://purl.org/dc/terms/license">license</a> predicates to associate the asset with that policy:</p>
 <pre><code>@base &lt;http://example.com/&gt; .
 @prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
@@ -132,7 +141,7 @@
 	a odrl:Set;
 	odrl:permission odrl:reproduce ;
 	odrl:prohibition odrl:modify .
-</code></pre>
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example1a.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example1a.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example1a.nt">N-Triples</a>.</p>
 <h3 id="sec-example-2">Offer</h3>
 <p>
 	The following shows the instance of an <a href="#term-Offer">offer</a> policy. The offer contains the music file <code>http//example.com/music:4545</code> that is offered by the <a href="#term-Party">party</a> <code>http//example.com/sony:10</code> with the permissions to <a href="#term-play">play</a> and copy the file. The permission to copy is only granted once. The two permissions are offered in exchange for a payment of <code>AUD$0.50</code>.
@@ -167,8 +176,290 @@ _:requirements
 	odrl:target &lt;/ubl:AUD0.50&gt; .
 
 &lt;/sony:10&gt; a odrl:Party .
-</code></pre>
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example2.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example2.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example2.nt">N-Triples</a>.</p>
+<h3 id="sec-example-3">Agreement</h3>
 
+<p>
+	The following shows the instance of an <a href="#term-Agreement">agreement</a> policy. The agreement contains all entities shown in the offer scenario above. A new party, <code>http://example.com/billie:888</code> has been added. This party accepted the previous offer and thus is now the buyer of the permission play and copy: i.e. they are now linked as <a href="#term-assignee">assignee</a> of the permissions and duty entities.
+</p>
+
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+
+&lt;/policy:9001&gt;
+	a odrl:Agreement ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:target &lt;/music:4545&gt; ;
+		odrl:assigner &lt;/sony:10&gt; ;
+		odrl:assignee &lt;/billie:888&gt; ;
+		odrl:action odrl:play ;
+		odrl:duty _:requirements
+	] ;
+	odrl:permission [
+		odrl:target &lt;/music:4545&gt; ;
+		odrl:assigner &lt;/sony:10&gt; ;
+		odrl:assignee &lt;/billie:888&gt; ;
+		odrl:action odrl:copy ;
+		odrl:duty _:requirements ;
+		odrl:constraint [
+			a odrl:Constraint ;
+			odrl:count 1 ;
+			odrl:operator odrl:lteq
+		]
+	] .
+
+_:requirements
+	a odrl:Duty ;
+	odrl:action odrl:pay ;
+	odrl:target &lt;/ubl:AUD0.50&gt; .
+
+&lt;/sony:10&gt; a odrl:Party .
+&lt;/billie:888&gt; a odrl:Party .
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example3.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example3.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example3.nt">N-Triples</a>.</p>
+<h3 id="sec-example-4">Request</h3>
+
+<p>
+	The following shows the instance of a <a href="#term-Request">request</a> policy. The party <code>http://example.com/guest:0589</code> has requested the permission to <a href="#term-display">display</a> the target asset, <code>http://example.com/news:0099</code>.
+</p>
+
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+
+&lt;/policy:04311&gt;
+	a odrl:Request ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:action odrl:display ;
+		odrl:assignee &lt;/guest:0589&gt; ;
+		odrl:target &lt;/news:0099&gt;
+	] .
+
+&lt;/guest:0589&gt; a odrl:Party .
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example4.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example4.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example4.nt">N-Triples</a>.</p>
+<h3 id="sec-example-5">Ticket</h3>
+
+<p>
+	The following shows the instance of a <a href="#term-Ticket">ticket</a> policy. The ticket expresses the play permission for the target asset, <code>http://example.com/game:4589</code>. The ticket is valid <a href="#term-dateTime">until the end of the year</a> <code>2010</code>. Any valid holder of this ticket may exercise this permission.
+</p>
+
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+&lt;/policy:0811&gt;
+	a odrl:Ticket ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:action odrl:play ;
+		odrl:target &lt;/game:4589&gt; ;
+		odrl:constraint [
+			a odrl:Constraint ;
+			odrl:operator odrl:lteq ;
+			odrl:dateTime &quot;2010-12-31&quot;^^xsd:date
+		]
+	] .
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example5.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example5.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example5.nt">N-Triples</a>.</p>
+<h3 id="sec-example-6">Offer and next policy</h3>
+
+<p>
+	The following shows the instance of an <a href="#term-Offer">offer</a> policy showing the <a href="#term-nextPolicy">next-policy</a> structure.
+</p>
+	
+<p>
+	The party <code>http://example.com/sony:99</code> assigns the permission distribute directly to the potential buyer of the permission who will pay <code>€1,000</code>. The distribute permission is also constrained to the country <code>Italy</code>. The potential assignee may then distribute the target asset according to the next-policy target asset linked directly from this duty. In this case, the next policy asset stipulates that the potential assignee may only offer the display permission to downstream consumers.
+</p>
+
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+
+&lt;/policy:5531&gt;
+	a odrl:Offer ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:action odrl:distribute ;
+		odrl:target &lt;/wallpaper:2321&gt; ;
+		odrl:assigner &lt;/sony:99&gt; ;
+		odrl:constraint [
+			a odrl:Constraint ;
+			odrl:operator odrl:eq ;
+			odrl:spatial &lt;http://psi.oasis-open.org/iso/3166/#380&gt;
+		] ;
+		odrl:duty &lt;/duty:01&gt;, &lt;/duty:02&gt;
+	] .
+
+&lt;/duty:01&gt;
+	a odrl:Duty ;
+	odrl:action odrl:pay ;
+	odrl:target &lt;/ubl:EU1000.00&gt; .
+
+&lt;/duty:02&gt;
+	a odrl:Duty ;
+	odrl:action odrl:nextPolicy ;
+	odrl:target &lt;/policy:7777&gt; .
+
+&lt;/policy:7777&gt;
+	a odrl:Set ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:action odrl:display ;
+		odrl:target &lt;/wallpaper:2321&gt; ;
+		odrl:duty &lt;/duty:02&gt;
+	] .
+
+&lt;/sony:99&gt; a odrl:Party .
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example6.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example6.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example6.nt">N-Triples</a>.</p>
+<h3 id="sec-example-7">Privacy policy</h3>
+
+<p>The following shows the instance of a <a href="#term-Privacy">privacy</a> policy.</p>
+
+<p>The target asset is personal data and the assignee is allowed to distribute the asset only for the purpose of contacting the subject of the personal data. The purpose value is taken from the <a href="http://www.w3.org/TR/P3P11/#PURPOSE">P3P privacy purpose vocabulary</a>.</p>
+
+<p>Additionally, the assigner (the party who the personal data is about) has stipulated that the assignee must delete the asset after a <code>30 day period</code> (retention policy).</p>
+
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+@prefix p3p: &lt;http://www.w3.org/2006/01/P3Pv11&gt; .
+@prefix xsd: &lt;http://www.w3.org/2001/XMLSchema#&gt; .
+
+&lt;/policy:1111&gt;
+	a odrl:Privacy ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:action odrl:distribute ;
+		odrl:target &lt;/billie:888:personal-data&gt; ;
+		odrl:assigner &lt;/billie:888&gt; ;
+		odrl:assignee &lt;/gov:health:au&gt; ;
+		odrl:duty [
+			a odrl:Duty ;
+			odrl:action odrl:delete ;
+			odrl:constraint [
+				a odrl:Constraint ;
+				odrl:operator odrl:eq ;
+				odrl:dateTime &quot;P30D&quot;^^xsd:dateTime 
+			]
+		] ;
+		odrl:constraint [
+			a odrl:Constraint ;
+			odrl:operator odrl:eq ;
+			odrl:purpose p3p:contact
+		]
+	] .
+
+&lt;/billie:888&gt; a odrl:Party .
+&lt;/gov:health:au&gt; a odrl:Party .
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example7.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example7.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example7.nt">N-Triples</a>.</p>
+<h3 id="sec-example-8">Permission and prohibition</h3>
+
+<p>
+	The following shows the instance of an agreement policy with both a permission and a prohibition. The party <code>http://example.com/sony:10</code> assigns the permission play to the party <code>http://example.com/billie:888</code> at the same time they are prohibited from utilising the target asset as a <code>mobile:ringtone</code>. Additionally, in case of any conflict, the conflict attribute is set to <a href="#term-perm"><code>perm</code></a> indicating that the permission entity will take precedence.
+</p>
+
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+@prefix mobile: &lt;http://example.com/mobile#&gt; .
+
+&lt;/policy:3433&gt;
+	a odrl:Agreement ;
+	odrl:conflict odrl:perm ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:action odrl:play ;
+		odrl:assignee &lt;/billie:888&gt; ;
+		odrl:assigner &lt;/sony:10&gt; ;
+		odrl:target &lt;/music:1234908&gt;
+	] ;
+	odrl:prohibition [
+		a odrl:Prohibition ; 
+		odrl:action mobile:ringtone ;
+		odrl:assignee &lt;/billie:888&gt; ;
+		odrl:assigner &lt;/sony:10&gt; ;
+		odrl:target &lt;/music:1234908&gt;
+	] .
+
+&lt;/billie:888&gt; a odrl:Party .
+&lt;/sony:10&gt; a odrl:Party .
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example8.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example8.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example8.nt">N-Triples</a>.</p>
+<h3 id="sec-example-9">Inheritance</h3>
+
+<p>
+	The following shows the instance of a (child) policy <code>http://example.com/policy:9999</code> <a href="#term-inheritFrom">inheriting from</a> another (parent) policy <code>http://example.com/policy:5531</code>. The inherit-from attribute of the (child) policy has the same identifier as the (parent) policy's own identifier.
+</p>
+
+<p>
+	In this inheritance example, the parent policy allows the party <code>http://example.com/billie:888</code> to print the parent’s target asset. The child policy allows the party <code>http://example.com/class:IT01</code> (a group of people) to display the child’s target asset. Since the child policy also inherits from the parent policy, then the party <code>http://example.com/class:IT01</code> can also print the parent’s target asset.</p>
+
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+
+&lt;/policy:5531&gt;
+	a odrl:Agreement ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:action odrl:print ;
+		odrl:target &lt;/report:2321&gt; ;
+		odrl:assigner &lt;/pub:88&gt; ;
+		odrl:assignee &lt;/billie:888&gt; ;		
+	] .
+	
+&lt;/policy:9999&gt;
+	a odrl:Agreement ;
+	odrl:inheritFrom &lt;/policy:5531&gt; ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:action odrl:display ;
+		odrl:target &lt;/report:2333&gt; ;
+		odrl:assigner &lt;/pub:88&gt; ;
+		odrl:assignee &lt;/class:IT01&gt;
+	] .
+
+&lt;/pub:88&gt; a odrl:Party .
+&lt;/billie:888&gt; a odrl:Party .
+&lt;/class:IT01&gt; a odrl:Group .
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example9.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example9.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example9.nt">N-Triples</a>.</p>
+<h3 id="sec-example-10">Social network</h3>
+
+<p>The following shows the instance of an agreement policy for a social network scenario.</p>
+
+<p>
+	The target asset are photos posted to a social network site and the assigner is the owner of the photos. The assignee is a group and represents the football network members on the social network, who are each allowed to display the photos.
+</p>
+
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+
+&lt;/policy:5109&gt;
+	a odrl:Agreement ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:action odrl:display ;
+		odrl:target &lt;/myPlace:billie:photos:football2010&gt; ;
+		odrl:assigner &lt;/myPlace:billie&gt; ;
+		odrl:assignee &lt;/myPlace:network:football&gt;
+	] .
+
+&lt;/myPlace:billie&gt; a odrl:Party .
+&lt;/myPlace:network:football&gt; a odrl:Group .
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example10.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example10.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example10.nt">N-Triples</a>.</p>
+<h3 id="sec-example-11">Multiple assets</h3>
+
+<p>The following shows an instance of a set policy utilising multiple asset entities.</p>
+
+<p>The <a href="#term-index">index</a> permission is granted to the target asset. Additionally, the <code>x:collection</code> asset specifies which database the index outcome should be stored in.</p>
+
+<pre><code>@base &lt;http://example.com/&gt; .
+@prefix odrl: &lt;http://w3.org/ns/odrl/2/&gt; .
+@prefix x: &lt;http://example.com/x#&gt; .
+
+&lt;/policy:881212&gt;
+	a odrl:Set ;
+	odrl:permission [
+		a odrl:Permission ;
+		odrl:action odrl:index ;
+		odrl:target &lt;/archive/2010&gt; ;
+		x:collection &lt;/x/database&gt;
+	] .
+</code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example11.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example11.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example11.nt">N-Triples</a>.</p>
 <h2 id="sec-classes">Classes</h2>
 <h3 id="term-Asset">Asset</h3
 <p>Asset is anything which can be subject to a policy. Asserting that something the target of a policy implies that it is an Asset.</p>
