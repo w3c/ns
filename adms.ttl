@@ -23,18 +23,19 @@
 	dcterms:creator [schema:affiliation <http://www.w3.org/data#W3C>;
 	  rdfs:seeAlso <http://philarcher.org/foaf.rdf#me>;
   	foaf:homepage <http://www.w3.org/People/all#phila>;
-  	foaf:name "Phil Archer".] ,
-    [schema:affiliation [foaf:homepage <http://ies.jrc.ec.europa.eu/DE>; foaf:name "European Commission, Joint Research Centre ".]; 
+  	foaf:name "Phil Archer"] ,
+    [schema:affiliation [foaf:homepage <http://ies.jrc.ec.europa.eu/DE>; foaf:name "European Commission, Joint Research Centre "]; 
   	rdfs:seeAlso <http://andrea-perego.name/foaf/#me>;
 	  foaf:homepage <http://andrea-perego.name/>;
-	  foaf:name "Andrea Perego".] ,
+	  foaf:name "Andrea Perego"] ,
     [rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me>; foaf:homepage <http://makxdekkers.com/>;
-    	foaf:name "Makx Dekkers".];
-  foaf:maker[foaf:name "Government Linked Data WG, based on output from the ADMS Working Group"; foaf:homepage <http://www.w3.org/2011/gld/>.];
+    	foaf:name "Makx Dekkers"];
+  foaf:maker[foaf:name "Government Linked Data WG, based on output from the ADMS Working Group"; foaf:homepage <http://www.w3.org/2011/gld/>];
 	dcterms:description """This is the RDF encoding of the Asset Description Metadata Schema, originally 
     developed under the European Union's ISA Programme and further developed by the W3C Government Linked Data Working Group.
     It re-uses terms from several other vocabularies, notably Dublin Core, with elements of SKOS, FOAF and more. """;
 	dcterms:modified "2013-05-24"^^xsd:date;
+  dcterms:modified "2013-09-16"^^xsd:date; # removed erroneous . chars before closing blank nodes
 	vann:preferredNamespacePrefix "adms";
 	vann:preferredNamespaceUri "http://www.w3.org/ns/adms#";
 	rdfs:comment "This file specifies the set of RDF classes and properties used in ADMS"@en;
