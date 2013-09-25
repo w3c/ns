@@ -9,7 +9,7 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dct: <http://purl.org/dc/terms/> .
 @prefix vann: <http://purl.org/vocab/vann/>.
-@prefix voaf: <http://labs.mondeca.com/vocab/voaf#>.
+@prefix voaf: <http://purl.org/vocommons/voaf#>.
 @prefix v: <http://www.w3.org/2006/vcard/ns#>.
 @prefix schema: <http://schema.org/>.
 
