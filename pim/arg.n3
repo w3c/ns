@@ -6,8 +6,8 @@
 @prefix dc:	<http://purl.org/dc/elements/1.1/>.
 @prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
 
-@prefix  arg: <http://www.w3.org/ns/pim/arg>.
-@prefix  : <http://www.w3.org/ns/pim/arg>.
+@prefix  arg: <http://www.w3.org/ns/pim/arg#>.
+@prefix  : <http://www.w3.org/ns/pim/arg#>.
 
 <> a owl:Ontology;
     dc:title "A simple Argumentation ontology";

@@ -14,37 +14,37 @@
 </comment>
     </owl:Ontology>
 
-    <Class rdf:about="http://www.w3.org/ns/pim/argConjunction">
-        <subClassOf rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
+    <Class rdf:about="http://www.w3.org/ns/pim/arg#Conjunction">
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/arg#Position"/>
     </Class>
 
-    <Class rdf:about="http://www.w3.org/ns/pim/argPosition">
+    <Class rdf:about="http://www.w3.org/ns/pim/arg#Position">
         <label>position</label>
     </Class>
 
-    <Class rdf:about="http://www.w3.org/ns/pim/argResolution">
-        <subClassOf rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
+    <Class rdf:about="http://www.w3.org/ns/pim/arg#Resolution">
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/arg#Position"/>
     </Class>
 
-    <rdf:Property rdf:about="http://www.w3.org/ns/pim/argopposition">
-        <domain rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arg#opposition">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arg#Position"/>
         <label>opposition</label>
-        <range rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/arg#Position"/>
         <owl:inverse rdf:parseType="Resource">
             <label>opposes</label>
         </owl:inverse>
     </rdf:Property>
 
-    <rdf:Property rdf:about="http://www.w3.org/ns/pim/argrequires">
-        <domain rdf:resource="http://www.w3.org/ns/pim/argConjunction"/>
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arg#requires">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arg#Conjunction"/>
         <label>requires</label>
-        <range rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/arg#Position"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="http://www.w3.org/ns/pim/argsupport">
-        <domain rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arg#support">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arg#Position"/>
         <label>support</label>
-        <range rdf:resource="http://www.w3.org/ns/pim/argPosition"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/arg#Position"/>
         <owl:inverse rdf:parseType="Resource">
             <label>supports</label>
         </owl:inverse>
