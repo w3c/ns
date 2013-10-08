@@ -15,7 +15,7 @@
 
 odrl:
 	a owl:Ontology , voaf:Vocabulary ;
-	rdfs:label "Open Digital Rights Language (ODRL)"@en ;
+	rdfs:label "Open Digital Rights Language (ODRL) Ontology"@en ;
 	owl:versionInfo "2.0" ;
 	vann:preferredNamespaceUri <http://w3.org/ns/odrl/2/> ;
 	vann:preferredNamespacePrefix "odrl" ;
@@ -260,7 +260,7 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "relation"@en ;
 	rdfs:comment "Relation is an abstract property which creates an explicit link between an Action and an Asset. Sub-properties of relation are used to define the nature of that link."@en ;
-	rdfs:domain :Action ;
+	rdfs:domain :Rule ;
 	rdfs:range :Asset .
 
 :output
@@ -270,7 +270,7 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "output"@en ;
 	rdfs:comment "The output property specifies the Asset which is created from the output of the Action."@en ;
-	rdfs:domain :Action ;
+	rdfs:domain :Rule ;
 	rdfs:range :Asset . 
 
 :target

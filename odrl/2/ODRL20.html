@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Open Digital Rights Language (ODRL)</title>
+    <title>Open Digital Rights Language (ODRL) Ontology</title>
 	<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/w3c-unofficial">
 	<link rel="stylesheet" type="text/css" href="local.css">
 	<link rel="alternate" type="text/turtle" href="ODRL20.ttl">
@@ -11,7 +11,7 @@
 	<link rel="alternate" type="text/plain" href="ODRL20.nt">
 </head>
 <body>
-<h1>Open Digital Rights Language (ODRL)</h1>
+<h1>Open Digital Rights Language (ODRL) Ontology</h1>
 <em>The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media.</em>
 <dl>
 <dt>Latest Version</dt><dd><a href="http://www.w3.org/ns/odrl/2/">http://www.w3.org/ns/odrl/2/</a></dd>
@@ -28,6 +28,31 @@
 <p>Discussion and feedback of this document takes place on the W3C ODRL Community Group mailing list (see <a href="http://lists.w3.org/Archives/Public/public-odrl-contrib/">Contributor Archive</a>). Feedback from the public is encouraged and can be send to <a href="mailto:public-odrl@w3.org">public-odrl@w3.org</a> (see <a href="http://lists.w3.org/Archives/Public/public-odrl/">Public Archive</a>).</p>
 
 <p>Copyright © 2013 the Contributors to the Final Specification, published by the <a href="http://www.w3.org/community/odrl/">W3C ODRL Community Group</a> under the <a href="http://www.w3.org/community/about/agreements/final/">W3C Community Final Specification Agreement (FSA)</a>. A human-readable summary is <a href="http://www.w3.org/community/about/agreements/fsa-deed/">available</a>.</p>
+
+<h2 id="sec-ns">Namespace URI</h2>
+<p>
+	The namespace URI for ODRL 2.0 is <a href="http://www.w3.org/ns/odrl/2/"><code>http://www.w3.org/ns/odrl/2/</code></a>.
+</p>
+<h2 id="sec-alternates">Alternative serialisations</h2>
+<p>
+	The ODRL 2.0 vocabulary is published both in human- and machine-readable forms. A <code>GET</code> request made to the canonical namespace URI will cause <a href="http://www.w3.org/blog/2006/02/content-negotiation/">HTTP Content Negotiation</a> to occur, which means that the most appropriate variant will be served according to your request. However, if you explicitly wish to retrieve a particular serialisation, you can also do so using the following URLs:
+</p>
+<dl>
+	<dt><a href="ODRL20.html">ODRL20.html</a></dt>
+	<dd>HTML (this document)</dd>
+
+	<dt><a href="ODRL20.ttl">ODRL20.ttl</a></dt>
+	<dd>RDF (Turtle)</dd>
+
+	<dt><a href="ODRL20.rdf">ODRL20.rdf</a></dt>
+	<dd>RDF/XML</dd>
+	
+	<dt><a href="ODRL20.nt">ODRL20.nt</a></dt>
+	<dd>RDF (N-Triples)</dd>
+	
+	<dt><a href="ODRL20.xsd">ODRL20.xsd</a></dt>
+	<dd>XML Schema Definition</dd>
+</dl>
 
 <h2 id="sec-toc">Table of Contents</h2>
 <ol class="toc">
@@ -61,7 +86,10 @@
 <p>This vocabulary defines 24 classes, 52 properties, one concept scheme, 54 concepts and 17 named individuals.</p>
 <dl><dt>Classes</dt><dd><a href="#term-Action">Action</a>&nbsp;| <a href="#term-Agreement">Agreement</a>&nbsp;| <a href="#term-All">All</a>&nbsp;| <a href="#term-AllConnections">AllConnections</a>&nbsp;| <a href="#term-AllGroups">AllGroups</a>&nbsp;| <a href="#term-All2ndConnections">All2ndConnections</a>&nbsp;| <a href="#term-Asset">Asset</a>&nbsp;| <a href="#term-ConflictTerm">ConflictTerm</a>&nbsp;| <a href="#term-Constraint">Constraint</a>&nbsp;| <a href="#term-Duty">Duty</a>&nbsp;| <a href="#term-Group">Group</a>&nbsp;| <a href="#term-Individual">Individual</a>&nbsp;| <a href="#term-Offer">Offer</a>&nbsp;| <a href="#term-Operator">Operator</a>&nbsp;| <a href="#term-Party">Party</a>&nbsp;| <a href="#term-Permission">Permission</a>&nbsp;| <a href="#term-Policy">Policy</a>&nbsp;| <a href="#term-Privacy">Privacy</a>&nbsp;| <a href="#term-Prohibition">Prohibition</a>&nbsp;| <a href="#term-Request">Request</a>&nbsp;| <a href="#term-Rule">Rule</a>&nbsp;| <a href="#term-Set">Set</a>&nbsp;| <a href="#term-Ticket">Ticket</a>&nbsp;| <a href="#term-UndefinedTerm">UndefinedTerm</a></dd><dt>Properties</dt><dd><a href="#term-absolutePosition">absolutePosition</a>&nbsp;| <a href="#term-absoluteSize">absoluteSize</a>&nbsp;| <a href="#term-action">action</a>&nbsp;| <a href="#term-assignee">assignee</a>&nbsp;| <a href="#term-assigner">assigner</a>&nbsp;| <a href="#term-attributedParty">attributedParty</a>&nbsp;| <a href="#term-conflict">conflict</a>&nbsp;| <a href="#term-consentingParty">consentingParty</a>&nbsp;| <a href="#term-constraint">constraint</a>&nbsp;| <a href="#term-count">count</a>&nbsp;| <a href="#term-dateTime">dateTime</a>&nbsp;| <a href="#term-deliveryChannel">deliveryChannel</a>&nbsp;| <a href="#term-device">device</a>&nbsp;| <a href="#term-duty">duty</a>&nbsp;| <a href="#term-elapsedTime">elapsedTime</a>&nbsp;| <a href="#term-event">event</a>&nbsp;| <a href="#term-fileFormat">fileFormat</a>&nbsp;| <a href="#term-function">function</a>&nbsp;| <a href="#term-industry">industry</a>&nbsp;| <a href="#term-informedParty">informedParty</a>&nbsp;| <a href="#term-inheritAllowed">inheritAllowed</a>&nbsp;| <a href="#term-inheritFrom">inheritFrom</a>&nbsp;| <a href="#term-language">language</a>&nbsp;| <a href="#term-media">media</a>&nbsp;| <a href="#term-meteredTime">meteredTime</a>&nbsp;| <a href="#term-operator">operator</a>&nbsp;| <a href="#term-output">output</a>&nbsp;| <a href="#term-payeeParty">payeeParty</a>&nbsp;| <a href="#term-payAmount">payAmount</a>&nbsp;| <a href="#term-percentage">percentage</a>&nbsp;| <a href="#term-permission">permission</a>&nbsp;| <a href="#term-product">product</a>&nbsp;| <a href="#term-prohibition">prohibition</a>&nbsp;| <a href="#term-proximity">proximity</a>&nbsp;| <a href="#term-purpose">purpose</a>&nbsp;| <a href="#term-recipient">recipient</a>&nbsp;| <a href="#term-relation">relation</a>&nbsp;| <a href="#term-relativePosition">relativePosition</a>&nbsp;| <a href="#term-relativeSize">relativeSize</a>&nbsp;| <a href="#term-resolution">resolution</a>&nbsp;| <a href="#term-rightOperand">rightOperand</a>&nbsp;| <a href="#term-spatial">spatial</a>&nbsp;| <a href="#term-status">status</a>&nbsp;| <a href="#term-system">system</a>&nbsp;| <a href="#term-target">target</a>&nbsp;| <a href="#term-timeInterval">timeInterval</a>&nbsp;| <a href="#term-timedCount">timedCount</a>&nbsp;| <a href="#term-trackingParty">trackingParty</a>&nbsp;| <a href="#term-undefined">undefined</a>&nbsp;| <a href="#term-unit">unit</a>&nbsp;| <a href="#term-version">version</a>&nbsp;| <a href="#term-virtualLocation">virtualLocation</a></dd><dt>Concept schemes</dt><dd><a href="#term-actions">actions</a></dd><dt>Concepts</dt><dd><a href="#term-acceptTracking">acceptTracking</a>&nbsp;| <a href="#term-adHocShare">adHocShare</a>&nbsp;| <a href="#term-aggregate">aggregate</a>&nbsp;| <a href="#term-annotate">annotate</a>&nbsp;| <a href="#term-anonymize">anonymize</a>&nbsp;| <a href="#term-append">append</a>&nbsp;| <a href="#term-archive">archive</a>&nbsp;| <a href="#term-attachPolicy">attachPolicy</a>&nbsp;| <a href="#term-attachSource">attachSource</a>&nbsp;| <a href="#term-attribute">attribute</a>&nbsp;| <a href="#term-commercialize">commercialize</a>&nbsp;| <a href="#term-concurrentUse">concurrentUse</a>&nbsp;| <a href="#term-copy">copy</a>&nbsp;| <a href="#term-delete">delete</a>&nbsp;| <a href="#term-derive">derive</a>&nbsp;| <a href="#term-display">display</a>&nbsp;| <a href="#term-distribute">distribute</a>&nbsp;| <a href="#term-ensureExclusivity">ensureExclusivity</a>&nbsp;| <a href="#term-execute">execute</a>&nbsp;| <a href="#term-export">export</a>&nbsp;| <a href="#term-extract">extract</a>&nbsp;| <a href="#term-extractChar">extractChar</a>&nbsp;| <a href="#term-extractPage">extractPage</a>&nbsp;| <a href="#term-extractWord">extractWord</a>&nbsp;| <a href="#term-give">give</a>&nbsp;| <a href="#term-include">include</a>&nbsp;| <a href="#term-index">index</a>&nbsp;| <a href="#term-inform">inform</a>&nbsp;| <a href="#term-install">install</a>&nbsp;| <a href="#term-lease">lease</a>&nbsp;| <a href="#term-lend">lend</a>&nbsp;| <a href="#term-license">license</a>&nbsp;| <a href="#term-modify">modify</a>&nbsp;| <a href="#term-move">move</a>&nbsp;| <a href="#term-nextPolicy">nextPolicy</a>&nbsp;| <a href="#term-obtainConsent">obtainConsent</a>&nbsp;| <a href="#term-pay">pay</a>&nbsp;| <a href="#term-play">play</a>&nbsp;| <a href="#term-present">present</a>&nbsp;| <a href="#term-preview">preview</a>&nbsp;| <a href="#term-print">print</a>&nbsp;| <a href="#term-read">read</a>&nbsp;| <a href="#term-reproduce">reproduce</a>&nbsp;| <a href="#term-reviewPolicy">reviewPolicy</a>&nbsp;| <a href="#term-secondaryUse">secondaryUse</a>&nbsp;| <a href="#term-sell">sell</a>&nbsp;| <a href="#term-share">share</a>&nbsp;| <a href="#term-shareAlike">shareAlike</a>&nbsp;| <a href="#term-textToSpeech">textToSpeech</a>&nbsp;| <a href="#term-transform">transform</a>&nbsp;| <a href="#term-translate">translate</a>&nbsp;| <a href="#term-uninstall">uninstall</a>&nbsp;| <a href="#term-watermark">watermark</a>&nbsp;| <a href="#term-write">write</a></dd><dt>Named individuals</dt><dd><a href="#term-eq">eq</a>&nbsp;| <a href="#term-gt">gt</a>&nbsp;| <a href="#term-gteq">gteq</a>&nbsp;| <a href="#term-hasPart">hasPart</a>&nbsp;| <a href="#term-ignore">ignore</a>&nbsp;| <a href="#term-invalid">invalid</a>&nbsp;| <a href="#term-isA">isA</a>&nbsp;| <a href="#term-isAllOf">isAllOf</a>&nbsp;| <a href="#term-isAnyOf">isAnyOf</a>&nbsp;| <a href="#term-isNoneOf">isNoneOf</a>&nbsp;| <a href="#term-isPartOf">isPartOf</a>&nbsp;| <a href="#term-lt">lt</a>&nbsp;| <a href="#term-lteq">lteq</a>&nbsp;| <a href="#term-neq">neq</a>&nbsp;| <a href="#term-perm">perm</a>&nbsp;| <a href="#term-prohibit">prohibit</a>&nbsp;| <a href="#term-support">support</a></dd></dl>
 <h2 id="sec-groups">Groups</h2>
-<p>Some terms can be organised into logical groups, as described below:</p>
+<p>Some terms can be organised into logical groups, as shown below:</p>
+<p class="diagram">
+	<img src="diagram.png" alt="ODRL 2.0 Ontology diagram">
+</p>
 <table>
 	<thead>
 		<tr>
@@ -520,7 +548,7 @@ _:requirements
 <tr><th>Label:</th> <td>Rule</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Sub-classes:</th> <td><a href="#term-Duty">Duty</a>, <a href="#term-Permission">Permission</a>, <a href="#term-Prohibition">Prohibition</a></td></tr>
-<tr><th>Properties:</th> <td><a href="#term-action">action</a>, <a href="#term-constraint">constraint</a>, <a href="#term-function">function</a>, <a href="#term-target">target</a></td></tr>
+<tr><th>Properties:</th> <td><a href="#term-action">action</a>, <a href="#term-constraint">constraint</a>, <a href="#term-function">function</a>, <a href="#term-output">output</a>, <a href="#term-relation">relation</a>, <a href="#term-target">target</a></td></tr>
 </table>
 </div>
 <h3 id="term-Permission">Permission</h3
@@ -531,7 +559,7 @@ _:requirements
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="#term-Rule">Rule</a></td></tr>
 <tr><th>Properties:</th> <td><a href="#term-duty">duty</a></td></tr>
-  <tr><th>Inherited Properties:</th> <td><a href="#term-target">target</a>, <a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
+  <tr><th>Inherited Properties:</th> <td><a href="#term-relation">relation</a>, <a href="#term-output">output</a>, <a href="#term-target">target</a>, <a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
 </table>
 </div>
 <h3 id="term-Prohibition">Prohibition</h3
@@ -541,7 +569,7 @@ _:requirements
 <tr><th>Label:</th> <td>Prohibition</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="#term-Rule">Rule</a></td></tr>
-  <tr><th>Inherited Properties:</th> <td><a href="#term-target">target</a>, <a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
+  <tr><th>Inherited Properties:</th> <td><a href="#term-relation">relation</a>, <a href="#term-output">output</a>, <a href="#term-target">target</a>, <a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
 </table>
 </div>
 <h3 id="term-Duty">Duty</h3
@@ -551,7 +579,7 @@ _:requirements
 <tr><th>Label:</th> <td>Duty</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="#term-Rule">Rule</a></td></tr>
-  <tr><th>Inherited Properties:</th> <td><a href="#term-target">target</a>, <a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
+  <tr><th>Inherited Properties:</th> <td><a href="#term-relation">relation</a>, <a href="#term-output">output</a>, <a href="#term-target">target</a>, <a href="#term-function">function</a>, <a href="#term-action">action</a>, <a href="#term-constraint">constraint</a></td></tr>
 </table>
 </div>
 <h3 id="term-Action">Action</h3
@@ -561,7 +589,6 @@ _:requirements
 <tr><th>Label:</th> <td>Action</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></td></tr>
-<tr><th>Properties:</th> <td><a href="#term-output">output</a>, <a href="#term-relation">relation</a></td></tr>
 <tr><th>In range of:</th> <td><a href="#term-action">action</a></td></tr>
 <tr><th>Instances:</th> <td><a href="#term-acceptTracking">acceptTracking</a>, <a href="#term-adHocShare">adHocShare</a>, <a href="#term-aggregate">aggregate</a>, <a href="#term-annotate">annotate</a>, <a href="#term-anonymize">anonymize</a>, <a href="#term-append">append</a>, <a href="#term-archive">archive</a>, <a href="#term-attachPolicy">attachPolicy</a>, <a href="#term-attachSource">attachSource</a>, <a href="#term-attribute">attribute</a>, <a href="#term-commercialize">commercialize</a>, <a href="#term-concurrentUse">concurrentUse</a>, <a href="#term-copy">copy</a>, <a href="#term-delete">delete</a>, <a href="#term-derive">derive</a>, <a href="#term-display">display</a>, <a href="#term-distribute">distribute</a>, <a href="#term-ensureExclusivity">ensureExclusivity</a>, <a href="#term-execute">execute</a>, <a href="#term-export">export</a>, <a href="#term-extract">extract</a>, <a href="#term-extractChar">extractChar</a>, <a href="#term-extractPage">extractPage</a>, <a href="#term-extractWord">extractWord</a>, <a href="#term-give">give</a>, <a href="#term-include">include</a>, <a href="#term-index">index</a>, <a href="#term-inform">inform</a>, <a href="#term-install">install</a>, <a href="#term-lease">lease</a>, <a href="#term-lend">lend</a>, <a href="#term-license">license</a>, <a href="#term-modify">modify</a>, <a href="#term-move">move</a>, <a href="#term-nextPolicy">nextPolicy</a>, <a href="#term-obtainConsent">obtainConsent</a>, <a href="#term-pay">pay</a>, <a href="#term-play">play</a>, <a href="#term-present">present</a>, <a href="#term-preview">preview</a>, <a href="#term-print">print</a>, <a href="#term-read">read</a>, <a href="#term-reproduce">reproduce</a>, <a href="#term-reviewPolicy">reviewPolicy</a>, <a href="#term-secondaryUse">secondaryUse</a>, <a href="#term-sell">sell</a>, <a href="#term-share">share</a>, <a href="#term-shareAlike">shareAlike</a>, <a href="#term-textToSpeech">textToSpeech</a>, <a href="#term-transform">transform</a>, <a href="#term-translate">translate</a>, <a href="#term-uninstall">uninstall</a>, <a href="#term-watermark">watermark</a>, <a href="#term-write">write</a></td></tr>
 </table>
@@ -771,7 +798,7 @@ _:requirements
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Sub-properties:</th> <td><a href="#term-output">output</a>, <a href="#term-target">target</a></td></tr>
 <tr><th>Range:</th> <td><a href="#term-Asset">Asset</a></td></tr>
-<tr><th>Domain:</th> <td><a href="#term-Action">Action</a></td></tr>
+<tr><th>Domain:</th> <td><a href="#term-Rule">Rule</a></td></tr>
 </table>
 </div>
 <h3 id="term-output">output</h3
@@ -782,7 +809,7 @@ _:requirements
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent property:</th> <td><a href="#term-relation">relation</a></td></tr>
 <tr><th>Range:</th> <td><a href="#term-Asset">Asset</a></td></tr>
-<tr><th>Domain:</th> <td><a href="#term-Action">Action</a></td></tr>
+<tr><th>Domain:</th> <td><a href="#term-Rule">Rule</a></td></tr>
 </table>
 </div>
 <h3 id="term-target">target</h3
