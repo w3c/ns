@@ -6,7 +6,8 @@
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "odrl" .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/vocab/vann/example> <http://www.w3.org/ns/odrl/2/Asset> .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/creator> "Mo McRoberts (BBC)" .
-<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/creator> "V\u00EDctor Rodr\u00EDguez Doncel" .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/creator> "V\u00EDctor Rodr\u00EDguez Doncel (OEG-UPM)" .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/published> "2013-10-11"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/contributor> "ODRL Community Group" .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/description> "The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media."@en .
 <http://www.w3.org/ns/odrl/2/odrl.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
@@ -216,6 +217,8 @@ _:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
 <http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Prohibition> .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Duty> .
 <http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#label> "Permission"@en .
 <http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#comment> "A Permission is a rule which indicates the actions the assignee is permitted to perform on the associated asset. In other words, what the assigner (supplier) has granted to the assignee (consumer)."@en .
@@ -223,6 +226,8 @@ _:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
 <http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Duty> .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Permission> .
 <http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#label> "Prohibition"@en .
 <http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#comment> "A Prohibition is a rule which indicates the Actions that the assignee is prohibited to perform on the related Asset."@en .
@@ -230,6 +235,8 @@ _:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
 <http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Prohibition> .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Permission> .
 <http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#label> "Duty"@en .
 <http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#comment> "A Duty is a rule which indicates requirements which must be fulfilled in order to receive the permission."@en .
@@ -1008,6 +1015,11 @@ _:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
 <http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Privacy> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Request> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Set> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Ticket> .
 <http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#label> "Agreement"@en .
 <http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#comment> "Policy expressions that are formal contracts (or licenses) stipulating all the terms of usage and all the parties involved."@en .
 <http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
@@ -1015,6 +1027,11 @@ _:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
 <http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Privacy> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Request> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Set> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Ticket> .
 <http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2000/01/rdf-schema#label> "Offer"@en .
 <http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Offer is a Policy expression that proposes terms of usage from an Asset owner."@en .
 <http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
@@ -1022,6 +1039,11 @@ _:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
 <http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Request> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Set> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Ticket> .
 <http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2000/01/rdf-schema#label> "Privacy"@en .
 <http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Privacy is a Policy expression that stipulates the terms of usage over personal information."@en .
 <http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
@@ -1029,6 +1051,11 @@ _:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
 <http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Privacy> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Set> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Ticket> .
 <http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2000/01/rdf-schema#label> "Request"@en .
 <http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Request is a Policy expression that proposes terms of usage to an Asset owner."@en .
 <http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
@@ -1036,6 +1063,11 @@ _:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
 <http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Privacy> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Request> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Ticket> .
 <http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2000/01/rdf-schema#label> "Set"@en .
 <http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Set is a Policy expression that consists of entities from the complete model."@en .
 <http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
@@ -1043,6 +1075,11 @@ _:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
 <http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Privacy> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Request> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Set> .
 <http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2000/01/rdf-schema#label> "Ticket"@en .
 <http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Ticket is a Policy expression that stipulates the terms of usage and is redeemable by any Party who currently holds the Ticket in their possession."@en .
 <http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .

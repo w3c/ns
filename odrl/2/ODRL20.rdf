@@ -15,8 +15,9 @@
   <owl:Ontology rdf:about="http://www.w3.org/ns/odrl/2/">
     <dct:contributor>ODRL Community Group</dct:contributor>
     <dct:creator>Mo McRoberts (BBC)</dct:creator>
-    <dct:creator>Víctor Rodríguez Doncel</dct:creator>
+    <dct:creator>Víctor Rodríguez Doncel (OEG-UPM)</dct:creator>
     <dct:description xml:lang="en">The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media.</dct:description>
+    <dct:published rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-11</dct:published>
     <vann:example rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
     <vann:preferredNamespacePrefix>odrl</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri rdf:resource="http://w3.org/ns/odrl/2/"/>
@@ -38,6 +39,11 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Agreement</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Offer"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Privacy"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Request"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Ticket"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/All">
@@ -101,6 +107,8 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Duty</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Rule"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Permission"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Prohibition"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Group">
@@ -125,6 +133,11 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Offer</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Privacy"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Request"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Ticket"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Operator">
@@ -148,6 +161,8 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Permission</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Rule"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Duty"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Prohibition"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Policy">
@@ -164,6 +179,11 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Privacy</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Offer"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Request"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Ticket"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Prohibition">
@@ -172,6 +192,8 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Prohibition</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Rule"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Duty"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Permission"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Request">
@@ -180,6 +202,11 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Request</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Offer"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Privacy"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Ticket"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Rule">
@@ -195,6 +222,11 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Set</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Offer"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Privacy"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Request"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Ticket"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Ticket">
@@ -203,6 +235,11 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Ticket</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Agreement"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Offer"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Privacy"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Request"/>
+    <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
     <vs:term_status>testing</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/UndefinedTerm">

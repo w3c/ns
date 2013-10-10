@@ -20,7 +20,8 @@ odrl:
 	vann:preferredNamespaceUri <http://w3.org/ns/odrl/2/> ;
 	vann:preferredNamespacePrefix "odrl" ;
 	vann:example :Asset ;
-	dct:creator "Mo McRoberts (BBC)", "Víctor Rodríguez Doncel" ;
+	dct:creator "Mo McRoberts (BBC)", "Víctor Rodríguez Doncel (OEG-UPM)" ;
+	dct:published "2013-10-11"^^xsd:date ;
 	dct:contributor "ODRL Community Group" ;
 	dct:description "The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media."@en .
 
@@ -218,6 +219,7 @@ odrl:
 	a rdfs:Class , owl:Class ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf :Rule ;
+	owl:disjointWith :Prohibition, :Duty ;
 	vs:term_status "testing" ;
 	rdfs:label "Permission"@en ;
 	rdfs:comment "A Permission is a rule which indicates the actions the assignee is permitted to perform on the associated asset. In other words, what the assigner (supplier) has granted to the assignee (consumer)."@en .
@@ -226,6 +228,7 @@ odrl:
 	a rdfs:Class , owl:Class ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf :Rule ;
+	owl:disjointWith :Duty, :Permission ;
 	vs:term_status "testing" ;
 	rdfs:label "Prohibition"@en ;
 	rdfs:comment "A Prohibition is a rule which indicates the Actions that the assignee is prohibited to perform on the related Asset."@en .
@@ -234,6 +237,7 @@ odrl:
 	a rdfs:Class , owl:Class ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subClassOf :Rule ;
+	owl:disjointWith :Prohibition, :Permission ;
 	vs:term_status "testing" ;
 	rdfs:label "Duty"@en ;
 	rdfs:comment "A Duty is a rule which indicates requirements which must be fulfilled in order to receive the permission."@en .
@@ -1139,6 +1143,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
+	owl:disjointWith :Offer, :Privacy, :Request, :Set, :Ticket ;
 	rdfs:label "Agreement"@en ;
 	rdfs:comment "Policy expressions that are formal contracts (or licenses) stipulating all the terms of usage and all the parties involved."@en .
 
@@ -1147,6 +1152,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
+	owl:disjointWith :Agreement, :Privacy, :Request, :Set, :Ticket ;
 	rdfs:label "Offer"@en ;
 	rdfs:comment "An instance of Offer is a Policy expression that proposes terms of usage from an Asset owner."@en .
 
@@ -1155,6 +1161,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
+	owl:disjointWith :Agreement, :Offer, :Request, :Set, :Ticket ;
 	rdfs:label "Privacy"@en ;
 	rdfs:comment "An instance of Privacy is a Policy expression that stipulates the terms of usage over personal information."@en .
 
@@ -1163,6 +1170,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
+	owl:disjointWith :Agreement, :Offer, :Privacy, :Set, :Ticket ;
 	rdfs:label "Request"@en ;
 	rdfs:comment "An instance of Request is a Policy expression that proposes terms of usage to an Asset owner."@en .
 
@@ -1171,6 +1179,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
+	owl:disjointWith :Agreement, :Offer, :Privacy, :Request, :Ticket ;
 	rdfs:label "Set"@en ;
 	rdfs:comment "An instance of Set is a Policy expression that consists of entities from the complete model."@en .
 
@@ -1179,6 +1188,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
     rdfs:subClassOf :Policy ;
+	owl:disjointWith :Agreement, :Offer, :Privacy, :Request, :Set ;
 	rdfs:label "Ticket"@en ;
 	rdfs:comment "An instance of Ticket is a Policy expression that stipulates the terms of usage and is redeemable by any Party who currently holds the Ticket in their possession."@en .
 
