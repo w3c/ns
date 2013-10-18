@@ -87,6 +87,10 @@ but records exercise sessions.
          :label "skating";
          :subClassOf fit:Activity .
     
+    fit:Transport     a :Class;
+         :label "transport";
+         :subClassOf fit:Activity .
+    
     fit:Walking     a :Class;
          :label "walking";
          :subClassOf fit:Activity .
@@ -119,6 +123,11 @@ but records exercise sessions.
          :label "BP (sys) /mmHg"@en;
          :range xsd:float .
     
+    fit:calories     a rdf:Property,
+                owl:DatatypeProperty;
+         :label "calories";
+         :range xsd:float .
+    
     fit:distance     a rdf:Property,
                 owl:DatatypeProperty;
          :range xsd:float .
@@ -129,6 +138,7 @@ but records exercise sessions.
     
     fit:energyBurn     a rdf:Property,
                 owl:DatatypeProperty;
+         :label "energy burned/jK";
          :range xsd:float .
     
     fit:exercise     a rdf:Property;
