@@ -1,0 +1,84 @@
+@prefix : <http://www.w3.org/ns/pim/moves#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix dc:	<http://purl.org/dc/elements/1.1/>.
+@prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
+
+<> dc:title "An ontology for personal activity";
+    s:comment """This is a raw ontology for data exported form the 
+    Moves app and related applications such as moves export hgenerally as JSON
+    and converted to RDF model.""".
+
+    :activities     a rdf:Property;
+         s:label "activities" .
+    
+    :activity     a rdf:Property;
+         s:label "activity type" .
+    
+    :calories     a rdf:Property;
+         s:label "calories burned" .
+    
+    :caloriesIdle     a rdf:Property;
+         s:label "calories idle" .
+    
+    :date     a rdf:Property;
+         s:label "date" .
+    
+    :distance     a rdf:Property;
+         s:label "distance" .
+    
+    :duration     a rdf:Property;
+         s:label "duration" .
+    
+    :endTime     a rdf:Property;
+         s:label "end time" .
+    
+    :foursquareId     a rdf:Property;
+         s:label "foursquare Id" .
+    
+    :id     a rdf:Property;
+         s:label "id" .
+    
+    :lat     a rdf:Property;
+         s:label "latitide" .
+    
+    :location     a rdf:Property;
+         s:label "location" .
+    
+    :lon     a rdf:Property;
+         s:label "longitude" .
+    
+    :name     a rdf:Property;
+         s:label "name" .
+    
+    :place     a rdf:Property;
+         s:label "place" .
+    
+    :segments     a rdf:Property;
+         s:label "segments" .
+    
+    :startTime     a rdf:Property;
+         s:label "start time" .
+    
+    :steps     a rdf:Property;
+         s:label "steps taken" .
+    
+    :time     a rdf:Property;
+         s:label "time" .
+    
+    :trackPoints     a rdf:Property;
+         s:label "track points" .
+    
+    :type     a rdf:Property;
+         s:label "type" .
+    
+    :value     a rdf:Property;
+         s:label "returned value";
+         s:comment """The relation between a data file and the value which it returns.
+         This allows an N3 file to carry a data value rather than a graph, for example
+         by saying  <> value 3. etc.""".
+
+#ends
+
