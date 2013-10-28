@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:formats="http://www.w3.org/ns/formats/"
+>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/TriG">
+    <formats:preferred_suffix>.trig</formats:preferred_suffix>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/trig/#sec-mediaReg"/>
+    <dc:description>Unique identifier for the RDF Dataset Serialization in TriG</dc:description>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/trig/"/>
+    <dc:modified>2013-10-28</dc:modified>
+    <rdfs:comment>TriG is defined by the TriG - RDF Dataset Language” W3C Working Draft.</rdfs:comment>
+    <dc:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <foaf:name>Ivan Herman</foaf:name>
+      </foaf:Person>
+    </dc:creator>
+    <dc:created>2013-10-28</dc:created>
+    <formats:media_type>application/trig</formats:media_type>
+  </formats:Format>
+</rdf:RDF>
+

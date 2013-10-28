@@ -1,43 +1,17 @@
-@prefix cc: <http://creativecommons.org/ns#> .
-@prefix ctag: <http://commontag.org/ns#> .
 @prefix dc: <http://purl.org/dc/terms/> .
-@prefix dc11: <http://purl.org/dc/elements/1.1/> .
-@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix formats: <http://www.w3.org/ns/formats/> .
-@prefix gr: <http://purl.org/goodrelations/v1#> .
-@prefix grddl: <http://www.w3.org/2003/g/data-view#> .
-@prefix ht: <http://www.w3.org/2006/http#> .
-@prefix ical: <http://www.w3.org/2002/12/cal/icaltzd#> .
-@prefix ma: <http://www.w3.org/ns/ma-ont#> .
-@prefix og: <http://ogp.me/ns#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix prov: <http://www.w3.org/ns/prov#> .
-@prefix pyrdfa: <http://www.w3.org/2007/08/pyRdfa/vocab#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfa: <http://www.w3.org/ns/rdfa#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rev: <http://purl.org/stuff/rev#> .
-@prefix rif: <http://www.w3.org/2007/rif#> .
-@prefix rr: <http://www.w3.org/ns/r2rml#> .
-@prefix schema: <http://schema.org/> .
-@prefix sd: <http://www.w3.org/ns/sparql-service-description#> .
-@prefix sioc: <http://rdfs.org/sioc/ns#> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix skosxl: <http://www.w3.org/2008/05/skos-xl#> .
-@prefix v: <http://rdf.data-vocabulary.org/#> .
-@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
-@prefix void: <http://rdfs.org/ns/void#> .
-@prefix wdr: <http://www.w3.org/2007/05/powder#> .
-@prefix wdrs: <http://www.w3.org/2007/05/powder-s#> .
-@prefix xhv: <http://www.w3.org/1999/xhtml/vocab#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 formats:Format a rdfs:Class,
         owl:Class ;
-    dcterms:description "a unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification." ;
+    dc:description "a unique, top-level Class URI for specific file formats. Media types do not uniquely identify file formats (eg, serialization formats for various abstract concepts), because not all specific cases do have distinct media types, instances in this class can be used instead for proper identification." ;
     rdfs:seeAlso formats:JSON-LD,
+        formats:N-Quads,
         formats:N-Triples,
         formats:N3,
         formats:OWL_Functional,
@@ -54,6 +28,7 @@ formats:Format a rdfs:Class,
         formats:SPARQL_Results_JSON,
         formats:SPARQL_Results_TSV,
         formats:SPARQL_Results_XML,
+        formats:TriG,
         formats:Turtle .
 
 formats:media_type a rdfs:Property,
@@ -70,10 +45,10 @@ formats:preferred_suffix a rdfs:Property,
     foaf:workplaceHomepage <http://www.w3.org> .
 
 formats: a owl:Ontology ;
-    dcterms:created "2010-10-19" ;
-    dcterms:creator <http://www.ivan-herman.net/foaf#me> ;
-    dcterms:description "Unique URIs for File Formats" ;
-    dcterms:modified "2013-03-27" ;
+    dc:created "2010-10-19" ;
+    dc:creator <http://www.ivan-herman.net/foaf#me> ;
+    dc:description "Unique URIs for File Formats" ;
+    dc:modified "2013-03-27" ;
     owl:versionIRI formats: ;
     owl:versionInfo "$Date$" .
 

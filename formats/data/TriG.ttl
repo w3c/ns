@@ -6,15 +6,16 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-formats:N-Quads a formats:Format ;
-    dc:created "2013-09-05" ;
+formats:TriG a formats:Format ;
+    dc:created "2013-10-28" ;
     dc:creator <http://www.ivan-herman.net/foaf#me> ;
-    dc:description "Unique identifier for the RDF Dataset serialization in N-Quads" ;
+    dc:description "Unique identifier for the RDF Dataset Serialization in TriG" ;
     dc:modified "2013-10-28" ;
-    rdfs:comment "N-Quads is defined  the “N-Quads” W3C Recommendation track document. It uses the general media type: ‘application/n-quads’ and a preferred suffix: ‘.nq’." ;
-    rdfs:isDefinedBy <http://www.w3.org/TR/n-quads/> ;
-    formats:media_type "application/n-quads" ;
-    formats:preferred_suffix ".nq" .
+    rdfs:comment "TriG is defined by the TriG - RDF Dataset Language” W3C Working Draft." ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/trig/> ;
+    rdfs:seeAlso <http://www.w3.org/TR/trig/#sec-mediaReg> ;
+    formats:media_type "application/trig" ;
+    formats:preferred_suffix ".trig" .
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;
     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
