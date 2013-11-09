@@ -21,6 +21,7 @@ formats:Format a rdfs:Class,
         formats:POWDER-S,
         formats:PROV-N,
         formats:PROV-XML,
+        formats:RDF_JSON,
         formats:RDF_XML,
         formats:RDFa,
         formats:RIF_XML,
@@ -48,7 +49,7 @@ formats: a owl:Ontology ;
     dc:created "2010-10-19" ;
     dc:creator <http://www.ivan-herman.net/foaf#me> ;
     dc:description "Unique URIs for File Formats" ;
-    dc:modified "2013-03-27" ;
+    dc:modified "2013-11-09" ;
     owl:versionIRI formats: ;
     owl:versionInfo "$Date$" .
 

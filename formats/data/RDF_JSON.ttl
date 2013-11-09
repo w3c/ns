@@ -1,0 +1,27 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+formats:RDF_JSON a formats:Format ;
+    dc:created "2013-11-09" ;
+    dc:creator <http://www.ivan-herman.net/foaf#me> ;
+    dc:description "Unique identifier for the RDF 1.1 JSON Alternate Serialization (RDF/JSON)" ;
+    dc:modified "2013-11-09" ;
+    rdfs:comment "RDF/JSON is defined by the “RDF 1.1 JSON Alternate Serialization (RDF/JSON)” W3C Working Group Note." ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/rdf-json/> ;
+    rdfs:seeAlso <http://www.w3.org/TR/rdf-json/#sec-mediaReg> ;
+    formats:media_type "application/rdf+json" ;
+    formats:preferred_suffix ".rj" .
+
+<http://www.ivan-herman.net/foaf#me> a foaf:Person ;
+    rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;
+    foaf:mbox <mailto:ivan@w3.org> ;
+    foaf:name "Ivan Herman" ;
+    foaf:title "Semantic Web Activity Lead" ;
+    foaf:workplaceHomepage <http://www.w3.org> .
+
+
