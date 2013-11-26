@@ -115,9 +115,9 @@ This may be used for constructing URIs for new storage resources.
 #
 #  Registration
 #
-
- a rdf:Property;
-    s:label "app child".
+#  Which apps I am using where
+#
+#  TBD
 
 
 #########################
