@@ -1,13 +1,13 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dctype: <http://purl.org/dc/dcmitype/> .
-@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix dct: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dcat: <http://www.w3.org/ns/dcat#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix dctype: <http://purl.org/dc/dcmitype/>.
+@prefix skos: <http://www.w3.org/2004/02/skos/core#>.
+@prefix dct: <http://purl.org/dc/terms/>.
 @prefix vann: <http://purl.org/vocab/vann/>.
 @prefix voaf: <http://purl.org/vocommons/voaf#>.
 @prefix v: <http://www.w3.org/2006/vcard/ns#>.
@@ -52,7 +52,8 @@
       [foaf:name "Makx Dekkers"; rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me>; foaf:homepage <http://makxdekkers.com/>];
     foaf:maker[foaf:name "Government Linked Data WG"; foaf:homepage <http://www.w3.org/2011/gld/>];
     dct:modified "2012-04-24"^^xsd:date;
-    dct:modified "2013-09-20"^^xsd:date.
+    dct:modified "2013-09-20"^^xsd:date;
+    dct:modified "2013-11-28"^^xsd:date.
 
 # Catalog
 
@@ -193,6 +194,7 @@ dcat:theme a rdf:Property, owl:ObjectProperty;
   	rdfs:comment "La catégorie principale du jeu de données. Un jeu de données peut avoir plusieurs thèmes."@fr;
     rdfs:comment "التصنيف الرئيسي لقائمة البيانات. قائمة البيانات يمكن أن تملك أكثر من تصنيف رئيسي واحد."@ar;
     rdfs:comment "Η κύρια κατηγορία του συνόλου δεδομένων. Ένα σύνολο δεδομένων δύναται να έχει πολλαπλά θέματα."@el;
+    rdfs:domain dcat:Dataset;
     rdfs:range skos:Concept;
     rdfs:subPropertyOf dct:subject;
     vann:usageNote """The set of skos:Concepts used to categorize the datasets are organized in 
@@ -216,6 +218,7 @@ dcat:keyword a rdf:Property, owl:DatatypeProperty;
     rdfs:comment "Una palabra clave o etiqueta que describa al conjunto de datos."@es;
   	rdfs:comment "Un mot-clé ou étiquette décrivant un jeu de donnnées."@fr;
     rdfs:comment "كلمة  مفتاحيه توصف قائمة البيانات"@ar;
+    rdfs:domain dcat:Dataset;
     rdfs:range rdfs:Literal;
     rdfs:subPropertyOf dct:subject .
 
@@ -231,7 +234,8 @@ dcat:contactPoint a rdf:Property, owl:ObjectProperty;
     rdfs:comment "Συνδέει ένα σύνολο δεδομένων με ένα σχετικό σημείο επικοινωνίας, μέσω VCard."@el;
     rdfs:comment "Enlaza un conjunto de datos a información de contacto relevante utilizando VCard"@es;
     rdfs:comment "تربط قائمة البيانات بعنوان اتصال موصف  باستخدام VCard"@ar;
-    rdfs:range v:VCard.
+    rdfs:domain dcat:Dataset;
+    rdfs:range v:Kind.
   
 dcat:distribution a rdf:Property, owl:ObjectProperty;
     rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/>;
@@ -290,7 +294,7 @@ dcat:Distribution a rdfs:Class, owl:Class;
     rdfs:comment """Αναπαριστά μία συγκεκριμένη διαθέσιμη μορφή ενός συνόλου δεδομένων. Κάθε σύνολο δεδομενων μπορεί να είναι διαθέσιμο σε 
 					διαφορετικές μορφές, οι μορφές αυτές μπορεί να αναπαριστούν διαφορετικές μορφές αρχείων ή διαφορετικά σημεία διάθεσης.
 					Παραδείγματα διανομών συμπεριλαμβάνουν ένα μεταφορτώσιμο αρχείο μορφής CSV, ένα API ή ένα RSS feed."""@el;
-	rdfs:comment """Représente une forme spécifique d'un jeu de données. Caque jeu de données peut être disponible
+	  rdfs:comment """Représente une forme spécifique d'un jeu de données. Caque jeu de données peut être disponible
 					sous différentes formes, celles-ci pouvant représenter différents formats du jeu de données ou différents endpoint. Des exemples de distribution
 					sont des fichirs CSV, des API ou des flux RSS."""@fr;
     vann:usageNote """This represents a general availability of a dataset it implies no information about the 
@@ -310,6 +314,7 @@ dcat:accessURL a rdf:Property, owl:ObjectProperty;
    	rdfs:label "URL d'accès"@fr;
     rdfs:label "رابط وصول"@ar;
     rdfs:label "URL πρόσβασης"@el;
+    rdfs:domain dcat:Distribution;
     rdfs:range rdfs:Resource;
     rdfs:comment """Could be any kind of URL that gives access to a distribution of the dataset. E.g. landing page, 
           download, feed URL, SPARQL endpoint. Use when your catalog does not have information on which it 
@@ -340,6 +345,7 @@ dcat:downloadURL a rdf:Property, owl:ObjectProperty;
   	rdfs:label "URL de téléchargement"@fr;
     rdfs:label "رابط تحميل"@ar ;
     rdfs:label "URL μεταφόρτωσης"@el;
+    rdfs:domain dcat:Distribution;
     rdfs:range rdfs:Resource;
     rdfs:comment """This is a direct link to a downloadable file in a given format. E.g. CSV file or RDF file. The 
           format is described by the distribution's dc:format and/or dcat:mediaType"""@en;
@@ -367,6 +373,7 @@ dcat:byteSize a rdf:Property, owl:DatatypeProperty;
     rdfs:comment "El tamaño de una distribución en bytes"@es;
     rdfs:comment "الحجم بالبايتات "@ar;
     rdfs:comment "Το μέγεθος μιας διανομής σε bytes."@el;
+    rdfs:domain dcat:Distribution;
     rdfs:range rdfs:Literal;
     vann:usageNote """The size in bytes can be approximated when the precise size is not known. 
           The literal value of dcat:byteSize should by typed as xsd:decimal"""@en;
@@ -385,6 +392,7 @@ dcat:mediaType a rdf:Property, owl:ObjectProperty;
   	rdfs:label "type de média"@fr;
     rdfs:label "نوع الميديا"@ar;
     rdfs:label "τύπος μέσου"@el;
+    rdfs:domain dcat:Distribution;
     rdfs:range dct:MediaTypeOrExtent;
     rdfs:subPropertyOf dct:format;
     rdfs:comment """This property SHOULD be used when the media type of the distribution is defined 
