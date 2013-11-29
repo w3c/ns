@@ -10,3 +10,10 @@ ForceType 'application/ld+json'
 <FilesMatch "^(ma-ont|mediaont)\.html$">
 ForceType 'text/html; charset=iso-8859-1'
 </FilesMatch>
+
+RewriteEngine On
+RewriteBase /ns/
+
+# added sandro@w3.org 2013-11-29 per
+# https://lists.w3.org/Archives/Team/vocab-services/2013Nov/0002.html
+RewriteRule ^hydra/(.*)$ http://www.markus-lanthaler.com/hydra/$1 [P,L]
