@@ -50,7 +50,7 @@
       [foaf:name "Marios Meimaris"],
       [foaf:name "Martin Alvarez-Espinar"],
       [foaf:name "Makx Dekkers"; rdfs:seeAlso <http://makxdekkers.com/makxdekkers.rdf#me>; foaf:homepage <http://makxdekkers.com/>];
-    foaf:maker[foaf:name "Government Linked Data WG"; foaf:homepage <http://www.w3.org/2011/gld/>];
+    foaf:maker [foaf:name "Government Linked Data WG"; foaf:homepage <http://www.w3.org/2011/gld/>];
     dct:modified "2012-04-24"^^xsd:date;
     dct:modified "2013-09-20"^^xsd:date;
     dct:modified "2013-11-28"^^xsd:date.
