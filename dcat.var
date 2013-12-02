@@ -1,0 +1,10 @@
+URI: dcat
+
+URI: dcat.html
+Content-Type: text/html
+
+URI: dcat.rdf
+Content-Type: application/rdf+xml
+
+URI: dcat.ttl
+Content-Type: text/turtle
