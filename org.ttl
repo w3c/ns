@@ -125,7 +125,7 @@ org:unitOf a owl:ObjectProperty, rdf:Property;
     rdfs:label "unité de"@fr;
     rdfs:domain org:OrganizationalUnit; 
     rdfs:range  org:FormalOrganization;  
-    rdfs:subPropertyOf org:subOrganzationOf;
+    rdfs:subPropertyOf org:subOrganizationOf;
     rdfs:comment """Indicates an Organization of which this Unit is a part, e.g. a Department within a larger FormalOrganization. This is the inverse of `org:hasUnit`."""@en;
     rdfs:comment """Indique l'Organisation dont cette Organisation ou Unité fait partie, par exemple un Départment au sein d'une Organisation Formelle plus large. Inverse de `org:hasUnit`."""@fr;    
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
