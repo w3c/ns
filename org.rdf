@@ -25,22 +25,25 @@
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-10-08</dct:modified>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/vocab-org/"/>
+    <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
+    <dct:contributor rdf:parseType="Resource">
+      <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
+      <foaf:name>Dominique Guardiola</foaf:name>
+    </dct:contributor>
     <dct:contributor rdf:parseType="Resource">
       <foaf:mbox>dave@epimorphics.com</foaf:mbox>
       <foaf:name>Dave Reynolds</foaf:name>
     </dct:contributor>
-    <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
     <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
     <owl:versionInfo>0.7</owl:versionInfo>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-06-09</dct:modified>
     <dct:title xml:lang="fr">Ontologie des organisations</dct:title>
-    <dct:contributor rdf:parseType="Resource">
-      <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
-      <foaf:name>Dominique Guardiola</foaf:name>
-    </dct:contributor>
   </owl:Ontology>
   <rdfs:Class rdf:about="http://www.w3.org/ns/org#Organization">
+    <owl:hasKey rdf:parseType="Collection">
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
+    </owl:hasKey>
     <rdfs:comment xml:lang="fr">Représente un groupe de personnes organisées en communauté où tout autre forme de structure sociale, commerciale ou politique. Le groupe a un but commun ou une raison d'être qui va au-delà de la somme des personnes qui en font partie et peut agir en tant que "Agent". Les organisations sont souvent décomposables en structures hiérarchisées. Il est recommandé que des labels lexicaux SKOS soient utilisés pour nommer l'Organisation. En particulier `skos:prefLabel` pour le nom principal (en général le nom légal), `skos:altLabel` pour les noms alternatifs (marques, sigles, appellations familières) et `skos:notation` pour indiquer un code provenant d'une liste de code.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     <owl:disjointWith>
@@ -58,9 +61,6 @@
     </owl:disjointWith>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:hasKey rdf:parseType="Collection">
-      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
-    </owl:hasKey>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#Site"/>
     </owl:disjointWith>
@@ -209,7 +209,6 @@
     <rdfs:label xml:lang="en">member During</rdfs:label>
     <rdfs:label xml:lang="fr">durée d'engagement</rdfs:label>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Membership"/>
-    <rdfs:range rdf:resource="http://www.w3.org/2006/time#Interval"/>
     <rdfs:comment xml:lang="en">Optional property to indicate the interval for which the membership is/was valid.</rdfs:comment>
     <rdfs:comment xml:lang="fr">Propriété optionnelle pour indiquer l'intervalle durant lequel l'engagemnet est ou était valide.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
@@ -247,12 +246,6 @@
         </owl:unionOf>
       </owl:Class>
     </rdfs:domain>
-    <rdfs:label xml:lang="en">reports to</rdfs:label>
-    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-    <rdfs:comment xml:lang="en">Indicates a reporting relationship as might be depicted on an organizational chart. The precise semantics of the reporting relationship will vary by organization but is intended to encompass both direct supervisory relationships (e.g. carrying objective and salary setting authority) and more general reporting or accountability relationships (e.g. so called _dotted line_ reporting).</rdfs:comment>
-    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
     <rdfs:range>
       <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
@@ -261,6 +254,12 @@
         </owl:unionOf>
       </owl:Class>
     </rdfs:range>
+    <rdfs:label xml:lang="en">reports to</rdfs:label>
+    <rdfs:range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:comment xml:lang="en">Indicates a reporting relationship as might be depicted on an organizational chart. The precise semantics of the reporting relationship will vary by organization but is intended to encompass both direct supervisory relationships (e.g. carrying objective and salary setting authority) and more general reporting or accountability relationships (e.g. so called _dotted line_ reporting).</rdfs:comment>
+    <rdfs:domain rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
     <rdfs:comment xml:lang="fr">Indique une relation de subordination comme elle pourrait figurer dans un organigramme. La sémantique précise de cette subordination pourra varier selon l'Organisation mais vise à englober aussi bien les relations hiérarchiques directes (définition d'objectifs, montant du salaire) que des relations plus générales ou organisationnelles (les liens en pointillés dans les organigrammes).</rdfs:comment>
   </owl:ObjectProperty>
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#postIn">

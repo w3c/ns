@@ -266,7 +266,8 @@ org:memberDuring a owl:ObjectProperty, rdf:Property;
     rdfs:label "member During"@en;
     rdfs:label "durée d'engagement"@fr;    
     rdfs:domain org:Membership;
-    rdfs:range  owlTime:Interval;
+# This now an informative, not a normative, range constraint    
+#    rdfs:range  owlTime:Interval;
     rdfs:comment """Optional property to indicate the interval for which the membership is/was valid."""@en;
     rdfs:comment """Propriété optionnelle pour indiquer l'intervalle durant lequel l'engagemnet est ou était valide."""@fr;    
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
