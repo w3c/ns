@@ -25,6 +25,7 @@
     dct:modified "2012-09-30"^^xsd:date;
     dct:modified "2012-10-06"^^xsd:date;
     dct:modified "2013-02-15"^^xsd:date;
+    dct:modified "2013-12-16"^^xsd:date;
     dct:title "Core organization ontology"@en;
     dct:title "Ontologie des organisations"@fr;
     dct:contributor [foaf:mbox "dave@epimorphics.com"; foaf:name "Dave Reynolds"];
