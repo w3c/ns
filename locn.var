@@ -2,3 +2,10 @@ URI: locn
 
 URI: locn.html
 Content-Type: text/html
+
+URI: locn.ttl
+Content-Type: text/turtle
+
+URI: locn.rdf
+Content-Type: application/rdf+xml
+
