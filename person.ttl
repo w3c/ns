@@ -12,7 +12,7 @@
 @prefix vann: <http://purl.org/vocab/vann/>.
 @prefix : <http://www.w3.org/ns/person#>.
 
-<http://www.w3.org/ns/person#> 	a voaf:Vocabulary, owl:Ontology;
+<http://www.w3.org/ns/person> 	a voaf:Vocabulary, owl:Ontology;
   dcterms:title "ISA Programme Person Core Vocabulary"@en;
   dcterms:comment """This vocabulary was not developed by a W3C group and its publication does not imply endorsement 
       by the W3C Membership. Terms MAY be deprecated or their definitions clarified but they will 
@@ -30,6 +30,7 @@
 	dcterms:description "The Person Core Vocabulary provides a minimum set of classes and properties for describing a natural person, i.e. the individual as opposed to any role they may play in society or the relationships they have to other people, organisations and property; all of which contribute significantly to the broader concept of identity.";
 	dcterms:issued "2012-05-07"^^xsd:date;
   dcterms:modified "2013-11-17"^^xsd:date;
+  dcterms:modified "2013-12-21"^^xsd:date; # Corrected schema URI to http://www.w3.org/ns/person (no #)
 	vann:preferredNamespacePrefix "person";
 	vann:preferredNamespaceUri "http://www.w3.org/ns/person#";
 	wdrs:describedby <https://joinup.ec.europa.eu/asset/core_person/asset_release/core-person-vocabulary-100>;
@@ -45,7 +46,7 @@
 	a rdfs:Class;
 	rdfs:label "Person"@en;
 	rdfs:comment "An individual person who may be dead or alive, but not imaginary. It is that restriction that makes person:Person a sub class of both foaf:Person and schema:Person which both cover imaginary characters as well as real people."@en;
-	rdfs:isDefinedBy :;
+	rdfs:isDefinedBy <http://www.w3.org/ns/person>;
 	rdfs:subClassOf foaf:Person;
 	rdfs:subClassOf schema:Person.
   
@@ -68,7 +69,7 @@
 :placeOfBirth dcterms:identifier "person:placeOfBirth";
 	a rdf:Property, owl:ObjectProperty;
 	rdfs:comment "A person's place of birth."@en;
-	rdfs:isDefinedBy :;
+	rdfs:isDefinedBy <http://www.w3.org/ns/person>;
 	rdfs:label "place of birth"@en;
   rdfs:domain :Person;
 	rdfs:range dcterms:Location;
@@ -77,7 +78,7 @@
 :placeOfDeath dcterms:identifier "person:placeOfDeath";
 	a rdf:Property, owl:ObjectProperty;
 	rdfs:comment "A person's place of death."@en;
-	rdfs:isDefinedBy :;
+	rdfs:isDefinedBy <http://www.w3.org/ns/person>;
 	rdfs:label "place of death"@en;
   rdfs:domain :Person;
 	rdfs:range dcterms:Location;
@@ -86,7 +87,7 @@
 :countryOfBirth dcterms:identifier "person:countryOfBirth";
 	a rdf:Property,	owl:ObjectProperty;
 	rdfs:comment "The country in which a Person was born."@en;
-	rdfs:isDefinedBy :;
+	rdfs:isDefinedBy <http://www.w3.org/ns/person>;
 	rdfs:label "country of birth"@en;
   rdfs:domain :Person;
 	rdfs:range dcterms:Location;
@@ -95,7 +96,7 @@
 :countryOfDeath dcterms:identifier "person:countryOfDeath";
 	a rdf:Property,	owl:ObjectProperty;
 	rdfs:comment "The country in which a Person died."@en;
-	rdfs:isDefinedBy :;
+	rdfs:isDefinedBy <http://www.w3.org/ns/person>;
 	rdfs:label "country of death"@en;
   rdfs:domain :Person;
 	rdfs:range dcterms:Location;
@@ -104,7 +105,7 @@
 :citizenship dcterms:identifier "person:citizenship";
 	a rdf:Property,	owl:ObjectProperty;
 	rdfs:comment "The citizenship relationship links a Person to a Jurisdiction that has conferred citizenship rights on the individual such as the right to vote, to receive certain protection from the community or the issuance of a passport. Multiple citizenships are recorded as multiple instances of the citizenship relationship."@en;
-	rdfs:isDefinedBy :;
+	rdfs:isDefinedBy <http://www.w3.org/ns/person>;
 	rdfs:label "citizenship"@en;
   rdfs:domain :Person;
   rdfs:range dcterms:Jurisdiction.
@@ -112,7 +113,7 @@
 :residency dcterms:identifier "person:residency";
 	a rdf:Property,	owl:ObjectProperty;
 	rdfs:comment "Residency typically provides an individual with a subset of the rights of a citizen."@en;
-	rdfs:isDefinedBy :;
+	rdfs:isDefinedBy <http://www.w3.org/ns/person>;
 	rdfs:label "residency"@en;
   rdfs:domain :Person;
   rdfs:range dcterms:Jurisdiction.

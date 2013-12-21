@@ -12,12 +12,10 @@
  xmlns:voaf="http://labs.mondeca.com/vocab/voaf#"
  xmlns:adms="http://www.w3.org/ns/adms#"
  xmlns:rov="http://www.w3.org/ns/regorg#"
- xmlns="http://www.w3.org/ns/regorg#"
- xml:base="http://www.w3.org/ns/regorg#"
- xml:lang="en">
+ xmlns="http://www.w3.org/ns/regorg#" >
 <!-- Document metadata -->
 
-  <owl:Ontology rdf:about="">
+  <owl:Ontology rdf:about="http://www.w3.org/ns/regorg">
     <voaf:specializes rdf:resource="http://www.w3.org/org#" />
     <rdfs:label xml:lang="en">Registered Organization Vocabulary</rdfs:label>
     <rdfs:comment xml:lang="en">This file specifies the set of RDF classes and properties used in the Registered Organization Vocabulary</rdfs:comment>
@@ -68,7 +66,7 @@
 
 <!-- This vocabulary just one class of its own-->
 
-  <rdfs:Class rdf:about="RegisteredOrganization">
+  <rdfs:Class rdf:about="http://www.w3.org/ns/regorg#RegisteredOrganization">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
     <rdfs:label xml:lang="en">Registered Organization</rdfs:label>
     <rdfs:comment xml:lang="en" rdf:parseType="Literal"><p>rov:RegisteredOrganization is the key class for the Registered Organization vocabulary and represents an organization that is legally registered. In many countries there is a single registry although in others, such as Spain and Germany, multiple registries exist. A Registered Organization is able to trade, is legally liable for its actions, accounts, tax affairs etc. Legal entity status is conferred by the act of registration cf. org:FormalOrganization that applies to any legal entity, including those created by other legal means.</p>
@@ -135,7 +133,7 @@
     <rdfs:comment xml:lang="en">The registration is a fundamental relationship between a legal entity and the 
     authority with which it is registered and that confers legal status upon it. rov:registration is 
     a sub property of adms:identifier which has a range of adms:Identifier. rov:registration has a domain of rov:RegisteredOrganization.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/regorg#" />
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-regorg/" />
     <rdfs:domain rdf:resource="http://www.w3.org/ns/regorg#RegisteredOrganization" />
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/adms#identifier" />
     <dcterms:identifier>rov:registration</dcterms:identifier>

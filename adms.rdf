@@ -11,8 +11,7 @@
   xmlns:dcat="http://www.w3.org/ns/dcat#"
   xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
   xmlns:vann="http://purl.org/vocab/vann/"
-  xmlns="http://www.w3.org/ns/adms#"
-  xml:base="http://www.w3.org/ns/adms#" xml:lang="en">
+  xmlns="http://www.w3.org/ns/adms#" >
 <!-- Document metadata -->
 
   <owl:Ontology rdf:about="http://www.w3.org/ns/adms">

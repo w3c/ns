@@ -13,7 +13,7 @@
 @prefix org: <http://www.w3.org/ns/org#>.
 @prefix adms: <http://www.w3.org/ns/adms#>.
 
-rov: a voaf:Vocabulary, owl:Ontology;
+<http://www.w3.org/ns/regorg> a voaf:Vocabulary, owl:Ontology;
   voaf:specializes org:;
 	dcterms:creator [schema:affiliation <http://www.w3.org/data#W3C>;
 	  rdfs:seeAlso <http://philarcher.org/foaf.rdf#me>;
@@ -29,6 +29,7 @@ rov: a voaf:Vocabulary, owl:Ontology;
   dcterms:abstract "The Registered Organization Vocabulary is a profile of the Organization Ontology for describing organizations that have gained legal entity status through a formal registration process, typically in a national or regional register."@en;
 	dcterms:description "This is the RDF encoding of the Legal Entity vocabulary, originally developed under the European Commission's ISA Programme."@en;
 	dcterms:modified "2013-05-24"^^xsd:date;
+	dcterms:modified "2013-12-21"^^xsd:date; # Set schema URI to http://www.w3.org/ns/regorg (without #)
 	vann:preferredNamespacePrefix "rov";
 	vann:preferredNamespaceUri "http://www.w3.org/ns/regorg#";
 	rdfs:comment "This file specifies the set of RDF classes and properties used in the Registered Organization Vocabulary vocabulary"@en;

@@ -15,7 +15,7 @@
 @prefix schema: <http://schema.org/> .
 @prefix adms: <http://www.w3.org/ns/adms#> .
 
-<http://www.w3.org/ns/adms#> 	a voaf:Vocabulary, owl:Ontology;
+<http://www.w3.org/ns/adms> 	a voaf:Vocabulary, owl:Ontology;
   voaf:specializes dcat:;
   dcterms:title "Asset Description Metadata Schema (ADMS)"@en;
   rdfs:label "Asset Description Metadata Schema (ADMS)"@en;
@@ -36,6 +36,7 @@
     It re-uses terms from several other vocabularies, notably Dublin Core, with elements of SKOS, FOAF and more. """;
 	dcterms:modified "2013-05-24"^^xsd:date;
   dcterms:modified "2013-09-16"^^xsd:date; # removed erroneous . chars before closing blank nodes
+  dcterms:modified "2013-12-21"^^xsd:date; # corrected URI of schema to http://www,w3.org/ns/adms (no #)
 	vann:preferredNamespacePrefix "adms";
 	vann:preferredNamespaceUri "http://www.w3.org/ns/adms#";
 	rdfs:comment "This file specifies the set of RDF classes and properties used in ADMS"@en;
