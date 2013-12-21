@@ -17,10 +17,11 @@
   <owl:Ontology rdf:about="http://www.w3.org/ns/adms">
     <rdfs:label xml:lang="en">Asset Description Metadata Schema (ADMS)</rdfs:label>
     <rdfs:comment xml:lang="en">This file specifies the set of RDF classes and properties used in ADMS</rdfs:comment>
-    <owl:versionInfo xml:lang="en">24 May 2013</owl:versionInfo>
+    <owl:versionInfo xml:lang="en">21 December 2013 - with correction to URI of the schema cf. using the namespace</owl:versionInfo>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-24</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-12-21</dcterms:modified>
     <rdf:type rdf:resource="http://labs.mondeca.com/vocab/voaf#Vocabulary"/>
-    <voaf:specializes rdf:resource="http://www.w3.org/dcat#"/>
+    <voaf:specializes rdf:resource="http://www.w3.org/dcat"/>
     <vann:preferredNamespaceUri>http://www.w3.org/ns/adms#</vann:preferredNamespaceUri>
     <vann:preferredNamespacePrefix>adms</vann:preferredNamespacePrefix>
     <dcterms:creator rdf:parseType="Resource">

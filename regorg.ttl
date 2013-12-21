@@ -14,7 +14,7 @@
 @prefix adms: <http://www.w3.org/ns/adms#>.
 
 <http://www.w3.org/ns/regorg> a voaf:Vocabulary, owl:Ontology;
-  voaf:specializes org:;
+  voaf:specializes <http://www.w3.org/ns/org>;
 	dcterms:creator [schema:affiliation <http://www.w3.org/data#W3C>;
 	  rdfs:seeAlso <http://philarcher.org/foaf.rdf#me>;
   	foaf:homepage <http://www.w3.org/People/all#phila>;

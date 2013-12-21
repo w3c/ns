@@ -16,7 +16,7 @@
 <!-- Document metadata -->
 
   <owl:Ontology rdf:about="http://www.w3.org/ns/regorg">
-    <voaf:specializes rdf:resource="http://www.w3.org/org#" />
+    <voaf:specializes rdf:resource="http://www.w3.org/org" />
     <rdfs:label xml:lang="en">Registered Organization Vocabulary</rdfs:label>
     <rdfs:comment xml:lang="en">This file specifies the set of RDF classes and properties used in the Registered Organization Vocabulary</rdfs:comment>
     <owl:versionInfo xml:lang="en">Second version in w3.org/ns</owl:versionInfo>
