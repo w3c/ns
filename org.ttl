@@ -23,6 +23,8 @@
     owl:versionInfo "0.7";
 
     rdfs:label "Core organization ontology"@en;
+    rdfs:label "Ontologie des organisations"@fr;
+    rdfs:label "Ontologia delle organizzazioni"@it;
 
     rdfs:comment "Vocabulary for describing organizational structures, specializable to a broad variety of types of organization."@en;
     rdfs:comment "Vocabolario per descrivere strutture organizzative, le quali possono essere specializzate in una vasta varietà di tipi di organizzazione"@it;
@@ -43,8 +45,8 @@
     dct:modified "2014-01-02"^^xsd:date; # added Italian translation, PhilA.
 
     dct:title "Core organization ontology"@en;
-
     dct:title "Ontologie des organisations"@fr;
+    dct:title "Ontologia delle organizzazioni"@it;
 
     dct:contributor [foaf:mbox "dave@epimorphics.com"; foaf:name "Dave Reynolds"];
 
