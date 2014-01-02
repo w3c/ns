@@ -9,7 +9,7 @@
  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
  xmlns:wdrs="http://www.w3.org/2007/05/powder-s#"
  xmlns:vann="http://purl.org/vocab/vann/"
- xmlns:voaf="http://labs.mondeca.com/vocab/voaf#"
+ xmlns:voaf="http://purl.org/vocommons/voaf#"
  xmlns:adms="http://www.w3.org/ns/adms#"
  xmlns:rov="http://www.w3.org/ns/regorg#"
  xmlns="http://www.w3.org/ns/regorg#" >
