@@ -17,7 +17,7 @@
 								rdf:type <http://purl.org/vocommons/voaf#Vocabulary> ;
 								dc:issued "2012-01-24"^^<http://www.w3.org/2001/XMLSchema#date> ;
 								dc:modified "2012-07-16"^^<http://www.w3.org/2001/XMLSchema#date> ;
-								dc:descripion "RDB to RDF Mapping Language - Vocabulary"@en ;
+								dc:description "RDB to RDF Mapping Language - Vocabulary"@en ;
 								dc:creator <http://richard.cyganiak.de/foaf.rdf#cygri> ;
 								dc:contributor <http://boris.villazon.terrazas.name> , <http://www.w3.org/People/Ivan/> ;
 								dc:publisher <http://www.w3.org/> ;
