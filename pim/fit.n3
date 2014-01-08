@@ -7,6 +7,7 @@
 @prefix dc:	<http://purl.org/dc/elements/1.1/>.
 @prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
 @prefix :	<http://www.w3.org/ns/pim/fit#> .
+@prefix fit:	<http://www.w3.org/ns/pim/fit#> . # prefix hint for others
 
 @prefix dbp: <http://dbpedia.org/resource/>.
 @prefix cal: <http://www.w3.org/2002/12/cal/ical#>.
@@ -104,16 +105,26 @@ Cardio a s:Class; s:label "cardio"; s:subClassOf Activity.
 Weights a s:Class; s:label "weights"; s:subClassOf Activity.
 Yoga a s:Class; s:label "yoga"; s:subClassOf Activity.
 
-distance a rdf:Property, owl:DatatypeProperty; s:range xsd:float.  # @@ elsewhere
+distance a rdf:Property, owl:DatatypeProperty; s:range xsd:float;  # @@ elsewhere
+    s:label "distance (m)";
+    s:comment "Distance in meters".
+    
+duration a rdf:Property, owl:DatatypeProperty; s:range xsd:float;  # @@ elsewhere
+    s:label "duration (s)";
+    s:comment "Duration in seconds".
 
-duration a rdf:Property, owl:DatatypeProperty; s:range xsd:float.  # @@ elsewhere
+meanSpeed_kmph a rdf:Property, owl:DatatypeProperty;
+    s:label "av. speed  (km/h)";
+    s:comment "The mean speed over the activity in km/h".
 
 calories a rdf:Property, owl:DatatypeProperty;
     s:label "calories";
+    s:comment """The energy burn as typically mesured in 'dietary Calories',
+    each of which is 1000 thermochemical calories, or 4.18 kJ.""".
     s:range xsd:float.
     
-energyBurn a rdf:Property,owl:DatatypeProperty;
-     s:label "energy burned/jK";
+energyBurn_kJ a rdf:Property,owl:DatatypeProperty;
+     s:label "energy burned/kJ";
      s:range xsd:float.
 
 

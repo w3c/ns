@@ -8,7 +8,7 @@
 
 <> dc:title "An ontology for personal activity";
     s:comment """This is a raw ontology for data exported form the 
-    Moves app and related applications such as moves export hgenerally as JSON
+    Moves app and related applications such as moves export generally as JSON
     and converted to RDF model.""".
 
     :activities     a rdf:Property;

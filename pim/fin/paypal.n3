@@ -1,0 +1,31 @@
+# Schema for a CSV file downloaded as "all balance-affecting transactions"
+# Alas paypal does not (2013) support OFX.
+#
+#  e.g. using python $SWAP/tab2n3.py -comma -id -reverse -namespace http://www.w3.org/ns/pim/fin/paypal
+#
+@prefix : <http://www.w3.org/ns/pim/fin/paypal#>.
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+  :date  a rdf:Property; rdfs:label "Date"
+.
+  :time  a rdf:Property; rdfs:label "Time"
+.
+  :time_Zone  a rdf:Property; rdfs:label "Time Zone"
+.
+  :name  a rdf:Property; rdfs:label "Name"
+.
+  :type  a rdf:Property; rdfs:label "Type"
+.
+  :status  a rdf:Property; rdfs:label "Status"
+.
+  :currency  a rdf:Property; rdfs:label "Currency"
+.
+  :amount  a rdf:Property; rdfs:label "Amount"
+.
+  :receipt_ID  a rdf:Property; rdfs:label "Receipt ID"
+.
+  :balance  a rdf:Property; rdfs:label "Balance"
+.
+
+#ENDS
