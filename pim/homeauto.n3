@@ -1,0 +1,33 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix dc:	<http://purl.org/dc/elements/1.1/>.
+@prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
+
+@prefix dbp: <http://dbpedia.org/resource/>.
+@prefix cal: <http://www.w3.org/2002/12/cal/ical#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix q: <http://www.w3.org/2000/10/swap/pim/qif#> .
+
+@prefix ha: <http://www.w3.org/ns/pim/homeauto#>.
+
+<> dc:title "Home Automation ontology";
+
+s:comment """Ontology for home automation control
+
+This ontology is desiged for data to do with the
+control and sense and automation of the systems 
+within a home (or other establishment).
+""".
+
+
+:dutyCycle a rdf:Property;
+    s:label "duty cycle";
+    s:comment """In a given period for a given device (such as a furnace),
+    the proportion of the time it was operational. Between 0 and 1 inclusive""".
+
+
+
