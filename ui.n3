@@ -1,4 +1,4 @@
-#  Ontology for user interface hints
+#  Ontology for user interface hints and forms
 #
 #  See also related: the Fresnel language
 #
@@ -137,6 +137,15 @@ ui:maxValue a r:Property; s:domain ui:ValueField; s:label "max".
     s:label "creation form"; 
     s:comment """A form which may be used to collect information about a
     hitherto locally undocumented instance instance of this class.""".
+ 
+ ui:annotationForm a r:Property; s:domain s:Class; s:range ui:Form;
+    s:label "annotation form"; 
+    s:comment """A form which may be used to add more infromation to an
+instance of this class which we know something about.  Anything from
+adding just add one more fact, to adding a whole lot of information about a specific 
+facet of the thing.
+""".
+
  
 ########
 
