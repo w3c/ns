@@ -120,7 +120,7 @@ meanSpeed_kmph a rdf:Property, owl:DatatypeProperty;
 calories a rdf:Property, owl:DatatypeProperty;
     s:label "calories";
     s:comment """The energy burn as typically mesured in 'dietary Calories',
-    each of which is 1000 thermochemical calories, or 4.18 kJ.""".
+    each of which is 1000 thermochemical calories, or 4.18 kJ.""";
     s:range xsd:float.
     
 energyBurn_kJ a rdf:Property,owl:DatatypeProperty;

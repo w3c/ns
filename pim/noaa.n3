@@ -2,7 +2,9 @@
 @prefix noaa: <http://www.w3.org/ns/pim/noaa#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
     
-    <> :comment """
+    <> :comment 
+"""Ontology for data available by e.g. email request from http://www.ncdc.noaa.gov/cdo-web/datasets#GHCND
+
 Data Types:
 
 AWND - Average daily wind speed (tenths of meters per second)
