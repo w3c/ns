@@ -20,7 +20,7 @@
 
     a owl:Ontology;
 
-    owl:versionInfo "0.7";
+    owl:versionInfo "0.8";
 
     rdfs:label "Core organization ontology"@en;
     rdfs:label "Ontologie des organisations"@fr;

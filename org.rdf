@@ -21,37 +21,37 @@
     <dct:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-05-28</dct:created>
     <rdfs:comment xml:lang="it">Vocabolario per descrivere strutture organizzative, le quali possono essere specializzate in una vasta varietà di tipi di organizzazione</rdfs:comment>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2012-09-30</dct:modified>
     <dct:contributor rdf:parseType="Resource">
       <foaf:mbox>dave@epimorphics.com</foaf:mbox>
       <foaf:name>Dave Reynolds</foaf:name>
     </dct:contributor>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2012-09-30</dct:modified>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2014-01-02</dct:modified>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2013-12-16</dct:modified>
-    <dct:title xml:lang="it">Ontologia delle organizzazioni</dct:title>
-    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
-    >2013-02-15</dct:modified>
     <dct:contributor rdf:parseType="Resource">
       <foaf:mbox>antonio.maccioni@agid.gov.it</foaf:mbox>
       <foaf:name>Antonio Maccioni</foaf:name>
     </dct:contributor>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2013-12-16</dct:modified>
+    <dct:title xml:lang="it">Ontologia delle organizzazioni</dct:title>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
+    >2013-02-15</dct:modified>
+    <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-10-08</dct:modified>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/vocab-org/"/>
+    <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
     <dct:contributor rdf:parseType="Resource">
       <foaf:mbox>dguardiola@quinode.fr</foaf:mbox>
       <foaf:name>Dominique Guardiola</foaf:name>
     </dct:contributor>
-    <rdfs:label xml:lang="en">Core organization ontology</rdfs:label>
     <dct:contributor rdf:parseType="Resource">
       <foaf:mbox>giorgia.lodi@agid.gov.it</foaf:mbox>
       <foaf:name>Giorgia Lodi</foaf:name>
     </dct:contributor>
+    <owl:versionInfo>0.8</owl:versionInfo>
     <dct:license rdf:resource="http://www.opendatacommons.org/licenses/pddl/1.0/"/>
-    <owl:versionInfo>0.7</owl:versionInfo>
     <rdfs:label xml:lang="it">Ontologia delle organizzazioni</rdfs:label>
     <dct:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date"
     >2010-06-09</dct:modified>
@@ -63,6 +63,12 @@
       <rdfs:Class rdf:about="http://www.w3.org/ns/org#Organization"/>
     </rdfs:subClassOf>
     <rdfs:comment xml:lang="fr">Une collaboration entre deux ou plusieurs Organisations, telle qu'un projet commun. Un partenariat peut être considéré comme Organisation dans le sens ou il possède une identité et un But propre indépendant de ceux de ses membres, mais ce n'est ni une entité légale ni une sous-unité d'une Organisation plus grande. Typiquement, elle peut avoir une durée de vie plus courte que les Organisations qui la composent, mais pas nécessairement. Tous les membres sont des `org:Organization`s plutôt que des individus et ces Organisations peuvent jouer des Rôles particuliers au sein du Partenariat. </rdfs:comment>
+    <rdfs:label xml:lang="fr">Partenariat</rdfs:label>
+    <rdfs:comment xml:lang="it">È una collaborazione tra due o più Organization come ad esempio un progetto. Consente di rappresentare alcune identità dell'Organization che sono fuori dallo scopo principale e non sono formalmente riconosciute. Potrebbe anche avere un ciclo di vita limitato.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
+    <rdfs:label xml:lang="it">Collaborazione</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Endeavour</rdfs:label>
     <owl:equivalentClass>
       <owl:Class>
         <owl:intersectionOf rdf:parseType="Collection">
@@ -78,12 +84,6 @@
         </owl:intersectionOf>
       </owl:Class>
     </owl:equivalentClass>
-    <rdfs:label xml:lang="fr">Partenariat</rdfs:label>
-    <rdfs:comment xml:lang="it">È una collaborazione tra due o più Organization come ad esempio un progetto. Consente di rappresentare alcune identità dell'Organization che sono fuori dallo scopo principale e non sono formalmente riconosciute. Potrebbe anche avere un ciclo di vita limitato.</rdfs:comment>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
-    <rdfs:label xml:lang="it">Collaborazione</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <rdfs:label xml:lang="en">Endeavour</rdfs:label>
     <rdfs:comment xml:lang="en">A collaboration between two or more Organizations such as a project. It meets the criteria for being an Organization in that it has an identity and defining purpose independent of its particular members but is neither a formally recognized legal entity nor a sub-unit within some larger organization. Might typically have a shorter lifetime than the Organizations within it, but not necessarily. All members are `org:Organization`s rather than individuals and those Organizations can play particular roles within the venture. Alternative names: _Project_ _Venture_  _Endeavour_ _Consortium_ _Endeavour_</rdfs:comment>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/org#ChangeEvent">
@@ -118,6 +118,9 @@
       <rdfs:Class rdf:about="http://www.w3.org/ns/org#Role"/>
     </owl:disjointWith>
     <rdfs:label xml:lang="it">Organizzazione</rdfs:label>
+    <owl:hasKey rdf:parseType="Collection">
+      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
+    </owl:hasKey>
     <rdfs:label xml:lang="fr">Organisation</rdfs:label>
     <rdfs:label xml:lang="en">Organization</rdfs:label>
     <rdfs:comment xml:lang="it">Rappresenta una collezione di persone organizzate all'interno di una communità o di una qualche struttura sociale, commerciale o politica. Il gruppo condivide un obiettivo o una ragione d'essere che va oltre gli stessi membri appartenenti al gruppo e  può agire come un Agent. Le organizzazioni si possono spesso suddividere in strutture gerarchiche. Si raccomanda di usare le label per l'Organization mediante le proprietà di SKOS. In particolare, `skos:prefLabel` per il nome principale (possibilmente un nome legalmente riconosciuto)”, `skos:altLabel` come nome alternativo (denominazione commerciale, denominazione colloquiale) e `skos:notation` per indicare un codice di una lista di codici.</rdfs:comment>
@@ -129,9 +132,6 @@
     </owl:disjointWith>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
-    <owl:hasKey rdf:parseType="Collection">
-      <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/org#identifier"/>
-    </owl:hasKey>
     <owl:disjointWith>
       <owl:Class rdf:about="http://www.w3.org/ns/org#Site"/>
     </owl:disjointWith>
@@ -244,6 +244,7 @@
   <owl:ObjectProperty rdf:about="http://www.w3.org/ns/org#reportsTo">
     <rdfs:label xml:lang="it">riporta a</rdfs:label>
     <rdfs:label xml:lang="fr">est subordonné à</rdfs:label>
+    <rdfs:label xml:lang="en">reports to</rdfs:label>
     <rdfs:domain>
       <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
@@ -252,7 +253,6 @@
         </owl:unionOf>
       </owl:Class>
     </rdfs:domain>
-    <rdfs:label xml:lang="en">reports to</rdfs:label>
     <rdfs:range>
       <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
@@ -634,6 +634,11 @@
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Role"/>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/org#role">
+    <rdfs:label xml:lang="fr">rôle</rdfs:label>
+    <rdfs:comment xml:lang="it">Indica il Role che un Agent ricopre in una relazione di Membership con una Organization</rdfs:comment>
+    <rdfs:label xml:lang="en">role</rdfs:label>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:label xml:lang="it">ruolo</rdfs:label>
     <rdfs:domain>
       <owl:Class>
         <owl:unionOf rdf:parseType="Collection">
@@ -642,11 +647,6 @@
         </owl:unionOf>
       </owl:Class>
     </rdfs:domain>
-    <rdfs:label xml:lang="fr">rôle</rdfs:label>
-    <rdfs:comment xml:lang="it">Indica il Role che un Agent ricopre in una relazione di Membership con una Organization</rdfs:comment>
-    <rdfs:label xml:lang="en">role</rdfs:label>
-    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-    <rdfs:label xml:lang="it">ruolo</rdfs:label>
     <rdfs:comment xml:lang="en">Indicates the Role that the Agent plays in a Membership relationship with an Organization.</rdfs:comment>
     <rdfs:range rdf:resource="http://www.w3.org/ns/org#Role"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/org"/>
