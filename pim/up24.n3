@@ -1,0 +1,94 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix doc: <http://www.w3.org/2000/10/swap/pim/doc#> .
+@prefix  trip: <http://www.w3.org/ns/pim/trip#> .
+@prefix cal: <http://www.w3.org/2002/12/cal/ical#>.
+
+@prefix : <http://www.w3.org/ns/pim/up24#> .
+
+<> a owl:Ontology; dc:title "Ontology for faily fitness sumary from e.g. the UP24 armband data".
+
+
+
+
+  :dATE  a rdf:Property; rdfs:label "DATE" 
+.
+  :age  a rdf:Property; rdfs:label "age"
+.
+  :bmr  a rdf:Property; rdfs:label "bmr"
+.
+  :body_fat  a rdf:Property; rdfs:label "body_fat"
+.
+  :gender  a rdf:Property; rdfs:label "gender"
+.
+  :height  a rdf:Property; rdfs:label "height"
+.
+  :m_active_time  a rdf:Property; rdfs:label "m_active_time"
+.
+  :m_calories  a rdf:Property; rdfs:label "m_calories"
+.
+  :m_distance  a rdf:Property; rdfs:label "m_distance"
+.
+  :m_inactive_time  a rdf:Property; rdfs:label "m_inactive_time"
+.
+  :m_lcat  a rdf:Property; rdfs:label "m_lcat"
+.
+  :m_lcit  a rdf:Property; rdfs:label "m_lcit"
+.
+  :m_steps  a rdf:Property; rdfs:label "m_steps"
+.
+  :m_total_calories  a rdf:Property; rdfs:label "m_total_calories"
+.
+  :m_workout_count  a rdf:Property; rdfs:label "m_workout_count"
+.
+  :m_workout_time  a rdf:Property; rdfs:label "m_workout_time"
+.
+  :n_asleep_time  a rdf:Property; rdfs:label "n_asleep_time"
+.
+  :n_awake  a rdf:Property; rdfs:label "n_awake"
+.
+  :n_awake_time  a rdf:Property; rdfs:label "n_awake_time"
+.
+  :n_awakenings  a rdf:Property; rdfs:label "n_awakenings"
+.
+  :n_bedtime  a rdf:Property; rdfs:label "n_bedtime"
+.
+  :n_count  a rdf:Property; rdfs:label "n_count"
+.
+  :n_deep  a rdf:Property; rdfs:label "n_deep"
+.
+  :n_duration  a rdf:Property; rdfs:label "n_duration"
+.
+  :n_light  a rdf:Property; rdfs:label "n_light"
+.
+  :n_quality  a rdf:Property; rdfs:label "n_quality"
+.
+  :n_rem  a rdf:Property; rdfs:label "n_rem"
+.
+  :s_asleep_time  a rdf:Property; rdfs:label "s_asleep_time"
+.
+  :s_awake  a rdf:Property; rdfs:label "s_awake"
+.
+  :s_awake_time  a rdf:Property; rdfs:label "s_awake_time"
+.
+  :s_awakenings  a rdf:Property; rdfs:label "s_awakenings"
+.
+  :s_bedtime  a rdf:Property; rdfs:label "s_bedtime"
+.
+  :s_count  a rdf:Property; rdfs:label "s_count"
+.
+  :s_deep  a rdf:Property; rdfs:label "s_deep"
+.
+  :s_duration  a rdf:Property; rdfs:label "s_duration"
+.
+  :s_light  a rdf:Property; rdfs:label "s_light"
+.
+  :s_quality  a rdf:Property; rdfs:label "s_quality"
+.
+  :s_rem  a rdf:Property; rdfs:label "s_rem"
+.
+  :weight  a rdf:Property; rdfs:label "weight"
+.
