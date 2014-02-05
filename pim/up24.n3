@@ -14,31 +14,31 @@
 
 
 
-  :dATE  a rdf:Property; rdfs:label "DATE" 
+  :dATE  a rdf:Property; rdfs:label "DATE" ; rdfs:comment """YYYMMDD format """
 .
-  :age  a rdf:Property; rdfs:label "age"
+  :age  a rdf:Property; rdfs:label "age" ; rdfs:comment """years """
 .
-  :bmr  a rdf:Property; rdfs:label "bmr"
+  :bmr  a rdf:Property; rdfs:label "bmr" ; rdfs:comment """Body Mass ratio including other things (age?) ??"""
 .
-  :body_fat  a rdf:Property; rdfs:label "body_fat"
+  :body_fat  a rdf:Property; rdfs:label "body_fat"; rdfs:comment """ """
 .
-  :gender  a rdf:Property; rdfs:label "gender"
+  :gender  a rdf:Property; rdfs:label "gender"; rdfs:comment """ Integer, 0 = Male """
 .
-  :height  a rdf:Property; rdfs:label "height"
+  :height  a rdf:Property; rdfs:label "height" ; rdfs:comment """(meters) """
 .
-  :m_active_time  a rdf:Property; rdfs:label "m_active_time"
+  :m_active_time  a rdf:Property; rdfs:label "m_active_time" ; rdfs:comment """ (seconds) """
 .
-  :m_calories  a rdf:Property; rdfs:label "m_calories"
+  :m_calories  a rdf:Property; rdfs:label "m_calories" ; rdfs:comment """ (units?)"""
 .
-  :m_distance  a rdf:Property; rdfs:label "m_distance"
+  :m_distance  a rdf:Property; rdfs:label "m_distance" ; rdfs:comment """meters """
 .
-  :m_inactive_time  a rdf:Property; rdfs:label "m_inactive_time"
+  :m_inactive_time  a rdf:Property; rdfs:label "m_inactive_time" ; rdfs:comment """ seconds"""
 .
-  :m_lcat  a rdf:Property; rdfs:label "m_lcat"
+  :m_lcat  a rdf:Property; rdfs:label "m_lcat" ; rdfs:comment """ """
 .
-  :m_lcit  a rdf:Property; rdfs:label "m_lcit"
+  :m_lcit  a rdf:Property; rdfs:label "m_lcit" ; rdfs:comment """ """
 .
-  :m_steps  a rdf:Property; rdfs:label "m_steps"
+  :m_steps  a rdf:Property; rdfs:label "m_steps" ; rdfs:comment """ """
 .
   :m_total_calories  a rdf:Property; rdfs:label "m_total_calories"
 .
@@ -46,49 +46,49 @@
 .
   :m_workout_time  a rdf:Property; rdfs:label "m_workout_time"
 .
-  :n_asleep_time  a rdf:Property; rdfs:label "n_asleep_time"
+  :n_asleep_time  a rdf:Property; rdfs:label "Nap asleep_time"
 .
-  :n_awake  a rdf:Property; rdfs:label "n_awake"
+  :n_awake  a rdf:Property; rdfs:label "nap awake" ; rdfs:comment """ seconds"""
 .
-  :n_awake_time  a rdf:Property; rdfs:label "n_awake_time"
+  :n_awake_time  a rdf:Property; rdfs:label "nap awake_time"; rdfs:comment """seconds """
 .
-  :n_awakenings  a rdf:Property; rdfs:label "n_awakenings"
+  :n_awakenings  a rdf:Property; rdfs:label "nap awakenings"; rdfs:comment """ Float shoulb be integer - how many times woke up in sleep mode """
 .
-  :n_bedtime  a rdf:Property; rdfs:label "n_bedtime"
+  :n_bedtime  a rdf:Property; rdfs:label "nap bedtime"
 .
-  :n_count  a rdf:Property; rdfs:label "n_count"
+  :n_count  a rdf:Property; rdfs:label "nap count"
 .
-  :n_deep  a rdf:Property; rdfs:label "n_deep"
+  :n_deep  a rdf:Property; rdfs:label "nap deep"
 .
-  :n_duration  a rdf:Property; rdfs:label "n_duration"
+  :n_duration  a rdf:Property; rdfs:label "nap duration"
 .
-  :n_light  a rdf:Property; rdfs:label "n_light"
+  :n_light  a rdf:Property; rdfs:label "nap light"
 .
-  :n_quality  a rdf:Property; rdfs:label "n_quality"
+  :n_quality  a rdf:Property; rdfs:label "nap quality"
 .
-  :n_rem  a rdf:Property; rdfs:label "n_rem"
+  :n_rem  a rdf:Property; rdfs:label "nap REM"
 .
-  :s_asleep_time  a rdf:Property; rdfs:label "s_asleep_time"
+  :s_asleep_time  a rdf:Property; rdfs:label "sleep asleep_time"
 .
-  :s_awake  a rdf:Property; rdfs:label "s_awake"
+  :s_awake  a rdf:Property; rdfs:label "sleep awake"
 .
-  :s_awake_time  a rdf:Property; rdfs:label "s_awake_time"
+  :s_awake_time  a rdf:Property; rdfs:label "sleep awake_time"
 .
-  :s_awakenings  a rdf:Property; rdfs:label "s_awakenings"
+  :s_awakenings  a rdf:Property; rdfs:label "sleep awakenings"
 .
-  :s_bedtime  a rdf:Property; rdfs:label "s_bedtime"
+  :s_bedtime  a rdf:Property; rdfs:label "sleep bedtime"
 .
-  :s_count  a rdf:Property; rdfs:label "s_count"
+  :s_count  a rdf:Property; rdfs:label "sleep count"
 .
-  :s_deep  a rdf:Property; rdfs:label "s_deep"
+  :s_deep  a rdf:Property; rdfs:label "sleep deep" ; rdfs:comment """Deep sleep (seconds)"""
 .
-  :s_duration  a rdf:Property; rdfs:label "s_duration"
+  :s_duration  a rdf:Property; rdfs:label "sleep duration"; rdfs:comment """ Sleep mode duration (s) """
 .
-  :s_light  a rdf:Property; rdfs:label "s_light"
+  :s_light  a rdf:Property; rdfs:label "sleep light"
 .
-  :s_quality  a rdf:Property; rdfs:label "s_quality"
+  :s_quality  a rdf:Property; rdfs:label "sleep quality"
 .
-  :s_rem  a rdf:Property; rdfs:label "s_rem"
+  :s_rem  a rdf:Property; rdfs:label "sleep REM"
 .
-  :weight  a rdf:Property; rdfs:label "weight"
+  :weight  a rdf:Property; rdfs:label "weight (kg)" ; rdfs:comment """Body weight in kg"""
 .
