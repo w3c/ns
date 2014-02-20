@@ -1,0 +1,189 @@
+{
+  "@context": {
+    "dc": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "rdft": "http://www.w3.org/ns/rdftest#",
+    "label": "rdfs:label",
+    "description": "dc:description",
+    "commant": "rdfs:comment",
+    "publisher": {
+      "@id": "dc:publisher",
+      "@type": "@id"
+    },
+    "subClassOf": {
+      "@id": "rdfs:subClassOf",
+      "@type": "@vocab"
+    },
+    "range": {
+      "@id": "rdfs:range",
+      "@type": "@vocab"
+    },
+    "domain": {
+      "@id": "rdfs:domain",
+      "@type": "@vocab"
+    },
+    "@language": "en"
+  },
+  "@graph": [
+  {
+    "@id": "http://www.w3.org/ns/rdftest",
+    "@type": "owl:Ontology",
+    "description": "This is a vocabulary document and is used to define classes and properties used in\r\n      RDF 1.1 Test Cases and associated test manifests.\r\n      The URI of the vocabulary is http://www.w3.org/ns/rdftest# (abbreviated by rdft: in this document).\r\n      Turtle and an JSON-LD versions of the vocabulary are also available.\r\n      The vocabulary is published by W3C.\r\n    ",
+    "publisher": "http://www.w3.org/data#W3C",
+    "dc:title": "The RDF 1.1 Test Vocabulary",
+    "commant": "This is a vocabulary document and is used to define classes and properties used in\r\n      RDF 1.1 Test Cases and associated test manifests.\r\n      The URI of the vocabulary is http://www.w3.org/ns/rdftest# (abbreviated by rdft: in this document).\r\n      Turtle and an JSON-LD versions of the vocabulary are also available.\r\n      The vocabulary is published by W3C.\r\n    ",
+    "label": "The RDF 1.1 Test Vocabulary"
+  },
+  {
+    "@id": "rdft:Approval",
+    "@type": "rdfs:Class",
+    "commant": "The superclass of all test approval statuses.",
+    "label": "Approval"
+  },
+  {
+    "@id": "rdft:Approved",
+    "@type": "rdfs:Class",
+    "commant": "Indicates that a test is approved.",
+    "label": "Approved",
+    "subClassOf": "rdft:Approval"
+  },
+  {
+    "@id": "rdft:Proposed",
+    "@type": "rdfs:Class",
+    "commant": "Indicates that a test is proposed, but not approved.",
+    "label": "Proposed",
+    "subClassOf": "rdft:Approval"
+  },
+  {
+    "@id": "rdft:Rejected",
+    "@type": "rdfs:Class",
+    "commant": "Indicates that a test is not approved.",
+    "label": "Rejected",
+    "subClassOf": "rdft:Approval"
+  },
+  {
+    "@id": "rdft:Test",
+    "@type": "rdfs:Class",
+    "commant": "Superclass of all RDF Tests.",
+    "label": "Test"
+  },
+  {
+    "@id": "rdft:TestEval",
+    "@type": "rdfs:Class",
+    "commant": "Superclass of all RDF Evaluation Tests.",
+    "label": "Test Evaluation",
+    "subClassOf": "rdft:Test"
+  },
+  {
+    "@id": "rdft:TestNQuadsNegativeSyntax",
+    "@type": "rdfs:Class",
+    "commant": "A negative N-Quads syntax test.",
+    "label": "N-Quads Negative Syntax",
+    "subClassOf": "rdft:TestSyntax"
+  },
+  {
+    "@id": "rdft:TestNQuadsPositiveSyntax",
+    "@type": "rdfs:Class",
+    "commant": "A positive N-Quads syntax test.",
+    "label": "N-Quads Positive Syntax",
+    "subClassOf": "rdft:TestSyntax"
+  },
+  {
+    "@id": "rdft:TestNTriplesNegativeSyntax",
+    "@type": "rdfs:Class",
+    "commant": "A negative N-Triples syntax test.",
+    "label": "N-Triples Negative Syntax",
+    "subClassOf": "rdft:TestSyntax"
+  },
+  {
+    "@id": "rdft:TestNTriplesPositiveSyntax",
+    "@type": "rdfs:Class",
+    "commant": "A positive N-Triples syntax test.",
+    "label": "N-Triples Positive Syntax",
+    "subClassOf": "rdft:TestSyntax"
+  },
+  {
+    "@id": "rdft:TestSyntax",
+    "@type": "rdfs:Class",
+    "commant": "Superclass of all RDF Syntax Tests.",
+    "label": "Test Syntax",
+    "subClassOf": "rdft:Test"
+  },
+  {
+    "@id": "rdft:TestTriGNegativeSyntax",
+    "@type": "rdfs:Class",
+    "commant": "A negative TriG syntax test.",
+    "label": "TriG Negative Syntax",
+    "subClassOf": "rdft:TestSyntax"
+  },
+  {
+    "@id": "rdft:TestTriGPositiveSyntax",
+    "@type": "rdfs:Class",
+    "commant": "A positive TriG syntax test.",
+    "label": "TriG Positive Syntax",
+    "subClassOf": "rdft:TestSyntax"
+  },
+  {
+    "@id": "rdft:TestTrigEval",
+    "@type": "rdfs:Class",
+    "commant": "A positive TriG evaluation test.",
+    "label": "TriG Positive Evaluation"
+  },
+  {
+    "@id": "rdft:TestTrigNegativeEval",
+    "@type": "rdfs:Class",
+    "commant": "A negative TriG evaluation test.",
+    "label": "TriG Negative Evaluation",
+    "subClassOf": "rdft:TestEval"
+  },
+  {
+    "@id": "rdft:TestTurtleEval",
+    "@type": "rdfs:Class",
+    "commant": "A positive Turtle evaluation test.",
+    "label": "Turtle Positive Evaluation",
+    "subClassOf": "rdft:TestEval"
+  },
+  {
+    "@id": "rdft:TestTurtleNegativeEval",
+    "@type": "rdfs:Class",
+    "commant": "A negative Turtle evaluation test.",
+    "label": "Turtle Negative Evaluation",
+    "subClassOf": "rdft:TestEval"
+  },
+  {
+    "@id": "rdft:TestTurtleNegativeSyntax",
+    "@type": "rdfs:Class",
+    "commant": "A negative Turtle syntax test.",
+    "label": "Turtle Negative Syntax",
+    "subClassOf": "rdft:TestSyntax"
+  },
+  {
+    "@id": "rdft:TestTurtlePositiveSyntax",
+    "@type": "rdfs:Class",
+    "commant": "A positive Turtle syntax test.",
+    "label": "Turtle Positive Syntax",
+    "subClassOf": "rdft:TestSyntax"
+  },
+  {
+    "@id": "rdft:TestXMLNegativeSyntax",
+    "@type": "rdfs:Class",
+    "commant": "A negative RDF/XML syntax test.",
+    "label": "RDF/XML Negative Syntax"
+  },
+  {
+    "@id": "rdft:XMLEval",
+    "@type": "rdfs:Class",
+    "commant": "A positive RDF/XML evaluation test.",
+    "label": "RDF/XML Evaluation",
+    "subClassOf": "rdft:TestEval"
+  },
+  {
+    "@id": "rdft:approval",
+    "@type": "http://www.w3.org/1999/02/22-rdf-syntax-ns#Property",
+    "commant": "Approval status of a test.",
+    "domain": "rdft:Test",
+    "label": "approval",
+    "range": "rdft:Approval"
+  }]
+}
