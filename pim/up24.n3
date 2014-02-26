@@ -52,7 +52,7 @@
 .
   :n_awake_time  a rdf:Property; rdfs:label "nap awake_time"; rdfs:comment """seconds """
 .
-  :n_awakenings  a rdf:Property; rdfs:label "nap awakenings"; rdfs:comment """ Float shoulb be integer - how many times woke up in sleep mode """
+  :n_awakenings  a rdf:Property; rdfs:label "nap awakenings"; rdfs:comment """Float but should logically be integer - how many times woke up in sleep mode """
 .
   :n_bedtime  a rdf:Property; rdfs:label "nap bedtime"
 .

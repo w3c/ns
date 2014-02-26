@@ -60,6 +60,11 @@ sortBy a r:Property;
         s:comment """A property which typically is used to sort
         members of a given class.""".
 
+seqeunce a r:Property;
+	s:label "sequence number";
+	s:range xsd:integer;
+	s:comment """The sequence in which this item is arranged with repect to other parts.""".
+
 initialProperties a r:Property;
         s:label "initial properties";
         s:domain s:Class;
