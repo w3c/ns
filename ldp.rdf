@@ -9,112 +9,149 @@
     >
   <owl:Ontology rdf:about="http://www.w3.org/ns/ldp#">
     <dcterms:description>All vocabulary URIs defined in the Linked Data Platform (LDP) namespace.</dcterms:description>
-    <dcterms:title>The W3C Linked Data Platform (LDP) Vocabulary</dcterms:title>
-    <rdfs:label>W3C Linked Data Platform (LDP)</rdfs:label>
-    <rdfs:comment>This ontology provides an informal representation of the concepts and terms
-    as defined in the LDP specification.  Consult the LDP specification for normative reference.</rdfs:comment>
+	<dcterms:title>The W3C Linked Data Platform (LDP) Vocabulary</dcterms:title>
+	<rdfs:label>W3C Linked Data Platform (LDP)</rdfs:label>
+	<rdfs:comment>This ontology provides an informal representation of the concepts and terms as defined in the LDP specification.  Consult the LDP specification for normative reference.</rdfs:comment>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/2012/ldp"/>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/ldp-ucr/"/>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/ldp/"/>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/2011/09/LinkedData/"/>
   </owl:Ontology>
-
+		
   <rdfs:Class rdf:about="http://www.w3.org/ns/ldp#Resource">
-    <rdfs:comment>A HTTP-addressable resource with a linked data representation.</rdfs:comment>
-    <vs:term_status>unstable</vs:term_status>
+	<rdfs:comment>A HTTP-addressable resource whose lifecycle is managed by a LDP server.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
-    <rdfs:label>Resource</rdfs:label>
+	<rdfs:label>Resource</rdfs:label>
   </rdfs:Class>
 
-  <rdfs:Class rdf:about="http://www.w3.org/ns/ldp#Container">
+  <rdfs:Class rdf:about="http://www.w3.org/ns/ldp#RDFSource">
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ldp#Resource"/>
-    <rdfs:comment>A Linked Data Platform Resource (LDPR) that also conforms to
-    additional patterns and conventions for managing membership.
-    Readers should refer to the specification defining this ontology for the list of 
-    behaviors associated with it.</rdfs:comment>
+	<rdfs:comment>A Linked Data Platform Resource (LDPR) whose state is represented as RDF.</rdfs:comment>
     <vs:term_status>unstable</vs:term_status>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
-    <rdfs:label>Container</rdfs:label>
+	<rdfs:label>RDFSource</rdfs:label>
   </rdfs:Class>
 
-  <rdfs:Class rdf:about="http://www.w3.org/ns/ldp#AggregateContainer">
+  <rdfs:Class rdf:about="http://www.w3.org/ns/ldp#NonRDFSource">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ldp#Resource"/>
+	<rdfs:comment>A Linked Data Platform Resource (LDPR) whose state is NOT represented as RDF.</rdfs:comment>
+    <vs:term_status>unstable</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
+	<rdfs:label>NonRDFSource</rdfs:label>
+  </rdfs:Class>
+	
+  <rdfs:Class rdf:about="http://www.w3.org/ns/ldp#Container">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ldp#RDFSource"/>
+	<rdfs:comment>A Linked Data Platform RDF Source (LDP-RS) that also conforms to additional patterns and conventions for managing membership. Readers should refer to the specification defining this ontology for the list of behaviors associated with it.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
+	<rdfs:label>Container</rdfs:label>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.w3.org/ns/ldp#BasicContainer">
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ldp#Container"/>
-    <rdfs:comment>A Linked Data Platform Container (LDPC) that also conforms to
-    additional patterns and conventions for managing members.  It is distinguished from
-    CompositeContainer by the following behaviors:
-    (1) Clients cannot assume that an AggregateContainer, when deleted, deletes its members.
-    
-    While every attempt is made to be complete in this list, readers should also refer 
-    to the specification defining this ontology.</rdfs:comment>
-    <vs:term_status>unstable</vs:term_status>
+	<rdfs:comment>An LDPC that uses a predefined predicate to simply link to its contained resources.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
-    <rdfs:label>AggregateContainer</rdfs:label>
+	<rdfs:label>BasicContainer</rdfs:label>
   </rdfs:Class>
 
-  <rdfs:Class rdf:about="http://www.w3.org/ns/ldp#CompositeContainer">
+  <rdfs:Class rdf:about="http://www.w3.org/ns/ldp#DirectContainer">
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ldp#Container"/>
-    <rdfs:comment>A Linked Data Platform Container (LDPC) that also conforms to
-    additional patterns and conventions for managing members.  It is distinguished from
-    AggregateContainer by the following behaviors:
-    (1) An CompositeContainer, when deleted, must delete all its members.
-    
-    While every attempt is made to be complete in this list, readers should also
-    refer to the specification defining this ontology.</rdfs:comment>
-    <vs:term_status>unstable</vs:term_status>
+	<rdfs:comment>An LDPC that is similar to a LDP-DC but it allows an indirection with the ability to list as member a resource, such as a URI representing a real-world object, that is different from the resource that is created</rdfs:comment>
+        <vs:term_status>unstable</vs:term_status>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
-    <rdfs:label>CompositeContainer</rdfs:label>
+	<rdfs:label>DirectContainer</rdfs:label>
   </rdfs:Class>
 
-  <rdf:Property rdf:about="http://www.w3.org/ns/ldp#containerSortPredicates">
-    <rdfs:comment>List of predicates that indicate the ascending order of the members in a page.</rdfs:comment>
-    <vs:term_status>unstable</vs:term_status>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/ldp#Page"/>
+  <rdfs:Class rdf:about="http://www.w3.org/ns/ldp#IndirectContainer">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdfs:comment>An LDPC that has the flexibility of choosing what form the membership triples take.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
-    <rdfs:label>containerSortPredicates</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
-  </rdf:Property>
-
-  <rdf:Property rdf:about="http://www.w3.org/ns/ldp#membershipPredicate">
-    <rdfs:comment>Indicates which predicate of the container should be used to determine the membership.</rdfs:comment>
-    <vs:term_status>unstable</vs:term_status>
+	<rdfs:label>IndirectContainer</rdfs:label>
+  </rdfs:Class>
+		
+  <rdf:Property rdf:about="http://www.w3.org/ns/ldp#hasMemberRelation">
+	<rdfs:comment>Indicates which predicate is used in membership triples, and that the membership triple pattern is &lt; membership-constant-URI , object-of-hasMemberRelation, member-URI &gt;.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/ldp#Container"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
-    <rdfs:label>membershipPredicate</rdfs:label>
+	<rdfs:label>hasMemberRelation</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Property>
 
-  <rdf:Property rdf:about="http://www.w3.org/ns/ldp#membershipSubject">
-    <rdfs:comment>Indicates which resource is the subject for the members of the container.</rdfs:comment>
-    <vs:term_status>unstable</vs:term_status>
+  <rdf:Property rdf:about="http://www.w3.org/ns/ldp#isMemberOfRelation">
+	<rdfs:comment>Indicates which predicate is used in membership triples, and that the membership triple pattern is &lt; member-URI , object-of-isMemberOfRelation, membership-constant-URI &gt;.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/ldp#Container"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
-    <rdfs:label>membershipSubject</rdfs:label>
+	<rdfs:label>isMemmberOfRelation</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Property>
+	
+  <rdf:Property rdf:about="http://www.w3.org/ns/ldp#membershipResource">
+	<rdfs:comment>Indicates the membership-constant-URI in a membership triple.  Depending upon the membership triple pattern a container uses, as indicated by the presence of ldp:hasMemberRelation or ldp:isMemberOfRelation, the membership-constant-URI might occupy either the subject or object position in membership triples.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
+	<rdfs:label>membershipResource</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Property>
+	
+  <rdf:Property rdf:about="http://www.w3.org/ns/ldp#insertedContentRelation">
+	<rdfs:comment>Indicates which triple in a creation request should be used as the member-URI value in the membership triple added when the creation request is successful.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
+	<rdfs:label>insertedContentRelation</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
   </rdf:Property>
 
-  <rdf:Property rdf:about="http://www.w3.org/ns/ldp#nextPage">
-    <rdfs:comment>From a known page, how to indicate the next or last page as rdf:nil.</rdfs:comment>
-    <vs:term_status>unstable</vs:term_status>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/ldp#Page"/>
+  <rdf:Property rdf:about="http://www.w3.org/ns/ldp#member">
+	<rdfs:comment>LDP servers should use this predicate as the membership predicate if there is no obvious predicate from an application vocabulary to use.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/ldp#Resource"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
-    <rdfs:label>nextPage</rdfs:label>
+	<rdfs:label>member</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
   </rdf:Property>
 
-  <rdfs:Class rdf:about="http://www.w3.org/ns/ldp#Page">
-    <rdfs:comment>A resource that represents a limited set of members of a LDP Container.</rdfs:comment>
-    <vs:term_status>unstable</vs:term_status>
+  <rdf:Property rdf:about="http://www.w3.org/ns/ldp#contains">
+	<rdfs:comment>Links a container with resources created through the container.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/ldp#Container"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
-    <rdfs:label>Page</rdfs:label>
-  </rdfs:Class>
-
-  <rdf:Property rdf:about="http://www.w3.org/ns/ldp#pageOf">
-    <rdfs:comment>Associated a page with its container.</rdfs:comment>
-    <vs:term_status>unstable</vs:term_status>
-    <rdfs:domain rdf:resource="http://www.w3.org/ns/ldp#Page"/>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
-    <rdfs:label>pageOf</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/ns/ldp#Container"/>
+	<rdfs:label>contains</rdfs:label>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
   </rdf:Property>
-</rdf:RDF>
 
+  <rdf:Description rdf:about="http://www.w3.org/ns/ldp#MemberSubject"> <!-- individual -->
+	<rdfs:comment>Used to indicate default and typical behavior for ldp:insertedContentRelation, where the member-URI value in the membership triple added when a creation request is successful is the URI assigned to the newly created resource.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
+	<rdfs:label>MemberSubject</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/ldp#PreferContainment"> <!-- individual -->
+	<rdfs:comment>URI identifying a LDPC's containment triples, for example to allow clients to express interest in receiving them.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
+	<rdfs:label>PreferContainment</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/ldp#PreferMembership"> <!-- individual -->
+	<rdfs:comment>URI identifying a LDPC's membership triples, for example to allow clients to express interest in receiving them.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
+	<rdfs:label>PreferMembership</rdfs:label>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/ldp#PreferEmptyContainer"> <!-- individual -->
+	<rdfs:comment>URI identifying the subset of a LDPC's triples present in an empty LDPC, for example to allow clients to express interest in receiving them.  Currently this excludes containment and membership triples, but in the future other exclusions might be added.  This definition is written to automatically exclude those new classes of triples.</rdfs:comment>
+	<vs:term_status>unstable</vs:term_status>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
+	<rdfs:label>PreferEmptyContainer</rdfs:label>
+  </rdf:Description>
+</rdf:RDF>
