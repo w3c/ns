@@ -12,8 +12,7 @@
     dcterms:description "All vocabulary URIs defined in the Linked Data Platform (LDP) namespace.";
 	dcterms:title "The W3C Linked Data Platform (LDP) Vocabulary";
 	rdfs:label "W3C Linked Data Platform (LDP)";
-	rdfs:comment "This ontology provides an informal representation of the concepts and terms
-	as defined in the LDP specification.  Consult the LDP specification for normative reference.";
+	rdfs:comment "This ontology provides an informal representation of the concepts and terms as defined in the LDP specification.  Consult the LDP specification for normative reference.";
 	rdfs:seeAlso <http://www.w3.org/2012/ldp>,
 		<http://www.w3.org/TR/ldp-ucr/>,
 		<http://www.w3.org/TR/ldp/>,
@@ -29,8 +28,7 @@
 :RDFSource
     a rdfs:Class;
     rdfs:subClassOf :Resource;
-	rdfs:comment "A Linked Data Platform Resource (LDPR) whose state is represented as 
-		RDF.";
+	rdfs:comment "A Linked Data Platform Resource (LDPR) whose state is represented as RDF.";
 	vs:term_status "unstable";
 	rdfs:isDefinedBy :;
 	rdfs:label "RDFSource".
@@ -38,8 +36,7 @@
 :NonRDFSource
     a rdfs:Class;
     rdfs:subClassOf :Resource;
-	rdfs:comment "A Linked Data Platform Resource (LDPR) whose state is NOT represented as
-		RDF.";
+	rdfs:comment "A Linked Data Platform Resource (LDPR) whose state is NOT represented as RDF.";
 	vs:term_status "unstable";
 	rdfs:isDefinedBy :;
 	rdfs:label "NonRDFSource".
@@ -47,10 +44,7 @@
 :Container
     a rdfs:Class;
 	rdfs:subClassOf :RDFSource;
-	rdfs:comment "A Linked Data Platform RDF Source (LDP-RS) that also conforms to 
-	additional patterns and conventions for managing membership.
-	Readers should refer to the specification defining this ontology for the list of 
-	behaviors associated with it.";
+	rdfs:comment "A Linked Data Platform RDF Source (LDP-RS) that also conforms to additional patterns and conventions for managing membership. Readers should refer to the specification defining this ontology for the list of behaviors associated with it.";
 	vs:term_status "unstable";
 	rdfs:isDefinedBy :;
 	rdfs:label "Container".
@@ -66,9 +60,7 @@
 :DirectContainer
     a rdfs:Class;
 	rdfs:subClassOf :Container;
-	rdfs:comment "An LDPC that is similar to a LDP-DC but it allows an indirection with the ability to 
-    	list as member a resource, such as a URI representing a real-world object, that is different 
-    	from the resource that is created";
+	rdfs:comment "An LDPC that is similar to a LDP-DC but it allows an indirection with the ability to list as member a resource, such as a URI representing a real-world object, that is different from the resource that is created";
 	vs:term_status "unstable";
 	rdfs:isDefinedBy :;
 	rdfs:label "DirectContainer".
