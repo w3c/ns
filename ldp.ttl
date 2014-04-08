@@ -1,3 +1,5 @@
+# See details within this document for linkage to specification and purpose.
+# This ontology file is a non-normative supporting document.
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
@@ -19,98 +21,145 @@
 		
 :Resource
     a rdfs:Class;
-	rdfs:comment "A HTTP-addressable resource with a linked data representation.";
+	rdfs:comment "A HTTP-addressable resource whose lifecycle is managed by a LDP server.";
 	vs:term_status "unstable";
 	rdfs:isDefinedBy :;
 	rdfs:label "Resource".
+
+:RDFSource
+    a rdfs:Class;
+    rdfs:subClassOf :Resource;
+	rdfs:comment "A Linked Data Platform Resource (LDPR) whose state is represented as 
+		RDF.";
+	vs:term_status "unstable";
+	rdfs:isDefinedBy :;
+	rdfs:label "RDFSource".
+
+:NonRDFSource
+    a rdfs:Class;
+    rdfs:subClassOf :Resource;
+	rdfs:comment "A Linked Data Platform Resource (LDPR) whose state is NOT represented as
+		RDF.";
+	vs:term_status "unstable";
+	rdfs:isDefinedBy :;
+	rdfs:label "NonRDFSource".
 	
 :Container
     a rdfs:Class;
-	rdfs:subClassOf :Resource;
-	rdfs:comment "A Linked Data Platform Resource (LDPR) that also conforms to 
+	rdfs:subClassOf :RDFSource;
+	rdfs:comment "A Linked Data Platform RDF Source (LDP-RS) that also conforms to 
 	additional patterns and conventions for managing membership.
 	Readers should refer to the specification defining this ontology for the list of 
 	behaviors associated with it.";
 	vs:term_status "unstable";
 	rdfs:isDefinedBy :;
 	rdfs:label "Container".
-	
-:AggregateContainer
+
+:BasicContainer
     a rdfs:Class;
 	rdfs:subClassOf :Container;
-	rdfs:comment "A Linked Data Platform Container (LDPC) that also conforms to 
-	additional patterns and conventions for managing members.  It is distinguished from
-	CompositeContainer by the following behaviors:
-	(1) Clients cannot assume that an AggregateContainer, when deleted, deletes its members.
-	
-	While every attempt is made to be complete in this list, readers should also refer 
-	to the specification defining this ontology.";
+	rdfs:comment "An LDPC that uses a predefined predicate to simply link to its contained resources.";
 	vs:term_status "unstable";
 	rdfs:isDefinedBy :;
-	rdfs:label "AggregateContainer".
-	
-:CompositeContainer
+	rdfs:label "BasicContainer".
+
+:DirectContainer
     a rdfs:Class;
 	rdfs:subClassOf :Container;
-	rdfs:comment "A Linked Data Platform Container (LDPC) that also conforms to 
-	additional patterns and conventions for managing members.  It is distinguished from
-	AggregateContainer by the following behaviors:
-	(1) An CompositeContainer, when deleted, must delete all its members.
-	
-	While every attempt is made to be complete in this list, readers should also
-	refer to the specification defining this ontology.";
+	rdfs:comment "An LDPC that is similar to a LDP-DC but it allows an indirection with the ability to 
+    	list as member a resource, such as a URI representing a real-world object, that is different 
+    	from the resource that is created";
 	vs:term_status "unstable";
 	rdfs:isDefinedBy :;
-	rdfs:label "CompositeContainer".
-	
-:containerSortPredicates
- 	a rdf:Property;
-	rdfs:comment "List of predicates that indicate the ascending order of the members in a page.";
+	rdfs:label "DirectContainer".
+
+:IndirectContainer
+    a rdfs:Class;
+	rdfs:subClassOf :Container;
+	rdfs:comment "An LDPC that has the flexibility of choosing what form the membership triples take.";
 	vs:term_status "unstable";
-	rdfs:domain :Page;
 	rdfs:isDefinedBy :;
-	rdfs:label "containerSortPredicates";
-	rdfs:range rdf:List.
-	
-:membershipPredicate
+	rdfs:label "IndirectContainer".
+		
+:hasMemberRelation
 	a rdf:Property;
-	rdfs:comment "Indicates which predicate of the container should be used to determine the membership.";
+	rdfs:comment "Indicates which predicate is used in membership triples, and that the membership triple pattern is < membership-constant-URI , object-of-hasMemberRelation, member-URI >.";
 	vs:term_status "unstable";
 	rdfs:domain :Container;
 	rdfs:isDefinedBy :;
-	rdfs:label "membershipPredicate";
+	rdfs:label "hasMemberRelation";
 	rdfs:range rdf:Property.
-	
-:membershipSubject
+
+:isMemberOfRelation
 	a rdf:Property;
-	rdfs:comment "Indicates which resource is the subject for the members of the container.";
+	rdfs:comment "Indicates which predicate is used in membership triples, and that the membership triple pattern is < member-URI , object-of-isMemberOfRelation, membership-constant-URI >.";
 	vs:term_status "unstable";
 	rdfs:domain :Container;
 	rdfs:isDefinedBy :;
-	rdfs:label "membershipSubject";
+	rdfs:label "isMemmberOfRelation";
 	rdfs:range rdf:Property.
 	
-:nextPage
+:membershipResource
 	a rdf:Property;
-	rdfs:comment "From a known page, how to indicate the next or last page as rdf:nil.";
+	rdfs:comment "Indicates the membership-constant-URI in a membership triple.  Depending upon the membership triple pattern a container uses, as indicated by the presence of ldp:hasMemberRelation or ldp:isMemberOfRelation, the membership-constant-URI might occupy either the subject or object position in membership triples.";
 	vs:term_status "unstable";
-	rdfs:domain :Page;
+	rdfs:domain :Container;
 	rdfs:isDefinedBy :;
-	rdfs:label "nextPage";
+	rdfs:label "membershipResource";
+	rdfs:range rdf:Property.
+	
+:insertedContentRelation
+	a rdf:Property;
+	rdfs:comment "Indicates which triple in a creation request should be used as the member-URI value in the membership triple added when the creation request is successful.";
+	vs:term_status "unstable";
+	rdfs:domain :Container;
+	rdfs:isDefinedBy :;
+	rdfs:label "insertedContentRelation";
+	rdfs:range rdf:Property.
+
+:member
+	a rdf:Property;
+	rdfs:comment "LDP servers should use this predicate as the membership predicate if there is no obvious predicate from an application vocabulary to use.";
+	vs:term_status "unstable";
+	rdfs:domain :Resource;
+	rdfs:isDefinedBy :;
+	rdfs:label "member";
 	rdfs:range rdfs:Resource.
-	
-:Page
-	a rdfs:Class;
-	rdfs:comment "A resource that represents a limited set of members of a LDP Container.";
-	vs:term_status "unstable";
-	rdfs:isDefinedBy :;
-	rdfs:label "Page".
-	
-:pageOf
+
+:contains
 	a rdf:Property;
-	rdfs:comment "Associated a page with its container.";
+	rdfs:comment "Links a container with resources created through the container.";
 	vs:term_status "unstable";
-	rdfs:domain :Page;
+	rdfs:domain :Container;
 	rdfs:isDefinedBy :;
-	rdfs:label "pageOf";
-	rdfs:range :Container.
+	rdfs:label "contains";
+	rdfs:range rdfs:Resource.
+
+:MemberSubject
+	a rdf:Description;		# individual
+	rdfs:comment "Used to indicate default and typical behavior for ldp:insertedContentRelation, where the member-URI value in the membership triple added when a creation request is successful is the URI assigned to the newly created resource.";
+	vs:term_status "unstable";
+	rdfs:isDefinedBy :;
+	rdfs:label "MemberSubject".
+
+:PreferContainment
+ 	a rdf:Description;		# individual
+	rdfs:comment "URI identifying a LDPC's containment triples, for example to allow clients to express interest in receiving them.";
+	vs:term_status "unstable";
+	rdfs:isDefinedBy :;
+	rdfs:label "PreferContainment".
+
+:PreferMembership
+ 	a rdf:Description;		# individual
+	rdfs:comment "URI identifying a LDPC's membership triples, for example to allow clients to express interest in receiving them.";
+	vs:term_status "unstable";
+	rdfs:isDefinedBy :;
+	rdfs:label "PreferMembership".
+
+:PreferEmptyContainer
+ 	a rdf:Description;		# individual
+	rdfs:comment "URI identifying the subset of a LDPC's triples present in an empty LDPC, for example to allow clients to express interest in receiving them.  Currently this excludes containment and membership triples, but in the future other exclusions might be added.  This definition is written to automatically exclude those new classes of triples.";
+	vs:term_status "unstable";
+	rdfs:isDefinedBy :;
+	rdfs:label "PreferEmptyContainer".
+	
