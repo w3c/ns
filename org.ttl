@@ -25,9 +25,11 @@
     rdfs:label "Core organization ontology"@en;
     rdfs:label "Ontologie des organisations"@fr;
     rdfs:label "Ontologia delle organizzazioni"@it;
+    rdfs:label "Ontología de organizaciones"@es;
 
     rdfs:comment "Vocabulary for describing organizational structures, specializable to a broad variety of types of organization."@en;
     rdfs:comment "Vocabolario per descrivere strutture organizzative, le quali possono essere specializzate in una vasta varietà di tipi di organizzazione"@it;
+    rdfs:comment "Vocabulario para describir organizaciones, adaptable a una amplia variedad de ellas."@es;
 
     dct:created "2010-05-28"^^xsd:date;
     dct:modified "2010-06-09"^^xsd:date;
@@ -39,11 +41,13 @@
     dct:modified "2014-01-02"^^xsd:date; # added Italian translation, PhilA.
     dct:modified "2014-01-25"^^xsd:date; # Erratas: http://lists.w3.org/Archives/Public/public-gld-comments/2014Jan/0000.html
     dct:modified "2014-02-05"^^xsd:date; # added Japanese comments, PhilA.
+    dct:modified "2014-04-12"^^xsd:date; # Added Spanish translation Guadalupe Aguado, Elena Montiel, Olga Giraldo and María Poveda from Ontology Engineering Group
 
 
     dct:title "Core organization ontology"@en;
     dct:title "Ontologie des organisations"@fr;
     dct:title "Ontologia delle organizzazioni"@it;
+    dct:title "Ontología de organizaciones"@es;
 
     dct:contributor [foaf:mbox "dave@epimorphics.com"; foaf:name "Dave Reynolds"];
 
@@ -51,6 +55,10 @@
     [foaf:mbox "antonio.maccioni@agid.gov.it"; foaf:name "Antonio Maccioni"],
     [foaf:mbox "giorgia.lodi@agid.gov.it"; foaf:name "Giorgia Lodi"],
     [foaf:name "Shuji Kamitsuna"; foaf:homepage <http://www.asahi-net.or.jp/~ax2s-kmtn/>];
+    dct:contributor [foaf:mbox "lupe@fi.upm.es"; foaf:name "Guadalupe Aguado de Cea"];
+    dct:contributor [foaf:mbox "emontiel@fi.upm.es"; foaf:name "Elena Montiel Ponsoda"];
+    dct:contributor [foaf:mbox "ogiraldo@fi.upm.es"; foaf:name "Olga Ximena Giraldo"];
+    dct:contributor [foaf:mbox "mpoveda@fi.upm.es"; foaf:name "María Poveda Villalón"]; ;
 
     dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
     rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
@@ -73,6 +81,8 @@ org:Organization a owl:Class, rdfs:Class;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:Organization rdfs:label "organización"@es ;
+    rdfs:comment "Grupo de personas que se organiza en una comunidad u otro tipo de estructura social, comercial o política. Dicho grupo tiene un objetivo o motivo común para su existencia que va más allá del conjunto de personas que lo forman y que puede actuar como “agente”. A menudo las organizaciones se pueden agrupar en estructuras jerárquicas. Se recomienda el uso de etiquetas de SKOS para denominar a cada “organización”. En concreto, `skos:prefLabel` para la denominación principal o recomendada (aquella reconocida legalmente, siempre que sea posible), `skos:altLabel` para denominaciones alternativas (nombre comercial, sigla, denominación por la que se conoce a la organización coloquialmente) y `skos:notation` para referirse al código que identifique a la organización en una lista de códigos. Denominaciones alternativas: _colectivo_ _corporación_ _grupo_"@es .
 
 org:FormalOrganization a owl:Class, rdfs:Class;
 
@@ -87,6 +97,9 @@ org:FormalOrganization a owl:Class, rdfs:Class;
     rdfs:comment "関連する権利と責任を有する（特に法的管轄区域において）世界中に広く認識されている組織。例には、企業、慈善団体、政府や教会が含まれます。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:FormalOrganization rdfs:label "organización formal"@es ;
+    rdfs:comment "Organización reconocida a nivel mundial, en particular en jurisdicciones legales, con derechos y responsabilidades asociadas. Algunos ejemplos son: organización corporativa, organización benéfica, organización gubernamental, organización religiosa. Se debe tener en cuenta que ésta es una superclase de `gr:BusinessEntity` y que se recomienda el uso del vocabulario GoodRelations para referirse a clasificaciones de negocios tales como DUNS o NAICS."@es .
 
 gr:BusinessEntity rdfs:subClassOf org:FormalOrganization .
 
@@ -103,6 +116,9 @@ org:OrganizationalUnit a owl:Class, rdfs:Class;
     rdfs:comment "あるより大きな組織の一部であり、その組織の中においてのみ完全に認識される部局や支援部署などの組織です。特に、その単位はそれ自体では法的実体と見なされません。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+    
+org:OrganizationalUnit rdfs:label "unidad organizativa"@es ;
+    rdfs:comment "Organización que forma parte de una organización formal más amplia, como el servicio de informática o centro de cálculo de una universidad, y que sólo tiene reconocimiento pleno en el contexto de dicha organización formal, pero que no es una entidad legal propiamente dicha. Estas unidades pueden ser amplias y complejas, e incluir a otras unidades o incluso a otras organizaciones formales. Denominaciones alternativas: departamento."@es .
     
 
 org:subOrganizationOf a owl:ObjectProperty, rdf:Property;
@@ -121,6 +137,8 @@ org:subOrganizationOf a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:subOrganizationOf rdfs:label "es suborganización de"@es ;
+    rdfs:comment "Distribución jerárquica de organizaciones o unidades. Indica que una organización contiene a otra organización. Es la relación inversa de `org:hasSubOrganization`"@es .
 
 org:transitiveSubOrganizationOf  a owl:ObjectProperty, owl:TransitiveProperty, rdf:Property;
 
@@ -138,6 +156,9 @@ org:transitiveSubOrganizationOf  a owl:ObjectProperty, owl:TransitiveProperty, r
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:transitiveSubOrganizationOf rdfs:label "es suborganización de manera transitiva de"@es ;
+    rdfs:comment "La versión transitiva de la propiedad “subOrganizationOf”, es decir, la representación de todas las organizaciones en las que esta está contenida. Téngase en cuenta que desde el punto de vista técnico esta es una propiedad que contiene a todas las propiedades transitivas, de forma que podría contener afirmaciones adicionales, aunque su uso no está aconsejado."@es ;
+    rdfs:label "es suborganización de (transitiva)"@es .
 
 org:hasSubOrganization a owl:ObjectProperty, rdf:Property;
     rdfs:label "has SubOrganization"@en;
@@ -153,6 +174,9 @@ org:hasSubOrganization a owl:ObjectProperty, rdf:Property;
     rdfs:comment "組織または組織単位の階層的包含を表わします。この組織のサブパートまたは子である組織を示します。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:hasSubOrganization rdfs:label "tiene suborganización"@es ;
+    rdfs:comment "Organización jerárquica de organizaciones o unidades. Indica que una organización es parte de otra organización más amplia o pertenece a ella. Es la relación inversa de `org:subOrganizationOf`."@es .
 
 org:subOrganizationOf  owl:inverseOf org:hasSubOrganization . 
 
@@ -173,6 +197,8 @@ org:purpose a rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:purpose rdfs:label "tiene objetivo"@es ;
+    rdfs:comment "Finalidad u objetivo de la organización. La organización puede tener muchos objetivos a diferentes niveles de abstracción, pero en la naturaleza de las organizaciones está el tener una razón para existir, y la finalidad de esta propiedad es documentar dicha razón. La organización podrá tener más de un objetivo. Se recomienda el uso de vocabularios controlados o listas de códigos para indicar el objetivo, preferentemente mediante el uso de un `skos:Concept`. Sin embargo, el rango no está predeterminado, de forma que otros tipos de esquemas descriptivos tiene cabida. Se espera que ciertas especializaciones de este vocabulario o ciertos perfiles de aplicaciones restrinjan el rango del objetivo. Denominaciones alternativas: área_ _jurisdicción_ _ responsabilidad _ (especialmente cuando se aplica a unidades tales como ministerios o divisiones administrativas de los gobiernos)"@es .
 
 org:hasUnit a owl:ObjectProperty, rdf:Property;
 
@@ -191,6 +217,8 @@ org:hasUnit a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:hasUnit rdfs:label "contiene unidad"@es ;
+    rdfs:comment "Unidad que es parte de la organización, como, por ejemplo, un departamento incluido en una organización formal más amplia."@es .
 
 org:unitOf a owl:ObjectProperty, rdf:Property;
 
@@ -208,6 +236,9 @@ org:unitOf a owl:ObjectProperty, rdf:Property;
     rdfs:comment "例えば、より大きな組織内の部局など、この単位がその一部分である組織を示します。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:unitOf rdfs:label "es unidad de"@es ;
+    rdfs:comment "Organización de la que es parte esta unidad, por ejemplo, un departamento incluido en una organización formal más amplia."@es .
 
 org:unitOf owl:inverseOf org:hasUnit .
 
@@ -231,6 +262,8 @@ org:classification a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:classification rdfs:label "pertenece a la clasificación"@es ;
+    rdfs:comment "Ordenación jerárquica que se hace de una organización dentro de un esquema de clasificación. Es posible que algunos vocabularios especifiquen esta propiedad de forma que el rango se corresponda con un `skos:ConceptScheme` específico. La conveniencia de incluir esta propiedad se está debatiendo y puede que se revise o elimine (en muchos casos las organizaciones se clasifican mejor si se define una jerarquía de subclases en un vocabulario aparte)"@es .
 
 org:identifier a owl:DatatypeProperty, rdf:Property;
 
@@ -247,6 +280,9 @@ org:identifier a owl:DatatypeProperty, rdf:Property;
     rdfs:comment "組織を一意に識別するために使用できる会社登録番号などの識別子を与えます。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:identifier rdfs:label "tiene identificador"@es ;
+    rdfs:comment "Código o identificador, como por ejemplo el CIF de una empresa, que permite identificar de forma inequívoca a una organización. Existen muchos códigos de identificación tanto nacionales como internacionales. Esta ontología no obliga al uso de ningún esquema en concreto. Los códigos de identificación utilizados en cada caso se deberían indicar mediante el uso de la propiedad “datatype” del valor del identificador. El uso de la propiedad “datatype” para especificar el esquema de notación utilizado está en consonancia con las buenas prácticas recomendadas para el uso de la propiedad `skos:notation`, de la que esta propiedad es una especialización."@es .
 
 
 org:linkedTo a owl:ObjectProperty, rdf:Property;
@@ -265,6 +301,9 @@ org:linkedTo a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:linkedTo rdfs:label "está relacionado con"@es ;
+    rdfs:label "está relacionada con"@es ;
+    rdfs:comment "Relación arbitraria entre dos organizaciones. Las especializaciones de esta relación se pueden utilizar para denotar relaciones de financiación o suministro, entre otras."@es .
 
 # -- Reporting relationships and roles -----------------------------------------------------------
 
@@ -285,6 +324,9 @@ org:memberOf a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:memberOf rdfs:label "es miembro de"@es ;
+    rdfs:comment "Persona que pertenece a la organización o es miembro de la misma, sin que conste la naturaleza de dicha pertenencia o el papel que desempeña. Se debe tener en cuenta que la elección de una denominación para esta propiedad no significa que la propiedad esté limitada a ciertos tipos de pertenencia formales, sino que pretende cubrir conceptos relacionados como el de afiliación u otras formas de participación en la organización. Se puede hacer uso de extensiones para especializar esta relación de forma que incluya tipos específicos de pertenencia a las organizaciones o relaciones especiales con la organización."@es .
+
 
 org:hasMember a owl:ObjectProperty, rdf:Property;
 
@@ -302,6 +344,9 @@ org:hasMember a owl:ObjectProperty, rdf:Property;
     rdfs:comment "対象組織のメンバーであるエージェント（人または他の組織）を示します。org:memberOfの逆。さらに明確な説明については、そのプロパティーを参照してください。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:hasMember rdfs:label "tiene miembro"@es ;
+    rdfs:comment "Persona que es miembro de la organización en cuestión. Es la relación inversa de `org:memberOf`, véase la descripción de esa propiedad para más detalles. Se prevé compatibilidad con foaf:member`."@es .
 
 org:memberOf  owl:inverseOf org:hasMember .
 
@@ -325,6 +370,9 @@ org:reportsTo a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:reportsTo rdfs:label "responde ante"@es ;
+    rdfs:comment "Relación de subordinación que se representa en los organigramas de las organizaciones. La semántica de la relación de subordinación varía según las organizaciones, pero su intención es abarcar tanto a las relaciones de supervisión directa (por ejemplo, aquellas en las que la autoridad determina los objetivos o el salario) como a las relaciones de subordinación más generales (por ejemplo, las llamadas líneas de autoridad o de mando (y responsabilidad) (http://www.promonegocios.net/organigramas/tipos-de-organigramas.html))."@es .
+
 
 org:Role a owl:Class, rdfs:Class;
     rdfs:subClassOf skos:Concept;
@@ -341,6 +389,8 @@ org:Role a owl:Class, rdfs:Class;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
     
+org:Role rdfs:label "actividad"@es ;
+    rdfs:comment "Función que una persona o agente desempeña en el seno de una organización. Las instancias de esta clase describen la actividad en abstracto; si lo que se pretende es incluir una instancia que refleje la función o actividad que desempeña una persona en concreto en una organización específica, se indica el uso de instancias de la clase `org:Membership`. Es común que dichas actividades se representen en una estructura taxonómica mediante SKOS. Las propiedades léxicas de SKOS deberían utilizarse a la hora de denominar o etiquetar la actividad desempeñada. Para añadir propiedades descriptivas adicionales, como rango salarial, se tendrá que recurrir a vocabularios externos."@es .
 
 org:Membership a owl:Class, rdfs:Class;
 
@@ -354,6 +404,9 @@ org:Membership a owl:Class, rdfs:Class;
     rdfs:comment "組織のエージェントの構成員の本質を示します。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:Membership rdfs:label "membresía"@es ;
+    rdfs:comment "Pertenencia o afiliación de un agente a una organización. Es una relación n-aria entre un agente, una organización y una actividad. Es posible indicar pertenencia mediante el uso de la propiedad `org:memberOf`, independientemente de la actividad específica que se desempeñe."@es .
 
 
 org:member a owl:ObjectProperty, rdf:Property, owl:FunctionalProperty;
@@ -372,6 +425,9 @@ org:member a owl:ObjectProperty, rdf:Property, owl:FunctionalProperty;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:member rdfs:label "es condición de miembro sobre agente"@es ;
+    rdfs:comment "Persona (u otro agente, incluyendo una organización) que participa en la relación de membresía. Es la relación inversa de `org:hasMembership`."@es .
+
 
 org:organization a owl:ObjectProperty, rdf:Property, owl:FunctionalProperty;
 
@@ -389,6 +445,9 @@ org:organization a owl:ObjectProperty, rdf:Property, owl:FunctionalProperty;
 
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:organization rdfs:label "es condición de miembro sobre organización"@es ;
+    rdfs:comment "Organización a la que pertenece el agente en calidad de miembro."@es .
 
 
 
@@ -409,6 +468,8 @@ org:role a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:role rdfs:label "desempeña la actividad de"@es ;
+    rdfs:comment "Actividad que el agente desempeña en una relación de pertenencia a una organización."@es .
 
 org:hasMembership a owl:ObjectProperty, rdf:Property;
 
@@ -426,6 +487,9 @@ org:hasMembership a owl:ObjectProperty, rdf:Property;
 
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:hasMembership rdfs:label "tiene membresía"@es ;
+    rdfs:comment "Relación de pertenencia o afiliación a una organización en la que el agente desempeña un cargo o función. Es la relación inversa de `org:member`."@es .
 
 org:hasMembership owl:inverseOf org:member .
 
@@ -450,6 +514,8 @@ org:memberDuring a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:memberDuring rdfs:label "es miembro durante"@es ;
+    rdfs:comment "Propiedad opcional que indica el periodo durante el cual la relación de membresía o pertenencia a una organización se mantiene en vigencia."@es .
 
 
 org:roleProperty a owl:AnnotationProperty, rdf:Property;
@@ -468,6 +534,8 @@ org:roleProperty a owl:AnnotationProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:roleProperty rdfs:label "desempeña la actividad de (propiedad)"@es ;
+    rdfs:comment "Meta-propiedad que se utiliza para anotar una instancia de `org:Role` con una sub-propiedad de `org:memberOf`, que puede ser utilizada para indicar directamente la actividad a fin de facilitar las consultas a los datos. The intended semantics is that a Membership relation involving the Role implies the existence of a direct property relationship through an inference rule of the form: { [] org:member ?a; org:organization ?o; org:role [org:roleProperty ?r] } -> {?a ?r ?o}"@es .
 
 
 org:headOf a owl:ObjectProperty, rdf:Property;
@@ -487,6 +555,8 @@ org:headOf a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:headOf rdfs:label "es director ejecutivo de"@es ;
+    rdfs:comment "Persona que es jefe o jefa, representante ,,director o directora de la organización. Esto significa que dicha persona es el rango de la relación `org:reportsTo` en el organigrama de la organización (acíclico), aunque una organización puede tener más de un jefe."@es .
 
 
 org:Head a org:Role;
@@ -507,6 +577,10 @@ org:Head a org:Role;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:Head rdfs:label "director ejecutivo"@es ;
+    rdfs:label "directora ejecutiva"@es ;
+    rdfs:comment "Actividad correspondiente a la propiedad `org:headOf`."@es .
+
 
 org:remuneration a owl:ObjectProperty, rdf:Property;
 
@@ -524,6 +598,8 @@ org:remuneration a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:remuneration rdfs:label "recibe remuneración"@es ;
+    rdfs:comment "Salario o cualquier otra remuneración asociada con la actividad. La forma usual de referirse a dicha remuneración será utilizando un esquema de representación como el propuesto en la ontología GoodRelations `gr:PriceSpecification`, pero el rango se deja abierto a que las distintas aplicaciones lo especialicen (por ejemplo, remunerationInGBP)"@es .
 
 
 # -- Location -----------------------------------------------------------
@@ -544,6 +620,9 @@ org:Site a owl:Class, rdfs:Class;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:Site rdfs:label "sede"@es ;
+    rdfs:comment "Oficina, local o cualquier otro lugar en el que se encuentra una organización. Muchas organizaciones están distribuidas en varias sedes, que a su vez están repartidas en distintas ubicaciones. En muchos casos una sede será un sitio o local físico. Sin embargo, no se excluye la posibilidad de lugares no físicos como oficinas virtuales con los correspondientes apartados de correo y servicio de atención telefónica. Se pueden añadir más subtipos mediante extensiones para incluir tipos especiales de lugares."@es .
+
 
 org:siteAddress a owl:ObjectProperty, rdf:Property;
 
@@ -560,6 +639,9 @@ org:siteAddress a owl:ObjectProperty, rdf:Property;
     rdfs:comment "適切にコード化されたサイトのアドレスを示します。vCard[vcard-rdf]語彙などの有名なアドレスのコード化の使用が奨励されますが、他の符号化の使用を可能とするために値域はオープンのままにされます。アドレスには、電子メール、電話およびジオロケーション情報を含むことができ、物理的なアドレスに制限されません。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:siteAddress rdfs:label "es la dirección de la sede"@es ;
+    rdfs:comment "Dirección de la sede según una codificación adecuada. Se recomienda el uso de vCard (que utiliza el vocabulario en http://www.w3.org/TR/vcard-rdf/), pero el rango no se restringe únicamente al uso de este vocabulario sino que se permite el uso de otros códigos. La dirección puede constar de una dirección de correo electrónico, un número de teléfono o información de geo-localización, y no se limita a una dirección postal física."@es .
 
 
 org:hasSite a owl:ObjectProperty, rdf:Property;
@@ -578,6 +660,9 @@ org:hasSite a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:hasSite rdfs:label "tiene sede en"@es ;
+    rdfs:comment "Lugar en donde la organización tiene algún tipo de presencia, incluso si es de forma indirecta (por ejemplo, una oficina virtual o servicio profesional que hagan la función de dirección registrada de la compañía). Es la relación inversa de `org:siteOf`."@es .
+
 
 org:siteOf a owl:ObjectProperty, rdf:Property;
 
@@ -594,6 +679,9 @@ org:siteOf a owl:ObjectProperty, rdf:Property;
     rdfs:comment "あるサイトである存在感を持っている組織を示します。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:siteOf rdfs:label "es sede de"@es ;
+    rdfs:comment "Organización que tiene ubicación en un lugar. Es la relación inversa de `org:hasSite`."@es .
 
 org:hasSite owl:inverseOf org:siteOf . 
 
@@ -618,6 +706,9 @@ org:hasPrimarySite a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:hasPrimarySite rdfs:label "tiene sede principal en"@es ;
+    rdfs:comment "Oficina principal de la organización, la opción por defecto para ponerse en contacto con una organización, aunque no corresponde necesariamente con las oficinas centrales de la organización."@es .
+
 
 org:hasRegisteredSite a owl:ObjectProperty, rdf:Property;
 
@@ -635,7 +726,10 @@ org:hasRegisteredSite a owl:ObjectProperty, rdf:Property;
     rdfs:comment "組織の法律上登録されたサイトを示し、多くの法的管轄区域では、会社や慈善団体などのFormalOrganizations（正式な組織）がそのような主要サイトを持っているという要件があります。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
- 
+
+ org:hasRegisteredSite rdfs:label "tiene sede registrada en"@es ;
+    rdfs:comment "Oficina o sede legalmente registrada de la organización. En muchas jurisdicciones legales existe el requisito de que organizaciones formales tales como empresas u organizaciones de beneficencia tengan una sede principal de este tipo."@es .
+
 
 org:basedAt a owl:ObjectProperty, rdf:Property;
 
@@ -653,6 +747,8 @@ org:basedAt a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:basedAt rdfs:label "trabaja en la sede"@es ;
+    rdfs:comment "Lugar en el que trabaja una persona. No se restringe el hecho de que una persona pueda estar adscrita a múltiples ubicaciones."@es .
 
 
 org:location a owl:ObjectProperty, rdf:Property;
@@ -671,6 +767,9 @@ org:location a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:location rdfs:label "está ubicado en"@es ;
+    rdfs:label "está ubicada en"@es ;
+    rdfs:comment "Lugar o ubicación exacta de una persona en una organización con el objetivo de facilitar, por ejemplo, la entrega de correo."@es .
 
 
 # -- Projects and other activities -----------------------------------------------------------
@@ -701,6 +800,8 @@ org:OrganizationalCollaboration a owl:Class, rdfs:Class;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:OrganizationalCollaboration rdfs:label "proyecto de cooperación empresarial"@es ;
+    rdfs:comment "Colaboración determinada entre dos o más organizaciones, como en el caso de un proyecto común. Cumple con los criterios de ser una organización en sí misma, en la medida en que tiene una identidad y un propósito definido independiente de sus miembros en particular, pero no es una entidad legal formalmente reconocida ni una sub-unidad dentro de una organización más grande. La duración suele ser más corta que la de las organizaciones que lo componen, pero no necesariamente. Todos sus miembros son de tipo `org:Organization` en vez de individuos, y desempeñan una actividad concreta en el marco del proyecto de cooperación."@es .
 
 # -- Historical information -----------------------------------------------------------
 
@@ -717,6 +818,9 @@ org:ChangeEvent a owl:Class, rdfs:Class;
     rdfs:comment "合併や完全な再編などの組織に大きな変化をもたらした出来事を表わします。これは、結果として作成される組織と元の組織とが、別のアイデンティティーと別のURIを持つに足るほど異なる状況を対象としています。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:ChangeEvent rdfs:label "evento de cambio"@es ;
+    rdfs:comment "Evento que da como resultado un cambio sustancial en la organización, por ejemplo, una fusión o una reestructuración total. Está pensado para situaciones en las que la organización resultante es lo suficientemente distinta de las organizaciones originales, tiene una identidad distinta y una URI también distinta. Se deberían definir subtipos de eventos mediante vocabularios específicos (Extension vocabularies) para referirse a categorías de eventos específicos. El momento o periodo en el que el evento ocurre se debería expresar mediante las propiedades `prov:startAtTime` y `prov:endedAtTime`, y una descripción del mismo se debería incluir mediante el uso de la propiedad `dct:description`."@es .
 
 
 org:originalOrganization a owl:ObjectProperty, rdf:Property;
@@ -736,6 +840,9 @@ org:originalOrganization a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:originalOrganization rdfs:label "es organización original"@es ;
+    rdfs:comment "Una o más organizaciones que existían antes de que sucediera el cambio en la organización. Dependiendo del tipo de cambio, dichas organizaciones pueden haber dejado de existir o no. Es la relación inversa de `org:changedBy`."@es .
+
 
 org:changedBy a owl:ObjectProperty, rdf:Property;
 
@@ -752,6 +859,10 @@ org:changedBy a owl:ObjectProperty, rdf:Property;
     rdfs:comment "この組織の変更のきっかけとなった出来事を示します。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:changedBy rdfs:label "es modificada por"@es ;
+    rdfs:label "es modificado por"@es ;
+    rdfs:comment "Evento de cambio que resulta en una modificación en la organización. Dependiendo del evento, la organización puede dejar de existir tras el cambio. Es la relación inversa de `org:originalOrganization`."@es .
 
 
 org:originalOrganization owl:inverseOf org:changedBy .
@@ -777,6 +888,9 @@ org:resultedFrom a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ; 
     .
 
+org:resultedFrom rdfs:label "es el resultado de"@es ;
+    rdfs:comment "Evento que tiene como resultado la creación de una organización."@es .
+
 
 org:resultingOrganization a owl:ObjectProperty, rdf:Property;
 
@@ -793,6 +907,9 @@ org:resultingOrganization a owl:ObjectProperty, rdf:Property;
     rdfs:comment "出来事の結果、作成、変更された組織を示します。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
+
+org:resultingOrganization rdfs:label "resulta en"@es ;
+    rdfs:comment "Organización que ha sido creada o modificada tras un evento específico.  Es la relación inversa de `org:resultedFrom`."@es .
 
 
 org:resultedFrom          owl:inverseOf org:resultingOrganization .
@@ -820,7 +937,8 @@ org:Post a owl:Class, rdfs:Class;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
-
+org:Post rdfs:label "puesto"@es ;
+    rdfs:comment "Puesto o posición que representa algún tipo de empleo dentro de una organización, que existe independientemente de la persona o personas que lo desempeñan. Esta clase puede utilizarse para representar situaciones en las que una persona es miembro de una organización ex oficio (por ejemplo, el Secretario de Estado escocés es parte del Gabinete del gobierno británico por virtud de ser Secretario de Estado en Escocia, y no como individuo). Un puesto puede ser desempeñado por múltiples individuos y de aquí que sea tratado como una organización en sí misma."@es .
 
 org:holds a owl:ObjectProperty, rdf:Property;
 
@@ -841,6 +959,8 @@ org:holds a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:holds rdfs:label "ocupa"@es ;
+    rdfs:comment "Puesto ocupado por algún agente."@es .
 
 org:heldBy a owl:ObjectProperty, rdf:Property;
 
@@ -861,6 +981,9 @@ org:heldBy a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:heldBy rdfs:label "ocupado por"@es ;
+    rdfs:comment "Agente que ocupa un puesto."@es .
+
 org:holds owl:inverseOf org:heldBy .
 
 
@@ -880,6 +1003,8 @@ org:postIn a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:postIn rdfs:label "es un puesto en"@es ;
+    rdfs:comment "Organización en la que existe el puesto."@es .
 
 org:hasPost a owl:ObjectProperty, rdf:Property;
 
@@ -897,6 +1022,8 @@ org:hasPost a owl:ObjectProperty, rdf:Property;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
+org:hasPost rdfs:label "tiene puesto"@es ;
+    rdfs:comment "Posición que existe en una organización."@es .
 
 org:postIn owl:inverseOf org:hasPost .
 
