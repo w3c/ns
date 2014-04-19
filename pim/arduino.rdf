@@ -1,0 +1,153 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:a="http://www.w3.org/ns/pim/arduino#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="">
+        <dc:title>A simple arduino I/O vocabulary</dc:title>
+    </owl:Ontology>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#a0">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>analog input 0</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#a1">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>analog input 1</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#a2">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>analog input 2</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#a3">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>analog input 3</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#a4">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>analog input 4</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#a6">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>analog input 5</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</a:pin>
+    </rdf:Property>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/arduino#alalogInput">
+        <subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </Class>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d0">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 0</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d1">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 1</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d10">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 10</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">10</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d11">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 11</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">11</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d2">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 2</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d3">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 3</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d4">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 4</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d5">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 5</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d6">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 6</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">6</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d7">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 7</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d8">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 8</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</a:pin>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/arduino#d9">
+        <domain rdf:resource="http://www.w3.org/ns/pim/arduino#snapshot"/>
+        <label>digital pin 0</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <a:pin rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">9</a:pin>
+    </rdf:Property>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/arduino#digitalPin">
+        <subClassOf rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/arduino#snapshot">
+        <comment>A snapshot represents the state of the I/O pins of an Arduino</comment>
+        <label>snapshot</label>
+    </Class>
+</rdf:RDF>
