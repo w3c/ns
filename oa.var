@@ -7,4 +7,10 @@ URI: oa.rdf
 Content-Type: application/rdf+xml; qs=0.4
 
 URI: oa.ttl
-Content-Type: text/turtle; qs=0.5
+Content-Type: text/turtle; qs=0.6
+
+URI: oa.jsonld
+Content-Type: application/ld+json; qs=0.5
+
+URI: oa.json
+Content-Type: application/json; qs=0.4
