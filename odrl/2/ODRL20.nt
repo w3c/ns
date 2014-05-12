@@ -7,7 +7,7 @@
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/vocab/vann/example> <http://www.w3.org/ns/odrl/2/Asset> .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/creator> "Mo McRoberts (BBC)" .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/creator> "V\u00EDctor Rodr\u00EDguez Doncel (OEG-UPM)" .
-<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/published> "2013-10-11"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/published> "2014-05-12"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/contributor> "ODRL Community Group" .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/description> "The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media."@en .
 <http://www.w3.org/ns/odrl/2/odrl.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
@@ -419,12 +419,6 @@ _:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
 <http://www.w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/2000/01/rdf-schema#label> "Accept tracking"@en .
 <http://www.w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of accepting that the use of the asset may be recorded. The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'."@en .
-<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
-<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2000/01/rdf-schema#label> "Ad-hoc sharing"@en .
-<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of sharing the asset to parties in close proximity to the owner. This action may be used to express [OMA] Sharing semantics."@en .
 <http://www.w3.org/ns/odrl/2/aggregate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
 <http://www.w3.org/ns/odrl/2/aggregate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/ns/odrl/2/aggregate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
@@ -455,30 +449,12 @@ _:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
 <http://www.w3.org/ns/odrl/2/archive> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/archive> <http://www.w3.org/2000/01/rdf-schema#label> "Archive"@en .
 <http://www.w3.org/ns/odrl/2/archive> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of persistently storing the asset."@en .
-<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
-<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Attach policy"@en .
-<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of keeping the policy notice with the asset."@en .
-<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
-<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2000/01/rdf-schema#label> "Attach source"@en .
-<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of attaching the source of the asset and its derivatives."@en .
 <http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
 <http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
 <http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/2000/01/rdf-schema#label> "Attribute"@en .
 <http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of attributing the asset to a party."@en .
-<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
-<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2000/01/rdf-schema#label> "Commercialize"@en .
-<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of using the asset in a business environment."@en .
 <http://www.w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
 <http://www.w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
@@ -544,27 +520,6 @@ _:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
 <http://www.w3.org/ns/odrl/2/extract> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/extract> <http://www.w3.org/2000/01/rdf-schema#label> "Extract"@en .
 <http://www.w3.org/ns/odrl/2/extract> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged parts of the asset."@en .
-<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
-<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/extract> .
-<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2000/01/rdf-schema#label> "Extract character"@en .
-<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged character(s) from the asset."@en .
-<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
-<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/extract> .
-<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2000/01/rdf-schema#label> "Extract page"@en .
-<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged page(s) from the asset."@en .
-<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
-<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/extract> .
-<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2000/01/rdf-schema#label> "Extract word"@en .
-<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged word(s) from the asset."@en .
 <http://www.w3.org/ns/odrl/2/give> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
 <http://www.w3.org/ns/odrl/2/give> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/ns/odrl/2/give> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
@@ -701,18 +656,6 @@ _:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
 <http://www.w3.org/ns/odrl/2/sell> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/sell> <http://www.w3.org/2000/01/rdf-schema#label> "Sell"@en .
 <http://www.w3.org/ns/odrl/2/sell> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of trading the asset in exchange of value."@en .
-<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
-<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2000/01/rdf-schema#label> "Share"@en .
-<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of the non-commercial reproduction and distribution of the asset to third-parties."@en .
-<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
-<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
-<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2000/01/rdf-schema#label> "Share-alike"@en .
-<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of distributing any derivative asset under the same terms as the original asset."@en .
 <http://www.w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
 <http://www.w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
@@ -875,13 +818,6 @@ _:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
 <http://www.w3.org/ns/odrl/2/product> <http://www.w3.org/2000/01/rdf-schema#label> "product"@en .
 <http://www.w3.org/ns/odrl/2/product> <http://www.w3.org/2000/01/rdf-schema#comment> "The specified Product or Service name."@en .
 <http://www.w3.org/ns/odrl/2/product> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
-<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
-<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#label> "proximity"@en .
-<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#comment> "An value indicating the closeness or nearness."@en .
 <http://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 <http://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <http://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
@@ -929,14 +865,6 @@ _:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
 <http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/ns/odrl/2/device> .
 <http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2000/01/rdf-schema#label> "system"@en .
 <http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable computing system."@en .
-<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
-<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
-<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
-<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#label> "timed count"@en .
-<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of seconds after which timed metering use of the asset begins."@en .
-<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 <http://www.w3.org/ns/odrl/2/timeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
 <http://www.w3.org/ns/odrl/2/timeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
 <http://www.w3.org/ns/odrl/2/timeInterval> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
@@ -1124,3 +1052,86 @@ _:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
 <http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
 <http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2000/01/rdf-schema#label> "Individual"@en .
 <http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is the single Party individual."@en .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.openmobilealliance.com/oma-dd/adhoc-share> .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2000/01/rdf-schema#label> "Ad-hoc sharing"@en .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of sharing the asset to parties in close proximity to the owner. This action may be used to express [OMA] Sharing semantics."@en .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/extract> .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.editeur.org/onix-pl/extract-char> .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2000/01/rdf-schema#label> "Extract character"@en .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged character(s) from the asset."@en .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/extract> .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.editeur.org/onix-pl/extract-word> .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2000/01/rdf-schema#label> "Extract page"@en .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged page(s) from the asset."@en .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/extract> .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.editeur.org/onix-pl/extract-page> .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2000/01/rdf-schema#label> "Extract word"@en .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged word(s) from the asset."@en .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://creativecommons.org/ns#Notice> .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Attach policy"@en .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of keeping the policy notice with the asset."@en .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://creativecommons.org/ns#SourceCode> .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2000/01/rdf-schema#label> "Attach source"@en .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of attaching the source of the asset and its derivatives."@en .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://creativecommons.org/ns#ShareAlike> .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2000/01/rdf-schema#label> "Share-alike"@en .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of distributing any derivative asset under the same terms as the original asset."@en .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://creativecommons.org/ns#CommercialUse> .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2000/01/rdf-schema#label> "Commercialize"@en .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of using the asset in a business environment."@en .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/share> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://creativecommons.org/ns#Distribution> .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2000/01/rdf-schema#label> "Share"@en .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of the non-commercial reproduction and distribution of the asset to third-parties."@en .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/proximity> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.openmobilealliance.com/oma-dd/proximity> .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#label> "proximity"@en .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#comment> "An value indicating the closeness or nearness."@en .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.openmobilealliance.com/oma-dd/timed-count> .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#label> "timed count"@en .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of seconds after which timed metering use of the asset begins."@en .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .

@@ -12,6 +12,7 @@
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
 @prefix voaf: <http://purl.org/vocommons/voaf#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
+@prefix ont: <http://purl.org/net/ns/ontology-annot#> .
 
 odrl:
 	a owl:Ontology , voaf:Vocabulary ;
@@ -21,7 +22,7 @@ odrl:
 	vann:preferredNamespacePrefix "odrl" ;
 	vann:example :Asset ;
 	dct:creator "Mo McRoberts (BBC)", "Víctor Rodríguez Doncel (OEG-UPM)" ;
-	dct:published "2013-10-11"^^xsd:date ;
+	dct:published "2014-05-12"^^xsd:date ;
 	dct:contributor "ODRL Community Group" ;
 	dct:description "The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media."@en .
 
@@ -452,12 +453,6 @@ odrl:
 	rdfs:label "Accept tracking"@en ;
 	rdfs:comment "The act of accepting that the use of the asset may be recorded. The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'."@en .
 
-:adHocShare
-	a :Action, skos:Concept ;
-	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
-	rdfs:label "Ad-hoc sharing"@en ;
-	rdfs:comment "The act of sharing the asset to parties in close proximity to the owner. This action may be used to express [OMA] Sharing semantics."@en .
 
 :aggregate
 	a :Action, skos:Concept ;
@@ -494,33 +489,12 @@ odrl:
 	rdfs:label "Archive"@en ;
 	rdfs:comment "The act of persistently storing the asset."@en .
 
-:attachPolicy
-	a :Action, skos:Concept ;
-	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
-	rdfs:label "Attach policy"@en ;
-	rdfs:comment "The act of keeping the policy notice with the asset."@en .
-
-:attachSource
-	a :Action, skos:Concept ;
-	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
-	rdfs:label "Attach source"@en ;
-	rdfs:comment "The act of attaching the source of the asset and its derivatives."@en .
-
 :attribute
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Attribute"@en ;
 	rdfs:comment "The act of attributing the asset to a party."@en .
-
-:commercialize
-	a :Action, skos:Concept ;
-	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
-	rdfs:label "Commercialize"@en ;
-	rdfs:comment "The act of using the asset in a business environment."@en .
 
 :concurrentUse
 	a :Action, skos:Concept ;
@@ -596,30 +570,6 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "Extract"@en ;
 	rdfs:comment "The act of extracting (replicating) unchanged parts of the asset."@en .
-
-:extractChar
-	a :Action, skos:Concept ;
-	rdfs:isDefinedBy odrl: ;
-	skos:broader :extract ;
-	vs:term_status "testing" ;
-	rdfs:label "Extract character"@en ;
-	rdfs:comment "The act of extracting (replicating) unchanged character(s) from the asset."@en .
-
-:extractPage
-	a :Action, skos:Concept ;
-	rdfs:isDefinedBy odrl: ;
-	skos:broader :extract ;
-	vs:term_status "testing" ;
-	rdfs:label "Extract page"@en ;
-	rdfs:comment "The act of extracting (replicating) unchanged page(s) from the asset."@en .
-
-:extractWord
-	a :Action, skos:Concept ;
-	rdfs:isDefinedBy odrl: ;
-	skos:broader :extract ;
-	vs:term_status "testing" ;
-	rdfs:label "Extract word"@en ;
-	rdfs:comment "The act of extracting (replicating) unchanged word(s) from the asset."@en .
 
 :give
 	a :Action, skos:Concept ;
@@ -778,20 +728,6 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "Sell"@en ;
 	rdfs:comment "The act of trading the asset in exchange of value."@en .
-
-:share
-	a :Action, skos:Concept ;
-	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
-	rdfs:label "Share"@en ;
-	rdfs:comment "The act of the non-commercial reproduction and distribution of the asset to third-parties."@en .
-
-:shareAlike
-	a :Action, skos:Concept ;
-	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
-	rdfs:label "Share-alike"@en ;
-	rdfs:comment "The act of distributing any derivative asset under the same terms as the original asset."@en .
 
 :textToSpeech
 	a :Action, skos:Concept ;
@@ -977,14 +913,6 @@ odrl:
 	rdfs:comment "The specified Product or Service name."@en ;
 	rdfs:range xsd:string .
 
-:proximity
-    a rdf:Property , owl:DatatypeProperty ;
-	rdfs:isDefinedBy odrl: ;
-	rdfs:subPropertyOf :rightOperand ;
-	vs:term_status "testing" ;
-	rdfs:label "proximity"@en ;
-	rdfs:comment "An value indicating the closeness or nearness."@en .
-
 :purpose
     a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
@@ -1041,15 +969,6 @@ odrl:
     owl:equivalentProperty :device ;
 	rdfs:label "system"@en ;
 	rdfs:comment "An identifiable computing system."@en .
-
-:timedCount
-    a rdf:Property , owl:DatatypeProperty ;
-	rdfs:isDefinedBy odrl: ;
-	rdfs:subPropertyOf :rightOperand ;
-	vs:term_status "testing" ;
-	rdfs:label "timed count"@en ;
-	rdfs:comment "The number of seconds after which timed metering use of the asset begins."@en ;
-	rdfs:range rdfs:Literal .	
 
 :timeInterval
     a rdf:Property , owl:DatatypeProperty ;
@@ -1241,3 +1160,99 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "Individual"@en ;
 	rdfs:comment "Specifies that the scope of the relationship is the single Party individual."@en .
+
+## Deprecated terms
+
+:adHocShare
+	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "deprecated" ;
+	ont:deprecatedBy <http://www.openmobilealliance.com/oma-dd/adhoc-share> ;
+	rdfs:label "Ad-hoc sharing"@en ;
+	rdfs:comment "The act of sharing the asset to parties in close proximity to the owner. This action may be used to express [OMA] Sharing semantics."@en .
+
+:extractChar
+	a :Action, skos:Concept ;
+	skos:broader :extract ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "deprecated" ;
+	ont:deprecatedBy <http://www.editeur.org/onix-pl/extract-char> ;
+	rdfs:label "Extract character"@en ;
+	rdfs:comment "The act of extracting (replicating) unchanged character(s) from the asset."@en .
+
+:extractPage
+	a :Action, skos:Concept ;
+	skos:broader :extract ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "deprecated" ;
+	ont:deprecatedBy <http://www.editeur.org/onix-pl/extract-word> ;
+	rdfs:label "Extract page"@en ;
+	rdfs:comment "The act of extracting (replicating) unchanged page(s) from the asset."@en .
+
+:extractWord
+	a :Action, skos:Concept ;
+	skos:broader :extract ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "deprecated" ;
+	ont:deprecatedBy <http://www.editeur.org/onix-pl/extract-page> ;
+	rdfs:label "Extract word"@en ;
+	rdfs:comment "The act of extracting (replicating) unchanged word(s) from the asset."@en .
+
+:attachPolicy
+	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "deprecated" ;
+	ont:deprecatedBy <http://creativecommons.org/ns#Notice> ;
+	rdfs:label "Attach policy"@en ;
+	rdfs:comment "The act of keeping the policy notice with the asset."@en .
+
+:attachSource
+	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "deprecated" ;
+	ont:deprecatedBy <http://creativecommons.org/ns#SourceCode> ;
+	rdfs:label "Attach source"@en ;
+	rdfs:comment "The act of attaching the source of the asset and its derivatives."@en .
+
+:shareAlike
+	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "deprecated" ;
+	ont:deprecatedBy <http://creativecommons.org/ns#ShareAlike> ;
+	rdfs:label "Share-alike"@en ;
+	rdfs:comment "The act of distributing any derivative asset under the same terms as the original asset."@en .
+
+:commercialize
+	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "deprecated" ;
+	ont:deprecatedBy <http://creativecommons.org/ns#CommercialUse> ;
+	rdfs:label "Commercialize"@en ;
+	rdfs:comment "The act of using the asset in a business environment."@en .
+
+:share
+	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "deprecated" ;
+	ont:deprecatedBy <http://creativecommons.org/ns#Distribution> ;
+	rdfs:label "Share"@en ;
+	rdfs:comment "The act of the non-commercial reproduction and distribution of the asset to third-parties."@en .
+
+:proximity
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "deprecated" ;
+	ont:deprecatedBy <http://www.openmobilealliance.com/oma-dd/proximity> ;
+	rdfs:label "proximity"@en ;
+	rdfs:comment "An value indicating the closeness or nearness."@en .
+
+:timedCount
+    a rdf:Property , owl:DatatypeProperty ;
+	rdfs:subPropertyOf :rightOperand ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "deprecated" ;
+	ont:deprecatedBy <http://www.openmobilealliance.com/oma-dd/timed-count> ;
+	rdfs:label "timed count"@en ;
+	rdfs:comment "The number of seconds after which timed metering use of the asset begins."@en ;
+	rdfs:range rdfs:Literal .	

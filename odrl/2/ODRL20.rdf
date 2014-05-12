@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rdf:RDF
-   xmlns:dcmit="http://purl.org/dc/dcmitype/"
+<rdf:RDF xmlns:dcmit="http://purl.org/dc/dcmitype/"
    xmlns:dct="http://purl.org/dc/terms/"
    xmlns:foaf="http://xmlns.com/foaf/0.1/"
+   xmlns:ont="http://purl.org/net/ns/ontology-annot#"
    xmlns:owl="http://www.w3.org/2002/07/owl#"
    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
@@ -17,7 +17,7 @@
     <dct:creator>Mo McRoberts (BBC)</dct:creator>
     <dct:creator>Víctor Rodríguez Doncel (OEG-UPM)</dct:creator>
     <dct:description xml:lang="en">The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media.</dct:description>
-    <dct:published rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-10-11</dct:published>
+    <dct:published rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-05-12</dct:published>
     <vann:example rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
     <vann:preferredNamespacePrefix>odrl</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri rdf:resource="http://w3.org/ns/odrl/2/"/>
@@ -338,11 +338,12 @@
     <skos:hasTopConcept rdf:resource="http://www.w3.org/ns/odrl/2/write"/>
   </skos:ConceptScheme>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/adHocShare">
+    <ont:deprecatedBy rdf:resource="http://www.openmobilealliance.com/oma-dd/adhoc-share"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of sharing the asset to parties in close proximity to the owner. This action may be used to express [OMA] Sharing semantics.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Ad-hoc sharing</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/aggregate">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -398,18 +399,20 @@
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/attachPolicy">
+    <ont:deprecatedBy rdf:resource="http://creativecommons.org/ns#Notice"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of keeping the policy notice with the asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Attach policy</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/attachSource">
+    <ont:deprecatedBy rdf:resource="http://creativecommons.org/ns#SourceCode"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of attaching the source of the asset and its derivatives.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Attach source</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/attribute">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -427,11 +430,12 @@
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/commercialize">
+    <ont:deprecatedBy rdf:resource="http://creativecommons.org/ns#CommercialUse"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of using the asset in a business environment.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Commercialize</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/concurrentUse">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
@@ -631,27 +635,30 @@
     <vs:term_status>testing</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/extractChar">
+    <ont:deprecatedBy rdf:resource="http://www.editeur.org/onix-pl/extract-char"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of extracting (replicating) unchanged character(s) from the asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Extract character</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
     <skos:broader rdf:resource="http://www.w3.org/ns/odrl/2/extract"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/extractPage">
+    <ont:deprecatedBy rdf:resource="http://www.editeur.org/onix-pl/extract-word"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of extracting (replicating) unchanged page(s) from the asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Extract page</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
     <skos:broader rdf:resource="http://www.w3.org/ns/odrl/2/extract"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/extractWord">
+    <ont:deprecatedBy rdf:resource="http://www.editeur.org/onix-pl/extract-page"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of extracting (replicating) unchanged word(s) from the asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Extract word</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
     <skos:broader rdf:resource="http://www.w3.org/ns/odrl/2/extract"/>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/fileFormat">
@@ -1070,12 +1077,13 @@
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/proximity">
+    <ont:deprecatedBy rdf:resource="http://www.openmobilealliance.com/oma-dd/proximity"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">An value indicating the closeness or nearness.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">proximity</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/purpose">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1169,18 +1177,20 @@
     <vs:term_status>testing</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/share">
+    <ont:deprecatedBy rdf:resource="http://creativecommons.org/ns#Distribution"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of the non-commercial reproduction and distribution of the asset to third-parties.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Share</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/shareAlike">
+    <ont:deprecatedBy rdf:resource="http://creativecommons.org/ns#ShareAlike"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of distributing any derivative asset under the same terms as the original asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Share-alike</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/spatial">
     <rdfs:comment xml:lang="en">A code representing a geospatial area.</rdfs:comment>
@@ -1238,13 +1248,14 @@
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/timedCount">
+    <ont:deprecatedBy rdf:resource="http://www.openmobilealliance.com/oma-dd/timed-count"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
     <rdfs:comment xml:lang="en">The number of seconds after which timed metering use of the asset begins.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">timed count</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/trackingParty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
