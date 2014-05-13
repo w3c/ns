@@ -7,7 +7,7 @@
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/vocab/vann/example> <http://www.w3.org/ns/odrl/2/Asset> .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/creator> "Mo McRoberts (BBC)" .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/creator> "V\u00EDctor Rodr\u00EDguez Doncel (OEG-UPM)" .
-<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/published> "2014-05-12"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/issued> "2014-05-12"^^<http://www.w3.org/2001/XMLSchema#date> .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/contributor> "ODRL Community Group" .
 <http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/description> "The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media."@en .
 <http://www.w3.org/ns/odrl/2/odrl.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
