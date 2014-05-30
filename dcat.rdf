@@ -117,7 +117,7 @@
 	<rdfs:Class rdf:about="http://www.w3.org/ns/dcat#Catalog">
 		<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class" />
 		<rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-dcat/" />
-		<rdfs:label>Catalog</rdfs:label>
+		<rdfs:label xml:lang="en">Catalog</rdfs:label>
 		<rdfs:label xml:lang="es">Catálogo</rdfs:label>
 		<rdfs:label xml:lang="ar">فهرس قوائم البيانات</rdfs:label>
 		<rdfs:label xml:lang="fr">Catalogue</rdfs:label>

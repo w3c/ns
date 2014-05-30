@@ -63,7 +63,7 @@
 
 dcat:Catalog a rdfs:Class, owl:Class;
     rdfs:isDefinedBy <http://www.w3.org/TR/vocab-dcat/>;
-    rdfs:label "Catalog";
+    rdfs:label "Catalog"@en;
     rdfs:label "Catálogo"@es;
     rdfs:label "فهرس قوائم البيانات"@ar;
     rdfs:label "Catalogue"@fr;
