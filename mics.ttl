@@ -1,0 +1,58 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix mics: <http://www.w3.org/ns/mics#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix dct: <http://purl.org/dc/terms/>.
+
+@prefix : <http://www.w3.org/ns/mics#>.
+
+<http://www.w3.org/ns/mics>
+    a owl:Ontology;
+    rdfs:label "The 'mics' Micro-Specification Vocabulary"@en;
+    rdfs:comment """
+
+	This vocabulary allows RDF vocabularies to be written so that they
+	can be republished with many different URLs, not pointing to each
+	other, or even just put inline with data, and still have systems
+	realize that the terms are synonyms.  This style might be called
+	"floating linked data", where data can be linked together, even
+	without long-term stable URLs.
+
+	""";
+    dct:creator <http://www.w3.org/People/Sandro/data#Sandro_Hawke>.
+
+:def a rdf:Property, owl:DatatypeProperty, owl:inverseFunctionalProperty;
+    rdfs:label "definition"@en;
+	rdfs:comment "A precise and unambiguous definition, suitable for infering that two IRIs are synonyms";
+    mics:def """
+The property ?p such that `?item ?p ?def` means all of the following:
+1. ?def is a definition of ?item
+2. ?def is detailed enough that it is virtually impossible someone else would coincidentally write the same text in defining a different ?item
+3. ?def is written so that a human reader is likely to either understand it as intended or realize they do not understand it 
+4. Terms in ?def prefixed with a single question mark are used as placeholders (variables)
+5. Terms in ?def wrapped in square brackets and followed by empty square brackets are links to other items defined in the same context, like [validOlderVersion][].
+
+No other restrictions are placed on the formatting, but in general it is suggested that text be formatted so it can either be read exactly as written or formatted as markdown.   This means the only features of markdown that should be used are the ones which still look sensible to people unfamiliar with markdown.
+
+A single ?item may have many different definitions but they must all mean the same thing.   Reasons for multiple definitions include:
+* translations into other languages
+* improving the wording, based on experience with how people end up understanding the text
+In general, in a given document, there must be only one ?def for each ?item in each language, and the version must have proper machine-readable language tags.  Older definitions should be moved to another document, linked using [validOlderVersion][].
+"""@en.
+
+:validOlderVersion a rdf:Property, owl:ObjectProperty;
+    rdfs:label "valid older version"@en;
+	rdfs:comment "an older version of the document which is still technically accurate, since the changes are just editorial";
+    mics:def """
+The property ?p such that `?new ?p ?old` means all of the following:
+1. ?old and ?new are RDF Sources
+2. ?old and ?new are equally factual
+3. In general, one should use ?new instead of ?old
+4. When there is a reason to use older information, one may use ?old
+
+This property was defined so that as [def][] statements are revised over time, with terms being renamed and definitions being reworded, systems can use the old versions to establish interoperability while still presenting only the new version as the default documentation for users.
+"""@en.
+
