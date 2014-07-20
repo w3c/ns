@@ -27,8 +27,8 @@
 :def a rdf:Property, owl:DatatypeProperty, owl:inverseFunctionalProperty;
     rdfs:label "definition"@en;
 	rdfs:comment "A precise and unambiguous definition, suitable for infering that two IRIs are synonyms";
-    mics:def """
-The property ?p such that `?item ?p ?def` means all of the following:
+    mics:def """The property ?p such that `?item ?p ?def` means all of the following:
+
 1. ?def is a definition of ?item
 2. ?def is detailed enough that it is virtually impossible someone else would coincidentally write the same text in defining a different ?item
 3. ?def is written so that a human reader is likely to either understand it as intended or realize they do not understand it 
@@ -38,16 +38,18 @@ The property ?p such that `?item ?p ?def` means all of the following:
 No other restrictions are placed on the formatting, but in general it is suggested that text be formatted so it can either be read exactly as written or formatted as markdown.   This means the only features of markdown that should be used are the ones which still look sensible to people unfamiliar with markdown.
 
 A single ?item may have many different definitions but they must all mean the same thing.   Reasons for multiple definitions include:
+
 * translations into other languages
 * improving the wording, based on experience with how people end up understanding the text
+
 In general, in a given document, there must be only one ?def for each ?item in each language, and the version must have proper machine-readable language tags.  Older definitions should be moved to another document, linked using [validOlderVersion][].
 """@en.
 
 :validOlderVersion a rdf:Property, owl:ObjectProperty;
     rdfs:label "valid older version"@en;
 	rdfs:comment "an older version of the document which is still technically accurate, since the changes are just editorial";
-    mics:def """
-The property ?p such that `?new ?p ?old` means all of the following:
+    mics:def """The property ?p such that `?new ?p ?old` means all of the following:
+
 1. ?old and ?new are RDF Sources
 2. ?old and ?new are equally factual
 3. In general, one should use ?new instead of ?old
