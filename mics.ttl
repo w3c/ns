@@ -14,29 +14,29 @@
     rdfs:label "The 'mics' Micro-Specification Vocabulary"@en;
     rdfs:comment """
 
-	This vocabulary was inspired by a problem many of us have with
+    This vocabulary was inspired by a problem many of us have with
     linked data: it's hard to commit to maintaining content on the
     Web, at a fixed URL, in perpetuity.  That's what Linked Data
     essentially asks us to do for vocabularies, and even for any other
     items we want to be able to talk about.
 
-	mics addresses this by defining an inverse function mics:def
-	property whose value is an unambiguous definition.  If two things
-	have the same mics:def value, then those two things are the same
-	thing.  Thus if we give foaf:firstName a mics:def and copy that to
-	other places, anyone can infer that the copied version
-	(myfoaf:firstName or whatever) is owl:equivalentProperty to
-	foaf:firstName.
-	
-	This style might be called "floating linked data", where data can
-	be linked together, even without long-term stable URLs.
+    mics addresses this by defining an inverse function mics:def
+    property whose value is an unambiguous definition.  If two things
+    have the same mics:def value, then those two things are the same
+    thing.  Thus if we give foaf:firstName a mics:def and copy that to
+    other places, anyone can infer that the copied version
+    (myfoaf:firstName or whatever) is owl:equivalentProperty to
+    foaf:firstName.
+    
+    This style might be called "floating linked data", where data can
+    be linked together, even without long-term stable URLs.
 
-	""";
+    """;
     dct:creator <http://www.w3.org/People/Sandro/data#Sandro_Hawke>.
 
 :def a rdf:Property, owl:DatatypeProperty, owl:inverseFunctionalProperty;
     rdfs:label "definition"@en;
-	rdfs:comment "A precise and unambiguous definition, suitable for infering that two IRIs are synonyms";
+    rdfs:comment "A precise and unambiguous definition, suitable for infering that two IRIs are synonyms";
     mics:def """The property ?p such that `?item ?p ?def` means all of the following:
 
 1. ?def is a definition of ?item
@@ -57,7 +57,7 @@ In general, in a given document, there must be only one ?def for each ?item in e
 
 :validOlderVersion a rdf:Property, owl:ObjectProperty;
     rdfs:label "valid older version"@en;
-	rdfs:comment "an older version of the document which is still technically accurate, since the changes are just editorial";
+    rdfs:comment "an older version of the document which is still technically accurate, since the changes are just editorial";
     mics:def """The property ?p such that `?new ?p ?old` means all of the following:
 
 1. ?old and ?new are RDF Sources
