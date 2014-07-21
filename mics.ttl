@@ -20,7 +20,7 @@
     essentially asks us to do for vocabularies, and even for any other
     items we want to be able to talk about.
 
-    mics addresses this by defining an inverse function mics:def
+    mics addresses this by defining an inverse functional mics:def
     property whose value is an unambiguous definition.  If two things
     have the same mics:def value, then those two things are the same
     thing.  Thus if we give foaf:firstName a mics:def and copy that to
