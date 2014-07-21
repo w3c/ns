@@ -14,12 +14,22 @@
     rdfs:label "The 'mics' Micro-Specification Vocabulary"@en;
     rdfs:comment """
 
-	This vocabulary allows RDF vocabularies to be written so that they
-	can be republished with many different URLs, not pointing to each
-	other, or even just put inline with data, and still have systems
-	realize that the terms are synonyms.  This style might be called
-	"floating linked data", where data can be linked together, even
-	without long-term stable URLs.
+	This vocabulary was inspired by a problem many of us have with
+    linked data: it's hard to commit to maintaining content on the
+    Web, at a fixed URL, in perpetuity.  That's what Linked Data
+    essentially asks us to do for vocabularies, and even for any other
+    items we want to be able to talk about.
+
+	mics addresses this by defining an inverse function mics:def
+	property whose value is an unambiguous definition.  If two things
+	have the same mics:def value, then those two things are the same
+	thing.  Thus if we give foaf:firstName a mics:def and copy that to
+	other places, anyone can infer that the copied version
+	(myfoaf:firstName or whatever) is owl:equivalentProperty to
+	foaf:firstName.
+	
+	This style might be called "floating linked data", where data can
+	be linked together, even without long-term stable URLs.
 
 	""";
     dct:creator <http://www.w3.org/People/Sandro/data#Sandro_Hawke>.
