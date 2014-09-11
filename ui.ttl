@@ -1,72 +1,83 @@
-    @prefix : <http://www.w3.org/ns/ui#> .
+     @prefix : <http://www.w3.org/ns/ui#> .
     @prefix dc: <http://purl.org/dc/elements/1.1/> .
     @prefix owl: <http://www.w3.org/2002/07/owl#> .
-    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-    @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-    @prefix cc: <http://creativecommons.org/ns#> .
-	@prefix vann: <http://purl.org/vocab/vann/> .
-	@prefix dcterms: <http://purl.org/dc/terms/> .
-	
-	######################################
-    ######----Metadata here ----####
-    ######################################
-	
-	<http://www.w3.org/ns/ui> a owl:Ontology;
-	dcterms:description "An ontology suitable for describing forms, sequences in widgets "@en;
-	dcterms:title "A user interface ontology"@en;
-	cc:license <http://creativecommons.org/licenses/by/3.0/> ;
-    dcterms:modified "2014-02-26"^^xsd:date ;
-    dcterms:publisher <http://www.w3.org> ;
-    vann:preferredNamespacePrefix "ui" ;
-    vann:preferredNamespaceUri <http://www.w3.org/ns/ui#> ;
-     .
-	
-	######################################
-    ######----Classes here ----####
-    ######################################
-	
-    :BooleanField     rdfs:subClassOf :NumericField .
+    
+    :BooleanField     s:subClassOf :NumericField .
     
     :CaseForm     a :Group;
-         dc:title "Form for a conditional case in a form"@en;
+         dc:title "Form for a conditional case in a form";
          :part  [
-             a  :Choice;
-              :canMintNew :true;
-              :from rdfs:Class;
-              :label "when it is"@en;
-              :property :for;
-              :sequence 1 ],
+             a :Choice;
+             :canMintNew :true;
+             :from s:Class;
+             :label "when it is";
+             :property :for;
+             :sequence 1 ],
                  [
-             a  :Choice;
-              :canMintNew :true;
-              :from  :Form;
-              :property  :use;
-              :sequence 2;
-              :use :FieldForm ] .
-             
-     :FieldForm     a  :Group;
-         dc:title "Form for selecting a type of field"@en;
-          :part  [
-             a  :Classifier;
-              :category  :Form;
-              :property rdf:type;
-              :sequence 1 ],
+             a :Choice;
+             :canMintNew :true;
+             :from :Form;
+             :property :use;
+             :sequence 2;
+             :use :FieldForm ] .
+    
+    :Choice     s:subClassOf :Form,
+                :Single .
+    
+    :Classifier     a s:Class;
+         s:comment """A classifier allows the user to select the type of an object.
+    The possible types must be subclasses of some overall class, the "category".
+    (Ideally, the superclass is also set up as the disjoint union of the subclasses,
+    if they are disjoint.)
+    
+    The form normally stores the resulting classes using an rdf:type triple,
+    but a different predicate can be used if required, so the classifier field
+    needs is 'property' defined too.
+    
+    If the subclass selected itself is has subclasses defined, the user can 
+    recursively select from them in turn, as many levels as needed.""";
+         s:label "classifier";
+         s:subClassOf :Form,
+                :Single .
+    
+    :ColorField     s:subClassOf :ValueField .
+    
+    :Comment     s:subClassOf :Form,
+                :Single .
+    
+    :DateField     s:subClassOf :ValueField .
+    
+    :DateTimeField     s:subClassOf :ValueField .
+    
+    :DecimalField     s:subClassOf :NumericField .
+    
+    :EmailField     s:subClassOf :ValueField .
+    
+    :FieldForm     a :Group;
+         dc:title "Form for selecting a type of field";
+         :part  [
+             a :Classifier;
+             :category :Form;
+             :property r:type;
+             :sequence 1 ],
                  [
-             a  :Options;
-              :case  [
-                  :for  :TextField;
-                  :use  [
-                     a  :Group;
-                      :part  [
-                         a  :Choice;
-                          :canMintNew :true;
-                          :from owl:DatatypeProperty;
-                          :label "property";
-                          :property :property ],
+             a :Options;
+             :case  [
+                 :for :TextField;
+                 :use  [
+                     a :Group;
+                     :part  [
+                         a :Choice;
+                         :canMintNew :true;
+                         :from owl:DatatypeProperty;
+                         :label "property";
+                         :property :property ],
                              [
-                         a  :IntegerField;
-                         rdfs:label "field size";
+                         a :IntegerField;
+                         :label "field size";
                          :max 4096;
                          :min 1;
                          :property :size ],
@@ -223,8 +234,8 @@
                      :part  [
                          a :Choice;
                          :canMintNew :true;
-                         :default  rdf:type;
-                         :from  rdf:Property;
+                         :default r:type;
+                         :from r:Property;
                          :label "depending on";
                          :property :dependingOn;
                          :sequence 1 ],
@@ -247,7 +258,7 @@
                              [
                          a :Choice;
                          :canMintNew :true;
-                         :from rdfs:Class;
+                         :from s:Class;
                          :label "destination class";
                          :property :from;
                          :sequence 2 ],
@@ -270,20 +281,30 @@
                  :use  [
                      a :Group;
                      :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :default  rdf:type;
-                         :from owl:ObjectProperty;
-                         :label "property";
-                         :property :property;
-                         :sequence 1 ],
+                         a :Comment;
+                         :contents """A classifier allows the user to which classes the item belongs to,
+                given a common superclass of the allowed classes.  Give the superclass here:""";
+                         :sequence 2 ],
                              [
                          a :Choice;
                          :canMintNew :true;
-                         :from rdfs:Class;
-                         :label "category";
+                         :from s:Class;
+                         :label "superclass";
                          :property :category;
-                         :sequence 2 ] ] ],
+                         :sequence 4 ],
+                             [
+                         a :Comment;
+                         :contents """(When the choice is made normally the item s given a rdf:type. Set this to rdf:type unless
+                you want the form to set a different property.)""";
+                         :sequence 6 ],
+                             [
+                         a :Choice;
+                         :canMintNew :true;
+                         :default r:type;
+                         :from owl:ObjectProperty;
+                         :label "property";
+                         :property :property;
+                         :sequence 8 ] ] ],
                      [
                  :for :Multiple;
                  :use  [
@@ -291,7 +312,7 @@
                      :part  [
                          a :Choice;
                          :canMintNew :true;
-                         :from  rdf:Property;
+                         :from r:Property;
                          :label "property";
                          :property :property;
                          :sequence 1 ],
@@ -312,7 +333,7 @@
                  :use  [
                      a :MultiLineTextField;
                      :property :contents ] ];
-             :dependingOn  rdf:type;
+             :dependingOn r:type;
              :sequence 2 ] .
     
     :FieldList     a :Multiple;
@@ -320,8 +341,11 @@
          :property :part;
          :sequence 10 .
     
-       
-    :Form     a rdfs:Class;
+    :FloatField     s:subClassOf :NumericField .
+    
+    :Form     a s:Class;
+         s:comment """A form can be any type of single field, or typically a Group of several fields,
+    including interspersed headings and comments.  """;
          owl:disjointUnionOf  (
         :ValueField
         :Group
@@ -353,16 +377,32 @@
              :sequence 3;
              :style "background-color: #ffe;" ] .
     
-        
-    :NumericField     a rdfs:Class;
-         rdfs:subClassOf :ValueField;
+    :Group     s:subClassOf :Form,
+                :Single .
+    
+    :Heading     s:subClassOf :Form,
+                :Single .
+    
+    :IntegerField     s:subClassOf :NumericField .
+    
+    :MultiLineTextField     s:subClassOf :TextField .
+    
+    :Multiple     s:subClassOf :Form .
+    
+    :NumericField     a s:Class;
+         s:subClassOf :ValueField;
          owl:disjointUnionOf  (
         :BooleanField
         :IntegerField
         :DecimalField
         :FloatField ) .
     
-    :Single     a rdfs:Class;
+    :Options     s:subClassOf :Form,
+                :Single .
+    
+    :PhoneField     s:subClassOf :ValueField .
+    
+    :Single     a s:Class;
          owl:disjointUnionOf  (
         :ValueField
         :Group
@@ -372,16 +412,16 @@
         :Heading
         :Comment ) .
     
-    :SingleLineTextField     rdfs:subClassOf :TextField .
+    :SingleLineTextField     s:subClassOf :TextField .
     
-    :TextField     a rdfs:Class;
-         rdfs:subClassOf :ValueField;
+    :TextField     a s:Class;
+         s:subClassOf :ValueField;
          owl:disjointUnionOf  (
         :SingleLineTextField
         :MultiLineTextField ) .
     
-    :ValueField     a rdfs:Class;
-         rdfs:subClassOf :Form,
+    :ValueField     a s:Class;
+         s:subClassOf :Form,
                 :Single;
          owl:disjointUnionOf  (
         :TextField
@@ -392,193 +432,152 @@
         :PhoneField
         :EmailField ) .
     
-	######################################
-    ######----axioms here ----####
-    ######################################
-	:Options     rdfs:subClassOf :Form,
-                :Single .
-    
-    :PhoneField     rdfs:subClassOf :ValueField .
-	:FloatField     rdfs:subClassOf :NumericField .
-	:Choice     rdfs:subClassOf  :Form,
-                 :Single .
-    
-     :Classifier     rdfs:subClassOf  :Form,
-                 :Single .
-    
-     :ColorField     rdfs:subClassOf  :ValueField .
-    
-     :Comment     rdfs:subClassOf  :Form,
-                 :Single .
-    
-     :DateField     rdfs:subClassOf  :ValueField .
-    
-     :DateTimeField     rdfs:subClassOf  :ValueField .
-    
-     :DecimalField     rdfs:subClassOf  :NumericField .
-    
-     :EmailField     rdfs:subClassOf  :ValueField .
-	:Group     rdfs:subClassOf :Form,
-                :Single .
-    
-    :Heading     rdfs:subClassOf :Form,
-                :Single .
-    
-    :IntegerField     rdfs:subClassOf :NumericField .
-    
-    :MultiLineTextField     rdfs:subClassOf :TextField .
-    
-    :Multiple     rdfs:subClassOf :Form .
-	
-	######################################
-    ######----properties here ----####
-    ######################################
-	
-    :annotationForm     a  rdf:Property;
-         rdfs:comment """A form which may be used to add more infromation to an
+    :annotationForm     a r:Property;
+         s:comment """A form which may be used to add more infromation to an
 instance of this class which we know something about.  Anything from
 adding just add one more fact, to adding a whole lot of information about a specific 
 facet of the thing.
-"""@en;
-         rdfs:domain rdfs:Class;
-         rdfs:label "annotation form"@en;
-         rdfs:range :Form .
+""";
+         s:domain s:Class;
+         s:label "annotation form";
+         s:range :Form .
     
-    :backgroundColor     a  rdf:Property,
+    :backgroundColor     a r:Property,
                 owl:DatatypeProperty;
-         rdfs:comment """Must be a valid CSS color string such as one could put in
+         s:comment """Must be a valid CSS color string such as one could put in
         an HTML style attribute.  This should be in the #xxxxxx form,
         (with 6 digits of hex)  so that it
-        can work with Graphviz."""@en;
-         rdfs:label "background colour"@en;
-         rdfs:range :Color .
+        can work with Graphviz.""";
+         s:label "background colour"@en;
+         s:range :Color .
     
-    :category     a  rdf:Property;
-         rdfs:comment "The superclass subclasses of which will be selected."@en;
-         rdfs:domain :Classifier;
-         rdfs:label "property"@en;
-         rdfs:range rdfs:Class .
+    :category     a r:Property;
+         s:comment "The superclass subclasses of which will be selected.";
+         s:domain :Classifier;
+         s:label "overall superclass"@en;
+         s:range s:Class .
     
-    :color     a  rdf:Property,
+    :color     a r:Property,
                 owl:DatatypeProperty;
-         rdfs:comment """Must be a valid CSS color string such as one could put in
+         s:comment """Must be a valid CSS color string such as one could put in
         an HTML style attribute.  This should be in the #xxxxxx form,
         (with 6 digits of hex)  so that it
-        can work with Graphviz."""@en;
-         rdfs:label "colour"@en;
-         rdfs:range :Color .
+        can work with Graphviz.""";
+         s:label "colour"@en;
+         s:range :Color .
     
-    :creationForm     a  rdf:Property;
-         rdfs:comment """A form which may be used to collect information about a
-    hitherto locally undocumented instance instance of this class."""@en;
-         rdfs:domain rdfs:Class;
-         rdfs:label "creation form"@en;
-         rdfs:range :Form .
+    :creationForm     a r:Property;
+         s:comment """A form which may be used to collect information about a
+    hitherto locally undocumented instance instance of this class.""";
+         s:domain s:Class;
+         s:label "creation form";
+         s:range :Form .
     
-    :dependingOn     a  rdf:Property;
-         rdfs:comment "Many fields prompt for infromation about a gven property of the subject"@en;
-         rdfs:domain :Options;
-         rdfs:label "depending on"@en;
-         rdfs:range  rdf:Property .
+    :dependingOn     a r:Property;
+         s:comment "Many fields prompt for infromation about a gven property of the subject";
+         s:domain :Options;
+         s:label "depending on"@en;
+         s:range r:Property .
     
-    :for     a  rdf:Property;
-         rdfs:comment "The value for which this case is selected."@en;
-         rdfs:label "for"@en .
+    :for     a r:Property;
+         s:comment "The value for which this case is selected.";
+         s:label "for"@en .
     
-    :from     a  rdf:Property;
-         rdfs:domain :Choice;
-         rdfs:label "from"@en;
-         rdfs:range  rdf:Class;
+    :from     a r:Property;
+         s:domain :Choice;
+         s:label "from";
+         s:range r:Class;
          :prompt "from what class" .
     
-    :initialProperties     a  rdf:Property;
-         rdfs:comment """A really simple way of enabling user interfaces to 
+    :initialProperties     a r:Property;
+         s:comment """A really simple way of enabling user interfaces to 
             create new information about a class of things is to make a define of properties
             to be specified when a information about a new item
             ("New item" here means an item which the system
             does not have prvious information about yet,
             not an items which has just been created,
-            like new friend as opposed to new baby)"""@en;
-         rdfs:domain rdfs:Class;
-         rdfs:label "initial properties"@en;
-         rdfs:range  rdf:List;
+            like new friend as opposed to new baby)""";
+         s:domain s:Class;
+         s:label "initial properties";
+         s:range r:List;
          :prompt "Properties to be specified for new ones" .
     
-    :maxLength     a  rdf:Property;
-         rdfs:domain :TextField;
-         rdfs:label "max length of value"@en;
-         rdfs:range xsd:integer .
+    :maxLength     a r:Property;
+         s:domain :TextField;
+         s:label "max length of value";
+         s:range xsd:integer .
     
-    :maxValue     a  rdf:Property;
-         rdfs:domain :ValueField;
-         rdfs:label "max"@en .
+    :maxValue     a r:Property;
+         s:domain :ValueField;
+         s:label "max" .
     
-    :minValue     a  rdf:Property;
-         rdfs:domain :ValueField;
-         rdfs:label "min"@en .
+    :minValue     a r:Property;
+         s:domain :ValueField;
+         s:label "min" .
     
-    :part     a  rdf:Property;
-         rdfs:domain :Form;
-         rdfs:label "part"@en;
-         rdfs:range :Form .
+    :part     a r:Property;
+         s:domain :Form;
+         s:label "part"@en;
+         s:range :Form .
     
-    :prompt     a  rdf:Property;
-         rdfs:comment """A string for the UI to use if the user needs a longer
-        prompts than just a field name, the rdfs:label. """@en;
-         rdfs:label "user prompt"@en;
+    :prompt     a r:Property;
+         s:comment """A string for the UI to use if the user needs a longer
+        prompts than just a field name, the rdfs:label. """;
+         s:label "user prompt";
          :prompt "A longer prompt for a user inputting this property" .
     
-    :property     a  rdf:Property;
-         rdfs:comment "Many fields prompt for infromation about a given property of the subject"@en;
-         rdfs:domain :Form;
-         rdfs:label "property"@en;
-         rdfs:range  rdf:Property .
+    :property     a r:Property;
+         s:comment """Many fields prompt for infromation about a given property of the subject.
+    When field is filled in, this gives which property is written into the data.""";
+         s:domain :Form;
+         s:label "property to be stored"@en;
+         s:range r:Property .
     
-    :seqeunce     a  rdf:Property;
-         rdfs:comment "The sequence in which this item is arranged with repect to other parts."@en;
-         rdfs:label "sequence number"@en;
-         rdfs:range xsd:integer .
+    :seqeunce     a r:Property;
+         s:comment "The sequence in which this item is arranged with repect to other parts.";
+         s:label "sequence number";
+         s:range xsd:integer .
     
-    :size     a  rdf:Property;
-         rdfs:domain :ValueField;
-         rdfs:label "size of field"@en;
-         rdfs:range xsd:integer;
+    :size     a r:Property;
+         s:domain :ValueField;
+         s:label "size of field";
+         s:range xsd:integer;
          :prompt "size of field in characters" .
     
-    :sortBy     a  rdf:Property;
-         rdfs:comment """A property which typically is used to sort
-        members of a given class."""@en;
-         rdfs:domain rdfs:Class;
-         rdfs:label "sort by"@en;
-         rdfs:range  rdf:Property .
+    :sortBy     a r:Property;
+         s:comment """A property which typically is used to sort
+        members of a given class.""";
+         s:domain s:Class;
+         s:label "sort by";
+         s:range r:Property .
     
-    :sortPriority     a  rdf:Property,
+    :sortPriority     a r:Property,
                 owl:DatatypeProperty;
-         rdfs:comment """When individuals or classes must be sorted, then
+         s:comment """When individuals or classes must be sorted, then
         if they are given different values of sortPriority a user agent can
-        use this as a hint to how to present information."""@en;
-         rdfs:label "sort priority"@en;
-         rdfs:range xsd:integer .
+        use this as a hint to how to present information.""";
+         s:label "sort priority";
+         s:range xsd:integer .
     
-    :style     a  rdf:Property,
+    :style     a r:Property,
                 owl:DatatypeProperty;
-         rdfs:comment """Must be a valid CSS style string such as one could put in
+         s:comment """Must be a valid CSS style string such as one could put in
         an HTML style attribute.  Depending on the user interface system, this can
         by given to individuals, classes or properties. It is up to a user interface 
         which wants to draw on them to pick how it uses styles from which parts
         of the data it has.  For example, the style of a class may be picked 
-        to distinguish information about things in that class."""@en;
-         rdfs:label "style"@en;
+        to distinguish information about things in that class.""";
+         s:label "style";
          :prompt "CSS style" .
     
-    :tableProperties     a  rdf:Property;
-         rdfs:comment """This  is a crude way of specifying a table-based
-            view for objects of this class."""@en;
-         rdfs:domain rdfs:Class;
-         rdfs:label "table properties"@en;
-         rdfs:range  rdf:List;
+    :tableProperties     a r:Property;
+         s:comment """This  is a crude way of specifying a table-based
+            view for objects of this class.""";
+         s:domain s:Class;
+         s:label "table properties";
+         s:range r:List;
          :prompt "Properties to be given in a default table view" .
     
-    :use     a  rdf:Property;
-         rdfs:range :Form .
+    :use     a r:Property;
+         s:range :Form .
     

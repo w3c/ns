@@ -37,10 +37,22 @@
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
     </r:Description>
 
-    <r:Description r:about="http://www.w3.org/ns/ui#Classifier">
+    <s:Class r:about="http://www.w3.org/ns/ui#Classifier">
+        <s:comment>A classifier allows the user to select the type of an object.
+    The possible types must be subclasses of some overall class, the "category".
+    (Ideally, the superclass is also set up as the disjoint union of the subclasses,
+    if they are disjoint.)
+    
+    The form normally stores the resulting classes using an rdf:type triple,
+    but a different predicate can be used if required, so the classifier field
+    needs is 'property' defined too.
+    
+    If the subclass selected itself is has subclasses defined, the user can 
+    recursively select from them in turn, as many levels as needed.</s:comment>
+        <s:label>classifier</s:label>
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
-    </r:Description>
+    </s:Class>
 
     <r:Description r:about="http://www.w3.org/ns/ui#ColorField">
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#ValueField"/>
@@ -343,21 +355,33 @@
                 <use r:parseType="Resource">
                     <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
                     <part r:parseType="Resource">
+                        <r:type r:resource="http://www.w3.org/ns/ui#Comment"/>
+                        <contents>A classifier allows the user to which classes the item belongs to,
+                given a common superclass of the allowed classes.  Give the superclass here:</contents>
+                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                    </part>
+                    <part r:parseType="Resource">
+                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                        <from r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+                        <label>superclass</label>
+                        <property r:resource="http://www.w3.org/ns/ui#category"/>
+                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sequence>
+                    </part>
+                    <part r:parseType="Resource">
+                        <r:type r:resource="http://www.w3.org/ns/ui#Comment"/>
+                        <contents>(When the choice is made normally the item s given a rdf:type. Set this to rdf:type unless
+                you want the form to set a different property.)</contents>
+                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">6</sequence>
+                    </part>
+                    <part r:parseType="Resource">
                         <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
                         <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
                         <default r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
                         <from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
                         <label>property</label>
                         <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-                        <label>category</label>
-                        <property r:resource="http://www.w3.org/ns/ui#category"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">8</sequence>
                     </part>
                 </use>
             </case>
@@ -413,6 +437,8 @@
     </r:Description>
 
     <s:Class r:about="http://www.w3.org/ns/ui#Form">
+        <s:comment>A form can be any type of single field, or typically a Group of several fields,
+    including interspersed headings and comments.  </s:comment>
         <owl:disjointUnionOf r:parseType="Resource">
             <r:first r:resource="http://www.w3.org/ns/ui#ValueField"/>
             <r:rest r:parseType="Resource">
@@ -604,7 +630,7 @@ facet of the thing.
     <r:Property r:about="http://www.w3.org/ns/ui#category">
         <s:comment>The superclass subclasses of which will be selected.</s:comment>
         <s:domain r:resource="http://www.w3.org/ns/ui#Classifier"/>
-        <s:label xml:lang="en">property</s:label>
+        <s:label xml:lang="en">overall superclass</s:label>
         <s:range r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
     </r:Property>
 
@@ -689,9 +715,10 @@ facet of the thing.
     </r:Property>
 
     <r:Property r:about="http://www.w3.org/ns/ui#property">
-        <s:comment>Many fields prompt for infromation about a given property of the subject</s:comment>
+        <s:comment>Many fields prompt for infromation about a given property of the subject.
+    When field is filled in, this gives which property is written into the data.</s:comment>
         <s:domain r:resource="http://www.w3.org/ns/ui#Form"/>
-        <s:label xml:lang="en">property</s:label>
+        <s:label xml:lang="en">property to be stored</s:label>
         <s:range r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </r:Property>
 
