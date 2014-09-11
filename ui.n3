@@ -124,12 +124,12 @@ ui:Classifier a s:Class; s:label "classifier";
     recursively select from them in turn, as many levels as needed.""".
 
 ui:property a r:Property; s:domain ui:Form; s:range r:Property;
-    s:label "property"@en;
+    s:label "property to be stored"@en;
     s:comment """Many fields prompt for infromation about a given property of the subject.
     When field is filled in, this gives which property is written into the data.""".
 
 ui:category  a r:Property; s:domain ui:Classifier; s:range s:Class;
-    s:label "property"@en;
+    s:label "overall superclass"@en;
     s:comment """The superclass subclasses of which will be selected.""".
 
 ui:dependingOn a r:Property; s:domain ui:Options; s:range r:Property;
