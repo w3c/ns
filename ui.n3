@@ -95,7 +95,9 @@ prompt  a r:Property;
 
 #  A Taxonomy of Field types
 
-ui:Form owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ui:Heading ui:Comment).
+ui:Form owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ui:Heading ui:Comment);
+    s:comment """A form can be any type of single field, or typically a Group of several fields,
+    including interspersed headings and comments.  """.
 ui:Single owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Heading ui:Comment).
 ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:ColorField ui:DateField ui:DateTimeField ui:PhoneField ui:EmailField).
 ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:IntegerField ui:DecimalField ui:FloatField).
@@ -108,9 +110,23 @@ ui:ValueField a s:Class; is s:subClassOf of  ui:TextField, ui:NumericField, ui:C
 ui:NumericField a s:Class; is s:subClassOf of ui:BooleanField, ui:IntegerField, ui:DecimalField, ui:FloatField.
 ui:TextField a s:Class; is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
 
+ui:Classifier a s:Class; s:label "classifier";
+    s:comment """A classifier allows the user to select the type of an object.
+    The possible types must be subclasses of some overall class, the "category".
+    (Ideally, the superclass is also set up as the disjoint union of the subclasses,
+    if they are disjoint.)
+    
+    The form normally stores the resulting classes using an rdf:type triple,
+    but a different predicate can be used if required, so the classifier field
+    needs is 'property' defined too.
+    
+    If the subclass selected itself is has subclasses defined, the user can 
+    recursively select from them in turn, as many levels as needed.""".
+
 ui:property a r:Property; s:domain ui:Form; s:range r:Property;
     s:label "property"@en;
-    s:comment """Many fields prompt for infromation about a given property of the subject""".
+    s:comment """Many fields prompt for infromation about a given property of the subject.
+    When field is filled in, this gives which property is written into the data.""".
 
 ui:category  a r:Property; s:domain ui:Classifier; s:range s:Class;
     s:label "property"@en;
@@ -240,8 +256,16 @@ FieldForm a ui:Group;
             ]];
 
             ui:case [ ui:for ui:Classifier; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty; ui:default r:type], # @@ restsriction
-                [ ui:sequence 2; a ui:Choice;  ui:canMintNew true; ui:property ui:category; ui:label "category"; ui:from s:Class] 
+                [ ui:sequence 2; a ui:Comment; ui:contents """A classifier allows the user to which classes the item belongs to,
+                given a common superclass of the allowed classes.  Give the superclass here:""" ],
+
+                [ ui:sequence 4; a ui:Choice;  ui:canMintNew true; ui:property ui:category; ui:label "superclass"; ui:from s:Class],
+
+                [ ui:sequence 6; a ui:Comment; ui:contents """(When the choice is made normally the item s given a rdf:type. Set this to rdf:type unless
+                you want the form to set a different property.)""" ],
+
+                [ ui:sequence 8; a ui:Choice;  ui:canMintNew true; ui:property ui:property;
+                        ui:label "property"; ui:from owl:ObjectProperty; ui:default r:type] # @@ restsriction
                 
             ]];
 
