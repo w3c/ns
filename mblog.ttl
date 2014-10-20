@@ -1,0 +1,54 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<>
+    <http://creativecommons.org/ns#attributionName> "Andrei Sambra" ;
+    <http://creativecommons.org/ns#attributionURL> <> ;
+    <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by-sa/2.0/uk/deed.en_GB> ;
+    <http://purl.org/dc/terms/issued> "2014-10-20"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    a <http://www.w3.org/2002/07/owl#Ontology> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Microblog Vocabulary"@en ;
+    <http://xmlns.com/foaf/0.1/maker> <https://deiu.rww.io/profile/card#me> .
+
+<#BlogSpace>
+    a <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A common workspace for microblog data."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ChannelSpace"@en .
+
+<#ChannelList>
+    a <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A container for channels."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "ChannelList"@en .
+
+<#Channel>
+    a <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A container for channels."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Channel"@en .
+
+<#SubscriptionList>
+    a <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A container for subscription resources."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "SubscriptionList"@en .
+
+<#Subscription>
+    a <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A subscription."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Channel"@en .
+
+<#author>
+    a rdf:Property ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "The author of a blog post."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/sioc/ns#Post> ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "author"@en .
+
+<#toChannel>
+    a rdf:Property ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates to which channel a subscription points to."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <#Subscription> ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "toChannel"@en .
