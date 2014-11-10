@@ -1,0 +1,1238 @@
+<http://www.w3.org/ns/odrl/2/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<http://www.w3.org/ns/odrl/2/> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/vocommons/voaf#Vocabulary> .
+<http://www.w3.org/ns/odrl/2/> <http://www.w3.org/2000/01/rdf-schema#label> "Open Digital Rights Language (ODRL) Ontology"@en .
+<http://www.w3.org/ns/odrl/2/> <http://www.w3.org/2002/07/owl#versionInfo> "2.1" .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/vocab/vann/preferredNamespaceUri> <http://w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/vocab/vann/preferredNamespacePrefix> "odrl" .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/vocab/vann/example> <http://www.w3.org/ns/odrl/2/Asset> .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/creator> "Mo McRoberts (BBC)" .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/creator> "V\u00EDctor Rodr\u00EDguez Doncel (OEG-UPM)" .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/issued> "2014-11-10"^^<http://www.w3.org/2001/XMLSchema#date> .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/contributor> "ODRL Community Group" .
+<http://www.w3.org/ns/odrl/2/> <http://purl.org/dc/terms/description> "The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media."@en .
+<http://www.w3.org/ns/odrl/2/ODRL21.ttl> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://www.w3.org/ns/odrl/2/ODRL21.ttl> <http://www.w3.org/2000/01/rdf-schema#label> "ODRL 2.1 (Turtle)"@en .
+<http://www.w3.org/ns/odrl/2/ODRL21.ttl> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/ODRL21.ttl> <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/ODRL21.ttl> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/turtle> .
+<http://www.w3.org/ns/odrl/2/ODRL21.rdf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://www.w3.org/ns/odrl/2/ODRL21.rdf> <http://www.w3.org/2000/01/rdf-schema#label> "ODRL 2.1 (RDF/XML)"@en .
+<http://www.w3.org/ns/odrl/2/ODRL21.rdf> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/ODRL21.rdf> <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/ODRL21.rdf> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/application/rdf+xml> .
+<http://www.w3.org/ns/odrl/2/ODRL21.xsd> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://www.w3.org/ns/odrl/2/ODRL21.xsd> <http://www.w3.org/2000/01/rdf-schema#label> "ODRL 2.1 (XML Schema Definition)"@en .
+<http://www.w3.org/ns/odrl/2/ODRL21.xsd> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/ODRL21.xsd> <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/ODRL21.xsd> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/application/xml> .
+<http://www.w3.org/ns/odrl/2/ODRL21.html> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://purl.org/dc/dcmitype/Text> .
+<http://www.w3.org/ns/odrl/2/ODRL21.html> <http://www.w3.org/2000/01/rdf-schema#label> "ODRL 2.1 (HTML)"@en .
+<http://www.w3.org/ns/odrl/2/ODRL21.html> <http://xmlns.com/foaf/0.1/primaryTopic> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/ODRL21.html> <http://purl.org/dc/terms/isVersionOf> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/ODRL21.html> <http://purl.org/dc/terms/format> <http://purl.org/NET/mediatypes/text/html> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#ConceptScheme> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2000/01/rdf-schema#label> "ODRL Actions vocabulary"@en .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/acceptTracking> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/adHocShare> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/aggregate> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/annotate> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/anonymize> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/append> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/archive> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/attachPolicy> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/attachSource> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/attribute> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/commercialize> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/concurrentUse> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/copy> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/delete> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/derive> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/display> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/distribute> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/ensureExclusivity> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/execute> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/export> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/extract> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/give> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/include> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/index> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/inform> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/install> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/lease> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/lend> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/license> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/modify> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/move> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/nextPolicy> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/obtainConsent> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/pay> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/play> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/present> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/preview> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/print> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/read> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/reproduce> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/reviewPolicy> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/secondaryUse> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/sell> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/share> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/shareAlike> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/textToSpeech> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/transform> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/translate> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/uninstall> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/watermark> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/write> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/grantUse> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/compensate> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/writeTo> .
+<http://www.w3.org/ns/odrl/2/actions> <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/ns/odrl/2/appendTo> .
+<http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/2002/07/owl#equivalentClass> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/2000/01/rdf-schema#label> "Asset"@en .
+<http://www.w3.org/ns/odrl/2/Asset> <http://www.w3.org/2000/01/rdf-schema#comment> "Asset is anything which can be subject to a policy. Asserting that something the target of a policy implies that it is an Asset."@en .
+<http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/2000/01/rdf-schema#label> "Party"@en .
+<http://www.w3.org/ns/odrl/2/Party> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity which can participate in policy transactions. Use an instance of the Party class where it's necessary to associate a Scope with the relationship; in other cases, simply reference the party directly."@en .
+<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Asset> .
+<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/2000/01/rdf-schema#label> "Policy"@en .
+<http://www.w3.org/ns/odrl/2/Policy> <http://www.w3.org/2000/01/rdf-schema#comment> "A top level entity for describing policies."@en .
+<http://www.w3.org/ns/odrl/2/ConflictTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/ConflictTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/ConflictTerm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/ConflictTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Instances of ConflictTerm describe policies for resolving conflicts."@en .
+<http://www.w3.org/ns/odrl/2/ConflictTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Conflict term"@en .
+<http://www.w3.org/ns/odrl/2/ConflictTerm> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/perm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/ConflictTerm> .
+<http://www.w3.org/ns/odrl/2/perm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/perm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/perm> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/perm> <http://www.w3.org/2000/01/rdf-schema#label> "Permissions"@en .
+<http://www.w3.org/ns/odrl/2/perm> <http://www.w3.org/2000/01/rdf-schema#comment> "Permissions take precedence over prohibitions."@en .
+<http://www.w3.org/ns/odrl/2/prohibit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/ConflictTerm> .
+<http://www.w3.org/ns/odrl/2/prohibit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/prohibit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/prohibit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/prohibit> <http://www.w3.org/2000/01/rdf-schema#label> "Prohibit"@en .
+<http://www.w3.org/ns/odrl/2/prohibit> <http://www.w3.org/2000/01/rdf-schema#comment> "Prohibitions take precedence over permissions."@en .
+<http://www.w3.org/ns/odrl/2/UndefinedTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/UndefinedTerm> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/UndefinedTerm> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/UndefinedTerm> <http://www.w3.org/2000/01/rdf-schema#comment> "Instances of UndefinedTerm describe policies for processing unsupported actions."@en .
+<http://www.w3.org/ns/odrl/2/UndefinedTerm> <http://www.w3.org/2000/01/rdf-schema#label> "Undefined values"@en .
+<http://www.w3.org/ns/odrl/2/UndefinedTerm> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/ignore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/UndefinedTerm> .
+<http://www.w3.org/ns/odrl/2/ignore> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/ignore> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/ignore> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/ignore> <http://www.w3.org/2000/01/rdf-schema#label> "Ignore"@en .
+<http://www.w3.org/ns/odrl/2/ignore> <http://www.w3.org/2000/01/rdf-schema#comment> "Undefined actions should be ignored."@en .
+<http://www.w3.org/ns/odrl/2/invalid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/ConflictTerm> .
+<http://www.w3.org/ns/odrl/2/invalid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/UndefinedTerm> .
+<http://www.w3.org/ns/odrl/2/invalid> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/invalid> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/invalid> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/invalid> <http://www.w3.org/2000/01/rdf-schema#label> "Invalid"@en .
+<http://www.w3.org/ns/odrl/2/invalid> <http://www.w3.org/2000/01/rdf-schema#comment> "The policy is invalidated."@en .
+<http://www.w3.org/ns/odrl/2/support> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/UndefinedTerm> .
+<http://www.w3.org/ns/odrl/2/support> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/support> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/support> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/support> <http://www.w3.org/2000/01/rdf-schema#label> "Support"@en .
+<http://www.w3.org/ns/odrl/2/support> <http://www.w3.org/2000/01/rdf-schema#comment> "Undefined actions do not invalidate the policy, but notification for review must occur."@en .
+<http://www.w3.org/ns/odrl/2/conflict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/conflict> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/conflict> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/conflict> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/conflict> <http://www.w3.org/2000/01/rdf-schema#label> "conflict"@en .
+<http://www.w3.org/ns/odrl/2/conflict> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a conflict-resolution mechansim to a Policy. If no mechanism is specified, the default is invalid."@en .
+<http://www.w3.org/ns/odrl/2/conflict> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/conflict> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/ConflictTerm> .
+<http://www.w3.org/ns/odrl/2/undefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/undefined> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/undefined> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/undefined> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/undefined> <http://www.w3.org/2000/01/rdf-schema#label> "undefined"@en .
+<http://www.w3.org/ns/odrl/2/undefined> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the mechanism used for handling undefined actions to a Policy. If no mechanism is specified, the default is invalid."@en .
+<http://www.w3.org/ns/odrl/2/undefined> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/undefined> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/UndefinedTerm> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/odrl/2/Action> .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/odrl/2/Permission> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid1 .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid3 <http://www.w3.org/2002/07/owl#unionOf> _:genid2 .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/2000/01/rdf-schema#label> "permission"@en .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the description of an individual Permission to a Policy. A permission can be specified either in terms of an Action alone, or an instance of Permission relating an Action and one or more other attributes."@en .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/permission> <http://www.w3.org/2000/01/rdf-schema#range> _:genid3 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/odrl/2/Action> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/odrl/2/Prohibition> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid4 .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid6 <http://www.w3.org/2002/07/owl#unionOf> _:genid5 .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/2000/01/rdf-schema#label> "prohibition"@en .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates the description of an individual Prohibition to a Policy. A prohibition can be specified either in terms of an Action alone, or an instance of Prohibition relating an Action and one or more other attributes."@en .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/prohibition> <http://www.w3.org/2000/01/rdf-schema#range> _:genid6 .
+<http://www.w3.org/ns/odrl/2/inheritAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/inheritAllowed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/inheritAllowed> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/inheritAllowed> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/inheritAllowed> <http://www.w3.org/2000/01/rdf-schema#label> "inheritance allowed"@en .
+<http://www.w3.org/ns/odrl/2/inheritAllowed> <http://www.w3.org/2000/01/rdf-schema#comment> "A boolean value indicating whether this policy can be inherited from."@en .
+<http://www.w3.org/ns/odrl/2/inheritAllowed> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/inheritAllowed> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#boolean> .
+<http://www.w3.org/ns/odrl/2/inheritFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/inheritFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/inheritFrom> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/inheritFrom> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/inheritFrom> <http://www.w3.org/2000/01/rdf-schema#label> "inherits from"@en .
+<http://www.w3.org/ns/odrl/2/inheritFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates a policy to another policy from which terms are inherited."@en .
+<http://www.w3.org/ns/odrl/2/inheritFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/inheritFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/profile> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/profile> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/profile> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/profile> <http://www.w3.org/2000/01/rdf-schema#label> "profile"@en .
+<http://www.w3.org/ns/odrl/2/profile> <http://www.w3.org/2000/01/rdf-schema#comment> "indicates the identifier of the ODRL Profile for which the policy expression conforms to"@en .
+<http://www.w3.org/ns/odrl/2/profile> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/profile> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/2000/01/rdf-schema#label> "Rule"@en .
+<http://www.w3.org/ns/odrl/2/Rule> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract common ancestor to Permissions, Prohibitions and Duties."@en .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Prohibition> .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Duty> .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#label> "Permission"@en .
+<http://www.w3.org/ns/odrl/2/Permission> <http://www.w3.org/2000/01/rdf-schema#comment> "A Permission is a rule which indicates the actions the assignee is permitted to perform on the associated asset. In other words, what the assigner (supplier) has granted to the assignee (consumer)."@en .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Duty> .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Permission> .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#label> "Prohibition"@en .
+<http://www.w3.org/ns/odrl/2/Prohibition> <http://www.w3.org/2000/01/rdf-schema#comment> "A Prohibition is a rule which indicates the Actions that the assignee is prohibited to perform on the related Asset."@en .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Prohibition> .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Permission> .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#label> "Duty"@en .
+<http://www.w3.org/ns/odrl/2/Duty> <http://www.w3.org/2000/01/rdf-schema#comment> "A Duty is a rule which indicates requirements which must be fulfilled in order to receive the permission."@en .
+<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/2000/01/rdf-schema#comment> "Instances of Action are things one might be permitted to do or prohibited from doing to a work."@en .
+<http://www.w3.org/ns/odrl/2/Action> <http://www.w3.org/2000/01/rdf-schema#label> "Action"@en .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2000/01/rdf-schema#label> "Constraint"@en .
+<http://www.w3.org/ns/odrl/2/Constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "Parent class of all Constraints."@en .
+<http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/2000/01/rdf-schema#label> "relation"@en .
+<http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/2000/01/rdf-schema#comment> "Relation is an abstract property which creates an explicit link between an Action and an Asset. Sub-properties of relation are used to define the nature of that link."@en .
+<http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/relation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Asset> .
+<http://www.w3.org/ns/odrl/2/output> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/output> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/output> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/output> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/relation> .
+<http://www.w3.org/ns/odrl/2/output> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/output> <http://www.w3.org/2000/01/rdf-schema#label> "output"@en .
+<http://www.w3.org/ns/odrl/2/output> <http://www.w3.org/2000/01/rdf-schema#comment> "The output property specifies the Asset which is created from the output of the Action."@en .
+<http://www.w3.org/ns/odrl/2/output> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/output> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Asset> .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/relation> .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#label> "target"@en .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#comment> "The target property specifies the Asset upon which the Action is performed."@en .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/target> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Asset> .
+<http://www.w3.org/ns/odrl/2/function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/function> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/function> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/function> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/function> <http://www.w3.org/2000/01/rdf-schema#label> "function"@en .
+<http://www.w3.org/ns/odrl/2/function> <http://www.w3.org/2000/01/rdf-schema#comment> "Function is an abstract property whose sub-properties define the roles which may be fulfilled by a party in relation to a Rule."@en .
+<http://www.w3.org/ns/odrl/2/function> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/function> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/2000/01/rdf-schema#label> "action"@en .
+<http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/2000/01/rdf-schema#comment> "The operation relating to the asset for which permission is being granted. A permission must include exactly one action."@en .
+<http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/action> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2000/01/rdf-schema#label> "constraint"@en .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2000/01/rdf-schema#comment> "One or more constraints which affect the validity of the Permission; e.g. if the Action play is only permitted for a certain period of time."@en .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Rule> .
+<http://www.w3.org/ns/odrl/2/constraint> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Constraint> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/odrl/2/Action> .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/ns/odrl/2/Duty> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid7 .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid9 <http://www.w3.org/2002/07/owl#unionOf> _:genid8 .
+<http://www.w3.org/ns/odrl/2/duty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/duty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/duty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/duty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/duty> <http://www.w3.org/2000/01/rdf-schema#label> "duty"@en .
+<http://www.w3.org/ns/odrl/2/duty> <http://www.w3.org/2000/01/rdf-schema#comment> "A Duty indicates requirements which must be fulfilled in order to receive the permission."@en .
+<http://www.w3.org/ns/odrl/2/duty> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Permission> .
+<http://www.w3.org/ns/odrl/2/duty> <http://www.w3.org/2000/01/rdf-schema#range> _:genid9 .
+<http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Constraint> .
+<http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2000/01/rdf-schema#label> "unit"@en .
+<http://www.w3.org/ns/odrl/2/unit> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit of measurement used for the constraint value."@en .
+<http://www.w3.org/ns/odrl/2/dataType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/dataType> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/dataType> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/dataType> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Constraint> .
+<http://www.w3.org/ns/odrl/2/dataType> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Resource> .
+<http://www.w3.org/ns/odrl/2/dataType> <http://www.w3.org/2000/01/rdf-schema#label> "unit"@en .
+<http://www.w3.org/ns/odrl/2/dataType> <http://www.w3.org/2000/01/rdf-schema#comment> "The unit of measurement used for the constraint value."@en .
+<http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/2000/01/rdf-schema#label> "operator"@en .
+<http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/2000/01/rdf-schema#comment> "The Boolean operator applied to a constraint and its operand."@en .
+<http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Constraint> .
+<http://www.w3.org/ns/odrl/2/operator> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/rightOperand> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/rightOperand> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/rightOperand> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/rightOperand> <http://www.w3.org/2000/01/rdf-schema#label> "right-operand"@en .
+<http://www.w3.org/ns/odrl/2/rightOperand> <http://www.w3.org/2000/01/rdf-schema#comment> "The operand applied to an instance of a constraint. Do not use the right-operand property directly within a Constraint. Instead, a Constraint instance must contain exactly one triple which makes use of one of the sub-properties of right-operand."@en .
+<http://www.w3.org/ns/odrl/2/rightOperand> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Constraint> .
+<http://www.w3.org/ns/odrl/2/status> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/status> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/status> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/status> <http://www.w3.org/2000/01/rdf-schema#label> "status"@en .
+<http://www.w3.org/ns/odrl/2/status> <http://www.w3.org/2000/01/rdf-schema#comment> "The current value of the constraint. The range of the status property is identical to that of the operand property selected used in the constraint."@en .
+<http://www.w3.org/ns/odrl/2/status> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/ns/odrl/2/Constraint> .
+<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/2000/01/rdf-schema#label> "Operator"@en .
+<http://www.w3.org/ns/odrl/2/Operator> <http://www.w3.org/2000/01/rdf-schema#comment> "Instances of the Operator class represent boolean operators"@en .
+<http://www.w3.org/ns/odrl/2/eq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/eq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/eq> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/eq> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/eq> <http://www.w3.org/2000/01/rdf-schema#label> "Equal to"@en .
+<http://www.w3.org/ns/odrl/2/eq> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicating that a given value equals the operand of the Constraint."@en .
+<http://www.w3.org/ns/odrl/2/gt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/gt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/gt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/gt> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/gt> <http://www.w3.org/2000/01/rdf-schema#label> "Greater than"@en .
+<http://www.w3.org/ns/odrl/2/gteq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/gteq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/gteq> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/gteq> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/gteq> <http://www.w3.org/2000/01/rdf-schema#label> "Greater than or equal to"@en .
+<http://www.w3.org/ns/odrl/2/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/hasPart> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/hasPart> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/hasPart> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/hasPart> <http://www.w3.org/2000/01/rdf-schema#label> "Has part"@en .
+<http://www.w3.org/ns/odrl/2/isA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/isA> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/isA> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/isA> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/isA> <http://www.w3.org/2000/01/rdf-schema#label> "Is a"@en .
+<http://www.w3.org/ns/odrl/2/isAllOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/isAllOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/isAllOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/isAllOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/isAllOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is all of"@en .
+<http://www.w3.org/ns/odrl/2/isAnyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/isAnyOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/isAnyOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/isAnyOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/isAnyOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is any of"@en .
+<http://www.w3.org/ns/odrl/2/isNoneOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/isNoneOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/isNoneOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/isNoneOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/isNoneOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is none of"@en .
+<http://www.w3.org/ns/odrl/2/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/isPartOf> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/isPartOf> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/isPartOf> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/isPartOf> <http://www.w3.org/2000/01/rdf-schema#label> "Is part of"@en .
+<http://www.w3.org/ns/odrl/2/lt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/lt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/lt> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/lt> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/lt> <http://www.w3.org/2000/01/rdf-schema#label> "Less than"@en .
+<http://www.w3.org/ns/odrl/2/lteq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/lteq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/lteq> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/lteq> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/lteq> <http://www.w3.org/2000/01/rdf-schema#label> "Less than or equal to"@en .
+<http://www.w3.org/ns/odrl/2/neq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Operator> .
+<http://www.w3.org/ns/odrl/2/neq> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<http://www.w3.org/ns/odrl/2/neq> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/neq> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/neq> <http://www.w3.org/2000/01/rdf-schema#label> "Not equal to"@en .
+<http://www.w3.org/ns/odrl/2/use> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/use> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/use> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/use> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/use> <http://www.w3.org/2000/01/rdf-schema#label> "Use"@en .
+<http://www.w3.org/ns/odrl/2/use> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of using the Asset."@en .
+<http://www.w3.org/ns/odrl/2/grantUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/grantUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/grantUse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/grantUse> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/grantUse> <http://www.w3.org/2000/01/rdf-schema#label> "Grant use"@en .
+<http://www.w3.org/ns/odrl/2/grantUse> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/grantUse> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of granting the use the Asset to third parties."@en .
+<http://www.w3.org/ns/odrl/2/compensate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/compensate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/compensate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/compensate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/compensate> <http://www.w3.org/2000/01/rdf-schema#label> "Compensate"@en .
+<http://www.w3.org/ns/odrl/2/compensate> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of compensating the Assigner (or other specified compensation Party) by some amount of value, if defined, for use of the Asset."@en .
+<http://www.w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/2000/01/rdf-schema#label> "Accept tracking"@en .
+<http://www.w3.org/ns/odrl/2/acceptTracking> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of accepting that the use of the asset may be recorded. The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'."@en .
+<http://www.w3.org/ns/odrl/2/aggregate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/aggregate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/aggregate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/aggregate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/aggregate> <http://www.w3.org/2000/01/rdf-schema#label> "Aggregate"@en .
+<http://www.w3.org/ns/odrl/2/aggregate> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of using the asset (or parts of it) as part of a composite collection."@en .
+<http://www.w3.org/ns/odrl/2/annotate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/annotate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/annotate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/annotate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/annotate> <http://www.w3.org/2000/01/rdf-schema#label> "Annotate"@en .
+<http://www.w3.org/ns/odrl/2/annotate> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of adding notations/commentaries to the asset."@en .
+<http://www.w3.org/ns/odrl/2/anonymize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/anonymize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/anonymize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/anonymize> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/anonymize> <http://www.w3.org/2000/01/rdf-schema#label> "Anonymize"@en .
+<http://www.w3.org/ns/odrl/2/anonymize> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of anonymising the asset."@en .
+<http://www.w3.org/ns/odrl/2/append> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/append> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/append> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/append> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/append> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.w3.org/ns/odrl/2/appendTo> .
+<http://www.w3.org/ns/odrl/2/append> <http://www.w3.org/2000/01/rdf-schema#label> "Append"@en .
+<http://www.w3.org/ns/odrl/2/append> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of adding to the end of an asset."@en .
+<http://www.w3.org/ns/odrl/2/appendTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/appendTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/appendTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/appendTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/appendTo> <http://www.w3.org/2000/01/rdf-schema#label> "Append to"@en .
+<http://www.w3.org/ns/odrl/2/appendTo> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/writeTo> .
+<http://www.w3.org/ns/odrl/2/appendTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of appending data to the Asset without modifying the Asset in any other way"@en .
+<http://www.w3.org/ns/odrl/2/archive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/archive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/archive> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/archive> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/archive> <http://www.w3.org/2000/01/rdf-schema#label> "Archive"@en .
+<http://www.w3.org/ns/odrl/2/archive> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of persistently storing the asset."@en .
+<http://www.w3.org/ns/odrl/2/archive> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/2000/01/rdf-schema#label> "Attribute"@en .
+<http://www.w3.org/ns/odrl/2/attribute> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of attributing the asset to a party."@en .
+<http://www.w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/2000/01/rdf-schema#label> "Concurrent use"@en .
+<http://www.w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of multiple concurrent use of the asset."@en .
+<http://www.w3.org/ns/odrl/2/concurrentUse> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/copy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/copy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/copy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/copy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/copy> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/ns/odrl/2/reproduce> .
+<http://www.w3.org/ns/odrl/2/copy> <http://www.w3.org/2000/01/rdf-schema#label> "Copy"@en .
+<http://www.w3.org/ns/odrl/2/copy> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making an exact reproduction of the asset."@en .
+<http://www.w3.org/ns/odrl/2/delete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/delete> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/delete> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/delete> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/delete> <http://www.w3.org/2000/01/rdf-schema#label> "Delete"@en .
+<http://www.w3.org/ns/odrl/2/delete> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of permanently removing the asset."@en .
+<http://www.w3.org/ns/odrl/2/derive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/derive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/derive> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/derive> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/derive> <http://www.w3.org/2000/01/rdf-schema#label> "Derive"@en .
+<http://www.w3.org/ns/odrl/2/derive> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of creating a new derivative asset from the asset"@en .
+<http://www.w3.org/ns/odrl/2/derive> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/ns/odrl/2/modify> .
+<http://www.w3.org/ns/odrl/2/derive> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/digitize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/digitize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/digitize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/digitize> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/digitize> <http://www.w3.org/2000/01/rdf-schema#label> "Digitize"@en .
+<http://www.w3.org/ns/odrl/2/digitize> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/digitize> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of producing a digital copy of (or otherwise digitize) the Asset from its analogue form."@en .
+<http://www.w3.org/ns/odrl/2/display> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/display> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/display> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/display> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/display> <http://www.w3.org/2000/01/rdf-schema#label> "Display"@en .
+<http://www.w3.org/ns/odrl/2/display> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making a transient visible rendering of the asset"@en .
+<http://www.w3.org/ns/odrl/2/display> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/present> .
+<http://www.w3.org/ns/odrl/2/display> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/ns/odrl/2/execute> .
+<http://www.w3.org/ns/odrl/2/distribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/distribute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/distribute> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/distribute> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/distribute> <http://www.w3.org/2000/01/rdf-schema#label> "Distribute"@en .
+<http://www.w3.org/ns/odrl/2/distribute> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of publicly distributing, displaying and/or performing the asset."@en .
+<http://www.w3.org/ns/odrl/2/distribute> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/2000/01/rdf-schema#label> "Ensure exclusivity"@en .
+<http://www.w3.org/ns/odrl/2/ensureExclusivity> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of requiring the Assigner to ensure the Permission on the asset is unique to the Assignee."@en .
+<http://www.w3.org/ns/odrl/2/execute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/execute> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/execute> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/execute> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/execute> <http://www.w3.org/2000/01/rdf-schema#label> "Execute"@en .
+<http://www.w3.org/ns/odrl/2/execute> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making a transient visible rendering of the asset."@en .
+<http://www.w3.org/ns/odrl/2/execute> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/ns/odrl/2/display> .
+<http://www.w3.org/ns/odrl/2/execute> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/export> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/export> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/export> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/export> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/export> <http://www.w3.org/2000/01/rdf-schema#label> "Export"@en .
+<http://www.w3.org/ns/odrl/2/export> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of transforming the asset into a new form."@en .
+<http://www.w3.org/ns/odrl/2/export> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/ns/odrl/2/transform> .
+<http://www.w3.org/ns/odrl/2/extract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/extract> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/extract> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/extract> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/extract> <http://www.w3.org/2000/01/rdf-schema#label> "Extract"@en .
+<http://www.w3.org/ns/odrl/2/extract> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged parts of the asset."@en .
+<http://www.w3.org/ns/odrl/2/extract> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/reproduce> .
+<http://www.w3.org/ns/odrl/2/give> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/give> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/give> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/give> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/give> <http://www.w3.org/2000/01/rdf-schema#label> "Give"@en .
+<http://www.w3.org/ns/odrl/2/give> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of giving away the asset in perpetuity without exchange of value."@en .
+<http://www.w3.org/ns/odrl/2/give> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/transfer> .
+<http://www.w3.org/ns/odrl/2/include> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/include> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/include> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/include> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/include> <http://www.w3.org/2000/01/rdf-schema#label> "Include"@en .
+<http://www.w3.org/ns/odrl/2/include> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of including other related assets to fulfill the function."@en .
+<http://www.w3.org/ns/odrl/2/index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/index> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/index> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/index> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/index> <http://www.w3.org/2000/01/rdf-schema#label> "Index"@en .
+<http://www.w3.org/ns/odrl/2/index> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of indexing the asset into a collection of assets."@en .
+<http://www.w3.org/ns/odrl/2/index> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/inform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/inform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/inform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/inform> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/inform> <http://www.w3.org/2000/01/rdf-schema#label> "Inform"@en .
+<http://www.w3.org/ns/odrl/2/inform> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of informing a party that an action has been performed on the asset."@en .
+<http://www.w3.org/ns/odrl/2/install> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/install> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/install> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/install> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/install> <http://www.w3.org/2000/01/rdf-schema#label> "Install"@en .
+<http://www.w3.org/ns/odrl/2/install> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of loading the asset onto storage device ready for operation."@en .
+<http://www.w3.org/ns/odrl/2/install> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/lease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/lease> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/lease> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/lease> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/lease> <http://www.w3.org/2000/01/rdf-schema#label> "Lease"@en .
+<http://www.w3.org/ns/odrl/2/lease> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making available the asset to a third-party for a fixed period of time with exchange of value."@en .
+<http://www.w3.org/ns/odrl/2/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/license> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/license> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/license> <http://www.w3.org/2000/01/rdf-schema#label> "License"@en .
+<http://www.w3.org/ns/odrl/2/license> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of granting the right to use the asset to a third-party."@en .
+<http://www.w3.org/ns/odrl/2/lend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/lend> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/lend> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/lend> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/lend> <http://www.w3.org/2000/01/rdf-schema#label> "Lend"@en .
+<http://www.w3.org/ns/odrl/2/lend> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making available the asset to a third-party for a fixed period of time without exchange of value."@en .
+<http://www.w3.org/ns/odrl/2/modify> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/modify> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/modify> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/modify> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/modify> <http://www.w3.org/2000/01/rdf-schema#label> "Modify"@en .
+<http://www.w3.org/ns/odrl/2/modify> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of creating a new derivative asset from the asset."@en .
+<http://www.w3.org/ns/odrl/2/modify> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/modify> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/ns/odrl/2/derive> .
+<http://www.w3.org/ns/odrl/2/move> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/move> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/move> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/move> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/move> <http://www.w3.org/2000/01/rdf-schema#label> "Move"@en .
+<http://www.w3.org/ns/odrl/2/move> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of moving the asset."@en .
+<http://www.w3.org/ns/odrl/2/move> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Next policy"@en .
+<http://www.w3.org/ns/odrl/2/nextPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of specifying an asset (which must be a Policy) as the Policy terms for third-party use of the asset."@en .
+<http://www.w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/2000/01/rdf-schema#label> "Obtain consent"@en .
+<http://www.w3.org/ns/odrl/2/obtainConsent> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of requiring explicit consent from a party to perform the action on the asset."@en .
+<http://www.w3.org/ns/odrl/2/pay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/pay> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/pay> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/pay> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/pay> <http://www.w3.org/2000/01/rdf-schema#label> "Pay"@en .
+<http://www.w3.org/ns/odrl/2/pay> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of paying a financial amount to a party for use of the asset."@en .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/2000/01/rdf-schema#label> "Play"@en .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of rendering the asset into audio and/or video form."@en .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/ns/odrl/2/present> .
+<http://www.w3.org/ns/odrl/2/play> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/present> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/present> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/present> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/present> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/present> <http://www.w3.org/2000/01/rdf-schema#label> "Present"@en .
+<http://www.w3.org/ns/odrl/2/present> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of rendering the asset into audio and/or video form."@en .
+<http://www.w3.org/ns/odrl/2/present> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/ns/odrl/2/play> .
+<http://www.w3.org/ns/odrl/2/present> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/preview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/preview> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/preview> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/preview> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/preview> <http://www.w3.org/2000/01/rdf-schema#label> "Preview"@en .
+<http://www.w3.org/ns/odrl/2/preview> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of providing a short preview of the asset."@en .
+<http://www.w3.org/ns/odrl/2/print> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/print> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/print> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/print> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/print> <http://www.w3.org/2000/01/rdf-schema#label> "Print"@en .
+<http://www.w3.org/ns/odrl/2/print> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of rendering the asset onto paper or hard copy form."@en .
+<http://www.w3.org/ns/odrl/2/print> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/present> .
+<http://www.w3.org/ns/odrl/2/read> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/read> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/read> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/read> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/read> <http://www.w3.org/2000/01/rdf-schema#label> "Read"@en .
+<http://www.w3.org/ns/odrl/2/read> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of obtaining data from the asset."@en .
+<http://www.w3.org/ns/odrl/2/read> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/reproduce> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/reproduce> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/reproduce> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/reproduce> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/reproduce> <http://www.w3.org/2000/01/rdf-schema#label> "Reproduce"@en .
+<http://www.w3.org/ns/odrl/2/reproduce> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of making an exact reproduction of the asset."@en .
+<http://www.w3.org/ns/odrl/2/reproduce> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/ns/odrl/2/copy> .
+<http://www.w3.org/ns/odrl/2/reproduce> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Review policy"@en .
+<http://www.w3.org/ns/odrl/2/reviewPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of performing a manual review of the terms associated with the asset."@en .
+<http://www.w3.org/ns/odrl/2/secondaryUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/secondaryUse> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/secondaryUse> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/secondaryUse> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/secondaryUse> <http://www.w3.org/2000/01/rdf-schema#label> "Secondary use"@en .
+<http://www.w3.org/ns/odrl/2/secondaryUse> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of using the asset for a purpose other than the purpose it was intended for."@en .
+<http://www.w3.org/ns/odrl/2/sell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/sell> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/sell> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/sell> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/sell> <http://www.w3.org/2000/01/rdf-schema#label> "Sell"@en .
+<http://www.w3.org/ns/odrl/2/sell> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of trading the asset in exchange of value."@en .
+<http://www.w3.org/ns/odrl/2/sell> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/transfer> .
+<http://www.w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/2000/01/rdf-schema#label> "Text-to-speech"@en .
+<http://www.w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of a system reading the text of the asset out loud."@en .
+<http://www.w3.org/ns/odrl/2/textToSpeech> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/transform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/transform> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/transform> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/transform> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/transform> <http://www.w3.org/2000/01/rdf-schema#label> "Transform"@en .
+<http://www.w3.org/ns/odrl/2/transform> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of transforming the asset into a new form."@en .
+<http://www.w3.org/ns/odrl/2/transform> <http://www.w3.org/2002/07/owl#sameAs> <http://www.w3.org/ns/odrl/2/export> .
+<http://www.w3.org/ns/odrl/2/transform> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/translate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/translate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/translate> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/translate> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/translate> <http://www.w3.org/2000/01/rdf-schema#label> "Translate"@en .
+<http://www.w3.org/ns/odrl/2/translate> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of translating the asset into a new natural language."@en .
+<http://www.w3.org/ns/odrl/2/translate> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/uninstall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/uninstall> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/uninstall> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/uninstall> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/uninstall> <http://www.w3.org/2000/01/rdf-schema#label> "Uninstall"@en .
+<http://www.w3.org/ns/odrl/2/uninstall> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of unloading the asset from storage device."@en .
+<http://www.w3.org/ns/odrl/2/watermark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/watermark> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/watermark> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/watermark> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/watermark> <http://www.w3.org/2000/01/rdf-schema#label> "Watermark"@en .
+<http://www.w3.org/ns/odrl/2/watermark> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of applying a watermark to the asset."@en .
+<http://www.w3.org/ns/odrl/2/write> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/write> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/write> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/write> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/write> <http://www.w3.org/2000/01/rdf-schema#label> "Write"@en .
+<http://www.w3.org/ns/odrl/2/write> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of writing to the asset."@en .
+<http://www.w3.org/ns/odrl/2/write> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.w3.org/ns/odrl/2/writeTo> .
+<http://www.w3.org/ns/odrl/2/writeTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/writeTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/writeTo> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/writeTo> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/writeTo> <http://www.w3.org/2000/01/rdf-schema#label> "Write to"@en .
+<http://www.w3.org/ns/odrl/2/writeTo> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/use> .
+<http://www.w3.org/ns/odrl/2/writeTo> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of adding data to the Asset."@en .
+<http://www.w3.org/ns/odrl/2/absolutePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/absolutePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/absolutePosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/absolutePosition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/absolutePosition> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/absolutePosition> <http://www.w3.org/2000/01/rdf-schema#label> "absolute position"@en .
+<http://www.w3.org/ns/odrl/2/absolutePosition> <http://www.w3.org/2000/01/rdf-schema#comment> "A point defined with absolute coordinates."@en .
+<http://www.w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/2000/01/rdf-schema#label> "absolute size"@en .
+<http://www.w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/2000/01/rdf-schema#comment> "The absolute dimension that the Asset may be resized."@en .
+<http://www.w3.org/ns/odrl/2/absoluteSize> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.w3.org/ns/odrl/2/count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/count> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/count> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/count> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/count> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/count> <http://www.w3.org/2000/01/rdf-schema#label> "count"@en .
+<http://www.w3.org/ns/odrl/2/count> <http://www.w3.org/2000/01/rdf-schema#comment> "The numeric count indicating the number of times the corresponding entity may be exercised"@en .
+<http://www.w3.org/ns/odrl/2/count> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#dateTime> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <http://www.w3.org/2001/XMLSchema#date> .
+_:genid11 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid10 .
+_:genid12 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid12 <http://www.w3.org/2002/07/owl#unionOf> _:genid11 .
+<http://www.w3.org/ns/odrl/2/dateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/dateTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2000/01/rdf-schema#label> "date/time"@en .
+<http://www.w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The date (and optional time and timezone) representing a point in time or period."@en .
+<http://www.w3.org/ns/odrl/2/dateTime> <http://www.w3.org/2000/01/rdf-schema#range> _:genid12 .
+<http://www.w3.org/ns/odrl/2/deliveryChannel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/deliveryChannel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/deliveryChannel> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/deliveryChannel> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/deliveryChannel> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/deliveryChannel> <http://www.w3.org/2000/01/rdf-schema#label> "delivery channel"@en .
+<http://www.w3.org/ns/odrl/2/deliveryChannel> <http://www.w3.org/2000/01/rdf-schema#comment> "The delivery channel used for storing or communicating the asset."@en .
+<http://www.w3.org/ns/odrl/2/device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/device> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/device> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/device> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/device> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/device> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/ns/odrl/2/system> .
+<http://www.w3.org/ns/odrl/2/device> <http://www.w3.org/2000/01/rdf-schema#label> "device"@en .
+<http://www.w3.org/ns/odrl/2/device> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable computing system."@en .
+<http://www.w3.org/ns/odrl/2/device> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.w3.org/ns/odrl/2/systemDevice> .
+<http://www.w3.org/ns/odrl/2/systemDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/systemDevice> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/systemDevice> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/systemDevice> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/systemDevice> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/systemDevice> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/ns/odrl/2/system> .
+<http://www.w3.org/ns/odrl/2/systemDevice> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/ns/odrl/2/device> .
+<http://www.w3.org/ns/odrl/2/systemDevice> <http://www.w3.org/2000/01/rdf-schema#label> "SystemDevice"@en .
+<http://www.w3.org/ns/odrl/2/systemDevice> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable computing system."@en .
+<http://www.w3.org/ns/odrl/2/elapsedTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/elapsedTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/elapsedTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/elapsedTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/elapsedTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/elapsedTime> <http://www.w3.org/2000/01/rdf-schema#label> "elapsed time"@en .
+<http://www.w3.org/ns/odrl/2/elapsedTime> <http://www.w3.org/2000/01/rdf-schema#comment> "A period of time in which the policy action can be exercised."@en .
+<http://www.w3.org/ns/odrl/2/elapsedTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.w3.org/ns/odrl/2/event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/event> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/event> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/event> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/event> <http://www.w3.org/2000/01/rdf-schema#label> "event"@en .
+<http://www.w3.org/ns/odrl/2/event> <http://www.w3.org/2000/01/rdf-schema#comment> "Specification of a defined event applicable to the asset usage."@en .
+<http://www.w3.org/ns/odrl/2/fileFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/fileFormat> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/fileFormat> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/fileFormat> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/fileFormat> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/fileFormat> <http://www.w3.org/2000/01/rdf-schema#label> "file format"@en .
+<http://www.w3.org/ns/odrl/2/fileFormat> <http://www.w3.org/2000/01/rdf-schema#comment> "The file format applicable to the Asset."@en .
+<http://www.w3.org/ns/odrl/2/industry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/industry> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/industry> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/industry> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/industry> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/industry> <http://www.w3.org/2000/01/rdf-schema#label> "industry"@en .
+<http://www.w3.org/ns/odrl/2/industry> <http://www.w3.org/2000/01/rdf-schema#comment> "The defined industry sector applicable to the asset usage"@en .
+<http://www.w3.org/ns/odrl/2/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/language> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/language> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/language> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/language> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/language> <http://www.w3.org/2000/01/rdf-schema#label> "language"@en .
+<http://www.w3.org/ns/odrl/2/language> <http://www.w3.org/2000/01/rdf-schema#comment> "The natural language applicable to the asset usage"@en .
+<http://www.w3.org/ns/odrl/2/media> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/media> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/media> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/media> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/media> <http://www.w3.org/2000/01/rdf-schema#label> "media"@en .
+<http://www.w3.org/ns/odrl/2/media> <http://www.w3.org/2000/01/rdf-schema#comment> "The media type in which the asset may be used."@en .
+<http://www.w3.org/ns/odrl/2/meteredTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/meteredTime> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/meteredTime> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/meteredTime> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/meteredTime> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/meteredTime> <http://www.w3.org/2000/01/rdf-schema#label> "metered time"@en .
+<http://www.w3.org/ns/odrl/2/meteredTime> <http://www.w3.org/2000/01/rdf-schema#comment> "The maximum period of metered usage time."@en .
+<http://www.w3.org/ns/odrl/2/meteredTime> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.w3.org/ns/odrl/2/payAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/payAmount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/payAmount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/payAmount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/payAmount> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/payAmount> <http://www.w3.org/2000/01/rdf-schema#label> "payment amount"@en .
+<http://www.w3.org/ns/odrl/2/payAmount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.w3.org/ns/odrl/2/percentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/percentage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/percentage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/percentage> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/percentage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/percentage> <http://www.w3.org/2000/01/rdf-schema#label> "percentage"@en .
+<http://www.w3.org/ns/odrl/2/percentage> <http://www.w3.org/2000/01/rdf-schema#comment> "The amount (as a percentage) of the action applicable to the asset."@en .
+<http://www.w3.org/ns/odrl/2/percentage> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<http://www.w3.org/ns/odrl/2/product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/product> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/product> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/product> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/product> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/product> <http://www.w3.org/2000/01/rdf-schema#label> "product"@en .
+<http://www.w3.org/ns/odrl/2/product> <http://www.w3.org/2000/01/rdf-schema#comment> "The specified Product or Service name."@en .
+<http://www.w3.org/ns/odrl/2/product> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<http://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/2000/01/rdf-schema#label> "purpose"@en .
+<http://www.w3.org/ns/odrl/2/purpose> <http://www.w3.org/2000/01/rdf-schema#comment> "Specification of a defined purpose applicable to the asset usage."@en .
+<http://www.w3.org/ns/odrl/2/recipient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/recipient> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/recipient> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/recipient> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/recipient> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/recipient> <http://www.w3.org/2000/01/rdf-schema#label> "recipient"@en .
+<http://www.w3.org/ns/odrl/2/recipient> <http://www.w3.org/2000/01/rdf-schema#comment> "The party that receives the result of the Action on the Asset."@en .
+<http://www.w3.org/ns/odrl/2/relativePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/relativePosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/relativePosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/relativePosition> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/relativePosition> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/relativePosition> <http://www.w3.org/2000/01/rdf-schema#label> "relative position"@en .
+<http://www.w3.org/ns/odrl/2/relativePosition> <http://www.w3.org/2000/01/rdf-schema#comment> "A point defined with reference to another position."@en .
+<http://www.w3.org/ns/odrl/2/relativeSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/relativeSize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/relativeSize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/relativeSize> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/relativeSize> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/relativeSize> <http://www.w3.org/2000/01/rdf-schema#label> "relative size"@en .
+<http://www.w3.org/ns/odrl/2/relativeSize> <http://www.w3.org/2000/01/rdf-schema#comment> "The relative dimension that the Asset may be resized."@en .
+<http://www.w3.org/ns/odrl/2/resolution> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/resolution> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/resolution> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/resolution> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/resolution> <http://www.w3.org/2000/01/rdf-schema#label> "resolution"@en .
+<http://www.w3.org/ns/odrl/2/resolution> <http://www.w3.org/2000/01/rdf-schema#comment> "The resolution at which the asset may be used."@en .
+<http://www.w3.org/ns/odrl/2/spatial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/spatial> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/spatial> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/spatial> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/spatial> <http://www.w3.org/2000/01/rdf-schema#label> "spatial"@en .
+<http://www.w3.org/ns/odrl/2/spatial> <http://www.w3.org/2000/01/rdf-schema#comment> "A code representing a geospatial area."@en .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/system> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.w3.org/ns/odrl/2/systemDevice> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2002/07/owl#equivalentProperty> <http://www.w3.org/ns/odrl/2/device> .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2000/01/rdf-schema#label> "system"@en .
+<http://www.w3.org/ns/odrl/2/system> <http://www.w3.org/2000/01/rdf-schema#comment> "An identifiable computing system."@en .
+<http://www.w3.org/ns/odrl/2/timeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/timeInterval> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/timeInterval> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/timeInterval> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/timeInterval> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/timeInterval> <http://www.w3.org/2000/01/rdf-schema#label> "time interval"@en .
+<http://www.w3.org/ns/odrl/2/timeInterval> <http://www.w3.org/2000/01/rdf-schema#comment> "Recurring period of time in which the usage may be exercised."@en .
+<http://www.w3.org/ns/odrl/2/timeInterval> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+<http://www.w3.org/ns/odrl/2/version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/version> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/version> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/version> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/version> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/version> <http://www.w3.org/2000/01/rdf-schema#label> "version"@en .
+<http://www.w3.org/ns/odrl/2/version> <http://www.w3.org/2000/01/rdf-schema#comment> "The scope of versions for the asset."@en .
+<http://www.w3.org/ns/odrl/2/virtualLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/virtualLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/virtualLocation> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/virtualLocation> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/virtualLocation> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/virtualLocation> <http://www.w3.org/2000/01/rdf-schema#label> "virtual location"@en .
+<http://www.w3.org/ns/odrl/2/virtualLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Specification of a digital locale."@en .
+<http://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/function> .
+<http://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/2000/01/rdf-schema#label> "assignee"@en .
+<http://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/2000/01/rdf-schema#comment> "The Party is the recipient of the policy statement."@en .
+<http://www.w3.org/ns/odrl/2/assignee> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/assigner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/assigner> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/assigner> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/assigner> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/function> .
+<http://www.w3.org/ns/odrl/2/assigner> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/assigner> <http://www.w3.org/2000/01/rdf-schema#label> "assigner"@en .
+<http://www.w3.org/ns/odrl/2/assigner> <http://www.w3.org/2000/01/rdf-schema#comment> "The Party is the issuer of the policy statement."@en .
+<http://www.w3.org/ns/odrl/2/assigner> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/attributedParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/attributedParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/attributedParty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/attributedParty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/function> .
+<http://www.w3.org/ns/odrl/2/attributedParty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/attributedParty> <http://www.w3.org/2000/01/rdf-schema#label> "attributed party"@en .
+<http://www.w3.org/ns/odrl/2/attributedParty> <http://www.w3.org/2000/01/rdf-schema#comment> "The Party to be attributed."@en .
+<http://www.w3.org/ns/odrl/2/consentingParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/consentingParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/consentingParty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/consentingParty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/function> .
+<http://www.w3.org/ns/odrl/2/consentingParty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/consentingParty> <http://www.w3.org/2000/01/rdf-schema#label> "consenting party"@en .
+<http://www.w3.org/ns/odrl/2/consentingParty> <http://www.w3.org/2000/01/rdf-schema#comment> "The Party to obtain consent from."@en .
+<http://www.w3.org/ns/odrl/2/informedParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/informedParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/informedParty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/informedParty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/function> .
+<http://www.w3.org/ns/odrl/2/informedParty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/informedParty> <http://www.w3.org/2000/01/rdf-schema#label> "informed party"@en .
+<http://www.w3.org/ns/odrl/2/informedParty> <http://www.w3.org/2000/01/rdf-schema#comment> "The Party to be informed of all uses."@en .
+<http://www.w3.org/ns/odrl/2/payeeParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/payeeParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/payeeParty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/payeeParty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/function> .
+<http://www.w3.org/ns/odrl/2/payeeParty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/payeeParty> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.w3.org/ns/odrl/2/compensatedParty> .
+<http://www.w3.org/ns/odrl/2/payeeParty> <http://www.w3.org/2000/01/rdf-schema#label> "payee party"@en .
+<http://www.w3.org/ns/odrl/2/payeeParty> <http://www.w3.org/2000/01/rdf-schema#comment> "The Party is the recipient of the payment."@en .
+<http://www.w3.org/ns/odrl/2/compensatedParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/compensatedParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/compensatedParty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/compensatedParty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/function> .
+<http://www.w3.org/ns/odrl/2/compensatedParty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/compensatedParty> <http://www.w3.org/2000/01/rdf-schema#label> "payee party"@en .
+<http://www.w3.org/ns/odrl/2/compensatedParty> <http://www.w3.org/2000/01/rdf-schema#comment> "The Party is the recipient of the compensation."@en .
+<http://www.w3.org/ns/odrl/2/trackingParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/trackingParty> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/ns/odrl/2/trackingParty> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/trackingParty> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/function> .
+<http://www.w3.org/ns/odrl/2/trackingParty> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/trackingParty> <http://www.w3.org/2000/01/rdf-schema#label> "tracking party"@en .
+<http://www.w3.org/ns/odrl/2/trackingParty> <http://www.w3.org/2000/01/rdf-schema#comment> "The Party is the usage tracker."@en .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Privacy> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Request> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Set> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Ticket> .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#label> "Agreement"@en .
+<http://www.w3.org/ns/odrl/2/Agreement> <http://www.w3.org/2000/01/rdf-schema#comment> "Policy expressions that are formal contracts (or licenses) stipulating all the terms of usage and all the parties involved."@en .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Privacy> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Request> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Set> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Ticket> .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2000/01/rdf-schema#label> "Offer"@en .
+<http://www.w3.org/ns/odrl/2/Offer> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Offer is a Policy expression that proposes terms of usage from an Asset owner."@en .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Request> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Set> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Ticket> .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2000/01/rdf-schema#label> "Privacy"@en .
+<http://www.w3.org/ns/odrl/2/Privacy> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Privacy is a Policy expression that stipulates the terms of usage over personal information."@en .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Privacy> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Set> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Ticket> .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2000/01/rdf-schema#label> "Request"@en .
+<http://www.w3.org/ns/odrl/2/Request> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Request is a Policy expression that proposes terms of usage to an Asset owner."@en .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Privacy> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Request> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Ticket> .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2000/01/rdf-schema#label> "Set"@en .
+<http://www.w3.org/ns/odrl/2/Set> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Set is a Policy expression that consists of entities from the complete model."@en .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Policy> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Agreement> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Offer> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Privacy> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Request> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2002/07/owl#disjointWith> <http://www.w3.org/ns/odrl/2/Set> .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2000/01/rdf-schema#label> "Ticket"@en .
+<http://www.w3.org/ns/odrl/2/Ticket> <http://www.w3.org/2000/01/rdf-schema#comment> "An instance of Ticket is a Policy expression that stipulates the terms of usage and is redeemable by any Party who currently holds the Ticket in their possession."@en .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/2000/01/rdf-schema#label> "All"@en .
+<http://www.w3.org/ns/odrl/2/All> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the collective individuals within a context."@en .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/2000/01/rdf-schema#label> "All second-level connections"@en .
+<http://www.w3.org/ns/odrl/2/All2ndConnections> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the second-level connections to the Party."@en .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/2000/01/rdf-schema#label> "All connections"@en .
+<http://www.w3.org/ns/odrl/2/AllConnections> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the first-level connections of the Party."@en .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/2000/01/rdf-schema#label> "All groups"@en .
+<http://www.w3.org/ns/odrl/2/AllGroups> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is all of the group connections of the Party."@en .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/2000/01/rdf-schema#label> "Group"@en .
+<http://www.w3.org/ns/odrl/2/Group> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is the defined group with multiple individual members."@en .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2000/01/rdf-schema#Class> .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/odrl/2/Party> .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "testing" .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2000/01/rdf-schema#label> "Individual"@en .
+<http://www.w3.org/ns/odrl/2/Individual> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies that the scope of the relationship is the single Party individual."@en .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.openmobilealliance.com/oma-dd/adhoc-share> .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2000/01/rdf-schema#label> "Ad-hoc sharing"@en .
+<http://www.w3.org/ns/odrl/2/adHocShare> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of sharing the asset to parties in close proximity to the owner. This action may be used to express [OMA] Sharing semantics."@en .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/extract> .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.editeur.org/onix-pl/extract-char> .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2000/01/rdf-schema#label> "Extract character"@en .
+<http://www.w3.org/ns/odrl/2/extractChar> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged character(s) from the asset."@en .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/extract> .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.editeur.org/onix-pl/extract-word> .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2000/01/rdf-schema#label> "Extract page"@en .
+<http://www.w3.org/ns/odrl/2/extractPage> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged page(s) from the asset."@en .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/extract> .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.editeur.org/onix-pl/extract-page> .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2000/01/rdf-schema#label> "Extract word"@en .
+<http://www.w3.org/ns/odrl/2/extractWord> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of extracting (replicating) unchanged word(s) from the asset."@en .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://creativecommons.org/ns#Notice> .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2000/01/rdf-schema#label> "Attach policy"@en .
+<http://www.w3.org/ns/odrl/2/attachPolicy> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of keeping the policy notice with the asset."@en .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://creativecommons.org/ns#SourceCode> .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2000/01/rdf-schema#label> "Attach source"@en .
+<http://www.w3.org/ns/odrl/2/attachSource> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of attaching the source of the asset and its derivatives."@en .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://creativecommons.org/ns#ShareAlike> .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2000/01/rdf-schema#label> "Share-alike"@en .
+<http://www.w3.org/ns/odrl/2/shareAlike> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of distributing any derivative asset under the same terms as the original asset."@en .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://creativecommons.org/ns#CommercialUse> .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2000/01/rdf-schema#label> "Commercialize"@en .
+<http://www.w3.org/ns/odrl/2/commercialize> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of using the asset in a business environment."@en .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/ns/odrl/2/Action> .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/share> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://creativecommons.org/ns#Distribution> .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2000/01/rdf-schema#label> "Share"@en .
+<http://www.w3.org/ns/odrl/2/share> <http://www.w3.org/2000/01/rdf-schema#comment> "The act of the non-commercial reproduction and distribution of the asset to third-parties."@en .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/proximity> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.openmobilealliance.com/oma-dd/proximity> .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#label> "proximity"@en .
+<http://www.w3.org/ns/odrl/2/proximity> <http://www.w3.org/2000/01/rdf-schema#comment> "An value indicating the closeness or nearness."@en .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Property> .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/ns/odrl/2/rightOperand> .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2003/06/sw-vocab-status/ns#term_status> "deprecated" .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://purl.org/net/ns/ontology-annot#deprecatedBy> <http://www.openmobilealliance.com/oma-dd/timed-count> .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#label> "timed count"@en .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#comment> "The number of seconds after which timed metering use of the asset begins."@en .
+<http://www.w3.org/ns/odrl/2/timedCount> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .

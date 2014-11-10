@@ -1,0 +1,16 @@
+URI: ODRL21
+
+URI: ODRL21.html
+Content-Type: text/html;qs=1.0
+
+URI: ODRL21.xsd
+Content-Type: application/xml;qs=0.9
+
+URI: ODRL21.ttl
+Content-Type: text/turtle;qs=0.9
+
+URI: ODRL21.nt
+Content-Type: text/plain;qs=0.8
+
+URI: ODRL21.rdf
+Content-Type: application/rdf+xml;qs=0.5
