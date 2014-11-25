@@ -46,9 +46,17 @@
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "author"@en .
 
+<#subscribedTo>
+    a rdf:Property ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Points to an identity that contains one or more channels to which a user is subscribed."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <#Subscription> ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "subscribedTo"@en .
+
 <#toChannel>
     a rdf:Property ;
     <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates to which channel a subscription points to."@en ;
     <http://www.w3.org/2000/01/rdf-schema#domain> <#Subscription> ;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "toChannel"@en .
+
