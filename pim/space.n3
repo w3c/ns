@@ -66,7 +66,7 @@ This may be used for constructing URIs for new storage resources.
 
 :workspace a rdf:Property;
     s:label "workspace"@en;
-    s:domain foaf:Agent;
+#    s:domain foaf:Agent;
     s:range :Workspace.
     
 :PrivateWorkspace s:subClassOf :Workspace;

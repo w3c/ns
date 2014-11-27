@@ -282,8 +282,7 @@
                      a :Group;
                      :part  [
                          a :Comment;
-                         :contents """A classifier allows the user to which classes the item belongs to,
-                given a common superclass of the allowed classes.  Give the superclass here:""";
+                         :contents "A classifier allows the user to which classes the item belongs to, given a common superclass of the allowed classes.  Give the superclass here:";
                          :sequence 2 ],
                              [
                          a :Choice;
@@ -294,8 +293,7 @@
                          :sequence 4 ],
                              [
                          a :Comment;
-                         :contents """(When the choice is made normally the item s given a rdf:type. Set this to rdf:type unless
-                you want the form to set a different property.)""";
+                         :contents "(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)";
                          :sequence 6 ],
                              [
                          a :Choice;
@@ -448,7 +446,7 @@ facet of the thing.
         an HTML style attribute.  This should be in the #xxxxxx form,
         (with 6 digits of hex)  so that it
         can work with Graphviz.""";
-         s:label "background colour"@en;
+         s:label "background color"@en;
          s:range :Color .
     
     :category     a r:Property;
@@ -463,7 +461,7 @@ facet of the thing.
         an HTML style attribute.  This should be in the #xxxxxx form,
         (with 6 digits of hex)  so that it
         can work with Graphviz.""";
-         s:label "colour"@en;
+         s:label "color"@en;
          s:range :Color .
     
     :creationForm     a r:Property;

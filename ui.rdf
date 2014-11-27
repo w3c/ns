@@ -356,8 +356,7 @@
                     <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
                     <part r:parseType="Resource">
                         <r:type r:resource="http://www.w3.org/ns/ui#Comment"/>
-                        <contents>A classifier allows the user to which classes the item belongs to,
-                given a common superclass of the allowed classes.  Give the superclass here:</contents>
+                        <contents>A classifier allows the user to which classes the item belongs to, given a common superclass of the allowed classes.  Give the superclass here:</contents>
                         <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
                     </part>
                     <part r:parseType="Resource">
@@ -370,8 +369,7 @@
                     </part>
                     <part r:parseType="Resource">
                         <r:type r:resource="http://www.w3.org/ns/ui#Comment"/>
-                        <contents>(When the choice is made normally the item s given a rdf:type. Set this to rdf:type unless
-                you want the form to set a different property.)</contents>
+                        <contents>(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)</contents>
                         <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">6</sequence>
                     </part>
                     <part r:parseType="Resource">
@@ -623,7 +621,7 @@ facet of the thing.
         an HTML style attribute.  This should be in the #xxxxxx form,
         (with 6 digits of hex)  so that it
         can work with Graphviz.</s:comment>
-        <s:label xml:lang="en">background colour</s:label>
+        <s:label xml:lang="en">background color</s:label>
         <s:range r:resource="http://www.w3.org/ns/ui#Color"/>
     </r:Property>
 
@@ -640,7 +638,7 @@ facet of the thing.
         an HTML style attribute.  This should be in the #xxxxxx form,
         (with 6 digits of hex)  so that it
         can work with Graphviz.</s:comment>
-        <s:label xml:lang="en">colour</s:label>
+        <s:label xml:lang="en">color</s:label>
         <s:range r:resource="http://www.w3.org/ns/ui#Color"/>
     </r:Property>
 

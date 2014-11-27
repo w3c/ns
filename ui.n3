@@ -28,7 +28,7 @@ style a r:Property, owl:DatatypeProperty;
         to distinguish information about things in that class.""".
 
 backgroundColor a r:Property, owl:DatatypeProperty;
-	s:label "background colour"@en;
+	s:label "background color"@en;
         s:range ui:Color;
 	s:comment """Must be a valid CSS color string such as one could put in
         an HTML style attribute.  This should be in the #xxxxxx form,
@@ -37,7 +37,7 @@ backgroundColor a r:Property, owl:DatatypeProperty;
 
 
 color a r:Property, owl:DatatypeProperty;
-    s:label "colour"@en;
+    s:label "color"@en;
     s:range ui:Color;
 	s:comment """Must be a valid CSS color string such as one could put in
         an HTML style attribute.  This should be in the #xxxxxx form,
@@ -256,13 +256,11 @@ FieldForm a ui:Group;
             ]];
 
             ui:case [ ui:for ui:Classifier; ui:use [a ui:Group; ui:part
-                [ ui:sequence 2; a ui:Comment; ui:contents """A classifier allows the user to which classes the item belongs to,
-                given a common superclass of the allowed classes.  Give the superclass here:""" ],
+                [ ui:sequence 2; a ui:Comment; ui:contents """A classifier allows the user to which classes the item belongs to, given a common superclass of the allowed classes.  Give the superclass here:""" ],
 
                 [ ui:sequence 4; a ui:Choice;  ui:canMintNew true; ui:property ui:category; ui:label "superclass"; ui:from s:Class],
 
-                [ ui:sequence 6; a ui:Comment; ui:contents """(When the choice is made normally the item s given a rdf:type. Set this to rdf:type unless
-                you want the form to set a different property.)""" ],
+                [ ui:sequence 6; a ui:Comment; ui:contents """(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)""" ],
 
                 [ ui:sequence 8; a ui:Choice;  ui:canMintNew true; ui:property ui:property;
                         ui:label "property"; ui:from owl:ObjectProperty; ui:default r:type] # @@ restsriction
