@@ -1,10 +1,10 @@
-URI: ldp
-
-URI: ldp.html
-Content-Type: text/html
-
-URI: ldp.rdf
-Content-Type: application/rdf+xml; qs=0.4
-
-URI: ldp.ttl
-Content-Type: text/turtle; qs=0.5
+# URI: ldp
+# 
+# URI: ldp.html
+# Content-Type: text/html
+# 
+# URI: ldp.rdf
+# Content-Type: application/rdf+xml; qs=0.4
+# 
+# URI: ldp.ttl
+# Content-Type: text/turtle; qs=0.5
