@@ -1,0 +1,78 @@
+     @prefix : <http://www.w3.org/ns/pim/schedule#> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix ui: <http://www.w3.org/ns/ui#> .
+    
+    :Ideal     a s:Class;
+         s:comment "This would be perfect for me.";
+         s:label "ideal";
+         :pain 0 .
+    
+    :Impossible     a s:Class;
+         s:comment "I really cannot do this.";
+         s:label "impossible";
+         :pain 4 .
+    
+    :Maybe     s:label "maybe";
+         ui:backgroundColor  (
+        "#ffe" ) .
+    
+    :No     s:label "no";
+         ui:backgroundColor  (
+        "#fee" ) .
+    
+    :Painful     a s:Class;
+         s:comment "This would cause acute pain or disruption";
+         s:label "painfull";
+         :pain 3 .
+    
+    :RatherNot     a s:Class;
+         s:comment "I really would rather a different choice.";
+         s:label "rather not";
+         :pain 2 .
+    
+    :Tolerable     a s:Class;
+         s:comment "I can do this, not ideal.";
+         s:label "tolerable";
+         :pain 1 .
+    
+    :Yes     s:label "yes";
+         ui:backgroundColor  (
+        "#efe" ) .
+    
+    :YesNo     a s:Class;
+         s:comment "Provides users of a poll with the simplest choice.";
+         s:label "Yes or No";
+         owl:oneOf  (
+        :No
+        :Yes ) .
+    
+    :YesNoMaybe     a s:Class;
+         s:comment "Provides users of a poll with a little uncertainty.",
+                """Provides users of a poll with a way to reflect the pain
+    or disruption which would be involved in a given choice.""";
+         s:label "Degrees of pain",
+                "Yes, No or Maybe";
+         owl:oneOf  (
+        :Impossible
+        :Painfull
+        :RatherNot
+        :Tolerable
+        :Ideal ),
+                 (
+        :No
+        :Maybe
+        :Yes ) .
+    
+    :availabilityOptions     a rdf:Property .
+    
+    :availibility     a rdf:Property;
+         s:label "availability" .
+    
+    :option     a rdf:Property;
+         s:label "possible time for event" .
+    
+    :response     a rdf:Property;
+         s:label "response" .
+    

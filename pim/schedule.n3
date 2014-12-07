@@ -1,0 +1,55 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix ical: <http://www.w3.org/2002/12/cal/ical#>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix spec: <http://www.w3.org/2002/12/cal/icalSpec#>.
+@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix org: <http://www.w3.org/2001/04/roadmap/org#>.
+@prefix sched: <http://www.w3.org/ns/pim/schedule#>.
+@prefix : <http://www.w3.org/ns/pim/schedule#>.
+
+
+# Scheduling meetings etc
+
+
+###########################
+
+:YesNo a s:Class; owl:oneOf ( :No :Yes );
+    s:label "Yes or No";
+    s:comment """Provides users of a poll with the simplest choice.""".
+
+:YesNoMaybe a s:Class; owl:oneOf ( :No :Maybe :Yes );
+    s:label "Yes, No or Maybe";
+    s:comment """Provides users of a poll with a little uncertainty.""".
+
+:Yes s:label "yes";     ui:backgroundColor("#efe").
+:No s:label "no";       ui:backgroundColor("#fee").
+:Maybe s:label "maybe"; ui:backgroundColor("#ffe").
+
+
+:YesNoMaybe a s:Class; owl:oneOf ( :Impossible :Painfull :RatherNot :Tolerable :Ideal );
+    s:label "Degrees of pain";
+    s:comment """Provides users of a poll with a way to reflect the pain
+    or disruption which would be involved in a given choice.""".
+
+:Impossible a s:Class; s:label "impossible"; s:comment "I really cannot do this."; :pain 4 .
+:Painful a s:Class; s:label "painfull"; s:comment "This would cause acute pain or disruption"; :pain 3.
+:RatherNot a s:Class; s:label "rather not"; s:comment "I really would rather a different choice."; :pain 2 .
+:Tolerable a s:Class; s:label "tolerable"; s:comment "I can do this, not ideal."; :pain 1 .
+:Ideal a s:Class; s:label "ideal"; s:comment "This would be perfect for me."; :pain 0 .
+
+
+
+sched:availabilityOptions a rdf:Property.
+
+sched:option a rdf:Property; s:label "possible time for event".
+
+sched:availibility a rdf:Property; s:label "availability".
+
+# Paired with a ical:dtstart in a response.
+
+
+sched:response a rdf:Property; s:label "response".
+
