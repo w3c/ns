@@ -101,15 +101,15 @@ SkateSkiing a s:Class; s:label "skate-skiing"; s:subClassOf Activity.
 Skating a s:Class; s:label "skating"; s:subClassOf Activity.
 Transport a s:Class; s:label "transport"; s:subClassOf Activity.
 
-TrainTrip a s:Class; s:label "train trip", s:subClassOf Transport.
-TramTrip a s:Class; s:label "tram trip", s:subClassOf Transport.
-Flight a s:Class; s:label "flight", s:subClassOf Transport.
-CarRide a s:Class; s:label "car ride", s:subClassOf Transport.
-BoatRide a s:Class; s:label "boat ride", s:subClassOf Transport.
-BusRide a s:Class; s:label "bus ride", s:subClassOf Transport.
-TaxiRide a s:Class; s:label "taxi ride", s:subClassOf Transport.
-UndergroundRide a s:Class; s:label "metro ride", s:subClassOf Transport.
-SkiLiftRide a s:Class; s:label "ski lift ride", s:subClassOf Transport.
+TrainTrip a s:Class; s:label "train trip"; s:subClassOf Transport.
+TramTrip a s:Class; s:label "tram trip"; s:subClassOf Transport.
+Flight a s:Class; s:label "flight"; s:subClassOf Transport.
+CarRide a s:Class; s:label "car ride"; s:subClassOf Transport.
+BoatRide a s:Class; s:label "boat ride"; s:subClassOf Transport.
+BusRide a s:Class; s:label "bus ride"; s:subClassOf Transport.
+TaxiRide a s:Class; s:label "taxi ride"; s:subClassOf Transport.
+UndergroundRide a s:Class; s:label "metro ride"; s:subClassOf Transport.
+SkiLiftRide a s:Class; s:label "ski lift ride"; s:subClassOf Transport.
 
 
 Cardio a s:Class; s:label "cardio"; s:subClassOf Activity.
