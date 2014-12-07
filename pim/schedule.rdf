@@ -8,58 +8,76 @@
     xmlns:sched="http://www.w3.org/ns/pim/schedule#"
     xmlns:ui="http://www.w3.org/ns/ui#">
 
+    <Class rdf:about="http://www.w3.org/ns/pim/schedule#DegreesOfDifficulty">
+        <comment>Provides users of a poll with a way to reflect the difficulty, pain
+    or disruption which would be involved in a given choice.</comment>
+        <label>Degrees of difficulty</label>
+        <owl:oneOf rdf:parseType="Resource">
+            <rdf:first rdf:resource="http://www.w3.org/ns/pim/schedule#Impossible"/>
+            <rdf:rest rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.w3.org/ns/pim/schedule#Painfull"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.w3.org/ns/pim/schedule#Difficult"/>
+                    <rdf:rest rdf:parseType="Resource">
+                        <rdf:first rdf:resource="http://www.w3.org/ns/pim/schedule#Tolerable"/>
+                        <rdf:rest rdf:parseType="Resource">
+                            <rdf:first rdf:resource="http://www.w3.org/ns/pim/schedule#Ideal"/>
+                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        </rdf:rest>
+                    </rdf:rest>
+                </rdf:rest>
+            </rdf:rest>
+        </owl:oneOf>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/schedule#Difficult">
+        <comment>I would rather a different choice.</comment>
+        <label>difficult</label>
+        <sched:pain rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sched:pain>
+        <ui:backgroundColor>#efe</ui:backgroundColor>
+    </Class>
+
     <Class rdf:about="http://www.w3.org/ns/pim/schedule#Ideal">
         <comment>This would be perfect for me.</comment>
         <label>ideal</label>
         <sched:pain rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sched:pain>
+        <ui:backgroundColor>#dfd</ui:backgroundColor>
     </Class>
 
     <Class rdf:about="http://www.w3.org/ns/pim/schedule#Impossible">
         <comment>I really cannot do this.</comment>
         <label>impossible</label>
         <sched:pain rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sched:pain>
+        <ui:backgroundColor>#fdd</ui:backgroundColor>
     </Class>
 
     <rdf:Description rdf:about="http://www.w3.org/ns/pim/schedule#Maybe">
         <label>maybe</label>
-        <ui:backgroundColor rdf:parseType="Resource">
-            <rdf:first>#ffe</rdf:first>
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </ui:backgroundColor>
+        <ui:backgroundColor>#ffe</ui:backgroundColor>
     </rdf:Description>
 
     <rdf:Description rdf:about="http://www.w3.org/ns/pim/schedule#No">
         <label>no</label>
-        <ui:backgroundColor rdf:parseType="Resource">
-            <rdf:first>#fee</rdf:first>
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </ui:backgroundColor>
+        <ui:backgroundColor>#fee</ui:backgroundColor>
     </rdf:Description>
 
     <Class rdf:about="http://www.w3.org/ns/pim/schedule#Painful">
-        <comment>This would cause acute pain or disruption</comment>
+        <comment>This would cause acute disruption</comment>
         <label>painfull</label>
         <sched:pain rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sched:pain>
-    </Class>
-
-    <Class rdf:about="http://www.w3.org/ns/pim/schedule#RatherNot">
-        <comment>I really would rather a different choice.</comment>
-        <label>rather not</label>
-        <sched:pain rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sched:pain>
+        <ui:backgroundColor>#fee</ui:backgroundColor>
     </Class>
 
     <Class rdf:about="http://www.w3.org/ns/pim/schedule#Tolerable">
         <comment>I can do this, not ideal.</comment>
         <label>tolerable</label>
         <sched:pain rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sched:pain>
+        <ui:backgroundColor>#efe</ui:backgroundColor>
     </Class>
 
     <rdf:Description rdf:about="http://www.w3.org/ns/pim/schedule#Yes">
         <label>yes</label>
-        <ui:backgroundColor rdf:parseType="Resource">
-            <rdf:first>#efe</rdf:first>
-            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </ui:backgroundColor>
+        <ui:backgroundColor>#efe</ui:backgroundColor>
     </rdf:Description>
 
     <Class rdf:about="http://www.w3.org/ns/pim/schedule#YesNo">
@@ -76,26 +94,7 @@
 
     <Class rdf:about="http://www.w3.org/ns/pim/schedule#YesNoMaybe">
         <comment>Provides users of a poll with a little uncertainty.</comment>
-        <comment>Provides users of a poll with a way to reflect the pain
-    or disruption which would be involved in a given choice.</comment>
-        <label>Degrees of pain</label>
         <label>Yes, No or Maybe</label>
-        <owl:oneOf rdf:parseType="Resource">
-            <rdf:first rdf:resource="http://www.w3.org/ns/pim/schedule#Impossible"/>
-            <rdf:rest rdf:parseType="Resource">
-                <rdf:first rdf:resource="http://www.w3.org/ns/pim/schedule#Painfull"/>
-                <rdf:rest rdf:parseType="Resource">
-                    <rdf:first rdf:resource="http://www.w3.org/ns/pim/schedule#RatherNot"/>
-                    <rdf:rest rdf:parseType="Resource">
-                        <rdf:first rdf:resource="http://www.w3.org/ns/pim/schedule#Tolerable"/>
-                        <rdf:rest rdf:parseType="Resource">
-                            <rdf:first rdf:resource="http://www.w3.org/ns/pim/schedule#Ideal"/>
-                            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-                        </rdf:rest>
-                    </rdf:rest>
-                </rdf:rest>
-            </rdf:rest>
-        </owl:oneOf>
         <owl:oneOf rdf:parseType="Resource">
             <rdf:first rdf:resource="http://www.w3.org/ns/pim/schedule#No"/>
             <rdf:rest rdf:parseType="Resource">

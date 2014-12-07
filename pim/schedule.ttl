@@ -1,78 +1,82 @@
-     @prefix : <http://www.w3.org/ns/pim/schedule#> .
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
     @prefix owl: <http://www.w3.org/2002/07/owl#> .
     @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-    @prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix sched: <http://www.w3.org/ns/pim/schedule#> .
     @prefix ui: <http://www.w3.org/ns/ui#> .
     
-    :Ideal     a s:Class;
-         s:comment "This would be perfect for me.";
-         s:label "ideal";
-         :pain 0 .
-    
-    :Impossible     a s:Class;
-         s:comment "I really cannot do this.";
-         s:label "impossible";
-         :pain 4 .
-    
-    :Maybe     s:label "maybe";
-         ui:backgroundColor  (
-        "#ffe" ) .
-    
-    :No     s:label "no";
-         ui:backgroundColor  (
-        "#fee" ) .
-    
-    :Painful     a s:Class;
-         s:comment "This would cause acute pain or disruption";
-         s:label "painfull";
-         :pain 3 .
-    
-    :RatherNot     a s:Class;
-         s:comment "I really would rather a different choice.";
-         s:label "rather not";
-         :pain 2 .
-    
-    :Tolerable     a s:Class;
-         s:comment "I can do this, not ideal.";
-         s:label "tolerable";
-         :pain 1 .
-    
-    :Yes     s:label "yes";
-         ui:backgroundColor  (
-        "#efe" ) .
-    
-    :YesNo     a s:Class;
-         s:comment "Provides users of a poll with the simplest choice.";
-         s:label "Yes or No";
-         owl:oneOf  (
-        :No
-        :Yes ) .
-    
-    :YesNoMaybe     a s:Class;
-         s:comment "Provides users of a poll with a little uncertainty.",
-                """Provides users of a poll with a way to reflect the pain
+    sched:DegreesOfDifficulty     a :Class;
+         :comment """Provides users of a poll with a way to reflect the difficulty, pain
     or disruption which would be involved in a given choice.""";
-         s:label "Degrees of pain",
-                "Yes, No or Maybe";
+         :label "Degrees of difficulty";
          owl:oneOf  (
-        :Impossible
-        :Painfull
-        :RatherNot
-        :Tolerable
-        :Ideal ),
-                 (
-        :No
-        :Maybe
-        :Yes ) .
+        sched:Impossible
+        sched:Painfull
+        sched:Difficult
+        sched:Tolerable
+        sched:Ideal ) .
     
-    :availabilityOptions     a rdf:Property .
+    sched:Difficult     a :Class;
+         :comment "I would rather a different choice.";
+         :label "difficult";
+         sched:pain 2;
+         ui:backgroundColor "#efe" .
     
-    :availibility     a rdf:Property;
-         s:label "availability" .
+    sched:Ideal     a :Class;
+         :comment "This would be perfect for me.";
+         :label "ideal";
+         sched:pain 0;
+         ui:backgroundColor "#dfd" .
     
-    :option     a rdf:Property;
-         s:label "possible time for event" .
+    sched:Impossible     a :Class;
+         :comment "I really cannot do this.";
+         :label "impossible";
+         sched:pain 4;
+         ui:backgroundColor "#fdd" .
     
-    :response     a rdf:Property;
-         s:label "response" .
+    sched:Maybe     :label "maybe";
+         ui:backgroundColor "#ffe" .
+    
+    sched:No     :label "no";
+         ui:backgroundColor "#fee" .
+    
+    sched:Painful     a :Class;
+         :comment "This would cause acute disruption";
+         :label "painfull";
+         sched:pain 3;
+         ui:backgroundColor "#fee" .
+    
+    sched:Tolerable     a :Class;
+         :comment "I can do this, not ideal.";
+         :label "tolerable";
+         sched:pain 1;
+         ui:backgroundColor "#efe" .
+    
+    sched:Yes     :label "yes";
+         ui:backgroundColor "#efe" .
+    
+    sched:YesNo     a :Class;
+         :comment "Provides users of a poll with the simplest choice.";
+         :label "Yes or No";
+         owl:oneOf  (
+        sched:No
+        sched:Yes ) .
+    
+    sched:YesNoMaybe     a :Class;
+         :comment "Provides users of a poll with a little uncertainty.";
+         :label "Yes, No or Maybe";
+         owl:oneOf  (
+        sched:No
+        sched:Maybe
+        sched:Yes ) .
+    
+    sched:availabilityOptions     a rdf:Property .
+    
+    sched:availibility     a rdf:Property;
+         :label "availability" .
+    
+    sched:option     a rdf:Property;
+         :label "possible time for event" .
+    
+    sched:response     a rdf:Property;
+         :label "response" .
     

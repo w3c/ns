@@ -24,21 +24,21 @@
     s:label "Yes, No or Maybe";
     s:comment """Provides users of a poll with a little uncertainty.""".
 
-:Yes s:label "yes";     ui:backgroundColor("#efe").
-:No s:label "no";       ui:backgroundColor("#fee").
-:Maybe s:label "maybe"; ui:backgroundColor("#ffe").
+:Yes s:label "yes";     ui:backgroundColor "#efe" .
+:No s:label "no";       ui:backgroundColor "#fee" .
+:Maybe s:label "maybe"; ui:backgroundColor "#ffe" .
 
 
-:YesNoMaybe a s:Class; owl:oneOf ( :Impossible :Painfull :RatherNot :Tolerable :Ideal );
-    s:label "Degrees of pain";
-    s:comment """Provides users of a poll with a way to reflect the pain
+:DegreesOfDifficulty a s:Class; owl:oneOf ( :Impossible :Painfull :Difficult :Tolerable :Ideal );
+    s:label "Degrees of difficulty";
+    s:comment """Provides users of a poll with a way to reflect the difficulty, pain
     or disruption which would be involved in a given choice.""".
 
-:Impossible a s:Class; s:label "impossible"; s:comment "I really cannot do this."; :pain 4 .
-:Painful a s:Class; s:label "painfull"; s:comment "This would cause acute pain or disruption"; :pain 3.
-:RatherNot a s:Class; s:label "rather not"; s:comment "I really would rather a different choice."; :pain 2 .
-:Tolerable a s:Class; s:label "tolerable"; s:comment "I can do this, not ideal."; :pain 1 .
-:Ideal a s:Class; s:label "ideal"; s:comment "This would be perfect for me."; :pain 0 .
+:Impossible a s:Class; s:label "impossible"; s:comment "I really cannot do this."; :pain 4 ;     ui:backgroundColor "#fdd" .
+:Painful a s:Class; s:label "painfull"; s:comment "This would cause acute disruption"; :pain 3;     ui:backgroundColor "#fee" .
+:Difficult a s:Class; s:label "difficult"; s:comment "I would rather a different choice."; :pain 2 ;     ui:backgroundColor "#efe" .
+:Tolerable a s:Class; s:label "tolerable"; s:comment "I can do this, not ideal."; :pain 1 ;     ui:backgroundColor "#efe" .
+:Ideal a s:Class; s:label "ideal"; s:comment "This would be perfect for me."; :pain 0 ;     ui:backgroundColor "#dfd" .
 
 
 
