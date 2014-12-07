@@ -11,7 +11,7 @@
 :Snapshot a s:Class; s:label "snapshot";
     s:comment """A snapshot represents the state of the I/O pins of an Arduino""".
 
-:state a rdf:Property; s:
+:state a rdf:Property; s:label "state".
 
 :alalogInput a s:Class; s:subClassOf rdf:Property.
 :digitalPin a s:Class; s:subClassOf rdf:Property.

@@ -1,0 +1,131 @@
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix a: <http://www.w3.org/ns/pim/arduino#> .
+    @prefix dc: <http://purl.org/dc/elements/1.1/> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    
+    <>     a owl:Ontology;
+         dc:title "A simple arduino I/O vocabulary" .
+    
+    a:Snapshot     a :Class;
+         :comment "A snapshot represents the state of the I/O pins of an Arduino";
+         :label "snapshot" .
+    
+    a:a0     a rdf:Property;
+         :domain a:Snapshot;
+         :label "analog input 0";
+         :range xsd:integer;
+         a:pin 0 .
+    
+    a:a1     a rdf:Property;
+         :domain a:Snapshot;
+         :label "analog input 1";
+         :range xsd:integer;
+         a:pin 0 .
+    
+    a:a2     a rdf:Property;
+         :domain a:Snapshot;
+         :label "analog input 2";
+         :range xsd:integer;
+         a:pin 0 .
+    
+    a:a3     a rdf:Property;
+         :domain a:Snapshot;
+         :label "analog input 3";
+         :range xsd:integer;
+         a:pin 0 .
+    
+    a:a4     a rdf:Property;
+         :domain a:Snapshot;
+         :label "analog input 4";
+         :range xsd:integer;
+         a:pin 0 .
+    
+    a:a6     a rdf:Property;
+         :domain a:Snapshot;
+         :label "analog input 5";
+         :range xsd:integer;
+         a:pin 0 .
+    
+    a:alalogInput     a :Class;
+         :subClassOf rdf:Property .
+    
+    a:d0     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 0";
+         :range xsd:integer;
+         a:pin 0 .
+    
+    a:d1     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 1";
+         :range xsd:integer;
+         a:pin 1 .
+    
+    a:d10     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 10";
+         :range xsd:integer;
+         a:pin 10 .
+    
+    a:d11     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 11";
+         :range xsd:integer;
+         a:pin 11 .
+    
+    a:d2     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 2";
+         :range xsd:integer;
+         a:pin 2 .
+    
+    a:d3     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 3";
+         :range xsd:integer;
+         a:pin 3 .
+    
+    a:d4     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 4";
+         :range xsd:integer;
+         a:pin 4 .
+    
+    a:d5     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 5";
+         :range xsd:integer;
+         a:pin 5 .
+    
+    a:d6     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 6";
+         :range xsd:integer;
+         a:pin 6 .
+    
+    a:d7     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 7";
+         :range xsd:integer;
+         a:pin 7 .
+    
+    a:d8     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 8";
+         :range xsd:integer;
+         a:pin 8 .
+    
+    a:d9     a rdf:Property;
+         :domain a:Snapshot;
+         :label "digital pin 0";
+         :range xsd:integer;
+         a:pin 9 .
+    
+    a:digitalPin     a :Class;
+         :subClassOf rdf:Property .
+    
+    a:state     a rdf:Property;
+         :label "state" .
+    
