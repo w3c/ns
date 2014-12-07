@@ -1,0 +1,284 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:doc="http://www.w3.org/2000/10/swap/pim/doc#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdf:Description rdf:about="">
+        <comment>This ontology is for use in describing 
+for fitness records.  Inspired by the anual
+getfit.mit.edu system which oly runs for a few weeks,
+but records exercise sessions.
+</comment>
+        <seeAlso rdf:resource="http://www.w3.org/2002/12/cal/ical"/>
+        <doc:version>$Id$</doc:version>
+    </rdf:Description>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Activity">
+        <label>activity</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Excercise"/>
+        <owl:disjointUnionOf rdf:parseType="Resource">
+            <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#Walking"/>
+            <rdf:rest rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#Cycling"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#Running"/>
+                    <rdf:rest rdf:parseType="Resource">
+                        <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#XCSkiing"/>
+                        <rdf:rest rdf:parseType="Resource">
+                            <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#DownhillSkiing"/>
+                            <rdf:rest rdf:parseType="Resource">
+                                <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#SkateSkiing"/>
+                                <rdf:rest rdf:parseType="Resource">
+                                    <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#Skating"/>
+                                    <rdf:rest rdf:parseType="Resource">
+                                        <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#Cardio"/>
+                                        <rdf:rest rdf:parseType="Resource">
+                                            <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#Weights"/>
+                                            <rdf:rest rdf:parseType="Resource">
+                                                <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#Yoga"/>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:rest>
+                                        </rdf:rest>
+                                    </rdf:rest>
+                                </rdf:rest>
+                            </rdf:rest>
+                        </rdf:rest>
+                    </rdf:rest>
+                </rdf:rest>
+            </rdf:rest>
+        </owl:disjointUnionOf>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#BoatRide">
+        <label>boat ride</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Transport"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#BusRide">
+        <label>bus ride</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Transport"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#CarRide">
+        <label>car ride</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Transport"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Cardio">
+        <label>cardio</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Cycling">
+        <label>cycling</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#DownhillSkiing">
+        <label>downhill skiing</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Excericise">
+        <label>excercise session</label>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#FitnessLog">
+        <comment>This is a cenral class of thing to start at.
+    It can have various different things added to it.</comment>
+        <label>fitness log</label>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Flight">
+        <label>flight</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Transport"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#High">
+        <label>haut</label>
+        <label xml:lang="en">high</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Intensity"/>
+    </Class>
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/pim/fit#Intensity">
+        <label xml:lang="en">Intensity</label>
+        <label xml:lang="fr">Intensité</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Excercise"/>
+        <owl:disjointUnionOf rdf:parseType="Resource">
+            <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#High"/>
+            <rdf:rest rdf:parseType="Resource">
+                <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#Medium"/>
+                <rdf:rest rdf:parseType="Resource">
+                    <rdf:first rdf:resource="http://www.w3.org/ns/pim/fit#Low"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </rdf:rest>
+            </rdf:rest>
+        </owl:disjointUnionOf>
+    </rdf:Description>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Low">
+        <label xml:lang="fr">bas</label>
+        <label xml:lang="en">low</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Intensity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Medium">
+        <label xml:lang="en">medium</label>
+        <label xml:lang="fr">moyen</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Intensity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Record">
+        <comment>A record of information about a person.</comment>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Running">
+        <label>running</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#SkateSkiing">
+        <label>skate-skiing</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Skating">
+        <label>skating</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#SkiLiftRide">
+        <label>ski lift ride</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Transport"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#TaxiRide">
+        <label>taxi ride</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Transport"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#TrainTrip">
+        <label>train trip</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Transport"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#TramTrip">
+        <label>tram trip</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Transport"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Transport">
+        <label>transport</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#UndergroundRide">
+        <label>metro ride</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Transport"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Walking">
+        <label>walking</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Weights">
+        <label>weights</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#XCSkiing">
+        <label>cross-country skiing</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+    </Class>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/fit#Yoga">
+        <label>yoga</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/fit#Activity"/>
+    </Class>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#bloodPressureDiastolic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment>Blood pressure (the 76 in "117 over 76"). Units: millimeters of mercury.
+        A property not of a person, but of a dated record about a person</comment>
+        <domain rdf:resource="http://www.w3.org/ns/pim/fit#Record"/>
+        <label xml:lang="en">BP (dia) /mmHg</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#bloodPressureSystolic">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment>Blood pressure (the 117 in "117 over 76"). Units: millimeters of mercury.
+         A property not of a person, but of a dated record about a person</comment>
+        <domain rdf:resource="http://www.w3.org/ns/pim/fit#Record"/>
+        <label xml:lang="en">BP (sys) /mmHg</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#calories">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment>The energy burn as typically mesured in 'dietary Calories',
+    each of which is 1000 thermochemical calories, or 4.18 kJ.</comment>
+        <label>calories</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#distance">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment>Distance in meters</comment>
+        <label>distance (m)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#duration">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment>Duration in seconds</comment>
+        <label>duration (s)</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#energyBurn_kJ">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <label>energy burned/kJ</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#exercise">
+        <comment>The relationship between a fitnes log and an exercise session</comment>
+        <label>excercise session</label>
+        <range rdf:resource="http://www.w3.org/ns/pim/fit#Excericise"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#fitnessLog">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <domain rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/fit#FitnessLog"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#meanSpeed_kmph">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment>The mean speed over the activity in km/h</comment>
+        <label>av. speed  (km/h)</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#record">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+        <comment>The relationship between a fitness log and one record in it.
+    The reading is about the subject of the log.</comment>
+        <label xml:lang="en">reading</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#weight">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <comment>A property not of a person, but of a dated record
+            about a person</comment>
+        <domain rdf:resource="http://www.w3.org/ns/pim/fit#Record"/>
+        <label xml:lang="fr">poids/kg</label>
+        <label xml:lang="en">weight/kg</label>
+        <range rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+    </rdf:Property>
+</rdf:RDF>

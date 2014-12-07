@@ -1,0 +1,109 @@
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix noaa: <http://www.w3.org/ns/pim/noaa#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    
+    <>     :comment """Ontology for data available by e.g. email request from http://www.ncdc.noaa.gov/cdo-web/datasets#GHCND
+
+Data Types:
+
+AWND - Average daily wind speed (tenths of meters per second)
+SNOW - Snowfall (mm)
+WT08 - Smoke or haze 
+PGTM - Peak gust time (hours and minutes, i.e., HHMM)
+TMIN - Minimum temperature (tenths of degrees C)
+WESF - Water equivalent of snowfall (tenths of mm)
+WDF5 - Direction of fastest 5-second wind (degrees)
+TMAX - Maximum temperature (tenths of degrees C)
+WESD - Water equivalent of snow on the ground (tenths of mm)
+SNWD - Snow depth (mm)
+WDF2 - Direction of fastest 2-minute wind (degrees)
+PRCP - Precipitation (tenths of mm)
+WSF5 - Fastest 5-second wind speed (tenths of meters per second)
+WSF2 - Fastest 2-minute wind speed (tenths of meters per second)
+TOBS - Temperature at the time of observation (tenths of degrees C)
+WT02 - Heavy fog or heaving freezing fog (not always distinguished from fog)
+WT01 - Fog, ice fog, or freezing fog (may include heavy fog)
+""" .
+    
+    noaa:aWND     a rdf:Property;
+         :comment "Average daily wind speed (tenths of meters per second)";
+         :label "AWND" .
+    
+    noaa:dATE     a rdf:Property;
+         :label "DATE" .
+    
+    noaa:eLEVATION     a rdf:Property;
+         :label "ELEVATION" .
+    
+    noaa:lATITUDE     a rdf:Property;
+         :label "lattitude" .
+    
+    noaa:lONGITUDE     a rdf:Property;
+         :label "longitude" .
+    
+    noaa:measurement_Flag     a rdf:Property;
+         :label "Measurement Flag" .
+    
+    noaa:pGTM     a rdf:Property;
+         :label "PGTM" .
+    
+    noaa:pRCP     a rdf:Property;
+         :label "PRCP" .
+    
+    noaa:quality_Flag     a rdf:Property;
+         :label "Quality Flag" .
+    
+    noaa:sNOW     a rdf:Property;
+         :label "SNOW" .
+    
+    noaa:sNWD     a rdf:Property;
+         :label "SNWD" .
+    
+    noaa:sTATION     a rdf:Property;
+         :label "STATION" .
+    
+    noaa:sTATION_NAME     a rdf:Property;
+         :label "STATION_NAME" .
+    
+    noaa:source_Flag     a rdf:Property;
+         :label "Source Flag" .
+    
+    noaa:tMAX     a rdf:Property;
+         :label "Tmax" .
+    
+    noaa:tMIN     a rdf:Property;
+         :label "Tmin" .
+    
+    noaa:tOBS     a rdf:Property;
+         :label "TOBS" .
+    
+    noaa:time_of_Observation     a rdf:Property;
+         :label "Time of Observation" .
+    
+    noaa:wDF2     a rdf:Property;
+         :label "WDF2" .
+    
+    noaa:wDF5     a rdf:Property;
+         :label "WDF5" .
+    
+    noaa:wESD     a rdf:Property;
+         :label "WESD" .
+    
+    noaa:wESF     a rdf:Property;
+         :label "WESF" .
+    
+    noaa:wSF2     a rdf:Property;
+         :label "WSF2" .
+    
+    noaa:wSF5     a rdf:Property;
+         :label "WSF5" .
+    
+    noaa:wT01     a rdf:Property;
+         :label "WT01" .
+    
+    noaa:wT02     a rdf:Property;
+         :label "WT02" .
+    
+    noaa:wT08     a rdf:Property;
+         :label "WT08" .
+    

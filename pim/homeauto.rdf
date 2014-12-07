@@ -1,0 +1,24 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdf:Description rdf:about="">
+        <dc:title>Home Automation ontology</dc:title>
+        <comment>Ontology for home automation control
+
+This ontology is desiged for data to do with the
+control and sense and automation of the systems 
+within a home (or other establishment).
+</comment>
+    </rdf:Description>
+
+    <rdf:Property rdf:about="#dutyCycle">
+        <comment>In a given period for a given device (such as a furnace),
+    the proportion of the time it was operational. Between 0 and 1 inclusive</comment>
+        <label>duty cycle</label>
+    </rdf:Property>
+</rdf:RDF>

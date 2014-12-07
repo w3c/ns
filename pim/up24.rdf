@@ -1,0 +1,188 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <owl:Ontology rdf:about="">
+        <dc:title>Ontology for faily fitness sumary from e.g. the UP24 armband data</dc:title>
+    </owl:Ontology>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#age">
+        <comment>years </comment>
+        <label>age</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#bmr">
+        <comment>Body Mass ratio including other things (age?) ??</comment>
+        <label>bmr</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#body_fat">
+        <comment> </comment>
+        <label>body_fat</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#dATE">
+        <comment>YYYMMDD format </comment>
+        <label>DATE</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#gender">
+        <comment> Integer, 0 = Male </comment>
+        <label>gender</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#height">
+        <comment>(meters) </comment>
+        <label>height</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#m_active_time">
+        <comment> (seconds) </comment>
+        <label>m_active_time</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#m_calories">
+        <comment> (units?)</comment>
+        <label>m_calories</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#m_distance">
+        <comment>meters </comment>
+        <label>m_distance</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#m_inactive_time">
+        <comment> seconds</comment>
+        <label>m_inactive_time</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#m_lcat">
+        <comment> </comment>
+        <label>m_lcat</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#m_lcit">
+        <comment> </comment>
+        <label>m_lcit</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#m_steps">
+        <comment> </comment>
+        <label>m_steps</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#m_total_calories">
+        <label>m_total_calories</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#m_workout_count">
+        <label>m_workout_count</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#m_workout_time">
+        <label>m_workout_time</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#n_asleep_time">
+        <label>Nap asleep_time</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#n_awake">
+        <comment> seconds</comment>
+        <label>nap awake</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#n_awake_time">
+        <comment>seconds </comment>
+        <label>nap awake_time</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#n_awakenings">
+        <comment>Float but should logically be integer - how many times woke up in sleep mode </comment>
+        <label>nap awakenings</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#n_bedtime">
+        <label>nap bedtime</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#n_count">
+        <label>nap count</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#n_deep">
+        <label>nap deep</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#n_duration">
+        <label>nap duration</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#n_light">
+        <label>nap light</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#n_quality">
+        <label>nap quality</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#n_rem">
+        <label>nap REM</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#s_asleep_time">
+        <label>sleep asleep_time</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#s_awake">
+        <label>sleep awake</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#s_awake_time">
+        <label>sleep awake_time</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#s_awakenings">
+        <label>sleep awakenings</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#s_bedtime">
+        <label>sleep bedtime</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#s_count">
+        <label>sleep count</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#s_deep">
+        <comment>Deep sleep (seconds)</comment>
+        <label>sleep deep</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#s_duration">
+        <comment> Sleep mode duration (s) </comment>
+        <label>sleep duration</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#s_light">
+        <label>sleep light</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#s_quality">
+        <label>sleep quality</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#s_rem">
+        <label>sleep REM</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/up24#weight">
+        <comment>Body weight in kg</comment>
+        <label>weight (kg)</label>
+    </rdf:Property>
+</rdf:RDF>

@@ -1,0 +1,58 @@
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    
+    <#account_Name>     a rdf:Property;
+         :label "account name" .
+    
+    <#account_Number>     a rdf:Property;
+         :label "account number" .
+    
+    <#contact_Name>     a rdf:Property;
+         :label "Contact Name" .
+    
+    <#docket_Date>     a rdf:Property;
+         :comment " Like 30/04/2013";
+         :label "docket date" .
+    
+    <#docket_Invoice_Date>     a rdf:Property;
+         :label "Docket Invoice Date" .
+    
+    <#docket_Invoice_Number>     a rdf:Property;
+         :label "Docket Invoice Number" .
+    
+    <#docket_Number>     a rdf:Property;
+         :label "Docket Number" .
+    
+    <#docket_Reference>     a rdf:Property;
+         :label "docket reference" .
+    
+    <#docket_Service_Description>     a rdf:Property;
+         :label "Docket Service Description" .
+    
+    <#docket_Time>     a rdf:Property;
+         :label "docket time" .
+    
+    <#dropoff_Address>     a rdf:Property;
+         :label "dropoff address" .
+    
+    <#journey_Price>     a rdf:Property;
+         :label "journey price" .
+    
+    <#main_Passenger_Name>     a rdf:Property;
+         :label "Main Passenger Name" .
+    
+    <#pickup_Address>     a rdf:Property;
+         :label "pickup address" .
+    
+    <#total_Client_Extras>     a rdf:Property;
+         :label "Total Client Extras" .
+    
+    <#total_Client_Price>     a rdf:Property;
+         :label "Total Client Price" .
+    
+    <#waiting_Time>     a rdf:Property;
+         :label "Waiting Time" .
+    
+    <#waiting_Time_Cost>     a rdf:Property;
+         :label "Waiting Time Cost" .
+    

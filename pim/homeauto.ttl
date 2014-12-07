@@ -1,0 +1,17 @@
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix dc: <http://purl.org/dc/elements/1.1/> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    
+    <>     dc:title "Home Automation ontology";
+         :comment """Ontology for home automation control
+
+This ontology is desiged for data to do with the
+control and sense and automation of the systems 
+within a home (or other establishment).
+""" .
+    
+    <#dutyCycle>     a rdf:Property;
+         :comment """In a given period for a given device (such as a furnace),
+    the proportion of the time it was operational. Between 0 and 1 inclusive""";
+         :label "duty cycle" .
+    

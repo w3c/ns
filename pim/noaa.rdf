@@ -1,0 +1,140 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+
+    <rdf:Description rdf:about="">
+        <comment>Ontology for data available by e.g. email request from http://www.ncdc.noaa.gov/cdo-web/datasets#GHCND
+
+Data Types:
+
+AWND - Average daily wind speed (tenths of meters per second)
+SNOW - Snowfall (mm)
+WT08 - Smoke or haze 
+PGTM - Peak gust time (hours and minutes, i.e., HHMM)
+TMIN - Minimum temperature (tenths of degrees C)
+WESF - Water equivalent of snowfall (tenths of mm)
+WDF5 - Direction of fastest 5-second wind (degrees)
+TMAX - Maximum temperature (tenths of degrees C)
+WESD - Water equivalent of snow on the ground (tenths of mm)
+SNWD - Snow depth (mm)
+WDF2 - Direction of fastest 2-minute wind (degrees)
+PRCP - Precipitation (tenths of mm)
+WSF5 - Fastest 5-second wind speed (tenths of meters per second)
+WSF2 - Fastest 2-minute wind speed (tenths of meters per second)
+TOBS - Temperature at the time of observation (tenths of degrees C)
+WT02 - Heavy fog or heaving freezing fog (not always distinguished from fog)
+WT01 - Fog, ice fog, or freezing fog (may include heavy fog)
+</comment>
+    </rdf:Description>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#aWND">
+        <comment>Average daily wind speed (tenths of meters per second)</comment>
+        <label>AWND</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#dATE">
+        <label>DATE</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#eLEVATION">
+        <label>ELEVATION</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#lATITUDE">
+        <label>lattitude</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#lONGITUDE">
+        <label>longitude</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#measurement_Flag">
+        <label>Measurement Flag</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#pGTM">
+        <label>PGTM</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#pRCP">
+        <label>PRCP</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#quality_Flag">
+        <label>Quality Flag</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#sNOW">
+        <label>SNOW</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#sNWD">
+        <label>SNWD</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#sTATION">
+        <label>STATION</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#sTATION_NAME">
+        <label>STATION_NAME</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#source_Flag">
+        <label>Source Flag</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#tMAX">
+        <label>Tmax</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#tMIN">
+        <label>Tmin</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#tOBS">
+        <label>TOBS</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#time_of_Observation">
+        <label>Time of Observation</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#wDF2">
+        <label>WDF2</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#wDF5">
+        <label>WDF5</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#wESD">
+        <label>WESD</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#wESF">
+        <label>WESF</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#wSF2">
+        <label>WSF2</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#wSF5">
+        <label>WSF5</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#wT01">
+        <label>WT01</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#wT02">
+        <label>WT02</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/noaa#wT08">
+        <label>WT08</label>
+    </rdf:Property>
+</rdf:RDF>

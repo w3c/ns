@@ -29,6 +29,18 @@ but records exercise sessions.
         fit:Weights
         fit:Yoga ) .
     
+    fit:BoatRide     a :Class;
+         :label "boat ride";
+         :subClassOf fit:Transport .
+    
+    fit:BusRide     a :Class;
+         :label "bus ride";
+         :subClassOf fit:Transport .
+    
+    fit:CarRide     a :Class;
+         :label "car ride";
+         :subClassOf fit:Transport .
+    
     fit:Cardio     a :Class;
          :label "cardio";
          :subClassOf fit:Activity .
@@ -48,6 +60,10 @@ but records exercise sessions.
          :comment """This is a cenral class of thing to start at.
     It can have various different things added to it.""";
          :label "fitness log" .
+    
+    fit:Flight     a :Class;
+         :label "flight";
+         :subClassOf fit:Transport .
     
     fit:High     a :Class;
          :label "haut",
@@ -87,9 +103,29 @@ but records exercise sessions.
          :label "skating";
          :subClassOf fit:Activity .
     
+    fit:SkiLiftRide     a :Class;
+         :label "ski lift ride";
+         :subClassOf fit:Transport .
+    
+    fit:TaxiRide     a :Class;
+         :label "taxi ride";
+         :subClassOf fit:Transport .
+    
+    fit:TrainTrip     a :Class;
+         :label "train trip";
+         :subClassOf fit:Transport .
+    
+    fit:TramTrip     a :Class;
+         :label "tram trip";
+         :subClassOf fit:Transport .
+    
     fit:Transport     a :Class;
          :label "transport";
          :subClassOf fit:Activity .
+    
+    fit:UndergroundRide     a :Class;
+         :label "metro ride";
+         :subClassOf fit:Transport .
     
     fit:Walking     a :Class;
          :label "walking";
@@ -125,20 +161,26 @@ but records exercise sessions.
     
     fit:calories     a rdf:Property,
                 owl:DatatypeProperty;
+         :comment """The energy burn as typically mesured in 'dietary Calories',
+    each of which is 1000 thermochemical calories, or 4.18 kJ.""";
          :label "calories";
          :range xsd:float .
     
     fit:distance     a rdf:Property,
                 owl:DatatypeProperty;
+         :comment "Distance in meters";
+         :label "distance (m)";
          :range xsd:float .
     
     fit:duration     a rdf:Property,
                 owl:DatatypeProperty;
+         :comment "Duration in seconds";
+         :label "duration (s)";
          :range xsd:float .
     
-    fit:energyBurn     a rdf:Property,
+    fit:energyBurn_kJ     a rdf:Property,
                 owl:DatatypeProperty;
-         :label "energy burned/jK";
+         :label "energy burned/kJ";
          :range xsd:float .
     
     fit:exercise     a rdf:Property;
@@ -150,6 +192,11 @@ but records exercise sessions.
                 owl:ObjectProperty;
          :domain foaf:Person;
          :range fit:FitnessLog .
+    
+    fit:meanSpeed_kmph     a rdf:Property,
+                owl:DatatypeProperty;
+         :comment "The mean speed over the activity in km/h";
+         :label "av. speed  (km/h)" .
     
     fit:record     a rdf:Property,
                 owl:ObjectProperty;

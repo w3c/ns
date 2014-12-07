@@ -1,0 +1,160 @@
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix pay: <http://www.w3.org/ns/pim/pay#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    
+    pay:Contrib_401k_Plan     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "401k contribution";
+         :range xsd:decimal .
+    
+    pay:Dental_Plan     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "dental plan";
+         :range xsd:decimal .
+    
+    pay:FED_Earnings     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "federal earnings";
+         :range xsd:decimal .
+    
+    pay:Health_Plan     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "health plan";
+         :range xsd:decimal .
+    
+    pay:Life_Insurance_Plan     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "life insurance plan";
+         :range xsd:decimal .
+    
+    pay:MA_Earnings     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "MA earnings";
+         :range xsd:decimal .
+    
+    pay:Social_Security     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "social security";
+         :range xsd:decimal .
+    
+    pay:Tax_Fed_Income     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "tax: federal income";
+         :range xsd:decimal .
+    
+    pay:Tax_MA_Income     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "tax: MA income";
+         :range xsd:decimal .
+    
+    pay:Tax_Medicare     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "tax: Medicare";
+         :range xsd:decimal .
+    
+    pay:YTD_Contrib_401k_Plan     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "401k plan (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_Dental_Plan     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "dental plan (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_FED_Earnings     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "federal earnings (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_Gross_Pay     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "gross pay (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_Health_Plan     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "health plan (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_Life_Insurance_Plan     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "life insurance plan (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_MA_Earnings     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "MA earnings (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_Medicare_Earnings     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "Mecicare earnings (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_ParkingFee     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "parking fee (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_SS_Earnings     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "social security earnings (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_Tax_Fed_Income     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "tax: federal income (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_Tax_MA_Income     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "tax: MA Income (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_Tax_Medicare     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "tax: Medicare (year to date)";
+         :range xsd:decimal .
+    
+    pay:YTD_dining     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "dining (year to date)";
+         :range xsd:decimal .
+    
+    pay:deductions     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "deductions";
+         :range xsd:decimal .
+    
+    pay:dining     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "dining";
+         :range xsd:decimal .
+    
+    pay:grossPay     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "gross pay";
+         :range xsd:decimal .
+    
+    pay:netPay     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "net pay";
+         :range xsd:decimal .
+    
+    pay:paymentDate     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "payment date";
+         :range xsd:date .
+    
+    pay:regularSalary     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "regular salary";
+         :range xsd:decimal .
+    
+    pay:taxes     a rdf:Property;
+         :domain pay:PayPeriod;
+         :label "taxes";
+         :range xsd:decimal .
+    

@@ -1,0 +1,145 @@
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix dc: <http://purl.org/dc/elements/1.1/> .
+    @prefix owl: <http://www.w3.org/2002/07/owl#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix up: <http://www.w3.org/ns/pim/up24#> .
+    
+    <>     a owl:Ontology;
+         dc:title "Ontology for faily fitness sumary from e.g. the UP24 armband data" .
+    
+    up:age     a rdf:Property;
+         :comment "years ";
+         :label "age" .
+    
+    up:bmr     a rdf:Property;
+         :comment "Body Mass ratio including other things (age?) ??";
+         :label "bmr" .
+    
+    up:body_fat     a rdf:Property;
+         :comment " ";
+         :label "body_fat" .
+    
+    up:dATE     a rdf:Property;
+         :comment "YYYMMDD format ";
+         :label "DATE" .
+    
+    up:gender     a rdf:Property;
+         :comment " Integer, 0 = Male ";
+         :label "gender" .
+    
+    up:height     a rdf:Property;
+         :comment "(meters) ";
+         :label "height" .
+    
+    up:m_active_time     a rdf:Property;
+         :comment " (seconds) ";
+         :label "m_active_time" .
+    
+    up:m_calories     a rdf:Property;
+         :comment " (units?)";
+         :label "m_calories" .
+    
+    up:m_distance     a rdf:Property;
+         :comment "meters ";
+         :label "m_distance" .
+    
+    up:m_inactive_time     a rdf:Property;
+         :comment " seconds";
+         :label "m_inactive_time" .
+    
+    up:m_lcat     a rdf:Property;
+         :comment " ";
+         :label "m_lcat" .
+    
+    up:m_lcit     a rdf:Property;
+         :comment " ";
+         :label "m_lcit" .
+    
+    up:m_steps     a rdf:Property;
+         :comment " ";
+         :label "m_steps" .
+    
+    up:m_total_calories     a rdf:Property;
+         :label "m_total_calories" .
+    
+    up:m_workout_count     a rdf:Property;
+         :label "m_workout_count" .
+    
+    up:m_workout_time     a rdf:Property;
+         :label "m_workout_time" .
+    
+    up:n_asleep_time     a rdf:Property;
+         :label "Nap asleep_time" .
+    
+    up:n_awake     a rdf:Property;
+         :comment " seconds";
+         :label "nap awake" .
+    
+    up:n_awake_time     a rdf:Property;
+         :comment "seconds ";
+         :label "nap awake_time" .
+    
+    up:n_awakenings     a rdf:Property;
+         :comment "Float but should logically be integer - how many times woke up in sleep mode ";
+         :label "nap awakenings" .
+    
+    up:n_bedtime     a rdf:Property;
+         :label "nap bedtime" .
+    
+    up:n_count     a rdf:Property;
+         :label "nap count" .
+    
+    up:n_deep     a rdf:Property;
+         :label "nap deep" .
+    
+    up:n_duration     a rdf:Property;
+         :label "nap duration" .
+    
+    up:n_light     a rdf:Property;
+         :label "nap light" .
+    
+    up:n_quality     a rdf:Property;
+         :label "nap quality" .
+    
+    up:n_rem     a rdf:Property;
+         :label "nap REM" .
+    
+    up:s_asleep_time     a rdf:Property;
+         :label "sleep asleep_time" .
+    
+    up:s_awake     a rdf:Property;
+         :label "sleep awake" .
+    
+    up:s_awake_time     a rdf:Property;
+         :label "sleep awake_time" .
+    
+    up:s_awakenings     a rdf:Property;
+         :label "sleep awakenings" .
+    
+    up:s_bedtime     a rdf:Property;
+         :label "sleep bedtime" .
+    
+    up:s_count     a rdf:Property;
+         :label "sleep count" .
+    
+    up:s_deep     a rdf:Property;
+         :comment "Deep sleep (seconds)";
+         :label "sleep deep" .
+    
+    up:s_duration     a rdf:Property;
+         :comment " Sleep mode duration (s) ";
+         :label "sleep duration" .
+    
+    up:s_light     a rdf:Property;
+         :label "sleep light" .
+    
+    up:s_quality     a rdf:Property;
+         :label "sleep quality" .
+    
+    up:s_rem     a rdf:Property;
+         :label "sleep REM" .
+    
+    up:weight     a rdf:Property;
+         :comment "Body weight in kg";
+         :label "weight (kg)" .
+    
