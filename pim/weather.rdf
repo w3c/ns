@@ -1,0 +1,14 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#maxTemp">
+        <label>max temp</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/fit#minTemp">
+    </rdf:Property>
+</rdf:RDF>

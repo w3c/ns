@@ -1,0 +1,24 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix dc:	<http://purl.org/dc/elements/1.1/>.
+@prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
+@prefix :	<http://www.w3.org/ns/pim/fit#> .
+@prefix fit:	<http://www.w3.org/ns/pim/fit#> . # prefix hint for others
+
+@prefix dbp: <http://dbpedia.org/resource/>.
+@prefix cal: <http://www.w3.org/2002/12/cal/ical#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix q: <http://www.w3.org/2000/10/swap/pim/qif#> .
+
+
+
+    :maxTemp a  rdf:Property;
+        s:label "max temp".
+        
+    :minTemp    a rdf:Property.
+    
+         
