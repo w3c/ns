@@ -20,6 +20,7 @@
 	  code {font-weight: bold}
       .class { color: #099; font-weight: normal; font-size: 1.2em; }
       .prop { color: #990; }
+      .individual { color: #909; }
       .deprecated { color: #999; font-weight: normal; font-size: 1.2em; }
 
 /*
@@ -67,7 +68,7 @@ See also <a href="http://www.w3.org/2012/ldp">http://www.w3.org/2012/ldp</a>,
 		<a href="http://www.w3.org/TR/ldp/">http://www.w3.org/TR/ldp/</a>, 
 		<a href="http://www.w3.org/2011/09/LinkedData/">http://www.w3.org/2011/09/LinkedData/</a>
       </p>
-      <p>Classes are marked with the  CSS class <code class="class">class</code> and properties are marked with the CSS class <code class="prop">prop</code>.</p>
+      <p>Classes are marked with the  CSS class <code class="class">class</code>, properties are marked with the CSS class <code class="prop">prop</code>, individuals are marked with the CSS class <code class="individual">individual</code>, and deprecated terms are marked with the CSS class <code class="deprecated">deprecated</code>.</p>
 
 <!--
     <p><span property="dcterms:description" datatype="">This document describes the terms used in the Linked Data Platform.</span>
@@ -172,6 +173,39 @@ PREFIX : &lt;http://www.w3.org/ns/ldp#&gt;
      </li>
      <li><span id="PreferMinimalContainer" class="class">PreferMinimalContainer</span><span class="separator"> - </span>
      URI identifying the subset of a LDPC's triples present in an empty LDPC, for example to allow clients to express interest in receiving them.  Currently this excludes containment and membership triples, but in the future other exclusions might be added.  This definition is written to automatically exclude those new classes of triples.
+     </li>
+     <li><span id="Page" class="class">Page</span><span class="separator"> - </span>
+     URI signifying that the resource is an in-sequence page resource, as defined by LDP Paging.  Typically used on Link rel='type' response headers.
+     <ul>
+       <li><span id="pageSortCriteria" class="prop">pageSortCriteria</span> <span class="range">rdf:List</span> <span class="separator"> - </span>
+      Link to the list of sorting criteria used by the server in a representation.  Typically used on Link response headers as an extension link relation URI in the rel= parameter.
+       </li>
+     </ul>
+     </li>
+     <li><span id="PageSortCriterion" class="class">PageSortCriterion</span><span class="separator"> - </span>
+     Element in the list of sorting criteria used by the server to assign container members to pages.
+     <ul>
+       <li><span id="pageSortPredicate" class="prop">pageSortPredicate</span> <span class="range">rdf:Property</span> <span class="separator"> - </span>
+       Predicate used to specify the order of the members across a page sequence's in-sequence page resources; it asserts nothing about the order of members in the representation of a single page.
+       </li>
+       <li><span id="pageSortOrder" class="prop">pageSortOrder</span> <span class="range">rdf:Property</span> <span class="separator"> - </span>
+       The ascending/descending/etc order used to order the members across pages in a page sequence.
+       <ul>
+         <li><span id="Ascending" class="individual">Ascending</span> <span class="separator"> - </span>
+         Ascending order.
+         </li>         
+         <li><span id="Descending" class="individual">Descending</span> <span class="separator"> - </span>
+         Descending order.
+         </li>         
+       </ul>
+       </li>
+       <li><span id="pageSortCollation" class="prop">pageSortCollation</span> <span class="range">rdf:Property</span> <span class="separator"> - </span>
+       The collation used to order the members across pages in a page sequence when comparing strings.
+       </li>
+     </ul>
+      </li>
+     <li><span id="pageSequence" class="prop">pageSequence</span><span class="separator"> - </span>
+     Link to a page sequence resource, as defined by LDP Paging.  Typically used to communicate the sorting criteria used to allocate LDPC members to pages.
      </li>
    </ul>
     </div>
