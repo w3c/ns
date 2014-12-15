@@ -20,7 +20,7 @@
 	  code {font-weight: bold}
       .class { color: #099; font-weight: normal; font-size: 1.2em; }
       .prop { color: #990; }
-      .class { color: #999; font-weight: normal; font-size: 1.2em; }
+      .deprecated { color: #999; font-weight: normal; font-size: 1.2em; }
 
 /*
  Tree structure using CSS:
@@ -168,7 +168,7 @@ PREFIX : &lt;http://www.w3.org/ns/ldp#&gt;
      URI identifying a LDPC's membership triples, for example to allow clients to express interest in receiving them.
      </li>
      <li><span id="PreferEmptyContainer" class="class deprecated">PreferEmptyContainer</span><span class="separator"> - </span>
-     Archaic alias for ldp:PreferMinimalContainer
+     (<em>deprecated</em>) Archaic alias for ldp:PreferMinimalContainer
      </li>
      <li><span id="PreferMinimalContainer" class="class">PreferMinimalContainer</span><span class="separator"> - </span>
      URI identifying the subset of a LDPC's triples present in an empty LDPC, for example to allow clients to express interest in receiving them.  Currently this excludes containment and membership triples, but in the future other exclusions might be added.  This definition is written to automatically exclude those new classes of triples.
