@@ -1,0 +1,10 @@
+URI: csvw
+
+URI: csvw.html
+Content-Type: text/html
+
+URI: csvw.ttl
+Content-Type: text/turtle; qs=0.6
+
+URI: csvw.jsonld
+Content-Type: application/ld+json; qs=0.5
