@@ -146,7 +146,7 @@ table.simple {
   </p>
   <h1 class="title p-name" id="title">Metadata Vocabulary for Tabular Data</h1>
   
-  <h2 id="w3c-document-21-december-2014"><abbr title="World Wide Web Consortium">W3C</abbr> Document <time class="dt-published" datetime="2014-12-21">21 December 2014</time></h2>
+  <h2 id="w3c-document-22-december-2014"><abbr title="World Wide Web Consortium">W3C</abbr> Document <time class="dt-published" datetime="2014-12-22">22 December 2014</time></h2>
   <dl>
     
     
@@ -203,29 +203,6 @@ table.simple {
           
         
       
-        
-          <dt>Alternate Formats:</dt>
-          
-             
-                
-                  <dd>
-                    <a href="csvw.ttl">
-                      Turtle
-                    </a>
-                  </dd>
-                
-             
-                
-                  <dd>
-                    <a href="csvw.jsonld">
-                      JSON-LD
-                    </a>
-                  </dd>
-                
-             
-          
-        
-      
     
   </dl>
   
@@ -266,12 +243,12 @@ table.simple {
       <p>This document describes the
         <span property="dc:title">Metadata Vocabulary for Tabular Data</span>
         and Term definitions used
-        for creating Metadata descriptions for Tabular Data. This document provides the RDFS [<cite><a href="#bib-rdf-schema" class="bibref">rdf-schema</a></cite>] vocabulary definition for terms defined
+        for creating Metadata descriptions for Tabular Data. This document provides the RDFS [<cite><a href="#bib-RDF-SCHEMA" class="bibref">RDF-SCHEMA</a></cite>] vocabulary definition for terms defined
         in [<cite><a href="#bib-tabular-metadata" class="bibref">tabular-metadata</a></cite>] and a description of the JSON-LD context definition for use with
         defining metadata documents.</p>
       <p>Alternate versions of the vocabulary definition exist in
         <a rel="alternate" href="csvw.ttl">Turtle</a> and
-        <a rel="alternate" href="csvw.jsonld">JSON-LD</a>,
+        <a rel="alternate" href="csvw.jsonls">JSON-LD</a>,
         which also includes the <code>@context</code> required for metadata descriptions.</p>
     </section><section id="sotd" class="introductory"><h2>Status of This Document</h2>
   
@@ -287,7 +264,7 @@ table.simple {
         for "Access methods for CSV Metadata", "Metadata vocabulary for CSV data" [<cite><a href="#bib-tabular-metadata" class="bibref">tabular-metadata</a></cite>] and 
         "Mapping mechanism to transforming CSV into various Formats (e.g., RDF [<cite><a href="#bib-csv2rdf" class="bibref">csv2rdf</a></cite>], JSON [<cite><a href="#bib-csv2json" class="bibref">csv2json</a></cite>], 
         or XML)".</p>
-      <p>This document attempts to define all terms used in [<cite><a href="#bib-tabular-metadata" class="bibref">tabular-metadata</a></cite>], but may diverge until
+      <p>This document attemptes to define all terms used in [<cite><a href="#bib-tabular-metadata" class="bibref">tabular-metadata</a></cite>], but may diverge until
         both documents become more stable.</p>
     
       
@@ -1038,7 +1015,7 @@ For a Column: A natural language property that provides possible alternative nam
         <dd>
             csvw:columns
             with string values interpreted as @id
-            with array values interpreted as @list
+              with array values interpreted as @list
         </dd>
         <dt>commentPrefix</dt>
         <dd>
@@ -1071,12 +1048,12 @@ For a Column: A natural language property that provides possible alternative nam
         <dt>dc:description</dt>
         <dd>
             dc:description
-            with array values interpreted as @language
+              with object values interpreted as language-specific, indexed by language
         </dd>
         <dt>dc:title</dt>
         <dd>
             dc:title
-            with array values interpreted as @language
+              with object values interpreted as language-specific, indexed by language
         </dd>
         <dt>dcat</dt>
         <dd>
@@ -1278,13 +1255,13 @@ For a Column: A natural language property that provides possible alternative nam
         <dd>
             owl:oneOf
             with string values interpreted as @vocab
-            with array values interpreted as @list
+              with array values interpreted as @list
         </dd>
         <dt>owl:unionOf</dt>
         <dd>
             owl:unionOf
             with string values interpreted as @vocab
-            with array values interpreted as @list
+              with array values interpreted as @list
         </dd>
         <dt>owl:versionInfo</dt>
         <dd>
@@ -1331,7 +1308,7 @@ For a Column: A natural language property that provides possible alternative nam
         <dt>rdfs:comment</dt>
         <dd>
             rdfs:comment
-            with array values interpreted as @language
+              with object values interpreted as language-specific, indexed by language
         </dd>
         <dt>rdfs:domain</dt>
         <dd>
@@ -1341,7 +1318,7 @@ For a Column: A natural language property that provides possible alternative nam
         <dt>rdfs:label</dt>
         <dd>
             rdfs:label
-            with array values interpreted as @language
+              with object values interpreted as language-specific, indexed by language
         </dd>
         <dt>rdfs:range</dt>
         <dd>
@@ -1387,7 +1364,7 @@ For a Column: A natural language property that provides possible alternative nam
         <dd>
             csvw:resources
             with string values interpreted as @id
-            with array values interpreted as @set
+              with array values interpreted as @set
         </dd>
         <dt>rev</dt>
         <dd>
@@ -1480,7 +1457,7 @@ For a Column: A natural language property that provides possible alternative nam
         <dt>title</dt>
         <dd>
             csvw:title
-            with array values interpreted as @language
+              with object values interpreted as language-specific, indexed by language
         </dd>
         <dt>trim</dt>
         <dd>
@@ -1531,8 +1508,8 @@ For a Column: A natural language property that provides possible alternative nam
     </section>
   
 
-<section id="references" class="appendix"><!--OddPage--><h2><span class="secno">A. </span>References</h2><section id="informative-references"><h3><span class="secno">A.1 </span>Informative references</h3><dl class="bibliography"><dt id="bib-csv2json">[csv2json]</dt><dd>Jeremy Tandy; Ivan Herman. <a href="http://www.w3.org/TR/csv2json/"><cite>Generating JSON from Tabular Data on the Web</cite></a>. W3C Working Draft. URL: <a href="http://www.w3.org/TR/csv2json/">http://www.w3.org/TR/csv2json/</a>
+<section id="references" class="appendix"><!--OddPage--><h2><span class="secno">A. </span>References</h2><section id="informative-references"><h3><span class="secno">A.1 </span>Informative references</h3><dl class="bibliography"><dt id="bib-RDF-SCHEMA">[RDF-SCHEMA]</dt><dd>Dan Brickley; Ramanathan Guha. <a href="http://www.w3.org/TR/rdf-schema/"><cite>RDF Schema 1.1</cite></a>. 25 February 2014. W3C Recommendation. URL: <a href="http://www.w3.org/TR/rdf-schema/">http://www.w3.org/TR/rdf-schema/</a>
+</dd><dt id="bib-csv2json">[csv2json]</dt><dd>Jeremy Tandy; Ivan Herman. <a href="http://www.w3.org/TR/csv2json/"><cite>Generating JSON from Tabular Data on the Web</cite></a>. W3C Working Draft. URL: <a href="http://www.w3.org/TR/csv2json/">http://www.w3.org/TR/csv2json/</a>
 </dd><dt id="bib-csv2rdf">[csv2rdf]</dt><dd>Jeremy Tandy; Ivan Herman. <a href="http://www.w3.org/TR/csv2json/"><cite>Generating RDF from Tabular Data on the Web</cite></a>. W3C Working Draft. URL: <a href="http://www.w3.org/TR/csv2json/">http://www.w3.org/TR/csv2json/</a>
-</dd><dt id="bib-rdf-schema">[rdf-schema]</dt><dd>Dan Brickley; Ramanathan Guha. <a href="http://www.w3.org/TR/rdf-schema/"><cite>RDF Schema 1.1</cite></a>. 25 February 2014. W3C Recommendation. URL: <a href="http://www.w3.org/TR/rdf-schema/">http://www.w3.org/TR/rdf-schema/</a>
 </dd><dt id="bib-tabular-metadata">[tabular-metadata]</dt><dd>Rufus Pollock; Jeni Tennison. <a href="http://www.w3.org/TR/tabular-metadata/"><cite>Metadata Vocabulary for Tabular Data</cite></a>. W3C Working Draft. URL: <a href="http://www.w3.org/TR/tabular-metadata/">http://www.w3.org/TR/tabular-metadata/</a>
 </dd></dl></section></section></body></html>
