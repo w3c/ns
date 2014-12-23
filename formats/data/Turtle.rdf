@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
-  xmlns:formats="http://www.w3.org/ns/formats/"
-  xmlns:dcterms="http://purl.org/dc/terms/"
-  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:formats="http://www.w3.org/ns/formats/"
 >
   <formats:Format rdf:about="http://www.w3.org/ns/formats/Turtle">
-    <dcterms:created>2010-05-03</dcterms:created>
-    <dcterms:modified>2013-03-25</dcterms:modified>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/turtle/"/>
+    <dc:created>2010-05-03</dc:created>
     <formats:preferred_suffix>.ttl</formats:preferred_suffix>
-    <formats:media_type>text/turtle</formats:media_type>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/turtle/#sec-mediaReg"/>
-    <dcterms:description>Unique identifier for the RDF Serialization in Turtle</dcterms:description>
-    <rdfs:comment>Turtle is defined by the “Turtle - Terse RDF Triple Language” W3C Candidate Recommendation.</rdfs:comment>
-    <dcterms:creator>
+    <rdfs:comment>Turtle is defined by the “Turtle - Terse RDF Triple Language” W3C Recommendation.</rdfs:comment>
+    <dc:creator>
       <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
         <foaf:title>Semantic Web Activity Lead</foaf:title>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <foaf:name>Ivan Herman</foaf:name>
         <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
         <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-        <foaf:name>Ivan Herman</foaf:name>
-        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
       </foaf:Person>
-    </dcterms:creator>
+    </dc:creator>
+    <dc:description>Unique identifier for the RDF Serialization in Turtle</dc:description>
+    <dc:modified>2014-23-23</dc:modified>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/turtle/#sec-mediaReg"/>
+    <formats:media_type>text/turtle</formats:media_type>
   </formats:Format>
 </rdf:RDF>
 

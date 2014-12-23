@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:formats="http://www.w3.org/ns/formats/"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <formats:Format rdf:about="http://www.w3.org/ns/formats/microdata">
+    <dc:created>2014-12-23</dc:created>
+    <rdfs:comment>Microdata is defined by the “HTML Microdata” W3C Working Group Note. Its extraction and conversion to RDF is defined in the separate “Microdata to RDF – Second Edition” Interest Group Note.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/microdata/"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/microdata-rdf/"/>
+    <dc:creator>
+      <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
+        <foaf:name>Ivan Herman</foaf:name>
+        <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <foaf:title>Semantic Web Activity Lead</foaf:title>
+      </foaf:Person>
+    </dc:creator>
+    <dc:description>Unique identifier for the Microdata Syntax</dc:description>
+    <dc:modified>2014-12-23</dc:modified>
+  </formats:Format>
+</rdf:RDF>
+

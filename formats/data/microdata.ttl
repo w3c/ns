@@ -6,15 +6,14 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-formats:N-Triples a formats:Format ;
-    dc:created "2010-05-04" ;
+formats:microdata a formats:Format ;
+    dc:created "2014-12-23" ;
     dc:creator <http://www.ivan-herman.net/foaf#me> ;
-    dc:description "Unique identifier for the RDF serialization in N-Triples" ;
-    dc:modified "2013-12-23" ;
-    rdfs:comment "N-Triples is defined  the “N-Triples” W3C Recommendation. It uses the general media type: ‘application/n-triples’ and a preferred suffix: ‘.nt’." ;
-    rdfs:isDefinedBy <http://www.w3.org/TR/n-triples/> ;
-    formats:media_type "application/n-triples" ;
-    formats:preferred_suffix ".nt" .
+    dc:description "Unique identifier for the Microdata Syntax" ;
+    dc:modified "2014-12-23" ;
+    rdfs:comment "Microdata is defined by the “HTML Microdata” W3C Working Group Note. Its extraction and conversion to RDF is defined in the separate “Microdata to RDF – Second Edition” Interest Group Note." ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/microdata/> ;
+    rdfs:seeAlso <http://www.w3.org/TR/microdata-rdf/> .
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;
     rdfs:seeAlso <http://www.ivan-herman.net/foaf> ;

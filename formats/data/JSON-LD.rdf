@@ -2,28 +2,28 @@
 <rdf:RDF
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-  xmlns:dcterms="http://purl.org/dc/terms/"
-  xmlns:formats="http://www.w3.org/ns/formats/"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:formats="http://www.w3.org/ns/formats/"
 >
   <formats:Format rdf:about="http://www.w3.org/ns/formats/JSON-LD">
-    <rdfs:comment>JSON-LD is defined by the “JSON-LD Syntax 1.0: A Context-based JSON Serialization for Linking Data” W3C Working Draft.</rdfs:comment>
-    <dcterms:modified>2013-03-27</dcterms:modified>
-    <dcterms:created>2013-03-27</dcterms:created>
-    <dcterms:creator>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/json-ld-syntax/"/>
+    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/json-ld-syntax/#iana-considerations"/>
+    <dc:modified>2014-12-23</dc:modified>
+    <dc:creator>
       <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
         <foaf:title>Semantic Web Activity Lead</foaf:title>
-        <foaf:name>Ivan Herman</foaf:name>
         <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
-        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
         <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
+        <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
+        <foaf:name>Ivan Herman</foaf:name>
       </foaf:Person>
-    </dcterms:creator>
-    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/json-ld-syntax/"/>
+    </dc:creator>
+    <rdfs:comment>JSON-LD is defined by the “JSON-LD Syntax 1.0: A Context-based JSON Serialization for Linking Data” W3C Recommendation.</rdfs:comment>
     <formats:preferred_suffix>.jsonld</formats:preferred_suffix>
+    <dc:created>2013-03-27</dc:created>
     <formats:media_type>application/ld+json</formats:media_type>
-    <dcterms:description>Unique identifier for the JSON-LD Syntax</dcterms:description>
-    <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/json-ld-syntax/#iana-considerations"/>
+    <dc:description>Unique identifier for the JSON-LD Syntax</dc:description>
   </formats:Format>
 </rdf:RDF>
 

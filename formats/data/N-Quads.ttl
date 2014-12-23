@@ -10,8 +10,8 @@ formats:N-Quads a formats:Format ;
     dc:created "2013-09-05" ;
     dc:creator <http://www.ivan-herman.net/foaf#me> ;
     dc:description "Unique identifier for the RDF Dataset serialization in N-Quads" ;
-    dc:modified "2013-10-29" ;
-    rdfs:comment "N-Quads is defined  the “N-Quads” W3C Recommendation track document. It uses the general media type: ‘application/n-quads’ and a preferred suffix: ‘.nq’." ;
+    dc:modified "2014-12-23" ;
+    rdfs:comment "N-Quads is defined  the “N-Quads” W3C Recommendation. It uses the general media type: ‘application/n-quads’ and a preferred suffix: ‘.nq’." ;
     rdfs:isDefinedBy <http://www.w3.org/TR/n-quads/> ;
     formats:media_type "application/n-quads" ;
     formats:preferred_suffix ".nq" .
