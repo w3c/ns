@@ -7,6 +7,12 @@ ForceType 'application/json'
 <Files ~ "json-ld.jsonld">
 ForceType 'application/ld+json'
 </Files>
+<Files ~ "csvw.jsonld">
+ForceType 'application/ld+json'
+</Files>
+<Files ~ "oa.jsonld">
+ForceType 'application/ld+json'
+</Files>
 <FilesMatch "^(ma-ont|mediaont)\.html$">
 ForceType 'text/html; charset=iso-8859-1'
 </FilesMatch>
