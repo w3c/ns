@@ -1,0 +1,50 @@
+
+
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix dc:	<http://purl.org/dc/elements/1.1/>.
+@prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
+
+@prefix inv:	<http://www.w3.org/ns/pim/trip#> .
+
+<> dc:title "An onotology for travel agent invoices".
+
+inv:billed_to_currency a rdf:Property; s:label "billed to currency"; s:comment "3 letter code".
+
+inv:billed_to_data a rdf:Property; s:label "billed to card"; s:comment "Card type and last 4 digis.".
+
+inv:billed_to_value a rdf:Property; s:label "billed amount"; s:comment "Decimal. Can include leading asterisk ".
+
+inv:customer_number a rdf:Property; s:label "customer number"; s:comment "Can include leading zeroes".
+
+inv:exchange_currency a rdf:Property; s:label "exchange currency"; s:comment "3 digit code".
+
+inv:exchange_data a rdf:Property; s:label "exchange data"; s:comment "".
+
+inv:exchange_value a rdf:Property; s:label "exchange amount"; s:comment "decimal".
+
+inv:invoice_issue_date a rdf:Property; s:label "invoice date"; s:comment "Like 06 Mar 2012".
+
+inv:invoice_number a rdf:Property; s:label "invoice number"; s:comment "string of integer".
+
+inv:monthName a rdf:Property; s:label "month name"; s:comment "Like Jan.".
+
+inv:monthNumber a rdf:Property; s:label "month number"; s:comment "Like 01".
+
+inv:passenger_currency a rdf:Property; s:label "passegnger currency"; s:comment "3 letter code.".
+
+inv:passenger_data a rdf:Property; s:label "passenger name"; s:comment "Like SMITH JANE".
+
+inv:passenger_value a rdf:Property; s:label "passenger amount"; s:comment "Like 1,076.04".
+
+inv:record_locator a rdf:Property; s:label "record locator"; s:comment "Standard airline 6 character alphanumeric code.".
+
+inv:sales_person a rdf:Property; s:label "sales person number"; s:comment "string of integer".
+
+inv:service_fee_data a rdf:Property; s:label "service fee number"; s:comment "Like ticket number but for fee".
+
+inv:ticket_number_data a rdf:Property; s:label "e-ticket number";
+    s:comment """Like BA 7391625775.  Compare normal eTicket number has numeric airline like 125-7391625775""".

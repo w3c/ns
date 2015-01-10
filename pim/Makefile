@@ -15,7 +15,7 @@ C=python $S/cwm.py
 convert :
 	for i in *.n3; do make $${i/n3/ttl}; done
 	for i in *.n3; do make $${i/n3/rdf}; done
-
+	cvs -n update
 
 
 #ends

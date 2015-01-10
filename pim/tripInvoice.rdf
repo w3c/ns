@@ -1,0 +1,102 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdf:Description rdf:about="">
+        <dc:title>An onotology for travel agent invoices</dc:title>
+    </rdf:Description>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#billed_to_currency">
+        <comment>3 letter code</comment>
+        <label>billed to currency</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#billed_to_data">
+        <comment>Card type and last 4 digis.</comment>
+        <label>billed to card</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#billed_to_value">
+        <comment>Decimal. Can include leading asterisk </comment>
+        <label>billed amount</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#customer_number">
+        <comment>Can include leading zeroes</comment>
+        <label>customer number</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#exchange_currency">
+        <comment>3 digit code</comment>
+        <label>exchange currency</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#exchange_data">
+        <comment></comment>
+        <label>exchange data</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#exchange_value">
+        <comment>decimal</comment>
+        <label>exchange amount</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#invoice_issue_date">
+        <comment>Like 06 Mar 2012</comment>
+        <label>invoice date</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#invoice_number">
+        <comment>string of integer</comment>
+        <label>invoice number</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#monthName">
+        <comment>Like Jan.</comment>
+        <label>month name</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#monthNumber">
+        <comment>Like 01</comment>
+        <label>month number</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#passenger_currency">
+        <comment>3 letter code.</comment>
+        <label>passegnger currency</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#passenger_data">
+        <comment>Like SMITH JANE</comment>
+        <label>passenger name</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#passenger_value">
+        <comment>Like 1,076.04</comment>
+        <label>passenger amount</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#record_locator">
+        <comment>Standard airline 6 character alphanumeric code.</comment>
+        <label>record locator</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#sales_person">
+        <comment>string of integer</comment>
+        <label>sales person number</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#service_fee_data">
+        <comment>Like ticket number but for fee</comment>
+        <label>service fee number</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/trip#ticket_number_data">
+        <comment>Like BA 7391625775.  Compare normal eTicket number has numeric airline like 125-7391625775</comment>
+        <label>e-ticket number</label>
+    </rdf:Property>
+</rdf:RDF>

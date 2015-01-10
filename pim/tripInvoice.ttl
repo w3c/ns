@@ -1,0 +1,79 @@
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix dc: <http://purl.org/dc/elements/1.1/> .
+    @prefix inv: <http://www.w3.org/ns/pim/trip#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    
+    <>     dc:title "An onotology for travel agent invoices" .
+    
+    inv:billed_to_currency     a rdf:Property;
+         :comment "3 letter code";
+         :label "billed to currency" .
+    
+    inv:billed_to_data     a rdf:Property;
+         :comment "Card type and last 4 digis.";
+         :label "billed to card" .
+    
+    inv:billed_to_value     a rdf:Property;
+         :comment "Decimal. Can include leading asterisk ";
+         :label "billed amount" .
+    
+    inv:customer_number     a rdf:Property;
+         :comment "Can include leading zeroes";
+         :label "customer number" .
+    
+    inv:exchange_currency     a rdf:Property;
+         :comment "3 digit code";
+         :label "exchange currency" .
+    
+    inv:exchange_data     a rdf:Property;
+         :comment "";
+         :label "exchange data" .
+    
+    inv:exchange_value     a rdf:Property;
+         :comment "decimal";
+         :label "exchange amount" .
+    
+    inv:invoice_issue_date     a rdf:Property;
+         :comment "Like 06 Mar 2012";
+         :label "invoice date" .
+    
+    inv:invoice_number     a rdf:Property;
+         :comment "string of integer";
+         :label "invoice number" .
+    
+    inv:monthName     a rdf:Property;
+         :comment "Like Jan.";
+         :label "month name" .
+    
+    inv:monthNumber     a rdf:Property;
+         :comment "Like 01";
+         :label "month number" .
+    
+    inv:passenger_currency     a rdf:Property;
+         :comment "3 letter code.";
+         :label "passegnger currency" .
+    
+    inv:passenger_data     a rdf:Property;
+         :comment "Like SMITH JANE";
+         :label "passenger name" .
+    
+    inv:passenger_value     a rdf:Property;
+         :comment "Like 1,076.04";
+         :label "passenger amount" .
+    
+    inv:record_locator     a rdf:Property;
+         :comment "Standard airline 6 character alphanumeric code.";
+         :label "record locator" .
+    
+    inv:sales_person     a rdf:Property;
+         :comment "string of integer";
+         :label "sales person number" .
+    
+    inv:service_fee_data     a rdf:Property;
+         :comment "Like ticket number but for fee";
+         :label "service fee number" .
+    
+    inv:ticket_number_data     a rdf:Property;
+         :comment "Like BA 7391625775.  Compare normal eTicket number has numeric airline like 125-7391625775";
+         :label "e-ticket number" .
+    
