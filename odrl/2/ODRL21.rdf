@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rdf:RDF xmlns:dcmit="http://purl.org/dc/dcmitype/"
+<rdf:RDF
+   xmlns:dcmit="http://purl.org/dc/dcmitype/"
    xmlns:dct="http://purl.org/dc/terms/"
    xmlns:foaf="http://xmlns.com/foaf/0.1/"
    xmlns:ont="http://purl.org/net/ns/ontology-annot#"
@@ -17,12 +18,12 @@
     <dct:creator>Mo McRoberts (BBC)</dct:creator>
     <dct:creator>Víctor Rodríguez Doncel (OEG-UPM)</dct:creator>
     <dct:description xml:lang="en">The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media.</dct:description>
-    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2014-11-10</dct:issued>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-18</dct:issued>
     <vann:example rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
     <vann:preferredNamespacePrefix>odrl</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri rdf:resource="http://w3.org/ns/odrl/2/"/>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
-    <rdfs:label xml:lang="en">Open Digital Rights Language (ODRL) Ontology</rdfs:label>
+    <rdfs:label xml:lang="en">ODRL Version 2.1 Ontology</rdfs:label>
     <owl:versionInfo>2.1</owl:versionInfo>
   </owl:Ontology>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Action">
@@ -292,7 +293,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/acceptTracking">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of accepting that the use of the asset may be recorded. The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner requires that the Assignees accepts that the use of the Asset may be tracked. The collected information may be tracked by the Assigner, or may link to a Party with the role function “trackingParty”.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Accept tracking</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -376,24 +377,27 @@
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/aggregate">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of using the asset (or parts of it) as part of a composite collection.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to use the Asset or parts of it as part of a composite collection.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Aggregate</rdfs:label>
     <vs:term_status>testing</vs:term_status>
+    <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/annotate">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of adding notations/commentaries to the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to add explanatory notations/commentaries to the Asset without modifying the Asset in any other way.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Annotate</rdfs:label>
     <vs:term_status>testing</vs:term_status>
+    <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/anonymize">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of anonymising the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to anonymize all or parts of the Asset. For example, to remove identifying particulars for statistical or for other comparable purposes, or to use the asset without stating the author/source.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Anonymize</rdfs:label>
     <vs:term_status>testing</vs:term_status>
+    <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/append">
     <ont:deprecatedBy rdf:resource="http://www.w3.org/ns/odrl/2/appendTo"/>
@@ -413,7 +417,7 @@
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/archive">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of persistently storing the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to store the Asset (in a non-transient form). Constraints may be used for temporal conditions.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Archive</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -455,7 +459,7 @@
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/attribute">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of attributing the asset to a party.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner requires that the Assignees attributes the Asset to the Assigner or an attributed Party. May link to an Asset with the attribution information. May link to a Party with the role function “attributedParty”.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Attribute</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -478,7 +482,7 @@
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/compensate">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of compensating the Assigner (or other specified compensation Party) by some amount of value, if defined, for use of the Asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner requires that the Assignees compensates the Assigner (or other specified compensation Party) by some amount of value, if defined, for use of the Asset. The compensation may use different types of things with a value: (i) the thing is expressed by the value (term) of the Constraint name; (b) the value is expressed by operator, rightOperand, dataType and unit</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Compensate</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -493,7 +497,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/concurrentUse">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of multiple concurrent use of the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to create multiple copies of the Asset that are being concurrently used.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Concurrent use</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -526,12 +530,13 @@
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/copy">
+    <ont:deprecatedBy rdf:resource="http://www.w3.org/ns/odrl/2/reproduce"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of making an exact reproduction of the asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Copy</rdfs:label>
     <owl:sameAs rdf:resource="http://www.w3.org/ns/odrl/2/reproduce"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/count">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -575,7 +580,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/delete">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of permanently removing the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner requires that the Assignees permanently removes all copies of the Asset. Use a constraint to define under which conditions the Asset should be deleted.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Delete</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -590,10 +595,9 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/derive">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of creating a new derivative asset from the asset</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to create a new derivative Asset from this Asset and to edit or modify the derivative. A new asset is created and may have significant overlaps with the original Asset. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective). To the derived Asset a next policy may be applied.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Derive</rdfs:label>
-    <owl:sameAs rdf:resource="http://www.w3.org/ns/odrl/2/modify"/>
     <vs:term_status>testing</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
@@ -609,7 +613,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/digitize">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of producing a digital copy of (or otherwise digitize) the Asset from its analogue form.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to produce a digital copy of (or otherwise digitize) the Asset from its analogue form.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Digitize</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -617,16 +621,15 @@
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/display">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of making a transient visible rendering of the asset</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to display the visual media Asset to an audience or the public. For example, displaying an image on a screen.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Display</rdfs:label>
-    <owl:sameAs rdf:resource="http://www.w3.org/ns/odrl/2/execute"/>
     <vs:term_status>testing</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/present"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/distribute">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of publicly distributing, displaying and/or performing the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to distribute the Asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Distribute</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -666,7 +669,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/ensureExclusivity">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of requiring the Assigner to ensure the Permission on the asset is unique to the Assignee.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assignee requires that the Assigners ensure that the permission on the Asset is exclusive to the Assignee.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Ensure exclusivity</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -688,24 +691,23 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/execute">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of making a transient visible rendering of the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to run the computer program Asset. For example, machine executable code or Java such as a game or application.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Execute</rdfs:label>
-    <owl:sameAs rdf:resource="http://www.w3.org/ns/odrl/2/display"/>
     <vs:term_status>testing</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/export">
+    <ont:deprecatedBy rdf:resource="http://www.w3.org/ns/odrl/2/transform"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of transforming the asset into a new form.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Export</rdfs:label>
-    <owl:sameAs rdf:resource="http://www.w3.org/ns/odrl/2/transform"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/extract">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of extracting (replicating) unchanged parts of the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to extract parts of the Asset and to use it as a new Asset. A new asset is created and may have very little in common with the original Asset. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective). To the extracted Asset a next policy may be applied.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Extract</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -714,7 +716,7 @@
   <Action rdf:about="http://www.w3.org/ns/odrl/2/extractChar">
     <ont:deprecatedBy rdf:resource="http://www.editeur.org/onix-pl/extract-char"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of extracting (replicating) unchanged character(s) from the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The act of extracting (replicating) unchanged characters from the asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Extract character</rdfs:label>
     <vs:term_status>deprecated</vs:term_status>
@@ -723,7 +725,7 @@
   <Action rdf:about="http://www.w3.org/ns/odrl/2/extractPage">
     <ont:deprecatedBy rdf:resource="http://www.editeur.org/onix-pl/extract-word"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of extracting (replicating) unchanged page(s) from the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The act of extracting (replicating) unchanged pages from the asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Extract page</rdfs:label>
     <vs:term_status>deprecated</vs:term_status>
@@ -732,7 +734,7 @@
   <Action rdf:about="http://www.w3.org/ns/odrl/2/extractWord">
     <ont:deprecatedBy rdf:resource="http://www.editeur.org/onix-pl/extract-page"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of extracting (replicating) unchanged word(s) from the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The act of extracting (replicating) unchanged words from the asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Extract word</rdfs:label>
     <vs:term_status>deprecated</vs:term_status>
@@ -757,7 +759,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/give">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of giving away the asset in perpetuity without exchange of value.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to transfer the ownership of the Asset to a third party without compensation and while deleting the original asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Give</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -765,7 +767,7 @@
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/grantUse">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of granting the use the Asset to third parties.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignee to grant the use the Asset to third parties. This action enables the Assignee to create policies for the use of the Asset for third parties. nextPolicy is recommended to be agreed with the third party. Use of temporal constraints is recommended.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Grant use</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -798,14 +800,14 @@
   </UndefinedTerm>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/include">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of including other related assets to fulfill the function.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner requires that the Assignees include other related assets in the Asset. For example: bio picture must be included in the attribution. Use of the Asset relation attribute is required.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Include</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/index">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of indexing the asset into a collection of assets.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to record the Asset in an index. For example, to include a link to the Asset in a search engine database.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Index</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -821,7 +823,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/inform">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of informing a party that an action has been performed on the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner requires that the Assignees inform the Assigner or an informed Party that an action has been performed on or in relation to the Asset. May link to a Party with the role function “informedParty”.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Inform</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -854,7 +856,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/install">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of loading the asset onto storage device ready for operation.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to load the computer program Asset onto a storage device which allows operating or running the Asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Install</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -921,11 +923,12 @@
     <vs:term_status>testing</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/license">
+    <ont:deprecatedBy rdf:resource="http://www.w3.org/ns/odrl/2/grantUse"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of granting the right to use the asset to a third-party.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">License</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </Action>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/lt">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
@@ -957,16 +960,15 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/modify">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of creating a new derivative asset from the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to update existing content of the Asset. A new asset is not created by this action. This action will modify an asset which is typically updated from time to time without creating a new asset like a database. If the result from modifying the asset should be a new asset the actions derive or extract should be used. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective).</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Modify</rdfs:label>
-    <owl:sameAs rdf:resource="http://www.w3.org/ns/odrl/2/derive"/>
     <vs:term_status>testing</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/move">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of moving the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to move the Asset from one digital location to another including deleting the original copy. After the Asset has been moved, the original copy must be deleted.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Move</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -980,14 +982,14 @@
   </Operator>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/nextPolicy">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of specifying an asset (which must be a Policy) as the Policy terms for third-party use of the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner requires that the Assignees grants the specified Policy to a third party for their use of the Asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Next policy</rdfs:label>
     <vs:term_status>testing</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/obtainConsent">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of requiring explicit consent from a party to perform the action on the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner requires that the Assignees obtains explicit consent from the Assigner or a consenting Party to perform the requested action in relation to the Asset. Used as a Duty to ensure that the Assigner or a Party is authorized to approve such actions on a case-by-case basis. May link to a Party with the role function “consentingParty”.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Obtain consent</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -1012,11 +1014,12 @@
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/pay">
+    <ont:deprecatedBy rdf:resource="http://www.w3.org/ns/odrl/2/compensate"/>
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of paying a financial amount to a party for use of the asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Pay</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>deprecated</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/payAmount">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -1076,19 +1079,23 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/play">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of rendering the asset into audio and/or video form.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to perform an audio Asset to an audience.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Play</rdfs:label>
-    <owl:sameAs rdf:resource="http://www.w3.org/ns/odrl/2/present"/>
     <vs:term_status>testing</vs:term_status>
-    <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
+    <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/present"/>
   </Action>
+  <owl:NamedIndividual rdf:about="http://www.w3.org/ns/odrl/2/policyUsage">
+    <rdfs:comment xml:lang="en">When used as an event in constraints, indicates that the event occurs at the time when the policy is executed.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
+    <rdfs:label xml:lang="en">Policy usage time</rdfs:label>
+    <vs:term_status>testing</vs:term_status>
+  </owl:NamedIndividual>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/present">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of rendering the asset into audio and/or video form.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to perform or exhibit an Asset to an audience.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Present</rdfs:label>
-    <owl:sameAs rdf:resource="http://www.w3.org/ns/odrl/2/play"/>
     <vs:term_status>testing</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
@@ -1101,7 +1108,7 @@
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/print">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of rendering the asset onto paper or hard copy form.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to print an Asset onto paper or to create a hard copy. For example, creating a permanent, fixed (static), and directly perceivable representation of the Asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Print</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -1173,7 +1180,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/read">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of obtaining data from the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to obtain data from the Asset. For example, the ability to read a record from a database (the Asset).</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Read</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -1214,10 +1221,9 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/reproduce">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of making an exact reproduction of the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The act of making an exact reproduction of the asset. The Assigner permits/prohibits the Assignees to make exact reproductions of the Asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Reproduce</rdfs:label>
-    <owl:sameAs rdf:resource="http://www.w3.org/ns/odrl/2/copy"/>
     <vs:term_status>testing</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
@@ -1230,7 +1236,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/reviewPolicy">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of performing a manual review of the terms associated with the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner requires that the Assignees have a person review the Policy applicable to the Asset. Used when human intervention is required to review the Policy. May link to an Asset which represents the full Policy information.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Review policy</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -1251,7 +1257,7 @@
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/sell">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of trading the asset in exchange of value.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to transfer the ownership of the Asset to a third party with compensation and while deleting the original asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Sell</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -1325,7 +1331,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/textToSpeech">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of a system reading the text of the asset out loud.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to have a text Asset read out loud to an audience.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Text-to-speech</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -1358,18 +1364,24 @@
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/function"/>
     <vs:term_status>testing</vs:term_status>
   </rdf:Property>
+  <Action rdf:about="http://www.w3.org/ns/odrl/2/transfer">
+    <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <rdfs:comment xml:lang="en">The Assigner transfers/does not transfer the ownership in perpetuity to the Assignees.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
+    <rdfs:label xml:lang="en">Transfer</rdfs:label>
+    <vs:term_status>testing</vs:term_status>
+  </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/transform">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of transforming the asset into a new form.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to make a digital copy of the digital Asset in another digital format. Typically used to convert the Asset into a different format for consumption on/transfer to a third party system.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Transform</rdfs:label>
-    <owl:sameAs rdf:resource="http://www.w3.org/ns/odrl/2/export"/>
     <vs:term_status>testing</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/translate">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of translating the asset into a new natural language.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to translate the original natural language of an Asset into another natural language. A new derivative Asset is created by that action.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Translate</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -1386,7 +1398,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/uninstall">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of unloading the asset from storage device.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner requires that the Assignees unload and delete the computer program Asset from a storage device and disable its readiness for operation. The Asset is no longer accessible to the Assignees.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Uninstall</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -1401,7 +1413,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/use">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of using the Asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignee to use the Asset as agreed. More details may be defined in the applicable agreements or under applicable commercial laws. Refined types of actions can be expressed by the narrower actions.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Use</rdfs:label>
     <vs:term_status>testing</vs:term_status>
@@ -1424,7 +1436,7 @@
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/watermark">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <rdfs:comment xml:lang="en">The act of applying a watermark to the asset.</rdfs:comment>
+    <rdfs:comment xml:lang="en">The Assigner requires that the Assignees apply a watermark as provided by the Assigner to the Asset. It is recommended to embed a link to the watermark.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Watermark</rdfs:label>
     <vs:term_status>testing</vs:term_status>

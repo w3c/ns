@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
-    <title>Open Digital Rights Language (ODRL) Ontology</title>
+    <title>ODRL Version 2.1 Ontology</title>
 	<link rel="stylesheet" type="text/css" href="http://www.w3.org/StyleSheets/TR/w3c-unofficial">
 	<link rel="stylesheet" type="text/css" href="local.css">
 	<link rel="alternate" type="text/turtle" href="ODRL21.ttl">
@@ -12,11 +12,11 @@
 	<link rel="alternate" type="application/json" href="ODRL21.json">	
 </head>
 <body>
-<h1>Open Digital Rights Language (ODRL) Ontology</h1>
+<h1>ODRL Version 2.1 Ontology</h1>
 <em>The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media.</em>
 <dl>
 <dt>Latest Version</dt><dd><a href="http://www.w3.org/ns/odrl/2/">http://www.w3.org/ns/odrl/2/</a></dd>
-<dt>Date</dt><dd>2014-11-10</dd>
+<dt>Date</dt><dd>2015-01-18</dd>
 <dt>Revision</dt><dd>2.1</dd>
 <dt>Authors</dt><dd>Mo McRoberts (BBC), Víctor Rodríguez Doncel (OEG-UPM)</dd>
 <dt>Contributors</dt><dd>ODRL Community Group</dd>
@@ -88,8 +88,8 @@
 </ol>
 
 <h2 id="sec-summary">Summary of Terms</h2>
-<p>This vocabulary defines 24 classes, 56 properties, one concept scheme, 60 concepts and 17 named individuals.</p>
-<dl><dt>Classes</dt><dd><a href="#term-Action">Action</a>&nbsp;| <a href="#term-Agreement">Agreement</a>&nbsp;| <a href="#term-All">All</a>&nbsp;| <a href="#term-AllConnections">AllConnections</a>&nbsp;| <a href="#term-AllGroups">AllGroups</a>&nbsp;| <a href="#term-All2ndConnections">All2ndConnections</a>&nbsp;| <a href="#term-Asset">Asset</a>&nbsp;| <a href="#term-ConflictTerm">ConflictTerm</a>&nbsp;| <a href="#term-Constraint">Constraint</a>&nbsp;| <a href="#term-Duty">Duty</a>&nbsp;| <a href="#term-Group">Group</a>&nbsp;| <a href="#term-Individual">Individual</a>&nbsp;| <a href="#term-Offer">Offer</a>&nbsp;| <a href="#term-Operator">Operator</a>&nbsp;| <a href="#term-Party">Party</a>&nbsp;| <a href="#term-Permission">Permission</a>&nbsp;| <a href="#term-Policy">Policy</a>&nbsp;| <a href="#term-Privacy">Privacy</a>&nbsp;| <a href="#term-Prohibition">Prohibition</a>&nbsp;| <a href="#term-Request">Request</a>&nbsp;| <a href="#term-Rule">Rule</a>&nbsp;| <a href="#term-Set">Set</a>&nbsp;| <a href="#term-Ticket">Ticket</a>&nbsp;| <a href="#term-UndefinedTerm">UndefinedTerm</a></dd><dt>Properties</dt><dd><a href="#term-systemDevice">systemDevice</a>&nbsp;| <a href="#term-absolutePosition">absolutePosition</a>&nbsp;| <a href="#term-absoluteSize">absoluteSize</a>&nbsp;| <a href="#term-action">action</a>&nbsp;| <a href="#term-assignee">assignee</a>&nbsp;| <a href="#term-assigner">assigner</a>&nbsp;| <a href="#term-attributedParty">attributedParty</a>&nbsp;| <a href="#term-conflict">conflict</a>&nbsp;| <a href="#term-consentingParty">consentingParty</a>&nbsp;| <a href="#term-constraint">constraint</a>&nbsp;| <a href="#term-count">count</a>&nbsp;| <a href="#term-dateTime">dateTime</a>&nbsp;| <a href="#term-deliveryChannel">deliveryChannel</a>&nbsp;| <a href="#term-device">device</a>&nbsp;| <a href="#term-duty">duty</a>&nbsp;| <a href="#term-elapsedTime">elapsedTime</a>&nbsp;| <a href="#term-event">event</a>&nbsp;| <a href="#term-fileFormat">fileFormat</a>&nbsp;| <a href="#term-function">function</a>&nbsp;| <a href="#term-industry">industry</a>&nbsp;| <a href="#term-informedParty">informedParty</a>&nbsp;| <a href="#term-inheritAllowed">inheritAllowed</a>&nbsp;| <a href="#term-inheritFrom">inheritFrom</a>&nbsp;| <a href="#term-language">language</a>&nbsp;| <a href="#term-media">media</a>&nbsp;| <a href="#term-meteredTime">meteredTime</a>&nbsp;| <a href="#term-operator">operator</a>&nbsp;| <a href="#term-output">output</a>&nbsp;| <a href="#term-compensatedParty">compensatedParty</a>&nbsp;| <a href="#term-payAmount">payAmount</a>&nbsp;| <a href="#term-percentage">percentage</a>&nbsp;| <a href="#term-permission">permission</a>&nbsp;| <a href="#term-product">product</a>&nbsp;| <a href="#term-profile">profile</a>&nbsp;| <a href="#term-prohibition">prohibition</a>&nbsp;| <a href="#term-proximity">proximity</a>&nbsp;| <a href="#term-purpose">purpose</a>&nbsp;| <a href="#term-recipient">recipient</a>&nbsp;| <a href="#term-relation">relation</a>&nbsp;| <a href="#term-relativePosition">relativePosition</a>&nbsp;| <a href="#term-relativeSize">relativeSize</a>&nbsp;| <a href="#term-resolution">resolution</a>&nbsp;| <a href="#term-rightOperand">rightOperand</a>&nbsp;| <a href="#term-spatial">spatial</a>&nbsp;| <a href="#term-status">status</a>&nbsp;| <a href="#term-system">system</a>&nbsp;| <a href="#term-target">target</a>&nbsp;| <a href="#term-timeInterval">timeInterval</a>&nbsp;| <a href="#term-timedCount">timedCount</a>&nbsp;| <a href="#term-trackingParty">trackingParty</a>&nbsp;| <a href="#term-undefined">undefined</a>&nbsp;| <a href="#term-dataType">dataType</a>&nbsp;| <a href="#term-version">version</a>&nbsp;| <a href="#term-virtualLocation">virtualLocation</a></dd><dt>Concept schemes</dt><dd><a href="#term-actions">actions</a></dd><dt>Concepts</dt><dd><a href="#term-acceptTracking">acceptTracking</a>&nbsp;| <a href="#term-adHocShare">adHocShare</a>&nbsp;| <a href="#term-aggregate">aggregate</a>&nbsp;| <a href="#term-annotate">annotate</a>&nbsp;| <a href="#term-anonymize">anonymize</a>&nbsp;| <a href="#term-append">append</a>&nbsp;| <a href="#term-appendTo">appendTo</a>&nbsp;| <a href="#term-archive">archive</a>&nbsp;| <a href="#term-attachPolicy">attachPolicy</a>&nbsp;| <a href="#term-attachSource">attachSource</a>&nbsp;| <a href="#term-attribute">attribute</a>&nbsp;| <a href="#term-commercialize">commercialize</a>&nbsp;| <a href="#term-compensate">compensate</a>&nbsp;| <a href="#term-concurrentUse">concurrentUse</a>&nbsp;| <a href="#term-copy">copy</a>&nbsp;| <a href="#term-delete">delete</a>&nbsp;| <a href="#term-derive">derive</a>&nbsp;| <a href="#term-digitize">digitize</a>&nbsp;| <a href="#term-display">display</a>&nbsp;| <a href="#term-distribute">distribute</a>&nbsp;| <a href="#term-ensureExclusivity">ensureExclusivity</a>&nbsp;| <a href="#term-execute">execute</a>&nbsp;| <a href="#term-export">export</a>&nbsp;| <a href="#term-extract">extract</a>&nbsp;| <a href="#term-extractChar">extractChar</a>&nbsp;| <a href="#term-extractPage">extractPage</a>&nbsp;| <a href="#term-extractWord">extractWord</a>&nbsp;| <a href="#term-give">give</a>&nbsp;| <a href="#term-grantUse">grantUse</a>&nbsp;| <a href="#term-include">include</a>&nbsp;| <a href="#term-index">index</a>&nbsp;| <a href="#term-inform">inform</a>&nbsp;| <a href="#term-install">install</a>&nbsp;| <a href="#term-lease">lease</a>&nbsp;| <a href="#term-lend">lend</a>&nbsp;| <a href="#term-license">license</a>&nbsp;| <a href="#term-modify">modify</a>&nbsp;| <a href="#term-move">move</a>&nbsp;| <a href="#term-nextPolicy">nextPolicy</a>&nbsp;| <a href="#term-obtainConsent">obtainConsent</a>&nbsp;| <a href="#term-pay">pay</a>&nbsp;| <a href="#term-play">play</a>&nbsp;| <a href="#term-present">present</a>&nbsp;| <a href="#term-preview">preview</a>&nbsp;| <a href="#term-print">print</a>&nbsp;| <a href="#term-read">read</a>&nbsp;| <a href="#term-reproduce">reproduce</a>&nbsp;| <a href="#term-reviewPolicy">reviewPolicy</a>&nbsp;| <a href="#term-secondaryUse">secondaryUse</a>&nbsp;| <a href="#term-sell">sell</a>&nbsp;| <a href="#term-share">share</a>&nbsp;| <a href="#term-shareAlike">shareAlike</a>&nbsp;| <a href="#term-textToSpeech">textToSpeech</a>&nbsp;| <a href="#term-transform">transform</a>&nbsp;| <a href="#term-translate">translate</a>&nbsp;| <a href="#term-uninstall">uninstall</a>&nbsp;| <a href="#term-use">use</a>&nbsp;| <a href="#term-watermark">watermark</a>&nbsp;| <a href="#term-write">write</a>&nbsp;| <a href="#term-writeTo">writeTo</a></dd><dt>Named individuals</dt><dd><a href="#term-eq">eq</a>&nbsp;| <a href="#term-gt">gt</a>&nbsp;| <a href="#term-gteq">gteq</a>&nbsp;| <a href="#term-hasPart">hasPart</a>&nbsp;| <a href="#term-ignore">ignore</a>&nbsp;| <a href="#term-invalid">invalid</a>&nbsp;| <a href="#term-isA">isA</a>&nbsp;| <a href="#term-isAllOf">isAllOf</a>&nbsp;| <a href="#term-isAnyOf">isAnyOf</a>&nbsp;| <a href="#term-isNoneOf">isNoneOf</a>&nbsp;| <a href="#term-isPartOf">isPartOf</a>&nbsp;| <a href="#term-lt">lt</a>&nbsp;| <a href="#term-lteq">lteq</a>&nbsp;| <a href="#term-neq">neq</a>&nbsp;| <a href="#term-perm">perm</a>&nbsp;| <a href="#term-prohibit">prohibit</a>&nbsp;| <a href="#term-support">support</a></dd></dl>
+<p>This vocabulary defines 24 classes, 56 properties, one concept scheme, 61 concepts and 18 named individuals.</p>
+<dl><dt>Classes</dt><dd><a href="#term-Action">Action</a>&nbsp;| <a href="#term-Agreement">Agreement</a>&nbsp;| <a href="#term-All">All</a>&nbsp;| <a href="#term-AllConnections">AllConnections</a>&nbsp;| <a href="#term-AllGroups">AllGroups</a>&nbsp;| <a href="#term-All2ndConnections">All2ndConnections</a>&nbsp;| <a href="#term-Asset">Asset</a>&nbsp;| <a href="#term-ConflictTerm">ConflictTerm</a>&nbsp;| <a href="#term-Constraint">Constraint</a>&nbsp;| <a href="#term-Duty">Duty</a>&nbsp;| <a href="#term-Group">Group</a>&nbsp;| <a href="#term-Individual">Individual</a>&nbsp;| <a href="#term-Offer">Offer</a>&nbsp;| <a href="#term-Operator">Operator</a>&nbsp;| <a href="#term-Party">Party</a>&nbsp;| <a href="#term-Permission">Permission</a>&nbsp;| <a href="#term-Policy">Policy</a>&nbsp;| <a href="#term-Privacy">Privacy</a>&nbsp;| <a href="#term-Prohibition">Prohibition</a>&nbsp;| <a href="#term-Request">Request</a>&nbsp;| <a href="#term-Rule">Rule</a>&nbsp;| <a href="#term-Set">Set</a>&nbsp;| <a href="#term-Ticket">Ticket</a>&nbsp;| <a href="#term-UndefinedTerm">UndefinedTerm</a></dd><dt>Properties</dt><dd><a href="#term-systemDevice">systemDevice</a>&nbsp;| <a href="#term-absolutePosition">absolutePosition</a>&nbsp;| <a href="#term-absoluteSize">absoluteSize</a>&nbsp;| <a href="#term-action">action</a>&nbsp;| <a href="#term-assignee">assignee</a>&nbsp;| <a href="#term-assigner">assigner</a>&nbsp;| <a href="#term-attributedParty">attributedParty</a>&nbsp;| <a href="#term-conflict">conflict</a>&nbsp;| <a href="#term-consentingParty">consentingParty</a>&nbsp;| <a href="#term-constraint">constraint</a>&nbsp;| <a href="#term-count">count</a>&nbsp;| <a href="#term-dateTime">dateTime</a>&nbsp;| <a href="#term-deliveryChannel">deliveryChannel</a>&nbsp;| <a href="#term-device">device</a>&nbsp;| <a href="#term-duty">duty</a>&nbsp;| <a href="#term-elapsedTime">elapsedTime</a>&nbsp;| <a href="#term-event">event</a>&nbsp;| <a href="#term-fileFormat">fileFormat</a>&nbsp;| <a href="#term-function">function</a>&nbsp;| <a href="#term-industry">industry</a>&nbsp;| <a href="#term-informedParty">informedParty</a>&nbsp;| <a href="#term-inheritAllowed">inheritAllowed</a>&nbsp;| <a href="#term-inheritFrom">inheritFrom</a>&nbsp;| <a href="#term-language">language</a>&nbsp;| <a href="#term-media">media</a>&nbsp;| <a href="#term-meteredTime">meteredTime</a>&nbsp;| <a href="#term-operator">operator</a>&nbsp;| <a href="#term-output">output</a>&nbsp;| <a href="#term-compensatedParty">compensatedParty</a>&nbsp;| <a href="#term-payAmount">payAmount</a>&nbsp;| <a href="#term-percentage">percentage</a>&nbsp;| <a href="#term-permission">permission</a>&nbsp;| <a href="#term-product">product</a>&nbsp;| <a href="#term-profile">profile</a>&nbsp;| <a href="#term-prohibition">prohibition</a>&nbsp;| <a href="#term-proximity">proximity</a>&nbsp;| <a href="#term-purpose">purpose</a>&nbsp;| <a href="#term-recipient">recipient</a>&nbsp;| <a href="#term-relation">relation</a>&nbsp;| <a href="#term-relativePosition">relativePosition</a>&nbsp;| <a href="#term-relativeSize">relativeSize</a>&nbsp;| <a href="#term-resolution">resolution</a>&nbsp;| <a href="#term-rightOperand">rightOperand</a>&nbsp;| <a href="#term-spatial">spatial</a>&nbsp;| <a href="#term-status">status</a>&nbsp;| <a href="#term-system">system</a>&nbsp;| <a href="#term-target">target</a>&nbsp;| <a href="#term-timeInterval">timeInterval</a>&nbsp;| <a href="#term-timedCount">timedCount</a>&nbsp;| <a href="#term-trackingParty">trackingParty</a>&nbsp;| <a href="#term-undefined">undefined</a>&nbsp;| <a href="#term-dataType">dataType</a>&nbsp;| <a href="#term-version">version</a>&nbsp;| <a href="#term-virtualLocation">virtualLocation</a></dd><dt>Concept schemes</dt><dd><a href="#term-actions">actions</a></dd><dt>Concepts</dt><dd><a href="#term-acceptTracking">acceptTracking</a>&nbsp;| <a href="#term-adHocShare">adHocShare</a>&nbsp;| <a href="#term-aggregate">aggregate</a>&nbsp;| <a href="#term-annotate">annotate</a>&nbsp;| <a href="#term-anonymize">anonymize</a>&nbsp;| <a href="#term-append">append</a>&nbsp;| <a href="#term-appendTo">appendTo</a>&nbsp;| <a href="#term-archive">archive</a>&nbsp;| <a href="#term-attachPolicy">attachPolicy</a>&nbsp;| <a href="#term-attachSource">attachSource</a>&nbsp;| <a href="#term-attribute">attribute</a>&nbsp;| <a href="#term-commercialize">commercialize</a>&nbsp;| <a href="#term-compensate">compensate</a>&nbsp;| <a href="#term-concurrentUse">concurrentUse</a>&nbsp;| <a href="#term-copy">copy</a>&nbsp;| <a href="#term-delete">delete</a>&nbsp;| <a href="#term-derive">derive</a>&nbsp;| <a href="#term-digitize">digitize</a>&nbsp;| <a href="#term-display">display</a>&nbsp;| <a href="#term-distribute">distribute</a>&nbsp;| <a href="#term-ensureExclusivity">ensureExclusivity</a>&nbsp;| <a href="#term-execute">execute</a>&nbsp;| <a href="#term-export">export</a>&nbsp;| <a href="#term-extract">extract</a>&nbsp;| <a href="#term-extractChar">extractChar</a>&nbsp;| <a href="#term-extractPage">extractPage</a>&nbsp;| <a href="#term-extractWord">extractWord</a>&nbsp;| <a href="#term-give">give</a>&nbsp;| <a href="#term-grantUse">grantUse</a>&nbsp;| <a href="#term-include">include</a>&nbsp;| <a href="#term-index">index</a>&nbsp;| <a href="#term-inform">inform</a>&nbsp;| <a href="#term-install">install</a>&nbsp;| <a href="#term-lease">lease</a>&nbsp;| <a href="#term-lend">lend</a>&nbsp;| <a href="#term-license">license</a>&nbsp;| <a href="#term-modify">modify</a>&nbsp;| <a href="#term-move">move</a>&nbsp;| <a href="#term-nextPolicy">nextPolicy</a>&nbsp;| <a href="#term-obtainConsent">obtainConsent</a>&nbsp;| <a href="#term-pay">pay</a>&nbsp;| <a href="#term-play">play</a>&nbsp;| <a href="#term-present">present</a>&nbsp;| <a href="#term-preview">preview</a>&nbsp;| <a href="#term-print">print</a>&nbsp;| <a href="#term-read">read</a>&nbsp;| <a href="#term-reproduce">reproduce</a>&nbsp;| <a href="#term-reviewPolicy">reviewPolicy</a>&nbsp;| <a href="#term-secondaryUse">secondaryUse</a>&nbsp;| <a href="#term-sell">sell</a>&nbsp;| <a href="#term-share">share</a>&nbsp;| <a href="#term-shareAlike">shareAlike</a>&nbsp;| <a href="#term-textToSpeech">textToSpeech</a>&nbsp;| <a href="#term-transfer">transfer</a>&nbsp;| <a href="#term-transform">transform</a>&nbsp;| <a href="#term-translate">translate</a>&nbsp;| <a href="#term-uninstall">uninstall</a>&nbsp;| <a href="#term-use">use</a>&nbsp;| <a href="#term-watermark">watermark</a>&nbsp;| <a href="#term-write">write</a>&nbsp;| <a href="#term-writeTo">writeTo</a></dd><dt>Named individuals</dt><dd><a href="#term-eq">eq</a>&nbsp;| <a href="#term-gt">gt</a>&nbsp;| <a href="#term-gteq">gteq</a>&nbsp;| <a href="#term-hasPart">hasPart</a>&nbsp;| <a href="#term-ignore">ignore</a>&nbsp;| <a href="#term-invalid">invalid</a>&nbsp;| <a href="#term-isA">isA</a>&nbsp;| <a href="#term-isAllOf">isAllOf</a>&nbsp;| <a href="#term-isAnyOf">isAnyOf</a>&nbsp;| <a href="#term-isNoneOf">isNoneOf</a>&nbsp;| <a href="#term-isPartOf">isPartOf</a>&nbsp;| <a href="#term-lt">lt</a>&nbsp;| <a href="#term-lteq">lteq</a>&nbsp;| <a href="#term-neq">neq</a>&nbsp;| <a href="#term-perm">perm</a>&nbsp;| <a href="#term-policyUsage">policyUsage</a>&nbsp;| <a href="#term-prohibit">prohibit</a>&nbsp;| <a href="#term-support">support</a></dd></dl>
 <h2 id="sec-groups">Groups</h2>
 <p>Some terms can be organised into logical groups, as shown below:</p>
 <p class="diagram">
@@ -204,7 +204,12 @@
 _:requirements
 	a odrl:Duty ;
 	odrl:action odrl:pay ;
-	odrl:target &lt;http://example.com/ubl:AUD0.50&gt; .
+	odrl:constraint [
+		a odrl:Constraint ;
+		odrl:payAmount 50.00 ;
+		odrl:operator odrl:eq ;
+		odrl:unit &lt;http://cvx.iptc.org/iso4217a:AUD&gt;
+	] .
 
 &lt;http://example.com/sony:10&gt; a odrl:Party .
 </code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example2.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example2.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example2.nt">N-Triples</a>.</p>
@@ -242,7 +247,12 @@ _:requirements
 _:requirements
 	a odrl:Duty ;
 	odrl:action odrl:pay ;
-	odrl:target &lt;http://example.com/ubl:AUD0.50&gt; .
+	odrl:constraint [
+		a odrl:Constraint ;
+		odrl:payAmount 50.00 ;
+		odrl:operator odrl:eq ;
+		odrl:unit &lt;http://cvx.iptc.org/iso4217a:AUD&gt;
+	] .
 
 &lt;http://example.com/sony:10&gt; a odrl:Party .
 &lt;http://example.com/billie:888&gt; a odrl:Party .
@@ -318,7 +328,12 @@ _:requirements
 &lt;http://example.com/duty:01&gt;
 	a odrl:Duty ;
 	odrl:action odrl:pay ;
-	odrl:target &lt;http://example.com/ubl:EU1000.00&gt; .
+	odrl:constraint [
+		a odrl:Constraint ;
+		odrl:payAmount 1000.00 ;
+		odrl:operator odrl:eq ;
+		odrl:unit &lt;http://cvx.iptc.org/iso4217a:EUR&gt;
+	] .
 
 &lt;http://example.com/duty:02&gt;
 	a odrl:Duty ;
@@ -470,6 +485,7 @@ _:requirements
 <p>The <a href="#term-index">index</a> permission is granted to the target asset. Additionally, the <code>x:collection</code> asset specifies which database the index outcome should be stored in.</p>
 
 <pre><code>@prefix odrl: &lt;http://www.w3.org/ns/odrl/2/&gt; .
+@prefix rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt; .
 @prefix x: &lt;http://example.com/x#&gt; .
 
 &lt;http://example.com/policy:881212&gt;
@@ -480,6 +496,9 @@ _:requirements
 		odrl:target &lt;http://example.com/archive/2010&gt; ;
 		x:collection &lt;http://example.com/x/database&gt;
 	] .
+
+x:collection 
+	rdfs:subPropertyOf odrl:relation .
 </code></pre><p>Download this example as <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example11.ttl">Turtle</a>, <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example11.rdf">RDF/XML</a>, or <a href="https://dvcs.w3.org/hg/odrl/raw-file/tip/examples/example11.nt">N-Triples</a>.</p>
 <h2 id="sec-classes">Classes</h2>
 <h3 id="term-Asset">Asset</h3
@@ -583,7 +602,7 @@ _:requirements
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Parent class:</th> <td><a href="http://www.w3.org/2004/02/skos/core#Concept">skos:Concept</a></td></tr>
 <tr><th>In range of:</th> <td><a href="#term-action">action</a></td></tr>
-<tr><th>Instances:</th> <td><a href="#term-acceptTracking">acceptTracking</a>, <a href="#term-adHocShare">adHocShare</a>, <a href="#term-aggregate">aggregate</a>, <a href="#term-annotate">annotate</a>, <a href="#term-anonymize">anonymize</a>, <a href="#term-append">append</a>, <a href="#term-appendTo">appendTo</a>, <a href="#term-archive">archive</a>, <a href="#term-attachPolicy">attachPolicy</a>, <a href="#term-attachSource">attachSource</a>, <a href="#term-attribute">attribute</a>, <a href="#term-commercialize">commercialize</a>, <a href="#term-compensate">compensate</a>, <a href="#term-concurrentUse">concurrentUse</a>, <a href="#term-copy">copy</a>, <a href="#term-delete">delete</a>, <a href="#term-derive">derive</a>, <a href="#term-digitize">digitize</a>, <a href="#term-display">display</a>, <a href="#term-distribute">distribute</a>, <a href="#term-ensureExclusivity">ensureExclusivity</a>, <a href="#term-execute">execute</a>, <a href="#term-export">export</a>, <a href="#term-extract">extract</a>, <a href="#term-extractChar">extractChar</a>, <a href="#term-extractPage">extractPage</a>, <a href="#term-extractWord">extractWord</a>, <a href="#term-give">give</a>, <a href="#term-grantUse">grantUse</a>, <a href="#term-include">include</a>, <a href="#term-index">index</a>, <a href="#term-inform">inform</a>, <a href="#term-install">install</a>, <a href="#term-lease">lease</a>, <a href="#term-lend">lend</a>, <a href="#term-license">license</a>, <a href="#term-modify">modify</a>, <a href="#term-move">move</a>, <a href="#term-nextPolicy">nextPolicy</a>, <a href="#term-obtainConsent">obtainConsent</a>, <a href="#term-pay">pay</a>, <a href="#term-play">play</a>, <a href="#term-present">present</a>, <a href="#term-preview">preview</a>, <a href="#term-print">print</a>, <a href="#term-read">read</a>, <a href="#term-reproduce">reproduce</a>, <a href="#term-reviewPolicy">reviewPolicy</a>, <a href="#term-secondaryUse">secondaryUse</a>, <a href="#term-sell">sell</a>, <a href="#term-share">share</a>, <a href="#term-shareAlike">shareAlike</a>, <a href="#term-textToSpeech">textToSpeech</a>, <a href="#term-transform">transform</a>, <a href="#term-translate">translate</a>, <a href="#term-uninstall">uninstall</a>, <a href="#term-use">use</a>, <a href="#term-watermark">watermark</a>, <a href="#term-write">write</a>, <a href="#term-writeTo">writeTo</a></td></tr>
+<tr><th>Instances:</th> <td><a href="#term-acceptTracking">acceptTracking</a>, <a href="#term-adHocShare">adHocShare</a>, <a href="#term-aggregate">aggregate</a>, <a href="#term-annotate">annotate</a>, <a href="#term-anonymize">anonymize</a>, <a href="#term-append">append</a>, <a href="#term-appendTo">appendTo</a>, <a href="#term-archive">archive</a>, <a href="#term-attachPolicy">attachPolicy</a>, <a href="#term-attachSource">attachSource</a>, <a href="#term-attribute">attribute</a>, <a href="#term-commercialize">commercialize</a>, <a href="#term-compensate">compensate</a>, <a href="#term-concurrentUse">concurrentUse</a>, <a href="#term-copy">copy</a>, <a href="#term-delete">delete</a>, <a href="#term-derive">derive</a>, <a href="#term-digitize">digitize</a>, <a href="#term-display">display</a>, <a href="#term-distribute">distribute</a>, <a href="#term-ensureExclusivity">ensureExclusivity</a>, <a href="#term-execute">execute</a>, <a href="#term-export">export</a>, <a href="#term-extract">extract</a>, <a href="#term-extractChar">extractChar</a>, <a href="#term-extractPage">extractPage</a>, <a href="#term-extractWord">extractWord</a>, <a href="#term-give">give</a>, <a href="#term-grantUse">grantUse</a>, <a href="#term-include">include</a>, <a href="#term-index">index</a>, <a href="#term-inform">inform</a>, <a href="#term-install">install</a>, <a href="#term-lease">lease</a>, <a href="#term-lend">lend</a>, <a href="#term-license">license</a>, <a href="#term-modify">modify</a>, <a href="#term-move">move</a>, <a href="#term-nextPolicy">nextPolicy</a>, <a href="#term-obtainConsent">obtainConsent</a>, <a href="#term-pay">pay</a>, <a href="#term-play">play</a>, <a href="#term-present">present</a>, <a href="#term-preview">preview</a>, <a href="#term-print">print</a>, <a href="#term-read">read</a>, <a href="#term-reproduce">reproduce</a>, <a href="#term-reviewPolicy">reviewPolicy</a>, <a href="#term-secondaryUse">secondaryUse</a>, <a href="#term-sell">sell</a>, <a href="#term-share">share</a>, <a href="#term-shareAlike">shareAlike</a>, <a href="#term-textToSpeech">textToSpeech</a>, <a href="#term-transfer">transfer</a>, <a href="#term-transform">transform</a>, <a href="#term-translate">translate</a>, <a href="#term-uninstall">uninstall</a>, <a href="#term-use">use</a>, <a href="#term-watermark">watermark</a>, <a href="#term-write">write</a>, <a href="#term-writeTo">writeTo</a></td></tr>
 </table>
 </div>
 <h3 id="term-Constraint">Constraint</h3
@@ -1279,39 +1298,41 @@ _:requirements
 </div>
 <h2 id="sec-concepts">Concepts</h2>
 <h3 id="term-use">use</h3
-<p>The act of using the Asset.</p>
+<p>The Assigner permits/prohibits the Assignee to use the Asset as agreed. More details may be defined in the applicable agreements or under applicable commercial laws. Refined types of actions can be expressed by the narrower actions.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/use">http://www.w3.org/ns/odrl/2/use</a></td></tr>
 <tr><th>Label:</th> <td>Use</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Narrower terms:</th> <td><a href="#term-archive">archive</a>, <a href="#term-concurrentUse">concurrentUse</a>, <a href="#term-derive">derive</a>, <a href="#term-digitize">digitize</a>, <a href="#term-distribute">distribute</a>, <a href="#term-execute">execute</a>, <a href="#term-grantUse">grantUse</a>, <a href="#term-index">index</a>, <a href="#term-install">install</a>, <a href="#term-modify">modify</a>, <a href="#term-move">move</a>, <a href="#term-play">play</a>, <a href="#term-present">present</a>, <a href="#term-read">read</a>, <a href="#term-reproduce">reproduce</a>, <a href="#term-textToSpeech">textToSpeech</a>, <a href="#term-transform">transform</a>, <a href="#term-translate">translate</a>, <a href="#term-writeTo">writeTo</a></td></tr>
+<tr><th>Narrower terms:</th> <td><a href="#term-aggregate">aggregate</a>, <a href="#term-annotate">annotate</a>, <a href="#term-anonymize">anonymize</a>, <a href="#term-archive">archive</a>, <a href="#term-concurrentUse">concurrentUse</a>, <a href="#term-derive">derive</a>, <a href="#term-digitize">digitize</a>, <a href="#term-distribute">distribute</a>, <a href="#term-execute">execute</a>, <a href="#term-grantUse">grantUse</a>, <a href="#term-index">index</a>, <a href="#term-install">install</a>, <a href="#term-modify">modify</a>, <a href="#term-move">move</a>, <a href="#term-present">present</a>, <a href="#term-read">read</a>, <a href="#term-reproduce">reproduce</a>, <a href="#term-textToSpeech">textToSpeech</a>, <a href="#term-transform">transform</a>, <a href="#term-translate">translate</a>, <a href="#term-writeTo">writeTo</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-grantUse">grantUse</h3
-<p>The act of granting the use the Asset to third parties.</p>
+<p>The Assigner permits/prohibits the Assignee to grant the use the Asset to third parties. This action enables the Assignee to create policies for the use of the Asset for third parties. nextPolicy is recommended to be agreed with the third party. Use of temporal constraints is recommended.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/grantUse">http://www.w3.org/ns/odrl/2/grantUse</a></td></tr>
 <tr><th>Label:</th> <td>Grant use</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>Deprecates:</th> <td><a href="#term-license">license</a></td></tr>
 <tr><th>Broader terms:</th> <td><a href="#term-use">use</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-compensate">compensate</h3
-<p>The act of compensating the Assigner (or other specified compensation Party) by some amount of value, if defined, for use of the Asset.</p>
+<p>The Assigner requires that the Assignees compensates the Assigner (or other specified compensation Party) by some amount of value, if defined, for use of the Asset. The compensation may use different types of things with a value: (i) the thing is expressed by the value (term) of the Constraint name; (b) the value is expressed by operator, rightOperand, dataType and unit</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/compensate">http://www.w3.org/ns/odrl/2/compensate</a></td></tr>
 <tr><th>Label:</th> <td>Compensate</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>Deprecates:</th> <td><a href="#term-pay">pay</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-acceptTracking">acceptTracking</h3
-<p>The act of accepting that the use of the asset may be recorded. The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'.</p>
+<p>The Assigner requires that the Assignees accepts that the use of the Asset may be tracked. The collected information may be tracked by the Assigner, or may link to a Party with the role function “trackingParty”.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/acceptTracking">http://www.w3.org/ns/odrl/2/acceptTracking</a></td></tr>
 <tr><th>Label:</th> <td>Accept tracking</td></tr>
@@ -1321,31 +1342,34 @@ _:requirements
 </table>
 </div>
 <h3 id="term-aggregate">aggregate</h3
-<p>The act of using the asset (or parts of it) as part of a composite collection.</p>
+<p>The Assigner permits/prohibits the Assignees to use the Asset or parts of it as part of a composite collection.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/aggregate">http://www.w3.org/ns/odrl/2/aggregate</a></td></tr>
 <tr><th>Label:</th> <td>Aggregate</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>Broader terms:</th> <td><a href="#term-use">use</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-annotate">annotate</h3
-<p>The act of adding notations/commentaries to the asset.</p>
+<p>The Assigner permits/prohibits the Assignees to add explanatory notations/commentaries to the Asset without modifying the Asset in any other way.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/annotate">http://www.w3.org/ns/odrl/2/annotate</a></td></tr>
 <tr><th>Label:</th> <td>Annotate</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>Broader terms:</th> <td><a href="#term-use">use</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-anonymize">anonymize</h3
-<p>The act of anonymising the asset.</p>
+<p>The Assigner permits/prohibits the Assignees to anonymize all or parts of the Asset. For example, to remove identifying particulars for statistical or for other comparable purposes, or to use the asset without stating the author/source.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/anonymize">http://www.w3.org/ns/odrl/2/anonymize</a></td></tr>
 <tr><th>Label:</th> <td>Anonymize</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>Broader terms:</th> <td><a href="#term-use">use</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
@@ -1374,7 +1398,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-archive">archive</h3
-<p>The act of persistently storing the asset.</p>
+<p>The Assigner permits/prohibits the Assignees to store the Asset (in a non-transient form). Constraints may be used for temporal conditions.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/archive">http://www.w3.org/ns/odrl/2/archive</a></td></tr>
 <tr><th>Label:</th> <td>Archive</td></tr>
@@ -1385,7 +1409,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-attribute">attribute</h3
-<p>The act of attributing the asset to a party.</p>
+<p>The Assigner requires that the Assignees attributes the Asset to the Assigner or an attributed Party. May link to an Asset with the attribution information. May link to a Party with the role function “attributedParty”.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/attribute">http://www.w3.org/ns/odrl/2/attribute</a></td></tr>
 <tr><th>Label:</th> <td>Attribute</td></tr>
@@ -1395,7 +1419,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-concurrentUse">concurrentUse</h3
-<p>The act of multiple concurrent use of the asset.</p>
+<p>The Assigner permits/prohibits the Assignees to create multiple copies of the Asset that are being concurrently used.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/concurrentUse">http://www.w3.org/ns/odrl/2/concurrentUse</a></td></tr>
 <tr><th>Label:</th> <td>Concurrent use</td></tr>
@@ -1410,14 +1434,15 @@ _:requirements
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/copy">http://www.w3.org/ns/odrl/2/copy</a></td></tr>
 <tr><th>Label:</th> <td>Copy</td></tr>
-<tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>Status:</th> <td>deprecated</td></tr>
 <tr><th>Equivalent to:</th> <td><a href="#term-reproduce">reproduce</a></td></tr>
+<tr><th>Deprecated by:</th> <td><a href="#term-reproduce">reproduce</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-delete">delete</h3
-<p>The act of permanently removing the asset.</p>
+<p>The Assigner requires that the Assignees permanently removes all copies of the Asset. Use a constraint to define under which conditions the Asset should be deleted.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/delete">http://www.w3.org/ns/odrl/2/delete</a></td></tr>
 <tr><th>Label:</th> <td>Delete</td></tr>
@@ -1427,19 +1452,18 @@ _:requirements
 </table>
 </div>
 <h3 id="term-derive">derive</h3
-<p>The act of creating a new derivative asset from the asset</p>
+<p>The Assigner permits/prohibits the Assignees to create a new derivative Asset from this Asset and to edit or modify the derivative. A new asset is created and may have significant overlaps with the original Asset. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective). To the derived Asset a next policy may be applied.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/derive">http://www.w3.org/ns/odrl/2/derive</a></td></tr>
 <tr><th>Label:</th> <td>Derive</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Equivalent to:</th> <td><a href="#term-modify">modify</a></td></tr>
 <tr><th>Broader terms:</th> <td><a href="#term-use">use</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-digitize">digitize</h3
-<p>The act of producing a digital copy of (or otherwise digitize) the Asset from its analogue form.</p>
+<p>The Assigner permits/prohibits the Assignees to produce a digital copy of (or otherwise digitize) the Asset from its analogue form.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/digitize">http://www.w3.org/ns/odrl/2/digitize</a></td></tr>
 <tr><th>Label:</th> <td>Digitize</td></tr>
@@ -1449,19 +1473,18 @@ _:requirements
 </table>
 </div>
 <h3 id="term-display">display</h3
-<p>The act of making a transient visible rendering of the asset</p>
+<p>The Assigner permits/prohibits the Assignees to display the visual media Asset to an audience or the public. For example, displaying an image on a screen.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/display">http://www.w3.org/ns/odrl/2/display</a></td></tr>
 <tr><th>Label:</th> <td>Display</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Equivalent to:</th> <td><a href="#term-execute">execute</a></td></tr>
 <tr><th>Broader terms:</th> <td><a href="#term-present">present</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-distribute">distribute</h3
-<p>The act of publicly distributing, displaying and/or performing the asset.</p>
+<p>The Assigner permits/prohibits the Assignees to distribute the Asset.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/distribute">http://www.w3.org/ns/odrl/2/distribute</a></td></tr>
 <tr><th>Label:</th> <td>Distribute</td></tr>
@@ -1472,7 +1495,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-ensureExclusivity">ensureExclusivity</h3
-<p>The act of requiring the Assigner to ensure the Permission on the asset is unique to the Assignee.</p>
+<p>The Assignee requires that the Assigners ensure that the permission on the Asset is exclusive to the Assignee.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/ensureExclusivity">http://www.w3.org/ns/odrl/2/ensureExclusivity</a></td></tr>
 <tr><th>Label:</th> <td>Ensure exclusivity</td></tr>
@@ -1482,12 +1505,11 @@ _:requirements
 </table>
 </div>
 <h3 id="term-execute">execute</h3
-<p>The act of making a transient visible rendering of the asset.</p>
+<p>The Assigner permits/prohibits the Assignees to run the computer program Asset. For example, machine executable code or Java such as a game or application.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/execute">http://www.w3.org/ns/odrl/2/execute</a></td></tr>
 <tr><th>Label:</th> <td>Execute</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Equivalent to:</th> <td><a href="#term-display">display</a></td></tr>
 <tr><th>Broader terms:</th> <td><a href="#term-use">use</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
@@ -1498,14 +1520,14 @@ _:requirements
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/export">http://www.w3.org/ns/odrl/2/export</a></td></tr>
 <tr><th>Label:</th> <td>Export</td></tr>
-<tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Equivalent to:</th> <td><a href="#term-transform">transform</a></td></tr>
+<tr><th>Status:</th> <td>deprecated</td></tr>
+<tr><th>Deprecated by:</th> <td><a href="#term-transform">transform</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-extract">extract</h3
-<p>The act of extracting (replicating) unchanged parts of the asset.</p>
+<p>The Assigner permits/prohibits the Assignees to extract parts of the Asset and to use it as a new Asset. A new asset is created and may have very little in common with the original Asset. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective). To the extracted Asset a next policy may be applied.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/extract">http://www.w3.org/ns/odrl/2/extract</a></td></tr>
 <tr><th>Label:</th> <td>Extract</td></tr>
@@ -1516,18 +1538,18 @@ _:requirements
 </table>
 </div>
 <h3 id="term-give">give</h3
-<p>The act of giving away the asset in perpetuity without exchange of value.</p>
+<p>The Assigner permits/prohibits the Assignees to transfer the ownership of the Asset to a third party without compensation and while deleting the original asset.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/give">http://www.w3.org/ns/odrl/2/give</a></td></tr>
 <tr><th>Label:</th> <td>Give</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Broader terms:</th> <td><a href="http://www.w3.org/ns/odrl/2/transfer">odrl:transfer</a></td></tr>
+<tr><th>Broader terms:</th> <td><a href="#term-transfer">transfer</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-include">include</h3
-<p>The act of including other related assets to fulfill the function.</p>
+<p>The Assigner requires that the Assignees include other related assets in the Asset. For example: bio picture must be included in the attribution. Use of the Asset relation attribute is required.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/include">http://www.w3.org/ns/odrl/2/include</a></td></tr>
 <tr><th>Label:</th> <td>Include</td></tr>
@@ -1537,7 +1559,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-index">index</h3
-<p>The act of indexing the asset into a collection of assets.</p>
+<p>The Assigner permits/prohibits the Assignees to record the Asset in an index. For example, to include a link to the Asset in a search engine database.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/index">http://www.w3.org/ns/odrl/2/index</a></td></tr>
 <tr><th>Label:</th> <td>Index</td></tr>
@@ -1548,7 +1570,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-inform">inform</h3
-<p>The act of informing a party that an action has been performed on the asset.</p>
+<p>The Assigner requires that the Assignees inform the Assigner or an informed Party that an action has been performed on or in relation to the Asset. May link to a Party with the role function “informedParty”.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/inform">http://www.w3.org/ns/odrl/2/inform</a></td></tr>
 <tr><th>Label:</th> <td>Inform</td></tr>
@@ -1558,7 +1580,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-install">install</h3
-<p>The act of loading the asset onto storage device ready for operation.</p>
+<p>The Assigner permits/prohibits the Assignees to load the computer program Asset onto a storage device which allows operating or running the Asset.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/install">http://www.w3.org/ns/odrl/2/install</a></td></tr>
 <tr><th>Label:</th> <td>Install</td></tr>
@@ -1583,7 +1605,8 @@ _:requirements
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/license">http://www.w3.org/ns/odrl/2/license</a></td></tr>
 <tr><th>Label:</th> <td>License</td></tr>
-<tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>Status:</th> <td>deprecated</td></tr>
+<tr><th>Deprecated by:</th> <td><a href="#term-grantUse">grantUse</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
@@ -1599,19 +1622,18 @@ _:requirements
 </table>
 </div>
 <h3 id="term-modify">modify</h3
-<p>The act of creating a new derivative asset from the asset.</p>
+<p>The Assigner permits/prohibits the Assignees to update existing content of the Asset. A new asset is not created by this action. This action will modify an asset which is typically updated from time to time without creating a new asset like a database. If the result from modifying the asset should be a new asset the actions derive or extract should be used. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective).</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/modify">http://www.w3.org/ns/odrl/2/modify</a></td></tr>
 <tr><th>Label:</th> <td>Modify</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Equivalent to:</th> <td><a href="#term-derive">derive</a></td></tr>
 <tr><th>Broader terms:</th> <td><a href="#term-use">use</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-move">move</h3
-<p>The act of moving the asset.</p>
+<p>The Assigner permits/prohibits the Assignees to move the Asset from one digital location to another including deleting the original copy. After the Asset has been moved, the original copy must be deleted.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/move">http://www.w3.org/ns/odrl/2/move</a></td></tr>
 <tr><th>Label:</th> <td>Move</td></tr>
@@ -1622,7 +1644,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-nextPolicy">nextPolicy</h3
-<p>The act of specifying an asset (which must be a Policy) as the Policy terms for third-party use of the asset.</p>
+<p>The Assigner requires that the Assignees grants the specified Policy to a third party for their use of the Asset.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/nextPolicy">http://www.w3.org/ns/odrl/2/nextPolicy</a></td></tr>
 <tr><th>Label:</th> <td>Next policy</td></tr>
@@ -1632,7 +1654,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-obtainConsent">obtainConsent</h3
-<p>The act of requiring explicit consent from a party to perform the action on the asset.</p>
+<p>The Assigner requires that the Assignees obtains explicit consent from the Assigner or a consenting Party to perform the requested action in relation to the Asset. Used as a Duty to ensure that the Assigner or a Party is authorized to approve such actions on a case-by-case basis. May link to a Party with the role function “consentingParty”.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/obtainConsent">http://www.w3.org/ns/odrl/2/obtainConsent</a></td></tr>
 <tr><th>Label:</th> <td>Obtain consent</td></tr>
@@ -1646,31 +1668,30 @@ _:requirements
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/pay">http://www.w3.org/ns/odrl/2/pay</a></td></tr>
 <tr><th>Label:</th> <td>Pay</td></tr>
-<tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>Status:</th> <td>deprecated</td></tr>
+<tr><th>Deprecated by:</th> <td><a href="#term-compensate">compensate</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-play">play</h3
-<p>The act of rendering the asset into audio and/or video form.</p>
+<p>The Assigner permits/prohibits the Assignees to perform an audio Asset to an audience.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/play">http://www.w3.org/ns/odrl/2/play</a></td></tr>
 <tr><th>Label:</th> <td>Play</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Equivalent to:</th> <td><a href="#term-present">present</a></td></tr>
-<tr><th>Broader terms:</th> <td><a href="#term-use">use</a></td></tr>
+<tr><th>Broader terms:</th> <td><a href="#term-present">present</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-present">present</h3
-<p>The act of rendering the asset into audio and/or video form.</p>
+<p>The Assigner permits/prohibits the Assignees to perform or exhibit an Asset to an audience.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/present">http://www.w3.org/ns/odrl/2/present</a></td></tr>
 <tr><th>Label:</th> <td>Present</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Equivalent to:</th> <td><a href="#term-play">play</a></td></tr>
-<tr><th>Narrower terms:</th> <td><a href="#term-display">display</a>, <a href="#term-print">print</a></td></tr>
+<tr><th>Narrower terms:</th> <td><a href="#term-display">display</a>, <a href="#term-play">play</a>, <a href="#term-print">print</a></td></tr>
 <tr><th>Broader terms:</th> <td><a href="#term-use">use</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
@@ -1687,7 +1708,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-print">print</h3
-<p>The act of rendering the asset onto paper or hard copy form.</p>
+<p>The Assigner permits/prohibits the Assignees to print an Asset onto paper or to create a hard copy. For example, creating a permanent, fixed (static), and directly perceivable representation of the Asset.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/print">http://www.w3.org/ns/odrl/2/print</a></td></tr>
 <tr><th>Label:</th> <td>Print</td></tr>
@@ -1698,7 +1719,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-read">read</h3
-<p>The act of obtaining data from the asset.</p>
+<p>The Assigner permits/prohibits the Assignees to obtain data from the Asset. For example, the ability to read a record from a database (the Asset).</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/read">http://www.w3.org/ns/odrl/2/read</a></td></tr>
 <tr><th>Label:</th> <td>Read</td></tr>
@@ -1709,12 +1730,12 @@ _:requirements
 </table>
 </div>
 <h3 id="term-reproduce">reproduce</h3
-<p>The act of making an exact reproduction of the asset.</p>
+<p>The act of making an exact reproduction of the asset. The Assigner permits/prohibits the Assignees to make exact reproductions of the Asset.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/reproduce">http://www.w3.org/ns/odrl/2/reproduce</a></td></tr>
 <tr><th>Label:</th> <td>Reproduce</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Equivalent to:</th> <td><a href="#term-copy">copy</a></td></tr>
+<tr><th>Deprecates:</th> <td><a href="#term-copy">copy</a></td></tr>
 <tr><th>Narrower terms:</th> <td><a href="#term-extract">extract</a></td></tr>
 <tr><th>Broader terms:</th> <td><a href="#term-use">use</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
@@ -1722,7 +1743,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-reviewPolicy">reviewPolicy</h3
-<p>The act of performing a manual review of the terms associated with the asset.</p>
+<p>The Assigner requires that the Assignees have a person review the Policy applicable to the Asset. Used when human intervention is required to review the Policy. May link to an Asset which represents the full Policy information.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/reviewPolicy">http://www.w3.org/ns/odrl/2/reviewPolicy</a></td></tr>
 <tr><th>Label:</th> <td>Review policy</td></tr>
@@ -1742,18 +1763,18 @@ _:requirements
 </table>
 </div>
 <h3 id="term-sell">sell</h3
-<p>The act of trading the asset in exchange of value.</p>
+<p>The Assigner permits/prohibits the Assignees to transfer the ownership of the Asset to a third party with compensation and while deleting the original asset.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/sell">http://www.w3.org/ns/odrl/2/sell</a></td></tr>
 <tr><th>Label:</th> <td>Sell</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Broader terms:</th> <td><a href="http://www.w3.org/ns/odrl/2/transfer">odrl:transfer</a></td></tr>
+<tr><th>Broader terms:</th> <td><a href="#term-transfer">transfer</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-textToSpeech">textToSpeech</h3
-<p>The act of a system reading the text of the asset out loud.</p>
+<p>The Assigner permits/prohibits the Assignees to have a text Asset read out loud to an audience.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/textToSpeech">http://www.w3.org/ns/odrl/2/textToSpeech</a></td></tr>
 <tr><th>Label:</th> <td>Text-to-speech</td></tr>
@@ -1763,20 +1784,30 @@ _:requirements
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
+<h3 id="term-transfer">transfer</h3
+<p>The Assigner transfers/does not transfer the ownership in perpetuity to the Assignees.</p>
+<table>
+  <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/transfer">http://www.w3.org/ns/odrl/2/transfer</a></td></tr>
+<tr><th>Label:</th> <td>Transfer</td></tr>
+<tr><th>Status:</th> <td>testing</td></tr>
+<tr><th>Narrower terms:</th> <td><a href="#term-give">give</a>, <a href="#term-sell">sell</a></td></tr>
+<tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
+</table>
+</div>
 <h3 id="term-transform">transform</h3
-<p>The act of transforming the asset into a new form.</p>
+<p>The Assigner permits/prohibits the Assignees to make a digital copy of the digital Asset in another digital format. Typically used to convert the Asset into a different format for consumption on/transfer to a third party system.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/transform">http://www.w3.org/ns/odrl/2/transform</a></td></tr>
 <tr><th>Label:</th> <td>Transform</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
-<tr><th>Equivalent to:</th> <td><a href="#term-export">export</a></td></tr>
+<tr><th>Deprecates:</th> <td><a href="#term-export">export</a></td></tr>
 <tr><th>Broader terms:</th> <td><a href="#term-use">use</a></td></tr>
 <tr><th>Class:</th> <td><a href="#term-Action">Action</a></td></tr>
 <tr><th>Concept scheme:</th> <td><a href="#term-actions">actions</a></td></tr>
 </table>
 </div>
 <h3 id="term-translate">translate</h3
-<p>The act of translating the asset into a new natural language.</p>
+<p>The Assigner permits/prohibits the Assignees to translate the original natural language of an Asset into another natural language. A new derivative Asset is created by that action.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/translate">http://www.w3.org/ns/odrl/2/translate</a></td></tr>
 <tr><th>Label:</th> <td>Translate</td></tr>
@@ -1787,7 +1818,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-uninstall">uninstall</h3
-<p>The act of unloading the asset from storage device.</p>
+<p>The Assigner requires that the Assignees unload and delete the computer program Asset from a storage device and disable its readiness for operation. The Asset is no longer accessible to the Assignees.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/uninstall">http://www.w3.org/ns/odrl/2/uninstall</a></td></tr>
 <tr><th>Label:</th> <td>Uninstall</td></tr>
@@ -1797,7 +1828,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-watermark">watermark</h3
-<p>The act of applying a watermark to the asset.</p>
+<p>The Assigner requires that the Assignees apply a watermark as provided by the Assigner to the Asset. It is recommended to embed a link to the watermark.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/watermark">http://www.w3.org/ns/odrl/2/watermark</a></td></tr>
 <tr><th>Label:</th> <td>Watermark</td></tr>
@@ -1842,7 +1873,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-extractChar">extractChar</h3
-<p>The act of extracting (replicating) unchanged character(s) from the asset.</p>
+<p>The act of extracting (replicating) unchanged characters from the asset.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/extractChar">http://www.w3.org/ns/odrl/2/extractChar</a></td></tr>
 <tr><th>Label:</th> <td>Extract character</td></tr>
@@ -1852,7 +1883,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-extractPage">extractPage</h3
-<p>The act of extracting (replicating) unchanged page(s) from the asset.</p>
+<p>The act of extracting (replicating) unchanged pages from the asset.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/extractPage">http://www.w3.org/ns/odrl/2/extractPage</a></td></tr>
 <tr><th>Label:</th> <td>Extract page</td></tr>
@@ -1862,7 +1893,7 @@ _:requirements
 </table>
 </div>
 <h3 id="term-extractWord">extractWord</h3
-<p>The act of extracting (replicating) unchanged word(s) from the asset.</p>
+<p>The act of extracting (replicating) unchanged words from the asset.</p>
 <table>
   <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/extractWord">http://www.w3.org/ns/odrl/2/extractWord</a></td></tr>
 <tr><th>Label:</th> <td>Extract word</td></tr>
@@ -2078,6 +2109,14 @@ _:requirements
 <tr><th>Label:</th> <td>Not equal to</td></tr>
 <tr><th>Status:</th> <td>testing</td></tr>
 <tr><th>Class:</th> <td><a href="#term-Operator">Operator</a></td></tr>
+</table>
+</div>
+<h3 id="term-policyUsage">policyUsage</h3
+<p>When used as an event in constraints, indicates that the event occurs at the time when the policy is executed.</p>
+<table>
+  <tr><th>URI:</th> <td><a href="http://www.w3.org/ns/odrl/2/policyUsage">http://www.w3.org/ns/odrl/2/policyUsage</a></td></tr>
+<tr><th>Label:</th> <td>Policy usage time</td></tr>
+<tr><th>Status:</th> <td>testing</td></tr>
 </table>
 </div>
 

@@ -16,13 +16,13 @@
 
 odrl:
 	a owl:Ontology , voaf:Vocabulary ;
-	rdfs:label "Open Digital Rights Language (ODRL) Ontology"@en ;
+	rdfs:label "ODRL Version 2.1 Ontology"@en ;
 	owl:versionInfo "2.1" ;
 	vann:preferredNamespaceUri <http://w3.org/ns/odrl/2/> ;
 	vann:preferredNamespacePrefix "odrl" ;
 	vann:example :Asset ;
 	dct:creator "Mo McRoberts (BBC)", "Víctor Rodríguez Doncel (OEG-UPM)" ;
-	dct:issued "2014-11-10"^^xsd:date ;
+	dct:issued "2015-01-18"^^xsd:date ;
 	dct:contributor "ODRL Community Group" ;
 	dct:description "The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media."@en .
 
@@ -470,7 +470,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Use"@en ;
-	rdfs:comment "The act of using the Asset."@en .
+	rdfs:comment "The Assigner permits/prohibits the Assignee to use the Asset as agreed. More details may be defined in the applicable agreements or under applicable commercial laws. Refined types of actions can be expressed by the narrower actions."@en .
 
 :grantUse
 	a :Action, skos:Concept ;
@@ -478,43 +478,46 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "Grant use"@en ;
 	skos:broaderTransitive odrl:use ;
-	rdfs:comment "The act of granting the use the Asset to third parties."@en .
-										
+	rdfs:comment "The Assigner permits/prohibits the Assignee to grant the use the Asset to third parties. This action enables the Assignee to create policies for the use of the Asset for third parties. nextPolicy is recommended to be agreed with the third party. Use of temporal constraints is recommended."@en .
+
 :compensate
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Compensate"@en ;
-	rdfs:comment "The act of compensating the Assigner (or other specified compensation Party) by some amount of value, if defined, for use of the Asset."@en .
+	rdfs:comment "The Assigner requires that the Assignees compensates the Assigner (or other specified compensation Party) by some amount of value, if defined, for use of the Asset. The compensation may use different types of things with a value: (i) the thing is expressed by the value (term) of the Constraint name; (b) the value is expressed by operator, rightOperand, dataType and unit"@en .
 
 :acceptTracking
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Accept tracking"@en ;
-	rdfs:comment "The act of accepting that the use of the asset may be recorded. The collected information may be tracked by the assigner, or may link to a Party with role function 'trackingParty'."@en .
+	rdfs:comment "The Assigner requires that the Assignees accepts that the use of the Asset may be tracked. The collected information may be tracked by the Assigner, or may link to a Party with the role function “trackingParty”."@en .
 
 
 :aggregate
 	a :Action, skos:Concept ;
+	skos:broaderTransitive odrl:use ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Aggregate"@en ;
-	rdfs:comment "The act of using the asset (or parts of it) as part of a composite collection."@en .
+	rdfs:comment "The Assigner permits/prohibits the Assignees to use the Asset or parts of it as part of a composite collection."@en .
 
 :annotate
 	a :Action, skos:Concept ;
+	skos:broaderTransitive odrl:use ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Annotate"@en ;
-	rdfs:comment "The act of adding notations/commentaries to the asset."@en .
+	rdfs:comment "The Assigner permits/prohibits the Assignees to add explanatory notations/commentaries to the Asset without modifying the Asset in any other way."@en .
 
 :anonymize
 	a :Action, skos:Concept ;
+	skos:broaderTransitive odrl:use ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Anonymize"@en ;
-	rdfs:comment "The act of anonymising the asset."@en .
+	rdfs:comment "The Assigner permits/prohibits the Assignees to anonymize all or parts of the Asset. For example, to remove identifying particulars for statistical or for other comparable purposes, or to use the asset without stating the author/source."@en .
 
 :append
 	a :Action, skos:Concept ;
@@ -537,7 +540,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Archive"@en ;
-	rdfs:comment "The act of persistently storing the asset."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to store the Asset (in a non-transient form). Constraints may be used for temporal conditions."@en ;
 	skos:broaderTransitive :use .
 
 :attribute
@@ -545,38 +548,38 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Attribute"@en ;
-	rdfs:comment "The act of attributing the asset to a party."@en .
+	rdfs:comment "The Assigner requires that the Assignees attributes the Asset to the Assigner or an attributed Party. May link to an Asset with the attribution information. May link to a Party with the role function “attributedParty”."@en .
 
 :concurrentUse
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Concurrent use"@en ;
-	rdfs:comment "The act of multiple concurrent use of the asset."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to create multiple copies of the Asset that are being concurrently used."@en ;
 	skos:broaderTransitive :use .
 
 :copy
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
+	vs:term_status "deprecated" ;
 	owl:sameAs :reproduce ;
 	rdfs:label "Copy"@en ;
-	rdfs:comment "The act of making an exact reproduction of the asset."@en .
+	rdfs:comment "The act of making an exact reproduction of the asset."@en ;
+	ont:deprecatedBy :reproduce .
 
 :delete
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Delete"@en ;
-	rdfs:comment "The act of permanently removing the asset."@en .
+	rdfs:comment "The Assigner requires that the Assignees permanently removes all copies of the Asset. Use a constraint to define under which conditions the Asset should be deleted."@en .
 
 :derive
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Derive"@en ;
-	rdfs:comment "The act of creating a new derivative asset from the asset"@en ;
-	owl:sameAs :modify ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to create a new derivative Asset from this Asset and to edit or modify the derivative. A new asset is created and may have significant overlaps with the original Asset. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective). To the derived Asset a next policy may be applied."@en ;
 	skos:broaderTransitive :use .	
 
 :digitize
@@ -585,23 +588,22 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "Digitize"@en ;
 	skos:broaderTransitive odrl:use ;
-	rdfs:comment "The act of producing a digital copy of (or otherwise digitize) the Asset from its analogue form."@en .				
+	rdfs:comment "The Assigner permits/prohibits the Assignees to produce a digital copy of (or otherwise digitize) the Asset from its analogue form."@en .
 
 :display
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Display"@en ;
-	rdfs:comment "The act of making a transient visible rendering of the asset"@en ;
-	skos:broaderTransitive :present ;
-	owl:sameAs :execute .
+	rdfs:comment "The Assigner permits/prohibits the Assignees to display the visual media Asset to an audience or the public. For example, displaying an image on a screen."@en ;
+	skos:broaderTransitive :present .
 
 :distribute
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Distribute"@en ;
-	rdfs:comment "The act of publicly distributing, displaying and/or performing the asset."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to distribute the Asset."@en ;
 	skos:broaderTransitive :use .
 
 :ensureExclusivity
@@ -609,31 +611,30 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Ensure exclusivity"@en ;
-	rdfs:comment "The act of requiring the Assigner to ensure the Permission on the asset is unique to the Assignee."@en .
+	rdfs:comment "The Assignee requires that the Assigners ensure that the permission on the Asset is exclusive to the Assignee."@en .
 
 :execute
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Execute"@en ;
-	rdfs:comment "The act of making a transient visible rendering of the asset."@en ;
-	owl:sameAs :display ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to run the computer program Asset. For example, machine executable code or Java such as a game or application."@en ;
 	skos:broaderTransitive :use .
 
 :export
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
+	vs:term_status "deprecated" ;
 	rdfs:label "Export"@en ;
 	rdfs:comment "The act of transforming the asset into a new form."@en ;
-	owl:sameAs :transform .
+	ont:deprecatedBy :transform .
 
 :extract
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Extract"@en ;
-	rdfs:comment "The act of extracting (replicating) unchanged parts of the asset."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to extract parts of the Asset and to use it as a new Asset. A new asset is created and may have very little in common with the original Asset. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective). To the extracted Asset a next policy may be applied."@en ;
 	skos:broaderTransitive :reproduce .
 
 :give
@@ -641,7 +642,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Give"@en ;
-	rdfs:comment "The act of giving away the asset in perpetuity without exchange of value."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to transfer the ownership of the Asset to a third party without compensation and while deleting the original asset."@en ;
 	skos:broaderTransitive :transfer .
 
 :include
@@ -649,14 +650,14 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Include"@en ;
-	rdfs:comment "The act of including other related assets to fulfill the function."@en .
+	rdfs:comment "The Assigner requires that the Assignees include other related assets in the Asset. For example: bio picture must be included in the attribution. Use of the Asset relation attribute is required."@en .
 
 :index
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Index"@en ;
-	rdfs:comment "The act of indexing the asset into a collection of assets."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to record the Asset in an index. For example, to include a link to the Asset in a search engine database."@en ;
 	skos:broaderTransitive :use .
 
 :inform
@@ -664,14 +665,14 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Inform"@en ;
-	rdfs:comment "The act of informing a party that an action has been performed on the asset."@en .
+	rdfs:comment "The Assigner requires that the Assignees inform the Assigner or an informed Party that an action has been performed on or in relation to the Asset. May link to a Party with the role function “informedParty”."@en .
 
 :install
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Install"@en ;
-	rdfs:comment "The act of loading the asset onto storage device ready for operation."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to load the computer program Asset onto a storage device which allows operating or running the Asset."@en ;
 	skos:broaderTransitive :use .
 
 :lease
@@ -684,9 +685,10 @@ odrl:
 :license
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
+	vs:term_status "deprecated" ;
 	rdfs:label "License"@en ;
-	rdfs:comment "The act of granting the right to use the asset to a third-party."@en .
+	rdfs:comment "The act of granting the right to use the asset to a third-party."@en ;
+	ont:deprecatedBy :grantUse .
 
 :lend
 	a :Action, skos:Concept ;
@@ -700,16 +702,15 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Modify"@en ;
-	rdfs:comment "The act of creating a new derivative asset from the asset."@en ;
-	skos:broaderTransitive :use ;
-	owl:sameAs :derive .
+	rdfs:comment "The Assigner permits/prohibits the Assignees to update existing content of the Asset. A new asset is not created by this action. This action will modify an asset which is typically updated from time to time without creating a new asset like a database. If the result from modifying the asset should be a new asset the actions derive or extract should be used. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective)."@en ;
+	skos:broaderTransitive :use .
 
 :move
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Move"@en ;
-	rdfs:comment "The act of moving the asset."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to move the Asset from one digital location to another including deleting the original copy. After the Asset has been moved, the original copy must be deleted."@en ;
 	skos:broaderTransitive :use .
 
 :nextPolicy
@@ -717,38 +718,37 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Next policy"@en ;
-	rdfs:comment "The act of specifying an asset (which must be a Policy) as the Policy terms for third-party use of the asset."@en .
+	rdfs:comment "The Assigner requires that the Assignees grants the specified Policy to a third party for their use of the Asset."@en .
 
 :obtainConsent
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Obtain consent"@en ;
-	rdfs:comment "The act of requiring explicit consent from a party to perform the action on the asset."@en .
+	rdfs:comment "The Assigner requires that the Assignees obtains explicit consent from the Assigner or a consenting Party to perform the requested action in relation to the Asset. Used as a Duty to ensure that the Assigner or a Party is authorized to approve such actions on a case-by-case basis. May link to a Party with the role function “consentingParty”."@en .
 
 :pay
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
-	vs:term_status "testing" ;
+	vs:term_status "deprecated" ;
 	rdfs:label "Pay"@en ;
-	rdfs:comment "The act of paying a financial amount to a party for use of the asset."@en .
+	rdfs:comment "The act of paying a financial amount to a party for use of the asset."@en ;
+	ont:deprecatedBy :compensate .
 
 :play
 	a :Action, skos:Concept ;	
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Play"@en ;
-	rdfs:comment "The act of rendering the asset into audio and/or video form."@en ;
-	owl:sameAs :present ;
-	skos:broaderTransitive :use .
+	rdfs:comment "The Assigner permits/prohibits the Assignees to perform an audio Asset to an audience."@en ;
+	skos:broaderTransitive :present .
 
 :present
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Present"@en ;
-	rdfs:comment "The act of rendering the asset into audio and/or video form."@en ;
-	owl:sameAs :play ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to perform or exhibit an Asset to an audience."@en ;
 	skos:broaderTransitive :use .
 
 :preview
@@ -763,7 +763,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Print"@en ;
-	rdfs:comment "The act of rendering the asset onto paper or hard copy form."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to print an Asset onto paper or to create a hard copy. For example, creating a permanent, fixed (static), and directly perceivable representation of the Asset."@en ;
 	skos:broaderTransitive :present .
 
 :read
@@ -771,7 +771,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Read"@en ;
-	rdfs:comment "The act of obtaining data from the asset."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to obtain data from the Asset. For example, the ability to read a record from a database (the Asset)."@en ;
 	skos:broaderTransitive :use .
 
 :reproduce
@@ -779,8 +779,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Reproduce"@en ;
-	rdfs:comment "The act of making an exact reproduction of the asset."@en ;
-	owl:sameAs :copy ;
+	rdfs:comment "The act of making an exact reproduction of the asset. The Assigner permits/prohibits the Assignees to make exact reproductions of the Asset."@en ;
 	skos:broaderTransitive :use .
 
 :reviewPolicy
@@ -788,7 +787,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Review policy"@en ;
-	rdfs:comment "The act of performing a manual review of the terms associated with the asset."@en .
+	rdfs:comment "The Assigner requires that the Assignees have a person review the Policy applicable to the Asset. Used when human intervention is required to review the Policy. May link to an Asset which represents the full Policy information."@en .
 
 :secondaryUse
 	a :Action, skos:Concept ;
@@ -802,7 +801,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Sell"@en ;
-	rdfs:comment "The act of trading the asset in exchange of value."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to transfer the ownership of the Asset to a third party with compensation and while deleting the original asset."@en ;
 	skos:broaderTransitive :transfer .
 
 :textToSpeech
@@ -810,16 +809,22 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Text-to-speech"@en ;
-	rdfs:comment "The act of a system reading the text of the asset out loud."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to have a text Asset read out loud to an audience."@en ;
 	skos:broaderTransitive :use .
+
+:transfer
+	a :Action, skos:Concept ;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "testing" ;
+	rdfs:label "Transfer"@en ;
+	rdfs:comment "The Assigner transfers/does not transfer the ownership in perpetuity to the Assignees."@en .
 
 :transform
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Transform"@en ;
-	rdfs:comment "The act of transforming the asset into a new form."@en ;
-	owl:sameAs :export ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to make a digital copy of the digital Asset in another digital format. Typically used to convert the Asset into a different format for consumption on/transfer to a third party system."@en ;
 	skos:broaderTransitive :use .
 
 :translate
@@ -827,7 +832,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Translate"@en ;
-	rdfs:comment "The act of translating the asset into a new natural language."@en ;
+	rdfs:comment "The Assigner permits/prohibits the Assignees to translate the original natural language of an Asset into another natural language. A new derivative Asset is created by that action."@en ;
 	skos:broaderTransitive :use .
 
 :uninstall
@@ -835,14 +840,14 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Uninstall"@en ;
-	rdfs:comment "The act of unloading the asset from storage device."@en .
+	rdfs:comment "The Assigner requires that the Assignees unload and delete the computer program Asset from a storage device and disable its readiness for operation. The Asset is no longer accessible to the Assignees."@en .
 
 :watermark
 	a :Action, skos:Concept ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
 	rdfs:label "Watermark"@en ;
-	rdfs:comment "The act of applying a watermark to the asset."@en .
+	rdfs:comment "The Assigner requires that the Assignees apply a watermark as provided by the Assigner to the Asset. It is recommended to embed a link to the watermark."@en .
 
 :write
 	a :Action, skos:Concept ;
@@ -858,7 +863,7 @@ odrl:
 	vs:term_status "testing" ;
 	rdfs:label "Write to"@en ;
 	skos:broaderTransitive odrl:use ;
-	rdfs:comment "The act of adding data to the Asset."@en .				
+	rdfs:comment "The act of adding data to the Asset."@en .
 
 ## Constraints
 
@@ -901,7 +906,7 @@ odrl:
 	] .
 
 :deliveryChannel
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -913,7 +918,7 @@ odrl:
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "deprecated" ;
-    owl:equivalentProperty :system ;
+	owl:equivalentProperty :system ;
 	rdfs:label "device"@en ;
 	rdfs:comment "An identifiable computing system."@en ;
 	ont:deprecatedBy :systemDevice .
@@ -925,10 +930,10 @@ odrl:
 	vs:term_status "testing" ;
 	owl:equivalentProperty :system, :device ;
 	rdfs:label "SystemDevice"@en ;
-	rdfs:comment "An identifiable computing system."@en .			    			
+	rdfs:comment "An identifiable computing system."@en .
 
 :elapsedTime
-    a rdf:Property , owl:DatatypeProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -944,8 +949,15 @@ odrl:
 	rdfs:label "event"@en ;
 	rdfs:comment "Specification of a defined event applicable to the asset usage."@en .
 
+:policyUsage
+	a owl:NamedIndividual;
+	rdfs:isDefinedBy odrl: ;
+	vs:term_status "testing" ;
+	rdfs:label "Policy usage time"@en ;
+	rdfs:comment "When used as an event in constraints, indicates that the event occurs at the time when the policy is executed."@en .
+
 :fileFormat
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -953,7 +965,7 @@ odrl:
 	rdfs:comment "The file format applicable to the Asset."@en .
 
 :industry
-    a rdf:Property , owl:DatatypeProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -961,7 +973,7 @@ odrl:
 	rdfs:comment "The defined industry sector applicable to the asset usage"@en .
 
 :language
-    a rdf:Property , owl:DatatypeProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -969,7 +981,7 @@ odrl:
 	rdfs:comment "The natural language applicable to the asset usage"@en .
 
 :media
-    a rdf:Property ;
+	a rdf:Property ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -977,7 +989,7 @@ odrl:
 	rdfs:comment "The media type in which the asset may be used."@en .
 
 :meteredTime
-    a rdf:Property , owl:DatatypeProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -994,7 +1006,7 @@ odrl:
 	rdfs:range xsd:decimal .
 
 :percentage
-    a rdf:Property , owl:DatatypeProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -1003,7 +1015,7 @@ odrl:
 	rdfs:range xsd:decimal .
 
 :product
-    a rdf:Property , owl:DatatypeProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -1012,7 +1024,7 @@ odrl:
 	rdfs:range xsd:string .
 
 :purpose
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -1020,7 +1032,7 @@ odrl:
 	rdfs:comment "Specification of a defined purpose applicable to the asset usage."@en .
 
 :recipient
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -1028,7 +1040,7 @@ odrl:
 	rdfs:comment "The party that receives the result of the Action on the Asset."@en .
 
 :relativePosition
-    a rdf:Property , owl:DatatypeProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -1036,7 +1048,7 @@ odrl:
 	rdfs:comment "A point defined with reference to another position."@en .
 
 :relativeSize
-    a rdf:Property , owl:DatatypeProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -1044,7 +1056,7 @@ odrl:
 	rdfs:comment "The relative dimension that the Asset may be resized."@en .
 
 :resolution
-    a rdf:Property ;
+	a rdf:Property ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -1052,7 +1064,7 @@ odrl:
 	rdfs:comment "The resolution at which the asset may be used."@en .
 
 :spatial
-    a rdf:Property ;
+	a rdf:Property ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -1060,17 +1072,17 @@ odrl:
 	rdfs:comment "A code representing a geospatial area."@en .
 
 :system
-    a rdf:Property ;
+	a rdf:Property ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "deprecated" ;
 	ont:deprecatedBy :systemDevice ;
-    owl:equivalentProperty :device ;
+	owl:equivalentProperty :device ;
 	rdfs:label "system"@en ;
 	rdfs:comment "An identifiable computing system."@en .
 
 :timeInterval
-    a rdf:Property , owl:DatatypeProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -1079,7 +1091,7 @@ odrl:
 	rdfs:range rdfs:Literal .
 
 :version
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -1087,7 +1099,7 @@ odrl:
 	rdfs:comment "The scope of versions for the asset."@en .
 
 :virtualLocation
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
 	rdfs:subPropertyOf :rightOperand ;
 	vs:term_status "testing" ;
@@ -1097,68 +1109,68 @@ odrl:
 ## Functions
 
 :assignee
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
-    rdfs:subPropertyOf :function ;
+	rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "assignee"@en ;
 	rdfs:comment "The Party is the recipient of the policy statement."@en ;
 	rdfs:range :Party .
 
 :assigner
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
-    rdfs:subPropertyOf :function ;
+	rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "assigner"@en ;
 	rdfs:comment "The Party is the issuer of the policy statement."@en ;
 	rdfs:range :Party .
 
 :attributedParty
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
-    rdfs:subPropertyOf :function ;
+	rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "attributed party"@en ;
 	rdfs:comment "The Party to be attributed."@en .
 
 :consentingParty
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
-    rdfs:subPropertyOf :function ;
+	rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "consenting party"@en ;
 	rdfs:comment "The Party to obtain consent from."@en .
 
 :informedParty
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
-    rdfs:subPropertyOf :function ;
+	rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "informed party"@en ;
 	rdfs:comment "The Party to be informed of all uses."@en .
 
 :payeeParty
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
-    rdfs:subPropertyOf :function ;
+	rdfs:subPropertyOf :function ;
 	vs:term_status "deprecated" ;
 	ont:deprecatedBy :compensatedParty ;
 	rdfs:label "payee party"@en ;
 	rdfs:comment "The Party is the recipient of the payment."@en .
 
 :compensatedParty
-    a rdf:Property , owl:ObjectProperty ;
-    rdfs:isDefinedBy odrl: ;
-    rdfs:subPropertyOf :function ;
-    vs:term_status "testing" ;
-    rdfs:label "payee party"@en ;
-    rdfs:comment "The Party is the recipient of the compensation."@en .
+	a rdf:Property , owl:ObjectProperty ;
+	rdfs:isDefinedBy odrl: ;
+	rdfs:subPropertyOf :function ;
+	vs:term_status "testing" ;
+	rdfs:label "payee party"@en ;
+	rdfs:comment "The Party is the recipient of the compensation."@en .
 
 :trackingParty
-    a rdf:Property , owl:ObjectProperty ;
+	a rdf:Property , owl:ObjectProperty ;
 	rdfs:isDefinedBy odrl: ;
-    rdfs:subPropertyOf :function ;
+	rdfs:subPropertyOf :function ;
 	vs:term_status "testing" ;
 	rdfs:label "tracking party"@en ;
 	rdfs:comment "The Party is the usage tracker."@en .
@@ -1166,55 +1178,55 @@ odrl:
 ## Policies
 
 :Agreement
-    a rdfs:Class , owl:Class ;
+	a rdfs:Class , owl:Class ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-    rdfs:subClassOf :Policy ;
+	rdfs:subClassOf :Policy ;
 	owl:disjointWith :Offer, :Privacy, :Request, :Set, :Ticket ;
 	rdfs:label "Agreement"@en ;
 	rdfs:comment "Policy expressions that are formal contracts (or licenses) stipulating all the terms of usage and all the parties involved."@en .
 
 :Offer
-    a rdfs:Class , owl:Class ;
+	a rdfs:Class , owl:Class ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-    rdfs:subClassOf :Policy ;
+	rdfs:subClassOf :Policy ;
 	owl:disjointWith :Agreement, :Privacy, :Request, :Set, :Ticket ;
 	rdfs:label "Offer"@en ;
 	rdfs:comment "An instance of Offer is a Policy expression that proposes terms of usage from an Asset owner."@en .
 
 :Privacy
-    a rdfs:Class , owl:Class ;
+	a rdfs:Class , owl:Class ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-    rdfs:subClassOf :Policy ;
+	rdfs:subClassOf :Policy ;
 	owl:disjointWith :Agreement, :Offer, :Request, :Set, :Ticket ;
 	rdfs:label "Privacy"@en ;
 	rdfs:comment "An instance of Privacy is a Policy expression that stipulates the terms of usage over personal information."@en .
 
 :Request
-    a rdfs:Class , owl:Class ;
+	a rdfs:Class , owl:Class ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-    rdfs:subClassOf :Policy ;
+	rdfs:subClassOf :Policy ;
 	owl:disjointWith :Agreement, :Offer, :Privacy, :Set, :Ticket ;
 	rdfs:label "Request"@en ;
 	rdfs:comment "An instance of Request is a Policy expression that proposes terms of usage to an Asset owner."@en .
 
 :Set
-    a rdfs:Class , owl:Class ;
+	a rdfs:Class , owl:Class ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-    rdfs:subClassOf :Policy ;
+	rdfs:subClassOf :Policy ;
 	owl:disjointWith :Agreement, :Offer, :Privacy, :Request, :Ticket ;
 	rdfs:label "Set"@en ;
 	rdfs:comment "An instance of Set is a Policy expression that consists of entities from the complete model."@en .
 
 :Ticket
-    a rdfs:Class , owl:Class ;
+	a rdfs:Class , owl:Class ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "testing" ;
-    rdfs:subClassOf :Policy ;
+	rdfs:subClassOf :Policy ;
 	owl:disjointWith :Agreement, :Offer, :Privacy, :Request, :Set ;
 	rdfs:label "Ticket"@en ;
 	rdfs:comment "An instance of Ticket is a Policy expression that stipulates the terms of usage and is redeemable by any Party who currently holds the Ticket in their possession."@en .
@@ -1286,7 +1298,7 @@ odrl:
 	vs:term_status "deprecated" ;
 	ont:deprecatedBy <http://www.editeur.org/onix-pl/extract-char> ;
 	rdfs:label "Extract character"@en ;
-	rdfs:comment "The act of extracting (replicating) unchanged character(s) from the asset."@en .
+	rdfs:comment "The act of extracting (replicating) unchanged characters from the asset."@en .
 
 :extractPage
 	a :Action, skos:Concept ;
@@ -1295,7 +1307,7 @@ odrl:
 	vs:term_status "deprecated" ;
 	ont:deprecatedBy <http://www.editeur.org/onix-pl/extract-word> ;
 	rdfs:label "Extract page"@en ;
-	rdfs:comment "The act of extracting (replicating) unchanged page(s) from the asset."@en .
+	rdfs:comment "The act of extracting (replicating) unchanged pages from the asset."@en .
 
 :extractWord
 	a :Action, skos:Concept ;
@@ -1304,7 +1316,7 @@ odrl:
 	vs:term_status "deprecated" ;
 	ont:deprecatedBy <http://www.editeur.org/onix-pl/extract-page> ;
 	rdfs:label "Extract word"@en ;
-	rdfs:comment "The act of extracting (replicating) unchanged word(s) from the asset."@en .
+	rdfs:comment "The act of extracting (replicating) unchanged words from the asset."@en .
 
 :attachPolicy
 	a :Action, skos:Concept ;
@@ -1347,7 +1359,7 @@ odrl:
 	rdfs:comment "The act of the non-commercial reproduction and distribution of the asset to third-parties."@en .
 
 :proximity
-    a rdf:Property , owl:DatatypeProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "deprecated" ;
@@ -1356,7 +1368,7 @@ odrl:
 	rdfs:comment "An value indicating the closeness or nearness."@en .
 
 :timedCount
-    a rdf:Property , owl:DatatypeProperty ;
+	a rdf:Property , owl:DatatypeProperty ;
 	rdfs:subPropertyOf :rightOperand ;
 	rdfs:isDefinedBy odrl: ;
 	vs:term_status "deprecated" ;
