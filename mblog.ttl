@@ -23,7 +23,7 @@
 
 <#Channel>
     a <http://www.w3.org/2000/01/rdf-schema#Class> ;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "A container for channels."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A container for SIOC posts."@en ;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Channel"@en .
 
