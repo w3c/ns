@@ -121,5 +121,10 @@ owner a rdf:Property;
     There is a sense of right to control.   Typically defaults to the agent who craeted
     something but can be changed.""".
 
+delegates a rdf:Property;
+    rdfs:label "delegates"@en;
+    rdfs:range foaf:Agent;
+    rdfs:comment """Delegates a person or another agent to act on behalf of the agent.
+    For example, Alice delegates Bob to act on behalf of Alice for ACL purposes.""".
 
 # ENDS

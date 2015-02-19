@@ -1,6 +1,3 @@
-
-
-
 <rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
@@ -108,9 +105,16 @@
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#owner">
         <comment>The person or other agent which owns this. 
     For example, the owner of a file in a filesystem.
-    There is a sense of right to control.   Typically defaults to the agent who craeted
+    There is a sense of right to control.   Typically defaults to the agent who created
     something but can be changed.</comment>
         <label xml:lang="en">owner</label>
+        <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#delegates">
+        <comment>Delegates a person or another agent to act on behalf of the user.
+    For example, Alice delegates Bob to act on behalf of Alice for ACL purposes.</comment>
+        <label xml:lang="en">delegates</label>
         <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     </rdf:Property>
 </rdf:RDF>
