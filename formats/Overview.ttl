@@ -30,7 +30,8 @@ formats:Format a rdfs:Class,
         formats:SPARQL_Results_TSV,
         formats:SPARQL_Results_XML,
         formats:TriG,
-        formats:Turtle .
+        formats:Turtle,
+        formats:LD_Patch .
 
 formats:media_type a rdfs:Property,
         owl:DatatypeProperty .

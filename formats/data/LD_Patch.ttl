@@ -1,0 +1,26 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix formats: <http://www.w3.org/ns/formats/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+formats:LD_Patch a formats:Format ;
+    dc:created "2015-02-07" ;
+    dc:creator <https://deiu.rww.io/profile/card#me> ;
+    dc:description "Unique identifier for the LD Patch Format" ;
+    dc:modified "2015-02-07" ;
+    rdfs:comment "LD Patch is defined by the “Linked Data Patch Format” W3C Candidate Recommendation." ;
+    rdfs:isDefinedBy <http://www.w3.org/TR/ldpatch/> ;
+    rdfs:seeAlso <http://www.w3.org/TR/ldpatch/#media-registration> ;
+    formats:media_type "text/ldpatch" ;
+    formats:preferred_suffix ".ldp" .
+
+<https://deiu.rww.io/profile/card#me> a foaf:Person ;
+    rdfs:seeAlso <https://deiu.rww.io/profile/card> ;
+    foaf:mbox <mailto:andrei@w3.org> ;
+    foaf:name "Andrei Sambra" ;
+    foaf:workplaceHomepage <http://www.w3.org> .
+
+
