@@ -449,6 +449,11 @@ facet of the thing.
          s:label "background color"@en;
          s:range :Color .
     
+    :backgroundImage	a r:Property, 
+		owl:DatatypeProperty;
+        s:label "background image"@en;
+        s:comment """URI or base64 representation of an image""".
+
     :category     a r:Property;
          s:comment "The superclass subclasses of which will be selected.";
          s:domain :Classifier;

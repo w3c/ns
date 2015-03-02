@@ -615,6 +615,12 @@ facet of the thing.
         <s:range r:resource="http://www.w3.org/ns/ui#Form"/>
     </r:Property>
 
+    <r:Property r:about="http://www.w3.org/ns/ui#backgroundImage">
+        <r:type r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+        <s:comment>URI or base64 representation of an image</s:comment>
+        <s:label xml:lang="en">background image</s:label>
+    </r:Property>
+
     <r:Property r:about="http://www.w3.org/ns/ui#backgroundColor">
         <r:type r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
         <s:comment>Must be a valid CSS color string such as one could put in

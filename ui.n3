@@ -35,6 +35,9 @@ backgroundColor a r:Property, owl:DatatypeProperty;
         (with 6 digits of hex)  so that it
         can work with Graphviz.""".
 
+backgroundImage a r:Property, owl:DatatypeProperty;
+	s:label "background image"@en;
+	s:comment """URI or base64 representation of an image""".
 
 color a r:Property, owl:DatatypeProperty;
     s:label "color"@en;
