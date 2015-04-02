@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rdf:RDF
-   xmlns:dcmit="http://purl.org/dc/dcmitype/"
+<rdf:RDF xmlns:dcmit="http://purl.org/dc/dcmitype/"
    xmlns:dct="http://purl.org/dc/terms/"
    xmlns:foaf="http://xmlns.com/foaf/0.1/"
    xmlns:ont="http://purl.org/net/ns/ontology-annot#"
@@ -18,11 +17,13 @@
     <dct:creator>Mo McRoberts (BBC)</dct:creator>
     <dct:creator>Víctor Rodríguez Doncel (OEG-UPM)</dct:creator>
     <dct:description xml:lang="en">The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media.</dct:description>
-    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-01-18</dct:issued>
+    <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-03-05</dct:issued>
+    <dct:license rdf:resource="http://www.w3.org/community/about/agreements/final/"/>
     <vann:example rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
     <vann:preferredNamespacePrefix>odrl</vann:preferredNamespacePrefix>
     <vann:preferredNamespaceUri rdf:resource="http://w3.org/ns/odrl/2/"/>
     <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+    <rdfs:comment xml:lang="en">This is the RDF ontology for ODRL Version 2.1 (Final Specification, 5 March 2015) Copyright © 2015 the Contributors to the Final Specification, published by the W3C ODRL Community Group (https://www.w3.org/community/odrl/) under the W3C Community Final Specification Agreement (http://www.w3.org/community/about/agreements/final/). A human-readable summary is available (http://www.w3.org/community/about/agreements/fsa-deed/).</rdfs:comment>
     <rdfs:label xml:lang="en">ODRL Version 2.1 Ontology</rdfs:label>
     <owl:versionInfo>2.1</owl:versionInfo>
   </owl:Ontology>

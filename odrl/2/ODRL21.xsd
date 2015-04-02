@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:o="http://www.w3.org/ns/odrl/2/" version="2.1" xmlns:xs="http://www.w3.org/2001/XMLSchema"
     targetNamespace="http://www.w3.org/ns/odrl/2/" elementFormDefault="qualified" attributeFormDefault="unqualified">
-
+    <xs:annotation>
+        <xs:documentation>
+            This is the XML Schema for ODRL Version 2.1 (Final Specification, 5 March 2015)
+            Copyright © 2015 the Contributors to the Final Specification,
+            published by the W3C ODRL Community Group (https://www.w3.org/community/odrl/)
+            under the W3C Community Final Specification Agreement (http://www.w3.org/community/about/agreements/final/).
+            A human-readable summary is available (http://www.w3.org/community/about/agreements/fsa-deed/).
+        </xs:documentation>
+    </xs:annotation>
     <xs:element name="Policy" type="o:Policy"/>
     <xs:complexType name="Policy">
                 <xs:sequence minOccurs="0" maxOccurs="unbounded">
