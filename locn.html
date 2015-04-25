@@ -6,7 +6,6 @@
     <meta charset="utf-8"/>
     <link rel="alternate" href="/ns/locn.rdf" type="application/rdf+xml" title="RDF/XML version of the ISA Programme Location Core Vocabulary"/>
     <link rel="alternate" href="/ns/locn.ttl" type="text/turtle" title="Turtle version of the ISA Programme Location Core Vocabulary"/>
-    <link rel="self" href="/ns/locn.html" type="text/html" title="HTML version of the ISA Programme Location Core Vocabulary"/>
     <link rel="license" href="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11" title="ISA Open Metadata Licence v1.1"/>
     <link href="/StyleSheets/TR/base.css" rel="stylesheet" type="text/css" title="base W3C /TR styles"/>
     <style type="text/css">
@@ -23,10 +22,8 @@
   </head>
   <body>
     <header id="docHeader">
-      <hgroup>
         <h1 id="docTitle">ISA Programme Location Core Vocabulary</h1>
         <h2 id="versionHeader">Second version in w3.org/ns space - <time datetime="2015-03-23">2015-03-23</time></h2>
-      </hgroup>
       <dl id="versionLinks">
         <dt>Author:</dt>
         <dd><a href="https://joinup.ec.europa.eu/node/42444" title="https://joinup.ec.europa.eu/node/42444">EU ISA Programme Core Vocabularies Working Group (Location Task Force)</a></dd>
@@ -44,13 +41,13 @@
     <hr title="Separator for top matter"/>
     <section id="abstract">
       <header>
-        <h1>Abstract</h1>
+        <h2>Abstract</h2>
       </header>
       <p>The ISA Programme Location Core Vocabulary provides a minimum set of classes and properties for describing any place in terms of its name, address or geometry. The vocabulary is specifically designed to aid the publication of data that is interoperable with <a href="http://inspire.jrc.ec.europa.eu/"><abbr title="European Union">EU</abbr> INSPIRE Directive</a>. It is closely integrated with the <a href="https://joinup.ec.europa.eu/node/42441">Business</a> and <a href="https://joinup.ec.europa.eu/node/42440">Person</a> Core Vocabularies of the EU <abbr title="Interoperability Solutions for European Public Administrations">ISA</abbr> Programme, now available in W3C space as, respectively, the <a href="/ns/regorg">Registered Organization vocabulary</a> and <a href="/ns/person">ISA Person Core Vocabulary</a>.</p>
     </section>
     <section id="status">
       <header>
-        <h1>Status of this document</h1>
+        <h2>Status of this document</h2>
         <p><em>This section describes the status of this document at the time of its publication. Other documents may supersede it.</em></p>
       </header>
       <p>This document was originally produced by the <a href="https://joinup.ec.europa.eu/node/42444">EU ISA Programme 
@@ -63,7 +60,7 @@
     </section>
     <section role="main">
       <header id="toc">
-        <h1>Table of Contents</h1>
+        <h2>Table of Contents</h2>
         <nav>
           <ul>
             <li><a href="#intro">Introduction</a></li>
@@ -76,9 +73,9 @@
           </ul>
         </nav>
       </header>
-      <h1 id="intro">Introduction</h1>
+      <h2 id="intro">Introduction</h2>
       <p>The ISA Programme Location Core Vocabulary was developed by the <a href="">EU ISA Programme Core Vocabularies Working Group (Location Task Force)</a>. This is the namespace document, generated from the associated RDF schema. Full documentation is provided in the <a href="https://joinup.ec.europa.eu/node/55858">Core Vocabularies Specification</a> document itself. This includes background information, use cases, the conceptual model and full definitions for all terms used.</p>
-      <h1 id="namespace">Namespace</h1>
+      <h2 id="namespace">Namespace</h2>
       <p>The URI for this vocabulary is</p>
       <pre>http://www.w3.org/ns/locn#</pre>
       <p>When abbreviating terms the suggested prefix is <code>locn</code></p>
@@ -91,7 +88,7 @@
       </ul>
       <section id="glance">
         <header>
-          <h1>Vocabulary Terms at a Glance</h1>
+          <h2>Vocabulary Terms at a Glance</h2>
         </header>
         <section id="umlDiagram">
           <figure><img src="locn.svg" alt="Class and property diagram of the LOCN vocabulary"/></figure>
@@ -128,9 +125,9 @@
           </dd>
         </dl>
       </section>
-      <h1 id="classes">Classes</h1>
+      <h2 id="classes">Classes</h2>
       <p>This section provides the formal definition of each class in the vocabulary.</p>
-      <h2 id="dcterms:Location">Class <em>Location</em></h2>
+      <h3 id="dcterms:Location">Class <em>Location</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -161,7 +158,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:Address">Class <em>Address</em></h2>
+      <h3 id="locn:Address">Class <em>Address</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -186,7 +183,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:Geometry">Class <em>Geometry</em></h2>
+      <h3 id="locn:Geometry">Class <em>Geometry</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -217,9 +214,9 @@
           </tr>
         </tbody>
       </table>
-      <h1 id="properties">Properties</h1>
+      <h2 id="properties">Properties</h2>
       <p>This section provides the formal definition of each property in the vocabulary.</p>
-      <h2 id="locn:location">Property <em>location</em></h2>
+      <h3 id="locn:location">Property <em>location</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -248,7 +245,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:geographicName">Property <em>geographic name</em></h2>
+      <h3 id="locn:geographicName">Property <em>geographic name</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -281,7 +278,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="rdfs:seeAlso">Property <em>geographic identifier</em></h2>
+      <h3 id="rdfs:seeAlso">Property <em>geographic identifier</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -312,7 +309,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:geometry">Property <em>geometry</em></h2>
+      <h3 id="locn:geometry">Property <em>geometry</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -422,7 +419,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:address">Property <em>address</em></h2>
+      <h3 id="locn:address">Property <em>address</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -451,7 +448,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:fullAddress">Property <em>full address</em></h2>
+      <h3 id="locn:fullAddress">Property <em>full address</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -484,7 +481,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:poBox">Property <em>PO box</em></h2>
+      <h3 id="locn:poBox">Property <em>PO box</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -517,7 +514,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:thoroughfare">Property <em>thoroughfare</em></h2>
+      <h3 id="locn:thoroughfare">Property <em>thoroughfare</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -550,7 +547,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:locatorDesignator">Property <em>locator designator</em></h2>
+      <h3 id="locn:locatorDesignator">Property <em>locator designator</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -579,7 +576,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:locatorName">Property <em>locator name</em></h2>
+      <h3 id="locn:locatorName">Property <em>locator name</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -608,7 +605,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:addressArea">Property <em>address area</em></h2>
+      <h3 id="locn:addressArea">Property <em>address area</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -641,7 +638,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:postName">Property <em>post name</em></h2>
+      <h3 id="locn:postName">Property <em>post name</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -674,7 +671,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:adminUnitL2">Property <em>admin unit level 2</em></h2>
+      <h3 id="locn:adminUnitL2">Property <em>admin unit level 2</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -703,7 +700,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:adminUnitL1">Property <em>admin unit level 1</em></h2>
+      <h3 id="locn:adminUnitL1">Property <em>admin unit level 1</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -738,7 +735,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:postCode">Property <em>post code</em></h2>
+      <h3 id="locn:postCode">Property <em>post code</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -771,7 +768,7 @@
           </tr>
         </tbody>
       </table>
-      <h2 id="locn:addressId">Property <em>address ID</em></h2>
+      <h3 id="locn:addressId">Property <em>address ID</em></h3>
       <table class="definition">
         <tbody>
           <tr>
@@ -804,9 +801,9 @@
           </tr>
         </tbody>
       </table>
-      <h1 id="conformance">Conformance Statement</h1>
+      <h2 id="conformance">Conformance Statement</h2>
       <p>A conformant implementation of this vocabulary MUST understand all vocabulary terms defined in this document.</p>
-      <h1 id="changes">Change History</h1>
+      <h2 id="changes">Change History</h2>
       <p>2015-03-23: Updates in the namespace document and in the RDF/XML and Turtle schemas:</p>
       <ul>
         <li>Fixed copyright notice.</li>
