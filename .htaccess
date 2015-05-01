@@ -1,20 +1,32 @@
 <Files ~ "md.json">
 ForceType 'application/json'
 </Files>
+
 <Files ~ "json-ld.json">
 ForceType 'application/json'
 </Files>
+
+# Added the access-control-allow ivan@w3.org 2015-05-01
 <Files ~ "json-ld.jsonld">
+Header set Access-Control-Allow-Origin "*"
 ForceType 'application/ld+json'
 </Files>
-# Added ivan@w3.org 2015-05-01
+
+# Added the access-control-allow ivan@w3.org 2015-05-01
 <Files ~ "csvw.jsonld">
 ForceType 'application/ld+json'
 Header set Access-Control-Allow-Origin "*"
 </Files>
+<Files ~ "csvw.ttl">
+Header set Access-Control-Allow-Origin "*"
+</Files>
+
+# Added the access-control-allow ivan@w3.org 2015-05-01
 <Files ~ "oa.jsonld">
+Header set Access-Control-Allow-Origin "*"
 ForceType 'application/ld+json'
 </Files>
+
 <FilesMatch "^(ma-ont|mediaont)\.html$">
 ForceType 'text/html; charset=iso-8859-1'
 </FilesMatch>
