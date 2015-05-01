@@ -6,6 +6,7 @@ ForceType 'application/json'
 </Files>
 <Files ~ "json-ld.jsonld">
 ForceType 'application/ld+json'
+Header set Access-Control-Allow-Origin "*"
 </Files>
 <Files ~ "csvw.jsonld">
 ForceType 'application/ld+json'
