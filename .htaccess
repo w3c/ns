@@ -6,10 +6,12 @@ ForceType 'application/json'
 </Files>
 <Files ~ "json-ld.jsonld">
 ForceType 'application/ld+json'
-Header set Access-Control-Allow-Origin "*"
 </Files>
+# Added ivan@w3.org 2015-05-01
+# 
 <Files ~ "csvw.jsonld">
 ForceType 'application/ld+json'
+Header set Access-Control-Allow-Origin "*"
 </Files>
 <Files ~ "oa.jsonld">
 ForceType 'application/ld+json'
