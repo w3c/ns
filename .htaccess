@@ -44,9 +44,9 @@ RewriteRule ^oa-context-20130208.json oa.jsonld [L,R=307]
 RewriteRule ^oa-context.json oa.jsonld [L,R=307]
 
 # added sandro@w3.org 2015-05-05 per discussion with elf at socialWG F2F
-RewriteRule ^as2-live$ https://rawgit.com/jasnell/w3c-socialwg-activitystreams/master/activitystreams2-context.jsonld [P,L]
 <Files ~ "activitystreams">
-Header set Access-Control-Allow-Origin "*"
 ForceType 'application/ld+json'
 </Files>
+Header set Access-Control-Allow-Origin "*"
+
 
