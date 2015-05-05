@@ -45,3 +45,4 @@ RewriteRule ^oa-context.json oa.jsonld [L,R=307]
 
 # added sandro@w3.org 2015-05-05 per discussion with elf at socialWG F2F
 RewriteRule ^as2$ https://rawgit.com/jasnell/w3c-socialwg-activitystreams/master/activitystreams2-context.jsonld [P,L]
+
