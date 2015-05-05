@@ -49,7 +49,6 @@ RewriteRule ^oa-context.json oa.jsonld [L,R=307]
 
 # added sandro@w3.org 2015-05-05 per discussion with elf at socialWG F2F
 <Files ~ "activitystreams*">
-#ForceType 'application/ld+json'
 Header set Access-Control-Allow-Origin "*"
 </Files>
 
