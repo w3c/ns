@@ -24,7 +24,7 @@ odrl:
 	dct:creator "Mo McRoberts (BBC)", "Víctor Rodríguez Doncel (OEG-UPM)" ;
 	dct:issued "2015-03-05"^^xsd:date ;
 	dct:contributor "ODRL Community Group" ;
-	dct:description "The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media."@en ;
+	dct:description "The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media."@en ;
 	rdfs:comment "This is the RDF ontology for ODRL Version 2.1 (Final Specification, 5 March 2015) Copyright © 2015 the Contributors to the Final Specification, published by the W3C ODRL Community Group (https://www.w3.org/community/odrl/) under the W3C Community Final Specification Agreement (http://www.w3.org/community/about/agreements/final/). A human-readable summary is available (http://www.w3.org/community/about/agreements/fsa-deed/)."@en ;
 	dct:license <http://www.w3.org/community/about/agreements/final/> .
 

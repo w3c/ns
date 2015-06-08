@@ -16,7 +16,7 @@
     <dct:contributor>ODRL Community Group</dct:contributor>
     <dct:creator>Mo McRoberts (BBC)</dct:creator>
     <dct:creator>Víctor Rodríguez Doncel (OEG-UPM)</dct:creator>
-    <dct:description xml:lang="en">The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media.</dct:description>
+    <dct:description xml:lang="en">The Open Digital Rights Language (ODRL) provides flexible and interoperable mechanisms to support transparent and innovative use of digital content in publishing, distribution, and consumption of digital media across all sectors and communities. The ODRL Policy model is broad enough to support traditional rights expressions for commercial transaction, open access expressions for publicly distributed content, and privacy expressions for social media.</dct:description>
     <dct:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-03-05</dct:issued>
     <dct:license rdf:resource="http://www.w3.org/community/about/agreements/final/"/>
     <vann:example rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
