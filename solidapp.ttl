@@ -15,6 +15,12 @@
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Application"@en .
 
+<#Configuration>
+    a <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A configuration file for Solid Web application."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Application"@en .
+
 <#description>
     a <http://www.w3.org/2000/01/rdf-schema#Class> ;
     <http://www.w3.org/2000/01/rdf-schema#comment> "Description of an application."@en ;
