@@ -6,7 +6,7 @@
     <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by-sa/2.0/uk/deed.en_GB> ;
     <http://purl.org/dc/terms/issued> "2015-06-19"^^<http://www.w3.org/2001/XMLSchema#date> ;
     a <http://www.w3.org/2002/07/owl#Ontology> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Solid Web Applications"@en ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Solid Web Application"@en ;
     <http://xmlns.com/foaf/0.1/maker> <https://deiu.me/profile#me> .
 
 <#Application>
