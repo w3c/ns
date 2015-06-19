@@ -43,6 +43,13 @@
     <http://www.w3.org/2000/01/rdf-schema#label> "name"@en ;
     <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 
+<#icon>
+    a rdf:Property ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "An icon URI for a Web application."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <#Application> ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Icon"@en .
+
 <#homepage>
     a rdf:Property ;
     <http://www.w3.org/2000/01/rdf-schema#comment> "A homepage URI, where the app is hosted and ran from."@en ;
