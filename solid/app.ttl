@@ -50,7 +50,7 @@
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Homepage"@en .
 
-<#datasource>
+<#dataSource>
     a rdf:Property ;
     <http://www.w3.org/2000/01/rdf-schema#comment> "A container (workspace) in which the app stores data."@en ;
     <http://www.w3.org/2000/01/rdf-schema#domain> <#Application> ;
