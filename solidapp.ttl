@@ -1,0 +1,46 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+<>
+    <http://creativecommons.org/ns#attributionName> "Andrei Sambra" ;
+    <http://creativecommons.org/ns#attributionURL> <> ;
+    <http://creativecommons.org/ns#license> <http://creativecommons.org/licenses/by-sa/2.0/uk/deed.en_GB> ;
+    <http://purl.org/dc/terms/issued> "2015-06-19"^^<http://www.w3.org/2001/XMLSchema#date> ;
+    a <http://www.w3.org/2002/07/owl#Ontology> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Solid Web Applications"@en ;
+    <http://xmlns.com/foaf/0.1/maker> <https://deiu.me/profile#me> .
+
+<#Application>
+    a <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A Solid Web application."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Application"@en .
+
+<#description>
+    a <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Description of an application."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Description"@en ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+
+<#name>
+    a rdf:Property ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "The official name of a Web application."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <#Application> ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "name"@en ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
+
+<#homepage>
+    a rdf:Property ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A homepage URI, where the app is hosted and ran from."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <#Application> ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Homepage"@en .
+
+<#datasource>
+    a rdf:Property ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A container (workspace) in which the app stores data."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <#Application> ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Data source"@en ;
+    <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/pim/space##Workspace> .
