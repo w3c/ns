@@ -58,11 +58,11 @@
     <http://www.w3.org/2000/01/rdf-schema#label> "Data source"@en ;
     <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/pim/space#Workspace> .
 
-<#dataType>
+<#commonType>
     a rdf:Property ;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "A data type that the app uses. An app can publish a list of common data types that can be used by other apps."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A common type of data that the app uses. An app can publish a list of common  types that can be used by other apps."@en ;
     <http://www.w3.org/2000/01/rdf-schema#domain> <#Application> ;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Data types"@en ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Common type"@en ;
     <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> .
 
