@@ -47,7 +47,7 @@
     <http://www.w3.org/2000/01/rdf-schema#comment> "The official name of a Web application."@en ;
     <http://www.w3.org/2000/01/rdf-schema#domain> <#Application> ;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "name"@en ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Name"@en ;
     <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2000/01/rdf-schema#Literal> .
 
 <#icon>
