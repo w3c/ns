@@ -17,9 +17,9 @@
 
 <#Configuration>
     a <http://www.w3.org/2000/01/rdf-schema#Class> ;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "A configuration file for Solid Web application."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A set of configuration data for a Solid Web application."@en ;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
-    <http://www.w3.org/2000/01/rdf-schema#label> "Application"@en .
+    <http://www.w3.org/2000/01/rdf-schema#label> "Configuration data"@en .
 
 <#ConfigurationWorkspace>
     a <http://www.w3.org/2000/01/rdf-schema#Class> ;
@@ -27,6 +27,13 @@
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Configuration Workspace"@en ;
     <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/pim/space#Workspace> .
+
+<#configuration>
+    a rdf:Property ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "The configuration data for a given app."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <#Application> ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Configuration"@en .
 
 <#description>
     a <http://www.w3.org/2000/01/rdf-schema#Class> ;
@@ -64,6 +71,13 @@
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Data source"@en ;
     <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/ns/pim/space#Workspace> .
+
+<#index>
+    a rdf:Property ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "An index resource that contains references to resources managed by the app."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <#Application> ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Data index"@en .
 
 <#commonType>
     a rdf:Property ;
