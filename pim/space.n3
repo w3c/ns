@@ -82,6 +82,10 @@ This may be used for constructing URIs for new storage resources.
     s:comment   """Aceess is open to the public. Anything in a public workspace
     can be accesed by anyone.""".
 
+:PreferencesWorkspace s:subClassOf :Workspace;
+    s:label "Preferences workspace";
+    s:comment   """Aceess may not be open to the public. Contains preferences resources.""".
+
 :storage a rdf:Property; s:label "storage";
     s:range :Storage;
     owl:inverse [ s:label "workspace included" ];

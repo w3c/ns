@@ -63,6 +63,11 @@ Goals then are that the user can
     can be accesed by anyone.""";
          :label "Public workspace";
          :subClassOf ws:Workspace .
+
+    ws:PreferencesWorkspace     :comment """AAceess may not be open to the public. 
+    Contains preferences resources""";
+         :label "Preferences workspace";
+         :subClassOf ws:Workspace .
     
     ws:SharedWorkspace     :comment "Access is to some but not all people.";
          :label "Shared workspace";

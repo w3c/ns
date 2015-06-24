@@ -78,6 +78,12 @@ Goals then are that the user can
         <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
     </rdf:Description>
 
+    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#PreferencesWorkspace">
+        <comment>Aceess may not be open to the public. Contains preferences resources</comment>
+        <label>Preferences workspace</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
+    </rdf:Description>
+
     <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#SharedWorkspace">
         <comment>Access is to some but not all people.</comment>
         <label>Shared workspace</label>
