@@ -20,6 +20,7 @@
     <owl:versionInfo xml:lang="en">21 December 2013 - with correction to URI of the schema cf. using the namespace</owl:versionInfo>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-05-24</dcterms:modified>
     <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-12-21</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2015-07-22</dcterms:modified>
     <rdf:type rdf:resource="http://labs.mondeca.com/vocab/voaf#Vocabulary"/>
     <voaf:specializes rdf:resource="http://www.w3.org/dcat"/>
     <vann:preferredNamespaceUri>http://www.w3.org/ns/adms#</vann:preferredNamespaceUri>
@@ -80,13 +81,13 @@
     <dcterms:identifier>adms:AssetRepository</dcterms:identifier>
   </rdfs:Class>
 
-  <rdf:Description rdf:about="http://www.w3.org/ns/adms#Asset">
+  <rdfs:Class rdf:about="http://www.w3.org/ns/adms#Asset">
     <rdfs:label xml:lang="en">Asset</rdfs:label>
     <rdfs:comment xml:lang="en">An Asset is an abstract entity that reflects the intellectual content of the asset and represents those characteristics of the asset that are independent of its physical embodiment. This abstract entity combines the FRBR entities work (a distinct intellectual or artistic creation) and expression (the intellectual or artistic realization of a work). Assets can be versioned. Every time the intellectual content of an asset changes, the result is considered to be a new asset that can be linked to previous and next versions of the Asset. The physical embodiment of an Asset is called an Asset Distribution. A particular Asset may have zero or more Asset Distributions.</rdfs:comment>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/dcat#Dataset" />
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/vocab-adms/" />
     <dcterms:identifier>adms:Asset</dcterms:identifier>
-  </rdf:Description>
+  </rdfs:Class>
 
   <rdfs:Class rdf:about="http://www.w3.org/ns/adms#AssetDistribution">
     <rdfs:label xml:lang="en">Asset Distribution</rdfs:label>

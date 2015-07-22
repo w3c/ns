@@ -37,6 +37,7 @@
 	dcterms:modified "2013-05-24"^^xsd:date;
   dcterms:modified "2013-09-16"^^xsd:date; # removed erroneous . chars before closing blank nodes
   dcterms:modified "2013-12-21"^^xsd:date; # corrected URI of schema to http://www,w3.org/ns/adms (no #)
+  dcterms:modified "2015-07-22"^^xsd:date; # Added rdfs:Class to definition of adms:Asset
 	vann:preferredNamespacePrefix "adms";
 	vann:preferredNamespaceUri "http://www.w3.org/ns/adms#";
 	rdfs:comment "This file specifies the set of RDF classes and properties used in ADMS"@en;
@@ -51,6 +52,7 @@
 	rdfs:subClassOf dcat:Catalog.
 
 <http://www.w3.org/ns/adms#Asset> dcterms:identifier "adms:Asset";
+  a rdfs:Class;
 	rdfs:comment "An Asset is an abstract entity that reflects the intellectual content of the asset and represents those characteristics of the asset that are independent of its physical embodiment. This abstract entity combines the FRBR entities work (a distinct intellectual or artistic creation) and expression (the intellectual or artistic realization of a work). Assets can be versioned. Every time the intellectual content of an asset changes, the result is considered to be a new asset that can be linked to previous and next versions of the Asset. The physical embodiment of an Asset is called an Asset Distribution. A particular Asset may have zero or more Asset Distributions.."@en;
 	rdfs:isDefinedBy <http://www.w3.org/TR/vocab-adms>;
 	rdfs:label "Asset"@en;
