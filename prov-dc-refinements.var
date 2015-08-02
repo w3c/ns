@@ -2,3 +2,7 @@ URI: prov-dc-refinements
 
 URI: prov-dc-refinements.ttl
 Content-Type: text/turtle; qs=0.5
+
+URI: prov-dc-refinements.owl
+Content-Type: application/rdf+xml; qs=0.4
+
