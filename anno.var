@@ -1,0 +1,7 @@
+URI: anno
+
+URI: anno.json
+Content-Type: application/json; qs=0.4
+
+URI: anno.jsonld
+Content-Type: application/ld+json; qs=0.5
