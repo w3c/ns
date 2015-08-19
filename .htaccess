@@ -31,6 +31,17 @@ Header set Access-Control-Allow-Origin "*"
 ForceType 'application/ld+json'
 </Files>
 
+# Added the access-control-allow ivan@w3.org 2015-08-19
+<Files ~ "anno.jsonld">
+Header set Access-Control-Allow-Origin "*"
+ForceType 'application/ld+json'
+</Files>
+<Files ~ "anno.json">
+Header set Access-Control-Allow-Origin "*"
+ForceType 'application/ld+json'
+</Files>
+
+
 <FilesMatch "^(ma-ont|mediaont)\.html$">
 ForceType 'text/html; charset=iso-8859-1'
 </FilesMatch>
