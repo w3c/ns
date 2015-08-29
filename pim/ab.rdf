@@ -1,0 +1,23 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdf:Description rdf:about="">
+        <comment># To allow roud-tripping of AB to RDF and back.
+
+Example:
+&#60;#mary&#62; ab:ABPersonFlags 0;
+        InstantMessage [ a vcard:Home;
+        ab:InstantMessageUsername "Mary";
+        ab:InstantMessageService "AIMInstant" ]
+
+also we find:
+    ab:CountryCode "us";
+    
+</comment>
+        <label>An ontology for transferring Mac Addressbook fields which do not convert to VCARD</label>
+    </rdf:Description>
+</rdf:RDF>

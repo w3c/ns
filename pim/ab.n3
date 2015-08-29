@@ -1,0 +1,19 @@
+# Placeholder ontology for prperties in te Mac addressbook data which cannot be directly converted to VCARD properties.
+# To allow roud-tripping of AB to vCard  RDF and back.
+
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix ab: <#>.
+
+<> rdfs:label "An ontology for transferring Mac Addressbook fields which do not convert to VCARD";
+    rdfs:comment """# To allow roud-tripping of AB to RDF and back.
+
+Example:
+<#mary> ab:ABPersonFlags 0;
+        InstantMessage [ a vcard:Home;
+        ab:InstantMessageUsername "Mary";
+        ab:InstantMessageService "AIMInstant" ]
+
+also we find:
+    ab:CountryCode "us";
+    
+""".
