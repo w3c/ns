@@ -21,9 +21,9 @@
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Configuration data"@en .
 
-<#ConfigurationWorkspace>
+<#PreferencesWorkspace>
     a <http://www.w3.org/2000/01/rdf-schema#Class> ;
-    <http://www.w3.org/2000/01/rdf-schema#comment> "A configuration workspace that contains configuration resources for Solid Web application."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A special workspace that contains configuration resources for Solid Web application."@en ;
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Configuration Workspace"@en ;
     <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.w3.org/ns/pim/space#Workspace> .
