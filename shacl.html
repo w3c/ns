@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.1//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-2.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	  prefix="
+	  dcterms: http://purl.org/dc/terms/
+	  rdfs: http://www.w3.org/2000/01/rdf-schema# 
+	  foaf: http://xmlns.com/foaf/0.1/
+	  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+	  owl: http://www.w3.org/2002/07/owl#
+	  rdfs: http://www.w3.org/2000/01/rdf-schema#
+	  rdfa: http://www.w3.org/ns/rdfa#
+	  shacl: http://www.w3.org/ns/shacl#
+	  "
+  >
+  <head about="http://www.w3.org/ns/shacl.html">
+	<base href="http://www.w3.org/ns/"/>
+    <title>The Shape Constraint Langauge (SHACL) Vocabulary</title>
+    <link type="text/css" rel="stylesheet" href="/StyleSheets/TR/base.css"/>
+	<style type="text/css">
+	  code {font-weight: bold}
+      .class { color: #099; font-weight: normal; font-size: 1.2em; }
+      .prop { color: #990; }
+      .individual { color: #909; }
+      .deprecated { color: #999; font-weight: normal; font-size: 1.2em; }
+
+/*
+ Tree structure using CSS:
+ http://stackoverflow.com/questions/14922247/how-to-get-a-tree-in-html-using-pure-css
+*/
+
+.tree, .tree ul{  padding: 0;  overflow:hidden;  }
+.tree li{  padding: 0 .75em;  position: relative;  }
+.tree li::before, .tree li::after{  content: '';  position: absolute;  left: 0;  }
+
+/* horizontal line on inner list items */
+.tree li::before{  border-top: 1px solid #099;  top: 1.1ex;  width: .7em;  }
+
+/* vertical line on list items */   
+.tree li:after{  border-left: 1px solid #909;  height: 100%;  top: -.6em;  }
+
+/* lower line on list items from the first level because they don't have parents */
+.tree > li::after{  top: 1.2ex;  }
+
+/* hide line from the last of the first level list items */
+.tree > li:last-child::after{  display: none;  }
+.tree ul:last-child li:last-child:after{  height:2.2ex; }
+
+.range { font-size: .8em; }
+.range::before { content: 'range: '; }
+	</style>
+  </head>
+  <body about="shacl:" typeof="owl:Ontology">
+    <div class="head">
+      <p><a href="http://www.w3.org/">
+		  <img width="72" height="48" alt="W3C" src="http://www.w3.org/Icons/w3c_home"/>
+		</a>
+      </p>
+      <h1 property="dcterms:title">The Shape Constraint Langauge (SHACL) Vocabulary</h1>
+    </div>
+
+      <h2>SHACL Ontology</h2>
+      <p>
+        This document <em style="color:red">will be</em> an HTML representation of an OWL ontology describing all vocabulary URIs defined in the Shape Constraint Langauge (SHACL) namespace.
+This ontology provides an informal representation of the concepts and terms
+	as defined in the SHACL specification.  Consult the SHACL specification for normative reference.
+See also <a href="http://www.w3.org/2012/shacl">http://www.w3.org/2012/shacl</a>, 
+		<a href="http://www.w3.org/TR/shacl-ucr/">http://www.w3.org/TR/shacl-ucr/</a>, 
+		<a href="http://www.w3.org/TR/shacl/">http://www.w3.org/TR/shacl/</a>, 
+		<a href="http://www.w3.org/2011/09/LinkedData/">http://www.w3.org/2011/09/LinkedData/</a>
+      </p>
+      <p>Classes are marked with the CSS class <code class="class">class</code>, properties are marked with the CSS class <code class="prop">prop</code>, individuals are marked with the CSS class <code class="individual">individual</code>, and deprecated terms are marked with the CSS class <code class="deprecated">deprecated</code>.</p>
+
+<!--
+    <p><span property="dcterms:description" datatype="">This document describes the terms used in the Shape Constraint Langauge.</span>
+    The URI of the vocabulary is <code>http://www.w3.org/ns/shacl#</code> (abbreviated by <code>shacl:</code> in this document).
+	<a href="shacl.ttl">Turtle</a> and an <a href="shacl.rdf">RDF/XML</a> versions of the vocabulary are also available.
+	The vocabulary is published by <a property="dcterms:publisher" href="http://www.w3.org" resource="http://www.w3.org/data#W3C">W3C</a></p>
+	
+	<p>For a precise definition of these vocabulary elements, see the
+	<a rel="rdfs:isDefinedBy" href="http://www.w3.org/TR/2012/WD-shacl-20121025/">Shape Constraint Langauge</a> specification.</p>
+-->
+    <!-- div>
+      <h2>Namespaces</h2>
+      <p>
+        The namespaces used in this document are:
+      </p>
+<pre>
+PREFIX rdfs: &lt;http://www.w3.org/2000/01/rdf-schema#&gt;
+PREFIX owl: &lt;http://www.w3.org/2002/07/owl#&gt;
+PREFIX rdf: &lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;
+PREFIX dcterms: &lt;http://purl.org/dc/terms/&gt;
+PREFIX vs: &lt;http://www.w3.org/2003/06/sw-vocab-status/ns#&gt; 
+PREFIX : &lt;http://www.w3.org/ns/shacl#&gt;
+</pre>
+
+    </div -->
+
+    <div>
+      <h2>Classes and Properties</h2>
+
+
+   <ul class="tree">
+     <li><span id="Shape" class="class">Shape</span><span class="separator"> - </span>
+     A HTTP-addressable resource whose lifecycle is managed by a SHACL server.
+     <ul>
+       <li><span id="property" class="prop">property</span> <span class="range">PropertyConstraint</span> <span class="separator"> - </span>
+       lists the PropertyConstraints in a shape.
+       </li>
+       <li><span id="constraint" class="prop">constraint</span> <span class="range">rdfs:Resource</span> <span class="separator"> - </span>
+       @@
+       </li>
+       <li><span id="scopeClass" class="prop">scopeClass</span> <span class="range">rdfs:Resource</span> <span class="separator"> - </span>
+       @@
+       </li>
+     </ul>
+     </li>
+     <li><span id="PropertyConstraint" class="class">PropertyConstraint</span><span class="separator"> - </span>
+     @@
+     <ul>
+       <li><span id="predicate" class="prop">predicate</span> <span class="range">rdf:Resource</span> <span class="separator"> - </span>
+       name of the constrainted predicate
+       </li>
+       <li><span id="minCount" class="prop">minCount</span> <span class="range">rdf:Resource</span> <span class="separator"> - </span>
+       minimum number of occurances of triples satisfying the PropertyConstraint.
+       </li>
+       <li><span id="maxCount" class="prop">maxCount</span> <span class="range">rdf:Resource</span> <span class="separator"> - </span>
+       maximum number of occurances of triples satisfying the PropertyConstraint.
+       </li>
+     </ul>
+     </li>
+   </ul>
+    </div>
+
+<p><b>Warning</b>: Until the specification reaches W3C Candidate Recommendation
+ (CR) status, this namespace name may be reused by any update in such
+ a way as to cause documents written using the namespace to become
+ invalid or to change in meaning.
+</p>
+
+<p><em>This document is intended to comply with <a
+href="http://www.w3.org/1999/10/nsuri">W3C policy for XML namespace
+names</a>.</em></p>
+
+	<hr />
+	<address >
+	  <span rel="dcterms:creator" >
+		<span about="http://www.w3.org/People/Eric/ericP-foaf#me" typeof="foaf:Person">
+			<span property="foaf:name" datatype=""><a>Eric Prud'hommeaux</a></span>,
+			<a rel="foaf:mbox" href="mailto:eric@w3.org">eric@w3.org</a>,
+			<a rel="foaf:workplaceHomepage" href="http://www.w3.org">W3C</a>,
+		</span>
+	  </span>
+	  <span property="dcterms:date">2011-11-22</span>
+	  <br />
+	  <span property="owl:versionInfo">$Date$</span>
+	</address>
+  </body>
+</html>
