@@ -41,6 +41,12 @@ Header set Access-Control-Allow-Origin "*"
 ForceType 'application/ld+json'
 </Files>
 
+# Added by andrei@w3.org 2015-10-30
+<Files ~ “ldp.jsonld">
+Header set Access-Control-Allow-Origin "*"
+ForceType 'application/ld+json'
+</Files>
+
 
 <FilesMatch "^(ma-ont|mediaont)\.html$">
 ForceType 'text/html; charset=iso-8859-1'
