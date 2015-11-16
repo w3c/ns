@@ -9,6 +9,12 @@
     <http://www.w3.org/2000/01/rdf-schema#label> "Solid terms"@en ;
     <http://xmlns.com/foaf/0.1/maker> <https://deiu.me/profile#me> .
 
+<#Inbox>
+    a <http://www.w3.org/2000/01/rdf-schema#Class> ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "A resource containing notifications."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "Inbox"@en .
+
 <#inbox>
     a rdf:Property ;
     <http://www.w3.org/2000/01/rdf-schema#comment> "Inbox resource for notifications."@en ;
