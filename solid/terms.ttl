@@ -22,6 +22,13 @@
     <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
     <http://www.w3.org/2000/01/rdf-schema#label> "Inbox"@en .
 
+<#read>
+    a rdf:Property ;
+    <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates if a message has been read or not."@en ;
+    <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <> ;
+    <http://www.w3.org/2000/01/rdf-schema#domain> <http://rdfs.org/sioc/ns#Post> ;
+    <http://www.w3.org/2000/01/rdf-schema#label> "read"@en .
+
 <#inbox>
     a rdf:Property ;
     <http://www.w3.org/2000/01/rdf-schema#comment> "Inbox resource for notifications."@en ;
