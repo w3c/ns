@@ -33,7 +33,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Action</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Agreement">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -46,7 +46,7 @@
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Request"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Ticket"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/All">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -54,7 +54,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">All</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/All2ndConnections">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -62,7 +62,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">All second-level connections</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/AllConnections">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -70,7 +70,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">All connections</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/AllGroups">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -78,7 +78,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">All groups</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Asset">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -86,14 +86,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Asset</rdfs:label>
     <owl:equivalentClass rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/ConflictTerm">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">Instances of ConflictTerm describe policies for resolving conflicts.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Conflict term</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Constraint">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -101,7 +101,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Constraint</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Duty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -111,7 +111,7 @@
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Rule"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Permission"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Prohibition"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Group">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -119,7 +119,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Group</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Individual">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -127,7 +127,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Individual</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <dcmit:Text rdf:about="http://www.w3.org/ns/odrl/2/ODRL21.html">
     <dct:format rdf:resource="http://purl.org/NET/mediatypes/text/html"/>
@@ -164,7 +164,7 @@
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Request"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Ticket"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Operator">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -172,14 +172,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Operator</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Party">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">An entity which can participate in policy transactions. Use an instance of the Party class where it's necessary to associate a Scope with the relationship; in other cases, simply reference the party directly.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Party</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Permission">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -189,7 +189,7 @@
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Rule"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Duty"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Prohibition"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Policy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -197,7 +197,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Policy</rdfs:label>
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Privacy">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -210,7 +210,7 @@
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Request"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Ticket"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Prohibition">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -220,7 +220,7 @@
     <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/odrl/2/Rule"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Duty"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Permission"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Request">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -233,14 +233,14 @@
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Privacy"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Ticket"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Rule">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">An abstract common ancestor to Permissions, Prohibitions and Duties.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Rule</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Set">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -253,7 +253,7 @@
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Privacy"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Request"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Ticket"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/Ticket">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
@@ -266,14 +266,14 @@
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Privacy"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Request"/>
     <owl:disjointWith rdf:resource="http://www.w3.org/ns/odrl/2/Set"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdfs:Class rdf:about="http://www.w3.org/ns/odrl/2/UndefinedTerm">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
     <rdfs:comment xml:lang="en">Instances of UndefinedTerm describe policies for processing unsupported actions.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Undefined values</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdfs:Class>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/absolutePosition">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -281,7 +281,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">absolute position</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/absoluteSize">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -290,14 +290,14 @@
     <rdfs:label xml:lang="en">absolute size</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/acceptTracking">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner requires that the Assignees accepts that the use of the Asset may be tracked. The collected information may be tracked by the Assigner, or may link to a Party with the role function “trackingParty”.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Accept tracking</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/action">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -306,7 +306,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">action</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Action"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <skos:ConceptScheme rdf:about="http://www.w3.org/ns/odrl/2/actions">
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
@@ -381,7 +381,7 @@
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to use the Asset or parts of it as part of a composite collection.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Aggregate</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/annotate">
@@ -389,7 +389,7 @@
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to add explanatory notations/commentaries to the Asset without modifying the Asset in any other way.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Annotate</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/anonymize">
@@ -397,7 +397,7 @@
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to anonymize all or parts of the Asset. For example, to remove identifying particulars for statistical or for other comparable purposes, or to use the asset without stating the author/source.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Anonymize</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/append">
@@ -413,7 +413,7 @@
     <rdfs:comment xml:lang="en">The act of appending data to the Asset without modifying the Asset in any other way</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Append to</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/writeTo"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/archive">
@@ -421,7 +421,7 @@
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to store the Asset (in a non-transient form). Constraints may be used for temporal conditions.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Archive</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/assignee">
@@ -431,7 +431,7 @@
     <rdfs:label xml:lang="en">assignee</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/function"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/assigner">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -440,7 +440,7 @@
     <rdfs:label xml:lang="en">assigner</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/function"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/attachPolicy">
     <ont:deprecatedBy rdf:resource="http://creativecommons.org/ns#Notice"/>
@@ -463,7 +463,7 @@
     <rdfs:comment xml:lang="en">The Assigner requires that the Assignees attributes the Asset to the Assigner or an attributed Party. May link to an Asset with the attribution information. May link to a Party with the role function “attributedParty”.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Attribute</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/attributedParty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -471,7 +471,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">attributed party</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/function"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/commercialize">
     <ont:deprecatedBy rdf:resource="http://creativecommons.org/ns#CommercialUse"/>
@@ -486,7 +486,7 @@
     <rdfs:comment xml:lang="en">The Assigner requires that the Assignees compensates the Assigner (or other specified compensation Party) by some amount of value, if defined, for use of the Asset. The compensation may use different types of things with a value: (i) the thing is expressed by the value (term) of the Constraint name; (b) the value is expressed by operator, rightOperand, dataType and unit</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Compensate</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/compensatedParty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -494,14 +494,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">payee party</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/function"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/concurrentUse">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to create multiple copies of the Asset that are being concurrently used.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Concurrent use</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/conflict">
@@ -511,7 +511,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">conflict</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/ConflictTerm"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/consentingParty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -519,7 +519,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">consenting party</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/function"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/constraint">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -528,7 +528,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">constraint</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Constraint"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/copy">
     <ont:deprecatedBy rdf:resource="http://www.w3.org/ns/odrl/2/reproduce"/>
@@ -546,7 +546,7 @@
     <rdfs:label xml:lang="en">count</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/dataType">
     <rdfs:comment xml:lang="en">The unit of measurement used for the constraint value.</rdfs:comment>
@@ -554,7 +554,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">unit</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/dateTime">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -577,14 +577,14 @@
       </owl:Class>
     </rdfs:range>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/delete">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner requires that the Assignees permanently removes all copies of the Asset. Use a constraint to define under which conditions the Asset should be deleted.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Delete</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/deliveryChannel">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -592,14 +592,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">delivery channel</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/derive">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to create a new derivative Asset from this Asset and to edit or modify the derivative. A new asset is created and may have significant overlaps with the original Asset. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective). To the derived Asset a next policy may be applied.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Derive</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/device">
@@ -617,7 +617,7 @@
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to produce a digital copy of (or otherwise digitize) the Asset from its analogue form.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Digitize</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/display">
@@ -625,7 +625,7 @@
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to display the visual media Asset to an audience or the public. For example, displaying an image on a screen.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Display</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/present"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/distribute">
@@ -633,7 +633,7 @@
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to distribute the Asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Distribute</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/duty">
@@ -657,7 +657,7 @@
         </owl:unionOf>
       </owl:Class>
     </rdfs:range>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/elapsedTime">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -666,21 +666,21 @@
     <rdfs:label xml:lang="en">elapsed time</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/ensureExclusivity">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assignee requires that the Assigners ensure that the permission on the Asset is exclusive to the Assignee.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Ensure exclusivity</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/eq">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:comment xml:lang="en">Indicating that a given value equals the operand of the Constraint.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Equal to</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/event">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -688,14 +688,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">event</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/execute">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to run the computer program Asset. For example, machine executable code or Java such as a game or application.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Execute</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/export">
@@ -711,7 +711,7 @@
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to extract parts of the Asset and to use it as a new Asset. A new asset is created and may have very little in common with the original Asset. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective). To the extracted Asset a next policy may be applied.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Extract</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/reproduce"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/extractChar">
@@ -747,7 +747,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">file format</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/function">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -756,14 +756,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">function</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Party"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/give">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to transfer the ownership of the Asset to a third party without compensation and while deleting the original asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Give</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/transfer"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/grantUse">
@@ -771,47 +771,47 @@
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignee to grant the use the Asset to third parties. This action enables the Assignee to create policies for the use of the Asset for third parties. nextPolicy is recommended to be agreed with the third party. Use of temporal constraints is recommended.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Grant use</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/gt">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Greater than</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/gteq">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Greater than or equal to</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/hasPart">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Has part</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <UndefinedTerm rdf:about="http://www.w3.org/ns/odrl/2/ignore">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:comment xml:lang="en">Undefined actions should be ignored.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Ignore</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </UndefinedTerm>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/include">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner requires that the Assignees include other related assets in the Asset. For example: bio picture must be included in the attribution. Use of the Asset relation attribute is required.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Include</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/index">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to record the Asset in an index. For example, to include a link to the Asset in a search engine database.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Index</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/industry">
@@ -820,14 +820,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">industry</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/inform">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner requires that the Assignees inform the Assigner or an informed Party that an action has been performed on or in relation to the Asset. May link to a Party with the role function “informedParty”.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Inform</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/informedParty">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -835,7 +835,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">informed party</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/function"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/inheritAllowed">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -844,7 +844,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">inheritance allowed</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#boolean"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/inheritFrom">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -853,14 +853,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">inherits from</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Policy"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/install">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to load the computer program Asset onto a storage device which allows operating or running the Asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Install</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <ConflictTerm rdf:about="http://www.w3.org/ns/odrl/2/invalid">
@@ -869,37 +869,37 @@
     <rdfs:comment xml:lang="en">The policy is invalidated.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Invalid</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </ConflictTerm>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/isA">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Is a</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/isAllOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Is all of</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/isAnyOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Is any of</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/isNoneOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Is none of</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/isPartOf">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Is part of</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/language">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -907,21 +907,21 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">language</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/lease">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of making available the asset to a third-party for a fixed period of time with exchange of value.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Lease</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/lend">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of making available the asset to a third-party for a fixed period of time without exchange of value.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Lend</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/license">
     <ont:deprecatedBy rdf:resource="http://www.w3.org/ns/odrl/2/grantUse"/>
@@ -935,20 +935,20 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Less than</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/lteq">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Less than or equal to</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/media">
     <rdfs:comment xml:lang="en">The media type in which the asset may be used.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">media</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/meteredTime">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -957,14 +957,14 @@
     <rdfs:label xml:lang="en">metered time</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/modify">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to update existing content of the Asset. A new asset is not created by this action. This action will modify an asset which is typically updated from time to time without creating a new asset like a database. If the result from modifying the asset should be a new asset the actions derive or extract should be used. (Note that the notion of whether or not the change is significant enough to qualify as a new asset is subjective).</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Modify</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/move">
@@ -972,28 +972,28 @@
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to move the Asset from one digital location to another including deleting the original copy. After the Asset has been moved, the original copy must be deleted.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Move</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Operator rdf:about="http://www.w3.org/ns/odrl/2/neq">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Not equal to</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Operator>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/nextPolicy">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner requires that the Assignees grants the specified Policy to a third party for their use of the Asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Next policy</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/obtainConsent">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner requires that the Assignees obtains explicit consent from the Assigner or a consenting Party to perform the requested action in relation to the Asset. Used as a Duty to ensure that the Assigner or a Party is authorized to approve such actions on a case-by-case basis. May link to a Party with the role function “consentingParty”.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Obtain consent</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/operator">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1002,7 +1002,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">operator</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Operator"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/output">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1012,7 +1012,7 @@
     <rdfs:label xml:lang="en">output</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/relation"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/pay">
     <ont:deprecatedBy rdf:resource="http://www.w3.org/ns/odrl/2/compensate"/>
@@ -1028,7 +1028,7 @@
     <rdfs:label xml:lang="en">payment amount</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/payeeParty">
     <ont:deprecatedBy rdf:resource="http://www.w3.org/ns/odrl/2/compensatedParty"/>
@@ -1046,14 +1046,14 @@
     <rdfs:label xml:lang="en">percentage</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <ConflictTerm rdf:about="http://www.w3.org/ns/odrl/2/perm">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:comment xml:lang="en">Permissions take precedence over prohibitions.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Permissions</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </ConflictTerm>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/permission">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1076,28 +1076,28 @@
         </owl:unionOf>
       </owl:Class>
     </rdfs:range>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/play">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to perform an audio Asset to an audience.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Play</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/present"/>
   </Action>
   <owl:NamedIndividual rdf:about="http://www.w3.org/ns/odrl/2/policyUsage">
     <rdfs:comment xml:lang="en">When used as an event in constraints, indicates that the event occurs at the time when the policy is executed.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Policy usage time</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </owl:NamedIndividual>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/present">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to perform or exhibit an Asset to an audience.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Present</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/preview">
@@ -1105,14 +1105,14 @@
     <rdfs:comment xml:lang="en">The act of providing a short preview of the asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Preview</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/print">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to print an Asset onto paper or to create a hard copy. For example, creating a permanent, fixed (static), and directly perceivable representation of the Asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Print</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/present"/>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/product">
@@ -1122,7 +1122,7 @@
     <rdfs:label xml:lang="en">product</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/profile">
     <rdfs:comment xml:lang="en">indicates the identifier of the ODRL Profile for which the policy expression conforms to</rdfs:comment>
@@ -1130,14 +1130,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">profile</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <ConflictTerm rdf:about="http://www.w3.org/ns/odrl/2/prohibit">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:comment xml:lang="en">Prohibitions take precedence over permissions.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Prohibit</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </ConflictTerm>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/prohibition">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1160,7 +1160,7 @@
         </owl:unionOf>
       </owl:Class>
     </rdfs:range>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/proximity">
     <ont:deprecatedBy rdf:resource="http://www.openmobilealliance.com/oma-dd/proximity"/>
@@ -1177,14 +1177,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">purpose</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/read">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to obtain data from the Asset. For example, the ability to read a record from a database (the Asset).</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Read</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/recipient">
@@ -1193,7 +1193,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">recipient</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/relation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1202,7 +1202,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">relation</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/relativePosition">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -1210,7 +1210,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">relative position</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/relativeSize">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
@@ -1218,14 +1218,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">relative size</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/reproduce">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of making an exact reproduction of the asset. The Assigner permits/prohibits the Assignees to make exact reproductions of the Asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Reproduce</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/resolution">
@@ -1233,35 +1233,35 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">resolution</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/reviewPolicy">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner requires that the Assignees have a person review the Policy applicable to the Asset. Used when human intervention is required to review the Policy. May link to an Asset which represents the full Policy information.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Review policy</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/rightOperand">
     <rdfs:comment xml:lang="en">The operand applied to an instance of a constraint. Do not use the right-operand property directly within a Constraint. Instead, a Constraint instance must contain exactly one triple which makes use of one of the sub-properties of right-operand.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Constraint"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">right-operand</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/secondaryUse">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The act of using the asset for a purpose other than the purpose it was intended for.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Secondary use</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/sell">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to transfer the ownership of the Asset to a third party with compensation and while deleting the original asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Sell</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/transfer"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/share">
@@ -1285,21 +1285,21 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">spatial</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/status">
     <rdfs:comment xml:lang="en">The current value of the constraint. The range of the status property is identical to that of the operand property selected used in the constraint.</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/odrl/2/Constraint"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">status</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <UndefinedTerm rdf:about="http://www.w3.org/ns/odrl/2/support">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#NamedIndividual"/>
     <rdfs:comment xml:lang="en">Undefined actions do not invalidate the policy, but notification for review must occur.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Support</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </UndefinedTerm>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/system">
     <ont:deprecatedBy rdf:resource="http://www.w3.org/ns/odrl/2/systemDevice"/>
@@ -1318,7 +1318,7 @@
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
     <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/odrl/2/device"/>
     <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/odrl/2/system"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/target">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1328,14 +1328,14 @@
     <rdfs:label xml:lang="en">target</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/Asset"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/relation"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/textToSpeech">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to have a text Asset read out loud to an audience.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Text-to-speech</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/timeInterval">
@@ -1345,7 +1345,7 @@
     <rdfs:label xml:lang="en">time interval</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/timedCount">
     <ont:deprecatedBy rdf:resource="http://www.openmobilealliance.com/oma-dd/timed-count"/>
@@ -1363,21 +1363,21 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">tracking party</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/function"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/transfer">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner transfers/does not transfer the ownership in perpetuity to the Assignees.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Transfer</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/transform">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to make a digital copy of the digital Asset in another digital format. Typically used to convert the Asset into a different format for consumption on/transfer to a third party system.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Transform</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/translate">
@@ -1385,7 +1385,7 @@
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignees to translate the original natural language of an Asset into another natural language. A new derivative Asset is created by that action.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Translate</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/undefined">
@@ -1395,14 +1395,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">undefined</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/ns/odrl/2/UndefinedTerm"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/uninstall">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner requires that the Assignees unload and delete the computer program Asset from a storage device and disable its readiness for operation. The Asset is no longer accessible to the Assignees.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Uninstall</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/unit">
     <rdfs:comment xml:lang="en">The unit of measurement used for the constraint value.</rdfs:comment>
@@ -1410,14 +1410,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">unit</rdfs:label>
     <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/use">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner permits/prohibits the Assignee to use the Asset as agreed. More details may be defined in the applicable agreements or under applicable commercial laws. Refined types of actions can be expressed by the narrower actions.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Use</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/version">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1425,7 +1425,7 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">version</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <rdf:Property rdf:about="http://www.w3.org/ns/odrl/2/virtualLocation">
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
@@ -1433,14 +1433,14 @@
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">virtual location</rdfs:label>
     <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/odrl/2/rightOperand"/>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </rdf:Property>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/watermark">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:comment xml:lang="en">The Assigner requires that the Assignees apply a watermark as provided by the Assigner to the Asset. It is recommended to embed a link to the watermark.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Watermark</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
   </Action>
   <Action rdf:about="http://www.w3.org/ns/odrl/2/write">
     <ont:deprecatedBy rdf:resource="http://www.w3.org/ns/odrl/2/writeTo"/>
@@ -1455,7 +1455,7 @@
     <rdfs:comment xml:lang="en">The act of adding data to the Asset.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Write to</rdfs:label>
-    <vs:term_status>testing</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
 </rdf:RDF>
