@@ -1,0 +1,370 @@
+<?xml version="1.0"?>
+
+
+<!DOCTYPE rdf:RDF [
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY ssn "https://www.w3.org/ns/ssn/" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY DUL "http://www.loa-cnr.it/ontologies/DUL.owl#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+
+
+<rdf:RDF xmlns="https://www.w3.org/ns/ssn/dul/"
+     xml:base="https://www.w3.org/ns/ssn/dul/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:DUL="http://www.loa-cnr.it/ontologies/DUL.owl#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+    <owl:Ontology rdf:about="https://www.w3.org/ns/ssn/dul">
+        <rdfs:comment>Semantic Sensor Networks Ontology Alignment with Dolce-UltraLite.</rdfs:comment>
+        <owl:imports rdf:resource="https://www.w3.org/ns/ssn"/>
+        <owl:imports rdf:resource="http://www.loa-cnr.it/ontologies/DUL.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <owl:AnnotationProperty rdf:about="&rdfs;comment"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/featureInObservation -->
+
+    <owl:ObjectProperty rdf:about="&ssn;featureInObservation">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasSetting"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/featureOfInterest -->
+
+    <owl:ObjectProperty rdf:about="&ssn;featureOfInterest">
+        <rdfs:subPropertyOf rdf:resource="&DUL;isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/fromStimulus -->
+
+    <owl:ObjectProperty rdf:about="&ssn;fromStimulus">
+        <rdfs:subPropertyOf rdf:resource="&DUL;includesEvent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/hasProperty -->
+
+    <owl:ObjectProperty rdf:about="&ssn;hasProperty">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasQuality"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/hasValue -->
+
+    <owl:ObjectProperty rdf:about="&ssn;hasValue">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/implementedBy -->
+
+    <owl:ObjectProperty rdf:about="&ssn;implementedBy">
+        <rdfs:subPropertyOf rdf:resource="&DUL;describes"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/implements -->
+
+    <owl:ObjectProperty rdf:about="&ssn;implements">
+        <rdfs:subPropertyOf rdf:resource="&DUL;isDescribedBy"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/isPropertyOf -->
+
+    <owl:ObjectProperty rdf:about="&ssn;isPropertyOf">
+        <rdfs:subPropertyOf rdf:resource="&DUL;isQualityOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/isValueOf -->
+
+    <owl:ObjectProperty rdf:about="&ssn;isValueOf">
+        <rdfs:subPropertyOf rdf:resource="&DUL;isRegionFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/madeObservation -->
+
+    <owl:ObjectProperty rdf:about="&ssn;madeObservation">
+        <rdfs:subPropertyOf rdf:resource="&DUL;isObjectIncludedIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/observationResult -->
+
+    <owl:ObjectProperty rdf:about="&ssn;observationResult">
+        <rdfs:subPropertyOf rdf:resource="&DUL;isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/observationResultTime -->
+
+    <owl:ObjectProperty rdf:about="&ssn;observationResultTime">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/observationSamplingTime -->
+
+    <owl:ObjectProperty rdf:about="&ssn;observationSamplingTime">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasRegion"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/observedBy -->
+
+    <owl:ObjectProperty rdf:about="&ssn;observedBy">
+        <rdfs:subPropertyOf rdf:resource="&DUL;includesObject"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/observedProperty -->
+
+    <owl:ObjectProperty rdf:about="&ssn;observedProperty">
+        <rdfs:subPropertyOf rdf:resource="&DUL;isSettingFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/sensingMethodUsed -->
+
+    <owl:ObjectProperty rdf:about="&ssn;sensingMethodUsed">
+        <rdfs:subPropertyOf rdf:resource="&DUL;satisfies"/>
+    </owl:ObjectProperty>
+    
+  
+
+    <!-- https://www.w3.org/ns/ssn/hasSubSystem -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/ssn/hasSubSystem">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/attachedSystem -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/ssn/attachedSystem">
+        <rdfs:subPropertyOf rdf:resource="&DUL;isLocationOf"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/deployedOnPlatform -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/ssn/deployedOnPlatform">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasParticipant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/deployedSystem -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/ssn/deployedSystem">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasParticipant"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/deploymentProcessPart -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/ssn/deploymentProcessPart">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasPart"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/hasDeployment -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/ssn/hasDeployment">
+        <rdfs:subPropertyOf rdf:resource="&DUL;isParticipantIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/inDeployment -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/ssn/inDeployment">
+        <rdfs:subPropertyOf rdf:resource="&DUL;isParticipantIn"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/onPlatform -->
+
+    <owl:ObjectProperty rdf:about="https://www.w3.org/ns/ssn/onPlatform">
+        <rdfs:subPropertyOf rdf:resource="&DUL;hasLocation"/>
+    </owl:ObjectProperty>
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/FeatureOfInterest -->
+
+    <owl:Class rdf:about="&ssn;FeatureOfInterest">
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="&DUL;Event"/>
+                    <rdf:Description rdf:about="&DUL;Object"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/Observation -->
+
+    <owl:Class rdf:about="&ssn;Observation">
+        <rdfs:subClassOf rdf:resource="&DUL;Situation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/ObservationValue -->
+
+    <owl:Class rdf:about="&ssn;ObservationValue">
+        <rdfs:subClassOf rdf:resource="&DUL;Region"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/Property -->
+
+    <owl:Class rdf:about="&ssn;Property">
+        <rdfs:subClassOf rdf:resource="&DUL;Quality"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/Sensing -->
+
+    <owl:Class rdf:about="&ssn;Sensing">
+        <rdfs:subClassOf rdf:resource="&DUL;Method"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/Sensor -->
+
+    <owl:Class rdf:about="&ssn;Sensor">
+        <rdfs:subClassOf rdf:resource="&DUL;PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/SensorOutput -->
+
+    <owl:Class rdf:about="&ssn;SensorOutput">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/Stimulus -->
+
+    <owl:Class rdf:about="&ssn;Stimulus">
+        <rdfs:subClassOf rdf:resource="&DUL;Event"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/Device -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/ssn/Device">
+        <rdfs:subClassOf rdf:resource="&DUL;DesignedArtifact"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/SensorDataSheet -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/ssn/SensorDataSheet">
+        <rdfs:subClassOf rdf:resource="&DUL;InformationObject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/System -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/ssn/System">
+        <rdfs:subClassOf rdf:resource="&DUL;PhysicalObject"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/DeploymentRelatedProcess -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/ssn/DeploymentRelatedProcess">
+        <rdfs:subClassOf rdf:resource="&DUL;Process"/>
+    </owl:Class>
+    
+
+
+    <!-- https://www.w3.org/ns/ssn/Platform -->
+
+    <owl:Class rdf:about="https://www.w3.org/ns/ssn/Platform">
+        <rdfs:subClassOf rdf:resource="&DUL;PhysicalObject"/>
+    </owl:Class>
+
+
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 3.0.0.1451) http://owlapi.sourceforge.net -->
+
+
