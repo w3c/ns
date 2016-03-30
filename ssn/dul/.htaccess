@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase  /ns/ssn/dul/
+RewriteCond  %{REQUEST_URI}  !/ns/ssn/dul/Overview.*
+RewriteRule  ^(.*)$  /ns/ssn/dul/Overview$1 [P] 
