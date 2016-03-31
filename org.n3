@@ -751,7 +751,7 @@ org:basedAt rdfs:label "trabaja en la sede"@es ;
     rdfs:comment "Lugar en el que trabaja una persona. No se restringe el hecho de que una persona pueda estar adscrita a múltiples ubicaciones."@es .
 
 
-org:location a owl:ObjectProperty, rdf:Property;
+org:location a owl:DatatypeProperty, rdf:Property;
 
     rdfs:label "location"@en;
     rdfs:label "localisation"@fr;
