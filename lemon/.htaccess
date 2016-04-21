@@ -1,23 +1,4 @@
-# Turn off MultiViews
-Options -MultiViews
-
-# Directive to ensure *.rdf files served as appropriate content type, 
-# if not present in main apache config
-AddType application/rdf+xml .owl
-
 RewriteEngine On
 RewriteBase   /ns/lemon
-
-#DirectoryIndex Overview.html
-
-# Rewrite rule to make sure we serve HTML content from the namespace URI if requested
-#RewriteCond %{HTTP_ACCEPT} text/html [OR]
-#RewriteCond %{HTTP_ACCEPT} text/xml [OR]
-#RewriteCond %{HTTP_ACCEPT} application/xml [OR]
-#RewriteCond %{HTTP_ACCEPT} application/xhtml+xml
-
-# Rewrite rule for the ontology documentation
-#RewriteRule ^rdf$ rdf-content/its-rdf.html [R=303]
-
-# Rewrite rule to make sure we serve the RDF/XML content from the namespace URI by default 
+AddType application/rdf+xml .owl
 RewriteRule ^ontolex$ ontolex.owl [R=303]
