@@ -11,10 +11,10 @@ RewriteBase   /ns/lemon
 #DirectoryIndex Overview.html
 
 # Rewrite rule to make sure we serve HTML content from the namespace URI if requested
-RewriteCond %{HTTP_ACCEPT} text/html [OR]
-RewriteCond %{HTTP_ACCEPT} text/xml [OR]
-RewriteCond %{HTTP_ACCEPT} application/xml [OR]
-RewriteCond %{HTTP_ACCEPT} application/xhtml+xml
+#RewriteCond %{HTTP_ACCEPT} text/html [OR]
+#RewriteCond %{HTTP_ACCEPT} text/xml [OR]
+#RewriteCond %{HTTP_ACCEPT} application/xml [OR]
+#RewriteCond %{HTTP_ACCEPT} application/xhtml+xml
 
 # Rewrite rule for the ontology documentation
 #RewriteRule ^rdf$ rdf-content/its-rdf.html [R=303]
