@@ -1,4 +1,5 @@
+Options -MultiViews
+AddType application/rdf+xml .owl
 RewriteEngine On
 RewriteBase   /ns/lemon
-AddType application/rdf+xml .owl
 RewriteRule ^ontolex$ ontolex.owl [R=303]
