@@ -7,7 +7,7 @@
 RewriteEngine On
 RewriteBase /ns/lemon
 
-DirectoryIndex ontolex.ow
+DirectoryIndex ontolex.owl
 
 RewriteCond %{REQUEST_FILENAME} -f
 RewriteRule . - [L]
