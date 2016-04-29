@@ -1,6 +1,15 @@
-Options -MultiViews
-AddType application/rdf+xml .owl
+#Options -MultiViews
+#AddType application/rdf+xml .owl
+#RewriteEngine On
+#RewriteBase   /ns/lemon
+#DirectoryIndex ontolex.owl
+#RewriteRule ^ontolex$ ontolex.owl [R=303]
 RewriteEngine On
-RewriteBase   /ns/lemon
-DirectoryIndex ontolex.owl
-RewriteRule ^ontolex$ ontolex.owl [R=303]
+RewriteBase /ns/lemon
+
+DirectoryIndex ontolex.ow
+
+RewriteCond %{REQUEST_FILENAME} -f
+RewriteRule . - [L]
+
+RewriteRule ^(.+)$		/ns/lemon/ [R=303,L]
