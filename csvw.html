@@ -27,8 +27,13 @@
  * Robin Berjon - http://berjon.com/
  *****************************************************************/
 
+/* Override code highlighter background */
+.hljs {
+    background: transparent !important;
+}
+
 /* --- INLINES --- */
-em.rfc2119 { 
+em.rfc2119 {
     text-transform:     lowercase;
     font-variant:       small-caps;
     font-style:         normal;
@@ -132,13 +137,37 @@ table.simple {
     margin-bottom:  0;
 }
 
+.respec-hidden {
+    display: none;
+}
+
 @media print {
     .removeOnSave {
         display: none;
     }
 }
-</style><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/base"><!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]--><script id="initialUserConfig" type="application/json">{
+</style><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base"><!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]--><script id="initialUserConfig" type="application/json">{
   "localBiblio": {
+    "csvw-html": {
+      "authors": [
+        "Gregg Kellogg"
+      ],
+      "title": "Embedding Tabular Metadata in HTML",
+      "href": "http://www.w3.org/TR/2016/NOTE-csvw-html-20160225/",
+      "rawDate": "2016-02-25",
+      "status": "NOTE",
+      "publisher": "W3C"
+    },
+    "tabular-data-primer": {
+      "authors": [
+        "Jeni Tennison"
+      ],
+      "title": "CSV on the Web: A Primer",
+      "href": "http://www.w3.org/TR/2016/NOTE-tabular-data-primer-20160225/",
+      "rawDate": "2016-02-25",
+      "status": "NOTE",
+      "publisher": "W3C"
+    },
     "tabular-data-model": {
       "authors": [
         "Jeni Tennison",
@@ -233,7 +262,7 @@ table.simple {
   },
   "specStatus": "base",
   "shortName": "csvwns",
-  "publishDate": "2015-12-17",
+  "publishDate": "2016-05-20",
   "edDraftURI": "http://w3c.github.io/csvw/ns/",
   "editors": [
     {
@@ -287,109 +316,53 @@ table.simple {
   "issueBase": "https://github.com/w3c/csvw/issues/",
   "noLegacyStyle": false
 }</script></head>
-  <body resource="http://www.w3.org/ns/csvw#" typeof="owl:Ontology" prefix="csvw: http://www.w3.org/ns/csvw#" class="h-entry" role="document" id="respecDocument"><div class="head" role="contentinfo" id="respecHeader">
+  <body resource="http://www.w3.org/ns/csvw#" typeof="owl:Ontology" prefix="csvw: http://www.w3.org/ns/csvw#" class="h-entry toc-inline" role="document" id="respecDocument"><div class="head" role="contentinfo" id="respecHeader">
   <p>
-      
-        
-            <a class="logo" href="http://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/Icons/w3c_home" alt="W3C"></a>
-            
-            
-        
-      
+            <a class="logo" href="http://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
   </p>
   <h1 class="title p-name" id="title">CSVW Namespace Vocabulary Terms</h1>
-  
-  <h2 id="w3c-document-17-december-2015"><abbr title="World Wide Web Consortium">W3C</abbr> Document <time class="dt-published" datetime="2015-12-17">17 December 2015</time></h2>
+  <h2 id="w3c-document-20-may-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Document <time class="dt-published" datetime="2016-05-20">20 May 2016</time></h2>
   <dl>
-    
-    
       <dt>Latest editor's draft:</dt>
       <dd><a href="http://w3c.github.io/csvw/ns/">http://w3c.github.io/csvw/ns/</a></dd>
-    
-    
-    
-    
-    
-    
-    
     <dt>Editor:</dt>
     <dd class="p-author h-card vcard" data-editor-id="44770"><span class="p-name fn">Gregg Kellogg</span>, <a class="p-org org h-org h-card" href="http://greggkellogg.net/">Kellogg Associates</a></dd>
 
-    
-    
-      
-        
           <dt>Repository:</dt>
-          
-             
-                
                   <dd>
                     <a href="https://github.com/w3c/csvw/">
                       We are on GitHub
                     </a>
                   </dd>
-                
-             
-                
                   <dd>
                     <a href="https://github.com/w3c/csvw/issues">
                       File a bug
                     </a>
                   </dd>
-                
-             
-          
-        
-      
-        
           <dt>Changes:</dt>
-          
-             
-                
                   <dd>
                     <a href="https://github.com/w3c/csvw/commits/gh-pages">
                       Commit history
                     </a>
                   </dd>
-                
-             
-          
-        
-      
-    
   </dl>
-  
-  
     <p>
-      
         This document is also available in these non-normative formats:
-      
       <a rel="alternate" href="csvw.ttl">Turtle</a> and <a rel="alternate" href="csvw.jsonld">JSON-LD</a>
     </p>
-  
-  
-  
-    
       <p class="copyright">
         <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> ©
-        2015
+        2016
         
         <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup>
         (<a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
         <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
         <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>). 
-        
         <abbr title="World Wide Web Consortium">W3C</abbr> <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
         <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
-        
-          
             <a rel="license" href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a>
-          
-        
         rules apply.
       </p>
-    
-  
   <hr title="Separator for header">
 </div>
     <section id="abstract" class="introductory"><h2>Abstract</h2>
@@ -406,18 +379,15 @@ table.simple {
         These versions may also be retrieved from <code>http://www.w3.org/ns/csvw</code> using an appropiate HTTP <em>Accept</em> header.
       </p>
       <dl>
-        <dt>Published:</dt><dd><time property="dc:date">2015-12-17</time></dd>
+        <dt>Published:</dt><dd><time property="dc:date">2016-05-20</time></dd>
         <dt>Imports:</dt>
           <dd><a href="http://www.w3.org/ns/prov" property="owl:imports">http://www.w3.org/ns/prov</a></dd>
         <dt>Version Info:</dt>
-        <dd><a href="https://github.com/w3c/csvw/commit/6e6daf99e29d6983600d2bc9d1dc8f57712a35c4" property="owl:versionInfo">https://github.com/w3c/csvw/commit/6e6daf99e29d6983600d2bc9d1dc8f57712a35c4</a></dd>
+        <dd><a href="https://github.com/w3c/csvw/commit/1b226079db505b7c24043759a140cd9ea9110bbb" property="owl:versionInfo">https://github.com/w3c/csvw/commit/1b226079db505b7c24043759a140cd9ea9110bbb</a></dd>
         <dt>See Also:</dt>
           <dd><a href="http://www.w3.org/TR/tabular-metadata" property="rdfs:seeAlso">http://www.w3.org/TR/tabular-metadata</a></dd>
       </dl>
     </section><section id="sotd" class="introductory"><h2>Status of This Document</h2>
-  
-    
-      
         <p>
           This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal  document. It
           has no official standing of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr>
@@ -428,10 +398,7 @@ table.simple {
         The <a href="http://www.w3.org/2013/csvw">CSV on the Web Working Group</a> was <a href="http://www.w3.org/2013/05/lcsv-charter.html">chartered</a> to produce a recommendation "Access methods for CSV Metadata" as well as recommendations for "Metadata vocabulary for CSV data" and "Mapping mechanism to transforming CSV into various formats (e.g., RDF, JSON, or XML)". This document attempts to partially satisfy the "Metadata vocabulary for CSV data" recommendation by definin all terms used in [<cite><a class="bibref" href="#bib-tabular-metadata">tabular-metadata</a></cite>].
       </p>
     
-      
-    
-  
-</section><section id="toc"><h2 class="introductory">Table of Contents</h2><ul class="toc" role="directory"><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a href="#class-definitions" class="tocxref"><span class="secno">2. </span>Class Definitions</a></li><li class="tocline"><a href="#property-definitions" class="tocxref"><span class="secno">3. </span>Property Definitions</a></li><li class="tocline"><a href="#datatype-definitions" class="tocxref"><span class="secno">4. </span>Datatype Definitions</a></li><li class="tocline"><a href="#instance-definitions" class="tocxref"><span class="secno">5. </span>Instance Definitions</a></li><li class="tocline"><a href="#term-definitions" class="tocxref"><span class="secno">6. </span>Term Definitions</a></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">A. </span>References</a><ul class="toc"><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">A.1 </span>Informative references</a></li></ul></li></ul></section>
+</section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ul class="toc" role="directory"><li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a></li><li class="tocline"><a href="#class-definitions" class="tocxref"><span class="secno">2. </span>Class Definitions</a></li><li class="tocline"><a href="#property-definitions" class="tocxref"><span class="secno">3. </span>Property Definitions</a></li><li class="tocline"><a href="#datatype-definitions" class="tocxref"><span class="secno">4. </span>Datatype Definitions</a></li><li class="tocline"><a href="#instance-definitions" class="tocxref"><span class="secno">5. </span>Instance Definitions</a></li><li class="tocline"><a href="#term-definitions" class="tocxref"><span class="secno">6. </span>Term Definitions</a></li><li class="tocline"><a href="#references" class="tocxref"><span class="secno">A. </span>References</a><ul class="toc"><li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">A.1 </span>Informative references</a></li></ul></li></ul></nav>
     
     <section id="introduction">
       <!--OddPage--><h2><span class="secno">1. </span>Introduction</h2>
@@ -633,7 +600,7 @@ table.simple {
         <tr><td class="bold">datatype</td>
           <td resource="csvw:datatype" typeof="rdf:Property">
             <em property="rdfs:label">datatype</em>
-            <p property="rdfs:comment">An object property that contains either a single string that is the main datatype of the values of the cell or a datatype description object. If the value of this property is a string, it <em class="rfc2119" title="MUST">MUST</em> be one of the built-in datatypes defined in section 5.11.1 Built-in Datatypes or an absolute URL; if it is an object then it describes a more specialised datatype. </p>
+            <p property="rdfs:comment">An object property that contains either a single string that is the main datatype of the values of the cell or a datatype description object. If the value of this property is a string, it <em class="rfc2119" title="MUST">MUST</em> be one of the built-in datatypes defined in section 5.11.1 Built-in Datatypes or an absolute URL; if it is an object then it describes a more specialised datatype.</p>
             <span property="rdfs:isDefinedBy" resource="csvw:"></span>
               <dl class="terms">
                   <dt>rdfs:range</dt>
@@ -1167,7 +1134,7 @@ For Row: a possibly empty list of cells whose values together provide a unique i
         <tr><td class="bold">rownum</td>
           <td resource="csvw:rownum" typeof="rdf:Property">
             <em property="rdfs:label">row number</em>
-            <p property="rdfs:comment">The position of the row amongst the rows of the Annotated Tabl, starting from 1 </p>
+            <p property="rdfs:comment">The position of the row amongst the rows of the Annotated Tabl, starting from 1</p>
             <span property="rdfs:isDefinedBy" resource="csvw:"></span>
               <dl class="terms">
                   <dt>rdfs:range</dt>
@@ -1521,21 +1488,28 @@ For a Transformation: A link property giving the single URL of the file that the
         <tbody><tr><td class="bold">auto</td>
           <td resource="csvw:auto" typeof="Direction">
             <em property="rdfs:label">auto</em>
-            <p property="rdfs:comment">Determins text direction based on the first character that has a specific direction.</p>
+            <p property="rdfs:comment">Indicates whether the tables in the group should be displayed based on the first character in the table that has a specific direction.</p>
+            <span property="rdfs:isDefinedBy" resource="csvw:"></span>
+          </td>
+        </tr>
+        <tr><td class="bold">inherit</td>
+          <td resource="csvw:inherit" typeof="Direction">
+            <em property="rdfs:label">inherit</em>
+            <p property="rdfs:comment">For `textDirection`, indicates that the direction is inherited from the `tableDirection` annotation of the `table`.</p>
             <span property="rdfs:isDefinedBy" resource="csvw:"></span>
           </td>
         </tr>
         <tr><td class="bold">ltr</td>
           <td resource="csvw:ltr" typeof="Direction">
             <em property="rdfs:label">left to right</em>
-            <p property="rdfs:comment">Indicates text should be processed left to right.</p>
+            <p property="rdfs:comment">Indicates whether the tables in the group should be displayed with the first column on the right.</p>
             <span property="rdfs:isDefinedBy" resource="csvw:"></span>
           </td>
         </tr>
         <tr><td class="bold">rtl</td>
           <td resource="csvw:rtl" typeof="Direction">
             <em property="rdfs:label">right to left</em>
-            <p property="rdfs:comment">Indiects text should be processed right to left</p>
+            <p property="rdfs:comment">Indicates whether the tables in the group should be displayed with the first column on the left.</p>
             <span property="rdfs:isDefinedBy" resource="csvw:"></span>
           </td>
         </tr>
@@ -2275,10 +2249,10 @@ For a Transformation: A link property giving the single URL of the file that the
     </section>
   
 
-<section id="references" class="appendix"><!--OddPage--><h2><span class="secno">A. </span>References</h2><section id="informative-references"><h3><span class="secno">A.1 </span>Informative references</h3><dl class="bibliography"><dt id="bib-BCP47">[BCP47]</dt><dd>A. Phillips; M. Davis. <a href="https://tools.ietf.org/html/bcp47"><cite>Tags for Identifying Languages</cite></a>. September 2009. IETF Best Current Practice. URL: <a href="https://tools.ietf.org/html/bcp47">https://tools.ietf.org/html/bcp47</a>
-</dd><dt id="bib-ECMASCRIPT">[ECMASCRIPT]</dt><dd><a href="https://tc39.github.io/ecma262/"><cite>ECMAScript Language Specification</cite></a>. URL: <a href="https://tc39.github.io/ecma262/">https://tc39.github.io/ecma262/</a>
-</dd><dt id="bib-RDF-SCHEMA">[RDF-SCHEMA]</dt><dd>Dan Brickley; Ramanathan Guha. <a href="http://www.w3.org/TR/rdf-schema/"><cite>RDF Schema 1.1</cite></a>. 25 February 2014. W3C Recommendation. URL: <a href="http://www.w3.org/TR/rdf-schema/">http://www.w3.org/TR/rdf-schema/</a>
-</dd><dt id="bib-encoding">[encoding]</dt><dd>Anne van Kesteren; Joshua Bell; Addison Phillips. <a href="http://www.w3.org/TR/encoding/"><cite>Encoding</cite></a>. 20 October 2015. W3C Candidate Recommendation. URL: <a href="http://www.w3.org/TR/encoding/">http://www.w3.org/TR/encoding/</a>
-</dd><dt id="bib-tabular-data-model">[tabular-data-model]</dt><dd>Jeni Tennison; Gregg Kellogg. <a href="http://www.w3.org/TR/2015/REC-tabular-data-model-20151217/"><cite>Model for Tabular Data and Metadata on the Web</cite></a>. W3C Recommendation. URL: <a href="http://www.w3.org/TR/2015/REC-tabular-data-model-20151217/">http://www.w3.org/TR/2015/REC-tabular-data-model-20151217/</a>
-</dd><dt id="bib-tabular-metadata">[tabular-metadata]</dt><dd>Jeni Tennison; Gregg Kellogg. <a href="http://www.w3.org/TR/2015/REC-tabular-metadata-20151217/"><cite>Metadata Vocabulary for Tabular Data</cite></a>. W3C Recommendation. URL: <a href="http://www.w3.org/TR/2015/REC-tabular-metadata-20151217/">http://www.w3.org/TR/2015/REC-tabular-metadata-20151217/</a>
-</dd></dl></section></section></body></html>
+<section id="references" class="appendix"><!--OddPage--><h2><span class="secno">A. </span>References</h2><section id="informative-references"><h3><span class="secno">A.1 </span>Informative references</h3><dl class="bibliography"><dt id="bib-BCP47">[BCP47]</dt><dd>A. Phillips; M. Davis. IETF. <a href="https://tools.ietf.org/html/bcp47"><cite>Tags for Identifying Languages</cite></a>. September 2009. IETF Best Current Practice. URL: <a href="https://tools.ietf.org/html/bcp47">https://tools.ietf.org/html/bcp47</a>
+</dd><dt id="bib-ECMASCRIPT">[ECMASCRIPT]</dt><dd>Ecma International. <a href="https://tc39.github.io/ecma262/"><cite>ECMAScript Language Specification</cite></a>. URL: <a href="https://tc39.github.io/ecma262/">https://tc39.github.io/ecma262/</a>
+</dd><dt id="bib-RDF-SCHEMA">[RDF-SCHEMA]</dt><dd>Dan Brickley; Ramanathan Guha. W3C. <a href="http://www.w3.org/TR/rdf-schema/"><cite>RDF Schema 1.1</cite></a>. 25 February 2014. W3C Recommendation. URL: <a href="http://www.w3.org/TR/rdf-schema/">http://www.w3.org/TR/rdf-schema/</a>
+</dd><dt id="bib-encoding">[encoding]</dt><dd>Anne van Kesteren; Joshua Bell; Addison Phillips. W3C. <a href="http://www.w3.org/TR/encoding/"><cite>Encoding</cite></a>. 20 October 2015. W3C Candidate Recommendation. URL: <a href="http://www.w3.org/TR/encoding/">http://www.w3.org/TR/encoding/</a>
+</dd><dt id="bib-tabular-data-model">[tabular-data-model]</dt><dd>Jeni Tennison; Gregg Kellogg. W3C. <a href="http://www.w3.org/TR/2015/REC-tabular-data-model-20151217/"><cite>Model for Tabular Data and Metadata on the Web</cite></a>. W3C Recommendation. URL: <a href="http://www.w3.org/TR/2015/REC-tabular-data-model-20151217/">http://www.w3.org/TR/2015/REC-tabular-data-model-20151217/</a>
+</dd><dt id="bib-tabular-metadata">[tabular-metadata]</dt><dd>Jeni Tennison; Gregg Kellogg. W3C. <a href="http://www.w3.org/TR/2015/REC-tabular-metadata-20151217/"><cite>Metadata Vocabulary for Tabular Data</cite></a>. W3C Recommendation. URL: <a href="http://www.w3.org/TR/2015/REC-tabular-metadata-20151217/">http://www.w3.org/TR/2015/REC-tabular-metadata-20151217/</a>
+</dd></dl></section></section><p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p><script async="" defer="" src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
