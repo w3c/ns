@@ -8,3 +8,6 @@ Content-Type: text/turtle; qs=0.6
 
 URI: webmention.jsonld
 Content-Type: application/ld+json; qs=0.5
+
+URI: webmention.jsonld
+Content-Type: application/json; qs=0.4
