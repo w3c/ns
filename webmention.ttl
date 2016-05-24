@@ -1,0 +1,28 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://www.w3.org/ns/webmention#> a <rdf:Property> ;
+    rdfs:label "Webmention Terms" ;
+    rdfs:comment "This is the vocabulary description for terms used by the Webmention protocol." .
+
+<http://www.w3.org/ns/webmention#Webmention> a rdfs:Class ;
+    rdfs:label "Webmention" ;
+    rdfs:comment "A Webmention is a notification about a relationship between two Web documents."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/webmention#> .
+
+<http://www.w3.org/ns/webmention#source> a <rdf:Property> ;
+    rdfs:label "Source" ;
+    rdfs:comment "The source document contains a link to the target document."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/webmention#> .
+
+<http://www.w3.org/ns/webmention#target> a <rdf:Property> ;
+    rdfs:label "Target" ;
+    rdfs:comment "The target document is being linked to by the source."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/webmention#> .
+
+<http://www.w3.org/ns/webmention#webmention> a <rdf:Property> ;
+    rdfs:label "Webmention endpoint" ;
+    rdfs:comment "Identifies a target URI that supports the Webmention protocol. This allows clients that mention a resource in some form of publishing process to contact that endpoint and inform it that this resource has been mentioned. Equivalent to IANA 'webmention' link relation."@en ;
+    rdfs:isDefinedBy <http://www.w3.org/ns/webmention#> .

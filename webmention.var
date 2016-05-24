@@ -1,0 +1,10 @@
+URI: webmention
+
+URI: webmention.html
+Content-Type: text/html
+
+URI: webmention.ttl
+Content-Type: text/turtle; qs=0.6
+
+URI: webmention.jsonld
+Content-Type: application/ld+json; qs=0.5
