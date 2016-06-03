@@ -32,11 +32,11 @@
       }
     },
     
-    "id": "http://www.w3.org/ns/webmention#",
+    "id": "http://www.w3.org/ns/webmention",
     "rdfs:label": "Webmention Terms",
     "rdfs:comment": "This is the JSON-LD context and vocabulary description for terms used by the Webmention protocol.",
     
-    "rdfs_classes": {
+    "rdfs_classes": [{
       "id": "wm:Webmention",
       "type": "rdfs:Class",
       "rdfs:label": "Webmention",
@@ -44,11 +44,11 @@
           "@language": "en",
           "@value": "A Webmention is a notification about a relationship between two Web documents."
         }
-    },
+    }],
     "rdfs_properties": [{
       "id": "wm:source",
       "type": "rdf:Property",
-      "rdfs:label": "Source",
+      "rdfs:label": "source",
       "rdfs:comment": {
           "@language": "en",
           "@value": "The source document contains a link to the target document."
@@ -58,7 +58,7 @@
     {
       "id": "wm:target",
       "type": "rdf:Property",
-      "rdfs:label": "Target",
+      "rdfs:label": "target",
       "rdfs:comment": {
           "@language": "en",
           "@value": "The target document is being linked to by the source."
