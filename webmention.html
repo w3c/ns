@@ -1,1 +1,648 @@
-Not Found
+<!DOCTYPE html>
+<html lang="en" prefix="bibo: http://purl.org/ontology/bibo/ w3p: http://www.w3.org/2001/02pd/rec54#" typeof="bibo:Document " dir="ltr">
+<head>
+  <meta property="dc:language" content="en" lang="">
+  <style>
+    /*
+
+github.com style (c) Vasily Polovnyov <vast@whiteants.net>
+
+*/
+    
+    .hljs {
+      display: block;
+      overflow-x: auto;
+      padding: 0.5em;
+      color: #333;
+      background: #f8f8f8;
+      -webkit-text-size-adjust: none;
+    }
+    
+    .hljs-comment,
+    .diff .hljs-header {
+      color: #998;
+      font-style: italic;
+    }
+    
+    .hljs-keyword,
+    .css .rule .hljs-keyword,
+    .hljs-winutils,
+    .nginx .hljs-title,
+    .hljs-subst,
+    .hljs-request,
+    .hljs-status {
+      color: #333;
+      font-weight: bold;
+    }
+    
+    .hljs-number,
+    .hljs-hexcolor,
+    .ruby .hljs-constant {
+      color: #008080;
+    }
+    
+    .hljs-string,
+    .hljs-tag .hljs-value,
+    .hljs-doctag,
+    .tex .hljs-formula {
+      color: #d14;
+    }
+    
+    .hljs-title,
+    .hljs-id,
+    .scss .hljs-preprocessor {
+      color: #900;
+      font-weight: bold;
+    }
+    
+    .hljs-list .hljs-keyword,
+    .hljs-subst {
+      font-weight: normal;
+    }
+    
+    .hljs-class .hljs-title,
+    .hljs-type,
+    .vhdl .hljs-literal,
+    .tex .hljs-command {
+      color: #458;
+      font-weight: bold;
+    }
+    
+    .hljs-tag,
+    .hljs-tag .hljs-title,
+    .hljs-rule .hljs-property,
+    .django .hljs-tag .hljs-keyword {
+      color: #000080;
+      font-weight: normal;
+    }
+    
+    .hljs-attribute,
+    .hljs-variable,
+    .lisp .hljs-body,
+    .hljs-name {
+      color: #008080;
+    }
+    
+    .hljs-regexp {
+      color: #009926;
+    }
+    
+    .hljs-symbol,
+    .ruby .hljs-symbol .hljs-string,
+    .lisp .hljs-keyword,
+    .clojure .hljs-keyword,
+    .scheme .hljs-keyword,
+    .tex .hljs-special,
+    .hljs-prompt {
+      color: #990073;
+    }
+    
+    .hljs-built_in {
+      color: #0086b3;
+    }
+    
+    .hljs-preprocessor,
+    .hljs-pragma,
+    .hljs-pi,
+    .hljs-doctype,
+    .hljs-shebang,
+    .hljs-cdata {
+      color: #999;
+      font-weight: bold;
+    }
+    
+    .hljs-deletion {
+      background: #fdd;
+    }
+    
+    .hljs-addition {
+      background: #dfd;
+    }
+    
+    .diff .hljs-change {
+      background: #0086b3;
+    }
+    
+    .hljs-chunk {
+      color: #aaa;
+    }
+  </style>
+  <style id="respec-mainstyle">
+    /*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+    /* Override code highlighter background */
+    
+    .hljs {
+      background: transparent !important;
+    }
+    /* --- INLINES --- */
+    
+    em.rfc2119 {
+      text-transform: lowercase;
+      font-variant: small-caps;
+      font-style: normal;
+      color: #900;
+    }
+    
+    h1 acronym,
+    h2 acronym,
+    h3 acronym,
+    h4 acronym,
+    h5 acronym,
+    h6 acronym,
+    a acronym,
+    h1 abbr,
+    h2 abbr,
+    h3 abbr,
+    h4 abbr,
+    h5 abbr,
+    h6 abbr,
+    a abbr {
+      border: none;
+    }
+    
+    dfn {
+      font-weight: bold;
+    }
+    
+    a.internalDFN {
+      color: inherit;
+      border-bottom: 1px solid #99c;
+      text-decoration: none;
+    }
+    
+    a.externalDFN {
+      color: inherit;
+      border-bottom: 1px dotted #ccc;
+      text-decoration: none;
+    }
+    
+    a.bibref {
+      text-decoration: none;
+    }
+    
+    cite .bibref {
+      font-style: normal;
+    }
+    
+    code {
+      color: #C83500;
+    }
+    /* --- TOC --- */
+    
+    .toc a,
+    .tof a {
+      text-decoration: none;
+    }
+    
+    a .secno,
+    a .figno {
+      color: #000;
+    }
+    
+    ul.tof,
+    ol.tof {
+      list-style: none outside none;
+    }
+    
+    .caption {
+      margin-top: 0.5em;
+      font-style: italic;
+    }
+    /* --- TABLE --- */
+    
+    table.simple {
+      border-spacing: 0;
+      border-collapse: collapse;
+      border-bottom: 3px solid #005a9c;
+    }
+    
+    .simple th {
+      background: #005a9c;
+      color: #fff;
+      padding: 3px 5px;
+      text-align: left;
+    }
+    
+    .simple th[scope="row"] {
+      background: inherit;
+      color: inherit;
+      border-top: 1px solid #ddd;
+    }
+    
+    .simple td {
+      padding: 3px 10px;
+      border-top: 1px solid #ddd;
+    }
+    
+    .simple tr:nth-child(even) {
+      background: #f0f6ff;
+    }
+    /* --- DL --- */
+    
+    .section dd > p:first-child {
+      margin-top: 0;
+    }
+    
+    .section dd > p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .section dd {
+      margin-bottom: 1em;
+    }
+    
+    .section dl.attrs dd,
+    .section dl.eldef dd {
+      margin-bottom: 0;
+    }
+    
+    .respec-hidden {
+      display: none;
+    }
+    
+    @media print {
+      .removeOnSave {
+        display: none;
+      }
+    }
+  </style>
+  <meta property="dc:language" content="en" lang="">
+  <title>Webmention Terms</title>
+  <meta charset="utf-8">
+
+
+  <style>
+    /*****************************************************************
+ * ReSpec 3 CSS
+ * Robin Berjon - http://berjon.com/
+ *****************************************************************/
+    /* --- INLINES --- */
+    
+    em.rfc2119 {
+      text-transform: lowercase;
+      font-variant: small-caps;
+      font-style: normal;
+      color: #900;
+    }
+    
+    h1 acronym,
+    h2 acronym,
+    h3 acronym,
+    h4 acronym,
+    h5 acronym,
+    h6 acronym,
+    a acronym,
+    h1 abbr,
+    h2 abbr,
+    h3 abbr,
+    h4 abbr,
+    h5 abbr,
+    h6 abbr,
+    a abbr {
+      border: none;
+    }
+    
+    dfn {
+      font-weight: bold;
+    }
+    
+    a.internalDFN {
+      color: inherit;
+      border-bottom: 1px solid #99c;
+      text-decoration: none;
+    }
+    
+    a.externalDFN {
+      color: inherit;
+      border-bottom: 1px dotted #ccc;
+      text-decoration: none;
+    }
+    
+    a.bibref {
+      text-decoration: none;
+    }
+    
+    cite .bibref {
+      font-style: normal;
+    }
+    
+    code {
+      color: #C83500;
+    }
+    /* --- TOC --- */
+    
+    .toc a,
+    .tof a {
+      text-decoration: none;
+    }
+    
+    a .secno,
+    a .figno {
+      color: #000;
+    }
+    
+    ul.tof,
+    ol.tof {
+      list-style: none outside none;
+    }
+    
+    .caption {
+      margin-top: 0.5em;
+      font-style: italic;
+    }
+    /* --- TABLE --- */
+    
+    table.simple {
+      border-spacing: 0;
+      border-collapse: collapse;
+      border-bottom: 3px solid #005a9c;
+    }
+    
+    .simple th {
+      background: #005a9c;
+      color: #fff;
+      padding: 3px 5px;
+      text-align: left;
+    }
+    
+    .simple th[scope="row"] {
+      background: inherit;
+      color: inherit;
+      border-top: 1px solid #ddd;
+    }
+    
+    .simple td {
+      padding: 3px 10px;
+      border-top: 1px solid #ddd;
+    }
+    
+    .simple tr:nth-child(even) {
+      background: #f0f6ff;
+    }
+    /* --- DL --- */
+    
+    .section dd > p:first-child {
+      margin-top: 0;
+    }
+    
+    .section dd > p:last-child {
+      margin-bottom: 0;
+    }
+    
+    .section dd {
+      margin-bottom: 1em;
+    }
+    
+    .section dl.attrs dd,
+    .section dl.eldef dd {
+      margin-bottom: 0;
+    }
+    
+    @media print {
+      .removeOnSave {
+        display: none;
+      }
+    }
+  </style>
+  <style>
+    /* --- EXAMPLES --- */
+    
+    div.example-title {
+      min-width: 7.5em;
+      color: #b9ab2d;
+    }
+    
+    div.example-title span {
+      text-transform: uppercase;
+    }
+    
+    aside.example,
+    div.example,
+    div.illegal-example {
+      padding: 0.5em;
+      margin: 1em 0;
+      position: relative;
+      clear: both;
+    }
+    
+    div.illegal-example {
+      color: red
+    }
+    
+    div.illegal-example p {
+      color: black
+    }
+    
+    aside.example,
+    div.example {
+      padding: .5em;
+      border-left-width: .5em;
+      border-left-style: solid;
+      border-color: #e0cb52;
+      background: #fcfaee;
+    }
+    
+    aside.example div.example {
+      border-left-width: .1em;
+      border-color: #999;
+      background: #fff;
+    }
+    
+    aside.example div.example div.example-title {
+      color: #999;
+    }
+  </style>
+  <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/W3C-FPWD">
+  <!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]-->
+
+
+  <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+  <link href="https://www.w3.org/StyleSheets/TR/2016/base" rel="stylesheet">
+  <!--[if lt IE 9]><script src='https://www.w3.org/2008/site/js/html5shiv.js'></script><![endif]-->
+  <script type="application/json" id="initialUserConfig">
+    {
+      "specStatus": "base",
+      "shortName": "webmention",
+      "editors": [
+      {
+        "name": "Amy Guy",
+        "url": "http://rhiaro.co.uk/",
+        "company": "University of Edinburgh",
+        "companyURL": "http://inf.ed.ac.uk/"
+      }],
+      "previousMaturity": "ED",
+      "previousPublishDate": "n/a",
+      "edDraftURI": "https://rhiaro.github.io/wm-ns",
+      "wg": "Social Web Working Group",
+      "wgURI": "https://www.w3.org/Social/WG",
+      "wgPublicList": "public-socialweb",
+      "wgPatentURI": "http://www.w3.org/2004/01/pp-impl/424242/status",
+      "otherLinks": [
+      {
+        "key": "Source",
+        "data": [
+        {
+          "value": "Repository on Github.",
+          "href": "https://github.com/rhiaro/wm-ns"
+        },
+        {
+          "value": "Issues",
+          "href": "https://github.com/rhiaro/wm-ns/issues"
+        }]
+      }],
+      "localBiblio":
+      {
+        "Webmention":
+        {
+          "title": "Webmention",
+          "href": "http://w3.org/TR/webmention",
+          "authors": [
+            "Aaron Parecki"
+          ],
+          "status": "CR",
+          "publisher": "W3C"
+        },
+        "IANA":
+        {
+          "title": "IANA Link Relations",
+          "href": "http://www.iana.org/assignments/link-relations/link-relations.xhtml",
+          "authors": [
+            "Mark Nottingham",
+            "Julian Reschke",
+            "Jan Algermissen"
+          ],
+          "status": "Living Registry",
+          "publisher": "IANA"
+        }
+      }
+    }
+  </script>
+</head>
+<body id="respecDocument" role="document" class="h-entry" prefix="as: http://www.w3.org/ns/activitystreams#" about="" typeof="as:Article" property="as:content" datatype="rdf:HTML">
+  <div id="respecHeader" role="contentinfo" class="head">
+    <p>
+      <a class="logo" href="http://www.w3.org/"><img src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C" height="48" width="72"></a>
+    </p>
+    <h1 class="title p-name" id="title" property="dcterms:title">Webmention Terms</h1>
+    <h2 id="w3c-document-23-may-2016"><abbr title="World Wide Web Consortium">W3C</abbr> Document <time property="dcterms:issued" class="dt-published" datetime="2016-05-23">23 May 2016</time></h2>
+    <dl>
+      <dt>Latest editor's draft:</dt>
+      <dd><a href="https://rhiaro.github.io/wm-ns">https://rhiaro.github.io/wm-ns</a></dd>
+      <dt>Editor:</dt>
+      <dd class="p-author h-card vcard" property="bibo:editor" resource="_:editor0"><span property="rdf:first" typeof="foaf:Person"><meta property="foaf:name" content="Amy Guy"><a class="u-url url p-name fn" property="foaf:homepage" href="http://rhiaro.co.uk/">Amy Guy</a>, <a property="foaf:workplaceHomepage" class="p-org org h-org h-card" href="http://inf.ed.ac.uk/">University of Edinburgh</a></span>
+        <span property="rdf:rest" resource="rdf:nil"></span>
+      </dd>
+
+      <dt>Source:</dt>
+      <dd>
+        <a href="https://github.com/rhiaro/wm-ns">
+                      Repository on Github.
+                    </a>
+      </dd>
+      <dd>
+        <a href="https://github.com/rhiaro/wm-ns/issues">
+                      Issues
+                    </a>
+      </dd>
+    </dl>
+    <p class="copyright">
+      <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2016
+
+      <a href="http://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (
+      <a href="http://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
+      <a href="http://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
+      <a href="http://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>).
+      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="http://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
+      <a href="http://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
+      <a rel="license" href="http://www.w3.org/Consortium/Legal/copyright-documents">document use</a> rules apply.
+    </p>
+    <hr title="Separator for header">
+  </div>
+
+  <section property="dc:abstract" class="introductory" id="abstract">
+    <h2 resource="#h-abstract" id="h-abstract"><span property="xhv:role" resource="xhv:heading">Abstract</span></h2>
+    <p property="as:summary">This document describes the terms used for the Webmention protocol and provides a namespace so each term has an HTTP IRI.</p>
+  </section>
+
+  <section id="sotd" class="introductory">
+    <h2 resource="#h-sotd" id="h-sotd"><span property="xhv:role" resource="xhv:heading">Status of This Document</span></h2>
+    <p>
+      This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal document. It has no official standing of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
+    </p>
+
+  </section>
+  <nav id="toc">
+    <h2 resource="#table-of-contents" id="table-of-contents" class="introductory"><span property="xhv:role" resource="xhv:heading">Table of Contents</span></h2>
+    <ul role="directory" class="toc">
+      <li class="tocline"><a class="tocxref" href="#introduction"><span class="secno">1. </span>Introduction</a></li>
+      <li class="tocline"><a class="tocxref" href="#class-definitions"><span class="secno">2. </span>Class definitions</a></li>
+      <li class="tocline"><a class="tocxref" href="#property-definitions"><span class="secno">3. </span>Property definitions</a></li>
+      <li class="tocline"><a class="tocxref" href="#references"><span class="secno">A. </span>References</a>
+        <ul class="toc">
+          <li class="tocline"><a class="tocxref" href="#informative-references"><span class="secno">A.1 </span>Informative references</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+
+  <section property="bibo:hasPart" resource="#introduction" typeof="bibo:Chapter" id="introduction">
+    <!--OddPage-->
+    <h2 resource="#h-introduction" id="h-introduction"><span property="xhv:role" resource="xhv:heading"><span class="secno">1. </span>Introduction</span></h2>
+    <p>This document describes the vocabulary terms used in the [<cite><a href="#bib-Webmention" class="bibref">Webmention</a></cite>] protocol along with the default JSON-LD Context.</p>
+    <p>This specification makes use of the following namespaces:</p>
+    <dl>
+      <dt><code>wm</code>:</dt>
+      <dd><code>http://www.w3.org/ns/webmention#</code></dd>
+    </dl>
+  </section>
+
+  <section property="bibo:hasPart" resource="#class-definitions" typeof="bibo:Chapter" id="class-definitions">
+    <!--OddPage-->
+    <h2 resource="#h-class-definitions" id="h-class-definitions"><span property="xhv:role" resource="xhv:heading"><span class="secno">2. </span>Class definitions</span></h2>
+    <p>The following are class definitions in the <code>wm</code> namespace:</p>
+    <dl>
+      <dt property="rdfs:label" id="Webmention" resource="#Webmention" typeof="rdfs:Class">Webmention</dt>
+      <dd property="rdfs:comment" about="#Webmention">A Webmention is a notification about a relationship between two Web documents.</dd>
+    </dl>
+  </section>
+
+  <section property="bibo:hasPart" resource="#property-definitions" typeof="bibo:Chapter" id="property-definitions">
+    <!--OddPage-->
+    <h2 resource="#h-property-definitions" id="h-property-definitions"><span property="xhv:role" resource="xhv:heading"><span class="secno">3. </span>Property definitions</span></h2>
+    <p>The following are property definitions in the <code>wm</code> namespace:</p>
+    <dl>
+      <dt property="rdfs:label" id="source" resource="#source" typeof="rdf:Property">source</dt>
+      <dd property="rdfs:comment" about="#source">The source document contains a link to the target document.</dd>
+
+      <dt property="rdfs:label" id="target" resource="#target" typeof="rdf:Property">target</dt>
+      <dd property="rdfs:comment" about="#target">The target document is being linked to by the source.</dd>
+
+      <dt property="rdfs:label" id="webmention" resource="#webmention" typeof="rdf:Property">webmention</dt>
+      <dd property="rdfs:comment" about="#webmention">Identifies a target URI that supports the Webmention protocol. This allows clients that mention a resource in some form of publishing process to contact that endpoint and inform it that this resource has been mentioned. Equivalent to [<cite><a href="#bib-IANA" class="bibref">IANA</a></cite>] "webmention" link relation.</dd>
+    </dl>
+  </section>
+
+
+
+  <section property="bibo:hasPart" resource="#references" typeof="bibo:Chapter" id="references" class="appendix">
+    <!--OddPage-->
+    <h2 resource="#h-references" id="h-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">A. </span>References</span></h2>
+
+    <section property="bibo:hasPart" resource="#informative-references" typeof="bibo:Chapter" id="informative-references">
+      <h3 resource="#h-informative-references" id="h-informative-references"><span property="xhv:role" resource="xhv:heading"><span class="secno">A.1 </span>Informative references</span></h3>
+      <dl resource="" class="bibliography"><dt id="bib-IANA">[IANA]</dt>
+        <dd>Mark Nottingham; Julian Reschke; Jan Algermissen. IANA. <a property="dc:references" href="http://www.iana.org/assignments/link-relations/link-relations.xhtml"><cite>IANA Link Relations</cite></a>. Living Registry. URL: <a property="dc:references" href="http://www.iana.org/assignments/link-relations/link-relations.xhtml">http://www.iana.org/assignments/link-relations/link-relations.xhtml</a>
+        </dd><dt id="bib-Webmention">[Webmention]</dt>
+        <dd>Aaron Parecki. W3C. <a property="dc:references" href="http://w3.org/TR/webmention"><cite>Webmention</cite></a>. W3C Candidate Recommendation. URL: <a property="dc:references" href="http://w3.org/TR/webmention">http://w3.org/TR/webmention</a>
+        </dd>
+      </dl>
+    </section>
+  </section>
+  <p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
+  <script src="https://www.w3.org/scripts/TR/2016/fixup.js" defer="" async=""></script>
+</body>
+</html>
