@@ -1,0 +1,50 @@
+
+
+
+<rdf:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:mee="http://www.w3.org/ns/pim/meeting#"
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+    <rdf:Description rdf:about="">
+        <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-06-25</dc:created>
+        <dc:title>An ontology for an online meeting</dc:title>
+        <comment>An online meeting, in Solid world, is a collection of linked
+data resources which allow people to collaborate in real time toward the objectives of the meeting.
+The online state of a meeting may also evolve before the meeting as it is planned, and it should
+also in time evolve to give a clear idea of the take-aways for posterity</comment>
+    </rdf:Description>
+
+    <Class rdf:about="http://www.w3.org/ns/pim/meeting#Meeting">
+        <mee:label xml:lang="en">meeting</mee:label>
+        <mee:label xml:lang="fr">reunion</mee:label>
+    </Class>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#actionItems">
+        <label>action items</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#agenda">
+        <label>agenda</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#attendeeGroup">
+        <label xml:lang="en">attendees</label>
+        <label xml:lang="fr">participants</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#nextMeeting">
+        <label>next meeting</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#previousMeeting">
+        <label>previous meeting</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#sharedNotes">
+        <comment>A shared notepad to capture the course and result of the meeting</comment>
+        <label xml:lang="en">notes</label>
+        <label xml:lang="fr">notes</label>
+    </rdf:Property>
+</rdf:RDF>

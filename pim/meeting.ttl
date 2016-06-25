@@ -1,0 +1,38 @@
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix dc: <http://purl.org/dc/elements/1.1/> .
+    @prefix mee: <http://www.w3.org/ns/pim/meeting#> .
+    @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+    
+    <>     dc:created "2016-06-25"^^xsd:date;
+         dc:title "An ontology for an online meeting";
+         :comment """An online meeting, in Solid world, is a collection of linked
+data resources which allow people to collaborate in real time toward the objectives of the meeting.
+The online state of a meeting may also evolve before the meeting as it is planned, and it should
+also in time evolve to give a clear idea of the take-aways for posterity""" .
+    
+    mee:Meeting     a :Class;
+         mee:label "meeting"@en,
+                "reunion"@fr .
+    
+    mee:actionItems     a rdf:Property;
+         :label "action items" .
+    
+    mee:agenda     a rdf:Property;
+         :label "agenda" .
+    
+    mee:attendeeGroup     a rdf:Property;
+         :label "attendees"@en,
+                "participants"@fr .
+    
+    mee:nextMeeting     a rdf:Property;
+         :label "next meeting" .
+    
+    mee:previousMeeting     a rdf:Property;
+         :label "previous meeting" .
+    
+    mee:sharedNotes     a rdf:Property;
+         :comment "A shared notepad to capture the course and result of the meeting";
+         :label "notes"@en,
+                "notes"@fr .
+    

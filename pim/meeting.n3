@@ -1,0 +1,42 @@
+@prefix rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+
+@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix dc:	<http://purl.org/dc/elements/1.1/>.
+@prefix doc:	<http://www.w3.org/2000/10/swap/pim/doc#> .
+@prefix :	<http://www.w3.org/ns/pim/meeting#> .
+
+@prefix cal: <http://www.w3.org/2002/12/cal/ical#>.
+@prefix dbp: <http://dbpedia.org/resource/>.
+@prefix cal: <http://www.w3.org/2002/12/cal/ical#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix q: <http://www.w3.org/2000/10/swap/pim/qif#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+@keywords a, is, of.
+
+<> dc:title "An ontology for an online meeting";
+s:comment """An online meeting, in Solid world, is a collection of linked
+data resources which allow people to collaborate in real time toward the objectives of the meeting.
+The online state of a meeting may also evolve before the meeting as it is planned, and it should
+also in time evolve to give a clear idea of the take-aways for posterity""";
+dc:created "2016-06-25"^^xsd:date.
+
+Meeting a s:Class; label "meeting"@en, "reunion"@fr.
+
+attendeeGroup a rdf:Property; s:label "attendees"@en, "participants"@fr.
+
+
+sharedNotes a rdf:Property; s:label "notes"@en, "notes"@fr;
+  s:comment """A shared notepad to capture the course and result of the meeting""".
+
+agenda a rdf:Property; s:label "agenda".
+
+actionItems  a rdf:Property; s:label "action items".
+
+nextMeeting a rdf:Property; s:label "next meeting".
+
+previousMeeting a rdf:Property; s:label "previous meeting".
+
+#ends
