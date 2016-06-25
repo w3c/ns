@@ -47,4 +47,9 @@ also in time evolve to give a clear idea of the take-aways for posterity</commen
         <label xml:lang="en">notes</label>
         <label xml:lang="fr">notes</label>
     </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#trip">
+        <label>trip</label>
+        <range rdf:resource="http://www.w3.org/ns/pim/trip#Trip"/>
+    </rdf:Property>
 </rdf:RDF>

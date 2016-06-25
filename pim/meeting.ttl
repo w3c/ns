@@ -2,6 +2,7 @@
     @prefix dc: <http://purl.org/dc/elements/1.1/> .
     @prefix mee: <http://www.w3.org/ns/pim/meeting#> .
     @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix trip: <http://www.w3.org/ns/pim/trip#> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
     
     <>     dc:created "2016-06-25"^^xsd:date;
@@ -35,4 +36,8 @@ also in time evolve to give a clear idea of the take-aways for posterity""" .
          :comment "A shared notepad to capture the course and result of the meeting";
          :label "notes"@en,
                 "notes"@fr .
+    
+    mee:trip     a rdf:Property;
+         :label "trip";
+         :range trip:Trip .
     
