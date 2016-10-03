@@ -62,7 +62,7 @@
       <p>
         This document is an HTML representation of OWL ontology describing all vocabulary URIs defined in the Linked Data Platform (LDP) namespace.
 This ontology provides an informal representation of the concepts and terms
-	as defined in the LDP specification.  Consult the LDP specification for normative reference.
+	as defined in the LDP or other relevant specifications.  Consult the LDP specification for normative reference, unless a different specification is indicated inline.
 See also <a href="http://www.w3.org/2012/ldp">http://www.w3.org/2012/ldp</a>, 
 		<a href="http://www.w3.org/TR/ldp-ucr/">http://www.w3.org/TR/ldp-ucr/</a>, 
 		<a href="http://www.w3.org/TR/ldp/">http://www.w3.org/TR/ldp/</a>, 
@@ -207,6 +207,9 @@ PREFIX : &lt;http://www.w3.org/ns/ldp#&gt;
      <li><span id="pageSequence" class="prop">pageSequence</span><span class="separator"> - </span>
      Link to a page sequence resource, as defined by LDP Paging.  Typically used to communicate the sorting criteria used to allocate LDPC members to pages.
      </li>
+     <li><span id="inbox" class="prop">inbox</span><span class="separator"> - </span>
+     Links a resource to a container where notifications for the resource can be created and discovered.
+     <em>This property was added on 2016-09-29 and is defined in the <a href="https://www.w3.org/TR/ldn">Linked Data Notifications</a> (LDN) specification. It should be considered unstable and subject to removal until LDN reaches recommendation.</em>
    </ul>
     </div>
 
@@ -224,6 +227,14 @@ names</a>.</em></p>
 		</span>
 	  </span>
 	  <span property="dcterms:date">2011-11-22</span>
+    <br />
+    Last modified by 
+    <span about="https://rhiaro.co.uk/#me" typeof="foaf:Person">
+      <span property="foaf:name">Amy Guy</span>, 
+      <a rel="foaf:mbox" href="mailto:rhiaro@w3.org">rhiaro@w3.org</a>,
+      <a rel="foaf:workplaceHomepage" href="http://www.w3.org">W3C</a>,
+    </span>
+    <span property="dcterms:date">2016-09-29</span>
 	  <br />
 	  <span property="owl:versionInfo">$Date$</span>
 	</address>

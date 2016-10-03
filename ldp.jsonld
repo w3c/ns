@@ -35,6 +35,8 @@
 		"Descending": "ldp:Descending",
 
 		"Page": "ldp:Page",
-		"pageSequence": {"@id": "ldp:pageSequence", "@type":"@id"}
+		"pageSequence": {"@id": "ldp:pageSequence", "@type":"@id"},
+
+		"inbox": { "@id": "ldp:inbox", "@type": "@id" }
 	}
 }
