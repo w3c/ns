@@ -24,6 +24,7 @@
 	can be associated with objects and classes.
 	""";
 	dc:created 2010-08-07;
+	dc:license <https://creativecommons.org/publicdomain/zero/1.0/>;
 	dc:modified """$Date$""";
 	dc:author <https://www.w3.org/People/Berners-Lee/card#i>.
 

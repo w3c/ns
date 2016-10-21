@@ -12,6 +12,7 @@
 	editing forms. It allows user interface hints such as background colors,
 	can be associated with objects and classes.
 	""";
+         dc:license <https://creativecommons.org/publicdomain/zero/1.0/>;
          dc:modified "$Date$";
          dc:title "An ontology for User Interface description, Hints and Forms." .
     
