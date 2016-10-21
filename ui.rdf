@@ -10,6 +10,7 @@
 
     <r:Description r:about="">
         <dc:author r:resource="https://www.w3.org/People/Berners-Lee/card#i"/>
+        <dc:created r:datatype="http://www.w3.org/2001/XMLSchema#date">2010-08-07</dc:created>
         <dc:description>The User Interface ontology allows the definition
 	of forms for processing RDF model data, and include a bootstrap form for
 	editing forms. It allows user interface hints such as background colors,
