@@ -17,14 +17,23 @@
 
 @keywords is, of, a.
 
+<> dc:title "An ontology for User Interface description, Hints and Forms.";
+	dc:description """The User Interface ontology allows the definition
+	of forms for processing RDF model data, and include a bootstrap form for
+	editing forms. It allows user interface hints such as background colors,
+	can be associated with objects and classes.
+	""";
+	dc:modified """$Date$""";
+	dc:author <https://www.w3.org/People/Berners-Lee/card#i>.
+
 style a r:Property, owl:DatatypeProperty;
 	s:label "style";
         prompt "CSS style";
 	s:comment """Must be a valid CSS style string such as one could put in
         an HTML style attribute.  Depending on the user interface system, this can
-        by given to individuals, classes or properties. It is up to a user interface 
+        by given to individuals, classes or properties. It is up to a user interface
         which wants to draw on them to pick how it uses styles from which parts
-        of the data it has.  For example, the style of a class may be picked 
+        of the data it has.  For example, the style of a class may be picked
         to distinguish information about things in that class.""".
 
 backgroundColor a r:Property, owl:DatatypeProperty;
@@ -72,7 +81,7 @@ initialProperties a r:Property;
         s:label "initial properties";
         s:domain s:Class;
         s:range r:List; # List of r:Property
-        s:comment """A really simple way of enabling user interfaces to 
+        s:comment """A really simple way of enabling user interfaces to
             create new information about a class of things is to make a define of properties
             to be specified when a information about a new item
             ("New item" here means an item which the system
@@ -108,7 +117,7 @@ ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:IntegerField ui:DecimalF
 ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField).
 
 ui:Form a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice,  ui:Heading, ui:Comment, ui:Classifier, ui:Options, ui:Multiple.
-ui:Single a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice, ui:Heading, ui:Comment, ui:Classifier, ui:Options. 
+ui:Single a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice, ui:Heading, ui:Comment, ui:Classifier, ui:Options.
 ui:ValueField a s:Class; is s:subClassOf of  ui:TextField, ui:NumericField, ui:ColorField, ui:DateField, ui:DateTimeField, ui:PhoneField, ui:EmailField.
 ui:NumericField a s:Class; is s:subClassOf of ui:BooleanField, ui:IntegerField, ui:DecimalField, ui:FloatField.
 ui:TextField a s:Class; is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
@@ -118,12 +127,12 @@ ui:Classifier a s:Class; s:label "classifier";
     The possible types must be subclasses of some overall class, the "category".
     (Ideally, the superclass is also set up as the disjoint union of the subclasses,
     if they are disjoint.)
-    
+
     The form normally stores the resulting classes using an rdf:type triple,
     but a different predicate can be used if required, so the classifier field
     needs is 'property' defined too.
-    
-    If the subclass selected itself is has subclasses defined, the user can 
+
+    If the subclass selected itself is has subclasses defined, the user can
     recursively select from them in turn, as many levels as needed.""".
 
 ui:property a r:Property; s:domain ui:Form; s:range r:Property;
@@ -158,19 +167,19 @@ ui:minValue a r:Property; s:domain ui:ValueField; s:label "min".  # @@ range?
 ui:maxValue a r:Property; s:domain ui:ValueField; s:label "max".
 
  ui:creationForm a r:Property; s:domain s:Class; s:range ui:Form;
-    s:label "creation form"; 
+    s:label "creation form";
     s:comment """A form which may be used to collect information about a
     hitherto locally undocumented instance instance of this class.""".
- 
+
  ui:annotationForm a r:Property; s:domain s:Class; s:range ui:Form;
-    s:label "annotation form"; 
+    s:label "annotation form";
     s:comment """A form which may be used to add more infromation to an
 instance of this class which we know something about.  Anything from
-adding just add one more fact, to adding a whole lot of information about a specific 
+adding just add one more fact, to adding a whole lot of information about a specific
 facet of the thing.
 """.
 
- 
+
 ########
 
 
@@ -178,22 +187,22 @@ FormForm a ui:Form;
     dc:title "Form for editing Forms";
     is ui:creationForm of Form;
     a ui:Group; ui:part
-        [ ui:sequence 1; a ui:Heading;  ui:contents "Edit Form"@en], 
+        [ ui:sequence 1; a ui:Heading;  ui:contents "Edit Form"@en],
         [ ui:sequence 2; a ui:SingleLineTextField; ui:property dc:title; ui:size 60 ],
         [ ui:sequence 3; a ui:Comment;  ui:contents
         """To add a field to the form, press the blue plus at the bottom,
-        and then select what sort of field you want."""@en; ui:style "background-color: #ffe;"], 
+        and then select what sort of field you want."""@en; ui:style "background-color: #ffe;"],
         FieldList.
-        
+
 FieldList  ui:sequence 10; a ui:Multiple; ui:property ui:part; ui:part FieldForm .
 
 FieldForm a ui:Group;
     dc:title "Form for selecting a type of field";
     ui:part
 
-        [ ui:sequence 1; a ui:Classifier; ui:property r:type; ui:category ui:Form], 
-        
-        [ a ui:Options; ui:sequence 2; ui:dependingOn r:type; 
+        [ ui:sequence 1; a ui:Classifier; ui:property r:type; ui:category ui:Form],
+
+        [ a ui:Options; ui:sequence 2; ui:dependingOn r:type;
 
             ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:part
                 [ a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],  # @@@ Needs inference on current web
@@ -241,21 +250,21 @@ FieldForm a ui:Group;
             ]];
 
             ui:case [ ui:for ui:Group; ui:use FieldList];
-            
+
             ui:case [ ui:for ui:Options; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:dependingOn; ui:label "depending on"; ui:from r:Property; ui:default r:type],
                 [ ui:sequence 2; a ui:Multiple; ui:property ui:case; ui:part CaseForm]]];
 
             ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:part
                 [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property";
-                    ui:canMintNew true; ui:from owl:ObjectProperty], 
+                    ui:canMintNew true; ui:from owl:ObjectProperty],
                 [ ui:sequence 2; a ui:Choice;  ui:canMintNew true; ui:property ui:from; ui:label "destination class";
-                                    ui:from s:Class; ui:canMintNew true; ], 
+                                    ui:from s:Class; ui:canMintNew true; ],
                 [ ui:sequence 3; a ui:BooleanField; ui:property ui:canMintNew; # No class form yet
                             ui:label "user can add new"],
                 [ ui:sequence 4; a ui:Choice;  ui:canMintNew true; ui:property ui:use; ui:label "Nested Form (if any)";
                             ui:from ui:Form; ui:optional true; ui:use FormForm] # @@ optional
-                
+
             ]];
 
             ui:case [ ui:for ui:Classifier; ui:use [a ui:Group; ui:part
@@ -267,7 +276,7 @@ FieldForm a ui:Group;
 
                 [ ui:sequence 8; a ui:Choice;  ui:canMintNew true; ui:property ui:property;
                         ui:label "property"; ui:from owl:ObjectProperty; ui:default r:type] # @@ restsriction
-                
+
             ]];
 
             ui:case [ ui:for ui:Multiple; ui:use [a ui:Group; ui:part
@@ -284,9 +293,7 @@ FieldForm a ui:Group;
 CaseForm a ui:Group;
    dc:title "Form for a conditional case in a form";
    ui:part
-        [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:for; ui:label "when it is"; ui:canMintNew true; ui:from s:Class] ,    
+        [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:for; ui:label "when it is"; ui:canMintNew true; ui:from s:Class] ,
         [ui:sequence 2; a ui:Choice;  ui:canMintNew true; ui:property ui:use; ui:from ui:Form; ui:canMintNew true; ui:use FieldForm] . # Form for details of the field part of the multiple
 
 # ENDS
-
-

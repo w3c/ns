@@ -5,6 +5,15 @@
     @prefix s: <http://www.w3.org/2000/01/rdf-schema#> .
     @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
     
+    <>     dc:author <https://www.w3.org/People/Berners-Lee/card#i>;
+         dc:description """The User Interface ontology allows the definition
+	of forms for processing RDF model data, and include a bootstrap form for
+	editing forms. It allows user interface hints such as background colors,
+	can be associated with objects and classes.
+	""";
+         dc:modified "$Date$";
+         dc:title "An ontology for User Interface description, Hints and Forms." .
+    
     :BooleanField     s:subClassOf :NumericField .
     
     :CaseForm     a :Group;
@@ -32,12 +41,12 @@
     The possible types must be subclasses of some overall class, the "category".
     (Ideally, the superclass is also set up as the disjoint union of the subclasses,
     if they are disjoint.)
-    
+
     The form normally stores the resulting classes using an rdf:type triple,
     but a different predicate can be used if required, so the classifier field
     needs is 'property' defined too.
-    
-    If the subclass selected itself is has subclasses defined, the user can 
+
+    If the subclass selected itself is has subclasses defined, the user can
     recursively select from them in turn, as many levels as needed.""";
          s:label "classifier";
          s:subClassOf :Form,
@@ -433,7 +442,7 @@
     :annotationForm     a r:Property;
          s:comment """A form which may be used to add more infromation to an
 instance of this class which we know something about.  Anything from
-adding just add one more fact, to adding a whole lot of information about a specific 
+adding just add one more fact, to adding a whole lot of information about a specific
 facet of the thing.
 """;
          s:domain s:Class;
@@ -449,11 +458,11 @@ facet of the thing.
          s:label "background color"@en;
          s:range :Color .
     
-    :backgroundImage	a r:Property, 
-		owl:DatatypeProperty;
-        s:label "background image"@en;
-        s:comment """URI or base64 representation of an image""".
-
+    :backgroundImage     a r:Property,
+                owl:DatatypeProperty;
+         s:comment "URI or base64 representation of an image";
+         s:label "background image"@en .
+    
     :category     a r:Property;
          s:comment "The superclass subclasses of which will be selected.";
          s:domain :Classifier;
@@ -493,7 +502,7 @@ facet of the thing.
          :prompt "from what class" .
     
     :initialProperties     a r:Property;
-         s:comment """A really simple way of enabling user interfaces to 
+         s:comment """A really simple way of enabling user interfaces to
             create new information about a class of things is to make a define of properties
             to be specified when a information about a new item
             ("New item" here means an item which the system
@@ -566,9 +575,9 @@ facet of the thing.
                 owl:DatatypeProperty;
          s:comment """Must be a valid CSS style string such as one could put in
         an HTML style attribute.  Depending on the user interface system, this can
-        by given to individuals, classes or properties. It is up to a user interface 
+        by given to individuals, classes or properties. It is up to a user interface
         which wants to draw on them to pick how it uses styles from which parts
-        of the data it has.  For example, the style of a class may be picked 
+        of the data it has.  For example, the style of a class may be picked
         to distinguish information about things in that class.""";
          s:label "style";
          :prompt "CSS style" .
