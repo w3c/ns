@@ -119,19 +119,19 @@ PREFIX : &lt;http://www.w3.org/ns/ldp#&gt;
          Readers should refer to the specification defining this ontology for the list of 
          behaviors associated with it.
          <ul>
-           <li><span id="hasMemberRelation" class="prop">hasMemberRelation</span> <span class="range">rdfs:Property</span> <span class="separator"> - </span>
+           <li><span id="hasMemberRelation" class="prop">hasMemberRelation</span> <span class="range">rdf:Property</span> <span class="separator"> - </span>
       Indicates which predicate is used in membership triples, and that the membership triple pattern is <code>&lt; membership-constant-URI , object-of-hasMemberRelation, member-URI &gt;</code>.
       </li>
 
-    <li><span id="isMemberOfRelation" class="prop">isMemberOfRelation</span> <span class="range">rdfs:Property</span> <span class="separator"> - </span>
+    <li><span id="isMemberOfRelation" class="prop">isMemberOfRelation</span> <span class="range">rdf:Property</span> <span class="separator"> - </span>
       Indicates which predicate is used in membership triples, and that the membership triple pattern is <code>&lt; member-URI , object-of-isMemberOfRelation, membership-constant-URI &gt;</code>.
       </li>
 	
-    <li><span id="membershipResource" class="prop">membershipResource</span> <span class="range">rdfs:Property</span> <span class="separator"> - </span>
+    <li><span id="membershipResource" class="prop">membershipResource</span> <span class="range">rdfs:Resource</span> <span class="separator"> - </span>
       Indicates the membership-constant-URI in a membership triple.  Depending upon the membership triple pattern a container uses, as indicated by the presence of ldp:hasMemberRelation or ldp:isMemberOfRelation, the membership-constant-URI might occupy either the subject or object position in membership triples.
       </li>
 	
-    <li><span id="insertedContentRelation" class="prop">insertedContentRelation</span> <span class="range">rdfs:Property</span> <span class="separator"> - </span>
+    <li><span id="insertedContentRelation" class="prop">insertedContentRelation</span> <span class="range">rdf:Property</span> <span class="separator"> - </span>
       Indicates which triple in a creation request should be used as the member-URI value in the membership triple added when the creation request is successful.
       </li>
 
@@ -234,7 +234,7 @@ names</a>.</em></p>
       <a rel="foaf:mbox" href="mailto:rhiaro@w3.org">rhiaro@w3.org</a>,
       <a rel="foaf:workplaceHomepage" href="http://www.w3.org">W3C</a>,
     </span>
-    <span property="dcterms:date">2016-09-29</span>
+    <span property="dcterms:date">2016-10-27</span>
 	  <br />
 	  <span property="owl:versionInfo">$Date$</span>
 	</address>

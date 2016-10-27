@@ -108,7 +108,7 @@
 	rdfs:domain :Container;
 	rdfs:isDefinedBy :;
 	rdfs:label "membershipResource";
-	rdfs:range rdf:Property.
+	rdfs:range rdfs:Resource.
 
 :insertedContentRelation
 	a rdf:Property;

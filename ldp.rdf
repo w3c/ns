@@ -98,7 +98,7 @@
     <rdfs:domain rdf:resource="http://www.w3.org/ns/ldp#Container"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ldp#"/>
 	<rdfs:label>membershipResource</rdfs:label>
-    <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Resource"/>
   </rdf:Property>
 	
   <rdf:Property rdf:about="http://www.w3.org/ns/ldp#insertedContentRelation">
