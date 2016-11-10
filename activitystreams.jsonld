@@ -3,6 +3,7 @@
     "@vocab": "_:",
     "xsd": "http://www.w3.org/2001/XMLSchema#",
     "as": "http://www.w3.org/ns/activitystreams#",
+    "ldp": "http://www.w3.org/ns/ldp#",
     "id": "@id",
     "type": "@type",
     "Accept": "as:Accept",
@@ -321,6 +322,43 @@
     "deleted": {
       "@id": "as:deleted",
       "@type": "xsd:dateTime"
-    }
+    },
+    "inbox": {
+      "@id": "ldp:inbox",
+      "@type": "@id"
+    },
+    "outbox": {
+      "@id": "as:outbox",
+      "@type": "@id"
+    },
+    "following": {
+      "@id": "as:following",
+      "@type": "@id"
+    },
+    "followers": {
+      "@id": "as:followers",
+      "@type": "@id"
+    },
+    "streams": {
+      "@id": "as:streams",
+      "@type": "@id"
+    },
+    "preferredUsername": "as:preferredUsername",
+    "endpoints": {
+      "@id": "as:endpoints",
+      "@type": "@id"
+    },
+    "uploadMedia": {
+      "@id": "as:uploadMedia",
+      "@type": "@id"
+    },
+    "proxyUrl": {
+      "@id": "as:proxyUrl",
+      "@type": "@id"
+    },
+    "oauthClientAuthorize": "as:oauthClientAuthorize",
+    "provideClientKey": "as:provideClientKey",
+    "authorizeClientKey": "as:authorizeClientKey",
+    "source": "as:source"
   }
 }
