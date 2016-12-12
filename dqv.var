@@ -1,0 +1,13 @@
+URI: dqv
+
+URI: dqv.html
+Content-Type: text/html
+
+URI: dqv.rdf
+Content-Type: application/rdf+xml
+
+URI: dqv.ttl
+Content-Type: text/turtle
+
+URI: dqv.jsonld
+Content-Type: application/ld+json

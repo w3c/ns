@@ -25,6 +25,7 @@
     foaf:homepage <http://www.w3.org/TR/vocab-dqv/> ;
     dcterms:created "2015-12-17"^^xsd:date;
     dcterms:modified "2016-08-26"^^xsd:date;
+    dcterms:modified "2016-12-15"^^xsd:date;
     dcterms:publisher <http://www.w3.org/data#W3C>;
     dcterms:type <http://purl.org/adms/assettype/Ontology>;
     dcterms:creator [foaf:name "Antoine Isaac"], [foaf:name "Riccardo Albertoni"] ;
@@ -40,7 +41,7 @@ dqv:QualityMeasurement a owl:Class, rdfs:Class ;
   owl:equivalentClass daq:Observation;
   vann:usageNote "The unit of measure in quality measurement should be specified through the property sdmx-attribute:unitMeasure as recommended by RDF Data Cube. The Ontology of units of Measure (OM) by Rijgersberg Et Al provides a list of HTTP dereferenceable unit of measures, which can be exploited as values for sdmx-attribute:unitMeasure."@en ;
   rdfs:subClassOf qb:Observation .
-  
+
 dqv:Metric a owl:Class, rdfs:Class;
   rdfs:label "Metric"@en ;
   rdfs:comment "Represents a standard to measure a quality dimension. An observation (instance of dqv:QualityMeasurement) assigns a value in a given unit to a Metric."@en ;
@@ -51,7 +52,7 @@ dqv:Dimension a owl:Class, rdfs:Class ;
   rdfs:comment "Represents criteria relevant for assessing quality. Each quality dimension must have one or more metric to measure it. A dimension is linked with a category using the dqv:inCategory property."@en ;
   rdfs:subClassOf skos:Concept ;
   owl:equivalentClass daq:Dimension .
-  
+
 dqv:Category a owl:Class, rdfs:Class ;
   rdfs:label "Category"@en ;
   rdfs:comment "Represents a group of quality dimensions in which a common type of information is used as quality indicator."@en ;
@@ -74,7 +75,7 @@ dqv:QualityAnnotation a owl:Class, rdfs:Class ;
   rdfs:comment "Represents quality annotations, including ratings, quality certificates or feedback that can be associated to datasets or distributions. Quality annotations must have one oa:motivatedBy statement with an instance of oa:Motivation (and skos:Concept) that reflects a quality assessment purpose. We define this instance as dqv:qualityAssessment."@en ;
   rdfs:subClassOf oa:Annotation ;
   owl:equivalentClass
-    [ rdf:type owl:Restriction ; 
+    [ rdf:type owl:Restriction ;
       owl:onProperty oa:motivation ;
       owl:hasValue dqv:qualityAssessment
     ] .
@@ -95,7 +96,9 @@ dqv:QualityMetadata a owl:Class, rdfs:Class ;
   rdfs:subClassOf <http://www.w3.org/2004/03/trix/rdfg-1/Graph> ;
   vann:usageNote "QualityMetadata containers do not necessary include all types of quality statements DQV can support. Implementers decide the granularity of containment. In the current version of DQV, we also leave open the choice of the containment technique. Implementers can use (RDF) graph containment. They may also use an appropriate property of their choice — for example (a subproperty of) dcterms:hasPart — to link instances of dqv:QualityMetadata with instances of other DQV classes."@en
 .
-  
+
+
+
 ###########################
 ### Properties here #######
 ###########################
@@ -146,7 +149,7 @@ dqv:inCategory a rdf:Property ;
 dqv:inDimension a rdf:Property ;
   rdfs:label "in dimension"@en ;
   rdfs:comment "Represents the dimensions a quality metric, certificate and annotation allow a measurement of."@en ;
-  rdfs:range dqv:Dimension ;                        
+  rdfs:range dqv:Dimension ;
   vann:usageNote "Dimensions are meant to systematically organize metrics, quality certificates and quality annotations. The Data Quality Vocabulary defines no specific cardinality constraints for dqv:inDimension, since distinct quality frameworks might have different perspectives over a metric. A metric may therefore be associated to more than one dimension. However, those who define new quality metrics should try to avoid this as much as possible and assign only one dimension to the metrics they define. More than one dimension can be indicated for each quality annotation or certificate."@en .
 
 [ owl:inverseOf daq:hasMetric]  rdfs:subPropertyOf dqv:inDimension .
@@ -167,7 +170,6 @@ dqv:hasQualityAnnotation a rdf:Property ;
   rdfs:comment "Refers to a quality annotation. Quality annotation can be applied to any kind of resource, e.g., a dataset, a linkset, a graph, a set of triples. However, in the DQV context, this property is generally expected to be used in statements in which subjects are instances of dcat:Dataset or dcat:Distribution."@en ;
   rdfs:range dqv:QualityAnnotation ;
   rdfs:subPropertyOf [ owl:inverseOf oa:hasTarget] .
-
 
 ###########################
 ### Instances here #######
