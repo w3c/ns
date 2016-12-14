@@ -1,0 +1,11 @@
+{ "@context": [
+    "activitystreams2-context.jsonld",
+    {
+       "@vocab": "_:",
+       "id": "@id",
+       "objectType": "@type",
+       "verb": "@type",
+       "displayName": "as:name"
+    }
+  ]
+}
