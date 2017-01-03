@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase  /ns/qb4st/
+RewriteCond  %{REQUEST_URI}  !/ns/qb4st/Overview.*
+RewriteCond  %{REQUEST_URI}  /ns/qb4st/(.*)(#.*)?
+RewriteRule  ^(.*)$  /ns/qb4st/Overview$2 [P]
