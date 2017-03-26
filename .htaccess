@@ -69,4 +69,8 @@ RewriteRule ^oa-context.json oa.jsonld [L,R=307]
 Header set Access-Control-Allow-Origin "*"
 </Files>
 
+<Files ~ "shex.jsonld">
+ForceType 'application/ld+json'
+Header set Access-Control-Allow-Origin "*"
+</Files>
 

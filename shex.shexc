@@ -1,0 +1,133 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX shex: <http://www.w3.org/ns/shex#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+#ShExc definition of ShExJ
+#Shape Expression Vocabulary
+#This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes.
+#Date: 2017-03-24
+#Imports 
+#Version https://github.com/shexSpec/shexspec.github.io/commit/eca54229108ddb7c7c5b6a8e0634bd31aa86dcad
+#See also <https://shexspec.github.io/spec>
+  
+
+start = @shex:Schema
+
+
+# Shape definitions
+shex:Annotation {
+  shex:object IRI ;
+  shex:predicate IRI ;
+}
+shex:EachOf {
+  #// rdfs:subClassOf shex:TripleExpression;
+  shex:annotation @shex:Annotation* ;
+  shex:expressions @shex:TripleExpression+ ;
+  shex:max xsd:integer ;
+  shex:min xsd:integer ;
+  shex:semActs @shex:SemAct* ;
+}
+shex:IriStem {
+  #// rdfs:subClassOf shex:StemRange;
+}
+shex:LanguageStem {
+  #// rdfs:subClassOf shex:StemRange;
+}
+shex:LiteralStem {
+  #// rdfs:subClassOf shex:StemRange;
+}
+shex:NodeConstraint {
+  #// rdfs:subClassOf shex:ShapeExpression;
+  shex:datatype @rdfs:Datatype? ;
+  shex:fractiondigits xsd:integer? ;
+    #// rdfs:subPropertyOf shex:numericFacet;
+  shex:length xsd:integer? ;
+    #// rdfs:subPropertyOf shex:stringFacet;
+  shex:maxexclusive (xsd:integer OR xsd:decimal OR xsd:double)? ;
+    #// rdfs:subPropertyOf shex:numericFacet;
+  shex:maxinclusive (xsd:integer OR xsd:decimal OR xsd:double)? ;
+    #// rdfs:subPropertyOf shex:numericFacet;
+  shex:maxlength xsd:integer? ;
+    #// rdfs:subPropertyOf shex:stringFacet;
+  shex:minexclusive (xsd:integer OR xsd:decimal OR xsd:double) ;
+    #// rdfs:subPropertyOf shex:numericFacet;
+  shex:mininclusive (xsd:integer OR xsd:decimal OR xsd:double) ;
+    #// rdfs:subPropertyOf shex:numericFacet;
+  shex:minlength xsd:integer? ;
+    #// rdfs:subPropertyOf shex:stringFacet;
+  shex:nodeKind @shex:NodeKind? ;
+  shex:pattern xsd:string? ;
+    #// rdfs:subPropertyOf shex:stringFacet;
+  shex:totaldigits xsd:integer? ;
+    #// rdfs:subPropertyOf shex:numericFacet;
+  shex:values (IRI OR @shex:Stem OR @shex:StemRange)* ;
+}
+shex:NodeKind {
+  [shex:bnode shex:iri shex:literal shex:nonliteral]
+}
+shex:OneOf {
+  #// rdfs:subClassOf shex:TripleExpression;
+  shex:annotation @shex:Annotation* ;
+  shex:expressions @shex:TripleExpression+ ;
+  shex:max xsd:integer ;
+  shex:min xsd:integer ;
+  shex:semActs @shex:SemAct* ;
+}
+shex:Schema {
+  shex:shapes @shex:ShapeExpression? ;
+  shex:start @shex:ShapeExpression? ;
+  shex:startActs @shex:SemAct* ;
+}
+shex:SemAct {
+  shex:code xsd:string ;
+  shex:name IRI ;
+}
+shex:Shape {
+  #// rdfs:subClassOf shex:ShapeExpression;
+  shex:closed xsd:boolean? ;
+  shex:expression @shex:TripleExpression* ;
+  shex:extra IRI* ;
+}
+shex:ShapeAnd {
+  #// rdfs:subClassOf shex:ShapeExpression;
+  shex:shapeExprs @shex:ShapeExpression+ ;
+    #// rdfs:subPropertyOf shex:shapeExpr;
+}
+shex:ShapeExpression {
+  (&shex:NodeConstraint | &shex:Shape | &shex:ShapeAnd | &shex:ShapeExternal | &shex:ShapeNot | &shex:ShapeOr)
+}
+shex:ShapeExternal {
+  #// rdfs:subClassOf shex:ShapeExpression;
+}
+shex:ShapeNot {
+  #// rdfs:subClassOf shex:ShapeExpression;
+  shex:shapeExpr @shex:ShapeExpression ;
+}
+shex:ShapeOr {
+  #// rdfs:subClassOf shex:ShapeExpression;
+  shex:shapeExprs @shex:ShapeExpression+ ;
+    #// rdfs:subPropertyOf shex:shapeExpr;
+}
+shex:Stem {
+  shex:stem (xsd:anyUri OR @shex:Wildcard) ;
+}
+shex:StemRange {
+  shex:exclusion (IRI OR @shex:Stem)* ;
+  shex:stem (xsd:anyUri OR @shex:Wildcard) ;
+  (&shex:IriStem | &shex:LanguageStem | &shex:LiteralStem)
+}
+shex:TripleConstraint {
+  #// rdfs:subClassOf shex:TripleExpression;
+  shex:annotation @shex:Annotation* ;
+  shex:inverse xsd:boolean? ;
+  shex:max xsd:integer ;
+  shex:min xsd:integer ;
+  shex:predicate IRI ;
+  shex:semActs @shex:SemAct* ;
+  shex:valueExpr @shex:ShapeExpression ;
+}
+shex:TripleExpression {
+  (&shex:EachOf | &shex:OneOf | &shex:TripleConstraint)
+}
+shex:Wildcard {
+}
