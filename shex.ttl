@@ -6,11 +6,11 @@
 # CSVM Ontology definition
 shex: a owl:Ontology;
   dc:title "Shape Expression Vocabulary"@en;
-  dc:description """This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes."""@en;
-  dc:date "2017-03-24"^^xsd:date;
+  dc:description """This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex-semantics]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes."""@en;
+  dc:date "2017-04-12"^^xsd:date;
   dc:imports ;
-  owl:versionInfo <https://github.com/shexSpec/shexspec.github.io/commit/eca54229108ddb7c7c5b6a8e0634bd31aa86dcad>;
-  rdfs:seeAlso <https://shexspec.github.io/spec>;
+  owl:versionInfo <https://github.com/shexSpec/shexspec.github.io/commit/07d3e76be478d8c7f8c2e9d3b1f95635890239e0>;
+  rdfs:seeAlso <http://shex.io/shex-semantics>;
   .
 
 
@@ -82,7 +82,7 @@ shex:ShapeExternal a rdfs:Class;
   rdfs:isDefinedBy shex: .
 shex:ShapeNot a rdfs:Class;
   rdfs:label "Shape Not"@en;
-  rdfs:comment """A ShapeNot is satisfied when it’s included ShapeExpression is not satisfied."""@en;
+  rdfs:comment """A ShapeNot is satisfied when it's included ShapeExpression is not satisfied."""@en;
   rdfs:subClassOf shex:ShapeExpression;
   rdfs:isDefinedBy shex: .
 shex:ShapeOr a rdfs:Class;
@@ -161,6 +161,12 @@ shex:extra a rdf:Property;
   rdfs:domain shex:Shape;
   rdfs:range rdfs:Resource;
   rdfs:isDefinedBy shex: .
+shex:flags a rdf:Property;
+  rdfs:label "flags"@en;
+  rdfs:comment """Regular expression flags"""@en;
+  rdfs:domain shex:NodeConstraint;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy shex: .
 shex:fractiondigits a rdf:Property;
   rdfs:label "fraction digits"@en;
   rdfs:comment """for "fractiondigits" constraints, v is less than or equals the number of digits to the right of the decimal place in the XML Schema canonical form[xmlschema-2] of the value of n, ignoring trailing zeros."""@en;
@@ -183,7 +189,7 @@ shex:length a rdf:Property;
   rdfs:isDefinedBy shex: .
 shex:max a rdf:Property;
   rdfs:label "maximum cardinality"@en;
-  rdfs:comment """Maximum number of times this TripleExpression may match; -1 for “*”"""@en;
+  rdfs:comment """Maximum number of times this TripleExpression may match; -1 for "*""""@en;
   rdfs:domain [ owl:unionOf (shex:EachOf shex:OneOf shex:TripleConstraint)];
   rdfs:range xsd:integer;
   rdfs:isDefinedBy shex: .

@@ -6,7 +6,7 @@
     <script class="remove">
 var respecConfig = {
     localBiblio: {
-      "shex": {
+      "shex-semantics": {
         "authors": [
           "Eric Prud'hommeaux",
           "Iovka Boneva",
@@ -14,7 +14,7 @@ var respecConfig = {
           "Gregg Kellogg"
         ],
         "title": "Shape Expressions Language",
-        "href" : "https://shexspec.github.io/spec",
+        "href" : "http://shex.io/shex-semantics",
         "rawDate": "2016-12-22",
         "status" : "CG-NOTE",
         "publisher": "W3C"
@@ -22,7 +22,8 @@ var respecConfig = {
     },
     specStatus: "base",
     shortName: "shexns",
-    publishDate:  "2017-03-24",
+    publishDate:  "2017-04-12",
+    thisVersion:    "http://www.w3.org/ns/shex",
     edDraftURI: "http://shexspec.github.io/ns/",
     // lcEnd: "3000-01-01",
     // crEnd: "3000-01-01",
@@ -88,9 +89,8 @@ var respecConfig = {
       <p>This document describes the
         <span property="dc:title">Shape Expression Vocabulary</span>
         and Term definitions used
-        for creating Metadata descriptions for Tabular Data. This document provides the RDFS [[RDF-SCHEMA]] vocabulary definition for terms defined
-        in [[tabular-metadata]] and a description of the JSON-LD context definition for use with
-        defining metadata documents.</p>
+        for describing Shape Expressions [[shex-semantics]]. This document provides the RDFS [[RDF-SCHEMA]] vocabulary definition and a description of the JSON-LD context definition for use with
+        defining shape expressions.</p>
       <p>Alternate versions of the vocabulary definition exist in
         <a rel="alternate" href="shex.ttl">Turtle</a> and
         <a rel="alternate" href="shex.jsonld">JSON-LD</a>,
@@ -98,11 +98,11 @@ var respecConfig = {
         <!--These versions may also be retrieved from <code>FIXME</code> using an appropiate HTTP <em>Accept</em> header.-->
       </p>
       <dl>
-        <dt>Published:</dt><dd><time property="dc:date">2017-03-24</time></dd>
+        <dt>Published:</dt><dd><time property="dc:date">2017-04-12</time></dd>
         <dt>Version Info:</dt>
-        <dd><a href="https://github.com/shexSpec/shexspec.github.io/commit/eca54229108ddb7c7c5b6a8e0634bd31aa86dcad" property="owl:versionInfo">https://github.com/shexSpec/shexspec.github.io/commit/eca54229108ddb7c7c5b6a8e0634bd31aa86dcad</a></dd>
+        <dd><a href="https://github.com/shexSpec/shexspec.github.io/commit/07d3e76be478d8c7f8c2e9d3b1f95635890239e0" property="owl:versionInfo">https://github.com/shexSpec/shexspec.github.io/commit/07d3e76be478d8c7f8c2e9d3b1f95635890239e0</a></dd>
         <dt>See Also:</dt>
-          <dd><a href="https://shexspec.github.io/spec" property="rdfs:seeAlso">https://shexspec.github.io/spec</a></dd>
+          <dd><a href="http://shex.io/shex-semantics" property="rdfs:seeAlso">http://shex.io/shex-semantics</a></dd>
       </dl>
     </section>
     <section id="sotd">
@@ -112,11 +112,11 @@ var respecConfig = {
     </section>
     <section>
       <h2>Introduction</h2>
-      <p property="dc:description">This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes.</p>
+      <p property="dc:description">This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex-semantics]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes.</p>
       <p>This specification makes use of the following namespaces:</p>
       <dl class="terms">
         <dt><code>shex</code>:</dt>
-        <dd><code>http://shexspec.github.io/ns/</code></dd>
+        <dd><code>http://www.w3.org/ns/shex#</code></dd>
         <dt><code>rdf</code>:</dt>
         <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
         <dt><code>rdfs</code>:</dt>
@@ -266,7 +266,7 @@ var respecConfig = {
         <tr><td class="bold">ShapeNot</td>
           <td resource="shex:ShapeNot" typeof="rdfs:Class">
             <em property="rdfs:label">Shape Not</em>
-            <p property="rdfs:comment">A ShapeNot is satisfied when it’s included ShapeExpression is not satisfied.</p>
+            <p property="rdfs:comment">A ShapeNot is satisfied when it's included ShapeExpression is not satisfied.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
               <dl class="terms">
                   <dt>rdfs:subClassOf</dt>
@@ -447,6 +447,19 @@ var respecConfig = {
               </dl>
           </td>
         </tr>
+        <tr><td class="bold">flags</td>
+          <td resource="shex:flags" typeof="rdf:Property">
+            <em property="rdfs:label">flags</em>
+            <p property="rdfs:comment">Regular expression flags</p>
+            <span property="rdfs:isDefinedBy" resource="shex:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
+          </td>
+        </tr>
         <tr><td class="bold">fractiondigits</td>
           <td resource="shex:fractiondigits" typeof="rdf:Property">
             <em property="rdfs:label">fraction digits</em>
@@ -493,7 +506,7 @@ var respecConfig = {
         <tr><td class="bold">max</td>
           <td resource="shex:max" typeof="rdf:Property">
             <em property="rdfs:label">maximum cardinality</em>
-            <p property="rdfs:comment">Maximum number of times this TripleExpression may match; -1 for “*”</p>
+            <p property="rdfs:comment">Maximum number of times this TripleExpression may match; -1 for "*"</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
               <dl class="terms">
                   <dt>rdfs:range</dt>
@@ -1079,6 +1092,10 @@ var respecConfig = {
             shex:extra
             with string values interpreted as @id
         </dd>
+        <dt>flags</dt>
+        <dd>
+            shex:flags
+        </dd>
         <dt>fractiondigits</dt>
         <dd>
             shex:fractiondigits
@@ -1244,10 +1261,6 @@ var respecConfig = {
         <dt>type</dt>
         <dd>
             @type
-        </dd>
-        <dt>uri</dt>
-        <dd>
-            @id
         </dd>
         <dt>value</dt>
         <dd>

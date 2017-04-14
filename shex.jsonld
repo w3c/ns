@@ -15,7 +15,6 @@
     "id": "@id",
     "language": "@language",
     "type": "@type",
-    "uri": "@id",
     "value": "@value",
     "Annotation": "shex:Annotation",
     "EachOf": "shex:EachOf",
@@ -70,6 +69,10 @@
     "extra": {
       "@id": "shex:extra",
       "@type": "@id"
+    },
+    "flags": {
+      "@id": "shex:flags",
+      "@language": null
     },
     "fractiondigits": {
       "@id": "shex:fractiondigits",
@@ -273,12 +276,12 @@
       "en": "Shape Expression Vocabulary"
     },
     "dc:description": {
-      "en": "This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes."
+      "en": "This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex-semantics]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes."
     },
-    "dc:date": "2017-03-24",
-    "owl:versionInfo": "https://github.com/shexSpec/shexspec.github.io/commit/eca54229108ddb7c7c5b6a8e0634bd31aa86dcad",
+    "dc:date": "2017-04-12",
+    "owl:versionInfo": "https://github.com/shexSpec/shexspec.github.io/commit/07d3e76be478d8c7f8c2e9d3b1f95635890239e0",
     "rdfs:seeAlso": [
-      "https://shexspec.github.io/spec"
+      "http://shex.io/shex-semantics"
     ],
     "rdfs_classes": [
       {
@@ -437,7 +440,7 @@
           "en": "Shape Not"
         },
         "rdfs:comment": {
-          "en": "A ShapeNot is satisfied when it’s included ShapeExpression is not satisfied."
+          "en": "A ShapeNot is satisfied when it's included ShapeExpression is not satisfied."
         },
         "rdfs:subClassOf": "shex:ShapeExpression"
       },
@@ -618,6 +621,18 @@
         "rdfs:range": "rdfs:Resource"
       },
       {
+        "@id": "shex:flags",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "flags"
+        },
+        "rdfs:comment": {
+          "en": "Regular expression flags"
+        },
+        "rdfs:domain": "shex:NodeConstraint",
+        "rdfs:range": "xsd:string"
+      },
+      {
         "@id": "shex:fractiondigits",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -662,7 +677,7 @@
           "en": "maximum cardinality"
         },
         "rdfs:comment": {
-          "en": "Maximum number of times this TripleExpression may match; -1 for “*”"
+          "en": "Maximum number of times this TripleExpression may match; -1 for \"*\""
         },
         "rdfs:domain": {
           "owl:unionOf": [
