@@ -2,5 +2,6 @@ RewriteEngine On
 RewriteBase  /ns/sosa/
 RewriteCond  %{REQUEST_URI}  !/ns/sosa/Overview.*
 RewriteCond  %{REQUEST_URI}  !/ns/sosa/om.*
+RewriteCond  %{REQUEST_URI}  !/ns/sosa/oboe.*
 RewriteCond  %{REQUEST_URI}  /ns/sosa/(.*)(#.*)?
 RewriteRule  ^(.*)$  /ns/sosa/Overview$2 [P]
