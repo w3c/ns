@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase  /ns/time/gregorian/
+RewriteCond  %{REQUEST_URI}  !/ns/time/gregorian/Overview.*
+RewriteCond  %{REQUEST_URI}  /ns/time/gregorian/(.*)(#.*)?
+RewriteRule  ^(.*)$  /ns/time/gregorian/Overview$2 [P] 
