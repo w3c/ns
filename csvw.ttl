@@ -45,9 +45,9 @@
 csvw: a owl:Ontology;
   dc:title "CSVW Namespace Vocabulary Terms"@en;
   dc:description """This document describes the RDFS vocabulary description used in the Metadata Vocabulary for Tabular Data [[tabular-metadata]] along with the default JSON-LD Context."""@en;
-  dc:date "2016-05-20"^^xsd:date;
+  dc:date "2017-05-23"^^xsd:date;
   dc:imports <http://www.w3.org/ns/prov>;
-  owl:versionInfo <https://github.com/w3c/csvw/commit/1b226079db505b7c24043759a140cd9ea9110bbb>;
+  owl:versionInfo <https://github.com/w3c/csvw/commit/94898e9f0b073aa09b3334ded2eb5ab3b87b37a9>;
   rdfs:seeAlso <http://www.w3.org/TR/tabular-metadata>;
   .
 
@@ -494,7 +494,7 @@ csvw:JSON a rdfs:Datatype;
 csvw:uriTemplate a rdfs:Datatype;
   rdfs:label "uri template"@en;
   rdfs:comment """"""@en;
-  rdfs:subClassOf xsd:anyURI;
+  rdfs:subClassOf xsd:string;
   rdfs:isDefinedBy csvw: .
 
 # Instance definitions
