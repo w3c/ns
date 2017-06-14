@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteBase /ns/solid/
+
+
+RewriteRule ^app.ttl$	  http://solid.github.io/vocab/solid-app.ttl [P.L]
+RewriteRule ^terms.ttl$	  http://solid.github.io/vocab/solid-terms.ttl [R.L]
+
+#RewriteRule ^app\.(.*)$	  http://solid.github.io/vocab/solid-app.$1 [P.L]
+##RewriteRule ^terms\.(.*)$ http://solid.github.io/vocab/solid-terms.$1 [P.L]
+
+RewriteRule ^$ http://github.com/solid/vocab [R=303.L]
