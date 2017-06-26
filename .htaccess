@@ -74,3 +74,7 @@ ForceType 'application/ld+json'
 Header set Access-Control-Allow-Origin "*"
 </Files>
 
+# added phila@w3.org (phil@philarchger.org) 2017-06-26 for BigDataEurope Project
+# Vocabulary Contact is Aad Versteden of TenForce <aad.versteden@gmail.com>
+#
+RewriteRule ^dco/(.*)$ https://mu.semte.ch/vocabularies/dco/$1 [P,L]
