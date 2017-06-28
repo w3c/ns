@@ -77,4 +77,4 @@ Header set Access-Control-Allow-Origin "*"
 # added phila@w3.org (phil@philarcher.org) 2017-06-28 for BigDataEurope Project
 # Vocabulary Contact is Aad Versteden of TenForce and the mu.semte.ch endeavour <aad.versteden@gmail.com>
 #
-RewriteRule ^bde/(.*)$ http://w3.semte.ch/ns/bde/$1 [P,L]
+RewriteRule ^bde/(.*)$ https://w3.semte.ch/ns/bde/$1 [P,L]
