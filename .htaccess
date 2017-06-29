@@ -92,5 +92,5 @@ RewriteRule ^ldt/core/document-hierarchy/domain(.*)$ https://raw.githubuserconte
 RewriteRule ^ldt/core/document-hierarchy/templates(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/dht.ttl$1 [P,L]
 RewriteRule ^ldt/core/topic-hierarchy/templates(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/tht.ttl$1 [P,L]
 # Hopefully it's now safe to include this one
-RewriteRule ^ldt(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ldt.ttl$1 [P,L]
+RewriteRule ^ldt(.*)$ https://w3.semte.ch/ns/bde/$1 [P,L]
 
