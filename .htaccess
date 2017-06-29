@@ -74,7 +74,23 @@ ForceType 'application/ld+json'
 Header set Access-Control-Allow-Origin "*"
 </Files>
 
-# added phila@w3.org (phil@philarcher.org) 2017-06-28 for BigDataEurope Project
+#### Big Data Europe #####
+# added by phila (phil@philarcher.org) 2017-06-28 for BigDataEurope Project
 # Vocabulary Contact is Aad Versteden of TenForce and the mu.semte.ch endeavour <aad.versteden@gmail.com>
 # See https://lists.w3.org/Archives/Team/team-strat/2017Jun/0064.html
 RewriteRule ^bde/(.*)$ https://w3.semte.ch/ns/bde/$1 [P,L]
+
+
+### Declarative LD Apps #####
+# added by phila 2017-06-29 on behalf of the Declarative Linked Data Apps CG https://www.w3.org/community/declarative-apps/
+# Primary contact is Martynas Jusevičius <martynas@atomgraph.com>
+# See
+# Start with specific vocabs, note that all these begin with ^ldt
+RewriteRule ^ldt/core/domain(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/c.ttl$1 [P,L]
+RewriteRule ^ldt/core/templates(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ct.ttl$1 [P,L]
+RewriteRule ^ldt/core/document-hierarchy/domain(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/dh.ttl$1 [P,L]
+RewriteRule ^ldt/core/document-hierarchy/templates(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/dht.ttl$1 [P,L]
+RewriteRule ^ldt/core/topic-hierarchy/templates(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/tht.ttl$1 [P,L]
+# Hopefully it's now safe to include this one
+RewriteRule ^ldt(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ldt.ttl$1 [P,L]
+
