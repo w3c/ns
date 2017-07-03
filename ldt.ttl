@@ -1,3 +1,0 @@
-@prefix ldt: <http://www.w3.org/ns/ldt#>.
-# Reserving the namespace. See phila for details
-# This is for Linked Data Templates, https://github.com/AtomGraph/Linked-Data-Templates/blob/master/XML%20London%202016%20paper/Linked%20Data%20Templates.pdf
