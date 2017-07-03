@@ -86,11 +86,11 @@ RewriteRule ^bde/(.*)$ https://w3.semte.ch/ns/bde/$1 [P,L]
 # Primary contact is Martynas Jusevičius <martynas@atomgraph.com>
 # See
 # Start with specific vocabs, note that all these begin with ^ldt
-RewriteRule ^ldt/core/domain(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/c.ttl$1 [P,L]
-RewriteRule ^ldt/core/templates(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ct.ttl$1 [P,L]
-RewriteRule ^ldt/core/document-hierarchy/domain(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/dh.ttl$1 [P,L]
-RewriteRule ^ldt/core/document-hierarchy/templates(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/dht.ttl$1 [P,L]
-RewriteRule ^ldt/core/topic-hierarchy/templates(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/tht.ttl$1 [P,L]
+RewriteRule ^ldt/core/domain$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/c.ttl [P,L]
+RewriteRule ^ldt/core/templates$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ct.ttl [P,L]
+RewriteRule ^ldt/core/document-hierarchy/domain$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/dh.ttl [P,L]
+RewriteRule ^ldt/core/document-hierarchy/templates$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/dht.ttl [P,L]
+RewriteRule ^ldt/core/topic-hierarchy/templates$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/tht.ttl [P,L]
 # Hopefully it's now safe to include this one
-RewriteRule ^ldt(.*)$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ldt.ttl$1 [P,L]
+RewriteRule ^ldt$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ldt.ttl [P,L]
 
