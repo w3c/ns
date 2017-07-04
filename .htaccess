@@ -84,7 +84,7 @@ RewriteRule ^bde/(.*)$ https://w3.semte.ch/ns/bde/$1 [P,L]
 ### Declarative LD Apps #####
 # added by phila (phil@philarcher.org) 2017-06-29 on behalf of the Declarative Linked Data Apps CG https://www.w3.org/community/declarative-apps/
 # Primary contact is Martynas Jusevičius <martynas@atomgraph.com>
-# See
+# See https://lists.w3.org/Archives/Team/team-strat/2017Jul/0000.html
 # Start with specific vocabs, note that all these begin with ^ldt
 RewriteRule ^ldt/core/domain$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/c.ttl [P]
 RewriteRule ^ldt/core/templates$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ct.ttl [P]
