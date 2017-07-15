@@ -257,7 +257,7 @@
 :inbox
     a rdf:Property;
     rdfs:comment "Links a resource to a container where notifications for the resource can be created and discovered.";
-    vs:term_status "working-draft";
+    vs:term_status "stable";
     rdfs:isDefinedBy <https://www.w3.org/TR/ldn/>;
     rdfs:label "inbox";
     dcterms:issued "2016-09-29"^^xsd:date;

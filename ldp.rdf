@@ -248,7 +248,7 @@
 
   <rdf:Property rdf:about="http://www.w3.org/ns/ldp#inbox">
     <rdfs:comment>Links a resource to a container where notifications for the resource can be created and discovered.</rdfs:comment>
-    <vs:term_status>working-draft</vs:term_status>
+    <vs:term_status>stable</vs:term_status>
     <rdfs:isDefinedBy rdf:resource="https://www.w3.org/TR/ldn/"/>
     <rdfs:label>inbox</rdfs:label>
     <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-09-29</dcterms:issued>
