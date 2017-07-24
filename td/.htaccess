@@ -1,0 +1,17 @@
+<Files *.ttl>
+  Header set Content-type "text/turtle"
+  Header set Access-Control-Allow-Origin "*"
+</Files>
+<Files *.jsonld>
+  Header set Content-type "application/json+ld"
+  Header set Access-Control-Allow-Origin "*"
+</Files>
+<Files *.json>
+  Header set Content-type "application/json"
+  Header set Access-Control-Allow-Origin "*"
+</Files>
+<Files *.js.gz>
+  Header set Content-type "text/javascript"
+  Header set Access-Control-Allow-Origin "*"
+</Files>
+
