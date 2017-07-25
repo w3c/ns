@@ -1,0 +1,44 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.oipf.contentaccessdownload+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.oipf.contentaccessstreaming+xml#>.
+@prefix v: <../media-types/application/vnd.oipf.cspg-hexbinary#>.
+@prefix n1: <../media-types/application/vnd.oipf.dae.svg+xml#>.
+@prefix n2: <../media-types/application/vnd.oipf.dae.xhtml+xml#>.
+@prefix n3: <../media-types/application/vnd.oipf.mippvcontrolmessage+xml#>.
+@prefix n4: <../media-types/application/vnd.oipf.pae.gem#>.
+@prefix n5: <../media-types/application/vnd.oipf.spdiscovery+xml#>.
+@prefix n6: <../media-types/application/vnd.oipf.spdlist+xml#>.
+@prefix n7: <../media-types/application/vnd.oipf.ueprofile+xml#>.
+@prefix n8: <../media-types/application/vnd.oipf.userprofile+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+n4: reg:xref :.
+
+n5: reg:xref :.
+
+n6: reg:xref :.
+
+n7: reg:xref :.
+
+n8: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Claire_DEsclercs";
+    reg:name "Claire D'Esclercs";
+    reg:updated "2011-02-25";
+    reg:uri "mailto:contact&oipf.tv".

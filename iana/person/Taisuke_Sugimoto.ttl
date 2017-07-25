@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.vcx#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Taisuke_Sugimoto";
+    reg:name "Taisuke Sugimoto";
+    reg:updated "1999-04-19";
+    reg:uri "mailto:sugimototi&noanet.nttdata.co.jp".

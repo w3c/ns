@@ -1,0 +1,62 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.oasis.opendocument.chart-template#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.oasis.opendocument.chart#>.
+@prefix v: <../media-types/application/vnd.oasis.opendocument.database#>.
+@prefix n1: <../media-types/application/vnd.oasis.opendocument.formula-template#>.
+@prefix n2: <../media-types/application/vnd.oasis.opendocument.formula#>.
+@prefix n3: <../media-types/application/vnd.oasis.opendocument.graphics-template#>.
+@prefix n4: <../media-types/application/vnd.oasis.opendocument.graphics#>.
+@prefix n5: <../media-types/application/vnd.oasis.opendocument.image-template#>.
+@prefix n6: <../media-types/application/vnd.oasis.opendocument.image#>.
+@prefix n7: <../media-types/application/vnd.oasis.opendocument.presentation-template#>.
+@prefix n8: <../media-types/application/vnd.oasis.opendocument.presentation#>.
+@prefix n9: <../media-types/application/vnd.oasis.opendocument.spreadsheet-template#>.
+@prefix n10: <../media-types/application/vnd.oasis.opendocument.spreadsheet#>.
+@prefix n11: <../media-types/application/vnd.oasis.opendocument.text-master#>.
+@prefix n12: <../media-types/application/vnd.oasis.opendocument.text-template#>.
+@prefix n13: <../media-types/application/vnd.oasis.opendocument.text-web#>.
+@prefix n14: <../media-types/application/vnd.oasis.opendocument.text#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+n4: reg:xref :.
+
+n5: reg:xref :.
+
+n6: reg:xref :.
+
+n7: reg:xref :.
+
+n8: reg:xref :.
+
+n9: reg:xref :.
+
+n10: reg:xref :.
+
+n11: reg:xref :.
+
+n12: reg:xref :.
+
+n13: reg:xref :.
+
+n14: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "OASIS";
+    reg:name "OASIS";
+    reg:updated "2009-01-16";
+    reg:uri "mailto:tc-admin&oasis-open.org".

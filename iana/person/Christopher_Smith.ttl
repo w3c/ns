@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.artsquare#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Christopher_Smith";
+    reg:name "Christopher Smith";
+    reg:updated "2014-08-01";
+    reg:uri "mailto:christopher.smith+iana&artsquare.com".

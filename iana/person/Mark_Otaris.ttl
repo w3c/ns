@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.openblox.game-binary#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.openblox.game+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Mark_Otaris";
+    reg:name "Mark Otaris";
+    reg:updated "2015-08-28";
+    reg:uri "mailto:mark.otaris&openmailbox.org".

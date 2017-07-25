@@ -1,0 +1,23 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.japannet-directory-service#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.japannet-payment-wakeup#>.
+@prefix v: <../media-types/application/vnd.japannet-registration-wakeup#>.
+@prefix n1: <../media-types/application/vnd.japannet-verification-wakeup#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Kiyofusa_Fujii";
+    reg:name "Kiyofusa Fujii";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:kfujii&japannet.or.jp".

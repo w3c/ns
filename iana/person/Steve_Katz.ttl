@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix eshop: <../media-types/application/eshop#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+eshop: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Steve_Katz";
+    reg:name "Steve Katz";
+    reg:updated "1995-06-19";
+    reg:uri "mailto:skatz&eshop.com".

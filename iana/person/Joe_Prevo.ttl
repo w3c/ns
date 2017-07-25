@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.micrografx-igx#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.micrografx.flo#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Joe_Prevo";
+    reg:name "Joe Prevo";
+    reg:updated "2002-01-20";
+    reg:uri "mailto:joe&prevo.com".

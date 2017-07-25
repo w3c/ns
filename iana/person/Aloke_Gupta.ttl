@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.hp-hpid#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Aloke_Gupta";
+    reg:name "Aloke Gupta";
+    reg:updated "1999-04-19";
+    reg:uri "mailto:Aloke_Gupta&ex.cv.hp.com".

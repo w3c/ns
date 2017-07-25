@@ -1,0 +1,44 @@
+@prefix : <#>.
+@prefix ses: <../media-types/application/session-info#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/application/vnd.3gpp-prose-pc3ch+xml#>.
+@prefix vn: <../media-types/application/vnd.3gpp-prose+xml#>.
+@prefix v: <../media-types/application/vnd.3gpp.access-transfer-events+xml#>.
+@prefix n1: <../media-types/application/vnd.3gpp.GMOP+xml#>.
+@prefix n2: <../media-types/application/vnd.3gpp.mid-call+xml#>.
+@prefix n3: <../media-types/application/vnd.3gpp.sms+xml#>.
+@prefix n4: <../media-types/application/vnd.3gpp.srvcc-ext+xml#>.
+@prefix n5: <../media-types/application/vnd.3gpp.SRVCC-info+xml#>.
+@prefix n6: <../media-types/application/vnd.3gpp.state-and-event-info+xml#>.
+@prefix n7: <../media-types/application/vnd.3gpp.ussd+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+ses: reg:xref :.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+n4: reg:xref :.
+
+n5: reg:xref :.
+
+n6: reg:xref :.
+
+n7: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Frederic_Firmin";
+    reg:name "Frederic Firmin";
+    reg:updated "2017-07-18";
+    reg:uri "mailto:Frederic.Firmin&etsi.org".

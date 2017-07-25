@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.oma.scidm.messages+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Wenjun_Zeng";
+    reg:name "Wenjun Zeng";
+    reg:updated "2009-12-15";
+    reg:uri "mailto:zengw&huawei.com".

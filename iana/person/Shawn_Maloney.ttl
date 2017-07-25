@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.ms-3mfdocument#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Shawn_Maloney";
+    reg:name "Shawn Maloney";
+    reg:updated "2014-04-11";
+    reg:uri "mailto:shawnmal&microsoft.com".

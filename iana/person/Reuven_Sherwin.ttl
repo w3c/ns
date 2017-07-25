@@ -1,0 +1,26 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.xmpie.cpkg#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.xmpie.dpkg#>.
+@prefix v: <../media-types/application/vnd.xmpie.plan#>.
+@prefix n1: <../media-types/application/vnd.xmpie.ppkg#>.
+@prefix n2: <../media-types/application/vnd.xmpie.xlim#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Reuven_Sherwin";
+    reg:name "Reuven Sherwin";
+    reg:updated "2007-03-20";
+    reg:uri "mailto:reuven.sherwin&xmpie.com".

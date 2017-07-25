@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix mbm: <../media-types/application/mbms-schedule+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+mbm: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Eric_Turcotte";
+    reg:name "Eric Turcotte";
+    reg:updated "2013-07-23";
+    reg:uri "mailto:eric.turcotte&ericsson.com".

@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd-wap-wmlc#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.wap-wbxml#>.
+@prefix v: <../media-types/application/vnd.wap.wmlscriptc#>.
+@prefix n1: <../media-types/image/vnd-wap-wbmp#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix n2: <../media-types/text/vnd.wap-wml#>.
+@prefix n3: <../media-types/text/vnd.wap.wmlscript#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+medi:n0 reg:person :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+:
+    reg:id "Peter_Stark";
+    reg:name "Peter Stark";
+    reg:updated "1999-03-19";
+    reg:uri "mailto:stark&uplanet.com".

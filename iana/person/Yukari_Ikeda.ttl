@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.mfmp#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Yukari_Ikeda";
+    reg:name "Yukari Ikeda";
+    reg:updated "2004-04-20";
+    reg:uri "mailto:ikeda&tokoyo.faith.co.jp".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.osa.netdeploy#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Steven_Klos";
+    reg:name "Steven Klos";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:stevek&osa.com".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.vd-study#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Luc_Rogge";
+    reg:name "Luc Rogge";
+    reg:updated "2006-05-18";
+    reg:uri "mailto:rluc&villagedata.com".

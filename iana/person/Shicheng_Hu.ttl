@@ -1,0 +1,53 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.etsi.aoc+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.etsi.cug+xml#>.
+@prefix v: <../media-types/application/vnd.etsi.iptvcommand+xml#>.
+@prefix n1: <../media-types/application/vnd.etsi.iptvdiscovery+xml#>.
+@prefix n2: <../media-types/application/vnd.etsi.iptvprofile+xml#>.
+@prefix n3: <../media-types/application/vnd.etsi.iptvsad-bc+xml#>.
+@prefix n4: <../media-types/application/vnd.etsi.iptvsad-cod+xml#>.
+@prefix n5: <../media-types/application/vnd.etsi.iptvsad-npvr+xml#>.
+@prefix n6: <../media-types/application/vnd.etsi.iptvueprofile+xml#>.
+@prefix n7: <../media-types/application/vnd.etsi.mcid+xml#>.
+@prefix n8: <../media-types/application/vnd.etsi.sci+xml#>.
+@prefix n9: <../media-types/application/vnd.etsi.simservs+xml#>.
+@prefix n10: <../media-types/application/vnd.etsi.tsl.der#>.
+@prefix n11: <../media-types/application/vnd.etsi.tsl+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+n4: reg:xref :.
+
+n5: reg:xref :.
+
+n6: reg:xref :.
+
+n7: reg:xref :.
+
+n8: reg:xref :.
+
+n9: reg:xref :.
+
+n10: reg:xref :.
+
+n11: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Shicheng_Hu";
+    reg:name "Shicheng Hu";
+    reg:updated "2009-09-15";
+    reg:uri "mailto:shicheng.hu&etsi.org".

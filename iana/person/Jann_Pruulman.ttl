@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.fut-misnet#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Jann_Pruulman";
+    reg:name "Jann Pruulmann";
+    reg:updated "1998-12-19";
+    reg:uri "mailto:jaan&fut.ee".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.oma.dd2+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Jun_Sato";
+    reg:name "Jun Sato";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:junn.sato&toshiba.co.jp".

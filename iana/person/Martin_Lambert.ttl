@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.sealed-tiff#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.sealed.net#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Martin_Lambert";
+    reg:name "Martin Lambert";
+    reg:updated "2006-03-27";
+    reg:uri "mailto:martin.lambert&sealedmedia.com".

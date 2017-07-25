@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.adobe.formscentral.fcdt#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Chris_Solc";
+    reg:name "Chris Solc";
+    reg:updated "2012-02-16";
+    reg:uri "mailto:csolc&adobe.com".

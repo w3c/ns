@@ -1,0 +1,71 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.oma.bcast.associated-procedure-parameter+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.oma.bcast.drm-trigger+xml#>.
+@prefix v: <../media-types/application/vnd.oma.bcast.imd+xml#>.
+@prefix n1: <../media-types/application/vnd.oma.bcast.ltkm#>.
+@prefix n2: <../media-types/application/vnd.oma.bcast.notification+xml#>.
+@prefix n3: <../media-types/application/vnd.oma.bcast.provisioningtrigger#>.
+@prefix n4: <../media-types/application/vnd.oma.bcast.sgboot#>.
+@prefix n5: <../media-types/application/vnd.oma.bcast.sgdd+xml#>.
+@prefix n6: <../media-types/application/vnd.oma.bcast.sgdu#>.
+@prefix n7: <../media-types/application/vnd.oma.bcast.simple-symbol-container#>.
+@prefix n8: <../media-types/application/vnd.oma.bcast.smartcard-trigger+xml#>.
+@prefix n9: <../media-types/application/vnd.oma.bcast.sprov+xml#>.
+@prefix n10: <../media-types/application/vnd.oma.bcast.stkm#>.
+@prefix n11: <../media-types/application/vnd.oma.dcd#>.
+@prefix n12: <../media-types/application/vnd.oma.dcdc#>.
+@prefix n13: <../media-types/application/vnd.oma.drm.risd+xml#>.
+@prefix n14: <../media-types/application/vnd.oma.lwm2m+json#>.
+@prefix n15: <../media-types/application/vnd.oma.lwm2m+tlv#>.
+@prefix n16: <../media-types/application/vnd.oma.pal+xml#>.
+@prefix n17: <../media-types/application/vnd.oma.scidm.messages+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+n4: reg:xref :.
+
+n5: reg:xref :.
+
+n6: reg:xref :.
+
+n7: reg:xref :.
+
+n8: reg:xref :.
+
+n9: reg:xref :.
+
+n10: reg:xref :.
+
+n11: reg:xref :.
+
+n12: reg:xref :.
+
+n13: reg:xref :.
+
+n14: reg:xref :.
+
+n15: reg:xref :.
+
+n16: reg:xref :.
+
+n17: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Open_Mobile_Naming_Authority";
+    reg:name "Open Mobile Naming Authority (OMNA)";
+    reg:updated "2016-06-20";
+    reg:uri "mailto:OMA-OMNA&mail.openmobilealliance.org".

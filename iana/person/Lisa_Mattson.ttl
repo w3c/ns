@@ -1,0 +1,38 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.ims.imsccv1p1#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.ims.imsccv1p2#>.
+@prefix v: <../media-types/application/vnd.ims.imsccv1p3#>.
+@prefix n1: <../media-types/application/vnd.ims.lis.v2.result+json#>.
+@prefix n2: <../media-types/application/vnd.ims.lti.v2.toolconsumerprofile+json#>.
+@prefix n3: <../media-types/application/vnd.ims.lti.v2.toolproxy.id+json#>.
+@prefix n4: <../media-types/application/vnd.ims.lti.v2.toolproxy+json#>.
+@prefix n5: <../media-types/application/vnd.ims.lti.v2.toolsettings.simple+json#>.
+@prefix n6: <../media-types/application/vnd.ims.lti.v2.toolsettings+json#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+n4: reg:xref :.
+
+n5: reg:xref :.
+
+n6: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Lisa_Mattson";
+    reg:name "Lisa Mattson";
+    reg:updated "2015-01-08";
+    reg:uri "mailto:lmattson&imsglobal.org".

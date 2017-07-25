@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.minisoft-hp3000-save#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.wrq-hp3000-labelled#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Chris_Bartram";
+    reg:name "Chris Bartram";
+    reg:updated "1998-05-19";
+    reg:uri "mailto:RCB&3k.com".

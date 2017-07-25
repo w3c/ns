@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd-mif#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.framemaker#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Mike_Wexler";
+    reg:name "Mike Wexler";
+    reg:updated "1996-04-19";
+    reg:uri "mailto:mwexler&frame.com".

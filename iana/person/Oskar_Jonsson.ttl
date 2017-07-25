@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix sc: <../media-types/application/scaip+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+sc: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Oskar_Jonsson";
+    reg:name "Oskar Jonsson";
+    reg:updated "2014-09-16";
+    reg:uri "mailto:oskar.jonsson&mfd.se".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.ieee.1905#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Purva_R_Rajkotia";
+    reg:name "Purva R Rajkotia";
+    reg:updated "2012-06-05";
+    reg:uri "mailto:prajkoti&qca.qualcomm.com".

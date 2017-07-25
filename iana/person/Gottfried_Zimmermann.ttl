@@ -1,0 +1,26 @@
+@prefix : <#>.
+@prefix ce: <../media-types/application/cea-2018+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix urc: <../media-types/application/urc-grpsheet+xml#>.
+@prefix ur: <../media-types/application/urc-ressheet+xml#>.
+@prefix u: <../media-types/application/urc-targetdesc+xml#>.
+@prefix n1: <../media-types/application/urc-uisocketdesc+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+ce: reg:xref :.
+
+urc: reg:xref :.
+
+ur: reg:xref :.
+
+u: reg:xref :.
+
+n1: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Gottfried_Zimmermann";
+    reg:name "Gottfried Zimmermann";
+    reg:updated "2013-06-24";
+    reg:uri "mailto:gzimmermann at acm.org".

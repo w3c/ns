@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.wv.csp+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.wv.ssp+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "John_Ingi_Ingimundarson";
+    reg:name "John Ingi Ingimundarson";
+    reg:updated "2003-12-20";
+    reg:uri "mailto:jii&oz.com".

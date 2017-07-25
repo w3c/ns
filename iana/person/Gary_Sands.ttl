@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.americandynamics.acc#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Gary_Sands";
+    reg:name "Gary Sands";
+    reg:updated "2008-01-25";
+    reg:uri "mailto:gsands&tycoint.com".

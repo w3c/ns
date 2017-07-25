@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.ms-PrintDeviceCapabilities+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.ms-PrintSchemaTicket+xml#>.
+@prefix v: <../media-types/application/vnd.ms-windows.devicepairing#>.
+@prefix n1: <../media-types/application/vnd.ms-windows.nwprinting.oob#>.
+@prefix n2: <../media-types/application/vnd.ms-windows.printerpairing#>.
+@prefix n3: <../media-types/application/vnd.ms-windows.wsd.oob#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Justin_Hutchings";
+    reg:name "Justin Hutchings";
+    reg:updated "2016-01-27";
+    reg:uri "mailto:justhu at microsoft.com".

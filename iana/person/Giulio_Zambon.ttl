@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix prs: <../media-types/application/prs.hpub+zip#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+prs: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Giulio_Zambon";
+    reg:name "Giulio Zambon";
+    reg:updated "2013-11-06";
+    reg:uri "mailto:giulio&giuliozambon.org".

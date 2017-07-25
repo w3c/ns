@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.yamaha.smaf-audio#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.yamaha.smaf-phrase#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Keiichi_Shinoda";
+    reg:name "Keiichi Shinoda";
+    reg:updated "2003-07-20";
+    reg:uri "mailto:shino-k&post.yamaha.co.jp".

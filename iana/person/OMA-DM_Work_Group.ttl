@@ -1,0 +1,32 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.syncml.dm.notification#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.syncml.dm+wbxml#>.
+@prefix v: <../media-types/application/vnd.syncml.dm+xml#>.
+@prefix n1: <../media-types/application/vnd.syncml.dmddf+wbxml#>.
+@prefix n2: <../media-types/application/vnd.syncml.dmddf+xml#>.
+@prefix n3: <../media-types/application/vnd.syncml.dmtnds+wbxml#>.
+@prefix n4: <../media-types/application/vnd.syncml.dmtnds+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+n4: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "OMA-DM_Work_Group";
+    reg:name "OMA-DM Work Group";
+    reg:updated "2012-06-15";
+    reg:uri "mailto:technical-comments&openmobilealliance.org".

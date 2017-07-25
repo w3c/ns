@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.genomatix.tuxedo#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Torben_Frey";
+    reg:name "Torben Frey";
+    reg:updated "2003-10-20";
+    reg:uri "mailto:frey&genomatix.de".

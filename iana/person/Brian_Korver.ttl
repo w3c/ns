@@ -1,0 +1,23 @@
+@prefix : <#>.
+@prefix set: <../media-types/application/set-payment-initiation#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix se: <../media-types/application/set-payment#>.
+@prefix s: <../media-types/application/set-registration-initiation#>.
+@prefix n1: <../media-types/application/set-registration#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+set: reg:xref :.
+
+se: reg:xref :.
+
+s: reg:xref :.
+
+n1: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Brian_Korver";
+    reg:name "Brian Korver";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:briank&terisa.com".

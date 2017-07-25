@@ -1,0 +1,23 @@
+@prefix : <#>.
+@prefix dic: <../media-types/application/dicom+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix di: <../media-types/application/dicom+xml#>.
+@prefix dico: <../media-types/image/dicom-rle#>.
+@prefix jls: <../media-types/image/jls#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+dic: reg:xref :.
+
+di: reg:xref :.
+
+dico: reg:xref :.
+
+jls: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "David_Clunie";
+    reg:name "David Clunie";
+    reg:updated "2016-09-26";
+    reg:uri "mailto:dclunie&dclunie.com".

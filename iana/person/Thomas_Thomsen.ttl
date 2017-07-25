@@ -1,0 +1,53 @@
+@prefix : <#>.
+@prefix A2L: <../media-types/application/A2L#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix AML: <../media-types/application/AML#>.
+@prefix ATF: <../media-types/application/ATF#>.
+@prefix ATFX: <../media-types/application/ATFX#>.
+@prefix ATXML: <../media-types/application/ATXML#>.
+@prefix CDF: <../media-types/application/CDFX+XML#>.
+@prefix CEA: <../media-types/application/CEA#>.
+@prefix DCD: <../media-types/application/DCD#>.
+@prefix DII: <../media-types/application/DII#>.
+@prefix DIT: <../media-types/application/DIT#>.
+@prefix LXF: <../media-types/application/LXF#>.
+@prefix MF4: <../media-types/application/MF4#>.
+@prefix ODX: <../media-types/application/ODX#>.
+@prefix PDX: <../media-types/application/PDX#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+A2L: reg:xref :.
+
+AML: reg:xref :.
+
+ATF: reg:xref :.
+
+ATFX: reg:xref :.
+
+ATXML: reg:xref :.
+
+CDF: reg:xref :.
+
+CEA: reg:xref :.
+
+DCD: reg:xref :.
+
+DII: reg:xref :.
+
+DIT: reg:xref :.
+
+LXF: reg:xref :.
+
+MF4: reg:xref :.
+
+ODX: reg:xref :.
+
+PDX: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Thomas_Thomsen";
+    reg:name "Thomas Thomsen";
+    reg:updated "2014-12-04";
+    reg:uri "mailto:thomas.thomsen&asam.net".

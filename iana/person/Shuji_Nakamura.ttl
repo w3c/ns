@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/video/vnd.iptvforum.1dparityfec-1010#>.
+@prefix vn: <../media-types/video/vnd.iptvforum.1dparityfec-2005#>.
+@prefix v: <../media-types/video/vnd.iptvforum.2dparityfec-1010#>.
+@prefix n1: <../media-types/video/vnd.iptvforum.2dparityfec-2005#>.
+@prefix n2: <../media-types/video/vnd.iptvforum.ttsavc#>.
+@prefix n3: <../media-types/video/vnd.iptvforum.ttsmpeg2#>.
+
+medi:n0 reg:person :.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+:
+    reg:id "Shuji_Nakamura";
+    reg:name "Shuji Nakamura";
+    reg:updated "2008-02-07";
+    reg:uri "mailto:shuji&mri.co.jp".

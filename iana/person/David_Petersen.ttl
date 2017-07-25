@@ -1,0 +1,56 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.sealed-doc#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.sealed-eml#>.
+@prefix v: <../media-types/application/vnd.sealed-mht#>.
+@prefix n1: <../media-types/application/vnd.sealed-ppt#>.
+@prefix n2: <../media-types/application/vnd.sealed-xls#>.
+@prefix n3: <../media-types/application/vnd.sealedmedia.softseal-html#>.
+@prefix n4: <../media-types/application/vnd.sealedmedia.softseal-pdf#>.
+@prefix n5: <../media-types/audio/vnd.sealedmedia.softseal-mpeg#>.
+@prefix n6: <../media-types/image/vnd.sealed-png#>.
+@prefix n7: <../media-types/image/vnd.sealedmedia.softseal-gif#>.
+@prefix n8: <../media-types/image/vnd.sealedmedia.softseal-jpg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix n9: <../media-types/video/vnd.sealed-swf#>.
+@prefix n10: <../media-types/video/vnd.sealed.mpeg1#>.
+@prefix n11: <../media-types/video/vnd.sealed.mpeg4#>.
+@prefix n12: <../media-types/video/vnd.sealedmedia.softseal-mov#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+n4: reg:xref :.
+
+n5: reg:xref :.
+
+n6: reg:xref :.
+
+n7: reg:xref :.
+
+n8: reg:xref :.
+
+medi:n0 reg:person :.
+
+n9: reg:xref :.
+
+n10: reg:xref :.
+
+n11: reg:xref :.
+
+n12: reg:xref :.
+
+:
+    reg:id "David_Petersen";
+    reg:name "David Petersen";
+    reg:updated "2003-09-20";
+    reg:uri "mailto:david.petersen&sealedmedia.com".

@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.noblenet-directory#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.noblenet-sealer#>.
+@prefix v: <../media-types/application/vnd.noblenet-web#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Monty_Solomon";
+    reg:name "Monty Solomon";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:monty&noblenet.com".

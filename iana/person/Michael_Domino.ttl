@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix hyp: <../media-types/application/hyperstudio#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+hyp: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Michael_Domino";
+    reg:name "Michael Domino";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:michaeldomino&mediaone.net".

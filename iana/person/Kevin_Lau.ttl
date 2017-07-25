@@ -1,0 +1,23 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.ms-wmdrm.lic-chlg-req#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.ms-wmdrm.lic-resp#>.
+@prefix v: <../media-types/application/vnd.ms-wmdrm.meter-chlg-req#>.
+@prefix n1: <../media-types/application/vnd.ms-wmdrm.meter-resp#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Kevin_Lau";
+    reg:name "Kevin Lau";
+    reg:updated "2006-09-29";
+    reg:uri "mailto:kevinlau&microsoft.com".

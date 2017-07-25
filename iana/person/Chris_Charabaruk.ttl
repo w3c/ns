@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/image/vnd.zbrush.pcx#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Chris_Charabaruk";
+    reg:name "Chris Charabaruk";
+    reg:updated "2015-04-03";
+    reg:uri "mailto:chris&charabaruk.com".

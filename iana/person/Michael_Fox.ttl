@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/audio/vnd.nuera.ecelp4800#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/audio/vnd.nuera.ecelp7470#>.
+@prefix v: <../media-types/audio/vnd.nuera.ecelp9600#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Michael_Fox";
+    reg:name "Michael Fox";
+    reg:updated "2001-01-20";
+    reg:uri "mailto:mfox&nuera.com".

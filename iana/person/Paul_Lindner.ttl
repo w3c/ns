@@ -1,0 +1,35 @@
+@prefix : <#>.
+@prefix m: <../media-types/application/macwriteii#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix msw: <../media-types/application/msword#>.
+@prefix rtf: <../media-types/application/rtf#>.
+@prefix wor: <../media-types/application/wordperfect5.1#>.
+@prefix zip: <../media-types/application/zip#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix rt: <../media-types/text/rtf#>.
+@prefix t: <../media-types/text/tab-separated-values#>.
+@prefix qui: <../media-types/video/quicktime#>.
+
+m: reg:xref :.
+
+msw: reg:xref :.
+
+rtf: reg:xref :.
+
+wor: reg:xref :.
+
+zip: reg:xref :.
+
+medi:n0 reg:person :.
+
+rt: reg:xref :.
+
+t: reg:xref :.
+
+qui: reg:xref :.
+
+:
+    reg:id "Paul_Lindner";
+    reg:name "Paul Lindner";
+    reg:updated "1993-06-19";
+    reg:uri "mailto:lindner&mudhoney.micro.umn.edu".

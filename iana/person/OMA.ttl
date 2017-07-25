@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.oma.cab-address-book+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.oma.cab-feature-handler+xml#>.
+@prefix v: <../media-types/application/vnd.oma.cab-pcc+xml#>.
+@prefix n1: <../media-types/application/vnd.oma.cab-subs-invite+xml#>.
+@prefix n2: <../media-types/application/vnd.oma.cab-user-prefs+xml#>.
+@prefix n3: <../media-types/application/vnd.oma.push#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "OMA";
+    reg:name "Open Mobile Alliance";
+    reg:updated "2010-07-20";
+    reg:uri "mailto:technical-comments&openmobilealliance.org".

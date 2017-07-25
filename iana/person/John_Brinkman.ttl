@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.adobe.xdp+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "John_Brinkman";
+    reg:name "John Brinkman";
+    reg:updated "2007-05-22";
+    reg:uri "mailto:john.brinkman&adobe.com".

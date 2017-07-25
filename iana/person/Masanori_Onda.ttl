@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.fujixerox.ddd#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/image/vnd.fujixerox.edmics-mmr#>.
+@prefix v: <../media-types/image/vnd.fujixerox.edmics-rlc#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Masanori_Onda";
+    reg:name "Masanori Onda";
+    reg:updated "2000-02-20";
+    reg:uri "mailto:Masanori.Onda&fujixerox.co.jp".

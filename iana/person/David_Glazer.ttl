@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix com: <../media-types/application/commonground#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+com: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "David_Glazer";
+    reg:name "David Glazer";
+    reg:updated "1995-04-19";
+    reg:uri "mailto:dglazer&best.com".

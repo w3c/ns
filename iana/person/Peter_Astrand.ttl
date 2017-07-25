@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.cendio.thinlinc.clientconf#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Peter_Astrand";
+    reg:name "Peter \u00c5strand";
+    reg:updated "2007-06-12";
+    reg:uri "mailto:astrand&cendio.se".

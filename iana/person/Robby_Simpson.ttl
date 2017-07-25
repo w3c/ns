@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix sep: <../media-types/application/sep-exi#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix se: <../media-types/application/sep+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+sep: reg:xref :.
+
+se: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Robby_Simpson";
+    reg:name "Robby Simpson";
+    reg:updated "2012-11-27";
+    reg:uri "mailto:rsimpson&gmail.com".

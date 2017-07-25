@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix emo: <../media-types/application/emotionml+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ink: <../media-types/application/inkml+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+emo: reg:xref :.
+
+ink: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Kazuyuki_Ashimura";
+    reg:name "Kazuyuki Ashimura";
+    reg:updated "2013-10-30";
+    reg:uri "mailto:ashimura&w3.org".

@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.dtg.local-html#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.dtg.local.flash#>.
+@prefix v: <../media-types/application/vnd.dtg.local#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Ali_Teffahi";
+    reg:name "Ali Teffahi";
+    reg:updated "2012-04-19";
+    reg:uri "mailto:ateffahi&dtg.org.uk".

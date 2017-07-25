@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix mp21: <../media-types/application/mp21#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix iso: <../media-types/video/iso.segment#>.
+
+mp21: reg:xref :.
+
+medi:n0 reg:person :.
+
+iso: reg:xref :.
+
+:
+    reg:id "David_Singer";
+    reg:name "David Singer";
+    reg:updated "2014-01-29";
+    reg:uri "mailto:singer&apple.com".

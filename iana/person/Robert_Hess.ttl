@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.vidsoft.vidconference#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Robert_Hess";
+    reg:name "Robert Hess";
+    reg:updated "2001-03-20";
+    reg:uri "mailto:hess&vidsoft.de".

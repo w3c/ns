@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.sun.wadl+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Marc_Hadley";
+    reg:name "Marc Hadley";
+    reg:updated "2006-03-20";
+    reg:uri "mailto:marc.hadley&sun.com".

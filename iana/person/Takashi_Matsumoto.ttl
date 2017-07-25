@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.fujixerox.docuworks.binder#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Takashi_Matsumoto";
+    reg:name "Takashi Matsumoto";
+    reg:updated "2000-02-20";
+    reg:uri "mailto:takashi.matsumoto&fujixerox.co.jp".

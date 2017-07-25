@@ -1,0 +1,35 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.dvb.ipdcdftnotifaccess#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.dvb.notif-aggregate-root+xml#>.
+@prefix v: <../media-types/application/vnd.dvb.notif-container+xml#>.
+@prefix n1: <../media-types/application/vnd.dvb.notif-generic+xml#>.
+@prefix n2: <../media-types/application/vnd.dvb.notif-ia-msglist+xml#>.
+@prefix n3: <../media-types/application/vnd.dvb.notif-ia-registration-request+xml#>.
+@prefix n4: <../media-types/application/vnd.dvb.notif-ia-registration-response+xml#>.
+@prefix n5: <../media-types/application/vnd.dvb.notif-init+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+n4: reg:xref :.
+
+n5: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Roy_Yue";
+    reg:name "Roy Yue";
+    reg:updated "2009-03-04";
+    reg:uri "mailto:yuepeiyu&huawei.com".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix cgm: <../media-types/image/cgm#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+cgm: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Alan_Francis";
+    reg:name "Alan Francis";
+    reg:updated "1995-12-19";
+    reg:uri "mailto:A.H.Francis&open.ac.uk".

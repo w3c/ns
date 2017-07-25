@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.ezpix-album#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.ezpix-package#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "ElectronicZombieCorp";
+    reg:name "Electronic Zombie, Corp.";
+    reg:updated "2006-07-31";
+    reg:uri "mailto:support&electroniczombie.com".

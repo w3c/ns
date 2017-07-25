@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.igloader#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Tim_Fisher";
+    reg:name "Tim Fisher";
+    reg:updated "2006-07-25";
+    reg:uri "mailto:tim.fisher&indiepath.com".

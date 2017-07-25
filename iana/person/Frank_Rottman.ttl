@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Frank_Rottman";
+    reg:name "Frank Rottman";
+    reg:updated "2008-07-23";
+    reg:uri "mailto:Frank.Rottmann&web.de".

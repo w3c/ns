@@ -1,0 +1,23 @@
+@prefix : <#>.
+@prefix m: <../media-types/application/mathematica#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/application/vnd.wolfram.mathematica.package#>.
+@prefix vn: <../media-types/application/vnd.wolfram.mathematica#>.
+@prefix v: <../media-types/application/vnd.wolfram.player#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+m: reg:xref :.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Wolfram";
+    reg:name "Wolfram Research";
+    reg:updated "2009-10-15";
+    reg:uri "mailto:info&wolfram.com".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.olpc-sugar#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "John_Palmieri";
+    reg:name "John Palmieri";
+    reg:updated "2007-06-07";
+    reg:uri "mailto:johnp&redhat.com".

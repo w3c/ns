@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.ctc-posml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Bayard_Kohlhepp";
+    reg:name "Bayard Kohlhepp";
+    reg:updated "2000-04-20";
+    reg:uri "mailto:bayard&ctcexchange.com".

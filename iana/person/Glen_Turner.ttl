@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.tcpdump.pcap#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Glen_Turner";
+    reg:name "Glen Turner";
+    reg:updated "2011-03-30";
+    reg:uri "mailto:gdt&gdt.id.au".

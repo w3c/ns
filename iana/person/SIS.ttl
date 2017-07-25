@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix sc: <../media-types/application/scaip+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+sc: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "SIS";
+    reg:name "Swedish Standards Institute (SIS)";
+    reg:updated "2014-07-09";
+    reg:uri "http://www.sis.se/".

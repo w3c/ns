@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.adobe.partial-upload#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Tapani_Otala";
+    reg:name "Tapani Otala";
+    reg:updated "2009-07-28";
+    reg:uri "mailto:otala&adobe.com".

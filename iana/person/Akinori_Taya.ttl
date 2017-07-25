@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.ntt-local.content-share#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Akinori_Taya";
+    reg:name "Akinori Taya";
+    reg:updated "2012-07-09";
+    reg:uri "mailto:a.taya&west.east.ntt.co.jp".

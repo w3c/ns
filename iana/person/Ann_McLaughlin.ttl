@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/audio/vnd.cns.anp1#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/audio/vnd.cns.inf1#>.
+@prefix v: <../media-types/image/vnd.cns.inf2#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Ann_McLaughlin";
+    reg:name "Ann McLaughlin";
+    reg:updated "1999-04-19";
+    reg:uri "mailto:amclaughlin&comversens.com".

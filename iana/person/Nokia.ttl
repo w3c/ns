@@ -1,0 +1,65 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.nokia.catalogs#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.nokia.conml+wbxml#>.
+@prefix v: <../media-types/application/vnd.nokia.conml+xml#>.
+@prefix n1: <../media-types/application/vnd.nokia.iptv.config+xml#>.
+@prefix n2: <../media-types/application/vnd.nokia.iSDS-radio-presets#>.
+@prefix n3: <../media-types/application/vnd.nokia.landmark+wbxml#>.
+@prefix n4: <../media-types/application/vnd.nokia.landmark+xml#>.
+@prefix n5: <../media-types/application/vnd.nokia.landmarkcollection+xml#>.
+@prefix n6: <../media-types/application/vnd.nokia.n-gage.ac+xml#>.
+@prefix n7: <../media-types/application/vnd.nokia.n-gage.data#>.
+@prefix n8: <../media-types/application/vnd.nokia.n-gage.symbian.install#>.
+@prefix n9: <../media-types/application/vnd.nokia.ncd#>.
+@prefix n10: <../media-types/application/vnd.nokia.pcd+wbxml#>.
+@prefix n11: <../media-types/application/vnd.nokia.pcd+xml#>.
+@prefix n12: <../media-types/application/vnd.nokia.radio-preset#>.
+@prefix n13: <../media-types/application/vnd.nokia.radio-presets#>.
+@prefix n14: <../media-types/audio/vnd.nokia.mobile-xmf#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix n15: <../media-types/video/vnd.nokia.videovoip#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+n4: reg:xref :.
+
+n5: reg:xref :.
+
+n6: reg:xref :.
+
+n7: reg:xref :.
+
+n8: reg:xref :.
+
+n9: reg:xref :.
+
+n10: reg:xref :.
+
+n11: reg:xref :.
+
+n12: reg:xref :.
+
+n13: reg:xref :.
+
+n14: reg:xref :.
+
+medi:n0 reg:person :.
+
+n15: reg:xref :.
+
+:
+    reg:id "Nokia";
+    reg:name "Nokia Corporation";
+    reg:updated "2007-05-25";
+    reg:uri "mailto:mime&nokia.com".

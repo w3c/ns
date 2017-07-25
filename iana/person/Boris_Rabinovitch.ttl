@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/model/vnd.mts#>.
+@prefix vn: <../media-types/model/vnd.vtu#>.
+
+medi:n0 reg:person :.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+:
+    reg:id "Boris_Rabinovitch";
+    reg:name "Boris Rabinovitch";
+    reg:updated "2000-02-20";
+    reg:uri "mailto:boris&virtue3d.com".

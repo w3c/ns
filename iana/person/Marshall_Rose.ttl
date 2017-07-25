@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix rem: <../media-types/application/remote-printing#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+rem: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Marshall_Rose";
+    reg:name "Marshall Rose";
+    reg:updated "1995-04-19";
+    reg:uri "mailto:mrose&dbc.mtview.ca.us".

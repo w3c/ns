@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.lotus-1-2-3#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.lotus-approach#>.
+@prefix v: <../media-types/application/vnd.lotus-freelance#>.
+@prefix n1: <../media-types/application/vnd.lotus-organizer#>.
+@prefix n2: <../media-types/application/vnd.lotus-screencam#>.
+@prefix n3: <../media-types/application/vnd.lotus-wordpro#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Paul_Wattenberger";
+    reg:name "Paul Wattenberger";
+    reg:updated "1997-06-19";
+    reg:uri "mailto:Paul_Wattenberger&lotus.com".

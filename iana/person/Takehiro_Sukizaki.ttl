@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.yamaha.remote-setup#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.yamaha.through-ngn#>.
+@prefix v: <../media-types/application/vnd.yamaha.tunnel-udpencap#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Takehiro_Sukizaki";
+    reg:name "Takehiro Sukizaki";
+    reg:updated "2011-04-07";
+    reg:uri "mailto:sukizaki&soundnet.yamaha.co.jp".

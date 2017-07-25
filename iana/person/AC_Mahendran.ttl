@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.3gpp2.sms#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.3gpp2.tcap#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "AC_Mahendran";
+    reg:name "AC Mahendran";
+    reg:updated "2007-11-06";
+    reg:uri "mailto:ac&qualcomm.com".

@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.dvb.ipdcesgaccess2#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.dvb.ipdcesgpdd#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Jerome_Marcon";
+    reg:name "J\u00e9r\u00f4me Marcon";
+    reg:updated "2010-02-24";
+    reg:uri "mailto:jerome.marcon&alcatel-lucent.com".

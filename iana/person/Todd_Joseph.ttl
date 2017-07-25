@@ -1,0 +1,32 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.groove-account#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.groove-help#>.
+@prefix v: <../media-types/application/vnd.groove-identity-message#>.
+@prefix n1: <../media-types/application/vnd.groove-injector#>.
+@prefix n2: <../media-types/application/vnd.groove-tool-message#>.
+@prefix n3: <../media-types/application/vnd.groove-tool-template#>.
+@prefix n4: <../media-types/application/vnd.groove-vcard#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+n1: reg:xref :.
+
+n2: reg:xref :.
+
+n3: reg:xref :.
+
+n4: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Todd_Joseph";
+    reg:name "Todd Joseph";
+    reg:updated "2002-10-20";
+    reg:uri "mailto:todd_joseph&groove.net".

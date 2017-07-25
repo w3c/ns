@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.debian.binary-package#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix vn: <../media-types/text/vnd.debian.copyright#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+vn: reg:xref :.
+
+:
+    reg:id "Charles_Plessy";
+    reg:name "Charles Plessy";
+    reg:updated "2014-05-20";
+    reg:uri "mailto:plessy&debian.org".

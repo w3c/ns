@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.google-earth.kml+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.google-earth.kmz#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Michael_Ashbridge";
+    reg:name "Michael Ashbridge";
+    reg:updated "2006-12-14";
+    reg:uri "mailto:mashbridge+iana&google.com".

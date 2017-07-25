@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/model/vnd.collada+xml#>.
+
+medi:n0 reg:person :.
+
+vnd: reg:xref :.
+
+:
+    reg:id "James_Riordon";
+    reg:name "James Riordon";
+    reg:updated "2011-02-01";
+    reg:uri "mailto:webmaster&khronos.org".

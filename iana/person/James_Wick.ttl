@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.renlearn.rlprint#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "James_Wick";
+    reg:name "James Wick";
+    reg:updated "2004-02-20";
+    reg:uri "mailto:jrwick&renlearn.com".

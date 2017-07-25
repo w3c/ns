@@ -1,0 +1,18 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <Mark_Callow#>.
+@prefix n1: <http://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/#>.
+@prefix glt: <../media-types/model/gltf+json#>.
+
+medi:image reg:record [ reg:name "ktx"; reg:xref :, M:, n1:mimeregistration ].
+
+medi:n0 reg:person :.
+
+glt: reg:xref :.
+
+:
+    reg:id "Khronos";
+    reg:name "The Khronos Group";
+    reg:updated "2016-07-01";
+    reg:uri "http://www.khronos.org".

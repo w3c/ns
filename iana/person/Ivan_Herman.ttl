@@ -1,0 +1,26 @@
+@prefix : <#>.
+@prefix csv: <../media-types/application/csvm+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix jf2: <../media-types/application/jf2feed+json#>.
+@prefix ld: <../media-types/application/ld+json#>.
+@prefix pro: <../media-types/application/provenance+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix pr: <../media-types/text/provenance-notation#>.
+
+csv: reg:xref :.
+
+jf2: reg:xref :.
+
+ld: reg:xref :.
+
+pro: reg:xref :.
+
+medi:n0 reg:person :.
+
+pr: reg:xref :.
+
+:
+    reg:id "Ivan_Herman";
+    reg:name "Ivan Herman";
+    reg:updated "2017-06-27";
+    reg:uri "mailto:ivan&w3.org".

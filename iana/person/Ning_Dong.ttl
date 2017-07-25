@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.oracle.resource+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Ning_Dong";
+    reg:name "Ning Dong";
+    reg:updated "2014-12-22";
+    reg:uri "mailto:ning.dong&oracle.com".

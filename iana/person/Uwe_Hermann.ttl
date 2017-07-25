@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.sigrok.session#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Uwe_Hermann";
+    reg:name "Uwe Hermann";
+    reg:updated "2017-06-06";
+    reg:uri "mailto:uwe&hermann-uwe.de".

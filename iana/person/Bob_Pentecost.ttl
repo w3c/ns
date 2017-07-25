@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.hp-HPGL#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.hp-PCL#>.
+@prefix v: <../media-types/application/vnd.hp-PCLXL#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+vn: reg:xref :.
+
+v: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Bob_Pentecost";
+    reg:name "Bob Pentecost";
+    reg:updated "1997-03-19";
+    reg:uri "mailto:bpenteco&boi.hp.com".

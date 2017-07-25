@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.msign#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd: reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Malte_Borcherding";
+    reg:name "Malte Borcherding";
+    reg:updated "2000-08-20";
+    reg:uri "mailto:Malte.Borcherding&brokat.com".
