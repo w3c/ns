@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joh: <../../person/John-Mark_Gurney#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/vnd.fly"; reg:type "template" ];
+    reg:name "vnd.fly";
+    reg:xref Joh:.

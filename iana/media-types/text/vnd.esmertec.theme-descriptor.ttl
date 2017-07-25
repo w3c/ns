@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Stef: <../../person/Stefan_Eilemann#>.
+
+medi:text reg:record :.
+
+:
+    reg:file
+    [ reg:file "text/vnd.esmertec.theme-descriptor"; reg:type "template" ];
+    reg:name "vnd.esmertec.theme-descriptor";
+    reg:xref Stef:.

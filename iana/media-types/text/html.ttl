@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Rob: <../../person/Robin_Berjon#>.
+@prefix W3C: <../../person/W3C#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/html"; reg:type "template" ];
+    reg:name "html";
+    reg:xref Rob:, W3C:.

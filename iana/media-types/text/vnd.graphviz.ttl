@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joh: <../../person/John_Ellson#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/vnd.graphviz"; reg:type "template" ];
+    reg:name "vnd.graphviz";
+    reg:xref Joh:.

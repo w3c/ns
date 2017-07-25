@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joh: <../../person/John_Lines#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/prs.lines.tag"; reg:type "template" ];
+    reg:name "prs.lines.tag";
+    reg:xref Joh:.

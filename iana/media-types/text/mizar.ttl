@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jes: <../../person/Jesse_Alama#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/mizar"; reg:type "template" ];
+    reg:name "mizar";
+    reg:xref Jes:.

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/Dan_Bradley#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/vnd.DMClientScript"; reg:type "template" ];
+    reg:name "vnd.DMClientScript";
+    reg:xref D:.

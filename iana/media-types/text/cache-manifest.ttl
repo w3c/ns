@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Rob: <../../person/Robin_Berjon#>.
+@prefix W3C: <../../person/W3C#>.
+
+medi:text reg:record :.
+
+:
+    terms:date "2014-05-14"^^XML:date;
+    reg:file [ reg:file "text/cache-manifest"; reg:type "template" ];
+    reg:name "cache-manifest";
+    reg:xref Rob:, W3C:.

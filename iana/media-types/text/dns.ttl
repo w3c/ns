@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/dns"; reg:type "template" ];
+    reg:name "dns";
+    reg:xref html:rfc4027.

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steve_Allen#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/vnd.abc"; reg:type "template" ];
+    reg:name "vnd.abc";
+    reg:xref Ste:.

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix H: <../../person/Hans-Dieter_A._Hiep#>.
+
+medi:text reg:record :.
+
+:
+    terms:date "2016-04-04"^^XML:date;
+    reg:file [ reg:file "text/prs.prop.logic"; reg:type "template" ];
+    reg:name "prs.prop.logic";
+    reg:xref H:.

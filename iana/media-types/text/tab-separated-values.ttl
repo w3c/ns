@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix P: <../../person/Paul_Lindner#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/tab-separated-values"; reg:type "template" ];
+    reg:name "tab-separated-values";
+    reg:xref P:.

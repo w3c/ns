@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mik: <../../person/Mikusiak_Lubos#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/vnd.latex-z"; reg:type "template" ];
+    reg:name "vnd.latex-z";
+    reg:xref Mik:.

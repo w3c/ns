@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix J: <../../person/Jan_Nelson#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/vnd.ms-mediapackage"; reg:type "template" ];
+    reg:name "vnd.ms-mediapackage";
+    reg:xref J:.

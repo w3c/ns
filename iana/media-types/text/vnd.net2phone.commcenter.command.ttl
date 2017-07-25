@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Fei: <../../person/Feiyu_Xie#>.
+
+medi:text reg:record :.
+
+:
+    reg:file
+    [ reg:file "text/vnd.net2phone.commcenter.command"; reg:type "template" ];
+    reg:name "vnd.net2phone.commcenter.command";
+    reg:xref Fei:.

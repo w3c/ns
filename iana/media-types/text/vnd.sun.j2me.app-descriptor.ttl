@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix G: <../../person/Gary_Adams#>.
+
+medi:text reg:record :.
+
+:
+    reg:file
+    [ reg:file "text/vnd.sun.j2me.app-descriptor"; reg:type "template" ];
+    reg:name "vnd.sun.j2me.app-descriptor";
+    reg:xref G:.

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Benj: <../../person/Benja_Fallenstein#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/prs.fallenstein.rst"; reg:type "template" ];
+    reg:name "prs.fallenstein.rst";
+    reg:xref Benj:.

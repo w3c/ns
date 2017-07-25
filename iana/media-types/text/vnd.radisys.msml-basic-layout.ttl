@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+
+medi:text reg:record :.
+
+:
+    reg:file
+    [ reg:file "text/vnd.radisys.msml-basic-layout"; reg:type "template" ];
+    reg:name "vnd.radisys.msml-basic-layout";
+    reg:xref html:rfc5707.

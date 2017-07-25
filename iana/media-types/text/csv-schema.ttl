@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix D: <../../person/David_Underdown#>.
+@prefix N: <../../person/National_Archives_UK#>.
+
+medi:text reg:record :.
+
+:
+    terms:date "2014-11-21"^^XML:date;
+    reg:file [ reg:file "text/csv-schema"; reg:type "template" ];
+    reg:name "csv-schema";
+    reg:xref D:, N:.

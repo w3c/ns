@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Mark_Patton#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/vnd.motorola.reflex"; reg:type "template" ];
+    reg:name "vnd.motorola.reflex";
+    reg:xref M:.

@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mich: <../../person/Michael_Lagally#>.
+@prefix Pet: <../../person/Peter_Siebert#>.
+
+medi:text reg:record :.
+
+:
+    reg:file [ reg:file "text/vnd.dvb.subtitle"; reg:type "template" ];
+    reg:name "vnd.dvb.subtitle";
+    reg:xref Mich:, Pet:.
