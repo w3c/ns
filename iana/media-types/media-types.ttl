@@ -1977,53 +1977,6 @@
 @prefix Khr: <../person/Khronos#>.
 @prefix M33: <../person/Mark_Callow#>.
 @prefix n1057: <http://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/#>.
-@prefix n1058: <../person/_3MF#>.
-@prefix Attil: <../person/Attila_Babits#>.
-@prefix Benj: <../person/Benja_Fallenstein#>.
-@prefix Be: <../person/Benson_Margulies#>.
-@prefix Bor: <../person/Boris_Rabinovitch#>.
-@prefix n1059: <../person/Christopher_Brooks#>.
-@prefix D19: <../person/Dan_Bradley#>.
-@prefix D20: <../person/Dave_Crocker#>.
-@prefix D21: <../person/David_Lee_Lambert#>.
-@prefix D22: <../person/David_Underdown#>.
-@prefix n1060: <../person/Eric_Lengyel#>.
-@prefix Fei: <../person/Feiyu_Xie#>.
-@prefix Fr4: <../person/Frank_Rottman#>.
-@prefix G5: <../person/Gary_Adams#>.
-@prefix H3: <../person/Hans-Dieter_A._Hiep#>.
-@prefix Heiko: <../person/Heiko_Recktenwald#>.
-@prefix Henr: <../person/Henry_Spencer#>.
-@prefix IEE: <../person/IEEE-ISTO-PWG-PPP#>.
-@prefix IPTC: <../person/IPTC#>.
-@prefix J17: <../person/James_Riordon#>.
-@prefix J18: <../person/Jan_Nelson#>.
-@prefix J19: <../person/Jason_Pratt#>.
-@prefix Jess: <../person/Jesse_Alama#>.
-@prefix n1061: <../person/John_Clark#>.
-@prefix n1062: <../person/John_Ellson#>.
-@prefix n1063: <../person/John_Lines#>.
-@prefix n1064: <../person/John_Wolfe#>.
-@prefix n1065: <../person/John-Mark_Gurney#>.
-@prefix K1: <../person/Kari_E._Hurtta#>.
-@prefix n1066: <../person/Kevin_Murray#>.
-@prefix Mic14: <../person/Michael_Powers#>.
-@prefix Miku: <../person/Mikusiak_Lubos#>.
-@prefix N2: <../person/Nathan_Zerbe#>.
-@prefix N3: <../person/National_Archives_UK#>.
-@prefix Nich: <../person/Nicholas_Parks_Young#>.
-@prefix P10: <../person/Parasolid#>.
-@prefix Pee: <../person/Peeter_Piegaze#>.
-@prefix Pett: <../person/Petteri_Kangaslampi#>.
-@prefix Reg: <../person/Regis_Dehoux#>.
-@prefix Shuj: <../person/Shuji_Nakamura#>.
-@prefix Ste1: <../person/Stefan_Eilemann#>.
-@prefix n1067: <../person/Steve_Allen#>.
-@prefix n1068: <../person/Tom_McGinty#>.
-@prefix Uli: <../person/Uli_Klumpp#>.
-@prefix Web: <../person/Web3D_X3D#>.
-@prefix Web3D: <../person/Web3D#>.
-@prefix Yut: <../person/Yutaka_Ozaki#>.
 @prefix CPIM: <message/CPIM#>.
 @prefix del: <message/delivery-status#>.
 @prefix dis: <message/disposition-notification#>.
@@ -2036,34 +1989,34 @@
 @prefix htt: <message/http#>.
 @prefix imd: <message/imdn+xml#>.
 @prefix new0: <message/news#>.
-@prefix n1069: <message/s-http#>.
+@prefix n1058: <message/s-http#>.
 @prefix sip: <message/sip#>.
 @prefix sipfr: <message/sipfrag#>.
 @prefix tr: <message/tracking-status#>.
-@prefix n1070: <message/vnd.si.simp#>.
-@prefix n1071: <message/vnd.wfa.wsc#>.
-@prefix n1072: <model/3mf#>.
+@prefix n1059: <message/vnd.si.simp#>.
+@prefix n1060: <message/vnd.wfa.wsc#>.
+@prefix n1061: <model/3mf#>.
 @prefix ex3: <model/example#>.
 @prefix glt: <model/gltf+json#>.
 @prefix ige: <model/iges#>.
-@prefix n1073: <model/vnd-dwf#>.
-@prefix n1074: <model/vnd.collada+xml#>.
-@prefix n1075: <model/vnd.flatland.3dml#>.
-@prefix n1076: <model/vnd.gdl#>.
-@prefix n1077: <model/vnd.gs-gdl#>.
-@prefix n1078: <model/vnd.gtw#>.
-@prefix n1079: <model/vnd.moml+xml#>.
-@prefix n1080: <model/vnd.mts#>.
-@prefix n1081: <model/vnd.opengex#>.
-@prefix n1082: <model/vnd.parasolid.transmit-binary#>.
-@prefix n1083: <model/vnd.parasolid.transmit-text#>.
-@prefix n1084: <model/vnd.rosette.annotated-data-model#>.
-@prefix n1085: <model/vnd.valve.source.compiled-map#>.
-@prefix n1086: <model/vnd.vtu#>.
+@prefix n1062: <model/vnd-dwf#>.
+@prefix n1063: <model/vnd.collada+xml#>.
+@prefix n1064: <model/vnd.flatland.3dml#>.
+@prefix n1065: <model/vnd.gdl#>.
+@prefix n1066: <model/vnd.gs-gdl#>.
+@prefix n1067: <model/vnd.gtw#>.
+@prefix n1068: <model/vnd.moml+xml#>.
+@prefix n1069: <model/vnd.mts#>.
+@prefix n1070: <model/vnd.opengex#>.
+@prefix n1071: <model/vnd.parasolid.transmit-binary#>.
+@prefix n1072: <model/vnd.parasolid.transmit-text#>.
+@prefix n1073: <model/vnd.rosette.annotated-data-model#>.
+@prefix n1074: <model/vnd.valve.source.compiled-map#>.
+@prefix n1075: <model/vnd.vtu#>.
 @prefix x3d: <model/x3d-vrml#>.
 @prefix x3: <model/x3d+fastinfoset#>.
-@prefix n1087: <model/x3d+xml#>.
-@prefix n1088: <multipart/appledouble#>.
+@prefix n1076: <model/x3d+xml#>.
+@prefix n1077: <multipart/appledouble#>.
 @prefix byter: <multipart/byteranges#>.
 @prefix encr: <multipart/encrypted#>.
 @prefix ex4: <multipart/example#>.
@@ -2072,9 +2025,56 @@
 @prefix rel0: <multipart/related#>.
 @prefix repo: <multipart/report#>.
 @prefix sig: <multipart/signed#>.
-@prefix n1089: <multipart/vnd.bint.med-plus#>.
+@prefix n1078: <multipart/vnd.bint.med-plus#>.
 @prefix voic: <multipart/voice-message#>.
-@prefix n1090: <multipart/x-mixed-replace#>.
+@prefix n1079: <multipart/x-mixed-replace#>.
+@prefix n1080: <../person/_3MF#>.
+@prefix Attil: <../person/Attila_Babits#>.
+@prefix Benj: <../person/Benja_Fallenstein#>.
+@prefix Be: <../person/Benson_Margulies#>.
+@prefix Bor: <../person/Boris_Rabinovitch#>.
+@prefix n1081: <../person/Christopher_Brooks#>.
+@prefix D19: <../person/Dan_Bradley#>.
+@prefix D20: <../person/Dave_Crocker#>.
+@prefix D21: <../person/David_Lee_Lambert#>.
+@prefix D22: <../person/David_Underdown#>.
+@prefix n1082: <../person/Eric_Lengyel#>.
+@prefix Fei: <../person/Feiyu_Xie#>.
+@prefix Fr4: <../person/Frank_Rottman#>.
+@prefix G5: <../person/Gary_Adams#>.
+@prefix H3: <../person/Hans-Dieter_A._Hiep#>.
+@prefix Heiko: <../person/Heiko_Recktenwald#>.
+@prefix Henr: <../person/Henry_Spencer#>.
+@prefix IEE: <../person/IEEE-ISTO-PWG-PPP#>.
+@prefix IPTC: <../person/IPTC#>.
+@prefix J17: <../person/James_Riordon#>.
+@prefix J18: <../person/Jan_Nelson#>.
+@prefix J19: <../person/Jason_Pratt#>.
+@prefix Jess: <../person/Jesse_Alama#>.
+@prefix n1083: <../person/John_Clark#>.
+@prefix n1084: <../person/John_Ellson#>.
+@prefix n1085: <../person/John_Lines#>.
+@prefix n1086: <../person/John_Wolfe#>.
+@prefix n1087: <../person/John-Mark_Gurney#>.
+@prefix K1: <../person/Kari_E._Hurtta#>.
+@prefix n1088: <../person/Kevin_Murray#>.
+@prefix Mic14: <../person/Michael_Powers#>.
+@prefix Miku: <../person/Mikusiak_Lubos#>.
+@prefix N2: <../person/Nathan_Zerbe#>.
+@prefix N3: <../person/National_Archives_UK#>.
+@prefix Nich: <../person/Nicholas_Parks_Young#>.
+@prefix P10: <../person/Parasolid#>.
+@prefix Pee: <../person/Peeter_Piegaze#>.
+@prefix Pett: <../person/Petteri_Kangaslampi#>.
+@prefix Reg: <../person/Regis_Dehoux#>.
+@prefix Shuj: <../person/Shuji_Nakamura#>.
+@prefix Ste1: <../person/Stefan_Eilemann#>.
+@prefix n1089: <../person/Steve_Allen#>.
+@prefix n1090: <../person/Tom_McGinty#>.
+@prefix Uli: <../person/Uli_Klumpp#>.
+@prefix Web: <../person/Web3D_X3D#>.
+@prefix Web3D: <../person/Web3D#>.
+@prefix Yut: <../person/Yutaka_Ozaki#>.
 @prefix n1091: <text/1d-interleaved-parityfec#>.
 @prefix c2: <text/cache-manifest#>.
 @prefix c3: <text/calendar#>.
@@ -9683,72 +9683,7 @@ Media Type Sub-Parameters:  media-type-sub-parameters""";
     reg:category "Multipurpose Internet Mail Extensions (MIME) and Media Types";
     reg:expert "Ned Freed (primary), Murray Kucherawy (secondary)";
     reg:id "media-types";
-    reg:people
-            [
-                reg:person
-                    n2:, n1058:, AC:, Adri:, Aki:, Al0:, Ale:, A:, Al:, n866:,
-                    Alex:, Ali:, All:, Alle:, Alo:, Ami:, Am:, An0:, An:, And:,
-                    Andr:, Andy:, n539:, Ann:, Apr:, Ari:, Arm:, Arn:, ASAM:,
-                    As:, ASH:, Attil:, Avi:, Axe:, B:, Ben:, Benj:, Be:, Bi:,
-                    Bil:, Bill:, Bin:, Bipl:, Bjo:, Bl:, Bob:, Bor:, Br1:, Br0:,
-                    Bre:, Bri:, Bri0:, Br:, Bruc:, Bru:, Bry:, n742:, C0:, C2:,
-                    C1:, Ch0:, Ch2:, Ch1:, Ch3:, C:, CHA:, n460:, n1050:,
-                    Chris:, n486:, Chr:, Chr0:, Chr1:, n1059:, n372:, Ch:,
-                    Chri:, Chu:, Cl:, Cle:, Cli:, Cr0:, Cr:, Cur:, D10:, D19:,
-                    D13:, D12:, D4:, D11:, D5:, D8:, D20:, D16:, D:, D6:, D17:,
-                    D2:, D9:, D1:, D0:, D14:, D21:, D18:, D7:, D15:, D3:, D22:,
-                    De:, Del:, Der:, Dev:, Dic:, DIC:, Di:, Dir:, Do:, Don:,
-                    Dou:, Dov:, Ecm:, Edw:, Ehu:, Ele:, Eli:, n841:, n483:,
-                    Eric:, n494:, n1060:, Er:, Eri:, n449:, Erik:, Et:, Fei:,
-                    Fil:, Fr1:, Fr0:, Fr3:, F:, Fr4:, Fr2:, Fr:, Fred:, Fre:,
-                    Fu:, Fum:, G1:, G5:, G:, G2:, G0:, G3:, G4:, Ge:, Geo:,
-                    Ger:, Gi:, Gil:, Giu:, Gius:, n864:, Gl:, Gle:, Glen:,
-                    n1003:, n1015:, Glenn:, Got:, Gr:, Gre:, Greg:, n1040:,
-                    Grego:, Gue:, Gus:, Gu:, Guy:, Gwen:, H2:, H3:, H1:, H:,
-                    H0:, Heik:, Heiko:, Hei:, Hem:, Hen:, He:, Henr:, Hiro:,
-                    Hir:, Holst:, Hori:, I:, I0:, IEE:, IETF:, Il:, Ily:, Ing:,
-                    Int:, Ios:, IPTC:, Ir:, ISO:, ITS:, Iv:, n874:, J8:, J13:,
-                    J3:, J9:, J:, J2:, J7:, J17:, J12:, J15:, J14:, J16:, J18:,
-                    J5:, J10:, J4:, J11:, J19:, J6:, J0:, J1:, Je:, Je0:, Jeff:,
-                    Jef:, Jeg:, Jen:, Jer:, Jerr:, Jess:, Jes:, Ji0:, Ji:, Jim:,
-                    Jiw:, Jod:, n454:, Joe:, Joer:, Joey:, Jo:, n1061:, n1062:,
-                    n928:, n748:, n813:, n1063:, Joh:, n631:, John:, n1064:,
-                    n1065:, Jon:, Jon0:, Jon1:, Joost:, Jorg:, Jor:, Jos:, Jue:,
-                    Jul:, Ju:, Jun:, Juo:, Jus:, K1:, K0:, K:, Keii:, Kei:,
-                    Ken:, Ker:, Kev:, Kevi:, Ke:, n1066:, Kevin:, Khe:, Khr:,
-                    Kim:, Ki:, Kiy:, Kyu:, L:, L0:, Lee:, Leo:, Lev:, Lind:,
-                    Lin:, Lis:, Lu:, Luc:, Luk:, Lyn:, M19:, M:, M18:, M15:,
-                    M31:, M24:, M4:, M3:, M9:, M33:, M29:, M28:, M17:, M14:,
-                    M1:, M26:, M11:, M0:, M32:, M30:, M12:, M22:, M25:, M23:,
-                    M13:, M5:, M21:, M7:, M6:, M10:, M2:, M8:, M16:, M20:, M27:,
-                    Mer:, Mic2:, Mic6:, Mic11:, Mic3:, Mich:, Mi:, Mic13:, Mic:,
-                    Mic5:, Mic8:, Mic10:, Mic4:, Mic9:, Mic12:, Mic0:, Mic14:,
-                    Mic7:, Mic1:, Miche:, Mick:, Mig:, Mike:, n124:, n114:,
-                    n327:, n142:, n986:, Mik:, Mikh:, Miku:, Mon:, Mr:, N1:,
-                    N0:, N2:, N:, N3:, n1045:, Nich:, Ni:, Nic:, Nicol:, Nil:,
-                    Nin:, Nobuk:, Noki:, Nor:, NTT:, OAS:, OASIS:, OGC:, n643:,
-                    OM:, O:, n851:, OMA:, Op:, Ope:, Ore:, Osk:, Ozg:, P10:,
-                    P3:, P2:, P9:, P:, P1:, P0:, P8:, P5:, P6:, P4:, P7:, Pee:,
-                    Per:, n422:, n767:, n263:, Pete:, Pe:, n314:, n737:, Peter:,
-                    Pet:, n852:, Petr:, Pett:, Ph:, Phi:, Pr:, Pr0:, Priy:,
-                    Purv:, R3:, R4:, R5:, R2:, R1:, R0:, Ree:, Reg:, Reinh:,
-                    Ren:, Reu:, Rhy:, Ric:, Rin:, n425:, Rob:, Robe:, Ro:,
-                    Rober:, R:, Robi:, Roge:, Rog:, Rol:, Rom:, Roy:, Ry:, S:,
-                    S0:, S1:, S2:, Sc:, Sco:, Se:, Se0:, Seb:, Seb0:, Sei:,
-                    Ser:, Sh0:, Sh1:, Sh:, Shi:, Shin:, Sho:, Shu:, Shuj:, Sim:,
-                    Si:, SIS:, Sl:, Ste1:, Ste0:, Stef:, n1067:, n339:, n156:,
-                    n1000:, n188:, n537:, Ste:, n104:, Stev:, n526:, n744:,
-                    n544:, n821:, St:, Steve:, n734:, n1048:, n954:, n872:,
-                    Stu:, Suk:, Sv:, Sw:, Syb:, Szi:, T0:, T4:, T2:, T1:, T5:,
-                    T3:, T:, Ter:, Thi:, Tho1:, Th:, Tho2:, Tho5:, Tho0:, Tho4:,
-                    Tho:, Thom:, Tho3:, Tim:, n529:, Ti:, n409:, n879:, Timo:,
-                    Tob:, Tod:, Tom:, n378:, n1068:, n971:, Tomo:, Tor:, To:,
-                    Tro:, UEF:, Uli:, Ulr:, Uni:, Uw:, Uwe:, Vi:, Vic:, Vik:,
-                    Vl:, n796:, W3:, W:, W3C:, WAP:, Web:, Web3D:, Wen:, Wes:,
-                    n915:, Wil:, Willi:, Wi:, Will:, Wolfr:, XEN:, Y0:, Y3:,
-                    Y1:, Y2:, Yil:, Yokoy:, Yu:, Yuk:, Y:, Yut:, Yv:, Yve:,
-                    Zig:
-            ];
+    reg:people :n0;
     reg:registration_rule "Expert Review for Vendor and Personal Trees.";
     reg:registry
         :application, :audio, :examples, :font, :image, :message, :model,
@@ -9760,7 +9695,7 @@ Media Type Sub-Parameters:  media-type-sub-parameters""";
     reg:id "message";
     reg:record
         CPIM:, del:, dis:, ex2:, feedb:, glob:, glo:, gl:, g:, htt:, imd:,
-        new0:, n1069:, sip:, sipfr:, tr:, n1070:, n1071:,
+        new0:, n1058:, sip:, sipfr:, tr:, n1059:, n1060:,
         [ reg:name "external-body"; reg:xref html:rfc2045, html:rfc2046 ],
         [ reg:name "partial"; reg:xref html:rfc2045, html:rfc2046 ],
         [ reg:name "rfc822"; reg:xref html:rfc2045, html:rfc2046 ];
@@ -9768,21 +9703,74 @@ Media Type Sub-Parameters:  media-type-sub-parameters""";
 :model
     reg:id "model";
     reg:record
-        n1072:, ex3:, glt:, ige:, n1073:, n1074:, n1075:, n1076:, n1077:,
-        n1078:, n1079:, n1080:, n1081:, n1082:, n1083:, n1084:, n1085:, n1086:,
-        x3d:, x3:, n1087:, [ reg:name "mesh"; reg:xref html:rfc2077 ],
+        n1061:, ex3:, glt:, ige:, n1062:, n1063:, n1064:, n1065:, n1066:,
+        n1067:, n1068:, n1069:, n1070:, n1071:, n1072:, n1073:, n1074:, n1075:,
+        x3d:, x3:, n1076:, [ reg:name "mesh"; reg:xref html:rfc2077 ],
         [ reg:name "vrml"; reg:xref html:rfc2077 ];
     reg:title "model".
 :multipart
     reg:id "multipart";
     reg:record
-        n1088:, byter:, encr:, ex4:, for:, he:, rel0:, repo:, sig:, n1089:,
-        voic:, n1090:,
+        n1077:, byter:, encr:, ex4:, for:, he:, rel0:, repo:, sig:, n1078:,
+        voic:, n1079:,
         [ reg:name "alternative"; reg:xref html:rfc2045, html:rfc2046 ],
         [ reg:name "digest"; reg:xref html:rfc2045, html:rfc2046 ],
         [ reg:name "mixed"; reg:xref html:rfc2045, html:rfc2046 ],
         [ reg:name "parallel"; reg:xref html:rfc2045, html:rfc2046 ];
     reg:title "multipart".
+:n0
+    reg:person
+        n2:, n1080:, AC:, Adri:, Aki:, Al0:, Ale:, A:, Al:, n866:, Alex:, Ali:,
+        All:, Alle:, Alo:, Ami:, Am:, An0:, An:, And:, Andr:, Andy:, n539:,
+        Ann:, Apr:, Ari:, Arm:, Arn:, ASAM:, As:, ASH:, Attil:, Avi:, Axe:, B:,
+        Ben:, Benj:, Be:, Bi:, Bil:, Bill:, Bin:, Bipl:, Bjo:, Bl:, Bob:, Bor:,
+        Br1:, Br0:, Bre:, Bri:, Bri0:, Br:, Bruc:, Bru:, Bry:, n742:, C0:, C2:,
+        C1:, Ch0:, Ch2:, Ch1:, Ch3:, C:, CHA:, n460:, n1050:, Chris:, n486:,
+        Chr:, Chr0:, Chr1:, n1081:, n372:, Ch:, Chri:, Chu:, Cl:, Cle:, Cli:,
+        Cr0:, Cr:, Cur:, D10:, D19:, D13:, D12:, D4:, D11:, D5:, D8:, D20:,
+        D16:, D:, D6:, D17:, D2:, D9:, D1:, D0:, D14:, D21:, D18:, D7:, D15:,
+        D3:, D22:, De:, Del:, Der:, Dev:, Dic:, DIC:, Di:, Dir:, Do:, Don:,
+        Dou:, Dov:, Ecm:, Edw:, Ehu:, Ele:, Eli:, n841:, n483:, Eric:, n494:,
+        n1082:, Er:, Eri:, n449:, Erik:, Et:, Fei:, Fil:, Fr1:, Fr0:, Fr3:, F:,
+        Fr4:, Fr2:, Fr:, Fred:, Fre:, Fu:, Fum:, G1:, G5:, G:, G2:, G0:, G3:,
+        G4:, Ge:, Geo:, Ger:, Gi:, Gil:, Giu:, Gius:, n864:, Gl:, Gle:, Glen:,
+        n1003:, n1015:, Glenn:, Got:, Gr:, Gre:, Greg:, n1040:, Grego:, Gue:,
+        Gus:, Gu:, Guy:, Gwen:, H2:, H3:, H1:, H:, H0:, Heik:, Heiko:, Hei:,
+        Hem:, Hen:, He:, Henr:, Hiro:, Hir:, Holst:, Hori:, I:, I0:, IEE:,
+        IETF:, Il:, Ily:, Ing:, Int:, Ios:, IPTC:, Ir:, ISO:, ITS:, Iv:, n874:,
+        J8:, J13:, J3:, J9:, J:, J2:, J7:, J17:, J12:, J15:, J14:, J16:, J18:,
+        J5:, J10:, J4:, J11:, J19:, J6:, J0:, J1:, Je:, Je0:, Jeff:, Jef:, Jeg:,
+        Jen:, Jer:, Jerr:, Jess:, Jes:, Ji0:, Ji:, Jim:, Jiw:, Jod:, n454:,
+        Joe:, Joer:, Joey:, Jo:, n1083:, n1084:, n928:, n748:, n813:, n1085:,
+        Joh:, n631:, John:, n1086:, n1087:, Jon:, Jon0:, Jon1:, Joost:, Jorg:,
+        Jor:, Jos:, Jue:, Jul:, Ju:, Jun:, Juo:, Jus:, K1:, K0:, K:, Keii:,
+        Kei:, Ken:, Ker:, Kev:, Kevi:, Ke:, n1088:, Kevin:, Khe:, Khr:, Kim:,
+        Ki:, Kiy:, Kyu:, L:, L0:, Lee:, Leo:, Lev:, Lind:, Lin:, Lis:, Lu:,
+        Luc:, Luk:, Lyn:, M19:, M:, M18:, M15:, M31:, M24:, M4:, M3:, M9:, M33:,
+        M29:, M28:, M17:, M14:, M1:, M26:, M11:, M0:, M32:, M30:, M12:, M22:,
+        M25:, M23:, M13:, M5:, M21:, M7:, M6:, M10:, M2:, M8:, M16:, M20:, M27:,
+        Mer:, Mic2:, Mic6:, Mic11:, Mic3:, Mich:, Mi:, Mic13:, Mic:, Mic5:,
+        Mic8:, Mic10:, Mic4:, Mic9:, Mic12:, Mic0:, Mic14:, Mic7:, Mic1:,
+        Miche:, Mick:, Mig:, Mike:, n124:, n114:, n327:, n142:, n986:, Mik:,
+        Mikh:, Miku:, Mon:, Mr:, N1:, N0:, N2:, N:, N3:, n1045:, Nich:, Ni:,
+        Nic:, Nicol:, Nil:, Nin:, Nobuk:, Noki:, Nor:, NTT:, OAS:, OASIS:, OGC:,
+        n643:, OM:, O:, n851:, OMA:, Op:, Ope:, Ore:, Osk:, Ozg:, P10:, P3:,
+        P2:, P9:, P:, P1:, P0:, P8:, P5:, P6:, P4:, P7:, Pee:, Per:, n422:,
+        n767:, n263:, Pete:, Pe:, n314:, n737:, Peter:, Pet:, n852:, Petr:,
+        Pett:, Ph:, Phi:, Pr:, Pr0:, Priy:, Purv:, R3:, R4:, R5:, R2:, R1:, R0:,
+        Ree:, Reg:, Reinh:, Ren:, Reu:, Rhy:, Ric:, Rin:, n425:, Rob:, Robe:,
+        Ro:, Rober:, R:, Robi:, Roge:, Rog:, Rol:, Rom:, Roy:, Ry:, S:, S0:,
+        S1:, S2:, Sc:, Sco:, Se:, Se0:, Seb:, Seb0:, Sei:, Ser:, Sh0:, Sh1:,
+        Sh:, Shi:, Shin:, Sho:, Shu:, Shuj:, Sim:, Si:, SIS:, Sl:, Ste1:, Ste0:,
+        Stef:, n1089:, n339:, n156:, n1000:, n188:, n537:, Ste:, n104:, Stev:,
+        n526:, n744:, n544:, n821:, St:, Steve:, n734:, n1048:, n954:, n872:,
+        Stu:, Suk:, Sv:, Sw:, Syb:, Szi:, T0:, T4:, T2:, T1:, T5:, T3:, T:,
+        Ter:, Thi:, Tho1:, Th:, Tho2:, Tho5:, Tho0:, Tho4:, Tho:, Thom:, Tho3:,
+        Tim:, n529:, Ti:, n409:, n879:, Timo:, Tob:, Tod:, Tom:, n378:, n1090:,
+        n971:, Tomo:, Tor:, To:, Tro:, UEF:, Uli:, Ulr:, Uni:, Uw:, Uwe:, Vi:,
+        Vic:, Vik:, Vl:, n796:, W3:, W:, W3C:, WAP:, Web:, Web3D:, Wen:, Wes:,
+        n915:, Wil:, Willi:, Wi:, Will:, Wolfr:, XEN:, Y0:, Y3:, Y1:, Y2:, Yil:,
+        Yokoy:, Yu:, Yuk:, Y:, Yut:, Yv:, Yve:, Zig:.
 :text
     n1056:comment
         "See  rfc6657  for information about 'charset' parameter handling for text media types.";
@@ -9865,7 +9853,7 @@ new0:
     reg:file [ reg:file "message/news"; reg:type "template" ];
     reg:name "news - OBSOLETED by RFC5537";
     reg:xref Henr:, html:rfc5537.
-n1069:
+n1058:
     reg:file [ reg:file "message/s-http"; reg:type "template" ];
     reg:name "s-http";
     reg:xref html:rfc2660.
@@ -9881,19 +9869,19 @@ tr:
     reg:file [ reg:file "message/tracking-status"; reg:type "template" ];
     reg:name "tracking-status";
     reg:xref html:rfc3886.
-n1070:
+n1059:
     reg:file [ reg:file "message/vnd.si.simp"; reg:type "template" ];
     reg:name "vnd.si.simp - OBSOLETED by request";
     reg:xref Nich:.
-n1071:
+n1060:
     reg:file [ reg:file "message/vnd.wfa.wsc"; reg:type "template" ];
     reg:name "vnd.wfa.wsc";
     reg:xref Mick:.
-n1072:
+n1061:
     terms:date "2017-05-12"^^XML:date;
     reg:file [ reg:file "model/3mf"; reg:type "template" ];
     reg:name "3mf";
-    reg:xref n1058:, Mic1:, www:specification.
+    reg:xref n1080:, Mic1:, www:specification.
 ex3:
     reg:file [ reg:file "model/example"; reg:type "template" ];
     reg:name "example";
@@ -9907,66 +9895,66 @@ ige:
     reg:file [ reg:file "model/iges"; reg:type "template" ];
     reg:name "iges";
     reg:xref Cur:.
-n1073:
+n1062:
     reg:file [ reg:file "model/vnd-dwf"; reg:type "template" ];
     reg:name "vnd.dwf";
     reg:xref J19:.
-n1074:
+n1063:
     reg:file [ reg:file "model/vnd.collada+xml"; reg:type "template" ];
     reg:name "vnd.collada+xml";
     reg:xref J17:.
-n1075:
+n1064:
     reg:file [ reg:file "model/vnd.flatland.3dml"; reg:type "template" ];
     reg:name "vnd.flatland.3dml";
     reg:xref Mic14:.
-n1076:
+n1065:
     reg:file [ reg:file "model/vnd.gdl"; reg:type "template" ];
     reg:name "vnd.gdl";
     reg:xref Attil:.
-n1077:
+n1066:
     reg:file [ reg:file "model/vnd.gs-gdl"; reg:type "template" ];
     reg:name "vnd.gs-gdl";
     reg:xref Attil:.
-n1078:
+n1067:
     reg:file [ reg:file "model/vnd.gtw"; reg:type "template" ];
     reg:name "vnd.gtw";
     reg:xref Yut:.
-n1079:
+n1068:
     reg:file [ reg:file "model/vnd.moml+xml"; reg:type "template" ];
     reg:name "vnd.moml+xml";
-    reg:xref n1059:.
-n1080:
+    reg:xref n1081:.
+n1069:
     reg:file [ reg:file "model/vnd.mts"; reg:type "template" ];
     reg:name "vnd.mts";
     reg:xref Bor:.
-n1081:
+n1070:
     terms:date "2014-04-24"^^XML:date;
     reg:file [ reg:file "model/vnd.opengex"; reg:type "template" ];
     reg:name "vnd.opengex";
-    reg:xref n1060:.
-n1082:
+    reg:xref n1082:.
+n1071:
     reg:file
     [ reg:file "model/vnd.parasolid.transmit-binary"; reg:type "template" ];
     reg:name "vnd.parasolid.transmit.binary";
     reg:xref P10:.
-n1083:
+n1072:
     reg:file
     [ reg:file "model/vnd.parasolid.transmit-text"; reg:type "template" ];
     reg:name "vnd.parasolid.transmit.text";
     reg:xref P10:.
-n1084:
+n1073:
     terms:date "2016-01-27"^^XML:date;
     reg:file
     [ reg:file "model/vnd.rosette.annotated-data-model"; reg:type "template" ];
     reg:name "vnd.rosette.annotated-data-model";
     reg:xref Be:.
-n1085:
+n1074:
     terms:date "2014-05-01"^^XML:date;
     reg:file
     [ reg:file "model/vnd.valve.source.compiled-map"; reg:type "template" ];
     reg:name "vnd.valve.source.compiled-map";
     reg:xref Hen:.
-n1086:
+n1075:
     reg:file [ reg:file "model/vnd.vtu"; reg:type "template" ];
     reg:name "vnd.vtu";
     reg:xref Bor:.
@@ -9980,11 +9968,11 @@ x3:
     reg:file [ reg:file "model/x3d+fastinfoset"; reg:type "template" ];
     reg:name "x3d+fastinfoset";
     reg:xref Web:.
-n1087:
+n1076:
     reg:file [ reg:file "model/x3d+xml"; reg:type "template" ];
     reg:name "x3d+xml";
     reg:xref Web:, Web3D:.
-n1088:
+n1077:
     reg:file [ reg:file "multipart/appledouble"; reg:type "template" ];
     reg:name "appledouble";
     reg:xref P:.
@@ -10021,7 +10009,7 @@ sig:
     reg:file [ reg:file "multipart/signed"; reg:type "template" ];
     reg:name "signed";
     reg:xref html:rfc1847.
-n1089:
+n1078:
     terms:date "2017-04-07"^^XML:date;
     reg:file [ reg:file "multipart/vnd.bint.med-plus"; reg:type "template" ];
     reg:name "vnd.bint.med-plus";
@@ -10031,7 +10019,7 @@ voic:
     reg:name "voice-message";
     reg:updated "2016-08-10";
     reg:xref html:rfc3801.
-n1090:
+n1079:
     terms:date "2014-08-27"^^XML:date;
     reg:file [ reg:file "multipart/x-mixed-replace"; reg:type "template" ];
     reg:name "x-mixed-replace";
@@ -10132,7 +10120,7 @@ n1092:
 n1093:
     reg:file [ reg:file "text/prs.lines.tag"; reg:type "template" ];
     reg:name "prs.lines.tag";
-    reg:xref n1063:.
+    reg:xref n1085:.
 n1094:
     terms:date "2016-04-04"^^XML:date;
     reg:file [ reg:file "text/prs.prop.logic"; reg:type "template" ];
@@ -10215,7 +10203,7 @@ n1097:
 n1098:
     reg:file [ reg:file "text/vnd.abc"; reg:type "template" ];
     reg:name "vnd.abc";
-    reg:xref n1067:.
+    reg:xref n1089:.
 n1099:
     terms:date "2016-08-12"^^XML:date;
     reg:file [ reg:file "text/vnd.ascii-art"; reg:type "template" ];
@@ -10241,7 +10229,7 @@ n1103:
 n1104:
     reg:file [ reg:file "text/vnd.fly"; reg:type "template" ];
     reg:name "vnd.fly";
-    reg:xref n1065:.
+    reg:xref n1087:.
 n1105:
     reg:file [ reg:file "text/vnd.fmi.flexstor"; reg:type "template" ];
     reg:name "vnd.fmi.flexstor";
@@ -10249,7 +10237,7 @@ n1105:
 n1106:
     reg:file [ reg:file "text/vnd.graphviz"; reg:type "template" ];
     reg:name "vnd.graphviz";
-    reg:xref n1062:.
+    reg:xref n1084:.
 n1107:
     reg:file [ reg:file "text/vnd.in3d.3dml"; reg:type "template" ];
     reg:name "vnd.in3d.3dml";
@@ -10495,7 +10483,7 @@ n1131:
 n1132:
     reg:file [ reg:file "video/vnd-vivo"; reg:type "template" ];
     reg:name "vnd.vivo";
-    reg:xref n1064:.
+    reg:xref n1086:.
 n1133:
     reg:file [ reg:file "video/vnd.CCTV"; reg:type "template" ];
     reg:name "vnd.CCTV";
@@ -10539,7 +10527,7 @@ n1142:
 n1143:
     reg:file [ reg:file "video/vnd.dvb.file"; reg:type "template" ];
     reg:name "vnd.dvb.file";
-    reg:xref n1066:, Peter:.
+    reg:xref n1088:, Peter:.
 n1144:
     reg:file [ reg:file "video/vnd.fvt"; reg:type "template" ];
     reg:name "vnd.fvt";
@@ -10579,11 +10567,11 @@ n1151:
 n1152:
     reg:file [ reg:file "video/vnd.motorola.video"; reg:type "template" ];
     reg:name "vnd.motorola.video";
-    reg:xref n1068:.
+    reg:xref n1090:.
 n1153:
     reg:file [ reg:file "video/vnd.motorola.videop"; reg:type "template" ];
     reg:name "vnd.motorola.videop";
-    reg:xref n1068:.
+    reg:xref n1090:.
 n1154:
     reg:file
     [ reg:file "video/vnd.ms-playready.media.pyv"; reg:type "template" ];
@@ -10601,7 +10589,7 @@ n1156:
 n1157:
     reg:file [ reg:file "video/vnd.objectvideo"; reg:type "template" ];
     reg:name "vnd.objectvideo";
-    reg:xref n1061:.
+    reg:xref n1083:.
 n1158:
     reg:file [ reg:file "video/vnd.radgamettools.bink"; reg:type "template" ];
     reg:name "vnd.radgamettools.bink";
@@ -10641,7 +10629,7 @@ n2:
     reg:id "_3GPP";
     reg:name "3GPP - Third Generation Partnership Project";
     reg:uri "mailto:3gppContact&etsi.org".
-n1058: reg:id "_3MF"; reg:name "3MF Consortium"; reg:uri "http://3mf.io".
+n1080: reg:id "_3MF"; reg:name "3MF Consortium"; reg:uri "http://3mf.io".
 
 AC:
     reg:id "AC_Mahendran";
@@ -10999,7 +10987,7 @@ Chr1:
     reg:name "Christian V. Sciberras";
     reg:updated "2008-09-19";
     reg:uri "mailto:contact&covac-software.com".
-n1059:
+n1081:
     reg:id "Christopher_Brooks";
     reg:name "Christopher Brooks";
     reg:updated "2006-08-20";
@@ -11276,7 +11264,7 @@ n494:
     reg:name "Eric Ledoux";
     reg:updated "2005-12-20";
     reg:uri "mailto:ericle&microsoft.com".
-n1060:
+n1082:
     reg:id "Eric_Lengyel";
     reg:name "Eric Lengyel";
     reg:updated "2014-04-28";
@@ -11891,12 +11879,12 @@ Jo:
     reg:name "John Brinkman";
     reg:updated "2007-05-22";
     reg:uri "mailto:john.brinkman&adobe.com".
-n1061:
+n1083:
     reg:id "John_Clark";
     reg:name "John Clark";
     reg:updated "2002-06-20";
     reg:uri "mailto:jclark&dbvision.net".
-n1062:
+n1084:
     reg:id "John_Ellson";
     reg:name "John Ellson";
     reg:updated "2008-07-24";
@@ -11916,7 +11904,7 @@ n813:
     reg:name "John Kwan";
     reg:updated "2006-03-23";
     reg:uri "mailto:John.Kwan&sealedmedia.com".
-n1063:
+n1085:
     reg:id "John_Lines";
     reg:name "John Lines";
     reg:updated "1998-01-19";
@@ -11936,12 +11924,12 @@ John:
     reg:name "John Palmieri";
     reg:updated "2007-06-07";
     reg:uri "mailto:johnp&redhat.com".
-n1064:
+n1086:
     reg:id "John_Wolfe";
     reg:name "John Wolfe";
     reg:updated "1996-04-19";
     reg:uri "mailto:John_Wolfe.VIVO&vivo.com".
-n1065:
+n1087:
     reg:id "John-Mark_Gurney";
     reg:name "John-Mark Gurney";
     reg:updated "1999-08-19";
@@ -12060,7 +12048,7 @@ Ke:
     reg:name "Kevin Lau";
     reg:updated "2006-09-29";
     reg:uri "mailto:kevinlau&microsoft.com".
-n1066:
+n1088:
     reg:id "Kevin_Murray";
     reg:name "Kevin Murray";
     reg:updated "2011-05-09";
@@ -13070,7 +13058,7 @@ Stef:
     reg:name "Stefan Szilva";
     reg:updated "2015-02-10";
     reg:uri "mailto:szilva&changenet.sk".
-n1067:
+n1089:
     reg:id "Steve_Allen";
     reg:name "Steve Allen";
     reg:updated "1997-09-19";
@@ -13332,7 +13320,7 @@ n378:
     reg:name "Tom Gurak";
     reg:updated "1997-03-19";
     reg:uri "mailto:assoc&intercon.roc.servtech.com".
-n1068:
+n1090:
     reg:id "Tom_McGinty";
     reg:name "Tom McGinty";
     reg:uri "mailto:tmcginty&dma.isg.mot.com".
