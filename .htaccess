@@ -96,6 +96,11 @@ RewriteRule ^ldt$ https://raw.githubusercontent.com/AtomGraph/Processor/master/s
 
 # added by dsr@w3.org for thing description content negotiation
 AddType text/turtle .ttl
+AddType application/ld+json .jsonld
 
 RewriteCond %{HTTP_ACCEPT} text/turtle
 RewriteRule ^td$ td/td.ttl [R=303]
+
+RewriteCond %{HTTP_ACCEPT} application/ld+json
+RewriteRule ^td$ td/td.jsonld [R=303]
+
