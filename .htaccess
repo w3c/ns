@@ -102,4 +102,4 @@ RewriteCond %{HTTP_ACCEPT} text/turtle
 RewriteRule ^td$ td/td.ttl [R=303]
 
 RewriteCond %{HTTP_ACCEPT} application/ld+json
-RewriteRule ^td$ td/td.jsonld [R=303]
+RewriteRule ^td$ td/w3c-wot-td-context.jsonld [R=303]
