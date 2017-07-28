@@ -103,4 +103,3 @@ RewriteRule ^td$ td/td.ttl [R=303]
 
 RewriteCond %{HTTP_ACCEPT} application/ld+json
 RewriteRule ^td$ td/td.jsonld [R=303]
-
