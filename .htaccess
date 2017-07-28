@@ -95,7 +95,7 @@ RewriteRule ^ldt/core/topic-hierarchy/templates$ https://raw.githubusercontent.c
 RewriteRule ^ldt$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ldt.ttl [P]
 
 # added by dsr@w3.org for thing description content negotiation
-# AddType text/turtle .ttl
+AddType text/turtle .ttl
 
-# RewriteCond %{HTTP_ACCEPT} text/turtle
-# RewriteRule ^td$ td/td.ttl [R=303]
+RewriteCond %{HTTP_ACCEPT} text/turtle
+RewriteRule ^td$ td/td.ttl [R=303]
