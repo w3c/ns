@@ -99,10 +99,17 @@
         <range rdf:resource="http://www.w3.org/2006/vcard/ns#Group"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#defaultForNew">
+    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#default">
         <comment>A directory for which this authorization is used for new files in the directory.</comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
-        <label>default access for new things in</label>
+        <label>default access for things in this</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#defaultForNew">
+        <comment>THIS IS OBSOLETE AS OF 2017-08-01.   See 'default'.
+        Was: A directory for which this authorization is used for new files in the directory.</comment>
+        <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
+        <label>default access for new things in the object</label>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#delegates">

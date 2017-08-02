@@ -56,10 +56,17 @@ accessToClass
         rdfs:domain     Authorization;
         rdfs:range      rdfs:Class.
 
+default
+    a rdf:Property;
+        rdfs:label "default access for things in this";
+        rdfs:comment "A directory for which this authorization is used for new files in the directory.";
+        rdfs:domain     Authorization.
+
 defaultForNew
     a rdf:Property;
-        rdfs:label "default access for new things in";
-        rdfs:comment "A directory for which this authorization is used for new files in the directory.";
+        rdfs:label "default access for new things in the object";
+        rdfs:comment """THIS IS OBSOLETE AS OF 2017-08-01.   See 'default'.
+        Was: A directory for which this authorization is used for new files in the directory.""";
         rdfs:domain     Authorization.
 
 mode
