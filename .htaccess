@@ -88,9 +88,9 @@ RewriteRule ^bde/(.*)$ https://w3.semte.ch/ns/bde/$1 [P,L]
 # Start with specific vocabs, note that all these begin with ^ldt
 RewriteRule ^ldt/core/domain$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/c.ttl [P]
 RewriteRule ^ldt/core/templates$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ct.ttl [P]
-RewriteRule ^ldt/core/document-hierarchy/domain$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/dh.ttl [P]
-RewriteRule ^ldt/core/document-hierarchy/templates$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/dht.ttl [P]
-RewriteRule ^ldt/core/topic-hierarchy/templates$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/tht.ttl [P]
+RewriteRule ^ldt/document-hierarchy/domain$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/dh.ttl [P]
+RewriteRule ^ldt/document-hierarchy/templates$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/dht.ttl [P]
+RewriteRule ^ldt/topic-hierarchy/templates$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/tht.ttl [P]
 # Hopefully it's now safe to include this one
 RewriteRule ^ldt$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ldt.ttl [P]
 
