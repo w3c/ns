@@ -782,7 +782,7 @@
     <rdfs:label xml:lang="it">remunerazione</rdfs:label>
     <rdfs:comment xml:lang="es">Salario o cualquier otra remuneración asociada con la actividad. La forma usual de referirse a dicha remuneración será utilizando un esquema de representación como el propuesto en la ontología GoodRelations `gr:PriceSpecification`, pero el rango se deja abierto a que las distintas aplicaciones lo especialicen (por ejemplo, remunerationInGBP)</rdfs:comment>
     <rdfs:domain rdf:resource="http://www.w3.org/ns/org#Role"/>
-    <rdfs:commenet xml:lang="ja">役割に関係する給料やその他の報酬を示します。</rdfs:commenet>
+    <rdfs:comment xml:lang="ja">役割に関係する給料やその他の報酬を示します。</rdfs:comment>
     <rdfs:label xml:lang="es">recibe remuneración</rdfs:label>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
     <rdfs:label xml:lang="en">remuneration</rdfs:label>

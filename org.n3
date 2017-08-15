@@ -594,7 +594,7 @@ org:remuneration a owl:ObjectProperty, rdf:Property;
 
     rdfs:comment """Indique un salaire ou tout autre compensation associée au Rôle. Typiquement, ceci sera annoté en utilisant un schéma existant comme  `gr:PriceSpecification` mais le champ de cette propriété est laissé ouvert afin de permettre aux applications de la spécialiser (par exemple remunerationEuro)."""@fr;    
     rdfs:comment """Indica il salario o altra forma di remunerazione associata al ruolo. In genere, questo si denota usando uno schema di rappresentazione esistente come il `gr:PriceSpecification` ma il codominio è lasciato libero di essere specializzato a seconda delle applicazioni."""@it;
-    rdfs:commenet "役割に関係する給料やその他の報酬を示します。"@ja;
+    rdfs:comment "役割に関係する給料やその他の報酬を示します。"@ja;
     rdfs:isDefinedBy <http://www.w3.org/ns/org> ;
     .
 
