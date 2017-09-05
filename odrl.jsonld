@@ -7,6 +7,10 @@
     "skos":    "http://www.w3.org/2004/02/skos/core#",
     "dct":     "http://purl.org/dc/terms/",
     "xsd":     "http://www.w3.org/2001/XMLSchema#",
+    "vcard":   "http://www.w3.org/2006/vcard/ns#",
+    "foaf":    "http://xmlns.com/foaf/0.1/",
+    "schema":  "http://schema.org/",
+    "cc":      "http://creativecommons.org/ns#",
 
     "uid":     {"@type": "@id", "@id": "@id"},
     "type":    {"@type": "@id", "@id": "@type"},
@@ -15,7 +19,6 @@
     "Rule":             "odrl:Rule",
     "profile":          {"@type": "@id", "@id": "odrl:profile"},
 
-    "inheritAllowed":   {"@type": "xsd:boolean", "@id": "odrl:inheritAllowed"},
     "inheritFrom":      {"@type": "@id", "@id": "odrl:inheritFrom"},
 
     "ConflictTerm":     "odrl:ConflictTerm",
@@ -23,12 +26,6 @@
     "perm":             "odrl:perm",
     "prohibit":         "odrl:prohibit",
     "invalid":          "odrl:invalid",
-
-    "UndefinedTerm":     "odrl:UndefinedTerm",
-    "undefined":         {"@type": "@vocab", "@id": "odrl:undefined"},
-    "ignore":            "odrl:ignore",
-    "invalid":           "odrl:invalid",
-    "support":           "odrl:support",
 
     "Agreement":           "odrl:Agreement",
     "Assertion":           "odrl:Assertion",
@@ -39,35 +36,42 @@
     "Ticket":              "odrl:Ticket",
 
     "Asset":               "odrl:Asset",
+    "AssetCollection":     "odrl:AssetCollection",
     "relation":            {"@type": "@id", "@id": "odrl:relation"},
-    "scope":               {"@type": "@vocab", "@id": "odrl:scope"},
+    "hasPolicy":           {"@type": "@id", "@id": "odrl:hasPolicy"},
 
     "target":             {"@type": "@id", "@id": "odrl:target"},
     "output":             {"@type": "@id", "@id": "odrl:output"},
+    
+    "partOf":            {"@type": "@id", "@id": "odrl:partOf"},
+	"source":            {"@type": "@id", "@id": "odrl:source"},
 
     "Party":              "odrl:Party",
+    "PartyCollection":    "odrl:PartyCollection",
     "function":           {"@type": "@vocab", "@id": "odrl:function"},
     "PartyScope":         "odrl:PartyScope",
-    "scope":              {"@type": "@vocab", "@id": "odrl:scope"},
 
     "assignee":             {"@type": "@id", "@id": "odrl:assignee"},
     "assigner":             {"@type": "@id", "@id": "odrl:assigner"},
+	"assigneeOf":           {"@type": "@id", "@id": "odrl:assigneeOf"},
+    "assignerOf":           {"@type": "@id", "@id": "odrl:assignerOf"},
     "attributedParty":      {"@type": "@id", "@id": "odrl:attributedParty"},
+	"attributingParty":     {"@type": "@id", "@id": "odrl:attributingParty"},
     "compensatedParty":     {"@type": "@id", "@id": "odrl:compensatedParty"},
     "compensatingParty":    {"@type": "@id", "@id": "odrl:compensatingParty"},
     "consentingParty":      {"@type": "@id", "@id": "odrl:consentingParty"},
+	"consentedParty":       {"@type": "@id", "@id": "odrl:consentedParty"},
     "informedParty":        {"@type": "@id", "@id": "odrl:informedParty"},
+	"informingParty":       {"@type": "@id", "@id": "odrl:informingParty"},
     "trackingParty":        {"@type": "@id", "@id": "odrl:trackingParty"},
-
-    "Group":                 "odrl:Group",
-    "Individual":            "odrl:Individual",
-    "All":                   "odrl:All",
-    "AllConnections":        "odrl:AllConnections",
-    "All2ndConnections":     "odrl:All2ndConnections",
-    "AllGroups":             "odrl:AllGroups",
+	"trackedParty":         {"@type": "@id", "@id": "odrl:trackedParty"},
+	"contractingParty":     {"@type": "@id", "@id": "odrl:contractingParty"},
+	"contractedParty":      {"@type": "@id", "@id": "odrl:contractedParty"},
 
     "Action":                "odrl:Action",
     "action":                {"@type": "@vocab", "@id": "odrl:action"},
+    "includedIn":            {"@type": "@id", "@id": "odrl:includedIn"},
+    "implies":               {"@type": "@id", "@id": "odrl:implies"},
     
     "Permission":            "odrl:Permission",
     "permission":            {"@type": "@id", "@id": "odrl:permission"},
@@ -99,13 +103,17 @@
     "read":                  "odrl:read",
     "reproduce":             "odrl:reproduce",
     "sell":                  "odrl:sell",
+    "stream":                "odrl:stream",
     "textToSpeech":          "odrl:textToSpeech",
     "transfer":              "odrl:transfer",
     "transform":             "odrl:transform",
     "translate":             "odrl:translate",
     
     "Duty":                 "odrl:Duty",
+	"prohibition":          {"@type": "@id", "@id": "odrl:prohibition"},
     "duty":                 {"@type": "@id", "@id": "odrl:duty"},
+    "consequence":          {"@type": "@id", "@id": "odrl:consequence"},
+	"remedy":               {"@type": "@id", "@id": "odrl:remedy"},
 
     "acceptTracking":       "odrl:acceptTracking",
     "attribute":            "odrl:attribute",
@@ -121,7 +129,9 @@
     "watermark":            "odrl:watermark",
     
     "Constraint":           "odrl:Constraint",
+	"LogicalConstraint":    "odrl:LogicalConstraint",
     "constraint":           {"@type": "@id", "@id": "odrl:constraint"},
+	"refinement":           {"@type": "@id", "@id": "odrl:refinement"},
     "Operator":             "odrl:Operator",
     "operator":             {"@type": "@vocab", "@id": "odrl:operator"},
     "RightOperand":         "odrl:RightOperand",
@@ -179,7 +189,7 @@
     "isAnyOf":              "odrl:isAnyOf",
     "isNoneOf":             "odrl:isNoneOf",
     "or":                   "odrl:or",
-    "xor":                  "odrl:xor",
+    "xone":                 "odrl:xone",
     "and":                  "odrl:and",
     "andSequence":          "odrl:andSequence",
 
