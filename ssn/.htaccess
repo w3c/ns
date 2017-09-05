@@ -1,6 +1,6 @@
 RewriteEngine On
 RewriteBase  /ns/ssn/
-RewriteCond  %{REQUEST_URI}  !/ns/ssn/dul/.*
+RewriteCond  %{REQUEST_URI}  !/ns/ssn/dul.*
 RewriteCond  %{REQUEST_URI}  !/ns/ssn/Overview.*
 RewriteCond  %{REQUEST_URI}  /ns/ssn/(.*)(#.*)?
 RewriteRule  ^(.*)$  /ns/ssn/Overview$2 [P] 
