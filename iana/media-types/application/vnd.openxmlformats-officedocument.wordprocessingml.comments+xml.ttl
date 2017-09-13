@@ -3,7 +3,7 @@
 @prefix M: <../../person/Makoto_Murata#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file
@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.openxmlformats-officedocument.wordprocessingml.comments+xml";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

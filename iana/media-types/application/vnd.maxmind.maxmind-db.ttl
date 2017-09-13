@@ -5,11 +5,11 @@
 @prefix Willi: <../../person/William_Stevenson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-07-25"^^XML:date;
     reg:file
     [ reg:file "application/vnd.maxmind.maxmind-db"; reg:type "template" ];
     reg:name "vnd.maxmind.maxmind-db";
     reg:xref Willi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

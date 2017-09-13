@@ -3,9 +3,9 @@
 @prefix Yokoy: <../../person/Yokoyama_Kiyonobu#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.jsk.isdn-ngn"; reg:type "template" ];
     reg:name "vnd.jsk.isdn-ngn";
     reg:xref Yokoy:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

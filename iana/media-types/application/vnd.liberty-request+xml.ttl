@@ -3,10 +3,10 @@
 @prefix Bre: <../../person/Brett_McDowell#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.liberty-request+xml"; reg:type "template" ];
     reg:name "vnd.liberty-request+xml";
     reg:xref Bre:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

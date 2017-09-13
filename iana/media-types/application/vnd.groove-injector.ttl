@@ -3,10 +3,10 @@
 @prefix Tod: <../../person/Todd_Joseph#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.groove-injector"; reg:type "template" ];
     reg:name "vnd.groove-injector";
     reg:xref Tod:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

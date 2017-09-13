@@ -3,11 +3,11 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.pwg-multiplexed"; reg:type "template" ];
     reg:name "vnd.pwg-multiplexed";
     reg:updated "2015-07-21";
     reg:xref html:rfc3391.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

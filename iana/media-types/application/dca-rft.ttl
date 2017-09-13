@@ -3,9 +3,9 @@
 @prefix L: <../../person/Larry_Campbell#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/dca-rft"; reg:type "template" ];
     reg:name "dca-rft";
     reg:xref L:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -4,9 +4,9 @@
 @prefix W3C: <../../person/W3C#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/provenance+xml"; reg:type "template" ];
     reg:name "provenance+xml";
     reg:xref Iv:, W3C:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -4,10 +4,10 @@
 @prefix OMA: <../../person/OMA#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.oma.cab-pcc+xml"; reg:type "template" ];
     reg:name "vnd.oma.cab-pcc+xml";
     reg:xref H:, OMA:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -5,7 +5,7 @@
 @prefix Rin: <../../person/Rintze_M._Zelle#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-02-23"^^XML:date;
     reg:file
             [
@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.citationstyles.style+xml";
     reg:xref Rin:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

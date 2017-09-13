@@ -6,11 +6,11 @@
 @prefix W3: <../../person/W3C#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-02-04"^^XML:date;
     reg:file [ reg:file "application/ttml+xml"; reg:type "template" ];
     reg:name "ttml+xml";
     reg:updated "2016-09-30"^^XML:date;
     reg:xref W3C:, W3:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

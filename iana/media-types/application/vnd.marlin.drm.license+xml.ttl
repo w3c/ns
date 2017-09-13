@@ -3,10 +3,10 @@
 @prefix G: <../../person/Gary_Ellison#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.marlin.drm.license+xml"; reg:type "template" ];
     reg:name "vnd.marlin.drm.license+xml";
     reg:xref G:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

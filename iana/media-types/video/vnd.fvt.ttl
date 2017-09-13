@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Ari: <../../person/Arild_Fuldseth#>.
 
-medi:video reg:record :.
+medi:video reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "video/vnd.fvt"; reg:type "template" ];
     reg:name "vnd.fvt";
     reg:xref Ari:.

@@ -5,10 +5,10 @@
 @prefix Sl: <../../person/Slawomir_Lisznianski#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-01-31"^^XML:date;
     reg:file [ reg:file "application/vnd.pcos"; reg:type "template" ];
     reg:name "vnd.pcos";
     reg:xref Sl:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

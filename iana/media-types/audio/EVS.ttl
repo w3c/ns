@@ -6,11 +6,11 @@
 @prefix Kyu: <../../person/Kyunghun_Jung#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-12-21"^^XML:date;
     reg:file [ reg:file "audio/EVS"; reg:type "template" ];
     reg:name "EVS";
     reg:updated "2016-10-03"^^XML:date;
     reg:xref n1:, Kyu:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

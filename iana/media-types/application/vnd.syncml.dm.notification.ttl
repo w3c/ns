@@ -4,10 +4,10 @@
 @prefix Pet: <../../person/Peter_Thompson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.syncml.dm.notification"; reg:type "template" ];
     reg:name "vnd.syncml.dm.notification";
     reg:xref OMA:, Pet:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

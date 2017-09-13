@@ -5,11 +5,11 @@
 @prefix Ale: <../../person/Alex_Crawford#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-04-15"^^XML:date;
     reg:file
     [ reg:file "application/vnd.coreos.ignition+json"; reg:type "template" ];
     reg:name "vnd.coreos.ignition+json";
     reg:xref Ale:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

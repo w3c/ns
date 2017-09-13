@@ -3,9 +3,9 @@
 @prefix M: <../../person/Mark_Nottingham#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/xop+xml"; reg:type "template" ];
     reg:name "xop+xml";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Rob: <../../person/Roberto_Perelman#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.adobe.xfdf"; reg:type "template" ];
     reg:name "vnd.adobe.xfdf";
     reg:xref Rob:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

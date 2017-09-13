@@ -3,9 +3,9 @@
 @prefix ITU: <../../person/ITU-T_ASN.1_Rapporteur#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/fastsoap"; reg:type "template" ];
     reg:name "fastsoap";
     reg:xref ITU:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Sco: <../../person/Scott_Becker#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.svd"; reg:type "template" ];
     reg:name "vnd.svd";
     reg:xref Sco:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

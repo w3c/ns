@@ -3,7 +3,7 @@
 @prefix W3C: <../../person/W3C#>.
 @prefix medi: <../media-types.ttl#>.
 
-: reg:name "svg+xml"; reg:xref W3C:, <http://www.w3.org/TR/SVG/mimereg.html>.
-
-medi:image reg:record :.
+:Resource
+reg:name "svg+xml"; reg:xref W3C:, <http://www.w3.org/TR/SVG/mimereg.html>.
+medi:image reg:record :Resource.
 

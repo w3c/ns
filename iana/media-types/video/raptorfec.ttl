@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix html: <https://tools.ietf.org/html/>.
 
-medi:video reg:record :.
+medi:video reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "video/raptorfec"; reg:type "template" ];
     reg:name "raptorfec";
     reg:xref html:rfc6682.

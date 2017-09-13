@@ -5,10 +5,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-12-20"^^XML:date;
     reg:file [ reg:file "application/coap-payload"; reg:type "template" ];
     reg:name "coap-payload";
     reg:xref html:rfc8075.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

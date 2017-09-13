@@ -6,11 +6,11 @@
 @prefix Ozg: <../../person/Ozgur_Oyman#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-04-16"^^XML:date;
     reg:file
     [ reg:file "application/3gpdash-qoe-report+xml"; reg:type "template" ];
     reg:name "3gpdash-qoe-report+xml";
     reg:xref n1:, Ozg:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

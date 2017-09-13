@@ -3,10 +3,10 @@
 @prefix M: <../../person/Matthias_Ludwig#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.quobject-quoxdocument"; reg:type "template" ];
     reg:name "vnd.quobject-quoxdocument";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

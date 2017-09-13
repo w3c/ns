@@ -3,10 +3,10 @@
 @prefix M: <../../person/Mark_Olleson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.yamaha.openscoreformat"; reg:type "template" ];
     reg:name "vnd.yamaha.openscoreformat";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

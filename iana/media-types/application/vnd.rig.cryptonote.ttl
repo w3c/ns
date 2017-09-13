@@ -3,9 +3,9 @@
 @prefix Ken: <../../person/Ken_Jibiki#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.rig.cryptonote"; reg:type "template" ];
     reg:name "vnd.rig.cryptonote";
     reg:xref Ken:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

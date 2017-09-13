@@ -5,7 +5,7 @@
 @prefix Eri: <../../person/Erik_Ronström#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-07-25"^^XML:date;
     reg:file
             [
@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.doremir.scorecloud-binary-document";
     reg:xref Eri:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

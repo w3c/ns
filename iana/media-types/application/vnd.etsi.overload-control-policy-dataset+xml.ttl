@@ -3,7 +3,7 @@
 @prefix Mig: <../../person/Miguel_Angel_Reina_Ortega#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file
@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.etsi.overload-control-policy-dataset+xml";
     reg:xref Mig:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

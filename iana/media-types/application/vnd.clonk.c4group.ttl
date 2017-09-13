@@ -3,9 +3,9 @@
 @prefix Gue: <../../person/Guenther_Brammer#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.clonk.c4group"; reg:type "template" ];
     reg:name "vnd.clonk.c4group";
     reg:xref Gue:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

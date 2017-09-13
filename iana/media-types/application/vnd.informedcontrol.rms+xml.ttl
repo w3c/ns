@@ -3,10 +3,10 @@
 @prefix M: <../../person/Mark_Wahl#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.informedcontrol.rms+xml"; reg:type "template" ];
     reg:name "vnd.informedcontrol.rms+xml";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

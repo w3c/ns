@@ -3,9 +3,9 @@
 @prefix Pet: <../../person/Peter_Stark#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd-wap-wbmp"; reg:type "template" ];
     reg:name "vnd.wap.wbmp";
     reg:xref Pet:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

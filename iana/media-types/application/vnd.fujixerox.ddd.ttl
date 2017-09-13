@@ -3,9 +3,9 @@
 @prefix M: <../../person/Masanori_Onda#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.fujixerox.ddd"; reg:type "template" ];
     reg:name "vnd.fujixerox.ddd";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

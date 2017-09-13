@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Bor: <../../person/Boris_Rabinovitch#>.
 
-medi:model reg:record :.
+medi:model reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "model/vnd.vtu"; reg:type "template" ];
     reg:name "vnd.vtu";
     reg:xref Bor:.

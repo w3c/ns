@@ -3,9 +3,9 @@
 @prefix Purv: <../../person/Purva_R_Rajkotia#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ieee.1905"; reg:type "template" ];
     reg:name "vnd.ieee.1905";
     reg:xref Purv:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

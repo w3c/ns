@@ -3,9 +3,9 @@
 @prefix Mich: <../../person/Michael_Sweet#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/pwg-raster"; reg:type "template" ];
     reg:name "pwg-raster";
     reg:xref Mich:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

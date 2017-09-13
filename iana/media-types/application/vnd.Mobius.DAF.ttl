@@ -3,9 +3,9 @@
 @prefix All: <../../person/Allen_K._Kabayama#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.Mobius.DAF"; reg:type "template" ];
     reg:name "vnd.Mobius.DAF";
     reg:xref All:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

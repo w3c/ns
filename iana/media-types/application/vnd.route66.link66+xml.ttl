@@ -3,10 +3,10 @@
 @prefix Syb: <../../person/Sybren_Kikstra#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.route66.link66+xml"; reg:type "template" ];
     reg:name "vnd.route66.link66+xml";
     reg:xref Syb:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

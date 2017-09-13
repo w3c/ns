@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/mpeg4-generic"; reg:type "template" ];
     reg:name "mpeg4-generic";
     reg:xref html:rfc3640.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

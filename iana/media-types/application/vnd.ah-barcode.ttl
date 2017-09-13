@@ -3,9 +3,9 @@
 @prefix K: <../../person/Katsuhiko_Ichinose#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ah-barcode"; reg:type "template" ];
     reg:name "vnd.ah-barcode";
     reg:xref K:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

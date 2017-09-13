@@ -3,9 +3,9 @@
 @prefix Ste: <../../person/Steve_Hattersley#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/vnd.dolby.pl2"; reg:type "template" ];
     reg:name "vnd.dolby.pl2";
     reg:xref Ste:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

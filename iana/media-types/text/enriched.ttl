@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix html: <https://tools.ietf.org/html/>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-: reg:name "enriched"; reg:xref html:rfc1896 .
+:Resource reg:name "enriched"; reg:xref html:rfc1896 .
 

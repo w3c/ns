@@ -3,9 +3,9 @@
 @prefix Hiro: <../../person/Hiroaki_Takahashi#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.smaf"; reg:type "template" ];
     reg:name "vnd.smaf";
     reg:xref Hiro:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

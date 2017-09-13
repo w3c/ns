@@ -3,10 +3,10 @@
 @prefix Ch: <../../person/Charles_Engelke#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.infotech.project"; reg:type "template" ];
     reg:name "vnd.infotech.project";
     reg:xref Ch:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

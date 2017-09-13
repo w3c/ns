@@ -3,9 +3,9 @@
 @prefix Got: <../../person/Gottfried_Zimmermann#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/cea-2018+xml"; reg:type "template" ];
     reg:name "cea-2018+xml";
     reg:xref Got:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

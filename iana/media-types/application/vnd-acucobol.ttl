@@ -3,9 +3,9 @@
 @prefix Dov: <../../person/Dovid_Lubin#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd-acucobol"; reg:type "template" ];
     reg:name "vnd.acucobol";
     reg:xref Dov:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

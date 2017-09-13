@@ -3,9 +3,9 @@
 @prefix D: <../../person/David_Faure#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.kde.kword"; reg:type "template" ];
     reg:name "vnd.kde.kword";
     reg:xref D:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

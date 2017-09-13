@@ -3,10 +3,10 @@
 @prefix Priy: <../../person/Priya_Dandawate#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.windows.devicepairing"; reg:type "template" ];
     reg:name "vnd.windows.devicepairing";
     reg:xref Priy:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Ulr: <../../person/Ulrich_Kortenkamp#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.cinderella"; reg:type "template" ];
     reg:name "vnd.cinderella";
     reg:xref Ulr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

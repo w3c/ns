@@ -3,9 +3,9 @@
 @prefix Nor: <../../person/Nor_Helmee#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.cybank"; reg:type "template" ];
     reg:name "vnd.cybank";
     reg:xref Nor:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

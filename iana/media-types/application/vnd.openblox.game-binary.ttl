@@ -5,11 +5,11 @@
 @prefix M: <../../person/Mark_Otaris#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-08-28"^^XML:date;
     reg:file
     [ reg:file "application/vnd.openblox.game-binary"; reg:type "template" ];
     reg:name "vnd.openblox.game-binary";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

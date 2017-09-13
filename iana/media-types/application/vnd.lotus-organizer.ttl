@@ -3,10 +3,10 @@
 @prefix P: <../../person/Paul_Wattenberger#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.lotus-organizer"; reg:type "template" ];
     reg:name "vnd.lotus-organizer";
     reg:xref P:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Pee: <../../person/Peeter_Piegaze#>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "text/jcr-cnd"; reg:type "template" ];
     reg:name "jcr-cnd";
     reg:xref Pee:.

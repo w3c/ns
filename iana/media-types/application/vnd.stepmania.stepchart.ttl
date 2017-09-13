@@ -3,10 +3,10 @@
 @prefix Hen: <../../person/Henrik_Andersson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.stepmania.stepchart"; reg:type "template" ];
     reg:name "vnd.stepmania.stepchart";
     reg:xref Hen:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

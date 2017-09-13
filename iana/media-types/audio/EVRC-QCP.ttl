@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/EVRC-QCP"; reg:type "template" ];
     reg:name "EVRC-QCP";
     reg:xref html:rfc3625.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

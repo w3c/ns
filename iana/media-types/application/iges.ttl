@@ -3,9 +3,9 @@
 @prefix Cur: <../../person/Curtis_Parks#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/iges"; reg:type "template" ];
     reg:name "iges";
     reg:xref Cur:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

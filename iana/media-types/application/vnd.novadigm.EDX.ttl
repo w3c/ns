@@ -3,9 +3,9 @@
 @prefix J: <../../person/Janine_Swenson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.novadigm.EDX"; reg:type "template" ];
     reg:name "vnd.novadigm.EDX";
     reg:xref J:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,10 +3,10 @@
 @prefix M: <../../person/Martin_Talbot#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.ubisoft.webplayer"; reg:type "template" ];
     reg:name "vnd.ubisoft.webplayer";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

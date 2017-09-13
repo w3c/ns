@@ -3,10 +3,10 @@
 @prefix Ali: <../../person/Ali_Teffahi#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.dtg.local-html"; reg:type "template" ];
     reg:name "vnd.dtg.local.html";
     reg:updated "2015-07-21";
     reg:xref Ali:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

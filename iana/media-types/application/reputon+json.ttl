@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/reputon+json"; reg:type "template" ];
     reg:name "reputon+json";
     reg:xref html:rfc7071.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

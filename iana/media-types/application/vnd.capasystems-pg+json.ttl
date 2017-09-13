@@ -5,11 +5,11 @@
 @prefix Y: <../../person/Yüksel_Aydemir#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-05-03"^^XML:date;
     reg:file
     [ reg:file "application/vnd.capasystems-pg+json"; reg:type "template" ];
     reg:name "vnd.capasystems-pg+json";
     reg:xref Y:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

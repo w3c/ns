@@ -3,9 +3,9 @@
 @prefix Thom: <../../person/Thomas_Belling#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/vnd.3gpp.iufp"; reg:type "template" ];
     reg:name "vnd.3gpp.iufp";
     reg:xref Thom:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

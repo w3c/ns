@@ -3,10 +3,10 @@
 @prefix Bil: <../../person/Bill_Fenner#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.aristanetworks.swi"; reg:type "template" ];
     reg:name "vnd.aristanetworks.swi";
     reg:xref Bil:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

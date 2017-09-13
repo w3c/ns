@@ -5,10 +5,10 @@
 @prefix Mich: <../../person/Michael_Koster#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-03-03"^^XML:date;
     reg:file [ reg:file "application/vnd.ocf+cbor"; reg:type "template" ];
     reg:name "vnd.ocf+cbor";
     reg:xref Mich:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

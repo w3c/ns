@@ -3,9 +3,9 @@
 @prefix Dir: <../../person/Dirk_DiGiorgio-Haag#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.kenameaapp"; reg:type "template" ];
     reg:name "vnd.kenameaapp";
     reg:xref Dir:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

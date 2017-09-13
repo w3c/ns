@@ -3,10 +3,10 @@
 @prefix M: <../../person/Magnus_Nystrom#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.otps.ct-kip+xml"; reg:type "template" ];
     reg:name "vnd.otps.ct-kip+xml";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

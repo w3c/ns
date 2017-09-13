@@ -4,9 +4,9 @@
 @prefix OMA: <../../person/OMA#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.oma.push"; reg:type "template" ];
     reg:name "vnd.oma.push";
     reg:xref Bry:, OMA:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

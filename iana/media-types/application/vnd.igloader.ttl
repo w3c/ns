@@ -3,9 +3,9 @@
 @prefix Tim: <../../person/Tim_Fisher#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.igloader"; reg:type "template" ];
     reg:name "vnd.igloader";
     reg:xref Tim:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

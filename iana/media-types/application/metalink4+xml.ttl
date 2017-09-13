@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/metalink4+xml"; reg:type "template" ];
     reg:name "metalink4+xml";
     reg:xref html:rfc5854.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

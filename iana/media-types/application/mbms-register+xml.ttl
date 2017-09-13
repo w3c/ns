@@ -3,9 +3,9 @@
 @prefix n1: <../../person/_3GPP#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/mbms-register+xml"; reg:type "template" ];
     reg:name "mbms-register+xml";
     reg:xref n1:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

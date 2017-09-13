@@ -5,10 +5,10 @@
 @prefix Gi: <../../person/Giacomo_Guilizzoni#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-05-06"^^XML:date;
     reg:file [ reg:file "application/vnd.balsamiq.bmpr"; reg:type "template" ];
     reg:name "vnd.balsamiq.bmpr";
     reg:xref Gi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

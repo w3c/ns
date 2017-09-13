@@ -5,11 +5,11 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-03-18"^^XML:date;
     reg:file
     [ reg:file "application/alto-directory+json"; reg:type "template" ];
     reg:name "alto-directory+json";
     reg:xref html:rfc7285.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

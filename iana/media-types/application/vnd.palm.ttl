@@ -3,9 +3,9 @@
 @prefix G: <../../person/Gavin_Peacock#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.palm"; reg:type "template" ];
     reg:name "vnd.palm";
     reg:xref G:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

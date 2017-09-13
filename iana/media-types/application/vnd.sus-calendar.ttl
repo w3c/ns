@@ -3,9 +3,9 @@
 @prefix Jon: <../../person/Jonathan_Niedfeldt#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.sus-calendar"; reg:type "template" ];
     reg:name "vnd.sus-calendar";
     reg:xref Jon:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Jes: <../../person/Jesse_McGatha#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ms-xpsdocument"; reg:type "template" ];
     reg:name "vnd.ms-xpsdocument";
     reg:xref Jes:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

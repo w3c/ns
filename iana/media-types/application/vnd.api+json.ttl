@@ -3,9 +3,9 @@
 @prefix Ste: <../../person/Steve_Klabnik#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.api+json"; reg:type "template" ];
     reg:name "vnd.api+json";
     reg:xref Ste:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

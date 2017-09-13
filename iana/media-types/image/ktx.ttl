@@ -5,7 +5,7 @@
 @prefix n1: <http://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/#>.
 @prefix medi: <../media-types.ttl#>.
 
-: reg:name "ktx"; reg:xref Khr:, M:, n1:mimeregistration.
+:Resource reg:name "ktx"; reg:xref Khr:, M:, n1:mimeregistration.
 
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

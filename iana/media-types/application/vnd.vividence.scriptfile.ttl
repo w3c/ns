@@ -3,10 +3,10 @@
 @prefix M: <../../person/Mark_Risher#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.vividence.scriptfile"; reg:type "template" ];
     reg:name "vnd.vividence.scriptfile";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

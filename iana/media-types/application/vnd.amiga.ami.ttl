@@ -3,9 +3,9 @@
 @prefix Kev: <../../person/Kevin_Blumberg#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.amiga.ami"; reg:type "template" ];
     reg:name "vnd.amiga.ami";
     reg:xref Kev:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

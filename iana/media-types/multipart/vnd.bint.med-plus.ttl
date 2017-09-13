@@ -5,9 +5,9 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix Hei: <../../person/Heinz-Peter_Schütz#>.
 
-medi:multipart reg:record :.
+medi:multipart reg:record :Resource.
 
-:
+:Resource
     terms:date "2017-04-07"^^XML:date;
     reg:file [ reg:file "multipart/vnd.bint.med-plus"; reg:type "template" ];
     reg:name "vnd.bint.med-plus";

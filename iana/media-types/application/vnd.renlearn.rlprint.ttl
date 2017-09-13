@@ -3,10 +3,10 @@
 @prefix J: <../../person/James_Wick#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.renlearn.rlprint"; reg:type "template" ];
     reg:name "vnd.RenLearn.rlprint";
     reg:xref J:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

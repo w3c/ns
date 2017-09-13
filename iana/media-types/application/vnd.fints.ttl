@@ -3,9 +3,9 @@
 @prefix Ing: <../../person/Ingo_Hammann#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.fints"; reg:type "template" ];
     reg:name "vnd.fints";
     reg:xref Ing:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

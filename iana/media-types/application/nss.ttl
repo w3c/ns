@@ -3,9 +3,9 @@
 @prefix Mich: <../../person/Michael_Hammer#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/nss"; reg:type "template" ];
     reg:name "nss";
     reg:xref Mich:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Gle: <../../person/Glenn_Widener#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.swiftview-ics"; reg:type "template" ];
     reg:name "vnd.swiftview-ics";
     reg:xref Gle:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

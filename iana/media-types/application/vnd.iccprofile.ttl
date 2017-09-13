@@ -3,9 +3,9 @@
 @prefix Phi: <../../person/Phil_Green#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.iccprofile"; reg:type "template" ];
     reg:name "vnd.iccprofile";
     reg:xref Phi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

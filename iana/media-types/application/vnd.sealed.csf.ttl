@@ -3,9 +3,9 @@
 @prefix Joh: <../../person/John_Kwan#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.sealed.csf"; reg:type "template" ];
     reg:name "vnd.sealed.csf";
     reg:xref Joh:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

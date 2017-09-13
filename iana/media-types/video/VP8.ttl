@@ -5,9 +5,9 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix html: <https://tools.ietf.org/html/>.
 
-medi:video reg:record :.
+medi:video reg:record :Resource.
 
-:
+:Resource
     terms:date "2015-09-25"^^XML:date;
     reg:file [ reg:file "video/VP8"; reg:type "template" ];
     reg:name "VP8";

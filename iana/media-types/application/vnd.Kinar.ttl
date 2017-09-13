@@ -3,9 +3,9 @@
 @prefix Hem: <../../person/Hemant_Thakkar#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.Kinar"; reg:type "template" ];
     reg:name "vnd.Kinar";
     reg:xref Hem:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

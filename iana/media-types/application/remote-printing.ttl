@@ -4,9 +4,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/remote-printing"; reg:type "template" ];
     reg:name "remote-printing";
     reg:xref M:, html:rfc1486.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

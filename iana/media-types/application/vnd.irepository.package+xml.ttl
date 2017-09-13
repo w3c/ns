@@ -3,10 +3,10 @@
 @prefix M: <../../person/Martin_Knowles#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.irepository.package+xml"; reg:type "template" ];
     reg:name "vnd.irepository.package+xml";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

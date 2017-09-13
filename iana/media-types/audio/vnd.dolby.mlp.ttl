@@ -3,9 +3,9 @@
 @prefix Mik: <../../person/Mike_Ward#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/vnd.dolby.mlp"; reg:type "template" ];
     reg:name "vnd.dolby.mlp";
     reg:xref Mik:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

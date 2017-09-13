@@ -3,9 +3,9 @@
 @prefix Willi: <../../person/William_C._Appleton#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.dreamfactory"; reg:type "template" ];
     reg:name "vnd.dreamfactory";
     reg:xref Willi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

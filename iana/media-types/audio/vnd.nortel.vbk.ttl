@@ -3,9 +3,9 @@
 @prefix Gle: <../../person/Glenn_Parsons#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/vnd.nortel.vbk"; reg:type "template" ];
     reg:name "vnd.nortel.vbk";
     reg:xref Gle:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

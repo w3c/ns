@@ -3,9 +3,9 @@
 @prefix OAS: <../../person/OASIS_Security_Services_Technical_Committee_SSTC#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/samlassertion+xml"; reg:type "template" ];
     reg:name "samlassertion+xml";
     reg:xref OAS:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

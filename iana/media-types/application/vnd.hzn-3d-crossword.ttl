@@ -3,10 +3,10 @@
 @prefix J: <../../person/James_Minnis#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.hzn-3d-crossword"; reg:type "template" ];
     reg:name "vnd.hzn-3d-crossword";
     reg:xref J:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

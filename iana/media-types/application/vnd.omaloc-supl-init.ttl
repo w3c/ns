@@ -3,10 +3,10 @@
 @prefix Jul: <../../person/Julien_Grange#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.omaloc-supl-init"; reg:type "template" ];
     reg:name "vnd.omaloc-supl-init";
     reg:xref Jul:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

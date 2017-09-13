@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/davmount+xml"; reg:type "template" ];
     reg:name "davmount+xml";
     reg:xref html:rfc4709.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

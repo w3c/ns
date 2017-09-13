@@ -3,10 +3,10 @@
 @prefix P: <../../person/Pascal_Mayeux#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.cirpack.isdn-ext"; reg:type "template" ];
     reg:name "vnd.cirpack.isdn-ext";
     reg:xref P:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

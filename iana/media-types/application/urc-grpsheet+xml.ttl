@@ -3,9 +3,9 @@
 @prefix Got: <../../person/Gottfried_Zimmermann#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/urc-grpsheet+xml"; reg:type "template" ];
     reg:name "urc-grpsheet+xml";
     reg:xref "false", Got:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

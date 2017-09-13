@@ -3,9 +3,9 @@
 @prefix Mic: <../../person/Mick_Conley#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.wfa.p2p"; reg:type "template" ];
     reg:name "vnd.wfa.p2p";
     reg:xref Mic:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

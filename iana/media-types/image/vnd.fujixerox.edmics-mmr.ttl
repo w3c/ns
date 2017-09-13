@@ -3,9 +3,9 @@
 @prefix M: <../../person/Masanori_Onda#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.fujixerox.edmics-mmr"; reg:type "template" ];
     reg:name "vnd.fujixerox.edmics-mmr";
     reg:xref M:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

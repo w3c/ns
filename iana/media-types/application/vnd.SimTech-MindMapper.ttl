@@ -3,10 +3,10 @@
 @prefix P: <../../person/Patrick_Koh#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.SimTech-MindMapper"; reg:type "template" ];
     reg:name "vnd.SimTech-MindMapper";
     reg:xref P:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

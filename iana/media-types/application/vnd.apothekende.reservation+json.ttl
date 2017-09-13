@@ -5,7 +5,7 @@
 @prefix Adri: <../../person/Adrian_Föder#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-02-07"^^XML:date;
     reg:file
             [
@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.apothekende.reservation+json";
     reg:xref Adri:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

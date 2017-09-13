@@ -4,9 +4,9 @@
 @prefix Kev: <../../person/Kevin_Murray#>.
 @prefix Pet: <../../person/Peter_Siebert#>.
 
-medi:video reg:record :.
+medi:video reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "video/vnd.dvb.file"; reg:type "template" ];
     reg:name "vnd.dvb.file";
     reg:xref Kev:, Pet:.

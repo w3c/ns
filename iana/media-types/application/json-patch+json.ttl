@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/json-patch+json"; reg:type "template" ];
     reg:name "json-patch+json";
     reg:xref html:rfc6902.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

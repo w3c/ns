@@ -4,9 +4,9 @@
 @prefix Mig: <../../person/Miguel_Angel_Reina_Ortega#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.etsi.mheg5"; reg:type "template" ];
     reg:name "vnd.etsi.mheg5";
     reg:xref I:, Mig:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,10 +3,10 @@
 @prefix Bru: <../../person/Bruce_Tantlinger#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.ibm.secure-container"; reg:type "template" ];
     reg:name "vnd.ibm.secure-container";
     reg:xref Bru:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

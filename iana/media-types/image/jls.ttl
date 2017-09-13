@@ -6,10 +6,10 @@
 @prefix DIC: <../../person/DICOM_Standards_Committee#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-07-01"^^XML:date;
     reg:file [ reg:file "image/jls"; reg:type "template" ];
     reg:name "jls";
     reg:xref D:, DIC:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

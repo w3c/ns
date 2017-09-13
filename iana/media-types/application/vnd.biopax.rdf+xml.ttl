@@ -5,10 +5,10 @@
 @prefix P: <../../person/Pathway_Commons#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-06-09"^^XML:date;
     reg:file [ reg:file "application/vnd.biopax.rdf+xml"; reg:type "template" ];
     reg:name "vnd.biopax.rdf+xml";
     reg:xref P:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

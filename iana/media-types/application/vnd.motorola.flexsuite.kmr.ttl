@@ -3,10 +3,10 @@
 @prefix M: <../../person/Mark_Patton#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.motorola.flexsuite.kmr"; reg:type "template" ];
     reg:name "vnd.motorola.flexsuite.kmr";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

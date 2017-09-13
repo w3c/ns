@@ -3,10 +3,10 @@
 @prefix Phi: <../../person/Philippe_Imoucha#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.businessobjects"; reg:type "template" ];
     reg:name "vnd.businessobjects";
     reg:xref Phi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

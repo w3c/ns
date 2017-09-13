@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Fei: <../../person/Feiyu_Xie#>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     reg:file
     [ reg:file "text/vnd.net2phone.commcenter.command"; reg:type "template" ];
     reg:name "vnd.net2phone.commcenter.command";

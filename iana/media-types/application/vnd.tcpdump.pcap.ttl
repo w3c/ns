@@ -4,9 +4,9 @@
 @prefix Guy: <../../person/Guy_Harris#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.tcpdump.pcap"; reg:type "template" ];
     reg:name "vnd.tcpdump.pcap";
     reg:xref Gle:, Guy:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

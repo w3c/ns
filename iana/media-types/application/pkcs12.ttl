@@ -5,10 +5,10 @@
 @prefix IETF: <../../person/IETF#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-08-21"^^XML:date;
     reg:file [ reg:file "application/pkcs12"; reg:type "template" ];
     reg:name "pkcs12";
     reg:xref IETF:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

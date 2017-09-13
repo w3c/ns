@@ -3,7 +3,7 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-: reg:name "parityfec"; reg:xref html:rfc5109 .
+:Resource reg:name "parityfec"; reg:xref html:rfc5109 .
 
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix As: <../../person/Asang_Dani#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.sss-cod"; reg:type "template" ];
     reg:name "vnd.sss-cod";
     reg:xref As:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

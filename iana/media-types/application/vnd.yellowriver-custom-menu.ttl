@@ -3,10 +3,10 @@
 @prefix Mr: <../../person/Mr._Yellow#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.yellowriver-custom-menu"; reg:type "template" ];
     reg:name "vnd.yellowriver-custom-menu";
     reg:xref Mr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

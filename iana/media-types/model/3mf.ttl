@@ -7,9 +7,9 @@
 @prefix Mich: <../../person/Michael_Sweet#>.
 @prefix www: <http://www.3mf.io/>.
 
-medi:model reg:record :.
+medi:model reg:record :Resource.
 
-:
+:Resource
     terms:date "2017-05-12"^^XML:date;
     reg:file [ reg:file "model/3mf"; reg:type "template" ];
     reg:name "3mf";

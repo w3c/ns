@@ -6,10 +6,10 @@
 @prefix OGC: <../../person/OGC#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-01-09"^^XML:date;
     reg:file [ reg:file "application/gml+xml"; reg:type "template" ];
     reg:name "gml+xml";
     reg:xref Cle:, OGC:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,10 +3,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/mbox"; reg:type "template" ];
     reg:name "mbox";
     reg:updated "2015-07-21";
     reg:xref html:rfc4155.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

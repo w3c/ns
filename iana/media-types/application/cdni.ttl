@@ -5,10 +5,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-10-22"^^XML:date;
     reg:file [ reg:file "application/cdni"; reg:type "template" ];
     reg:name "cdni";
     reg:xref html:rfc7736.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

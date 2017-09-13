@@ -3,9 +3,9 @@
 @prefix P: <../../person/Paul_Grosso#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/sgml-open-catalog"; reg:type "template" ];
     reg:name "sgml-open-catalog";
     reg:xref P:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

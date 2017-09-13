@@ -3,9 +3,9 @@
 @prefix Tor: <../../person/Tor_Kristensen#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ahead.space"; reg:type "template" ];
     reg:name "vnd.ahead.space";
     reg:xref Tor:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

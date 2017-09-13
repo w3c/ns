@@ -3,9 +3,9 @@
 @prefix T: <../../person/Taisuke_Sugimoto#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.vcx"; reg:type "template" ];
     reg:name "vnd.vcx";
     reg:xref T:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

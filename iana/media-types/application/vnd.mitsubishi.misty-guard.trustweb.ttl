@@ -3,7 +3,7 @@
 @prefix T: <../../person/Tanaka#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.mitsubishi.misty-guard.trustweb";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.mitsubishi.misty-guard.trustweb";
     reg:xref T:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

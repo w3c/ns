@@ -3,9 +3,9 @@
 @prefix D: <../../person/Dave_Manning#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ufdl"; reg:type "template" ];
     reg:name "vnd.ufdl";
     reg:xref D:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix R: <../../person/Ravinder_Chandhok#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.commonspace"; reg:type "template" ];
     reg:name "vnd.commonspace";
     reg:xref R:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

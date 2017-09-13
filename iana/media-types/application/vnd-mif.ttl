@@ -3,9 +3,9 @@
 @prefix Mik: <../../person/Mike_Wexler#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd-mif"; reg:type "template" ];
     reg:name "vnd.mif";
     reg:xref Mik:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

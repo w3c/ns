@@ -5,9 +5,9 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix html: <https://tools.ietf.org/html/>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     terms:date "2014-02-21"^^XML:date;
     reg:file [ reg:file "text/parameters"; reg:type "template" ];
     reg:name "parameters";

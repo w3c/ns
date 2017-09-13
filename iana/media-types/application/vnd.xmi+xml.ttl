@@ -3,9 +3,9 @@
 @prefix Fre: <../../person/Fred_Waskiewicz#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.xmi+xml"; reg:type "template" ];
     reg:name "vnd.xmi+xml";
     reg:xref Fre:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix And: <../../person/Andy_Mutz#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.netfpx"; reg:type "template" ];
     reg:name "vnd.netfpx";
     reg:xref And:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

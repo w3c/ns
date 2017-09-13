@@ -3,9 +3,9 @@
 @prefix N: <../../person/Nathaniel_Borenstein#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/andrew-inset"; reg:type "template" ];
     reg:name "andrew-inset";
     reg:xref N:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

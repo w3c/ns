@@ -3,9 +3,9 @@
 @prefix Sim: <../../person/Simon_Birtwistle#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.fuzzysheet"; reg:type "template" ];
     reg:name "vnd.fuzzysheet";
     reg:xref Sim:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

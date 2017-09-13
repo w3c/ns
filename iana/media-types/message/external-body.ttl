@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix html: <https://tools.ietf.org/html/>.
 
-medi:message reg:record :.
+medi:message reg:record :Resource.
 
-: reg:name "external-body"; reg:xref html:rfc2045, html:rfc2046 .
+:Resource reg:name "external-body"; reg:xref html:rfc2045, html:rfc2046 .
 

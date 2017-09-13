@@ -3,10 +3,10 @@
 @prefix Pet: <../../person/Peter_Bierman#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.apple.installer+xml"; reg:type "template" ];
     reg:name "vnd.apple.installer+xml";
     reg:xref Pet:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

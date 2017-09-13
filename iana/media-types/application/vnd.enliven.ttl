@@ -3,9 +3,9 @@
 @prefix P: <../../person/Paul_Santinelli_Jr.#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.enliven"; reg:type "template" ];
     reg:name "vnd.enliven";
     reg:xref P:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

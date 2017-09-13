@@ -4,7 +4,7 @@
 @prefix Se: <../../person/Sean_Kelley#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.oma.group-usage-list+xml";
@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.oma.group-usage-list+xml";
     reg:xref OMA:, Se:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

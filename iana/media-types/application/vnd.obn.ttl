@@ -3,9 +3,9 @@
 @prefix M: <../../person/Matthias_Hessling#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.obn"; reg:type "template" ];
     reg:name "vnd.obn";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/xmpp+xml"; reg:type "template" ];
     reg:name "xmpp+xml";
     reg:xref html:rfc3923.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

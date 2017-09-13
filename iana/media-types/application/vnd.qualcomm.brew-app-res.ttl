@@ -3,10 +3,10 @@
 @prefix Gle: <../../person/Glenn_Forrester#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.qualcomm.brew-app-res"; reg:type "template" ];
     reg:name "vnd.qualcomm.brew-app-res";
     reg:xref Gle:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

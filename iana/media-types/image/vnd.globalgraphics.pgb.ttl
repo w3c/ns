@@ -3,9 +3,9 @@
 @prefix M: <../../person/Martin_Bailey#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.globalgraphics.pgb"; reg:type "template" ];
     reg:name "vnd.globalgraphics.pgb";
     reg:xref M:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Rhy: <../../person/Rhys_Lewis#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.pmi.widget"; reg:type "template" ];
     reg:name "vnd.pmi.widget";
     reg:xref Rhy:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

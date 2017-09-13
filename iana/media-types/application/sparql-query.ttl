@@ -4,7 +4,7 @@
 @prefix n1: <http://www.w3.org/TR/2007/CR-rdf-sparql-query-20070614/#>.
 @prefix medi: <../media-types.ttl#>.
 
-: reg:name "sparql-query"; reg:xref W3C:, n1:mediaType.
+:Resource reg:name "sparql-query"; reg:xref W3C:, n1:mediaType.
 
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

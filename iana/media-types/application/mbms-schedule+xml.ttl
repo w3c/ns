@@ -4,9 +4,9 @@
 @prefix Eri: <../../person/Eric_Turcotte#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/mbms-schedule+xml"; reg:type "template" ];
     reg:name "mbms-schedule+xml";
     reg:xref n1:, Eri:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

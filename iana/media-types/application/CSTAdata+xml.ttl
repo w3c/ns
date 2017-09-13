@@ -3,9 +3,9 @@
 @prefix Ecm: <../../person/Ecma_International_Helpdesk#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/CSTAdata+xml"; reg:type "template" ];
     reg:name "CSTAdata+xml";
     reg:xref Ecm:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

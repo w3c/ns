@@ -6,10 +6,10 @@
 @prefix Sco: <../../person/Scott_Simmons#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-07-18"^^XML:date;
     reg:file [ reg:file "application/geoxacml+xml"; reg:type "template" ];
     reg:name "geoxacml+xml";
     reg:xref OGC:, Sco:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

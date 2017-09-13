@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix html: <https://tools.ietf.org/html/>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "text/vcard"; reg:type "template" ];
     reg:name "vcard";
     reg:xref html:rfc6350.

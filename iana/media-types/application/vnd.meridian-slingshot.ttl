@@ -3,10 +3,10 @@
 @prefix Eri: <../../person/Eric_Wedel#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.meridian-slingshot"; reg:type "template" ];
     reg:name "vnd.meridian-slingshot";
     reg:xref Eri:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

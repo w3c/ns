@@ -3,9 +3,9 @@
 @prefix An: <../../person/Anatoly_Techtonik#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ms-htmlhelp"; reg:type "template" ];
     reg:name "vnd.ms-htmlhelp";
     reg:xref An:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

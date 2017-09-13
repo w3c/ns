@@ -3,7 +3,7 @@
 @prefix Gil: <../../person/Gil_Bernabeu#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.globalplatform.card-content-mgt";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.globalplatform.card-content-mgt";
     reg:xref Gil:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

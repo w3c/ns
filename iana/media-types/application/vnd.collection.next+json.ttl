@@ -3,10 +3,10 @@
 @prefix Ios: <../../person/Ioseb_Dzmanashvili#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.collection.next+json"; reg:type "template" ];
     reg:name "vnd.collection.next+json";
     reg:xref Ios:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

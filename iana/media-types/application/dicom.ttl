@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/dicom"; reg:type "template" ];
     reg:name "dicom";
     reg:xref html:rfc3240.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

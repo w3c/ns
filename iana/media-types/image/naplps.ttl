@@ -3,9 +3,9 @@
 @prefix Ily: <../../person/Ilya_Ferber#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/naplps"; reg:type "template" ];
     reg:name "naplps";
     reg:xref Ily:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

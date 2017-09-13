@@ -3,9 +3,9 @@
 @prefix L: <../../person/Lauri_Tarkkala#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ncd.reference"; reg:type "template" ];
     reg:name "vnd.ncd.reference";
     reg:xref L:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

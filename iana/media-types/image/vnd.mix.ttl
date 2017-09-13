@@ -3,9 +3,9 @@
 @prefix S: <../../person/Saveen_Reddy#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.mix"; reg:type "template" ];
     reg:name "vnd.mix";
     reg:xref S:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

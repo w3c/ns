@@ -3,10 +3,10 @@
 @prefix Per: <../../person/Per_Ersson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.ipunplugged.rcprofile"; reg:type "template" ];
     reg:name "vnd.ipunplugged.rcprofile";
     reg:xref Per:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

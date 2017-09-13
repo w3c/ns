@@ -3,10 +3,10 @@
 @prefix Kei: <../../person/Keiichi_Shinoda#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.yamaha.smaf-phrase"; reg:type "template" ];
     reg:name "vnd.yamaha.smaf-phrase";
     reg:xref Kei:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

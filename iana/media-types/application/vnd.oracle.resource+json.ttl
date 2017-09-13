@@ -5,11 +5,11 @@
 @prefix Nin: <../../person/Ning_Dong#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-12-22"^^XML:date;
     reg:file
     [ reg:file "application/vnd.oracle.resource+json"; reg:type "template" ];
     reg:name "vnd.oracle.resource+json";
     reg:xref Nin:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

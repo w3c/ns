@@ -3,9 +3,9 @@
 @prefix Ale: <../../person/Alexis_Tamas#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.frogans.ltf"; reg:type "template" ];
     reg:name "vnd.frogans.ltf";
     reg:xref Ale:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

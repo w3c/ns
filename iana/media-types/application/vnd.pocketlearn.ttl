@@ -3,9 +3,9 @@
 @prefix Jor: <../../person/Jorge_Pando#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.pocketlearn"; reg:type "template" ];
     reg:name "vnd.pocketlearn";
     reg:xref Jor:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

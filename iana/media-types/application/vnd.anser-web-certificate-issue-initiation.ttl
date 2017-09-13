@@ -3,7 +3,7 @@
 @prefix Hir: <../../person/Hiroyoshi_Mori#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file
@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.anser-web-certificate-issue-initiation";
     reg:xref Hir:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

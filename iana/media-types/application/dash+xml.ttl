@@ -4,9 +4,9 @@
 @prefix Thom: <../../person/Thomas_Stockhammer#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/dash+xml"; reg:type "template" ];
     reg:name "dash+xml";
     reg:xref ISO:, Thom:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

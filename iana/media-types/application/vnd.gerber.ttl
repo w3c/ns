@@ -5,10 +5,10 @@
 @prefix Thom: <../../person/Thomas_Weyn#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-02-05"^^XML:date;
     reg:file [ reg:file "application/vnd.gerber"; reg:type "template" ];
     reg:name "vnd.gerber";
     reg:xref Thom:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

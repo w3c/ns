@@ -5,10 +5,10 @@
 @prefix Dev: <../../person/Devyn_Collier_Johnson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-11-21"^^XML:date;
     reg:file [ reg:file "application/vnd.coffeescript"; reg:type "template" ];
     reg:name "vnd.coffeescript";
     reg:xref Dev:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

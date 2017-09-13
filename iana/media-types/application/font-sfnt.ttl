@@ -4,10 +4,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/font-sfnt"; reg:type "template" ];
     reg:name "font-sfnt - DEPRECATED in favor of font/sfnt";
     reg:updated "2016-12-21";
     reg:xref "false", Lev:, html:rfc8081.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

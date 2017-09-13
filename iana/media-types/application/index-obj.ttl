@@ -3,10 +3,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/index-obj"; reg:type "template" ];
     reg:name "index.obj";
     reg:updated "2015-07-21";
     reg:xref html:rfc2652.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

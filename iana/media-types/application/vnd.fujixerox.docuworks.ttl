@@ -3,10 +3,10 @@
 @prefix Y: <../../person/Yasuo_Taguchi#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.fujixerox.docuworks"; reg:type "template" ];
     reg:name "vnd.fujixerox.docuworks";
     reg:xref Y:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -5,11 +5,11 @@
 @prefix J: <../../person/James_Bellinger#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-07-18"^^XML:date;
     reg:file
     [ reg:file "application/vnd.evolv.ecig.profile"; reg:type "template" ];
     reg:name "vnd.evolv.ecig.profile";
     reg:xref J:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

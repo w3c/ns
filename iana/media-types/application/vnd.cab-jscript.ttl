@@ -3,9 +3,9 @@
 @prefix Joe: <../../person/Joerg_Falkenberg#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.cab-jscript"; reg:type "template" ];
     reg:name "vnd.cab-jscript";
     reg:xref Joe:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

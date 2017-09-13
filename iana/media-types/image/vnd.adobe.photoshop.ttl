@@ -3,9 +3,9 @@
 @prefix Kim: <../../person/Kim_Scarborough#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.adobe.photoshop"; reg:type "template" ];
     reg:name "vnd.adobe.photoshop";
     reg:xref Kim:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

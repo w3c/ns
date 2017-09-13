@@ -3,10 +3,10 @@
 @prefix Aki: <../../person/Akinori_Taya#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.ntt-local.content-share"; reg:type "template" ];
     reg:name "vnd.ntt-local.content-share";
     reg:xref Aki:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

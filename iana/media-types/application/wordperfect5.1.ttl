@@ -3,9 +3,9 @@
 @prefix P: <../../person/Paul_Lindner#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/wordperfect5.1"; reg:type "template" ];
     reg:name "wordperfect5.1";
     reg:xref P:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

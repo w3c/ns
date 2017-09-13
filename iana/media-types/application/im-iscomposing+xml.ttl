@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/im-iscomposing+xml"; reg:type "template" ];
     reg:name "im-iscomposing+xml";
     reg:xref html:rfc3994.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

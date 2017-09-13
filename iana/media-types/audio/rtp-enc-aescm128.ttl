@@ -3,9 +3,9 @@
 @prefix n1: <../../person/_3GPP#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/rtp-enc-aescm128"; reg:type "template" ];
     reg:name "rtp-enc-aescm128";
     reg:xref n1:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

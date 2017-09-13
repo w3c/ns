@@ -3,9 +3,9 @@
 @prefix Et: <../../person/Etay_Szekely#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.rapid"; reg:type "template" ];
     reg:name "vnd.rapid";
     reg:xref Et:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

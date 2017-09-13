@@ -3,9 +3,9 @@
 @prefix D: <../../person/David_Petersen#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.sealed-png"; reg:type "template" ];
     reg:name "vnd.sealed.png";
     reg:xref D:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

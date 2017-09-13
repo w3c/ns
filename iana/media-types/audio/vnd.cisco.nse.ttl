@@ -3,9 +3,9 @@
 @prefix R: <../../person/Rajesh_Kumar#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/vnd.cisco.nse"; reg:type "template" ];
     reg:name "vnd.cisco.nse";
     reg:xref R:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

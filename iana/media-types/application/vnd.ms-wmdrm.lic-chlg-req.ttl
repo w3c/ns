@@ -3,10 +3,10 @@
 @prefix Kev: <../../person/Kevin_Lau#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.ms-wmdrm.lic-chlg-req"; reg:type "template" ];
     reg:name "vnd.ms-wmdrm.lic-chlg-req";
     reg:xref Kev:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

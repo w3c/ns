@@ -4,9 +4,9 @@
 @prefix Zig: <../../person/ZigBee#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/sep+xml"; reg:type "template" ];
     reg:name "sep+xml";
     reg:xref Rob:, Zig:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

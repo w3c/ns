@@ -3,9 +3,9 @@
 @prefix Uni: <../../person/Unity3d#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.unity"; reg:type "template" ];
     reg:name "vnd.unity";
     reg:xref Uni:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

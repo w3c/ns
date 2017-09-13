@@ -3,9 +3,9 @@
 @prefix Bob: <../../person/Bob_Pentecost#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.hp-PCLXL"; reg:type "template" ];
     reg:name "vnd.hp-PCLXL";
     reg:xref Bob:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

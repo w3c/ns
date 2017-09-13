@@ -5,9 +5,9 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix Reg: <../../person/Regis_Dehoux#>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     terms:date "2014-02-07"^^XML:date;
     reg:file [ reg:file "text/vnd-a"; reg:type "template" ];
     reg:name "vnd.a";

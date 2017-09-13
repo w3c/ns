@@ -3,9 +3,9 @@
 @prefix Gwen: <../../person/Gwenael_Le_Bodic#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.mseq"; reg:type "template" ];
     reg:name "vnd.mseq";
     reg:xref Gwen:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

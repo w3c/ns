@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/pskc+xml"; reg:type "template" ];
     reg:name "pskc+xml";
     reg:xref html:rfc6030.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

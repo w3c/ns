@@ -3,10 +3,10 @@
 @prefix P: <../../person/Paul_Tidwell#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.ericsson.quickcall"; reg:type "template" ];
     reg:name "vnd.ericsson.quickcall";
     reg:xref P:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

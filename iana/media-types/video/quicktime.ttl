@@ -4,9 +4,9 @@
 @prefix P: <../../person/Paul_Lindner#>.
 @prefix html: <https://tools.ietf.org/html/>.
 
-medi:video reg:record :.
+medi:video reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "video/quicktime"; reg:type "template" ];
     reg:name "quicktime";
     reg:xref P:, html:rfc6381.

@@ -3,9 +3,9 @@
 @prefix Tom: <../../person/Tom_Christie#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.document+json"; reg:type "template" ];
     reg:name "vnd.document+json";
     reg:xref Tom:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

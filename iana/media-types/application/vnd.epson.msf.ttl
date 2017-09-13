@@ -3,9 +3,9 @@
 @prefix Sho: <../../person/Shoji_Hoshina#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.epson.msf"; reg:type "template" ];
     reg:name "vnd.epson.msf";
     reg:xref Sho:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

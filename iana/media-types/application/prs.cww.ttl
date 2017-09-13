@@ -3,9 +3,9 @@
 @prefix Khe: <../../person/Khemchart_Rungchavalnont#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/prs.cww"; reg:type "template" ];
     reg:name "prs.cww";
     reg:xref Khe:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

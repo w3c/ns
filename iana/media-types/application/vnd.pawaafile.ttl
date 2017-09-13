@@ -3,9 +3,9 @@
 @prefix Pr: <../../person/Prakash_Baskaran#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.pawaafile"; reg:type "template" ];
     reg:name "vnd.pawaafile";
     reg:xref Pr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

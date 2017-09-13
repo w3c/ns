@@ -3,10 +3,10 @@
 @prefix D: <../../person/David_Petersen#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "audio/vnd.sealedmedia.softseal-mpeg"; reg:type "template" ];
     reg:name "vnd.sealedmedia.softseal.mpeg";
     reg:xref D:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

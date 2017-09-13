@@ -6,10 +6,10 @@
 @prefix UEF: <../../person/UEFI_Forum#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-04-06"^^XML:date;
     reg:file [ reg:file "application/efi"; reg:type "template" ];
     reg:name "efi";
     reg:xref S:, UEF:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

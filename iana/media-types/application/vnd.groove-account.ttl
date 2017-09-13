@@ -3,9 +3,9 @@
 @prefix Tod: <../../person/Todd_Joseph#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.groove-account"; reg:type "template" ];
     reg:name "vnd.groove-account";
     reg:xref Tod:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

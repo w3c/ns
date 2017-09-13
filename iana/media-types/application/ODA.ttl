@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/ODA"; reg:type "template" ];
     reg:name "oda";
     reg:xref html:rfc2045, html:rfc2046.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

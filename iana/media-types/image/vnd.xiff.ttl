@@ -3,9 +3,9 @@
 @prefix Ste: <../../person/Steven_Martin#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.xiff"; reg:type "template" ];
     reg:name "vnd.xiff";
     reg:xref Ste:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

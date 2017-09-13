@@ -3,9 +3,9 @@
 @prefix Gre: <../../person/Greg_Vaudreuil#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/vnd.rhetorex.32kadpcm"; reg:type "template" ];
     reg:name "vnd.rhetorex.32kadpcm";
     reg:xref Gre:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

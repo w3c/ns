@@ -4,9 +4,9 @@
 @prefix D: <../../person/Dave_Robin#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/bacnet-xdd+zip"; reg:type "template" ];
     reg:name "bacnet-xdd+zip";
     reg:xref ASH:, D:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Fr: <../../person/Frank_Patz#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.contact.cmsg"; reg:type "template" ];
     reg:name "vnd.contact.cmsg";
     reg:xref Fr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

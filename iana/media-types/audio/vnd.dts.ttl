@@ -3,9 +3,9 @@
 @prefix Willi: <../../person/William_Zou#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/vnd.dts"; reg:type "template" ];
     reg:name "vnd.dts";
     reg:xref Willi:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

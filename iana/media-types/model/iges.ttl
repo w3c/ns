@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Cur: <../../person/Curtis_Parks#>.
 
-medi:model reg:record :.
+medi:model reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "model/iges"; reg:type "template" ];
     reg:name "iges";
     reg:xref Cur:.

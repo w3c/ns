@@ -3,9 +3,9 @@
 @prefix Bru: <../../person/Bruce_Martin#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.uplanet.list"; reg:type "template" ];
     reg:name "vnd.uplanet.list";
     reg:xref Bru:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

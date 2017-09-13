@@ -3,9 +3,9 @@
 @prefix Ami: <../../person/Amir_Gaash#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.hp-jlyt"; reg:type "template" ];
     reg:name "vnd.hp-jlyt";
     reg:xref Ami:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

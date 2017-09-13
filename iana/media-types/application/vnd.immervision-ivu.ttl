@@ -3,10 +3,10 @@
 @prefix M: <../../person/Mathieu_Villegas#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.immervision-ivu"; reg:type "template" ];
     reg:name "vnd.immervision-ivu";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

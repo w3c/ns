@@ -5,10 +5,10 @@
 @prefix N: <../../person/Nathan_Black#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-04-11"^^XML:date;
     reg:file [ reg:file "application/vnd.onepagertatx"; reg:type "template" ];
     reg:name "vnd.onepagertatx";
     reg:xref N:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

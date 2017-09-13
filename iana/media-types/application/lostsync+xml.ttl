@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/lostsync+xml"; reg:type "template" ];
     reg:name "lostsync+xml";
     reg:xref html:rfc6739.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

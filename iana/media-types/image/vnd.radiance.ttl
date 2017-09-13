@@ -4,9 +4,9 @@
 @prefix R: <../../person/Randolph_Fritz#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.radiance"; reg:type "template" ];
     reg:name "vnd.radiance";
     reg:xref Gre:, R:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

@@ -3,10 +3,10 @@
 @prefix Joh: <../../person/John_M_Meredith#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.3gpp.pic-bw-small"; reg:type "template" ];
     reg:name "vnd.3gpp.pic-bw-small";
     reg:xref Joh:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

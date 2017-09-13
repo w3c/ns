@@ -3,9 +3,9 @@
 @prefix Wolfr: <../../person/Wolfram#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.wolfram.player"; reg:type "template" ];
     reg:name "vnd.wolfram.player";
     reg:xref Wolfr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

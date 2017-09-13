@@ -3,9 +3,9 @@
 @prefix Eri: <../../person/Eric_Ledoux#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ms-lrm"; reg:type "template" ];
     reg:name "vnd.ms-lrm";
     reg:xref Eri:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

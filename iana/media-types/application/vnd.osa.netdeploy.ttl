@@ -3,9 +3,9 @@
 @prefix Ste: <../../person/Steven_Klos#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.osa.netdeploy"; reg:type "template" ];
     reg:name "vnd.osa.netdeploy";
     reg:xref Ste:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

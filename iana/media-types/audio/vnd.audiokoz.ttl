@@ -3,9 +3,9 @@
 @prefix Vic: <../../person/Vicki_DeBarros#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/vnd.audiokoz"; reg:type "template" ];
     reg:name "vnd.audiokoz";
     reg:xref Vic:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

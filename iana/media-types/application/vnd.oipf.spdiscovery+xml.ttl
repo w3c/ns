@@ -3,10 +3,10 @@
 @prefix Cl: <../../person/Claire_DEsclercs#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.oipf.spdiscovery+xml"; reg:type "template" ];
     reg:name "vnd.oipf.spdiscovery+xml";
     reg:xref Cl:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

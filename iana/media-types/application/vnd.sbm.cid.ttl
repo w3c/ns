@@ -3,9 +3,9 @@
 @prefix Shi: <../../person/Shinji_Kusakari#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.sbm.cid"; reg:type "template" ];
     reg:name "vnd.sbm.cid";
     reg:xref Shi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

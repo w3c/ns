@@ -3,10 +3,10 @@
 @prefix G: <../../person/Gary_Clueit#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "image/vnd.airzip.accelerator.azv"; reg:type "template" ];
     reg:name "vnd.airzip.accelerator.azv";
     reg:xref G:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

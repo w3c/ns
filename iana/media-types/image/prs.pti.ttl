@@ -3,9 +3,9 @@
 @prefix Jue: <../../person/Juern_Laun#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/prs.pti"; reg:type "template" ];
     reg:name "prs.pti";
     reg:xref Jue:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

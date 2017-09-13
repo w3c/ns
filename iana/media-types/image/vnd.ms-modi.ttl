@@ -3,9 +3,9 @@
 @prefix Gre: <../../person/Gregory_Vaughan#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.ms-modi"; reg:type "template" ];
     reg:name "vnd.ms-modi";
     reg:xref Gre:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

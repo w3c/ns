@@ -3,10 +3,10 @@
 @prefix Tom: <../../person/Tomohiro_Yamamoto#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.yamaha.hv-script"; reg:type "template" ];
     reg:name "vnd.yamaha.hv-script";
     reg:xref Tom:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

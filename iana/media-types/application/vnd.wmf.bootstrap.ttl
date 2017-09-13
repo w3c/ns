@@ -4,9 +4,9 @@
 @prefix Thi: <../../person/Thinh_Nguyenphu#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.wmf.bootstrap"; reg:type "template" ];
     reg:name "vnd.wmf.bootstrap";
     reg:xref Pr:, Thi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

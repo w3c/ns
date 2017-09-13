@@ -3,9 +3,9 @@
 @prefix M: <../../person/Masaaki_Hirai#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.MFER"; reg:type "template" ];
     reg:name "vnd.MFER";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

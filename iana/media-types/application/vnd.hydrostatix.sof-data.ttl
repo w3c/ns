@@ -3,10 +3,10 @@
 @prefix All: <../../person/Allen_Gillam#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.hydrostatix.sof-data"; reg:type "template" ];
     reg:name "vnd.hydrostatix.sof-data";
     reg:xref All:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

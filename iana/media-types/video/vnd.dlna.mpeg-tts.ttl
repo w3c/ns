@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Edw: <../../person/Edwin_Heredia#>.
 
-medi:video reg:record :.
+medi:video reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "video/vnd.dlna.mpeg-tts"; reg:type "template" ];
     reg:name "vnd.dlna.mpeg-tts";
     reg:xref Edw:.

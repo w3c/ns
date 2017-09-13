@@ -3,9 +3,9 @@
 @prefix Mich: <../../person/Michael_Mansell#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.xfdl.webform"; reg:type "template" ];
     reg:name "vnd.xfdl.webform";
     reg:xref Mich:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

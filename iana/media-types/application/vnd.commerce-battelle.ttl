@@ -3,10 +3,10 @@
 @prefix D: <../../person/David_Applebaum#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.commerce-battelle"; reg:type "template" ];
     reg:name "vnd.commerce-battelle";
     reg:xref D:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

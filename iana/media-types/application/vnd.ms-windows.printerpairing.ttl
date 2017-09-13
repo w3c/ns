@@ -3,7 +3,7 @@
 @prefix Jus: <../../person/Justin_Hutchings#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.ms-windows.printerpairing";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.ms-windows.printerpairing";
     reg:xref Jus:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

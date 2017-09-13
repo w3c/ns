@@ -3,9 +3,9 @@
 @prefix Tim: <../../person/Tim_Macdonald#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.kahootz"; reg:type "template" ];
     reg:name "vnd.kahootz";
     reg:xref Tim:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

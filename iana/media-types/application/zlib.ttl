@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/zlib"; reg:type "template" ];
     reg:name "zlib";
     reg:xref html:rfc6713.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

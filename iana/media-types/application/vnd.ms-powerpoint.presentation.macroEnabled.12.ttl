@@ -3,7 +3,7 @@
 @prefix Chr: <../../person/Chris_Rae#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file
@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.ms-powerpoint.presentation.macroEnabled.12";
     reg:xref Chr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

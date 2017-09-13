@@ -3,10 +3,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/xcon-conference-info+xml"; reg:type "template" ];
     reg:name "xcon-conference-info+xml";
     reg:xref html:rfc6502.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

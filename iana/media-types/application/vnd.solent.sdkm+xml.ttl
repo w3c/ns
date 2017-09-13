@@ -3,10 +3,10 @@
 @prefix Cli: <../../person/Cliff_Gauntlett#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.solent.sdkm+xml"; reg:type "template" ];
     reg:name "vnd.solent.sdkm+xml";
     reg:xref Cli:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

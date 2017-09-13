@@ -3,9 +3,9 @@
 @prefix Y: <../../person/Yasuhito_Nagatomo#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.epson.salt"; reg:type "template" ];
     reg:name "vnd.epson.salt";
     reg:xref Y:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

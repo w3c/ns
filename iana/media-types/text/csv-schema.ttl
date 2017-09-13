@@ -6,9 +6,9 @@
 @prefix D: <../../person/David_Underdown#>.
 @prefix N: <../../person/National_Archives_UK#>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     terms:date "2014-11-21"^^XML:date;
     reg:file [ reg:file "text/csv-schema"; reg:type "template" ];
     reg:name "csv-schema";

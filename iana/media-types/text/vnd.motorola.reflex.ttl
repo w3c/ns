@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix M: <../../person/Mark_Patton#>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "text/vnd.motorola.reflex"; reg:type "template" ];
     reg:name "vnd.motorola.reflex";
     reg:xref M:.

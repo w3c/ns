@@ -5,10 +5,10 @@
 @prefix Chr: <../../person/Chris_Eich#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-11-10"^^XML:date;
     reg:file [ reg:file "application/vnd.enphase.envoy"; reg:type "template" ];
     reg:name "vnd.enphase.envoy";
     reg:xref Chr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -5,10 +5,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-01-23"^^XML:date;
     reg:file [ reg:file "application/jwk-set+json"; reg:type "template" ];
     reg:name "jwk-set+json";
     reg:xref html:rfc7517.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

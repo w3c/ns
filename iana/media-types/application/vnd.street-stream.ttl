@@ -3,9 +3,9 @@
 @prefix Gle: <../../person/Glenn_Levitt#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.street-stream"; reg:type "template" ];
     reg:name "vnd.street-stream";
     reg:xref Gle:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

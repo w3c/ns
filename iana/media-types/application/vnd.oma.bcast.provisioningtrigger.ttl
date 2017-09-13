@@ -4,7 +4,7 @@
 @prefix Uwe: <../../person/Uwe_Rauschenbach#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.oma.bcast.provisioningtrigger";
@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.oma.bcast.provisioningtrigger";
     reg:xref Ope:, Uwe:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

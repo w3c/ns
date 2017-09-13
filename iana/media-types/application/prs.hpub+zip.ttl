@@ -3,9 +3,9 @@
 @prefix Giu: <../../person/Giulio_Zambon#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/prs.hpub+zip"; reg:type "template" ];
     reg:name "prs.hpub+zip";
     reg:xref Giu:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

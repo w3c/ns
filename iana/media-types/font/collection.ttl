@@ -5,10 +5,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-12-21"^^XML:date;
     reg:file [ reg:file "font/collection"; reg:type "template" ];
     reg:name "collection";
     reg:xref html:rfc8081.
-medi:font reg:record :.
+medi:font reg:record :Resource.
 

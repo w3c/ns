@@ -5,11 +5,11 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-02-24"^^XML:date;
     reg:file
     [ reg:file "application/EmergencyCallData.eCall.MSD"; reg:type "template" ];
     reg:name "EmergencyCallData.eCall.MSD";
     reg:xref html:rfc8147.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

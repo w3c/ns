@@ -5,11 +5,11 @@
 @prefix P: <../../person/Paul_Walsh#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-01-09"^^XML:date;
     reg:file
     [ reg:file "application/vnd.dataresource+json"; reg:type "template" ];
     reg:name "vnd.dataresource+json";
     reg:xref P:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

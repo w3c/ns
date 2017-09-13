@@ -3,9 +3,9 @@
 @prefix Chr: <../../person/Christian_Mercat#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.geospace"; reg:type "template" ];
     reg:name "vnd.geospace";
     reg:xref Chr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

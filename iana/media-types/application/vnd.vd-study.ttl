@@ -3,9 +3,9 @@
 @prefix Luc: <../../person/Luc_Rogge#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.vd-study"; reg:type "template" ];
     reg:name "vnd.vd-study";
     reg:xref Luc:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Pet: <../../person/Pete_Resnick#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.eudora.data"; reg:type "template" ];
     reg:name "vnd.eudora.data";
     reg:xref Pet:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

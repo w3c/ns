@@ -3,9 +3,9 @@
 @prefix Eri: <../../person/Eric_Fleischman#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ms-asf"; reg:type "template" ];
     reg:name "vnd.ms-asf";
     reg:xref Eri:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

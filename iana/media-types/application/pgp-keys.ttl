@@ -3,7 +3,7 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-: reg:name "pgp-keys"; reg:xref html:rfc3156 .
+:Resource reg:name "pgp-keys"; reg:xref html:rfc3156 .
 
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

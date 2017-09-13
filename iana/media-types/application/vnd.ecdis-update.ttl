@@ -3,9 +3,9 @@
 @prefix Ger: <../../person/Gert_Buettgenbach#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ecdis-update"; reg:type "template" ];
     reg:name "vnd.ecdis-update";
     reg:xref Ger:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

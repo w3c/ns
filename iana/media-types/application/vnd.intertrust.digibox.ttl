@@ -3,10 +3,10 @@
 @prefix Luk: <../../person/Luke_Tomasello#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.intertrust.digibox"; reg:type "template" ];
     reg:name "vnd.intertrust.digibox";
     reg:xref Luk:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

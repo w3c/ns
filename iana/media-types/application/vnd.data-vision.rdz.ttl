@@ -3,10 +3,10 @@
 @prefix J: <../../person/James_Fields#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.data-vision.rdz"; reg:type "template" ];
     reg:name "vnd.data-vision.rdz";
     reg:xref J:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

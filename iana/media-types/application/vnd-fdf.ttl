@@ -3,9 +3,9 @@
 @prefix Ste: <../../person/Steve_Zilles#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd-fdf"; reg:type "template" ];
     reg:name "vnd.fdf";
     reg:xref Ste:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Mich: <../../person/Michael_Powers#>.
 
-medi:model reg:record :.
+medi:model reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "model/vnd.flatland.3dml"; reg:type "template" ];
     reg:name "vnd.flatland.3dml";
     reg:xref Mich:.

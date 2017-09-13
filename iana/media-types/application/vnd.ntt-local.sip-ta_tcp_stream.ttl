@@ -3,7 +3,7 @@
 @prefix NTT: <../../person/NTT-local#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.ntt-local.sip-ta_tcp_stream";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.ntt-local.sip-ta_tcp_stream";
     reg:xref NTT:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

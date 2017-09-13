@@ -5,10 +5,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-07-03"^^XML:date;
     reg:file [ reg:file "application/xml-patch+xml"; reg:type "template" ];
     reg:name "xml-patch+xml";
     reg:xref html:rfc7351.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

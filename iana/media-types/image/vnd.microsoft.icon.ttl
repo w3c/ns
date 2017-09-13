@@ -3,9 +3,9 @@
 @prefix Sim: <../../person/Simon_Butcher#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.microsoft.icon"; reg:type "template" ];
     reg:name "vnd.microsoft.icon";
     reg:xref Sim:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

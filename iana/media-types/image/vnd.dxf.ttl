@@ -3,9 +3,9 @@
 @prefix Jod: <../../person/Jodi_Moline#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.dxf"; reg:type "template" ];
     reg:name "vnd.dxf";
     reg:xref Jod:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

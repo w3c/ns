@@ -5,11 +5,11 @@
 @prefix M: <../../person/Marcus_Ligi_Büschleb#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-08-12"^^XML:date;
     reg:file
     [ reg:file "application/vnd.espass-espass+zip"; reg:type "template" ];
     reg:name "vnd.espass-espass+zip";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

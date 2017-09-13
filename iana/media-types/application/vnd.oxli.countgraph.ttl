@@ -5,11 +5,11 @@
 @prefix C: <../../person/C._Titus_Brown#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-10-05"^^XML:date;
     reg:file
     [ reg:file "application/vnd.oxli.countgraph"; reg:type "template" ];
     reg:name "vnd.oxli.countgraph";
     reg:xref C:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

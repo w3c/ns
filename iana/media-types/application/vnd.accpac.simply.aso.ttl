@@ -3,10 +3,10 @@
 @prefix Ste: <../../person/Steve_Leow#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.accpac.simply.aso"; reg:type "template" ];
     reg:name "vnd.accpac.simply.aso";
     reg:xref Ste:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

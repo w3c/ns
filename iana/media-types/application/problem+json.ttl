@@ -5,10 +5,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-02-04"^^XML:date;
     reg:file [ reg:file "application/problem+json"; reg:type "template" ];
     reg:name "problem+json";
     reg:xref html:rfc7807.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

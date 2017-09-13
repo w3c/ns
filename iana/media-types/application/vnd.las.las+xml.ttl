@@ -3,9 +3,9 @@
 @prefix Rob: <../../person/Rob_Bailey#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.las.las+xml"; reg:type "template" ];
     reg:name "vnd.las.las+xml";
     reg:xref Rob:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

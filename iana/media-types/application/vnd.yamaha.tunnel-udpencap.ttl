@@ -3,10 +3,10 @@
 @prefix T: <../../person/Takehiro_Sukizaki#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.yamaha.tunnel-udpencap"; reg:type "template" ];
     reg:name "vnd.yamaha.tunnel-udpencap";
     reg:xref T:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

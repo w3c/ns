@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Jes: <../../person/Jesse_Alama#>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "text/mizar"; reg:type "template" ];
     reg:name "mizar";
     reg:xref Jes:.

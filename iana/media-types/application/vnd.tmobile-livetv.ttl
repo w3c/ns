@@ -3,9 +3,9 @@
 @prefix Nicol: <../../person/Nicolas_Helin#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.tmobile-livetv"; reg:type "template" ];
     reg:name "vnd.tmobile-livetv";
     reg:xref Nicol:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

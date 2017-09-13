@@ -3,10 +3,10 @@
 @prefix NTT: <../../person/NTT-local#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.ntt-local.sip-ta_remote"; reg:type "template" ];
     reg:name "vnd.ntt-local.sip-ta_remote";
     reg:xref NTT:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

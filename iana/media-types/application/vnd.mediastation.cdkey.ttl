@@ -3,10 +3,10 @@
 @prefix Hen: <../../person/Henry_Flurry#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.mediastation.cdkey"; reg:type "template" ];
     reg:name "vnd.mediastation.cdkey";
     reg:xref Hen:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

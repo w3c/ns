@@ -5,10 +5,10 @@
 @prefix H: <../../person/Harms_Moeller#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-12-23"^^XML:date;
     reg:file [ reg:file "application/vnd.filmit.zfc"; reg:type "template" ];
     reg:name "vnd.filmit.zfc";
     reg:xref H:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

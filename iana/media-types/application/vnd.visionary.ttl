@@ -3,9 +3,9 @@
 @prefix G: <../../person/Gayatri_Aravindakumar#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.visionary"; reg:type "template" ];
     reg:name "vnd.visionary";
     reg:xref G:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

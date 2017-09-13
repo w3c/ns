@@ -3,7 +3,7 @@
 @prefix Noki: <../../person/Nokia#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.nokia.n-gage.symbian.install";
@@ -12,5 +12,5 @@
     reg:name
     "vnd.nokia.n-gage.symbian.install - OBSOLETE; no replacement given";
     reg:xref Noki:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

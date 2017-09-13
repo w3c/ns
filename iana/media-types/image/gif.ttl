@@ -3,7 +3,7 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-: reg:name "gif"; reg:xref html:rfc2045, html:rfc2046 .
+:Resource reg:name "gif"; reg:xref html:rfc2045, html:rfc2046 .
 
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

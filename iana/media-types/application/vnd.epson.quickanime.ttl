@@ -3,10 +3,10 @@
 @prefix Yu: <../../person/Yu_Gu#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.epson.quickanime"; reg:type "template" ];
     reg:name "vnd.epson.quickanime";
     reg:xref Yu:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

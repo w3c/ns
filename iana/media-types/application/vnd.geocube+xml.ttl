@@ -3,9 +3,9 @@
 @prefix Fr: <../../person/Francois_Pirsch#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.geocube+xml"; reg:type "template" ];
     reg:name "vnd.geocube+xml - OBSOLETED by request";
     reg:xref Fr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

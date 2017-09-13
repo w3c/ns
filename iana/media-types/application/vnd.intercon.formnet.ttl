@@ -3,10 +3,10 @@
 @prefix Tom: <../../person/Tom_Gurak#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.intercon.formnet"; reg:type "template" ];
     reg:name "vnd.intercon.formnet";
     reg:xref Tom:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

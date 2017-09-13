@@ -3,9 +3,9 @@
 @prefix Joh: <../../person/John_Palmieri#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.olpc-sugar"; reg:type "template" ];
     reg:name "vnd.olpc-sugar";
     reg:xref Joh:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

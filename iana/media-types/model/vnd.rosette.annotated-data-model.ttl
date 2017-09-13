@@ -5,9 +5,9 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix Ben: <../../person/Benson_Margulies#>.
 
-medi:model reg:record :.
+medi:model reg:record :Resource.
 
-:
+:Resource
     terms:date "2016-01-27"^^XML:date;
     reg:file
     [ reg:file "model/vnd.rosette.annotated-data-model"; reg:type "template" ];

@@ -3,10 +3,10 @@
 @prefix Fum: <../../person/Fumio_Tanabe#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.fujixerox.ART-EX"; reg:type "template" ];
     reg:name "vnd.fujixerox.ART-EX";
     reg:xref Fum:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

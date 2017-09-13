@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/whoispp-response"; reg:type "template" ];
     reg:name "whoispp-response";
     reg:xref html:rfc2958.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

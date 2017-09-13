@@ -3,10 +3,10 @@
 @prefix R: <../../person/Randy_Jones#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.hhe.lesson-player"; reg:type "template" ];
     reg:name "vnd.hhe.lesson-player";
     reg:xref R:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

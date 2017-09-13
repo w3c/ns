@@ -3,9 +3,9 @@
 @prefix Ben: <../../person/Ben_Simon#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/prs.btif"; reg:type "template" ];
     reg:name "prs.btif";
     reg:xref Ben:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

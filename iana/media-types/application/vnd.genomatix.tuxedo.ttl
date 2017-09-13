@@ -3,10 +3,10 @@
 @prefix Tor: <../../person/Torben_Frey#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.genomatix.tuxedo"; reg:type "template" ];
     reg:name "vnd.genomatix.tuxedo";
     reg:xref Tor:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

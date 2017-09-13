@@ -3,9 +3,9 @@
 @prefix Ch: <../../person/Chandrashekhara_Anantharamu#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.muvee.style"; reg:type "template" ];
     reg:name "vnd.muvee.style";
     reg:xref Ch:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

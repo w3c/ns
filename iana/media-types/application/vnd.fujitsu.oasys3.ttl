@@ -3,9 +3,9 @@
 @prefix Sei: <../../person/Seiji_Okudaira#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.fujitsu.oasys3"; reg:type "template" ];
     reg:name "vnd.fujitsu.oasys3";
     reg:xref Sei:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

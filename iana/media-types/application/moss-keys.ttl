@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/moss-keys"; reg:type "template" ];
     reg:name "moss-keys";
     reg:xref html:rfc1848.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix T: <../../person/Tadashi_Gotoh#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.bmi"; reg:type "template" ];
     reg:name "vnd.bmi";
     reg:xref T:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

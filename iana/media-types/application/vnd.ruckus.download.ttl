@@ -3,10 +3,10 @@
 @prefix Jer: <../../person/Jerry_Harris#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.ruckus.download"; reg:type "template" ];
     reg:name "vnd.ruckus.download";
     reg:xref Jer:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

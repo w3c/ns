@@ -5,11 +5,11 @@
 @prefix Thom: <../../person/Thomas_Huth#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-03-02"^^XML:date;
     reg:file
     [ reg:file "application/vnd.fastcopy-disk-image"; reg:type "template" ];
     reg:name "vnd.fastcopy-disk-image";
     reg:xref Thom:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -5,10 +5,10 @@
 @prefix Chr: <../../person/Chris_Charabaruk#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-04-03"^^XML:date;
     reg:file [ reg:file "image/vnd.zbrush.pcx"; reg:type "template" ];
     reg:name "vnd.zbrush.pcx";
     reg:xref Chr:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

@@ -3,10 +3,10 @@
 @prefix OMA: <../../person/OMA_Data_Synchronization_Working_Group#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.omads-folder+xml"; reg:type "template" ];
     reg:name "vnd.omads-folder+xml";
     reg:xref OMA:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

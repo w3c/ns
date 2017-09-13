@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/telephone-event"; reg:type "template" ];
     reg:name "telephone-event";
     reg:xref html:rfc4733.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

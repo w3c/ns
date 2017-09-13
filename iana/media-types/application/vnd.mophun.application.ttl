@@ -3,10 +3,10 @@
 @prefix Bjo: <../../person/Bjorn_Wennerstrom#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.mophun.application"; reg:type "template" ];
     reg:name "vnd.mophun.application";
     reg:xref Bjo:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

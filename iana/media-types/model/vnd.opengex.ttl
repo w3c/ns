@@ -5,9 +5,9 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix Eri: <../../person/Eric_Lengyel#>.
 
-medi:model reg:record :.
+medi:model reg:record :Resource.
 
-:
+:Resource
     terms:date "2014-04-24"^^XML:date;
     reg:file [ reg:file "model/vnd.opengex"; reg:type "template" ];
     reg:name "vnd.opengex";

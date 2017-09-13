@@ -6,10 +6,10 @@
 @prefix W3C: <../../person/W3C#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-03-07"^^XML:date;
     reg:file [ reg:file "application/n-quads"; reg:type "template" ];
     reg:name "n-quads";
     reg:xref Eri:, W3C:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

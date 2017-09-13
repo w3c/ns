@@ -3,9 +3,9 @@
 @prefix Noki: <../../person/Nokia#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.nokia.ncd"; reg:type "template" ];
     reg:name "vnd.nokia.ncd";
     reg:xref Noki:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

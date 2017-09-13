@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/ipfix"; reg:type "template" ];
     reg:name "ipfix";
     reg:xref html:rfc5655.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

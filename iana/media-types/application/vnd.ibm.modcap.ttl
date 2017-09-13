@@ -3,9 +3,9 @@
 @prefix Reinh: <../../person/Reinhard_Hohensee#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ibm.modcap"; reg:type "template" ];
     reg:name "vnd.ibm.modcap";
     reg:xref Reinh:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

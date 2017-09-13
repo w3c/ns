@@ -5,10 +5,10 @@
 @prefix Joe: <../../person/Joey_Smith#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-12-24"^^XML:date;
     reg:file [ reg:file "application/vnd.tml"; reg:type "template" ];
     reg:name "vnd.tml";
     reg:xref Joe:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

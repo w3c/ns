@@ -5,9 +5,9 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix H: <../../person/Hans-Dieter_A._Hiep#>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     terms:date "2016-04-04"^^XML:date;
     reg:file [ reg:file "text/prs.prop.logic"; reg:type "template" ];
     reg:name "prs.prop.logic";

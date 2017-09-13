@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/SMV"; reg:type "template" ];
     reg:name "SMV";
     reg:xref html:rfc3558.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

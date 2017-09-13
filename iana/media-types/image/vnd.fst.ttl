@@ -3,9 +3,9 @@
 @prefix Ari: <../../person/Arild_Fuldseth#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.fst"; reg:type "template" ];
     reg:name "vnd.fst";
     reg:xref Ari:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

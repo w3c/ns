@@ -3,9 +3,9 @@
 @prefix Ch: <../../person/Chad_Trabant#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.fdsn.mseed"; reg:type "template" ];
     reg:name "vnd.fdsn.mseed";
     reg:xref Ch:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

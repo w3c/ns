@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix html: <https://tools.ietf.org/html/>.
 
-medi:message reg:record :.
+medi:message reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "message/feedback-report"; reg:type "template" ];
     reg:name "feedback-report";
     reg:xref html:rfc5965.

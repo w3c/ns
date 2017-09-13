@@ -3,9 +3,9 @@
 @prefix Bri: <../../person/Brijesh_Kumar#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.jam"; reg:type "template" ];
     reg:name "vnd.jam";
     reg:xref Bri:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

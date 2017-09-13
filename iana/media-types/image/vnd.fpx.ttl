@@ -3,9 +3,9 @@
 @prefix M: <../../person/Marc_Douglas_Spencer#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.fpx"; reg:type "template" ];
     reg:name "vnd.fpx";
     reg:xref M:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

@@ -5,10 +5,10 @@
 @prefix Kim: <../../person/Kim_Scarborough#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-07-01"^^XML:date;
     reg:file [ reg:file "application/vnd.comicbook+zip"; reg:type "template" ];
     reg:name "vnd.comicbook+zip";
     reg:xref Kim:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

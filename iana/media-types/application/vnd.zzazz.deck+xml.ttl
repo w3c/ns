@@ -3,9 +3,9 @@
 @prefix Miche: <../../person/Micheal_Hewett#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.zzazz.deck+xml"; reg:type "template" ];
     reg:name "vnd.zzazz.deck+xml";
     reg:xref Miche:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

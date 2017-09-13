@@ -4,9 +4,9 @@
 @prefix Ste: <../../person/Steven_Heintz#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.adobe.fxp"; reg:type "template" ];
     reg:name "vnd.adobe.fxp";
     reg:xref Rob:, Ste:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -4,9 +4,9 @@
 @prefix Lyn: <../../person/Lyndsey_Ferguson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.vectorworks"; reg:type "template" ];
     reg:name "vnd.vectorworks";
     reg:xref Bipl:, Lyn:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

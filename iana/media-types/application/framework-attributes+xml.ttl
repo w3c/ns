@@ -3,10 +3,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/framework-attributes+xml"; reg:type "template" ];
     reg:name "framework-attributes+xml";
     reg:xref html:rfc6230.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

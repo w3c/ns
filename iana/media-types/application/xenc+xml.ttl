@@ -4,9 +4,9 @@
 @prefix XEN: <../../person/XENC_Working_Group#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/xenc+xml"; reg:type "template" ];
     reg:name "xenc+xml";
     reg:xref Jos:, XEN:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

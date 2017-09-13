@@ -3,9 +3,9 @@
 @prefix Dou: <../../person/Doug_R._Serres#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.hcl-bireports"; reg:type "template" ];
     reg:name "vnd.hcl-bireports";
     reg:xref Dou:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

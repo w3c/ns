@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/p2p-overlay+xml"; reg:type "template" ];
     reg:name "p2p-overlay+xml";
     reg:xref html:rfc6940.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

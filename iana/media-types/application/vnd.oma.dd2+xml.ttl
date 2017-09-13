@@ -4,9 +4,9 @@
 @prefix Ope: <../../person/Open_Mobile_Alliance_BAC_DLDRM_Working_Group#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.oma.dd2+xml"; reg:type "template" ];
     reg:name "vnd.oma.dd2+xml";
     reg:xref Jun:, Ope:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

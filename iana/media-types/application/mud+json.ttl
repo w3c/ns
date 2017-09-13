@@ -5,10 +5,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-11-17"^^XML:date;
     reg:file [ reg:file "application/mud+json"; reg:type "template" ];
     reg:name "mud+json (TEMPORARY - registered 2016-11-17, expires 2017-11-17)";
     reg:xref html:draft-ietf-opsawg-mud.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

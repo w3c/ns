@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/pkcs7-mime"; reg:type "template" ];
     reg:name "pkcs7-mime";
     reg:xref html:rfc5751, html:rfc7114.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Pet: <../../person/Peter_Kriens#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.osgi.subsystem"; reg:type "template" ];
     reg:name "vnd.osgi.subsystem";
     reg:xref Pet:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

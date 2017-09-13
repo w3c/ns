@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/SGML"; reg:type "template" ];
     reg:name "sgml";
     reg:xref html:rfc1874.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

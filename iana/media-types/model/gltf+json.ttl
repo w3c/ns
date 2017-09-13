@@ -6,9 +6,9 @@
 @prefix Khr: <../../person/Khronos#>.
 @prefix Uli: <../../person/Uli_Klumpp#>.
 
-medi:model reg:record :.
+medi:model reg:record :Resource.
 
-:
+:Resource
     terms:date "2016-07-01"^^XML:date;
     reg:file [ reg:file "model/gltf+json"; reg:type "template" ];
     reg:name "gltf+json";

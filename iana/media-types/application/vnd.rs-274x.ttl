@@ -3,9 +3,9 @@
 @prefix Lee: <../../person/Lee_Harding#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.rs-274x"; reg:type "template" ];
     reg:name "vnd.rs-274x";
     reg:xref Lee:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

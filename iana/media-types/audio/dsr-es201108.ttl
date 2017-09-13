@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/dsr-es201108"; reg:type "template" ];
     reg:name "dsr-es201108";
     reg:xref html:rfc3557.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

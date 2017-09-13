@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/shf+xml"; reg:type "template" ];
     reg:name "shf+xml";
     reg:xref html:rfc4194.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

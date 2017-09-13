@@ -3,9 +3,9 @@
 @prefix Holst: <../../person/Holstage#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ffsns"; reg:type "template" ];
     reg:name "vnd.ffsns";
     reg:xref Holst:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

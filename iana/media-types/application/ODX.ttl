@@ -6,10 +6,10 @@
 @prefix Thom: <../../person/Thomas_Thomsen#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-01-08"^^XML:date;
     reg:file [ reg:file "application/ODX"; reg:type "template" ];
     reg:name "ODX";
     reg:xref ASAM:, Thom:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

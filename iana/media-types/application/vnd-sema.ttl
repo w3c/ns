@@ -3,9 +3,9 @@
 @prefix And: <../../person/Anders_Hansson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd-sema"; reg:type "template" ];
     reg:name "vnd.sema";
     reg:xref And:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

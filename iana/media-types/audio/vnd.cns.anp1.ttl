@@ -3,9 +3,9 @@
 @prefix Ann: <../../person/Ann_McLaughlin#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/vnd.cns.anp1"; reg:type "template" ];
     reg:name "vnd.cns.anp1";
     reg:xref Ann:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

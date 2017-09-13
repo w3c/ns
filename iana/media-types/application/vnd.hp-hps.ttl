@@ -3,9 +3,9 @@
 @prefix Ste: <../../person/Steve_Aubrey#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.hp-hps"; reg:type "template" ];
     reg:name "vnd.hp-hps";
     reg:xref Ste:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/IOTP"; reg:type "template" ];
     reg:name "iotp";
     reg:xref html:rfc2935.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

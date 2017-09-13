@@ -3,9 +3,9 @@
 @prefix Ste: <../../person/Steve_Dellutri#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.cosmocaller"; reg:type "template" ];
     reg:name "vnd.cosmocaller";
     reg:xref Ste:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -5,10 +5,10 @@
 @prefix Seb: <../../person/Sebastian_Baer#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-07-21"^^XML:date;
     reg:file [ reg:file "application/vnd.uri-map"; reg:type "template" ];
     reg:name "vnd.uri-map";
     reg:xref Seb:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

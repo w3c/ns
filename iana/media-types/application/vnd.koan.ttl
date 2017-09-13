@@ -3,9 +3,9 @@
 @prefix Pet: <../../person/Pete_Cole#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.koan"; reg:type "template" ];
     reg:name "vnd.koan";
     reg:xref Pet:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

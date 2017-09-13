@@ -5,9 +5,9 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix IEE: <../../person/IEEE-ISTO-PWG-PPP#>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     terms:date "2017-05-01"^^XML:date;
     reg:file [ reg:file "text/strings"; reg:type "template" ];
     reg:name "strings";

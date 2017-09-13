@@ -3,9 +3,9 @@
 @prefix B: <../../person/Bayard_Kohlhepp#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ctc-posml"; reg:type "template" ];
     reg:name "vnd.ctc-posml";
     reg:xref B:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

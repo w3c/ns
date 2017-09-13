@@ -3,9 +3,9 @@
 @prefix And: <../../person/Andrew_Burt#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.crick.clicker"; reg:type "template" ];
     reg:name "vnd.crick.clicker";
     reg:xref And:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

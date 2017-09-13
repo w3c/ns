@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/rpki-updown"; reg:type "template" ];
     reg:name "rpki-updown";
     reg:xref html:rfc6492.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

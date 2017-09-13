@@ -5,11 +5,11 @@
 @prefix Kim: <../../person/Kim_Scarborough#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-07-01"^^XML:date;
     reg:file
     [ reg:file "application/vnd.amazon.mobi8-ebook"; reg:type "template" ];
     reg:name "vnd.amazon.mobi8-ebook";
     reg:xref Kim:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

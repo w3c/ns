@@ -3,9 +3,9 @@
 @prefix Seb: <../../person/Sebastiaan_Deckers#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.jisp"; reg:type "template" ];
     reg:name "vnd.jisp";
     reg:xref Seb:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -5,9 +5,9 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix Kim: <../../person/Kim_Scarborough#>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     terms:date "2016-08-12"^^XML:date;
     reg:file [ reg:file "text/vnd.ascii-art"; reg:type "template" ];
     reg:name "vnd.ascii-art";

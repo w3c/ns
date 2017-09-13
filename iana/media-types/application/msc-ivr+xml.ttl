@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/msc-ivr+xml"; reg:type "template" ];
     reg:name "msc-ivr+xml";
     reg:xref html:rfc6231.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

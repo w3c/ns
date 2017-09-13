@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/EDI-X12"; reg:type "template" ];
     reg:name "EDI-X12";
     reg:xref html:rfc1767.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

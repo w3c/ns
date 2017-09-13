@@ -3,10 +3,10 @@
 @prefix H: <../../person/Hannes_Scheidler#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.Quark.QuarkXPress"; reg:type "template" ];
     reg:name "vnd.Quark.QuarkXPress";
     reg:xref H:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

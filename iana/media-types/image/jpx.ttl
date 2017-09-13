@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/jpx"; reg:type "template" ];
     reg:name "jpx";
     reg:xref html:rfc3745.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

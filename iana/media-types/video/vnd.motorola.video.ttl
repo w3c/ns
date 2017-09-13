@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Tom: <../../person/Tom_McGinty#>.
 
-medi:video reg:record :.
+medi:video reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "video/vnd.motorola.video"; reg:type "template" ];
     reg:name "vnd.motorola.video";
     reg:xref Tom:.

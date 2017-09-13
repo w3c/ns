@@ -3,7 +3,7 @@
 @prefix Roy: <../../person/Roy_Yue#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file
@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.dvb.notif-ia-registration-request+xml";
     reg:xref Roy:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

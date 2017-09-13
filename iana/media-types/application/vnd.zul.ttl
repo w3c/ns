@@ -3,9 +3,9 @@
 @prefix Ren: <../../person/Rene_Grothmann#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.zul"; reg:type "template" ];
     reg:name "vnd.zul";
     reg:xref Ren:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

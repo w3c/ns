@@ -3,9 +3,9 @@
 @prefix M: <../../person/Martin_Dawe#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/vnd.rip"; reg:type "template" ];
     reg:name "vnd.rip";
     reg:xref M:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

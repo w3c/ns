@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/yang-data+json"; reg:type "template" ];
     reg:name "yang-data+json";
     reg:xref html:rfc8040.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

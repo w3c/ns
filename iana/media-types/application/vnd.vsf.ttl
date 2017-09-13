@@ -3,9 +3,9 @@
 @prefix Del: <../../person/Delton_Rowe#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.vsf"; reg:type "template" ];
     reg:name "vnd.vsf";
     reg:xref Del:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

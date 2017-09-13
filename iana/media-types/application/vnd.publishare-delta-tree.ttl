@@ -3,10 +3,10 @@
 @prefix Ore: <../../person/Oren_Ben-Kiki#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.publishare-delta-tree"; reg:type "template" ];
     reg:name "vnd.publishare-delta-tree";
     reg:xref Ore:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

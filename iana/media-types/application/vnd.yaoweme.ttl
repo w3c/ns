@@ -5,10 +5,10 @@
 @prefix Jen: <../../person/Jens_Jorgensen#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-05-01"^^XML:date;
     reg:file [ reg:file "application/vnd.yaoweme"; reg:type "template" ];
     reg:name "vnd.yaoweme";
     reg:xref Jen:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

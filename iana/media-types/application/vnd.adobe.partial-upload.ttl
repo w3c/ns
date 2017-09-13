@@ -3,10 +3,10 @@
 @prefix T: <../../person/Tapani_Otala#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.adobe.partial-upload"; reg:type "template" ];
     reg:name "vnd.adobe.partial-upload";
     reg:xref T:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

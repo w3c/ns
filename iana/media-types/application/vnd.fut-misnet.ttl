@@ -3,9 +3,9 @@
 @prefix J: <../../person/Jann_Pruulman#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.fut-misnet"; reg:type "template" ];
     reg:name "vnd.fut-misnet";
     reg:xref J:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

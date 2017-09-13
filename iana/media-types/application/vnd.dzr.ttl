@@ -5,10 +5,10 @@
 @prefix C: <../../person/Carl_Anderson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-05-27"^^XML:date;
     reg:file [ reg:file "application/vnd.dzr"; reg:type "template" ];
     reg:name "vnd.dzr";
     reg:xref C:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

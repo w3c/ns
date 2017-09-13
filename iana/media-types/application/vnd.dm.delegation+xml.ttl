@@ -3,10 +3,10 @@
 @prefix Axe: <../../person/Axel_Ferrazzini#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.dm.delegation+xml"; reg:type "template" ];
     reg:name "vnd.dm.delegation+xml";
     reg:xref Axe:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

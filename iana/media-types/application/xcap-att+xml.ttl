@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/xcap-att+xml"; reg:type "template" ];
     reg:name "xcap-att+xml";
     reg:xref html:rfc4825.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

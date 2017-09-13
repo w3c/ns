@@ -3,9 +3,9 @@
 @prefix Kim: <../../person/Kim_Scarborough#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.wordperfect"; reg:type "template" ];
     reg:name "vnd.wordperfect";
     reg:xref Kim:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

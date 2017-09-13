@@ -3,7 +3,7 @@
 @prefix Luc: <../../person/Lucas_Maneos#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.piaccess.application-licence";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.piaccess.application-licence";
     reg:xref Luc:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

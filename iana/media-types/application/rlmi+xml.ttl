@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/rlmi+xml"; reg:type "template" ];
     reg:name "rlmi+xml";
     reg:xref html:rfc4662.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

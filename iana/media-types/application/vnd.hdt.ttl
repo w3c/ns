@@ -5,10 +5,10 @@
 @prefix J: <../../person/Javier_D._Fernández#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-01-07"^^XML:date;
     reg:file [ reg:file "application/vnd.hdt"; reg:type "template" ];
     reg:name "vnd.hdt";
     reg:xref J:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

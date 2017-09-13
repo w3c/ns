@@ -3,10 +3,10 @@
 @prefix Chu: <../../person/Chunyun_Xiong#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.chipnuts.karaoke-mmd"; reg:type "template" ];
     reg:name "vnd.chipnuts.karaoke-mmd";
     reg:xref Chu:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

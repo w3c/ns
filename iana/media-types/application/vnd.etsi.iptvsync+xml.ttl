@@ -3,10 +3,10 @@
 @prefix Mig: <../../person/Miguel_Angel_Reina_Ortega#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.etsi.iptvsync+xml"; reg:type "template" ];
     reg:name "vnd.etsi.iptvsync+xml";
     reg:xref Mig:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

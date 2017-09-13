@@ -3,7 +3,7 @@
 @prefix Jun: <../../person/Jun_Yoshitake#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.japannet-jpnstore-wakeup";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.japannet-jpnstore-wakeup";
     reg:xref Jun:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

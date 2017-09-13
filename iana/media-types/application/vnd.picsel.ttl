@@ -3,9 +3,9 @@
 @prefix Giu: <../../person/Giuseppe_Naccarato#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.picsel"; reg:type "template" ];
     reg:name "vnd.picsel";
     reg:xref Giu:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

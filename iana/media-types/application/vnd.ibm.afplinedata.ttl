@@ -3,10 +3,10 @@
 @prefix Rog: <../../person/Roger_Buis#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.ibm.afplinedata"; reg:type "template" ];
     reg:name "vnd.ibm.afplinedata";
     reg:xref Rog:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

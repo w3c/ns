@@ -3,11 +3,11 @@
 @prefix Ehu: <../../person/Ehud_Shapiro#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
         [ reg:file "application/activemessage"; reg:type "template" ],
         [ reg:file "application/activemessage"; reg:type "template" ];
     reg:name "activemessage";
     reg:xref Ehu:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

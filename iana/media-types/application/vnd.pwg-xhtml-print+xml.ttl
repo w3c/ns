@@ -3,10 +3,10 @@
 @prefix Don: <../../person/Don_Wright#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.pwg-xhtml-print+xml"; reg:type "template" ];
     reg:name "vnd.pwg-xhtml-print+xml";
     reg:xref Don:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

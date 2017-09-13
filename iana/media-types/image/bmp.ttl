@@ -5,10 +5,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-05-16"^^XML:date;
     reg:file [ reg:file "image/bmp"; reg:type "template" ];
     reg:name "bmp";
     reg:xref html:rfc7903.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

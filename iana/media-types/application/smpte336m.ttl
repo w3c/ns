@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/smpte336m"; reg:type "template" ];
     reg:name "smpte336m";
     reg:xref html:rfc6597.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

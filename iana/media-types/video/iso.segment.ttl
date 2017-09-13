@@ -6,9 +6,9 @@
 @prefix D: <../../person/David_Singer#>.
 @prefix ISO: <../../person/ISO-IEC_JTC1#>.
 
-medi:video reg:record :.
+medi:video reg:record :Resource.
 
-:
+:Resource
     terms:date "2014-01-29"^^XML:date;
     reg:file [ reg:file "video/iso.segment"; reg:type "template" ];
     reg:name "iso.segment";

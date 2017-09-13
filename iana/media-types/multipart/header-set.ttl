@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix D: <../../person/Dave_Crocker#>.
 
-medi:multipart reg:record :.
+medi:multipart reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "multipart/header-set"; reg:type "template" ];
     reg:name "header-set";
     reg:xref D:.

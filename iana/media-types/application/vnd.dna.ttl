@@ -3,9 +3,9 @@
 @prefix Mer: <../../person/Meredith_Searcy#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.dna"; reg:type "template" ];
     reg:name "vnd.dna";
     reg:xref Mer:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

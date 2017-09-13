@@ -3,9 +3,9 @@
 @prefix Lind: <../../person/Linda_Welsh#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/tve-trigger"; reg:type "template" ];
     reg:name "tve-trigger";
     reg:xref Lind:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

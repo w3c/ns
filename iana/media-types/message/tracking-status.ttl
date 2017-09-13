@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix html: <https://tools.ietf.org/html/>.
 
-medi:message reg:record :.
+medi:message reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "message/tracking-status"; reg:type "template" ];
     reg:name "tracking-status";
     reg:xref html:rfc3886.

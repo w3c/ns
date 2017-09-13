@@ -3,7 +3,7 @@
 @prefix G: <../../person/Gaige_Paulsen#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.cluetrust.cartomobile-config-pkg";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.cluetrust.cartomobile-config-pkg";
     reg:xref G:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

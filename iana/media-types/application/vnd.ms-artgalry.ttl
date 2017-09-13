@@ -3,9 +3,9 @@
 @prefix De: <../../person/Dean_Slawson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ms-artgalry"; reg:type "template" ];
     reg:name "vnd.ms-artgalry";
     reg:xref De:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

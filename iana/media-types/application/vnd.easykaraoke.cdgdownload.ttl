@@ -3,10 +3,10 @@
 @prefix I: <../../person/Iain_Downs#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.easykaraoke.cdgdownload"; reg:type "template" ];
     reg:name "vnd.easykaraoke.cdgdownload";
     reg:xref I:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

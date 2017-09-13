@@ -3,7 +3,7 @@
 @prefix Guy: <../../person/Guy_Selzler#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.shana.informed.interchange";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.shana.informed.interchange";
     reg:xref Guy:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,10 +3,10 @@
 @prefix M: <../../person/Matt_Kern#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.cyan.dean.root+xml"; reg:type "template" ];
     reg:name "vnd.cyan.dean.root+xml";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

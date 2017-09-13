@@ -3,10 +3,10 @@
 @prefix Chr: <../../person/Christopher_Snazell#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.astraea-software.iota"; reg:type "template" ];
     reg:name "vnd.astraea-software.iota";
     reg:xref Chr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

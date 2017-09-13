@@ -3,9 +3,9 @@
 @prefix Ter: <../../person/Terry_Crowley#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/slate"; reg:type "template" ];
     reg:name "slate";
     reg:xref Ter:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

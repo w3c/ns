@@ -3,10 +3,10 @@
 @prefix Il: <../../person/Ilan_Mahalal#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.oma-scws-http-request"; reg:type "template" ];
     reg:name "vnd.oma-scws-http-request";
     reg:xref Il:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

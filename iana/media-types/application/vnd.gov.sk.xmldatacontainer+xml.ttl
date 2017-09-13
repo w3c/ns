@@ -6,7 +6,7 @@
 @prefix Stef: <../../person/Stefan_Szilva#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-02-10"^^XML:date;
     reg:file
             [
@@ -15,5 +15,5 @@
             ];
     reg:name "vnd.gov.sk.xmldatacontainer+xml";
     reg:xref Pet:, Stef:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

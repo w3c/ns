@@ -3,9 +3,9 @@
 @prefix Thom: <../../person/Thomas_Olsson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ecowin.series"; reg:type "template" ];
     reg:name "vnd.ecowin.series";
     reg:xref Thom:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

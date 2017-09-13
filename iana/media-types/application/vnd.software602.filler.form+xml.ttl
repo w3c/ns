@@ -4,7 +4,7 @@
 @prefix M: <../../person/Martin_Vondrous#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.software602.filler.form+xml";
@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.software602.filler.form+xml";
     reg:xref J:, M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,7 +3,7 @@
 @prefix Kiy: <../../person/Kiyoshi_Tashiro#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.fujixerox.docuworks.container";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.fujixerox.docuworks.container";
     reg:xref Kiy:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Suk: <../../person/Sukvinder_S._Gill#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ms-powerpoint"; reg:type "template" ];
     reg:name "vnd.ms-powerpoint";
     reg:xref Suk:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

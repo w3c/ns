@@ -5,10 +5,10 @@
 @prefix Kei: <../../person/Keith_Kester#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-09-11"^^XML:date;
     reg:file [ reg:file "application/vnd.drive+json"; reg:type "template" ];
     reg:name "vnd.drive+json";
     reg:xref Kei:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

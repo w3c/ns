@@ -3,9 +3,9 @@
 @prefix Mich: <../../person/Michael_Sweet#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.cups-raw"; reg:type "template" ];
     reg:name "vnd.cups-raw";
     reg:xref Mich:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Br: <../../person/Brad_Chase#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.truedoc"; reg:type "template" ];
     reg:name "vnd.truedoc";
     reg:xref Br:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

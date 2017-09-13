@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix G: <../../person/Gary_Adams#>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     reg:file
     [ reg:file "text/vnd.sun.j2me.app-descriptor"; reg:type "template" ];
     reg:name "vnd.sun.j2me.app-descriptor";

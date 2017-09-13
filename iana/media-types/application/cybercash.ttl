@@ -3,9 +3,9 @@
 @prefix Don: <../../person/Donald_E._Eastlake_3rd#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/cybercash"; reg:type "template" ];
     reg:name "cybercash";
     reg:xref Don:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

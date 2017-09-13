@@ -3,9 +3,9 @@
 @prefix Fr: <../../person/Frank_Cusack#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.trid.tpt"; reg:type "template" ];
     reg:name "vnd.trid.tpt";
     reg:xref Fr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

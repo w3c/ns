@@ -3,10 +3,10 @@
 @prefix Hen: <../../person/Henrik_Andersson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.nintendo.nitro.rom"; reg:type "template" ];
     reg:name "vnd.nintendo.nitro.rom";
     reg:xref Hen:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

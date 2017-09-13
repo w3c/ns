@@ -3,9 +3,9 @@
 @prefix Shi: <../../person/Shin_Muto#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.canon-cpdl"; reg:type "template" ];
     reg:name "vnd.canon-cpdl";
     reg:xref Shi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

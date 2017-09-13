@@ -3,9 +3,9 @@
 @prefix Cr: <../../person/Craig_Bruce#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.openeye.oeb"; reg:type "template" ];
     reg:name "vnd.openeye.oeb";
     reg:xref Cr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

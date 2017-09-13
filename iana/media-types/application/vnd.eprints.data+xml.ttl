@@ -3,10 +3,10 @@
 @prefix Tim: <../../person/Tim_Brody#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.eprints.data+xml"; reg:type "template" ];
     reg:name "vnd.eprints.data+xml";
     reg:xref Tim:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

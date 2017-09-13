@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/rpki-ghostbusters"; reg:type "template" ];
     reg:name "rpki-ghostbusters";
     reg:xref html:rfc6493.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

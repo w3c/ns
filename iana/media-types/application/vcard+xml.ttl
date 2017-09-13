@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vcard+xml"; reg:type "template" ];
     reg:name "vcard+xml";
     reg:xref html:rfc6351.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

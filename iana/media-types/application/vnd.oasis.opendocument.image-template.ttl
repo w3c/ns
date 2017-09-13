@@ -4,7 +4,7 @@
 @prefix Sv: <../../person/Svante_Schubert#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.oasis.opendocument.image-template";
@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.oasis.opendocument.image-template";
     reg:xref OASIS:, Sv:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

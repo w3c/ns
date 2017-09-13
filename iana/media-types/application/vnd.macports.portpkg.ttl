@@ -3,11 +3,11 @@
 @prefix J: <../../person/James_Berry#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
         [ reg:file "application/vnd.macports.portpkg"; reg:type "template" ],
         [ reg:file "application/vnd.macports.portpkg"; reg:type "template" ];
     reg:name "vnd.macports.portpkg";
     reg:xref J:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

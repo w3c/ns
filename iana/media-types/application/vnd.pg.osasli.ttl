@@ -3,9 +3,9 @@
 @prefix Apr: <../../person/April_Gandert#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.pg.osasli"; reg:type "template" ];
     reg:name "vnd.pg.osasli";
     reg:xref Apr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

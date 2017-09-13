@@ -3,7 +3,7 @@
 @prefix Pet: <../../person/Peter_Astrand#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.cendio.thinlinc.clientconf";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.cendio.thinlinc.clientconf";
     reg:xref Pet:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

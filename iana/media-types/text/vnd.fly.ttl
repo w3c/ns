@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Joh: <../../person/John-Mark_Gurney#>.
 
-medi:text reg:record :.
+medi:text reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "text/vnd.fly"; reg:type "template" ];
     reg:name "vnd.fly";
     reg:xref Joh:.

@@ -3,10 +3,10 @@
 @prefix Mikh: <../../person/Mikhail_Gorshenev#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.jcp.javame.midlet-rms"; reg:type "template" ];
     reg:name "vnd.jcp.javame.midlet-rms";
     reg:xref Mikh:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

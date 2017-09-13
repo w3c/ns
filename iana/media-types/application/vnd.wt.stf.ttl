@@ -3,9 +3,9 @@
 @prefix Bil: <../../person/Bill_Wohler#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.wt.stf"; reg:type "template" ];
     reg:name "vnd.wt.stf";
     reg:xref Bil:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

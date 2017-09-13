@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/atomdeleted+xml"; reg:type "template" ];
     reg:name "atomdeleted+xml";
     reg:xref html:rfc6721.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

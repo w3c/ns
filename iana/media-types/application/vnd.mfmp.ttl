@@ -3,9 +3,9 @@
 @prefix Yuk: <../../person/Yukari_Ikeda#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.mfmp"; reg:type "template" ];
     reg:name "vnd.mfmp";
     reg:xref Yuk:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

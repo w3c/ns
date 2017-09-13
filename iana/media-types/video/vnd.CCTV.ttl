@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Fr: <../../person/Frank_Rottmann#>.
 
-medi:video reg:record :.
+medi:video reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "video/vnd.CCTV"; reg:type "template" ];
     reg:name "vnd.CCTV";
     reg:xref Fr:.

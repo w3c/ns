@@ -3,9 +3,9 @@
 @prefix Yve: <../../person/Yves_Kreis_2#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.intergeo"; reg:type "template" ];
     reg:name "vnd.intergeo";
     reg:xref Yve:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Jon: <../../person/Jonathan_Neitz#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.smart.notebook"; reg:type "template" ];
     reg:name "vnd.smart.notebook";
     reg:xref Jon:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

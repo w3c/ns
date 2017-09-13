@@ -5,10 +5,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-08-04"^^XML:date;
     reg:file [ reg:file "audio/G711-0"; reg:type "template" ];
     reg:name "G711-0";
     reg:xref html:rfc7655.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

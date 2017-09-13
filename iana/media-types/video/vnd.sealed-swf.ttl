@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix D: <../../person/David_Petersen#>.
 
-medi:video reg:record :.
+medi:video reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "video/vnd.sealed-swf"; reg:type "template" ];
     reg:name "vnd.sealed.swf";
     reg:xref D:.

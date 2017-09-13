@@ -5,10 +5,10 @@
 @prefix Ni: <../../person/Ni_Hui#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-09-10"^^XML:date;
     reg:file [ reg:file "image/vnd.tencent.tap"; reg:type "template" ];
     reg:name "vnd.tencent.tap";
     reg:xref Ni:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/raptorfec"; reg:type "template" ];
     reg:name "raptorfec";
     reg:xref html:rfc6682.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

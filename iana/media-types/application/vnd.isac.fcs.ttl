@@ -3,9 +3,9 @@
 @prefix Ry: <../../person/Ryan_Brinkman#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.isac.fcs"; reg:type "template" ];
     reg:name "vnd.isac.fcs";
     reg:xref Ry:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

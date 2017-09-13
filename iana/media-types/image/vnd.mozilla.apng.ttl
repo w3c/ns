@@ -5,10 +5,10 @@
 @prefix Stu: <../../person/Stuart_Parmenter#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-08-04"^^XML:date;
     reg:file [ reg:file "image/vnd.mozilla.apng"; reg:type "template" ];
     reg:name "vnd.mozilla.apng";
     reg:xref Stu:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

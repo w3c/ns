@@ -3,7 +3,7 @@
 @prefix D: <../../person/Daniel_Schneider#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.ms-playready.initiator+xml";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.ms-playready.initiator+xml";
     reg:xref D:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

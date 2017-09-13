@@ -5,11 +5,11 @@
 @prefix Ch: <../../person/Charles_Plessy#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-05-20"^^XML:date;
     reg:file
     [ reg:file "application/vnd.debian.binary-package"; reg:type "template" ];
     reg:name "vnd.debian.binary-package";
     reg:xref Ch:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

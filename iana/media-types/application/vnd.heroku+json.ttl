@@ -3,9 +3,9 @@
 @prefix Wes: <../../person/Wesley_Beary#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.heroku+json"; reg:type "template" ];
     reg:name "vnd.heroku+json";
     reg:xref Wes:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

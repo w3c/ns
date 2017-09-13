@@ -3,9 +3,9 @@
 @prefix Ree: <../../person/Reed_Shilts#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.powerbuilder75"; reg:type "template" ];
     reg:name "vnd.powerbuilder75";
     reg:xref Ree:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

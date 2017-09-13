@@ -3,10 +3,10 @@
 @prefix Jun: <../../person/Jun_Yoshitake#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.japannet-verification"; reg:type "template" ];
     reg:name "vnd.japannet-verification";
     reg:xref Jun:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

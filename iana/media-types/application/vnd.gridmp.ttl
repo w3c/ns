@@ -3,9 +3,9 @@
 @prefix Jef: <../../person/Jeff_Lawson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.gridmp"; reg:type "template" ];
     reg:name "vnd.gridmp";
     reg:xref Jef:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

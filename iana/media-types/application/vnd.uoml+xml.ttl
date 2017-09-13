@@ -3,9 +3,9 @@
 @prefix Arn: <../../person/Arne_Gerdes#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.uoml+xml"; reg:type "template" ];
     reg:name "vnd.uoml+xml";
     reg:xref Arn:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

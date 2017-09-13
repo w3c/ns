@@ -4,9 +4,9 @@
 @prefix Willi: <../../person/William_McCoy#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/epub+zip"; reg:type "template" ];
     reg:name "epub+zip";
     reg:xref Int:, Willi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

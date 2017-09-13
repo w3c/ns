@@ -3,9 +3,9 @@
 @prefix Szi: <../../person/Szilveszter_Tóth#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.eszigno3+xml"; reg:type "template" ];
     reg:name "vnd.eszigno3+xml";
     reg:xref Szi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

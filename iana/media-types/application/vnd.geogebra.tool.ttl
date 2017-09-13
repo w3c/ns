@@ -4,9 +4,9 @@
 @prefix Yve: <../../person/Yves_Kreis#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.geogebra.tool"; reg:type "template" ];
     reg:name "vnd.geogebra.tool";
     reg:xref Geo:, Yve:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

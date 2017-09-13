@@ -5,11 +5,11 @@
 @prefix Bl: <../../person/Blake_Thompson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2015-12-21"^^XML:date;
     reg:file
     [ reg:file "application/vnd.mapbox-vector-tile"; reg:type "template" ];
     reg:name "vnd.mapbox-vector-tile";
     reg:xref Bl:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

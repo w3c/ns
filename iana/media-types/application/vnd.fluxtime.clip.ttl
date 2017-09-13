@@ -3,9 +3,9 @@
 @prefix M: <../../person/Marc_Winter#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.fluxtime.clip"; reg:type "template" ];
     reg:name "vnd.fluxtime.clip";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

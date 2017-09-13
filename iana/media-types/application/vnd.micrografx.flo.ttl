@@ -3,9 +3,9 @@
 @prefix Joe: <../../person/Joe_Prevo#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.micrografx.flo"; reg:type "template" ];
     reg:name "vnd.micrografx.flo";
     reg:xref Joe:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

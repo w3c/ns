@@ -5,10 +5,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-01-11"^^XML:date;
     reg:file [ reg:file "application/cose-key-set"; reg:type "template" ];
     reg:name "cose-key-set";
     reg:xref html:rfc8152.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

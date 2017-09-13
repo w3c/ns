@@ -3,9 +3,9 @@
 @prefix Tro: <../../person/Troy_Sandal#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.visio"; reg:type "template" ];
     reg:name "vnd.visio";
     reg:xref Tro:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

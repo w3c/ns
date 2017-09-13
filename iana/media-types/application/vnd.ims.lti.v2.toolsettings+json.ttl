@@ -5,7 +5,7 @@
 @prefix Lis: <../../person/Lisa_Mattson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-04-28"^^XML:date;
     reg:file
             [
@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.ims.lti.v2.toolsettings+json";
     reg:xref Lis:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

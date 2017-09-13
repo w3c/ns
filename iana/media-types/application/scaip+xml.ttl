@@ -6,10 +6,10 @@
 @prefix SIS: <../../person/SIS#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-07-09"^^XML:date;
     reg:file [ reg:file "application/scaip+xml"; reg:type "template" ];
     reg:name "scaip+xml";
     reg:xref Osk:, SIS:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

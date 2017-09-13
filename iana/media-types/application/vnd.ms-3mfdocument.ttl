@@ -3,9 +3,9 @@
 @prefix Sh: <../../person/Shawn_Maloney#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.ms-3mfdocument"; reg:type "template" ];
     reg:name "vnd.ms-3mfdocument";
     reg:xref Sh:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

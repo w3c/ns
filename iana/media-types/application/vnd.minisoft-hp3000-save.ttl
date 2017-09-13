@@ -3,10 +3,10 @@
 @prefix Chr: <../../person/Chris_Bartram#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.minisoft-hp3000-save"; reg:type "template" ];
     reg:name "vnd.minisoft-hp3000-save";
     reg:xref Chr:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

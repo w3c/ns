@@ -3,9 +3,9 @@
 @prefix Mich: <../../person/Michael_A_Dolan#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/vnd.dece.graphic"; reg:type "template" ];
     reg:name "vnd.dece.graphic";
     reg:xref Mich:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

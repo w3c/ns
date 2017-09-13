@@ -3,9 +3,9 @@
 @prefix Lin: <../../person/Linus_Walleij#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/prs.sid"; reg:type "template" ];
     reg:name "prs.sid";
     reg:xref Lin:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 

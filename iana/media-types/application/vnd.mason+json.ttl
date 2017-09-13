@@ -3,9 +3,9 @@
 @prefix Jor: <../../person/Jorn_Wildt#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.mason+json"; reg:type "template" ];
     reg:name "vnd.mason+json";
     reg:xref Jor:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

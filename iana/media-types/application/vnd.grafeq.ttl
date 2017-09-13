@@ -3,9 +3,9 @@
 @prefix Jef: <../../person/Jeff_Tupper#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.grafeq"; reg:type "template" ];
     reg:name "vnd.grafeq";
     reg:xref Jef:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

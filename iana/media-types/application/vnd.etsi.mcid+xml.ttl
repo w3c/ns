@@ -3,9 +3,9 @@
 @prefix Shi: <../../person/Shicheng_Hu#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.etsi.mcid+xml"; reg:type "template" ];
     reg:name "vnd.etsi.mcid+xml";
     reg:xref Shi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

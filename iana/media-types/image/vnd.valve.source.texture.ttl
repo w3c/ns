@@ -5,10 +5,10 @@
 @prefix Hen: <../../person/Henrik_Andersson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-04-08"^^XML:date;
     reg:file [ reg:file "image/vnd.valve.source.texture"; reg:type "template" ];
     reg:name "vnd.valve.source.texture";
     reg:xref Hen:.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

@@ -3,9 +3,9 @@
 @prefix Alo: <../../person/Aloke_Gupta#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.hp-hpid"; reg:type "template" ];
     reg:name "vnd.hp-hpid";
     reg:xref Alo:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,10 +3,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/simple-message-summary"; reg:type "template" ];
     reg:name "simple-message-summary";
     reg:xref html:rfc3842.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

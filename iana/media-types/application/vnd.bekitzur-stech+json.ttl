@@ -3,10 +3,10 @@
 @prefix Jeg: <../../person/Jegulsky#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.bekitzur-stech+json"; reg:type "template" ];
     reg:name "vnd.bekitzur-stech+json";
     reg:xref Jeg:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

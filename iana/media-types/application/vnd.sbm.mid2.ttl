@@ -3,9 +3,9 @@
 @prefix M: <../../person/Masanori_Murai#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.sbm.mid2"; reg:type "template" ];
     reg:name "vnd.sbm.mid2";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

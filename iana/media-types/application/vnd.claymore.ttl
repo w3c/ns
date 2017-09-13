@@ -3,9 +3,9 @@
 @prefix R: <../../person/Ray_Simpson#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.claymore"; reg:type "template" ];
     reg:name "vnd.claymore";
     reg:xref R:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

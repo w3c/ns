@@ -3,10 +3,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/ibe-key-request+xml"; reg:type "template" ];
     reg:name "ibe-key-request+xml";
     reg:xref html:rfc5408.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

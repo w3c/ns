@@ -5,10 +5,10 @@
 @prefix Uwe: <../../person/Uwe_Hermann#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-06-06"^^XML:date;
     reg:file [ reg:file "application/vnd.sigrok.session"; reg:type "template" ];
     reg:name "vnd.sigrok.session";
     reg:xref Uwe:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

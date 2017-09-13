@@ -3,9 +3,9 @@
 @prefix Vl: <../../person/Vladimir_Vysotsky#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.avistar+xml"; reg:type "template" ];
     reg:name "vnd.avistar+xml";
     reg:xref Vl:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

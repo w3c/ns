@@ -3,10 +3,10 @@
 @prefix Ste: <../../person/Steve_Mills#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.multiad.creator.cif"; reg:type "template" ];
     reg:name "vnd.multiad.creator.cif";
     reg:xref Ste:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,10 +3,10 @@
 @prefix Bri: <../../person/Brian_Korver#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/set-registration-initiation"; reg:type "template" ];
     reg:name "set-registration-initiation";
     reg:xref Bri:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

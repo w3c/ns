@@ -3,9 +3,9 @@
 @prefix Reu: <../../person/Reuven_Sherwin#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.xmpie.cpkg"; reg:type "template" ];
     reg:name "vnd.xmpie.cpkg";
     reg:xref Reu:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

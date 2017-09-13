@@ -3,10 +3,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/media-policy-dataset+xml"; reg:type "template" ];
     reg:name "media-policy-dataset+xml";
     reg:xref html:rfc6796.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

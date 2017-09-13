@@ -3,9 +3,9 @@
 @prefix J: <../../person/Jay_Moskowitz#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.aether.imp"; reg:type "template" ];
     reg:name "vnd.aether.imp";
     reg:xref J:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

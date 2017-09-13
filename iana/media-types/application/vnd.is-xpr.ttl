@@ -3,9 +3,9 @@
 @prefix S: <../../person/Satish_Navarajan#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.is-xpr"; reg:type "template" ];
     reg:name "vnd.is-xpr";
     reg:xref S:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

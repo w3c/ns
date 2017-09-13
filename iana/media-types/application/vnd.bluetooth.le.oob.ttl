@@ -3,10 +3,10 @@
 @prefix M: <../../person/Mark_Powell#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.bluetooth.le.oob"; reg:type "template" ];
     reg:name "vnd.bluetooth.le.oob";
     reg:xref M:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

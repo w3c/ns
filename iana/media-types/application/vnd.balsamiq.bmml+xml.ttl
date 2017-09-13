@@ -3,10 +3,10 @@
 @prefix Gi: <../../person/Giacomo_Guilizzoni#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.balsamiq.bmml+xml"; reg:type "template" ];
     reg:name "vnd.balsamiq.bmml+xml";
     reg:xref Gi:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

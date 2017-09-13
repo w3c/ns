@@ -7,10 +7,10 @@
 @prefix J: <../../person/James_F_Philbin#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-09-26"^^XML:date;
     reg:file [ reg:file "application/dicom+xml"; reg:type "template" ];
     reg:name "dicom+xml";
     reg:xref D:, DIC:, J:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

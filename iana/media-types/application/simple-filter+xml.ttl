@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/simple-filter+xml"; reg:type "template" ];
     reg:name "simple-filter+xml";
     reg:xref html:rfc4661.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

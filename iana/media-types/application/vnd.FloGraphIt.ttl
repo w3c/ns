@@ -3,9 +3,9 @@
 @prefix Dic: <../../person/Dick_Floersch#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.FloGraphIt"; reg:type "template" ];
     reg:name "vnd.FloGraphIt";
     reg:xref Dic:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

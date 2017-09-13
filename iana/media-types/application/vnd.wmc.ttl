@@ -3,9 +3,9 @@
 @prefix Thom: <../../person/Thomas_Kjornes#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.wmc"; reg:type "template" ];
     reg:name "vnd.wmc";
     reg:xref Thom:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

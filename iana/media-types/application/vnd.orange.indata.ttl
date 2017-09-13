@@ -3,9 +3,9 @@
 @prefix CHA: <../../person/CHATRAS_Bruno#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.orange.indata"; reg:type "template" ];
     reg:name "vnd.orange.indata";
     reg:xref CHA:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

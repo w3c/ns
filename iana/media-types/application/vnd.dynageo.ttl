@@ -3,9 +3,9 @@
 @prefix Rol: <../../person/Roland_Mechling#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "application/vnd.dynageo"; reg:type "template" ];
     reg:name "vnd.dynageo";
     reg:xref Rol:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

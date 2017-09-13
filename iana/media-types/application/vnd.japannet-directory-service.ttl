@@ -3,7 +3,7 @@
 @prefix Kiy: <../../person/Kiyofusa_Fujii#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.japannet-directory-service";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.japannet-directory-service";
     reg:xref Kiy:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

@@ -3,7 +3,7 @@
 @prefix G: <../../person/Gary_Ellison#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file "application/vnd.marlin.drm.actiontoken+xml";
@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.marlin.drm.actiontoken+xml";
     reg:xref G:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

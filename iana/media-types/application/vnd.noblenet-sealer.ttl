@@ -3,10 +3,10 @@
 @prefix Mon: <../../person/Monty_Solomon#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.noblenet-sealer"; reg:type "template" ];
     reg:name "vnd.noblenet-sealer";
     reg:xref Mon:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

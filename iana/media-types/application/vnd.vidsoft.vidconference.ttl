@@ -3,10 +3,10 @@
 @prefix Rob: <../../person/Robert_Hess#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.vidsoft.vidconference"; reg:type "template" ];
     reg:name "vnd.vidsoft.vidconference";
     reg:xref Rob:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

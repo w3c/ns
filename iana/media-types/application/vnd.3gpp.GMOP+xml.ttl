@@ -5,10 +5,10 @@
 @prefix Fre: <../../person/Frederic_Firmin#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2017-07-18"^^XML:date;
     reg:file [ reg:file "application/vnd.3gpp.GMOP+xml"; reg:type "template" ];
     reg:name "vnd.3gpp.GMOP+xml";
     reg:xref Fre:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

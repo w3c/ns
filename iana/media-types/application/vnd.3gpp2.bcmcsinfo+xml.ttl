@@ -3,10 +3,10 @@
 @prefix And: <../../person/Andy_Dryden#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.3gpp2.bcmcsinfo+xml"; reg:type "template" ];
     reg:name "vnd.3gpp2.bcmcsinfo+xml";
     reg:xref And:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

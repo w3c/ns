@@ -5,12 +5,12 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2016-05-16"^^XML:date, "2016-05-24"^^XML:date;
     reg:file
         [ reg:file "image/wmf"; reg:type "template" ],
         [ reg:file "image/wmf"; reg:type "template" ];
     reg:name "wmf", "x-wmf - DEPRECATED in favor of image/wmf";
     reg:xref html:rfc7903.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

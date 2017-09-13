@@ -3,7 +3,7 @@
 @prefix C: <../../person/Catherine_E._White#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
             [
                 reg:file
@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.llamagraphics.life-balance.exchange+xml";
     reg:xref C:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

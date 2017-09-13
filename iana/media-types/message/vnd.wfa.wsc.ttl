@@ -3,9 +3,9 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Mic: <../../person/Mick_Conley#>.
 
-medi:message reg:record :.
+medi:message reg:record :Resource.
 
-:
+:Resource
     reg:file [ reg:file "message/vnd.wfa.wsc"; reg:type "template" ];
     reg:name "vnd.wfa.wsc";
     reg:xref Mic:.

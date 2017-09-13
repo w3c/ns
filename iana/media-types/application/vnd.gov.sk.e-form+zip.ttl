@@ -6,11 +6,11 @@
 @prefix Stef: <../../person/Stefan_Szilva#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     terms:date "2014-10-28"^^XML:date;
     reg:file
     [ reg:file "application/vnd.gov.sk.e-form+zip"; reg:type "template" ];
     reg:name "vnd.gov.sk.e-form+zip";
     reg:xref Pet:, Stef:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

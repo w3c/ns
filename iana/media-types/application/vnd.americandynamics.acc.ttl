@@ -3,10 +3,10 @@
 @prefix G: <../../person/Gary_Sands#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file
     [ reg:file "application/vnd.americandynamics.acc"; reg:type "template" ];
     reg:name "vnd.americandynamics.acc";
     reg:xref G:.
-medi:application reg:record :.
+medi:application reg:record :Resource.
 

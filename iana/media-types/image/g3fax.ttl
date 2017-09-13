@@ -3,9 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "image/g3fax"; reg:type "template" ];
     reg:name "g3fax";
     reg:xref html:rfc1494.
-medi:image reg:record :.
+medi:image reg:record :Resource.
 

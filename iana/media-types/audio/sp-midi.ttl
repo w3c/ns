@@ -4,9 +4,9 @@
 @prefix Tom: <../../person/Tom_White#>.
 @prefix medi: <../media-types.ttl#>.
 
-:
+:Resource
     reg:file [ reg:file "audio/sp-midi"; reg:type "template" ];
     reg:name "sp-midi";
     reg:xref Tim:, Tom:.
-medi:audio reg:record :.
+medi:audio reg:record :Resource.
 
