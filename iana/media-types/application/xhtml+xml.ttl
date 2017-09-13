@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Rob: <../../person/Robin_Berjon#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/xhtml+xml"; reg:type "template" ];
+    reg:name "xhtml+xml";
+    reg:updated "2014-10-23";
+    reg:xref Rob:, W3C:.
+medi:undefined reg:record :.
+

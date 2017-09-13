@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix B: <../../person/Bayard_Kohlhepp#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ctc-posml"; reg:type "template" ];
+    reg:name "vnd.ctc-posml";
+    reg:xref B:.
+medi:undefined reg:record :.
+

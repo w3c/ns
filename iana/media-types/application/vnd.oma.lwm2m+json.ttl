@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joh: <../../person/John_Mudge#>.
+@prefix Ope: <../../person/Open_Mobile_Naming_Authority#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.oma.lwm2m+json"; reg:type "template" ];
+    reg:name "vnd.oma.lwm2m+json";
+    reg:xref Joh:, Ope:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ulr: <../../person/Ulrich_Kortenkamp#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.cinderella"; reg:type "template" ];
+    reg:name "vnd.cinderella";
+    reg:xref Ulr:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Nic: <../../person/Nick_Smith#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/riscos"; reg:type "template" ];
+    reg:name "riscos";
+    reg:xref Nic:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix P: <../../person/Paul_Norman#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2016-09-27"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.openstreetmap.data+xml"; reg:type "template" ];
+    reg:name "vnd.openstreetmap.data+xml";
+    reg:updated "2016-10-05"^^XML:date;
+    reg:xref P:.
+medi:undefined reg:record :.
+

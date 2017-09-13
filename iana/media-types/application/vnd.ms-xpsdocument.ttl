@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jes: <../../person/Jesse_McGatha#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ms-xpsdocument"; reg:type "template" ];
+    reg:name "vnd.ms-xpsdocument";
+    reg:xref Jes:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/cdmi-domain"; reg:type "template" ];
+    reg:name "cdmi-domain";
+    reg:xref html:rfc6208.
+medi:undefined reg:record :.
+

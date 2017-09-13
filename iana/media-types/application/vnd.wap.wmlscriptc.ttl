@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Pet: <../../person/Peter_Stark#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.wap.wmlscriptc"; reg:type "template" ];
+    reg:name "vnd.wap.wmlscriptc";
+    reg:xref Pet:.
+medi:undefined reg:record :.
+

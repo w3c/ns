@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Thom: <../../person/Thomas_Olsson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.ecowin.filerequest"; reg:type "template" ];
+    reg:name "vnd.ecowin.filerequest";
+    reg:xref Thom:.
+medi:undefined reg:record :.
+

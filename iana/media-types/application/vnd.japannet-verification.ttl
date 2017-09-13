@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jun: <../../person/Jun_Yoshitake#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.japannet-verification"; reg:type "template" ];
+    reg:name "vnd.japannet-verification";
+    reg:xref Jun:.
+medi:undefined reg:record :.
+

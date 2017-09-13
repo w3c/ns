@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Gwen: <../../person/Gwenael_Le_Bodic#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.mseq"; reg:type "template" ];
+    reg:name "vnd.mseq";
+    reg:xref Gwen:.
+medi:undefined reg:record :.
+

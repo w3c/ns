@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Phi: <../../person/Philippe_Imoucha#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.businessobjects"; reg:type "template" ];
+    reg:name "vnd.businessobjects";
+    reg:xref Phi:.
+medi:undefined reg:record :.
+

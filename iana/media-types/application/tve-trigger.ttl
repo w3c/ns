@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Lind: <../../person/Linda_Welsh#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/tve-trigger"; reg:type "template" ];
+    reg:name "tve-trigger";
+    reg:xref Lind:.
+medi:undefined reg:record :.
+

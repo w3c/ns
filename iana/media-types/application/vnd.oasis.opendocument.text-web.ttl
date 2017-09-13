@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix OASIS: <../../person/OASIS#>.
+@prefix Sv: <../../person/Svante_Schubert#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.oasis.opendocument.text-web";
+                reg:type "template"
+            ];
+    reg:name "vnd.oasis.opendocument.text-web";
+    reg:xref OASIS:, Sv:.
+medi:undefined reg:record :.
+

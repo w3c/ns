@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/tei+xml"; reg:type "template" ];
+    reg:name "tei+xml";
+    reg:xref html:rfc6129.
+medi:undefined reg:record :.
+

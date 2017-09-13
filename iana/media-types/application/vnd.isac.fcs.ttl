@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ry: <../../person/Ryan_Brinkman#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.isac.fcs"; reg:type "template" ];
+    reg:name "vnd.isac.fcs";
+    reg:xref Ry:.
+medi:undefined reg:record :.
+

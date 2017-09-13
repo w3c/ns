@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Yil: <../../person/Yiling_Xu#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.dvb.ipdcroaming"; reg:type "template" ];
+    reg:name "vnd.dvb.ipdcroaming";
+    reg:xref Yil:.
+medi:undefined reg:record :.
+

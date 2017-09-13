@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Eri: <../../person/Eric_Ledoux#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ms-ims"; reg:type "template" ];
+    reg:name "vnd.ms-ims";
+    reg:xref Eri:.
+medi:undefined reg:record :.
+

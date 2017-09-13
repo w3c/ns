@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Got: <../../person/Gottfried_Zimmermann#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/urc-targetdesc+xml"; reg:type "template" ];
+    reg:name "urc-targetdesc+xml";
+    reg:xref "false", Got:.
+medi:undefined reg:record :.
+

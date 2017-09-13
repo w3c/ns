@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Martin_Talbot#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.ubisoft.webplayer"; reg:type "template" ];
+    reg:name "vnd.ubisoft.webplayer";
+    reg:xref M:.
+medi:undefined reg:record :.
+

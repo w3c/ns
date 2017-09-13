@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix T: <../../person/Tanaka#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.mitsubishi.misty-guard.trustweb";
+                reg:type "template"
+            ];
+    reg:name "vnd.mitsubishi.misty-guard.trustweb";
+    reg:xref T:.
+medi:undefined reg:record :.
+

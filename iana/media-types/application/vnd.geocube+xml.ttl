@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Fr: <../../person/Francois_Pirsch#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.geocube+xml"; reg:type "template" ];
+    reg:name "vnd.geocube+xml - OBSOLETED by request";
+    reg:xref Fr:.
+medi:undefined reg:record :.
+

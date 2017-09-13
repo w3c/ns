@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jon: <../../person/Jonathan_Niedfeldt#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.sus-calendar"; reg:type "template" ];
+    reg:name "vnd.sus-calendar";
+    reg:xref Jon:.
+medi:undefined reg:record :.
+

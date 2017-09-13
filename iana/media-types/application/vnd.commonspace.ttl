@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix R: <../../person/Ravinder_Chandhok#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.commonspace"; reg:type "template" ];
+    reg:name "vnd.commonspace";
+    reg:xref R:.
+medi:undefined reg:record :.
+

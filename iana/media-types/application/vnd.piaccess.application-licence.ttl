@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Luc: <../../person/Lucas_Maneos#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.piaccess.application-licence";
+                reg:type "template"
+            ];
+    reg:name "vnd.piaccess.application-licence";
+    reg:xref Luc:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Masaaki_Hirai#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.MFER"; reg:type "template" ];
+    reg:name "vnd.MFER";
+    reg:xref M:.
+medi:undefined reg:record :.
+

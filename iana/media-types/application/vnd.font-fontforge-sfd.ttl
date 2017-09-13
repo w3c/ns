@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Geo: <../../person/George_Williams#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.font-fontforge-sfd"; reg:type "template" ];
+    reg:name "vnd.font-fontforge-sfd";
+    reg:xref Geo:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steve_Rogan#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.nitf"; reg:type "template" ];
+    reg:name "vnd.nitf";
+    reg:xref Ste:.
+medi:undefined reg:record :.
+

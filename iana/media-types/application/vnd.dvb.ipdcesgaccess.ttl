@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joe: <../../person/Joerg_Heuer#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.dvb.ipdcesgaccess"; reg:type "template" ];
+    reg:name "vnd.dvb.ipdcesgaccess";
+    reg:xref Joe:.
+medi:undefined reg:record :.
+

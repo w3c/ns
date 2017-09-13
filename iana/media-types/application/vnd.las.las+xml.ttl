@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Rob: <../../person/Rob_Bailey#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.las.las+xml"; reg:type "template" ];
+    reg:name "vnd.las.las+xml";
+    reg:xref Rob:.
+medi:undefined reg:record :.
+

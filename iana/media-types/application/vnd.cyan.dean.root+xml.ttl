@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Matt_Kern#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.cyan.dean.root+xml"; reg:type "template" ];
+    reg:name "vnd.cyan.dean.root+xml";
+    reg:xref M:.
+medi:undefined reg:record :.
+

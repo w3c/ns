@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Eli: <../../person/Eli_Grey#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.oftn.l10n+json"; reg:type "template" ];
+    reg:name "vnd.oftn.l10n+json";
+    reg:xref Eli:.
+medi:undefined reg:record :.
+

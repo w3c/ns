@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Reu: <../../person/Reuven_Sherwin#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.xmpie.plan"; reg:type "template" ];
+    reg:name "vnd.xmpie.plan";
+    reg:xref Reu:.
+medi:undefined reg:record :.
+

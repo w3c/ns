@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Eri: <../../person/Eric_Wedel#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.meridian-slingshot"; reg:type "template" ];
+    reg:name "vnd.meridian-slingshot";
+    reg:xref Eri:.
+medi:undefined reg:record :.
+

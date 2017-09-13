@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Cr: <../../person/Craig_Bruce#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.openeye.oeb"; reg:type "template" ];
+    reg:name "vnd.openeye.oeb";
+    reg:xref Cr:.
+medi:undefined reg:record :.
+

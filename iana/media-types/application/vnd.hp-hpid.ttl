@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Alo: <../../person/Aloke_Gupta#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.hp-hpid"; reg:type "template" ];
+    reg:name "vnd.hp-hpid";
+    reg:xref Alo:.
+medi:undefined reg:record :.
+

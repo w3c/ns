@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Masahiko_Sugimoto#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.fujitsu.oasysgp"; reg:type "template" ];
+    reg:name "vnd.fujitsu.oasysgp";
+    reg:xref M:.
+medi:undefined reg:record :.
+

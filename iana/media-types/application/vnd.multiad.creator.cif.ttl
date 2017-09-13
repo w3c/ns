@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steve_Mills#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.multiad.creator.cif"; reg:type "template" ];
+    reg:name "vnd.multiad.creator.cif";
+    reg:xref Ste:.
+medi:undefined reg:record :.
+

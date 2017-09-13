@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix G: <../../person/Gary_Sands#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.americandynamics.acc"; reg:type "template" ];
+    reg:name "vnd.americandynamics.acc";
+    reg:xref G:.
+medi:undefined reg:record :.
+

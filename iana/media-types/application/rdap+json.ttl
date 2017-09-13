@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2015-01-12"^^XML:date;
+    reg:file [ reg:file "application/rdap+json"; reg:type "template" ];
+    reg:name "rdap+json";
+    reg:xref html:rfc7483.
+medi:undefined reg:record :.
+

@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Wolfr: <../../person/Wolfram#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.wolfram.mathematica"; reg:type "template" ];
+    reg:name "vnd.wolfram.mathematica";
+    reg:xref Wolfr:.
+medi:undefined reg:record :.
+

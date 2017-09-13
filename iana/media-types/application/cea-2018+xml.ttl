@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Got: <../../person/Gottfried_Zimmermann#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/cea-2018+xml"; reg:type "template" ];
+    reg:name "cea-2018+xml";
+    reg:xref Got:.
+medi:undefined reg:record :.
+

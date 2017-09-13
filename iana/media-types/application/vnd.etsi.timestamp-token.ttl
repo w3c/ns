@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mig: <../../person/Miguel_Angel_Reina_Ortega#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.etsi.timestamp-token"; reg:type "template" ];
+    reg:name "vnd.etsi.timestamp-token";
+    reg:xref Mig:.
+medi:undefined reg:record :.
+

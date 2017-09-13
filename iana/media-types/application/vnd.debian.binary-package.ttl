@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ch: <../../person/Charles_Plessy#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2014-05-20"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.debian.binary-package"; reg:type "template" ];
+    reg:name "vnd.debian.binary-package";
+    reg:xref Ch:.
+medi:undefined reg:record :.
+

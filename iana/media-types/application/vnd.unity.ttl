@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Uni: <../../person/Unity3d#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.unity"; reg:type "template" ];
+    reg:name "vnd.unity";
+    reg:xref Uni:.
+medi:undefined reg:record :.
+

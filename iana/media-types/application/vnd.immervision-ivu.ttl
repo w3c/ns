@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Mathieu_Villegas#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.immervision-ivu"; reg:type "template" ];
+    reg:name "vnd.immervision-ivu";
+    reg:xref M:.
+medi:undefined reg:record :.
+

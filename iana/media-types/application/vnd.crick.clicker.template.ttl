@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix And: <../../person/Andrew_Burt#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.crick.clicker.template"; reg:type "template" ];
+    reg:name "vnd.crick.clicker.template";
+    reg:xref And:.
+medi:undefined reg:record :.
+

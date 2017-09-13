@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Tom: <../../person/Tom_Gurak#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.intercon.formnet"; reg:type "template" ];
+    reg:name "vnd.intercon.formnet";
+    reg:xref Tom:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Eri: <../../person/Eric_Prudhommeaux#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2017-02-01"^^XML:date;
+    reg:file [ reg:file "application/n-triples"; reg:type "template" ];
+    reg:name "n-triples";
+    reg:xref Eri:, W3C:.
+medi:undefined reg:record :.
+

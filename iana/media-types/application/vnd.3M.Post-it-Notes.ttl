@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mich: <../../person/Michael_OBrien#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.3M.Post-it-Notes"; reg:type "template" ];
+    reg:name "vnd.3M.Post-it-Notes";
+    reg:xref Mich:.
+medi:undefined reg:record :.
+

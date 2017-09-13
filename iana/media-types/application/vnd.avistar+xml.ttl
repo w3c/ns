@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Vl: <../../person/Vladimir_Vysotsky#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.avistar+xml"; reg:type "template" ];
+    reg:name "vnd.avistar+xml";
+    reg:xref Vl:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix K: <../../person/Katsuhiko_Ichinose#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ah-barcode"; reg:type "template" ];
+    reg:name "vnd.ah-barcode";
+    reg:xref K:.
+medi:undefined reg:record :.
+

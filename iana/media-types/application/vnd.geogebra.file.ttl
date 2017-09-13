@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Geo: <../../person/GeoGebra#>.
+@prefix Yve: <../../person/Yves_Kreis#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.geogebra.file"; reg:type "template" ];
+    reg:name "vnd.geogebra.file";
+    reg:xref Geo:, Yve:.
+medi:undefined reg:record :.
+

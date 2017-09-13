@@ -1,0 +1,18 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Gus: <../../person/Gus_Asadi#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2016-02-29"^^XML:date;
+    reg:file
+            [
+                reg:file "application/vnd.3lightssoftware.imagescal";
+                reg:type "template"
+            ];
+    reg:name "vnd.3lightssoftware.imagescal";
+    reg:xref Gus:.
+medi:undefined reg:record :.
+

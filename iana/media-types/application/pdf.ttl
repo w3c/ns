@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/pdf"; reg:type "template" ];
+    reg:name "pdf";
+    reg:xref html:rfc8118.
+medi:undefined reg:record :.
+

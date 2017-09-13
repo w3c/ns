@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joost: <../../person/Joost#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.joost.joda-archive"; reg:type "template" ];
+    reg:name "vnd.joost.joda-archive";
+    reg:xref Joost:.
+medi:undefined reg:record :.
+

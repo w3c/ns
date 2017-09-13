@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix R: <../../person/Randy_Jones#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.hhe.lesson-player"; reg:type "template" ];
+    reg:name "vnd.hhe.lesson-player";
+    reg:xref R:.
+medi:undefined reg:record :.
+

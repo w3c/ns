@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix W3C: <../../person/W3C_Music_Notation_Community_Group#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.recordare.musicxml"; reg:type "template" ];
+    reg:name "vnd.recordare.musicxml";
+    reg:updated "2017-01-19";
+    reg:xref W3C:.
+medi:undefined reg:record :.
+

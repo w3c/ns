@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix T: <../../person/Tapani_Otala#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.adobe.partial-upload"; reg:type "template" ];
+    reg:name "vnd.adobe.partial-upload";
+    reg:xref T:.
+medi:undefined reg:record :.
+

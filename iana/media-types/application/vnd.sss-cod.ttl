@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix As: <../../person/Asang_Dani#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.sss-cod"; reg:type "template" ];
+    reg:name "vnd.sss-cod";
+    reg:xref As:.
+medi:undefined reg:record :.
+

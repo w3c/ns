@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jef: <../../person/Jeff_Lawson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.gridmp"; reg:type "template" ];
+    reg:name "vnd.gridmp";
+    reg:xref Jef:.
+medi:undefined reg:record :.
+

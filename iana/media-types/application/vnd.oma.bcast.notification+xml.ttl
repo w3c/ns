@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ope: <../../person/Open_Mobile_Naming_Authority#>.
+@prefix Uwe: <../../person/Uwe_Rauschenbach#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.oma.bcast.notification+xml";
+                reg:type "template"
+            ];
+    reg:name "vnd.oma.bcast.notification+xml";
+    reg:xref Ope:, Uwe:.
+medi:undefined reg:record :.
+

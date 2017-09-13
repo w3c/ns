@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Shi: <../../person/Shin_Muto#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.canon-cpdl"; reg:type "template" ];
+    reg:name "vnd.canon-cpdl";
+    reg:xref Shi:.
+medi:undefined reg:record :.
+

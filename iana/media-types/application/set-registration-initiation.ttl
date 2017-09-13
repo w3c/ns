@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bri: <../../person/Brian_Korver#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/set-registration-initiation"; reg:type "template" ];
+    reg:name "set-registration-initiation";
+    reg:xref Bri:.
+medi:undefined reg:record :.
+

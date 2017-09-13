@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mik: <../../person/Mike_Amundsen#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.amundsen.maze+xml"; reg:type "template" ];
+    reg:name "vnd.amundsen.maze+xml";
+    reg:xref Mik:.
+medi:undefined reg:record :.
+

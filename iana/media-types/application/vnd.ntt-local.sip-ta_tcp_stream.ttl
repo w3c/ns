@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix NTT: <../../person/NTT-local#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.ntt-local.sip-ta_tcp_stream";
+                reg:type "template"
+            ];
+    reg:name "vnd.ntt-local.sip-ta_tcp_stream";
+    reg:xref NTT:.
+medi:undefined reg:record :.
+

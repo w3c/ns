@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jun: <../../person/Jun_Sato#>.
+@prefix Ope: <../../person/Open_Mobile_Alliance_BAC_DLDRM_Working_Group#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.oma.dd2+xml"; reg:type "template" ];
+    reg:name "vnd.oma.dd2+xml";
+    reg:xref Jun:, Ope:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ope: <../../person/Open_Mobile_Naming_Authority#>.
+@prefix Wen: <../../person/Wenjun_Zeng#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.oma.scidm.messages+xml"; reg:type "template" ];
+    reg:name "vnd.oma.scidm.messages+xml";
+    reg:xref Ope:, Wen:.
+medi:undefined reg:record :.
+

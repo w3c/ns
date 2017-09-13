@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Chr: <../../person/Chris_Solc#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.adobe.formscentral.fcdt"; reg:type "template" ];
+    reg:name "vnd.adobe.formscentral.fcdt";
+    reg:xref Chr:.
+medi:undefined reg:record :.
+

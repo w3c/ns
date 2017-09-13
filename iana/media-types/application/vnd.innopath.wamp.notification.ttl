@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix T: <../../person/Takanori_Sudo#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.innopath.wamp.notification";
+                reg:type "template"
+            ];
+    reg:name "vnd.innopath.wamp.notification";
+    reg:xref T:.
+medi:undefined reg:record :.
+

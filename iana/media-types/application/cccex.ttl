@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../../person/_3GPP#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2017-07-05"^^XML:date;
+    reg:file [ reg:file "application/cccex"; reg:type "template" ];
+    reg:name "cccex";
+    reg:xref n1:.
+medi:undefined reg:record :.
+

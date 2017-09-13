@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/Dan_DuFeu#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.neurolanguage.nlu"; reg:type "template" ];
+    reg:name "vnd.neurolanguage.nlu";
+    reg:xref D:.
+medi:undefined reg:record :.
+

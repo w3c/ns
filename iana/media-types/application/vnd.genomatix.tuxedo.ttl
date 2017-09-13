@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Tor: <../../person/Torben_Frey#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.genomatix.tuxedo"; reg:type "template" ];
+    reg:name "vnd.genomatix.tuxedo";
+    reg:xref Tor:.
+medi:undefined reg:record :.
+

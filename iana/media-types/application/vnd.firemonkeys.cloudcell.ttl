@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ale: <../../person/Alex_Dubov#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2015-09-01"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.firemonkeys.cloudcell"; reg:type "template" ];
+    reg:name "vnd.firemonkeys.cloudcell";
+    reg:xref Ale:.
+medi:undefined reg:record :.
+

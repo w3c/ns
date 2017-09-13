@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Rhy: <../../person/Rhys_Lewis#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.pmi.widget"; reg:type "template" ];
+    reg:name "vnd.pmi.widget";
+    reg:xref Rhy:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Cl: <../../person/Claire_DEsclercs#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.oipf.spdiscovery+xml"; reg:type "template" ];
+    reg:name "vnd.oipf.spdiscovery+xml";
+    reg:xref Cl:.
+medi:undefined reg:record :.
+

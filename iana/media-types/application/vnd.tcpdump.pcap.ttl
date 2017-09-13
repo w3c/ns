@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Gle: <../../person/Glen_Turner#>.
+@prefix Guy: <../../person/Guy_Harris#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.tcpdump.pcap"; reg:type "template" ];
+    reg:name "vnd.tcpdump.pcap";
+    reg:xref Gle:, Guy:.
+medi:undefined reg:record :.
+

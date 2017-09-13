@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Mark_Powell#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.bluetooth.le.oob"; reg:type "template" ];
+    reg:name "vnd.bluetooth.le.oob";
+    reg:xref M:.
+medi:undefined reg:record :.
+

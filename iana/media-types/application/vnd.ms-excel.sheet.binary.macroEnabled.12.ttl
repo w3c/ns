@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Chr: <../../person/Chris_Rae#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file
+                "application/vnd.ms-excel.sheet.binary.macroEnabled.12";
+                reg:type "template"
+            ];
+    reg:name "vnd.ms-excel.sheet.binary.macroEnabled.12";
+    reg:xref Chr:.
+medi:undefined reg:record :.
+

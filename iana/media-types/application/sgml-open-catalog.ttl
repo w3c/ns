@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix P: <../../person/Paul_Grosso#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/sgml-open-catalog"; reg:type "template" ];
+    reg:name "sgml-open-catalog";
+    reg:xref P:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Malte_Borcherding#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.msign"; reg:type "template" ];
+    reg:name "vnd.msign";
+    reg:xref M:.
+medi:undefined reg:record :.
+

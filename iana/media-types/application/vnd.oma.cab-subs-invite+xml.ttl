@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix H: <../../person/Hao_Wang#>.
+@prefix OMA: <../../person/OMA#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.oma.cab-subs-invite+xml"; reg:type "template" ];
+    reg:name "vnd.oma.cab-subs-invite+xml";
+    reg:xref H:, OMA:.
+medi:undefined reg:record :.
+

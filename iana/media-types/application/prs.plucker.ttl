@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bil: <../../person/Bill_Janssen#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/prs.plucker"; reg:type "template" ];
+    reg:name "prs.plucker";
+    reg:xref Bil:.
+medi:undefined reg:record :.
+

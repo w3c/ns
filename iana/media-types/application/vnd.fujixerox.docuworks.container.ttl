@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Kiy: <../../person/Kiyoshi_Tashiro#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.fujixerox.docuworks.container";
+                reg:type "template"
+            ];
+    reg:name "vnd.fujixerox.docuworks.container";
+    reg:xref Kiy:.
+medi:undefined reg:record :.
+

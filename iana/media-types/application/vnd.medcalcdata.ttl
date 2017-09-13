@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Fr: <../../person/Frank_Schoonjans#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.medcalcdata"; reg:type "template" ];
+    reg:name "vnd.medcalcdata";
+    reg:xref Fr:.
+medi:undefined reg:record :.
+

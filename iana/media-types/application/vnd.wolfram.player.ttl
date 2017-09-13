@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Wolfr: <../../person/Wolfram#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.wolfram.player"; reg:type "template" ];
+    reg:name "vnd.wolfram.player";
+    reg:xref Wolfr:.
+medi:undefined reg:record :.
+

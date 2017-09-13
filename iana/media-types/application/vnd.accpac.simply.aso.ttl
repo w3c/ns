@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steve_Leow#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.accpac.simply.aso"; reg:type "template" ];
+    reg:name "vnd.accpac.simply.aso";
+    reg:xref Ste:.
+medi:undefined reg:record :.
+

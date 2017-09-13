@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix And: <../../person/Anders_Hansson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.semd"; reg:type "template" ];
+    reg:name "vnd.semd";
+    reg:xref And:.
+medi:undefined reg:record :.
+

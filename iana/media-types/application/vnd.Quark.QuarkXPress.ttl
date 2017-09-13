@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix H: <../../person/Hannes_Scheidler#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.Quark.QuarkXPress"; reg:type "template" ];
+    reg:name "vnd.Quark.QuarkXPress";
+    reg:xref H:.
+medi:undefined reg:record :.
+

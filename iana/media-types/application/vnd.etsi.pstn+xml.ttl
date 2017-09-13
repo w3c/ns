@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jiw: <../../person/Jiwan_Han#>.
+@prefix Thom: <../../person/Thomas_Belling#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.etsi.pstn+xml"; reg:type "template" ];
+    reg:name "vnd.etsi.pstn+xml";
+    reg:xref Jiw:, Thom:.
+medi:undefined reg:record :.
+

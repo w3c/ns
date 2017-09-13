@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Je: <../../person/Jean-Baptiste_Henry#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.dvb.iptv.alfec-enhancement";
+                reg:type "template"
+            ];
+    reg:name "vnd.dvb.iptv.alfec-enhancement";
+    reg:xref Je:.
+medi:undefined reg:record :.
+

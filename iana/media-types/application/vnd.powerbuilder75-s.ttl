@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ree: <../../person/Reed_Shilts#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.powerbuilder75-s"; reg:type "template" ];
+    reg:name "vnd.powerbuilder75-s";
+    reg:xref Ree:.
+medi:undefined reg:record :.
+

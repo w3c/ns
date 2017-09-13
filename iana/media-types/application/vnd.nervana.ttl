@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steve_Judkins#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.nervana"; reg:type "template" ];
+    reg:name "vnd.nervana";
+    reg:xref Ste:.
+medi:undefined reg:record :.
+

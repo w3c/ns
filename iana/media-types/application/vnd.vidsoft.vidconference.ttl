@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Rob: <../../person/Robert_Hess#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.vidsoft.vidconference"; reg:type "template" ];
+    reg:name "vnd.vidsoft.vidconference";
+    reg:xref Rob:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Hir: <../../person/Hiroyoshi_Mori#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file
+                "application/vnd.anser-web-certificate-issue-initiation";
+                reg:type "template"
+            ];
+    reg:name "vnd.anser-web-certificate-issue-initiation";
+    reg:xref Hir:.
+medi:undefined reg:record :.
+

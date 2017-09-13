@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Sho: <../../person/Shoji_Hoshina#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.epson.esf"; reg:type "template" ];
+    reg:name "vnd.epson.esf";
+    reg:xref Sho:.
+medi:undefined reg:record :.
+

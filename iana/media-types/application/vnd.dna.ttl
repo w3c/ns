@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mer: <../../person/Meredith_Searcy#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.dna"; reg:type "template" ];
+    reg:name "vnd.dna";
+    reg:xref Mer:.
+medi:undefined reg:record :.
+

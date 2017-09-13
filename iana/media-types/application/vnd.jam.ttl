@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bri: <../../person/Brijesh_Kumar#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.jam"; reg:type "template" ];
+    reg:name "vnd.jam";
+    reg:xref Bri:.
+medi:undefined reg:record :.
+

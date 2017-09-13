@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Wes: <../../person/Wesley_Beary#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.heroku+json"; reg:type "template" ];
+    reg:name "vnd.heroku+json";
+    reg:xref Wes:.
+medi:undefined reg:record :.
+

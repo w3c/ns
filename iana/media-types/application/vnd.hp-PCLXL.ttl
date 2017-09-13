@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bob: <../../person/Bob_Pentecost#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.hp-PCLXL"; reg:type "template" ];
+    reg:name "vnd.hp-PCLXL";
+    reg:xref Bob:.
+medi:undefined reg:record :.
+

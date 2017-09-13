@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Lev: <../../person/Levantovsky#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/font-sfnt"; reg:type "template" ];
+    reg:name "font-sfnt - DEPRECATED in favor of font/sfnt";
+    reg:updated "2016-12-21";
+    reg:xref "false", Lev:, html:rfc8081.
+medi:undefined reg:record :.
+

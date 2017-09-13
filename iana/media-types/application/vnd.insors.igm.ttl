@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jon: <../../person/Jon_Swanson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.insors.igm"; reg:type "template" ];
+    reg:name "vnd.insors.igm";
+    reg:xref Jon:.
+medi:undefined reg:record :.
+

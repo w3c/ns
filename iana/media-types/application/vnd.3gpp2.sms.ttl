@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix AC: <../../person/AC_Mahendran#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.3gpp2.sms"; reg:type "template" ];
+    reg:name "vnd.3gpp2.sms";
+    reg:xref AC:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Hen: <../../person/Henry_Flurry#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.mediastation.cdkey"; reg:type "template" ];
+    reg:name "vnd.mediastation.cdkey";
+    reg:xref Hen:.
+medi:undefined reg:record :.
+

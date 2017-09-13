@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix De: <../../person/Dean_Slawson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ms-artgalry"; reg:type "template" ];
+    reg:name "vnd.ms-artgalry";
+    reg:xref De:.
+medi:undefined reg:record :.
+

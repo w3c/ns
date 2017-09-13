@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jon: <../../person/Jonathan_Neitz#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.smart.notebook"; reg:type "template" ];
+    reg:name "vnd.smart.notebook";
+    reg:xref Jon:.
+medi:undefined reg:record :.
+

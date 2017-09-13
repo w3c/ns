@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Yve: <../../person/Yves_Kreis_2#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.intergeo"; reg:type "template" ];
+    reg:name "vnd.intergeo";
+    reg:xref Yve:.
+medi:undefined reg:record :.
+

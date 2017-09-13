@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bipl: <../../person/Biplab_Sarkar#>.
+@prefix Lyn: <../../person/Lyndsey_Ferguson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.vectorworks"; reg:type "template" ];
+    reg:name "vnd.vectorworks";
+    reg:xref Bipl:, Lyn:.
+medi:undefined reg:record :.
+

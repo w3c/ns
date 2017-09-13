@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ter: <../../person/Terry_Crowley#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/slate"; reg:type "template" ];
+    reg:name "slate";
+    reg:xref Ter:.
+medi:undefined reg:record :.
+

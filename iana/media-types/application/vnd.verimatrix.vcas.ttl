@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Pet: <../../person/Petr_Peterka#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.verimatrix.vcas"; reg:type "template" ];
+    reg:name "vnd.verimatrix.vcas";
+    reg:xref Pet:.
+medi:undefined reg:record :.
+

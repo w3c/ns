@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Mark_Olleson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.yamaha.openscoreformat"; reg:type "template" ];
+    reg:name "vnd.yamaha.openscoreformat";
+    reg:xref M:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ehu: <../../person/Ehud_Shapiro#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+        [ reg:file "application/activemessage"; reg:type "template" ],
+        [ reg:file "application/activemessage"; reg:type "template" ];
+    reg:name "activemessage";
+    reg:xref Ehu:.
+medi:undefined reg:record :.
+

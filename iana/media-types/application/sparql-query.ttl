@@ -1,0 +1,10 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix n1: <http://www.w3.org/TR/2007/CR-rdf-sparql-query-20070614/#>.
+@prefix medi: <../media-types.ttl#>.
+
+: reg:name "sparql-query"; reg:xref W3C:, n1:mediaType.
+
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix L: <../../person/Larry_Campbell#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/wita"; reg:type "template" ];
+    reg:name "wita";
+    reg:xref L:.
+medi:undefined reg:record :.
+

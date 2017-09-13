@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Thom: <../../person/Thomas_Huth#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2015-03-02"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.fastcopy-disk-image"; reg:type "template" ];
+    reg:name "vnd.fastcopy-disk-image";
+    reg:xref Thom:.
+medi:undefined reg:record :.
+

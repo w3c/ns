@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/zlib"; reg:type "template" ];
+    reg:name "zlib";
+    reg:xref html:rfc6713.
+medi:undefined reg:record :.
+

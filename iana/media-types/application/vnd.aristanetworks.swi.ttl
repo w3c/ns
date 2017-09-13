@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bil: <../../person/Bill_Fenner#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.aristanetworks.swi"; reg:type "template" ];
+    reg:name "vnd.aristanetworks.swi";
+    reg:xref Bil:.
+medi:undefined reg:record :.
+

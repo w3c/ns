@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Yuk: <../../person/Yukari_Ikeda#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.mfmp"; reg:type "template" ];
+    reg:name "vnd.mfmp";
+    reg:xref Yuk:.
+medi:undefined reg:record :.
+

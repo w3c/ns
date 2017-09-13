@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Matthias_Ehmann#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.geonext"; reg:type "template" ];
+    reg:name "vnd.geonext";
+    reg:xref M:.
+medi:undefined reg:record :.
+

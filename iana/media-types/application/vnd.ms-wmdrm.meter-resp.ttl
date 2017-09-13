@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Kev: <../../person/Kevin_Lau#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.ms-wmdrm.meter-resp"; reg:type "template" ];
+    reg:name "vnd.ms-wmdrm.meter-resp";
+    reg:xref Kev:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ASH: <../../person/ASHRAE#>.
+@prefix D: <../../person/Dave_Robin#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/bacnet-xdd+zip"; reg:type "template" ];
+    reg:name "bacnet-xdd+zip";
+    reg:xref ASH:, D:.
+medi:undefined reg:record :.
+

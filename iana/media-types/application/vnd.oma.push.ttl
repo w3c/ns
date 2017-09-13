@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bry: <../../person/Bryan_Sullivan#>.
+@prefix OMA: <../../person/OMA#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.oma.push"; reg:type "template" ];
+    reg:name "vnd.oma.push";
+    reg:xref Bry:, OMA:.
+medi:undefined reg:record :.
+

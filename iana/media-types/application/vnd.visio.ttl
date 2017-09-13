@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Tro: <../../person/Troy_Sandal#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.visio"; reg:type "template" ];
+    reg:name "vnd.visio";
+    reg:xref Tro:.
+medi:undefined reg:record :.
+

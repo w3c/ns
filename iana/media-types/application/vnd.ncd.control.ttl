@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix L: <../../person/Lauri_Tarkkala#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ncd.control"; reg:type "template" ];
+    reg:name "vnd.ncd.control";
+    reg:xref L:.
+medi:undefined reg:record :.
+

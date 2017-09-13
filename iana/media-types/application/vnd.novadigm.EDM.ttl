@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix J: <../../person/Janine_Swenson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.novadigm.EDM"; reg:type "template" ];
+    reg:name "vnd.novadigm.EDM";
+    reg:xref J:.
+medi:undefined reg:record :.
+

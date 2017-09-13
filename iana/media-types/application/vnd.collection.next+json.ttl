@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ios: <../../person/Ioseb_Dzmanashvili#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.collection.next+json"; reg:type "template" ];
+    reg:name "vnd.collection.next+json";
+    reg:xref Ios:.
+medi:undefined reg:record :.
+

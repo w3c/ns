@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ale: <../../person/Alex_Devasia#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.Mobius.MQY"; reg:type "template" ];
+    reg:name "vnd.Mobius.MQY";
+    reg:xref Ale:.
+medi:undefined reg:record :.
+

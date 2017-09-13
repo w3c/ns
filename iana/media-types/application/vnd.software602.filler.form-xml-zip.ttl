@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix J: <../../person/Jakub_Hytka#>.
+@prefix M: <../../person/Martin_Vondrous#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.software602.filler.form-xml-zip";
+                reg:type "template"
+            ];
+    reg:name "vnd.software602.filler.form-xml-zip";
+    reg:xref J:, M:.
+medi:undefined reg:record :.
+

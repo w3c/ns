@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Martin_Lambert#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.sealed.net"; reg:type "template" ];
+    reg:name "vnd.sealed.net";
+    reg:xref M:.
+medi:undefined reg:record :.
+

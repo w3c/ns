@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mich: <../../person/Michael_Sweet#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.cups-ppd"; reg:type "template" ];
+    reg:name "vnd.cups-ppd";
+    reg:xref Mich:.
+medi:undefined reg:record :.
+

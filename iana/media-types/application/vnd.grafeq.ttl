@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jef: <../../person/Jeff_Tupper#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.grafeq"; reg:type "template" ];
+    reg:name "vnd.grafeq";
+    reg:xref Jef:.
+medi:undefined reg:record :.
+

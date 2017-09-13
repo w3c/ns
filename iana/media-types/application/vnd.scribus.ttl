@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Cr: <../../person/Craig_Bradney#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.scribus"; reg:type "template" ];
+    reg:name "vnd.scribus";
+    reg:xref Cr:.
+medi:undefined reg:record :.
+

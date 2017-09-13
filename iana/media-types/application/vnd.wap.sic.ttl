@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix WAP: <../../person/WAP-Forum#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.wap.sic"; reg:type "template" ];
+    reg:name "vnd.wap.sic";
+    reg:xref WAP:.
+medi:undefined reg:record :.
+

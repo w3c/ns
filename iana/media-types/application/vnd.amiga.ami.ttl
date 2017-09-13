@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Kev: <../../person/Kevin_Blumberg#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.amiga.ami"; reg:type "template" ];
+    reg:name "vnd.amiga.ami";
+    reg:xref Kev:.
+medi:undefined reg:record :.
+

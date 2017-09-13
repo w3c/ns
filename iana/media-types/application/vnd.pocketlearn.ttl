@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jor: <../../person/Jorge_Pando#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.pocketlearn"; reg:type "template" ];
+    reg:name "vnd.pocketlearn";
+    reg:xref Jor:.
+medi:undefined reg:record :.
+

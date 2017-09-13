@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Shi: <../../person/Shinji_Kusakari#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.sbm.cid"; reg:type "template" ];
+    reg:name "vnd.sbm.cid";
+    reg:xref Shi:.
+medi:undefined reg:record :.
+

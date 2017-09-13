@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Chr: <../../person/Chris_Rae#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ms-officetheme"; reg:type "template" ];
+    reg:name "vnd.ms-officetheme";
+    reg:xref Chr:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Cur: <../../person/Curtis_Parks#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/iges"; reg:type "template" ];
+    reg:name "iges";
+    reg:xref Cur:.
+medi:undefined reg:record :.
+

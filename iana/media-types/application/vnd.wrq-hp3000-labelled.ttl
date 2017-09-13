@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Chr: <../../person/Chris_Bartram#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.wrq-hp3000-labelled"; reg:type "template" ];
+    reg:name "vnd.wrq-hp3000-labelled";
+    reg:xref Chr:.
+medi:undefined reg:record :.
+

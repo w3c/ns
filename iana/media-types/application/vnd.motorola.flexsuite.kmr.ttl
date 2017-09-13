@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Mark_Patton#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.motorola.flexsuite.kmr"; reg:type "template" ];
+    reg:name "vnd.motorola.flexsuite.kmr";
+    reg:xref M:.
+medi:undefined reg:record :.
+

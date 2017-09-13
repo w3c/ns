@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Khe: <../../person/Khemchart_Rungchavalnont#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/prs.cww"; reg:type "template" ];
+    reg:name "prs.cww";
+    reg:xref Khe:.
+medi:undefined reg:record :.
+

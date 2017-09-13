@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Purv: <../../person/Purva_R_Rajkotia#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ieee.1905"; reg:type "template" ];
+    reg:name "vnd.ieee.1905";
+    reg:xref Purv:.
+medi:undefined reg:record :.
+

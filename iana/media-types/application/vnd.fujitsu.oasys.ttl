@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Nobuk: <../../person/Nobukazu_Togashi#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.fujitsu.oasys"; reg:type "template" ];
+    reg:name "vnd.fujitsu.oasys";
+    reg:xref Nobuk:.
+medi:undefined reg:record :.
+

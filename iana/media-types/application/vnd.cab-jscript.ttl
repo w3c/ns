@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joe: <../../person/Joerg_Falkenberg#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.cab-jscript"; reg:type "template" ];
+    reg:name "vnd.cab-jscript";
+    reg:xref Joe:.
+medi:undefined reg:record :.
+

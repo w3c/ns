@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Sh: <../../person/Shawn_Maloney#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ms-3mfdocument"; reg:type "template" ];
+    reg:name "vnd.ms-3mfdocument";
+    reg:xref Sh:.
+medi:undefined reg:record :.
+

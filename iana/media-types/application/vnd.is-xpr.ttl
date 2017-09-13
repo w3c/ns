@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix S: <../../person/Satish_Navarajan#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.is-xpr"; reg:type "template" ];
+    reg:name "vnd.is-xpr";
+    reg:xref S:.
+medi:undefined reg:record :.
+

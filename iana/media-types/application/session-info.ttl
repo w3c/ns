@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../../person/_3GPP#>.
+@prefix Fre: <../../person/Frederic_Firmin#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/session-info"; reg:type "template" ];
+    reg:name "session-info";
+    reg:xref n1:, Fre:.
+medi:undefined reg:record :.
+

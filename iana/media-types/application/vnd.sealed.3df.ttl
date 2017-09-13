@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joh: <../../person/John_Kwan#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.sealed.3df"; reg:type "template" ];
+    reg:name "vnd.sealed.3df";
+    reg:xref Joh:.
+medi:undefined reg:record :.
+

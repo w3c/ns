@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/font-woff"; reg:type "template" ];
+    reg:name "font-woff - DEPRECATED in favor of font/woff";
+    reg:updated "2016-12-21";
+    reg:xref W3C:, html:rfc8081.
+medi:undefined reg:record :.
+

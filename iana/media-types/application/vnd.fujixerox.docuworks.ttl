@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Y: <../../person/Yasuo_Taguchi#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.fujixerox.docuworks"; reg:type "template" ];
+    reg:name "vnd.fujixerox.docuworks";
+    reg:xref Y:.
+medi:undefined reg:record :.
+

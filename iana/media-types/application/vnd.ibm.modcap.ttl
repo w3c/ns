@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Reinh: <../../person/Reinhard_Hohensee#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ibm.modcap"; reg:type "template" ];
+    reg:name "vnd.ibm.modcap";
+    reg:xref Reinh:.
+medi:undefined reg:record :.
+

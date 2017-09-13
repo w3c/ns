@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Rog: <../../person/Roger_Buis#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.ibm.afplinedata"; reg:type "template" ];
+    reg:name "vnd.ibm.afplinedata";
+    reg:xref Rog:.
+medi:undefined reg:record :.
+

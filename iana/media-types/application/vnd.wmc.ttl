@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Thom: <../../person/Thomas_Kjornes#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.wmc"; reg:type "template" ];
+    reg:name "vnd.wmc";
+    reg:xref Thom:.
+medi:undefined reg:record :.
+

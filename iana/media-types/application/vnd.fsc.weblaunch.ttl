@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Der: <../../person/Derek_Smith#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.fsc.weblaunch"; reg:type "template" ];
+    reg:name "vnd.fsc.weblaunch";
+    reg:xref Der:.
+medi:undefined reg:record :.
+

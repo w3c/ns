@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix J: <../../person/Jan_Schütze#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2017-01-09"^^XML:date;
+    reg:file [ reg:file "application/vnd.hc+json"; reg:type "template" ];
+    reg:name "vnd.hc+json";
+    reg:xref J:.
+medi:undefined reg:record :.
+

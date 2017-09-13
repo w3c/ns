@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/json"; reg:type "template" ];
+    reg:name "json";
+    reg:updated "2017-07-21";
+    reg:xref html:RFC-ietf-jsonbis-rfc7159bis-04.
+medi:undefined reg:record :.
+

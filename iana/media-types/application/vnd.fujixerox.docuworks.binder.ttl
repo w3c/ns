@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix T: <../../person/Takashi_Matsumoto#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.fujixerox.docuworks.binder";
+                reg:type "template"
+            ];
+    reg:name "vnd.fujixerox.docuworks.binder";
+    reg:xref T:.
+medi:undefined reg:record :.
+

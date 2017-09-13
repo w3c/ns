@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/Daniel_Shelton#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.antix.game-component"; reg:type "template" ];
+    reg:name "vnd.antix.game-component";
+    reg:xref D:.
+medi:undefined reg:record :.
+

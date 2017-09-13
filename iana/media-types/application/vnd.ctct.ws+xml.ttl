@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jim: <../../person/Jim_Ancona#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ctct.ws+xml"; reg:type "template" ];
+    reg:name "vnd.ctct.ws+xml";
+    reg:xref Jim:.
+medi:undefined reg:record :.
+

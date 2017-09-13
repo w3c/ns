@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Matthias_Ludwig#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.quobject-quoxdocument"; reg:type "template" ];
+    reg:name "vnd.quobject-quoxdocument";
+    reg:xref M:.
+medi:undefined reg:record :.
+

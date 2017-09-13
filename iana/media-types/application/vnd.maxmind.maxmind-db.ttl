@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Willi: <../../person/William_Stevenson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2014-07-25"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.maxmind.maxmind-db"; reg:type "template" ];
+    reg:name "vnd.maxmind.maxmind-db";
+    reg:xref Willi:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Hori: <../../person/Horia_Cristian_Slusanschi#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.audiograph"; reg:type "template" ];
+    reg:name "vnd.audiograph";
+    reg:xref Hori:.
+medi:undefined reg:record :.
+

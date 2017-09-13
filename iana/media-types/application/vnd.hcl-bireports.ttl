@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Dou: <../../person/Doug_R._Serres#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.hcl-bireports"; reg:type "template" ];
+    reg:name "vnd.hcl-bireports";
+    reg:xref Dou:.
+medi:undefined reg:record :.
+

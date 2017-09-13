@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mich: <../../person/Michael_Ashbridge#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.google-earth.kmz"; reg:type "template" ];
+    reg:name "vnd.google-earth.kmz";
+    reg:xref Mich:.
+medi:undefined reg:record :.
+

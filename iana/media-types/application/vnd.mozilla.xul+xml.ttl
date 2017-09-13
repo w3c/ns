@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Br: <../../person/Braden_N_McDaniel#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.mozilla.xul+xml"; reg:type "template" ];
+    reg:name "vnd.mozilla.xul+xml";
+    reg:xref Br:.
+medi:undefined reg:record :.
+

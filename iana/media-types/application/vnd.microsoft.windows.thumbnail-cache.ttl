@@ -1,0 +1,18 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Hen: <../../person/Henrik_Andersson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2017-04-06"^^XML:date;
+    reg:file
+            [
+                reg:file "application/vnd.microsoft.windows.thumbnail-cache";
+                reg:type "template"
+            ];
+    reg:name "vnd.microsoft.windows.thumbnail-cache";
+    reg:xref Hen:.
+medi:undefined reg:record :.
+

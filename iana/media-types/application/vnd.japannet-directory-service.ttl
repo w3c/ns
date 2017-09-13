@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Kiy: <../../person/Kiyofusa_Fujii#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.japannet-directory-service";
+                reg:type "template"
+            ];
+    reg:name "vnd.japannet-directory-service";
+    reg:xref Kiy:.
+medi:undefined reg:record :.
+

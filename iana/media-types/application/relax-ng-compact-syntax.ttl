@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/relax-ng-compact-syntax"; reg:type "template" ];
+    reg:name "relax-ng-compact-syntax";
+    reg:xref <http://www.jtc1sc34.org/repository/0661.pdf>.
+medi:undefined reg:record :.
+

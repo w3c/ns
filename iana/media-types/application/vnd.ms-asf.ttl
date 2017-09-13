@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Eri: <../../person/Eric_Fleischman#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ms-asf"; reg:type "template" ];
+    reg:name "vnd.ms-asf";
+    reg:xref Eri:.
+medi:undefined reg:record :.
+

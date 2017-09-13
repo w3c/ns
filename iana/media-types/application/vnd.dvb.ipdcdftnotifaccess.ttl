@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Roy: <../../person/Roy_Yue#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.dvb.ipdcdftnotifaccess"; reg:type "template" ];
+    reg:name "vnd.dvb.ipdcdftnotifaccess";
+    reg:xref Roy:.
+medi:undefined reg:record :.
+

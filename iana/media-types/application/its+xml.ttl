@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ITS: <../../person/ITS-IG-W3C#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/its+xml"; reg:type "template" ];
+    reg:name "its+xml";
+    reg:xref ITS:, W3C:.
+medi:undefined reg:record :.
+

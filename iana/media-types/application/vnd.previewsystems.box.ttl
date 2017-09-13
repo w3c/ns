@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Rom: <../../person/Roman_Smolgovsky#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.previewsystems.box"; reg:type "template" ];
+    reg:name "vnd.previewsystems.box";
+    reg:xref Rom:.
+medi:undefined reg:record :.
+

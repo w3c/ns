@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Iv: <../../person/Ivan_Herman#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/provenance+xml"; reg:type "template" ];
+    reg:name "provenance+xml";
+    reg:xref Iv:, W3C:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Matti_Salmi#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.wv.csp+wbxml"; reg:type "template" ];
+    reg:name "vnd.wv.csp+wbxml";
+    reg:xref M:.
+medi:undefined reg:record :.
+

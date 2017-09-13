@@ -1,0 +1,10 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix n1: <http://www.w3.org/TR/2009/CR-exi-20091208/#>.
+@prefix medi: <../media-types.ttl#>.
+
+: reg:name "exi"; reg:xref W3C:, n1:mediaTypeRegistration.
+
+medi:undefined reg:record :.
+

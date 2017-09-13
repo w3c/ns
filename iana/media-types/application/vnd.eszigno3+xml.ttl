@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Szi: <../../person/Szilveszter_Tóth#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.eszigno3+xml"; reg:type "template" ];
+    reg:name "vnd.eszigno3+xml";
+    reg:xref Szi:.
+medi:undefined reg:record :.
+

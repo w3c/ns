@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Tom: <../../person/Tom_Christie#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.document+json"; reg:type "template" ];
+    reg:name "vnd.document+json";
+    reg:xref Tom:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Per: <../../person/Per_Ersson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.ipunplugged.rcprofile"; reg:type "template" ];
+    reg:name "vnd.ipunplugged.rcprofile";
+    reg:xref Per:.
+medi:undefined reg:record :.
+

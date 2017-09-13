@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bre: <../../person/Brett_McDowell#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.liberty-request+xml"; reg:type "template" ];
+    reg:name "vnd.liberty-request+xml";
+    reg:xref Bre:.
+medi:undefined reg:record :.
+

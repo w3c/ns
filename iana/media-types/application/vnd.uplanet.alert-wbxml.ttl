@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bru: <../../person/Bruce_Martin#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.uplanet.alert-wbxml"; reg:type "template" ];
+    reg:name "vnd.uplanet.alert-wbxml";
+    reg:xref Bru:.
+medi:undefined reg:record :.
+

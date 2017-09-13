@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Don: <../../person/Donald_E._Eastlake_3rd#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/cybercash"; reg:type "template" ];
+    reg:name "cybercash";
+    reg:xref Don:.
+medi:undefined reg:record :.
+

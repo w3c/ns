@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix T: <../../person/Tadashi_Gotoh#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.mcd"; reg:type "template" ];
+    reg:name "vnd.mcd";
+    reg:xref T:.
+medi:undefined reg:record :.
+

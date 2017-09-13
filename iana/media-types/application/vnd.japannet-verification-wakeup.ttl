@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Kiy: <../../person/Kiyofusa_Fujii#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.japannet-verification-wakeup";
+                reg:type "template"
+            ];
+    reg:name "vnd.japannet-verification-wakeup";
+    reg:xref Kiy:.
+medi:undefined reg:record :.
+

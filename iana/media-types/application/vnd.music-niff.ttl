@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Tim: <../../person/Tim_Butler#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.music-niff"; reg:type "template" ];
+    reg:name "vnd.music-niff";
+    reg:xref Tim:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ch: <../../person/Chad_Trabant#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.fdsn.mseed"; reg:type "template" ];
+    reg:name "vnd.fdsn.mseed";
+    reg:xref Ch:.
+medi:undefined reg:record :.
+

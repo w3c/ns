@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Hem: <../../person/Hemant_Thakkar#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.Kinar"; reg:type "template" ];
+    reg:name "vnd.Kinar";
+    reg:xref Hem:.
+medi:undefined reg:record :.
+

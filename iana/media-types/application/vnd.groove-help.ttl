@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Tod: <../../person/Todd_Joseph#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.groove-help"; reg:type "template" ];
+    reg:name "vnd.groove-help";
+    reg:xref Tod:.
+medi:undefined reg:record :.
+

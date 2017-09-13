@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix And: <../../person/Andy_Mutz#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.netfpx"; reg:type "template" ];
+    reg:name "vnd.netfpx";
+    reg:xref And:.
+medi:undefined reg:record :.
+

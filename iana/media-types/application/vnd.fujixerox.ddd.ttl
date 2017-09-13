@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Masanori_Onda#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.fujixerox.ddd"; reg:type "template" ];
+    reg:name "vnd.fujixerox.ddd";
+    reg:xref M:.
+medi:undefined reg:record :.
+

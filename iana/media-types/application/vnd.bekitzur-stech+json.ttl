@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jeg: <../../person/Jegulsky#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.bekitzur-stech+json"; reg:type "template" ];
+    reg:name "vnd.bekitzur-stech+json";
+    reg:xref Jeg:.
+medi:undefined reg:record :.
+

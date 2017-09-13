@@ -1,0 +1,18 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2014-03-18"^^XML:date;
+    reg:file
+            [
+                reg:file "application/alto-endpointpropparams+json";
+                reg:type "template"
+            ];
+    reg:name "alto-endpointpropparams+json";
+    reg:xref html:rfc7285.
+medi:undefined reg:record :.
+

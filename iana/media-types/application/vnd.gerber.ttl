@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Thom: <../../person/Thomas_Weyn#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2015-02-05"^^XML:date;
+    reg:file [ reg:file "application/vnd.gerber"; reg:type "template" ];
+    reg:name "vnd.gerber";
+    reg:xref Thom:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ITU: <../../person/ITU-T_ASN.1_Rapporteur#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/soap+fastinfoset"; reg:type "template" ];
+    reg:name "soap+fastinfoset";
+    reg:xref ITU:.
+medi:undefined reg:record :.
+

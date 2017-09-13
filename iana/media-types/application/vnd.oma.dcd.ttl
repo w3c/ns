@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Avi: <../../person/Avi_Primo#>.
+@prefix Ope: <../../person/Open_Mobile_Naming_Authority#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.oma.dcd"; reg:type "template" ];
+    reg:name "vnd.oma.dcd";
+    reg:xref Avi:, Ope:.
+medi:undefined reg:record :.
+

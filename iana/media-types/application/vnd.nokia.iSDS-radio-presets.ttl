@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Noki: <../../person/Nokia#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.nokia.iSDS-radio-presets";
+                reg:type "template"
+            ];
+    reg:name "vnd.nokia.iSDS-radio-presets";
+    reg:xref Noki:.
+medi:undefined reg:record :.
+

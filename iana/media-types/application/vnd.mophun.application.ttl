@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bjo: <../../person/Bjorn_Wennerstrom#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.mophun.application"; reg:type "template" ];
+    reg:name "vnd.mophun.application";
+    reg:xref Bjo:.
+medi:undefined reg:record :.
+

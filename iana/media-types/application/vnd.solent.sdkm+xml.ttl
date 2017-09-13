@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Cli: <../../person/Cliff_Gauntlett#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.solent.sdkm+xml"; reg:type "template" ];
+    reg:name "vnd.solent.sdkm+xml";
+    reg:xref Cli:.
+medi:undefined reg:record :.
+

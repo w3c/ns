@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Fr: <../../person/Franck_Lefevre#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.httphone"; reg:type "template" ];
+    reg:name "vnd.httphone";
+    reg:xref Fr:.
+medi:undefined reg:record :.
+

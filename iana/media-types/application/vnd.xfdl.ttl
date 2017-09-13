@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/Dave_Manning#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.xfdl"; reg:type "template" ];
+    reg:name "vnd.xfdl";
+    reg:xref D:.
+medi:undefined reg:record :.
+

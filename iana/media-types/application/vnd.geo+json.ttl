@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Se: <../../person/Sean_Gillies#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2014-05-20"^^XML:date;
+    reg:file [ reg:file "application/vnd.geo+json"; reg:type "template" ];
+    reg:name
+    "vnd.geo+json (OBSOLETED by  undefined  in favor of application/geo+json)";
+    reg:xref Se:.
+medi:undefined reg:record :.
+

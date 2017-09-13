@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Arn: <../../person/Arne_Gerdes#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.uoml+xml"; reg:type "template" ];
+    reg:name "vnd.uoml+xml";
+    reg:xref Arn:.
+medi:undefined reg:record :.
+

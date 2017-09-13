@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joh: <../../person/John_M_Meredith#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.3gpp.pic-bw-small"; reg:type "template" ];
+    reg:name "vnd.3gpp.pic-bw-small";
+    reg:xref Joh:.
+medi:undefined reg:record :.
+

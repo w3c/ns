@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix OMA: <../../person/OMA_Presence_and_Availability_PAG_Working_Group#>.
+@prefix Se: <../../person/Sean_Kelley#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.oma.xcap-directory+xml"; reg:type "template" ];
+    reg:name "vnd.oma.xcap-directory+xml";
+    reg:xref OMA:, Se:.
+medi:undefined reg:record :.
+

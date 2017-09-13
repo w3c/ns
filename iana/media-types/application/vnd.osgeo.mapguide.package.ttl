@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix J: <../../person/Jason_Birch#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.osgeo.mapguide.package"; reg:type "template" ];
+    reg:name "vnd.osgeo.mapguide.package";
+    reg:xref J:.
+medi:undefined reg:record :.
+

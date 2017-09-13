@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/Daniel_Shelton#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.tao.intent-module-archive";
+                reg:type "template"
+            ];
+    reg:name "vnd.tao.intent-module-archive";
+    reg:xref D:.
+medi:undefined reg:record :.
+

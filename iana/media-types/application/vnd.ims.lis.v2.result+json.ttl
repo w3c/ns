@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Lis: <../../person/Lisa_Mattson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2014-05-19"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.ims.lis.v2.result+json"; reg:type "template" ];
+    reg:name "vnd.ims.lis.v2.result+json";
+    reg:xref Lis:.
+medi:undefined reg:record :.
+

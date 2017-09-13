@@ -1,0 +1,18 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jus: <../../person/Justin_Hutchings#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2015-12-21"^^XML:date;
+    reg:file
+            [
+                reg:file "application/vnd.ms-PrintDeviceCapabilities+xml";
+                reg:type "template"
+            ];
+    reg:name "vnd.ms-PrintDeviceCapabilities+xml";
+    reg:xref Jus:.
+medi:undefined reg:record :.
+

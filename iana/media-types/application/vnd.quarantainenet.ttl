@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix C: <../../person/Casper_Joost_Eyckelhof#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2016-05-19"^^XML:date;
+    reg:file [ reg:file "application/vnd.quarantainenet"; reg:type "template" ];
+    reg:name "vnd.quarantainenet";
+    reg:xref C:.
+medi:undefined reg:record :.
+

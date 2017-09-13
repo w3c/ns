@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ger: <../../person/Gert_Buettgenbach#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ecdis-update"; reg:type "template" ];
+    reg:name "vnd.ecdis-update";
+    reg:xref Ger:.
+medi:undefined reg:record :.
+

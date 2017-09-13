@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix P: <../../person/Patrik_Faltstrom#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/mac-binhex40"; reg:type "template" ];
+    reg:name "mac-binhex40";
+    reg:xref P:.
+medi:undefined reg:record :.
+

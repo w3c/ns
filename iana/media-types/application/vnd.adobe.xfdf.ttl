@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Rob: <../../person/Roberto_Perelman#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.adobe.xfdf"; reg:type "template" ];
+    reg:name "vnd.adobe.xfdf";
+    reg:xref Rob:.
+medi:undefined reg:record :.
+

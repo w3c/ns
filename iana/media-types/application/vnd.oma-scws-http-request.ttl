@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Il: <../../person/Ilan_Mahalal#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.oma-scws-http-request"; reg:type "template" ];
+    reg:name "vnd.oma-scws-http-request";
+    reg:xref Il:.
+medi:undefined reg:record :.
+

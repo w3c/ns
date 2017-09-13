@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix CHA: <../../person/CHATRAS_Bruno#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.orange.indata"; reg:type "template" ];
+    reg:name "vnd.orange.indata";
+    reg:xref CHA:.
+medi:undefined reg:record :.
+

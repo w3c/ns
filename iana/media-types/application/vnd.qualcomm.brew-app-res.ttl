@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Gle: <../../person/Glenn_Forrester#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.qualcomm.brew-app-res"; reg:type "template" ];
+    reg:name "vnd.qualcomm.brew-app-res";
+    reg:xref Gle:.
+medi:undefined reg:record :.
+

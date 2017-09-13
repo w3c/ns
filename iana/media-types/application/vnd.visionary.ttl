@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix G: <../../person/Gayatri_Aravindakumar#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.visionary"; reg:type "template" ];
+    reg:name "vnd.visionary";
+    reg:xref G:.
+medi:undefined reg:record :.
+

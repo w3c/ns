@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Pet: <../../person/Peter_Astrand#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.cendio.thinlinc.clientconf";
+                reg:type "template"
+            ];
+    reg:name "vnd.cendio.thinlinc.clientconf";
+    reg:xref Pet:.
+medi:undefined reg:record :.
+

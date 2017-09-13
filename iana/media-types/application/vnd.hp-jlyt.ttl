@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ami: <../../person/Amir_Gaash#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.hp-jlyt"; reg:type "template" ];
+    reg:name "vnd.hp-jlyt";
+    reg:xref Ami:.
+medi:undefined reg:record :.
+

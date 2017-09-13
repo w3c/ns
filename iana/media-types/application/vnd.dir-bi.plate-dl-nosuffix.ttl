@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Y: <../../person/Yamanaka#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.dir-bi.plate-dl-nosuffix";
+                reg:type "template"
+            ];
+    reg:name "vnd.dir-bi.plate-dl-nosuffix";
+    reg:xref Y:.
+medi:undefined reg:record :.
+

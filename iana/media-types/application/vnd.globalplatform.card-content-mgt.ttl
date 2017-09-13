@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Gil: <../../person/Gil_Bernabeu#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.globalplatform.card-content-mgt";
+                reg:type "template"
+            ];
+    reg:name "vnd.globalplatform.card-content-mgt";
+    reg:xref Gil:.
+medi:undefined reg:record :.
+

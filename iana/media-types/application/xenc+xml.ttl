@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jos: <../../person/Joseph_Reagle#>.
+@prefix XEN: <../../person/XENC_Working_Group#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/xenc+xml"; reg:type "template" ];
+    reg:name "xenc+xml";
+    reg:xref Jos:, XEN:.
+medi:undefined reg:record :.
+

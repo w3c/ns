@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix J: <../../person/James_Minnis#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.hzn-3d-crossword"; reg:type "template" ];
+    reg:name "vnd.hzn-3d-crossword";
+    reg:xref J:.
+medi:undefined reg:record :.
+

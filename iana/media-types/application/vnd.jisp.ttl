@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Seb: <../../person/Sebastiaan_Deckers#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.jisp"; reg:type "template" ];
+    reg:name "vnd.jisp";
+    reg:xref Seb:.
+medi:undefined reg:record :.
+

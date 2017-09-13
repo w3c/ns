@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Rob: <../../person/Robin_Berjon#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2014-05-14"^^XML:date;
+    reg:file
+    [ reg:file "application/x-www-form-urlencoded"; reg:type "template" ];
+    reg:name "x-www-form-urlencoded";
+    reg:xref Rob:, W3C:.
+medi:undefined reg:record :.
+

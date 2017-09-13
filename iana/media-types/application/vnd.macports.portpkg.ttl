@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix J: <../../person/James_Berry#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+        [ reg:file "application/vnd.macports.portpkg"; reg:type "template" ],
+        [ reg:file "application/vnd.macports.portpkg"; reg:type "template" ];
+    reg:name "vnd.macports.portpkg";
+    reg:xref J:.
+medi:undefined reg:record :.
+

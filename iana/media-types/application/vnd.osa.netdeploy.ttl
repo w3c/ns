@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steven_Klos#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.osa.netdeploy"; reg:type "template" ];
+    reg:name "vnd.osa.netdeploy";
+    reg:xref Ste:.
+medi:undefined reg:record :.
+

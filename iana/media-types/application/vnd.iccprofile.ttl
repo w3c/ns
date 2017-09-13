@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Phi: <../../person/Phil_Green#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.iccprofile"; reg:type "template" ];
+    reg:name "vnd.iccprofile";
+    reg:xref Phi:.
+medi:undefined reg:record :.
+

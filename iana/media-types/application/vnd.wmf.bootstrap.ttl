@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Pr: <../../person/Prakash_Iyer#>.
+@prefix Thi: <../../person/Thinh_Nguyenphu#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.wmf.bootstrap"; reg:type "template" ];
+    reg:name "vnd.wmf.bootstrap";
+    reg:xref Pr:, Thi:.
+medi:undefined reg:record :.
+

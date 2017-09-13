@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix IETF: <../../person/IETF#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2015-08-21"^^XML:date;
+    reg:file [ reg:file "application/pkcs12"; reg:type "template" ];
+    reg:name "pkcs12";
+    reg:xref IETF:.
+medi:undefined reg:record :.
+

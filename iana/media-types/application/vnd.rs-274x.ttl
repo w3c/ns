@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Lee: <../../person/Lee_Harding#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.rs-274x"; reg:type "template" ];
+    reg:name "vnd.rs-274x";
+    reg:xref Lee:.
+medi:undefined reg:record :.
+

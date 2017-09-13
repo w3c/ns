@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix S: <../../person/Samu_Sarivaara#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.f-secure.mobile"; reg:type "template" ];
+    reg:name "vnd.f-secure.mobile";
+    reg:xref S:.
+medi:undefined reg:record :.
+

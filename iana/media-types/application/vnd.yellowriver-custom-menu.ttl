@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mr: <../../person/Mr._Yellow#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.yellowriver-custom-menu"; reg:type "template" ];
+    reg:name "vnd.yellowriver-custom-menu";
+    reg:xref Mr:.
+medi:undefined reg:record :.
+

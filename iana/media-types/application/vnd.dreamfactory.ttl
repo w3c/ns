@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Willi: <../../person/William_C._Appleton#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.dreamfactory"; reg:type "template" ];
+    reg:name "vnd.dreamfactory";
+    reg:xref Willi:.
+medi:undefined reg:record :.
+

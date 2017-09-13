@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steven_Pemberton#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/widget"; reg:type "template" ];
+    reg:name "widget";
+    reg:xref
+        Ste:, W3C:,
+        <http://www.w3.org/TR/widgets/#media-type-registration-for-application/widget>.
+medi:undefined reg:record :.
+

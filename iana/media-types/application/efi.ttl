@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix S: <../../person/Samer_El-Haj-Mahmoud#>.
+@prefix UEF: <../../person/UEFI_Forum#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2016-04-06"^^XML:date;
+    reg:file [ reg:file "application/efi"; reg:type "template" ];
+    reg:name "efi";
+    reg:xref S:, UEF:.
+medi:undefined reg:record :.
+

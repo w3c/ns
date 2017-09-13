@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix N: <../../person/Natarajan_Balasundara#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2014-05-01"^^XML:date;
+    reg:file [ reg:file "application/vnd.panoply"; reg:type "template" ];
+    reg:name "vnd.panoply";
+    reg:xref N:.
+medi:undefined reg:record :.
+

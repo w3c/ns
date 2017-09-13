@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix H: <../../person/Harald_T._Alvestrand#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/prs.alvestrand.titrax-sheet"; reg:type "template" ];
+    reg:name "prs.alvestrand.titrax-sheet";
+    reg:xref H:.
+medi:undefined reg:record :.
+

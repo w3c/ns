@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix OGC: <../../person/OGC#>.
+@prefix Sco: <../../person/Scott_Simmons#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2017-07-18"^^XML:date;
+    reg:file [ reg:file "application/geoxacml+xml"; reg:type "template" ];
+    reg:name "geoxacml+xml";
+    reg:xref OGC:, Sco:.
+medi:undefined reg:record :.
+

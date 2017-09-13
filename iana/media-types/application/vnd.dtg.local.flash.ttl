@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ali: <../../person/Ali_Teffahi#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.dtg.local.flash"; reg:type "template" ];
+    reg:name "vnd.dtg.local.flash";
+    reg:xref Ali:.
+medi:undefined reg:record :.
+

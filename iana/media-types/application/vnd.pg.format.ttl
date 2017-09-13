@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Apr: <../../person/April_Gandert#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.pg.format"; reg:type "template" ];
+    reg:name "vnd.pg.format";
+    reg:xref Apr:.
+medi:undefined reg:record :.
+

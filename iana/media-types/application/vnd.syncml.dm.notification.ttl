@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix OMA: <../../person/OMA-DM_Work_Group#>.
+@prefix Pet: <../../person/Peter_Thompson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.syncml.dm.notification"; reg:type "template" ];
+    reg:name "vnd.syncml.dm.notification";
+    reg:xref OMA:, Pet:.
+medi:undefined reg:record :.
+

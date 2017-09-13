@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Tim: <../../person/Tim_Brody#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.eprints.data+xml"; reg:type "template" ];
+    reg:name "vnd.eprints.data+xml";
+    reg:xref Tim:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Dir: <../../person/Dirk_Farin#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2017-03-10"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.imagemeter.image+zip"; reg:type "template" ];
+    reg:name "vnd.imagemeter.image+zip";
+    reg:xref Dir:.
+medi:undefined reg:record :.
+

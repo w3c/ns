@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jul: <../../person/Julien_Grange#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.omaloc-supl-init"; reg:type "template" ];
+    reg:name "vnd.omaloc-supl-init";
+    reg:xref Jul:.
+medi:undefined reg:record :.
+

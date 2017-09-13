@@ -1,0 +1,18 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Adri: <../../person/Adrian_Föder#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2017-02-07"^^XML:date;
+    reg:file
+            [
+                reg:file "application/vnd.apothekende.reservation+json";
+                reg:type "template"
+            ];
+    reg:name "vnd.apothekende.reservation+json";
+    reg:xref Adri:.
+medi:undefined reg:record :.
+

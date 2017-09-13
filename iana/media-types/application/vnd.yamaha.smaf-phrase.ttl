@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Kei: <../../person/Keiichi_Shinoda#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.yamaha.smaf-phrase"; reg:type "template" ];
+    reg:name "vnd.yamaha.smaf-phrase";
+    reg:xref Kei:.
+medi:undefined reg:record :.
+

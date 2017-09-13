@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Holst: <../../person/Holstage#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.ffsns"; reg:type "template" ];
+    reg:name "vnd.ffsns";
+    reg:xref Holst:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jus: <../../person/Justin_Hutchings#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.ms-windows.printerpairing";
+                reg:type "template"
+            ];
+    reg:name "vnd.ms-windows.printerpairing";
+    reg:xref Jus:.
+medi:undefined reg:record :.
+

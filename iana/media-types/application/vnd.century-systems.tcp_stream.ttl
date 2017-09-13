@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Shu: <../../person/Shuji_Fujii#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.century-systems.tcp_stream";
+                reg:type "template"
+            ];
+    reg:name "vnd.century-systems.tcp_stream";
+    reg:xref Shu:.
+medi:undefined reg:record :.
+

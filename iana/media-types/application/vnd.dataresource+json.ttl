@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix P: <../../person/Paul_Walsh#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2017-01-09"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.dataresource+json"; reg:type "template" ];
+    reg:name "vnd.dataresource+json";
+    reg:xref P:.
+medi:undefined reg:record :.
+

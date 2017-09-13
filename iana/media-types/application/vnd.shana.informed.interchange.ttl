@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Guy: <../../person/Guy_Selzler#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.shana.informed.interchange";
+                reg:type "template"
+            ];
+    reg:name "vnd.shana.informed.interchange";
+    reg:xref Guy:.
+medi:undefined reg:record :.
+

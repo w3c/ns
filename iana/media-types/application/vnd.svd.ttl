@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Sco: <../../person/Scott_Becker#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.svd"; reg:type "template" ];
+    reg:name "vnd.svd";
+    reg:xref Sco:.
+medi:undefined reg:record :.
+

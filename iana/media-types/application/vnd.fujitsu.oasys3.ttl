@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Sei: <../../person/Seiji_Okudaira#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.fujitsu.oasys3"; reg:type "template" ];
+    reg:name "vnd.fujitsu.oasys3";
+    reg:xref Sei:.
+medi:undefined reg:record :.
+

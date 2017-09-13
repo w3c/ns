@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/timestamp-reply"; reg:type "template" ];
+    reg:name "timestamp-reply";
+    reg:xref html:rfc3161.
+medi:undefined reg:record :.
+

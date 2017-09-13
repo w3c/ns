@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Nor: <../../person/Nor_Helmee#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.cybank"; reg:type "template" ];
+    reg:name "vnd.cybank";
+    reg:xref Nor:.
+medi:undefined reg:record :.
+

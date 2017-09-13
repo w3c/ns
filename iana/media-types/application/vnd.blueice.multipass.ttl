@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Thom: <../../person/Thomas_Holmstrom#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.blueice.multipass"; reg:type "template" ];
+    reg:name "vnd.blueice.multipass";
+    reg:xref Thom:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix P: <../../person/Paul_Wattenberger#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.lotus-screencam"; reg:type "template" ];
+    reg:name "vnd.lotus-screencam";
+    reg:xref P:.
+medi:undefined reg:record :.
+

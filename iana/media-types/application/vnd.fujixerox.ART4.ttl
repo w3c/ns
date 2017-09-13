@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Fum: <../../person/Fumio_Tanabe#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.fujixerox.ART4"; reg:type "template" ];
+    reg:name "vnd.fujixerox.ART4";
+    reg:xref Fum:.
+medi:undefined reg:record :.
+

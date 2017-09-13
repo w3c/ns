@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Hiro: <../../person/Hiroaki_Takahashi#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.smaf"; reg:type "template" ];
+    reg:name "vnd.smaf";
+    reg:xref Hiro:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Yokoy: <../../person/Yokoyama_Kiyonobu#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.jsk.isdn-ngn"; reg:type "template" ];
+    reg:name "vnd.jsk.isdn-ngn";
+    reg:xref Yokoy:.
+medi:undefined reg:record :.
+

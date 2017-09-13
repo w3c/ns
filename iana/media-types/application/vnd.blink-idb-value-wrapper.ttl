@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Vic: <../../person/Victor_Costan#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2017-06-12"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.blink-idb-value-wrapper"; reg:type "template" ];
+    reg:name "vnd.blink-idb-value-wrapper";
+    reg:xref Vic:.
+medi:undefined reg:record :.
+

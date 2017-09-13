@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steve_Katz#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/eshop"; reg:type "template" ];
+    reg:name "eshop";
+    reg:xref Ste:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Kei: <../../person/Keith_Kester#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2015-09-11"^^XML:date;
+    reg:file [ reg:file "application/vnd.drive+json"; reg:type "template" ];
+    reg:name "vnd.drive+json";
+    reg:xref Kei:.
+medi:undefined reg:record :.
+

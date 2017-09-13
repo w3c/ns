@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mon: <../../person/Monty_Solomon#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.noblenet-sealer"; reg:type "template" ];
+    reg:name "vnd.noblenet-sealer";
+    reg:xref Mon:.
+medi:undefined reg:record :.
+

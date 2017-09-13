@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Y: <../../person/Yasuhito_Nagatomo#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.epson.salt"; reg:type "template" ];
+    reg:name "vnd.epson.salt";
+    reg:xref Y:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix T: <../../person/Takehiro_Sukizaki#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.yamaha.tunnel-udpencap"; reg:type "template" ];
+    reg:name "vnd.yamaha.tunnel-udpencap";
+    reg:xref T:.
+medi:undefined reg:record :.
+

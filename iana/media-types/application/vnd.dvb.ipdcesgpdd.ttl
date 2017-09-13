@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jer: <../../person/Jerome_Marcon#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.dvb.ipdcesgpdd"; reg:type "template" ];
+    reg:name "vnd.dvb.ipdcesgpdd";
+    reg:xref Jer:.
+medi:undefined reg:record :.
+

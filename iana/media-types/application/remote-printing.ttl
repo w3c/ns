@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Marshall_Rose#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/remote-printing"; reg:type "template" ];
+    reg:name "remote-printing";
+    reg:xref M:, html:rfc1486.
+medi:undefined reg:record :.
+

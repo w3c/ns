@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Dic: <../../person/Dick_Floersch#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.FloGraphIt"; reg:type "template" ];
+    reg:name "vnd.FloGraphIt";
+    reg:xref Dic:.
+medi:undefined reg:record :.
+

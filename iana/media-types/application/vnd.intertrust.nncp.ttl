@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Luk: <../../person/Luke_Tomasello#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.intertrust.nncp"; reg:type "template" ];
+    reg:name "vnd.intertrust.nncp";
+    reg:xref Luk:.
+medi:undefined reg:record :.
+

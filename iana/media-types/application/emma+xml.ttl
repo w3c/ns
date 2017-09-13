@@ -1,0 +1,10 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix n1: <http://www.w3.org/TR/2007/CR-emma-20071211/#>.
+@prefix medi: <../media-types.ttl#>.
+
+: reg:name "emma+xml"; reg:xref "false", W3C:, n1:media-type-registration.
+
+medi:undefined reg:record :.
+

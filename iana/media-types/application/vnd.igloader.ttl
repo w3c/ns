@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Tim: <../../person/Tim_Fisher#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.igloader"; reg:type "template" ];
+    reg:name "vnd.igloader";
+    reg:xref Tim:.
+medi:undefined reg:record :.
+

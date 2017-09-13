@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/ogg"; reg:type "template" ];
+    reg:name "ogg";
+    reg:xref html:rfc5334, html:rfc7845.
+medi:undefined reg:record :.
+

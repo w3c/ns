@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Don: <../../person/Don_Wright#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.pwg-xhtml-print+xml"; reg:type "template" ];
+    reg:name "vnd.pwg-xhtml-print+xml";
+    reg:xref Don:.
+medi:undefined reg:record :.
+

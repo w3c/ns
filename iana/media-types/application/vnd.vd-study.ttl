@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Luc: <../../person/Luc_Rogge#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.vd-study"; reg:type "template" ];
+    reg:name "vnd.vd-study";
+    reg:xref Luc:.
+medi:undefined reg:record :.
+

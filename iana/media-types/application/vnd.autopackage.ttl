@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mik: <../../person/Mike_Hearn#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.autopackage"; reg:type "template" ];
+    reg:name "vnd.autopackage";
+    reg:xref Mik:.
+medi:undefined reg:record :.
+

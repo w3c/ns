@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/Daniel_Mould#>.
+@prefix G: <../../person/Gary_Clueit#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.airzip.filesecure.azf"; reg:type "template" ];
+    reg:name "vnd.airzip.filesecure.azf";
+    reg:xref D:, G:.
+medi:undefined reg:record :.
+

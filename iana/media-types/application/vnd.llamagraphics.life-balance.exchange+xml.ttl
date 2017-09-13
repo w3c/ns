@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix C: <../../person/Catherine_E._White#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file
+                "application/vnd.llamagraphics.life-balance.exchange+xml";
+                reg:type "template"
+            ];
+    reg:name "vnd.llamagraphics.life-balance.exchange+xml";
+    reg:xref C:.
+medi:undefined reg:record :.
+

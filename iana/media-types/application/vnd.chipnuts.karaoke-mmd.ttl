@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Chu: <../../person/Chunyun_Xiong#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.chipnuts.karaoke-mmd"; reg:type "template" ];
+    reg:name "vnd.chipnuts.karaoke-mmd";
+    reg:xref Chu:.
+medi:undefined reg:record :.
+

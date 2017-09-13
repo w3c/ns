@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix H: <../../person/Harms_Moeller#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2015-12-23"^^XML:date;
+    reg:file [ reg:file "application/vnd.filmit.zfc"; reg:type "template" ];
+    reg:name "vnd.filmit.zfc";
+    reg:xref H:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix OMA: <../../person/OMA_Push_to_Talk_over_Cellular_POC_Working_Group#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+            [
+                reg:file "application/vnd.oma.poc.invocation-descriptor+xml";
+                reg:type "template"
+            ];
+    reg:name "vnd.oma.poc.invocation-descriptor+xml";
+    reg:xref OMA:.
+medi:undefined reg:record :.
+

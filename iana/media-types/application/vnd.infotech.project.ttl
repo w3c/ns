@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ch: <../../person/Charles_Engelke#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.infotech.project"; reg:type "template" ];
+    reg:name "vnd.infotech.project";
+    reg:xref Ch:.
+medi:undefined reg:record :.
+

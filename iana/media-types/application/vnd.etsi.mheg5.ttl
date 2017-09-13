@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix I: <../../person/Ian_Medland#>.
+@prefix Mig: <../../person/Miguel_Angel_Reina_Ortega#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.etsi.mheg5"; reg:type "template" ];
+    reg:name "vnd.etsi.mheg5";
+    reg:xref I:, Mig:.
+medi:undefined reg:record :.
+

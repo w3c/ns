@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2016-11-17"^^XML:date;
+    reg:file [ reg:file "application/mud+json"; reg:type "template" ];
+    reg:name "mud+json (TEMPORARY - registered 2016-11-17, expires 2017-11-17)";
+    reg:xref html:draft-ietf-opsawg-mud.
+medi:undefined reg:record :.
+

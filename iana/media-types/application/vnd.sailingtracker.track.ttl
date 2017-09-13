@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Hei: <../../person/Heikki_Vesalainen#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.sailingtracker.track"; reg:type "template" ];
+    reg:name "vnd.sailingtracker.track";
+    reg:xref Hei:.
+medi:undefined reg:record :.
+

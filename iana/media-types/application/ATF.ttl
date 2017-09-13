@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ASAM: <../../person/ASAM#>.
+@prefix Thom: <../../person/Thomas_Thomsen#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2014-08-26"^^XML:date;
+    reg:file [ reg:file "application/ATF"; reg:type "template" ];
+    reg:name "ATF";
+    reg:xref ASAM:, Thom:.
+medi:undefined reg:record :.
+

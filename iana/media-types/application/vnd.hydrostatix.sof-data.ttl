@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix All: <../../person/Allen_Gillam#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.hydrostatix.sof-data"; reg:type "template" ];
+    reg:name "vnd.hydrostatix.sof-data";
+    reg:xref All:.
+medi:undefined reg:record :.
+

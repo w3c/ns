@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Dir: <../../person/Dirk_DiGiorgio-Haag#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.kenameaapp"; reg:type "template" ];
+    reg:name "vnd.kenameaapp";
+    reg:xref Dir:.
+medi:undefined reg:record :.
+

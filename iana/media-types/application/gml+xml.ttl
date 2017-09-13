@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Cle: <../../person/Clemens_Portele#>.
+@prefix OGC: <../../person/OGC#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2017-01-09"^^XML:date;
+    reg:file [ reg:file "application/gml+xml"; reg:type "template" ];
+    reg:name "gml+xml";
+    reg:xref Cle:, OGC:.
+medi:undefined reg:record :.
+

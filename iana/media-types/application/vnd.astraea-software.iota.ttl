@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Chr: <../../person/Christopher_Snazell#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "application/vnd.astraea-software.iota"; reg:type "template" ];
+    reg:name "vnd.astraea-software.iota";
+    reg:xref Chr:.
+medi:undefined reg:record :.
+

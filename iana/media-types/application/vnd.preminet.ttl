@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Juo: <../../person/Juoko_Tenhunen#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.preminet"; reg:type "template" ];
+    reg:name "vnd.preminet";
+    reg:xref Juo:.
+medi:undefined reg:record :.
+

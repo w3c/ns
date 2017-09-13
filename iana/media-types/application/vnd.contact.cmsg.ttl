@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Fr: <../../person/Frank_Patz#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/vnd.contact.cmsg"; reg:type "template" ];
+    reg:name "vnd.contact.cmsg";
+    reg:xref Fr:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2017-06-12"^^XML:date;
+    reg:file [ reg:file "application/passport"; reg:type "template" ];
+    reg:name "passport";
+    reg:xref html:RFC-ietf-stir-passport-11.
+medi:undefined reg:record :.
+

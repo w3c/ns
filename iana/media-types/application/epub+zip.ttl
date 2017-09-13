@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Int: <../../person/International_Digital_Publishing_Forum#>.
+@prefix Willi: <../../person/William_McCoy#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/epub+zip"; reg:type "template" ];
+    reg:name "epub+zip";
+    reg:xref Int:, Willi:.
+medi:undefined reg:record :.
+

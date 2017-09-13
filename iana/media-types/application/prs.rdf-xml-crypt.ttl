@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Tob: <../../person/Toby_Inkster#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "application/prs.rdf-xml-crypt"; reg:type "template" ];
+    reg:name "prs.rdf-xml-crypt";
+    reg:xref Tob:.
+medi:undefined reg:record :.
+
