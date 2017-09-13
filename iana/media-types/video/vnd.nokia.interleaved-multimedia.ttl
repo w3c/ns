@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Pet: <../../person/Petteri_Kangaslampi#>.
+
+medi:undefined reg:record :.
+
+:
+    reg:file
+    [ reg:file "video/vnd.nokia.interleaved-multimedia"; reg:type "template" ];
+    reg:name "vnd.nokia.interleaved-multimedia";
+    reg:xref Pet:.

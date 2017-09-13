@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix html: <https://tools.ietf.org/html/>.
+
+medi:undefined reg:record :.
+
+:
+    terms:date "2015-09-25"^^XML:date;
+    reg:file [ reg:file "video/VP8"; reg:type "template" ];
+    reg:name "VP8";
+    reg:xref html:rfc7741.

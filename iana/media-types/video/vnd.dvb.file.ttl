@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Kev: <../../person/Kevin_Murray#>.
+@prefix Pet: <../../person/Peter_Siebert#>.
+
+medi:undefined reg:record :.
+
+:
+    reg:file [ reg:file "video/vnd.dvb.file"; reg:type "template" ];
+    reg:name "vnd.dvb.file";
+    reg:xref Kev:, Pet:.

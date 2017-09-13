@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix D: <../../person/David_Singer#>.
+@prefix ISO: <../../person/ISO-IEC_JTC1#>.
+
+medi:undefined reg:record :.
+
+:
+    terms:date "2014-01-29"^^XML:date;
+    reg:file [ reg:file "video/iso.segment"; reg:type "template" ];
+    reg:name "iso.segment";
+    reg:xref D:, ISO:.

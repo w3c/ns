@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+
+medi:undefined reg:record :.
+
+:
+    reg:file [ reg:file "video/MP1S"; reg:type "template" ];
+    reg:name "MP1S";
+    reg:xref html:rfc3555.

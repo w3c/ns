@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steve_DiAcetis#>.
+
+medi:undefined reg:record :.
+
+:
+    reg:file
+    [ reg:file "video/vnd.ms-playready.media.pyv"; reg:type "template" ];
+    reg:name "vnd.ms-playready.media.pyv";
+    reg:xref Ste:.
