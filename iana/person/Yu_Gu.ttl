@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.epson.quickanime#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Yu_Gu";
-    reg:name "Yu Gu";
-    reg:updated "1998-12-19";
-    reg:uri "mailto:guyu&rd.oda.epson.co.jp".

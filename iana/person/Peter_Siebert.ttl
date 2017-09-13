@@ -6,7 +6,6 @@
 @prefix n1: <../media-types/application/vnd.dvb.pfr#>.
 @prefix n2: <../media-types/audio/vnd.dvb.file#>.
 @prefix n3: <../media-types/image/vnd.dvb.subtitle#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n4: <../media-types/text/vnd.dvb.subtitle#>.
 @prefix n5: <../media-types/video/vnd.dvb.file#>.
 
@@ -22,14 +21,7 @@ n2: reg:xref :.
 
 n3: reg:xref :.
 
-medi:n0 reg:person :.
-
 n4: reg:xref :.
 
 n5: reg:xref :.
 
-:
-    reg:id "Peter_Siebert";
-    reg:name "Peter Siebert";
-    reg:updated "2011-06-08";
-    reg:uri "mailto:siebert&dvb.org".

@@ -2,15 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.intertrust.digibox#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.intertrust.nncp#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Luke_Tomasello";
-    reg:name "Luke Tomasello";
-    reg:uri "mailto:luket&intertrust.com".

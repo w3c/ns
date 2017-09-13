@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.kodak-descriptor#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Michael_J._Donahue";
-    reg:name "Michael J. Donahue";
-    reg:updated "2008-01-04";
-    reg:uri "mailto:donahue&kodak.com".

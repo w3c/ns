@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.preminet#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Juoko_Tenhunen";
-    reg:name "Jouko Tenhunen";
-    reg:updated "2003-11-01";
-    reg:uri "mailto:jouko.tenhunen&nokia.com".

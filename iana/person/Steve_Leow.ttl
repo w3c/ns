@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.accpac.simply.aso#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.accpac.simply.imp#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Steve_Leow";
-    reg:name "Steve Leow";
-    reg:updated "1999-04-19";
-    reg:uri "mailto:Leost01&accpac.com".

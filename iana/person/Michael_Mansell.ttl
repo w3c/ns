@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.xfdl.webform#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Michael_Mansell";
-    reg:name "Michael Mansell";
-    reg:updated "2009-02-18";
-    reg:uri "mailto:mmansell&ca.ibm.com".

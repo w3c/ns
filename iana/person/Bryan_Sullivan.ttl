@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.oma.push#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Bryan_Sullivan";
-    reg:name "Bryan Sullivan";
-    reg:updated "2009-08-20";
-    reg:uri "mailto:bryan.sullivan&att.com".

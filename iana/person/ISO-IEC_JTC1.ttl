@@ -1,17 +1,9 @@
 @prefix : <#>.
 @prefix d: <../media-types/application/dash+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix iso: <../media-types/video/iso.segment#>.
 
 d: reg:xref :.
 
-medi:n0 reg:person :.
-
 iso: reg:xref :.
 
-:
-    reg:id "ISO-IEC_JTC1";
-    reg:name "ISO/IEC JTC1";
-    reg:updated "2014-01-29";
-    reg:uri "http://www.iso.org/iso/jtc1_home.html".

@@ -8,7 +8,6 @@
 @prefix n3: <../media-types/application/vnd.kde.kpresenter#>.
 @prefix n4: <../media-types/application/vnd.kde.kspread#>.
 @prefix n5: <../media-types/application/vnd.kde.kword#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -26,10 +25,3 @@ n4: reg:xref :.
 
 n5: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "David_Faure";
-    reg:name "David Faure";
-    reg:updated "2002-08-20";
-    reg:uri "mailto:faure&kde.org".

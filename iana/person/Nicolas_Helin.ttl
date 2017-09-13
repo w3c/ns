@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.tmobile-livetv#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Nicolas_Helin";
-    reg:name "Nicolas Helin";
-    reg:updated "2007-01-23";
-    reg:uri "mailto:helin&pv.com".

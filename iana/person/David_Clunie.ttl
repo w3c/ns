@@ -4,7 +4,6 @@
 @prefix di: <../media-types/application/dicom+xml#>.
 @prefix dico: <../media-types/image/dicom-rle#>.
 @prefix jls: <../media-types/image/jls#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 dic: reg:xref :.
 
@@ -14,10 +13,3 @@ dico: reg:xref :.
 
 jls: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "David_Clunie";
-    reg:name "David Clunie";
-    reg:updated "2016-09-26";
-    reg:uri "mailto:dclunie&dclunie.com".

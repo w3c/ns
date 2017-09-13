@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.hzn-3d-crossword#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "James_Minnis";
-    reg:name "James Minnis";
-    reg:updated "2000-02-20";
-    reg:uri "mailto:james-minnis&glimpse-of-tomorrow.com".

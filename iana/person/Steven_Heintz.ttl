@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.adobe.fxp#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Steven_Heintz";
-    reg:name "Steven Heintz";
-    reg:updated "2010-01-13";
-    reg:uri "mailto:heintz&adobe.com".

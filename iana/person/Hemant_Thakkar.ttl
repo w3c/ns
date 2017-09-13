@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.Kinar#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Hemant_Thakkar";
-    reg:name "Hemant Thakkar";
-    reg:updated "2004-03-20";
-    reg:uri "mailto:hemant&kinar.com".

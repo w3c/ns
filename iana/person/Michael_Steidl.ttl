@@ -7,7 +7,6 @@
 @prefix n2: <../media-types/application/vnd.iptc.g2.newsmessage+xml#>.
 @prefix n3: <../media-types/application/vnd.iptc.g2.packageitem+xml#>.
 @prefix n4: <../media-types/application/vnd.iptc.g2.planningitem+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -23,10 +22,3 @@ n3: reg:xref :.
 
 n4: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Michael_Steidl";
-    reg:name "Michael Steidl";
-    reg:updated "2014-01-29";
-    reg:uri "mailto:mdirector&iptc.org".

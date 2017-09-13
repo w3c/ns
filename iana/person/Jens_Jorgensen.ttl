@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.yaoweme#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Jens_Jorgensen";
-    reg:name "Jens Jorgensen";
-    reg:updated "2014-05-01";
-    reg:uri "mailto:jbj1&ultraemail.net".

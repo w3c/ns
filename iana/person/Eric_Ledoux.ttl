@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.ms-ims#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.ms-lrm#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Eric_Ledoux";
-    reg:name "Eric Ledoux";
-    reg:updated "2005-12-20";
-    reg:uri "mailto:ericle&microsoft.com".

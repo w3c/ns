@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.software602.filler.form-xml-zip#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.software602.filler.form+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Jakub_Hytka";
-    reg:name "Jakub Hytka";
-    reg:updated "2008-08-06";
-    reg:uri "mailto:hytka&602.cz".

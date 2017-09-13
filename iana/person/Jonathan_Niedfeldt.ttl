@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.sus-calendar#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Jonathan_Niedfeldt";
-    reg:name "Jonathan Niedfeldt";
-    reg:updated "2004-04-20";
-    reg:uri "mailto:jniedfeldt&americature.org".

@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.immervision-ivp#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.immervision-ivu#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Mathieu_Villegas";
-    reg:name "Mathieu Villegas";
-    reg:updated "2007-03-20";
-    reg:uri "mailto:mimetype&immervision.com".

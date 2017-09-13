@@ -9,7 +9,6 @@
 @prefix n4: <../media-types/audio/vnd.dolby.pl2x#>.
 @prefix n5: <../media-types/audio/vnd.dolby.pl2z#>.
 @prefix n6: <../media-types/audio/vnd.dolby.pulse.1#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -29,10 +28,3 @@ n5: reg:xref :.
 
 n6: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Steve_Hattersley";
-    reg:name "Steve Hattersley";
-    reg:updated "2009-06-02";
-    reg:uri "mailto:steve.hattersley&dolby.com".

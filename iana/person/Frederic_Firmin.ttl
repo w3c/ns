@@ -11,7 +11,6 @@
 @prefix n5: <../media-types/application/vnd.3gpp.SRVCC-info+xml#>.
 @prefix n6: <../media-types/application/vnd.3gpp.state-and-event-info+xml#>.
 @prefix n7: <../media-types/application/vnd.3gpp.ussd+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 ses: reg:xref :.
 
@@ -35,10 +34,3 @@ n6: reg:xref :.
 
 n7: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Frederic_Firmin";
-    reg:name "Frederic Firmin";
-    reg:updated "2017-07-18";
-    reg:uri "mailto:Frederic.Firmin&etsi.org".

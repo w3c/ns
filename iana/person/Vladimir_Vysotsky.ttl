@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.avistar+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Vladimir_Vysotsky";
-    reg:name "Vladimir Vysotsky";
-    reg:updated "2006-09-14";
-    reg:uri "mailto:vvysotsky&avistar.com".

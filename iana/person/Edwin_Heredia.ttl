@@ -1,17 +1,9 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/audio/vnd.dlna.adts#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix vn: <../media-types/video/vnd.dlna.mpeg-tts#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
 vn: reg:xref :.
 
-:
-    reg:id "Edwin_Heredia";
-    reg:name "Edwin Heredia";
-    reg:updated "2005-12-20";
-    reg:uri "mailto:eheredia&microsoft.com".

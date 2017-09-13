@@ -1,11 +1,8 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix x3d: <../media-types/model/x3d-vrml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix x3: <../media-types/model/x3d+fastinfoset#>.
 @prefix x: <../media-types/model/x3d+xml#>.
-
-medi:n0 reg:person :.
 
 x3d: reg:xref :.
 
@@ -13,8 +10,3 @@ x3: reg:xref :.
 
 x: reg:xref :.
 
-:
-    reg:id "Web3D_X3D";
-    reg:name "Web3D X3D Working Group Chairs";
-    reg:updated "2014-04-08";
-    reg:uri "mailto:x3d-chair&web3d.org".

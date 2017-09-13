@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.ms-playready.initiator+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Daniel_Schneider";
-    reg:name "Daniel Schneider";
-    reg:updated "2007-05-03";
-    reg:uri "mailto:danielsc&microsoft.com".

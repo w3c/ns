@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.jam#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Brijesh_Kumar";
-    reg:name "Brijesh Kumar";
-    reg:updated "2007-04-26";
-    reg:uri "mailto:bkumar&lightspeedaudiolabs.com".

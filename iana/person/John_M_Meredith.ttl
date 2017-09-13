@@ -6,7 +6,6 @@
 @prefix v: <../media-types/application/vnd.3gpp.pic-bw-small#>.
 @prefix n2: <../media-types/application/vnd.3gpp.pic-bw-var#>.
 @prefix n3: <../media-types/application/vnd.3gpp.sms#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 n1: reg:xref :.
 
@@ -20,10 +19,3 @@ n2: reg:xref :.
 
 n3: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "John_M_Meredith";
-    reg:name "John M. Meredith";
-    reg:updated "2009-10-13";
-    reg:uri "mailto:john.meredith&etsi.org".

@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix EVS: <../media-types/audio/EVS#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 EVS: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Kyunghun_Jung";
-    reg:name "Kyunghun Jung";
-    reg:updated "2016-10-03";
-    reg:uri "mailto:kyunghun.jung&samsung.com".

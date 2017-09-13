@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.publishare-delta-tree#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Oren_Ben-Kiki";
-    reg:name "Oren Ben-Kiki";
-    reg:updated "1998-10-19";
-    reg:uri "mailto:oren&capella.co.il".

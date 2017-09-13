@@ -7,7 +7,6 @@
 @prefix n2: <../media-types/application/vnd.groove-tool-message#>.
 @prefix n3: <../media-types/application/vnd.groove-tool-template#>.
 @prefix n4: <../media-types/application/vnd.groove-vcard#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -23,10 +22,3 @@ n3: reg:xref :.
 
 n4: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Todd_Joseph";
-    reg:name "Todd Joseph";
-    reg:updated "2002-10-20";
-    reg:uri "mailto:todd_joseph&groove.net".

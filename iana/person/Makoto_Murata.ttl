@@ -74,7 +74,6 @@
 @prefix n69: <../media-types/application/vnd.openxmlformats-package.core-properties+xml#>.
 @prefix n70: <../media-types/application/vnd.openxmlformats-package.digital-signature-xmlsignature+xml#>.
 @prefix n71: <../media-types/application/vnd.openxmlformats-package.relationships+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -224,10 +223,3 @@ n70: reg:xref :.
 
 n71: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Makoto_Murata";
-    reg:name "Makoto Murata";
-    reg:updated "2011-03-23";
-    reg:uri "mailto:eb2m-mrt&asahi-net.or.jp".

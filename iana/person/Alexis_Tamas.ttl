@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.frogans.fnc#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.frogans.ltf#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Alexis_Tamas";
-    reg:name "Alexis Tamas";
-    reg:updated "2006-03-23";
-    reg:uri "mailto:fsdl&frogans.com".

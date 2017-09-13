@@ -9,7 +9,6 @@
 @prefix n4: <../media-types/application/vnd.ims.lti.v2.toolproxy+json#>.
 @prefix n5: <../media-types/application/vnd.ims.lti.v2.toolsettings.simple+json#>.
 @prefix n6: <../media-types/application/vnd.ims.lti.v2.toolsettings+json#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -29,10 +28,3 @@ n5: reg:xref :.
 
 n6: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Lisa_Mattson";
-    reg:name "Lisa Mattson";
-    reg:updated "2015-01-08";
-    reg:uri "mailto:lmattson&imsglobal.org".

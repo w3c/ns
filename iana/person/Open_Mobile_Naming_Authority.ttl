@@ -20,7 +20,6 @@
 @prefix n15: <../media-types/application/vnd.oma.lwm2m+tlv#>.
 @prefix n16: <../media-types/application/vnd.oma.pal+xml#>.
 @prefix n17: <../media-types/application/vnd.oma.scidm.messages+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -62,10 +61,3 @@ n16: reg:xref :.
 
 n17: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Open_Mobile_Naming_Authority";
-    reg:name "Open Mobile Naming Authority (OMNA)";
-    reg:updated "2016-06-20";
-    reg:uri "mailto:OMA-OMNA&mail.openmobilealliance.org".

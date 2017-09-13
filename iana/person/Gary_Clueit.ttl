@@ -3,7 +3,6 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.airzip.filesecure.azs#>.
 @prefix v: <../media-types/image/vnd.airzip.accelerator.azv#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -11,10 +10,3 @@ vn: reg:xref :.
 
 v: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Gary_Clueit";
-    reg:name "Gary Clueit";
-    reg:updated "2012-06-05";
-    reg:uri "mailto:clueit&airzip.com".

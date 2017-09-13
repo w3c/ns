@@ -1,11 +1,8 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vnd: <../media-types/model/vnd.flatland.3dml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/text/vnd.in3d.3dml#>.
 @prefix v: <../media-types/text/vnd.in3d.spot#>.
-
-medi:n0 reg:person :.
 
 vnd: reg:xref :.
 
@@ -13,8 +10,3 @@ vn: reg:xref :.
 
 v: reg:xref :.
 
-:
-    reg:id "Michael_Powers";
-    reg:name "Michael Powers";
-    reg:updated "1999-01-19";
-    reg:uri "mailto:powers&insideout.net".

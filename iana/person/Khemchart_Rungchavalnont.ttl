@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix prs: <../media-types/application/prs.cww#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 prs: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Khemchart_Rungchavalnont";
-    reg:name "Khemchart Rungchavalnont";
-    reg:updated "1997-07-19";
-    reg:uri "mailto:khemcr&cpu.cp.eng.chula.ac.th".

@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.gmx#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Christian_V._Sciberras";
-    reg:name "Christian V. Sciberras";
-    reg:updated "2008-09-19";
-    reg:uri "mailto:contact&covac-software.com".

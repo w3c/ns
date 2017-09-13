@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/audio/vnd.rip#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Martin_Dawe";
-    reg:name "Martin Dawe";
-    reg:updated "2011-01-27";
-    reg:uri "mailto:mdawe&hitnmix.com".

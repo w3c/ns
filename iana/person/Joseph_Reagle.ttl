@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix xen: <../media-types/application/xenc+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 xen: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Joseph_Reagle";
-    reg:name "Joseph Reagle";
-    reg:updated "2006-03-20";
-    reg:uri "mailto:reagle&w3.org".

@@ -1,14 +1,6 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vnd: <../media-types/text/vnd.net2phone.commcenter.command#>.
-
-medi:n0 reg:person :.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 
 vnd: reg:xref :.
 
-:
-    reg:id "Feiyu_Xie";
-    reg:name "Feiyu Xie";
-    reg:updated "2002-01-20";
-    reg:uri "mailto:xie&net2phone.com".

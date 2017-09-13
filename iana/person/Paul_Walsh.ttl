@@ -3,7 +3,6 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.dataresource+json#>.
 @prefix v: <../media-types/application/vnd.tableschema+json#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -11,10 +10,3 @@ vn: reg:xref :.
 
 v: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Paul_Walsh";
-    reg:name "Paul Walsh";
-    reg:updated "2017-05-01";
-    reg:uri "mailto:paul.walsh&okfn.org".

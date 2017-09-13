@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.heroku+json#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Wesley_Beary";
-    reg:name "Wesley Beary";
-    reg:updated "2013-09-06";
-    reg:uri "mailto:api&heroku.com".

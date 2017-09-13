@@ -17,7 +17,6 @@
 @prefix sim: <../media-types/application/simpleSymbolContainer#>.
 @prefix EVS: <../media-types/audio/EVS#>.
 @prefix rtp: <../media-types/audio/rtp-enc-aescm128#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix rt: <../media-types/text/rtp-enc-aescm128#>.
 @prefix r: <../media-types/video/rtp-enc-aescm128#>.
 
@@ -55,13 +54,7 @@ EVS: reg:xref :.
 
 rtp: reg:xref :.
 
-medi:n0 reg:person :.
-
 rt: reg:xref :.
 
 r: reg:xref :.
 
-:
-    reg:id "_3GPP";
-    reg:name "3GPP - Third Generation Partnership Project";
-    reg:uri "mailto:3gppContact&etsi.org".

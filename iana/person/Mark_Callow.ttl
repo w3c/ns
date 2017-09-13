@@ -1,15 +1,6 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
+@prefix ktx: <../media-types/image/ktx#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Khr: <Khronos#>.
-@prefix n1: <http://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/#>.
 
-medi:image reg:record [ reg:name "ktx"; reg:xref Khr:, :, n1:mimeregistration ].
+ktx: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Mark_Callow";
-    reg:name "Mark Callow";
-    reg:updated "2010-09-27";
-    reg:uri "mailto:callow_mark&hicorp.co.jp".

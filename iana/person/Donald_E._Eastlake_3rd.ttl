@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix cyb: <../media-types/application/cybercash#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 cyb: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Donald_E._Eastlake_3rd";
-    reg:name "Donald E. Eastlake 3rd";
-    reg:updated "2000-05-20";
-    reg:uri "mailto:Donald.Eastlake&motorola.com".

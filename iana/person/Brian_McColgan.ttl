@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.oma.pal+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Brian_McColgan";
-    reg:name "Brian McColgan";
-    reg:updated "2011-05-04";
-    reg:uri "mailto:b_mccolgan&hotmail.com".

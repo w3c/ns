@@ -3,7 +3,6 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix CSTAd: <../media-types/application/CSTAdata+xml#>.
 @prefix oxps: <../media-types/application/oxps#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 cst: reg:xref :.
 
@@ -11,10 +10,3 @@ CSTAd: reg:xref :.
 
 oxps: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Ecma_International_Helpdesk";
-    reg:name "Ecma International Helpdesk";
-    reg:updated "2011-05-17";
-    reg:uri "mailto:helpdesk&ecma-international.org".

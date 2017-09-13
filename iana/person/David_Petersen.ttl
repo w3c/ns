@@ -11,7 +11,6 @@
 @prefix n6: <../media-types/image/vnd.sealed-png#>.
 @prefix n7: <../media-types/image/vnd.sealedmedia.softseal-gif#>.
 @prefix n8: <../media-types/image/vnd.sealedmedia.softseal-jpg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n9: <../media-types/video/vnd.sealed-swf#>.
 @prefix n10: <../media-types/video/vnd.sealed.mpeg1#>.
 @prefix n11: <../media-types/video/vnd.sealed.mpeg4#>.
@@ -39,8 +38,6 @@ n7: reg:xref :.
 
 n8: reg:xref :.
 
-medi:n0 reg:person :.
-
 n9: reg:xref :.
 
 n10: reg:xref :.
@@ -49,8 +46,3 @@ n11: reg:xref :.
 
 n12: reg:xref :.
 
-:
-    reg:id "David_Petersen";
-    reg:name "David Petersen";
-    reg:updated "2003-09-20";
-    reg:uri "mailto:david.petersen&sealedmedia.com".

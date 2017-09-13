@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.httphone#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.mynfc#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Franck_Lefevre";
-    reg:name "Franck Lefevre";
-    reg:updated "2011-05-25";
-    reg:uri "mailto:franck&k1info.com".

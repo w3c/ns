@@ -17,7 +17,6 @@
 @prefix n12: <../media-types/application/vnd.nokia.radio-preset#>.
 @prefix n13: <../media-types/application/vnd.nokia.radio-presets#>.
 @prefix n14: <../media-types/audio/vnd.nokia.mobile-xmf#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n15: <../media-types/video/vnd.nokia.videovoip#>.
 
 vnd: reg:xref :.
@@ -54,12 +53,5 @@ n13: reg:xref :.
 
 n14: reg:xref :.
 
-medi:n0 reg:person :.
-
 n15: reg:xref :.
 
-:
-    reg:id "Nokia";
-    reg:name "Nokia Corporation";
-    reg:updated "2007-05-25";
-    reg:uri "mailto:mime&nokia.com".

@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.pawaafile#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Prakash_Baskaran";
-    reg:name "Prakash Baskaran";
-    reg:updated "2009-12-15";
-    reg:uri "mailto:prakash&pawaa.com".

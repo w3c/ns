@@ -7,7 +7,6 @@
 @prefix n2: <../media-types/application/vnd.etsi.mheg5#>.
 @prefix n3: <../media-types/application/vnd.etsi.overload-control-policy-dataset+xml#>.
 @prefix n4: <../media-types/application/vnd.etsi.timestamp-token#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -23,10 +22,3 @@ n3: reg:xref :.
 
 n4: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Miguel_Angel_Reina_Ortega";
-    reg:name "Miguel Angel Reina Ortega";
-    reg:updated "2013-10-15";
-    reg:uri "mailto:MiguelAngel.ReinaOrtega&etsi.org".

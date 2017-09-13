@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.ctct.ws+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Jim_Ancona";
-    reg:name "Jim Ancona";
-    reg:updated "2008-03-17";
-    reg:uri "mailto:jancona&constantcontact.com".

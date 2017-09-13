@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix efi: <../media-types/application/efi#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 efi: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Samer_El-Haj-Mahmoud";
-    reg:name "Samer El-Haj-Mahmoud";
-    reg:updated "2016-04-06";
-    reg:uri "mailto:Samer.el-haj-mahmoud&hpe.com".

@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.oma.group-usage-list+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.oma.xcap-directory+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "OMA_Presence_and_Availability_PAG_Working_Group";
-    reg:name "OMA Presence and Availability (PAG) Working Group";
-    reg:updated "2006-09-14";
-    reg:uri "mailto:technical-comments&mail.openmobilealliance.org".

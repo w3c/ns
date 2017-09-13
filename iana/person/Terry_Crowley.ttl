@@ -1,11 +1,6 @@
 @prefix : <#>.
 @prefix sl: <../media-types/application/slate#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 sl: reg:xref :.
-
-medi:n0 reg:person :.
-
-: reg:id "Terry_Crowley"; reg:name "Terry Crowley".
 

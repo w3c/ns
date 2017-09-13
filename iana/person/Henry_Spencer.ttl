@@ -1,14 +1,6 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix news: <../media-types/message/news#>.
-
-medi:n0 reg:person :.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 
 news: reg:xref :.
 
-:
-    reg:id "Henry_Spencer";
-    reg:name "Henry Spencer";
-    reg:updated "1993-06-19";
-    reg:uri "mailto:henry&zoo.utoronto.ca".

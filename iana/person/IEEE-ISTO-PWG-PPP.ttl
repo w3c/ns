@@ -1,14 +1,6 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix str: <../media-types/text/strings#>.
-
-medi:n0 reg:person :.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 
 str: reg:xref :.
 
-:
-    reg:id "IEEE-ISTO-PWG-PPP";
-    reg:name "ISTO-PWG Internet Printing Protocol Workgroup";
-    reg:updated "2017-05-01";
-    reg:uri "mailto:ipp&pwg.org".

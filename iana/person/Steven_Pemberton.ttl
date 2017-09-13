@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix wid: <../media-types/application/widget#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 wid: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Steven_Pemberton";
-    reg:name "Steven Pemberton";
-    reg:updated "2010-03-09";
-    reg:uri "mailto:member-webapps&w3.org".

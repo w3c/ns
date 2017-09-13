@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.firemonkeys.cloudcell#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Alex_Dubov";
-    reg:name "Alex Dubov";
-    reg:updated "2015-09-01";
-    reg:uri "mailto:adubov&ea.com".

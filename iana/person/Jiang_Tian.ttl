@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/audio/vnd.dra#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Jiang_Tian";
-    reg:name "Jiang Tian";
-    reg:updated "2009-06-02";
-    reg:uri "mailto:jiangt&digitalwave.cn".

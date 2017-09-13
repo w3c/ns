@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/audio/vnd.digital-winds#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Armands_Strazds";
-    reg:name "Armands Strazds";
-    reg:updated "1999-01-19";
-    reg:uri "mailto:armands.strazds&medienhaus-bremen.de".

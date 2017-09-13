@@ -4,7 +4,6 @@
 @prefix vn: <../media-types/application/vnd.marlin.drm.conftoken+xml#>.
 @prefix v: <../media-types/application/vnd.marlin.drm.license+xml#>.
 @prefix n1: <../media-types/application/vnd.marlin.drm.mdcf#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -14,10 +13,3 @@ v: reg:xref :.
 
 n1: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Gary_Ellison";
-    reg:name "Gary Ellison";
-    reg:updated "2008-07-23";
-    reg:uri "mailto:gary.ellison&intertrust.com".

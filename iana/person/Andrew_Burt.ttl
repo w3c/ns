@@ -5,7 +5,6 @@
 @prefix v: <../media-types/application/vnd.crick.clicker.template#>.
 @prefix n1: <../media-types/application/vnd.crick.clicker.wordbank#>.
 @prefix n2: <../media-types/application/vnd.crick.clicker#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -17,10 +16,3 @@ n1: reg:xref :.
 
 n2: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Andrew_Burt";
-    reg:name "Andrew Burt";
-    reg:updated "2006-03-20";
-    reg:uri "mailto:andrewburt&cricksoft.com".

@@ -2,7 +2,6 @@
 @prefix n: <../media-types/application/n-quads#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix n1: <../media-types/application/n-triples#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n3: <../media-types/text/n3#>.
 @prefix tur: <../media-types/text/turtle#>.
 
@@ -10,14 +9,7 @@ n: reg:xref :.
 
 n1: reg:xref :.
 
-medi:n0 reg:person :.
-
 n3: reg:xref :.
 
 tur: reg:xref :.
 
-:
-    reg:id "Eric_Prudhommeaux";
-    reg:name "Eric Prud'hommeaux";
-    reg:updated "2017-03-07";
-    reg:uri "mailto:eric at w3.org".

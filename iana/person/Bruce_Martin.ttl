@@ -13,7 +13,6 @@
 @prefix n8: <../media-types/application/vnd.uplanet.listcmd-wbxml#>.
 @prefix n9: <../media-types/application/vnd.uplanet.listcmd#>.
 @prefix n10: <../media-types/application/vnd.uplanet.signal#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -41,10 +40,3 @@ n9: reg:xref :.
 
 n10: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Bruce_Martin";
-    reg:name "Bruce Martin";
-    reg:updated "1998-11-19";
-    reg:uri "mailto:iana-registrar&uplanet.com".

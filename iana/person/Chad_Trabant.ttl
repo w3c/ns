@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.fdsn.mseed#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.fdsn.seed#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Chad_Trabant";
-    reg:name "Chad Trabant";
-    reg:updated "2009-04-07";
-    reg:uri "mailto:chad&iris.washington.edu".

@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.innopath.wamp.notification#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Takanori_Sudo";
-    reg:name "Takanori Sudo";
-    reg:updated "2011-12-14";
-    reg:uri "mailto:tsudo&innopath.com".

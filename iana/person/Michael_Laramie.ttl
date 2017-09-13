@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.lotus-notes#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Michael_Laramie";
-    reg:name "Michael Laramie";
-    reg:updated "1999-02-19";
-    reg:uri "mailto:laramiem&btv.ibm.com".

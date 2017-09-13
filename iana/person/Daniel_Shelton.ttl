@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.antix.game-component#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.tao.intent-module-archive#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Daniel_Shelton";
-    reg:name "Daniel Shelton";
-    reg:updated "2007-08-14";
-    reg:uri "mailto:sheltond&tao-group.com".

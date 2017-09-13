@@ -1,14 +1,21 @@
 @prefix : <#>.
 @prefix csv: <../media-types/application/csvm+json#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix emm: <../media-types/application/emma+xml#>.
 @prefix emo: <../media-types/application/emotionml+xml#>.
+@prefix exi: <../media-types/application/exi#>.
 @prefix fon: <../media-types/application/font-woff#>.
 @prefix its: <../media-types/application/its+xml#>.
 @prefix jf2: <../media-types/application/jf2feed+json#>.
 @prefix ld: <../media-types/application/ld+json#>.
+@prefix m: <../media-types/application/mathml-content+xml#>.
+@prefix m0: <../media-types/application/mathml-presentation+xml#>.
+@prefix m1: <../media-types/application/mathml+xml#>.
 @prefix n: <../media-types/application/n-quads#>.
 @prefix n1: <../media-types/application/n-triples#>.
 @prefix pro: <../media-types/application/provenance+xml#>.
+@prefix sp: <../media-types/application/sparql-query#>.
+@prefix s: <../media-types/application/sparql-results+xml#>.
 @prefix trig: <../media-types/application/trig#>.
 @prefix ttm: <../media-types/application/ttml+xml#>.
 @prefix wid: <../media-types/application/widget#>.
@@ -16,22 +23,22 @@
 @prefix wsp: <../media-types/application/wspolicy+xml#>.
 @prefix x: <../media-types/application/x-www-form-urlencoded#>.
 @prefix xht: <../media-types/application/xhtml+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix n2: <http://www.w3.org/TR/2007/CR-emma-20071211/#>.
-@prefix n3: <http://www.w3.org/TR/2009/CR-exi-20091208/#>.
-@prefix n4: <http://www.w3.org/TR/2007/CR-rdf-sparql-query-20070614/#>.
-@prefix n5: <http://www.w3.org/TR/2007/CR-rdf-sparql-XMLres-20070925/#>.
-@prefix n6: <http://www.w3.org/TR/2007/REC-xslt20-20070123/#>.
-@prefix n7: <../media-types/multipart/x-mixed-replace#>.
+@prefix xsl: <../media-types/application/xslt+xml#>.
+@prefix svg: <../media-types/image/svg+xml#>.
+@prefix n2: <../media-types/multipart/x-mixed-replace#>.
 @prefix c: <../media-types/text/cache-manifest#>.
 @prefix html: <../media-types/text/html#>.
-@prefix n30: <../media-types/text/n3#>.
+@prefix n3: <../media-types/text/n3#>.
 @prefix pr: <../media-types/text/provenance-notation#>.
 @prefix tur: <../media-types/text/turtle#>.
 
 csv: reg:xref :.
 
+emm: reg:xref :.
+
 emo: reg:xref :.
+
+exi: reg:xref :.
 
 fon: reg:xref :.
 
@@ -41,11 +48,21 @@ jf2: reg:xref :.
 
 ld: reg:xref :.
 
+m: reg:xref :.
+
+m0: reg:xref :.
+
+m1: reg:xref :.
+
 n: reg:xref :.
 
 n1: reg:xref :.
 
 pro: reg:xref :.
+
+sp: reg:xref :.
+
+s: reg:xref :.
 
 trig: reg:xref :.
 
@@ -61,44 +78,19 @@ x: reg:xref :.
 
 xht: reg:xref :.
 
-medi:application
-    reg:record
-            [
-                reg:name "emma+xml";
-                reg:xref "false", :, n2:media-type-registration
-            ],
-        [ reg:name "exi"; reg:xref :, n3:mediaTypeRegistration ],
-            [
-                reg:name "mathml+xml";
-                reg:xref :, <http://www.w3.org/TR/MathML3/appendixb.html>
-            ],
-            [
-                reg:name "mathml-content+xml";
-                reg:xref :, <http://www.w3.org/TR/MathML3/appendixb.html>
-            ],
-            [
-                reg:name "mathml-presentation+xml";
-                reg:xref :, <http://www.w3.org/TR/MathML3/appendixb.html>
-            ],
-        [ reg:name "sparql-query"; reg:xref :, n4:mediaType ],
-        [ reg:name "sparql-results+xml"; reg:xref :, n5:mime ],
-        [ reg:name "xslt+xml"; reg:xref :, n6:media-type-registration ].
-medi:image
-    reg:record
-    [ reg:name "svg+xml"; reg:xref :, <http://www.w3.org/TR/SVG/mimereg.html> ].
-medi:n0 reg:person :.
+xsl: reg:xref :.
 
-n7: reg:xref :.
+svg: reg:xref :.
+
+n2: reg:xref :.
 
 c: reg:xref :.
 
 html: reg:xref :.
 
-n30: reg:xref :.
+n3: reg:xref :.
 
 pr: reg:xref :.
 
 tur: reg:xref :.
-
-: reg:id "W3C"; reg:name "W3C"; reg:uri "http://www.w3.org/".
 

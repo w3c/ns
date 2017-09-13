@@ -1,17 +1,9 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/image/vnd.fst#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix vn: <../media-types/video/vnd.fvt#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
 vn: reg:xref :.
 
-:
-    reg:id "Arild_Fuldseth";
-    reg:name "Arild Fuldseth";
-    reg:updated "2000-06-20";
-    reg:uri "mailto:Arild.Fuldseth&fast.no".

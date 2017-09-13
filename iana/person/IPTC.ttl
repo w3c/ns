@@ -1,17 +1,9 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vnd: <../media-types/text/vnd.IPTC.NewsML#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/text/vnd.IPTC.NITF#>.
-
-medi:n0 reg:person :.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-:
-    reg:id "IPTC";
-    reg:name "International Press Telecommunications Council (David Allen)";
-    reg:updated "2000-07-20";
-    reg:uri "mailto:m_director_iptc&dial.pipex.com".

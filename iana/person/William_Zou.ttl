@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/audio/vnd.dts.hd#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/audio/vnd.dts#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "William_Zou";
-    reg:name "William Zou";
-    reg:updated "2008-08-06";
-    reg:uri "mailto:bill.zou&dts.com".

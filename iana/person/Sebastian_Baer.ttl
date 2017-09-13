@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.uri-map#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Sebastian_Baer";
-    reg:name "Sebastian Baer";
-    reg:updated "2015-07-21";
-    reg:uri "mailto:sebastian.baer&elektrobit.com".

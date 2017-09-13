@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.fuzzysheet#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Simon_Birtwistle";
-    reg:name "Simon Birtwistle";
-    reg:updated "2007-01-18";
-    reg:uri "mailto:mime&20000.org".

@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.criticaltools.wbs+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Jim_Spiller";
-    reg:name "Jim Spiller";
-    reg:updated "2003-06-20";
-    reg:uri "mailto:jspiller&criticaltools.com".

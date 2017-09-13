@@ -3,7 +3,6 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix dec: <../media-types/application/dec-dx#>.
 @prefix wit: <../media-types/application/wita#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 dc: reg:xref :.
 
@@ -11,9 +10,3 @@ dec: reg:xref :.
 
 wit: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Larry_Campbell";
-    reg:name "Larry Campbell";
-    reg:uri "mailto:campbell&redsox.bsw.com".

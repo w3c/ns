@@ -1,14 +1,9 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix x3d: <../media-types/model/x3d-vrml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix x3: <../media-types/model/x3d+xml#>.
-
-medi:n0 reg:person :.
 
 x3d: reg:xref :.
 
 x3: reg:xref :.
-
-: reg:id "Web3D"; reg:name "Web3D Consortium"; reg:updated "2014-01-15".
 

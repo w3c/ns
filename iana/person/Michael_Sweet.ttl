@@ -6,7 +6,6 @@
 @prefix n1: <../media-types/application/vnd.cups-raster#>.
 @prefix n2: <../media-types/application/vnd.cups-raw#>.
 @prefix pwg: <../media-types/image/pwg-raster#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n3: <../media-types/model/3mf#>.
 
 vnd: reg:xref :.
@@ -21,12 +20,5 @@ n2: reg:xref :.
 
 pwg: reg:xref :.
 
-medi:n0 reg:person :.
-
 n3: reg:xref :.
 
-:
-    reg:id "Michael_Sweet";
-    reg:name "Michael Sweet";
-    reg:updated "2017-05-12";
-    reg:uri "mailto:msweet&apple.com".

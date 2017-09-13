@@ -11,7 +11,6 @@
 @prefix n6: <../media-types/application/vnd.oipf.spdlist+xml#>.
 @prefix n7: <../media-types/application/vnd.oipf.ueprofile+xml#>.
 @prefix n8: <../media-types/application/vnd.oipf.userprofile+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -35,10 +34,3 @@ n7: reg:xref :.
 
 n8: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Claire_DEsclercs";
-    reg:name "Claire D'Esclercs";
-    reg:updated "2011-02-25";
-    reg:uri "mailto:contact&oipf.tv".

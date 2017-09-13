@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.ibm.afplinedata#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Roger_Buis";
-    reg:name "Roger Buis";
-    reg:updated "2001-03-20";
-    reg:uri "mailto:buis&us.ibm.com".

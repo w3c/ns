@@ -3,7 +3,6 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.ibm.rights-management#>.
 @prefix v: <../media-types/application/vnd.ibm.secure-container#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -11,10 +10,3 @@ vn: reg:xref :.
 
 v: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Bruce_Tantlinger";
-    reg:name "Bruce Tantlinger";
-    reg:updated "2003-05-20";
-    reg:uri "mailto:bat&us.ibm.com".

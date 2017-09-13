@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.visionary#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Gayatri_Aravindakumar";
-    reg:name "Gayatri Aravindakumar";
-    reg:updated "2002-02-20";
-    reg:uri "mailto:gayatri&informix.com".

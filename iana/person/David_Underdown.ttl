@@ -1,14 +1,6 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix csv: <../media-types/text/csv-schema#>.
-
-medi:n0 reg:person :.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 
 csv: reg:xref :.
 
-:
-    reg:id "David_Underdown";
-    reg:name "David Underdown";
-    reg:updated "2014-11-21";
-    reg:uri "mailto:DigitalPreservation&nationalarchives.gsi.gov.uk".

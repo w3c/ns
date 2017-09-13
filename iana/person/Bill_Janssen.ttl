@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix prs: <../media-types/application/prs.plucker#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 prs: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Bill_Janssen";
-    reg:name "Bill Janssen";
-    reg:updated "2002-06-20";
-    reg:uri "mailto:bill&janssen.org".

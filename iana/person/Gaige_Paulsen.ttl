@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.cluetrust.cartomobile-config-pkg#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.cluetrust.cartomobile-config#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Gaige_Paulsen";
-    reg:name "Gaige Paulsen";
-    reg:updated "2010-11-16";
-    reg:uri "mailto:iana&gbp.gaige.net".

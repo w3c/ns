@@ -6,7 +6,6 @@
 @prefix n1: <../media-types/application/vnd.dece.unspecified#>.
 @prefix n2: <../media-types/audio/vnd.dece.audio#>.
 @prefix n3: <../media-types/image/vnd.dece.graphic#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n4: <../media-types/video/vnd.dece-mp4#>.
 @prefix n5: <../media-types/video/vnd.dece.hd#>.
 @prefix n6: <../media-types/video/vnd.dece.mobile#>.
@@ -27,8 +26,6 @@ n2: reg:xref :.
 
 n3: reg:xref :.
 
-medi:n0 reg:person :.
-
 n4: reg:xref :.
 
 n5: reg:xref :.
@@ -43,8 +40,3 @@ n9: reg:xref :.
 
 n10: reg:xref :.
 
-:
-    reg:id "Michael_A_Dolan";
-    reg:name "Michael A Dolan";
-    reg:updated "2011-09-06";
-    reg:uri "mailto:md.iana&newtbt.com".

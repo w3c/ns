@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/audio/vnd.nortel.vbk#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Glenn_Parsons";
-    reg:name "Glenn Parsons";
-    reg:updated "1999-02-19";
-    reg:uri "mailto:gparsons&nortelnetworks.com".

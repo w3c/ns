@@ -1,17 +1,9 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vnd: <../media-types/model/vnd.gdl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/model/vnd.gs-gdl#>.
-
-medi:n0 reg:person :.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-:
-    reg:id "Attila_Babits";
-    reg:name "Attila Babits";
-    reg:updated "2000-05-20";
-    reg:uri "mailto:ababits&graphisoft.hu".

@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.jcp.javame.midlet-rms#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Mikhail_Gorshenev";
-    reg:name "Mikhail Gorshenev";
-    reg:updated "2007-06-25";
-    reg:uri "mailto:Mikhail.Gorshenev&sun.com".

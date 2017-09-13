@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.sbm.cid#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Shinji_Kusakari";
-    reg:name "Shinji Kusakari";
-    reg:updated "2008-06-30";
-    reg:uri "mailto:shinji.kusakari&mb.softbank.co.jp".

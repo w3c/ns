@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.sbm.mid2#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Masanori_Murai";
-    reg:name "Masanori Murai";
-    reg:updated "2007-12-20";
-    reg:uri "mailto:masanori.murai&mb.softbank.co.jp".

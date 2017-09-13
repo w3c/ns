@@ -6,7 +6,6 @@
 @prefix n1: <../media-types/application/vnd.ms-windows.nwprinting.oob#>.
 @prefix n2: <../media-types/application/vnd.ms-windows.printerpairing#>.
 @prefix n3: <../media-types/application/vnd.ms-windows.wsd.oob#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -20,10 +19,3 @@ n2: reg:xref :.
 
 n3: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Justin_Hutchings";
-    reg:name "Justin Hutchings";
-    reg:updated "2016-01-27";
-    reg:uri "mailto:justhu at microsoft.com".

@@ -14,7 +14,6 @@
 @prefix MF4: <../media-types/application/MF4#>.
 @prefix ODX: <../media-types/application/ODX#>.
 @prefix PDX: <../media-types/application/PDX#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 A2L: reg:xref :.
 
@@ -44,10 +43,3 @@ ODX: reg:xref :.
 
 PDX: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Thomas_Thomsen";
-    reg:name "Thomas Thomsen";
-    reg:updated "2014-12-04";
-    reg:uri "mailto:thomas.thomsen&asam.net".

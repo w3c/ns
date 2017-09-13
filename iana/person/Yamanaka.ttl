@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.dir-bi.plate-dl-nosuffix#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Yamanaka";
-    reg:name "Yasuo Yamanaka";
-    reg:updated "2009-02-24";
-    reg:uri "mailto:yasuo.yamanaka&dir-bi.co.jp".

@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.eprints.data+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Tim_Brody";
-    reg:name "Tim Brody";
-    reg:updated "2011-06-22";
-    reg:uri "mailto:tdb2&ecs.soton.ac.uk".

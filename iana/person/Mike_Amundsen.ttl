@@ -2,16 +2,8 @@
 @prefix vnd: <../media-types/application/vnd.amundsen.maze+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.collection+json#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Mike_Amundsen";
-    reg:name "Mike Amundsen";
-    reg:updated "2011-07-12";
-    reg:uri "mailto:mca&amundsen.com".

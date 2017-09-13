@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.informedcontrol.rms+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Mark_Wahl";
-    reg:name "Mark Wahl";
-    reg:updated "2006-10-24";
-    reg:uri "mailto:Mark.Wahl&informed-control.com".

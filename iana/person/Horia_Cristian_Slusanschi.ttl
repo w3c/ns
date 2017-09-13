@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.audiograph#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Horia_Cristian_Slusanschi";
-    reg:name "Horia Cristian Slusanschi";
-    reg:updated "1998-01-19";
-    reg:uri "mailto:H.C.Slusanschi&massey.ac.nz".

@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.adobe.xfdf#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Roberto_Perelman";
-    reg:name "Roberto Perelman";
-    reg:updated "2000-11-20";
-    reg:uri "mailto:rperelma&adobe.com".

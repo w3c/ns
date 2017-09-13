@@ -17,7 +17,6 @@
 @prefix n12: <../media-types/application/vnd.oasis.opendocument.text-template#>.
 @prefix n13: <../media-types/application/vnd.oasis.opendocument.text-web#>.
 @prefix n14: <../media-types/application/vnd.oasis.opendocument.text#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -53,10 +52,3 @@ n13: reg:xref :.
 
 n14: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "OASIS";
-    reg:name "OASIS";
-    reg:updated "2009-01-16";
-    reg:uri "mailto:tc-admin&oasis-open.org".

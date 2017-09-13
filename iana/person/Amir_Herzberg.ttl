@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.ibm.MiniPay#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Amir_Herzberg";
-    reg:name "Amir Herzberg";
-    reg:updated "1997-02-19";
-    reg:uri "mailto:amirh&haifa.vnet.ibm.com".

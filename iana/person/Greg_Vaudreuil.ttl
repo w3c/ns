@@ -4,7 +4,6 @@
 @prefix vn: <../media-types/audio/vnd.octel.sbc#>.
 @prefix v: <../media-types/audio/vnd.rhetorex.32kadpcm#>.
 @prefix n1: <../media-types/audio/vnd.vmx.cvsd#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -14,10 +13,3 @@ v: reg:xref :.
 
 n1: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Greg_Vaudreuil";
-    reg:name "Greg Vaudreuil";
-    reg:updated "1999-01-19";
-    reg:uri "mailto:gregv&lucent.com".

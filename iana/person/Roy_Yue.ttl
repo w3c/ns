@@ -8,7 +8,6 @@
 @prefix n3: <../media-types/application/vnd.dvb.notif-ia-registration-request+xml#>.
 @prefix n4: <../media-types/application/vnd.dvb.notif-ia-registration-response+xml#>.
 @prefix n5: <../media-types/application/vnd.dvb.notif-init+xml#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
@@ -26,10 +25,3 @@ n4: reg:xref :.
 
 n5: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Roy_Yue";
-    reg:name "Roy Yue";
-    reg:updated "2009-03-04";
-    reg:uri "mailto:yuepeiyu&huawei.com".

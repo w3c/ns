@@ -1,14 +1,6 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix prs: <../media-types/text/prs.lines.tag#>.
-
-medi:n0 reg:person :.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 
 prs: reg:xref :.
 
-:
-    reg:id "John_Lines";
-    reg:name "John Lines";
-    reg:updated "1998-01-19";
-    reg:uri "mailto:john&paladin.demon.co.uk".

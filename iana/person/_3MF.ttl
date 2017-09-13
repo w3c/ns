@@ -1,11 +1,6 @@
 @prefix : <#>.
-@prefix medi: <../media-types/media-types.ttl#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix n1: <../media-types/model/3mf#>.
-
-medi:n0 reg:person :.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 
 n1: reg:xref :.
-
-: reg:id "_3MF"; reg:name "3MF Consortium"; reg:uri "http://3mf.io".
 

@@ -1,14 +1,6 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.obn#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 
 vnd: reg:xref :.
 
-medi:n0 reg:person :.
-
-:
-    reg:id "Matthias_Hessling";
-    reg:name "Matthias Hessling";
-    reg:updated "2002-12-20";
-    reg:uri "mailto:info-mime-obn&blaupunkt.de".

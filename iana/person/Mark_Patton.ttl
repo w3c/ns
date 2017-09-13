@@ -7,7 +7,6 @@
 @prefix n2: <../media-types/application/vnd.motorola.flexsuite.ttc#>.
 @prefix n3: <../media-types/application/vnd.motorola.flexsuite.wem#>.
 @prefix n4: <../media-types/application/vnd.motorola.flexsuite#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n5: <../media-types/text/vnd.motorola.reflex#>.
 
 vnd: reg:xref :.
@@ -24,12 +23,5 @@ n3: reg:xref :.
 
 n4: reg:xref :.
 
-medi:n0 reg:person :.
-
 n5: reg:xref :.
 
-:
-    reg:id "Mark_Patton";
-    reg:name "Mark Patton";
-    reg:updated "1999-03-19";
-    reg:uri "mailto:fmp014&email.mot.com".

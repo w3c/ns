@@ -2,7 +2,6 @@
 @prefix vnd: <../media-types/application/vnd.wap-slc#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.wap.sic#>.
-@prefix medi: <../media-types/media-types.ttl#>.
 @prefix v: <../media-types/text/vnd.wap.si#>.
 @prefix n1: <../media-types/text/vnd.wap.sl#>.
 
@@ -10,14 +9,7 @@ vnd: reg:xref :.
 
 vn: reg:xref :.
 
-medi:n0 reg:person :.
-
 v: reg:xref :.
 
 n1: reg:xref :.
 
-:
-    reg:id "WAP-Forum";
-    reg:name "WAP Forum Ltd.";
-    reg:updated "2000-02-20";
-    reg:uri "mailto:wap-feedback&mail.wapforum.org".
