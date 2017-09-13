@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Pee: <../../person/Peeter_Piegaze#>.
 
-medi:text reg:record :.
+medi:undefined reg:record :.
 
 :
     reg:file [ reg:file "text/jcr-cnd"; reg:type "template" ];

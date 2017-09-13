@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Mich: <../../person/Michael_Powers#>.
 
-medi:text reg:record :.
+medi:undefined reg:record :.
 
 :
     reg:file [ reg:file "text/vnd.in3d.3dml"; reg:type "template" ];

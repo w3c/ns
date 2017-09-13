@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix n1: <../../person/_3GPP#>.
 
-medi:text reg:record :.
+medi:undefined reg:record :.
 
 :
     reg:file [ reg:file "text/rtp-enc-aescm128"; reg:type "template" ];

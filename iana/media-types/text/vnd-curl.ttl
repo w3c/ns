@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Rob: <../../person/Robert_Byrnes#>.
 
-medi:text reg:record :.
+medi:undefined reg:record :.
 
 :
     reg:file [ reg:file "text/vnd-curl"; reg:type "template" ];

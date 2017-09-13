@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Joh: <../../person/John_Lines#>.
 
-medi:text reg:record :.
+medi:undefined reg:record :.
 
 :
     reg:file [ reg:file "text/prs.lines.tag"; reg:type "template" ];

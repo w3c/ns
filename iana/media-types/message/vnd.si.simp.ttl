@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Nic: <../../person/Nicholas_Parks_Young#>.
+
+medi:undefined reg:record :.
+
+:
+    reg:file [ reg:file "message/vnd.si.simp"; reg:type "template" ];
+    reg:name "vnd.si.simp - OBSOLETED by request";
+    reg:xref Nic:.

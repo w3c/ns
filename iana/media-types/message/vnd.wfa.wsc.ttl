@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mic: <../../person/Mick_Conley#>.
+
+medi:undefined reg:record :.
+
+:
+    reg:file [ reg:file "message/vnd.wfa.wsc"; reg:type "template" ];
+    reg:name "vnd.wfa.wsc";
+    reg:xref Mic:.

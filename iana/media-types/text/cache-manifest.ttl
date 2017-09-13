@@ -6,7 +6,7 @@
 @prefix Rob: <../../person/Robin_Berjon#>.
 @prefix W3C: <../../person/W3C#>.
 
-medi:text reg:record :.
+medi:undefined reg:record :.
 
 :
     terms:date "2014-05-14"^^XML:date;
