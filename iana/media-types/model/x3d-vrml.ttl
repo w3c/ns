@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Web: <../../person/Web3D_X3D#>.
+@prefix Web3D: <../../person/Web3D#>.
+
+medi:undefined reg:record :.
+
+:
+    terms:date "2014-01-15"^^XML:date;
+    reg:file [ reg:file "model/x3d-vrml"; reg:type "template" ];
+    reg:name "x3d-vrml";
+    reg:xref Web:, Web3D:.

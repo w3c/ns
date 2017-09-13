@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Web: <../../person/Web3D_X3D#>.
+@prefix Web3D: <../../person/Web3D#>.
+
+medi:undefined reg:record :.
+
+:
+    reg:file [ reg:file "model/x3d+xml"; reg:type "template" ];
+    reg:name "x3d+xml";
+    reg:xref Web:, Web3D:.

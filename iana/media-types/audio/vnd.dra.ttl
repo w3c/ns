@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ji: <../../person/Jiang_Tian#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.dra"; reg:type "template" ];
+    reg:name "vnd.dra";
+    reg:xref Ji:.
+medi:undefined reg:record :.
+

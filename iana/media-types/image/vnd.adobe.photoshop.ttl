@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Kim: <../../person/Kim_Scarborough#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "image/vnd.adobe.photoshop"; reg:type "template" ];
+    reg:name "vnd.adobe.photoshop";
+    reg:xref Kim:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+
+medi:undefined reg:record :.
+
+:
+    reg:file [ reg:file "multipart/voice-message"; reg:type "template" ];
+    reg:name "voice-message";
+    reg:updated "2016-08-10";
+    reg:xref html:rfc3801.

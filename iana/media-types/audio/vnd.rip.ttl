@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Martin_Dawe#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.rip"; reg:type "template" ];
+    reg:name "vnd.rip";
+    reg:xref M:.
+medi:undefined reg:record :.
+

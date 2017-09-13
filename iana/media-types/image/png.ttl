@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Gle: <../../person/Glenn_Randers-Pehrson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "image/png"; reg:type "template" ];
+    reg:name "png";
+    reg:xref Gle:.
+medi:undefined reg:record :.
+

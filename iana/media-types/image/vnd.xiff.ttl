@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steven_Martin#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "image/vnd.xiff"; reg:type "template" ];
+    reg:name "vnd.xiff";
+    reg:xref Ste:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Edw: <../../person/Edwin_Heredia#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.dlna.adts"; reg:type "template" ];
+    reg:name "vnd.dlna.adts";
+    reg:xref Edw:.
+medi:undefined reg:record :.
+

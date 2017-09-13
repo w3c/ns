@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Khr: <../../person/Khronos#>.
+@prefix M: <../../person/Mark_Callow#>.
+@prefix n1: <http://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/#>.
+@prefix medi: <../media-types.ttl#>.
+
+: reg:name "ktx"; reg:xref Khr:, M:, n1:mimeregistration.
+
+medi:undefined reg:record :.
+

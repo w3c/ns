@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Hen: <../../person/Henrik_Andersson#>.
+
+medi:undefined reg:record :.
+
+:
+    terms:date "2014-05-01"^^XML:date;
+    reg:file
+    [ reg:file "model/vnd.valve.source.compiled-map"; reg:type "template" ];
+    reg:name "vnd.valve.source.compiled-map";
+    reg:xref Hen:.

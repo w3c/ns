@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/basic"; reg:type "template" ];
+    reg:name "basic";
+    reg:xref html:rfc2045, html:rfc2046.
+medi:undefined reg:record :.
+

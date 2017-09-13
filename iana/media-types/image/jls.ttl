@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/David_Clunie#>.
+@prefix DIC: <../../person/DICOM_Standards_Committee#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2016-07-01"^^XML:date;
+    reg:file [ reg:file "image/jls"; reg:type "template" ];
+    reg:name "jls";
+    reg:xref D:, DIC:.
+medi:undefined reg:record :.
+

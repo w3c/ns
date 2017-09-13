@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steve_Hattersley#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.dolby.pulse.1"; reg:type "template" ];
+    reg:name "vnd.dolby.pulse.1";
+    reg:xref Ste:.
+medi:undefined reg:record :.
+

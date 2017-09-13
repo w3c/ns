@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix G: <../../person/Gary_Clueit#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file
+    [ reg:file "image/vnd.airzip.accelerator.azv"; reg:type "template" ];
+    reg:name "vnd.airzip.accelerator.azv";
+    reg:xref G:.
+medi:undefined reg:record :.
+

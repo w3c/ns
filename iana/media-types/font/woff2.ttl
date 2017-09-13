@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2016-12-21"^^XML:date;
+    reg:file [ reg:file "font/woff2"; reg:type "template" ];
+    reg:name "woff2";
+    reg:xref html:rfc8081.
+medi:undefined reg:record :.
+

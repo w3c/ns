@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Chr: <../../person/Chris_Charabaruk#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2015-04-03"^^XML:date;
+    reg:file [ reg:file "image/vnd.zbrush.pcx"; reg:type "template" ];
+    reg:name "vnd.zbrush.pcx";
+    reg:xref Chr:.
+medi:undefined reg:record :.
+

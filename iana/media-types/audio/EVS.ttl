@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../../person/_3GPP#>.
+@prefix Kyu: <../../person/Kyunghun_Jung#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2015-12-21"^^XML:date;
+    reg:file [ reg:file "audio/EVS"; reg:type "template" ];
+    reg:name "EVS";
+    reg:updated "2016-10-03"^^XML:date;
+    reg:xref n1:, Kyu:.
+medi:undefined reg:record :.
+

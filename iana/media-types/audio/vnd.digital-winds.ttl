@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Arm: <../../person/Armands_Strazds#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.digital-winds"; reg:type "template" ];
+    reg:name "vnd.digital-winds";
+    reg:xref Arm:.
+medi:undefined reg:record :.
+

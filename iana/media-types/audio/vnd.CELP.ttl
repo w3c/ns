@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ser: <../../person/Serge_De_Jaham#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.CELP"; reg:type "template" ];
+    reg:name "vnd.CELP";
+    reg:xref Ser:.
+medi:undefined reg:record :.
+

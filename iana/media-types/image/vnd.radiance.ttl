@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Gre: <../../person/Greg_Ward#>.
+@prefix R: <../../person/Randolph_Fritz#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "image/vnd.radiance"; reg:type "template" ];
+    reg:name "vnd.radiance";
+    reg:xref Gre:, R:.
+medi:undefined reg:record :.
+

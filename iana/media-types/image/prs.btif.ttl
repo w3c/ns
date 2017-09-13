@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ben: <../../person/Ben_Simon#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "image/prs.btif"; reg:type "template" ];
+    reg:name "prs.btif";
+    reg:xref Ben:.
+medi:undefined reg:record :.
+

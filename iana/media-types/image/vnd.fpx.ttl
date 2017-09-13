@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Marc_Douglas_Spencer#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "image/vnd.fpx"; reg:type "template" ];
+    reg:name "vnd.fpx";
+    reg:xref M:.
+medi:undefined reg:record :.
+

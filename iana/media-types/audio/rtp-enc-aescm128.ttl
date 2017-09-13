@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../../person/_3GPP#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/rtp-enc-aescm128"; reg:type "template" ];
+    reg:name "rtp-enc-aescm128";
+    reg:xref n1:.
+medi:undefined reg:record :.
+

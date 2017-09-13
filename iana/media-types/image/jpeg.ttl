@@ -1,0 +1,9 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+: reg:name "jpeg"; reg:xref html:rfc2045, html:rfc2046 .
+
+medi:undefined reg:record :.
+

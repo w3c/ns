@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Sh: <../../person/Shay_Cicelsky#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.everad.plj"; reg:type "template" ];
+    reg:name "vnd.everad.plj";
+    reg:xref Sh:.
+medi:undefined reg:record :.
+

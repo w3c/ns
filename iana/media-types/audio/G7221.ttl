@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/G7221"; reg:type "template" ];
+    reg:name "G7221";
+    reg:updated "2015-07-21";
+    reg:xref html:rfc5577.
+medi:undefined reg:record :.
+

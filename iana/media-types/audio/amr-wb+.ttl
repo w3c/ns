@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/amr-wb+"; reg:type "template" ];
+    reg:name "amr-wb+";
+    reg:xref html:rfc4352.
+medi:undefined reg:record :.
+

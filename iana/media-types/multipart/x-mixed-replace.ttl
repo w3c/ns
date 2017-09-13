@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Rob: <../../person/Robin_Berjon#>.
+@prefix W3C: <../../person/W3C#>.
+
+medi:undefined reg:record :.
+
+:
+    terms:date "2014-08-27"^^XML:date;
+    reg:file [ reg:file "multipart/x-mixed-replace"; reg:type "template" ];
+    reg:name "x-mixed-replace";
+    reg:xref Rob:, W3C:.

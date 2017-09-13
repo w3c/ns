@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ann: <../../person/Ann_McLaughlin#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.cns.inf1"; reg:type "template" ];
+    reg:name "vnd.cns.inf1";
+    reg:xref Ann:.
+medi:undefined reg:record :.
+

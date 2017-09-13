@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Martin_Bailey#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "image/vnd.globalgraphics.pgb"; reg:type "template" ];
+    reg:name "vnd.globalgraphics.pgb";
+    reg:xref M:.
+medi:undefined reg:record :.
+

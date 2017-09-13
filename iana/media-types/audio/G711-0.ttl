@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2015-08-04"^^XML:date;
+    reg:file [ reg:file "audio/G711-0"; reg:type "template" ];
+    reg:name "G711-0";
+    reg:xref html:rfc7655.
+medi:undefined reg:record :.
+

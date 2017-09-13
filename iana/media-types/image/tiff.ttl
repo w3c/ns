@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:description "Tag Image File Format";
+    reg:file [ reg:file "image/tiff"; reg:type "template" ];
+    reg:name "tiff";
+    reg:xref html:rfc3302.
+medi:undefined reg:record :.
+

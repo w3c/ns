@@ -1,0 +1,9 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+: reg:name "G7291"; reg:xref html:rfc4749, html:rfc5459 .
+
+medi:undefined reg:record :.
+

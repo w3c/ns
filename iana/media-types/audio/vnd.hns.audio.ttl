@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Sw: <../../person/Swaminathan#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.hns.audio"; reg:type "template" ];
+    reg:name "vnd.hns.audio";
+    reg:xref Sw:.
+medi:undefined reg:record :.
+

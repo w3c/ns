@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix R: <../../person/Rajesh_Kumar#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.cisco.nse"; reg:type "template" ];
+    reg:name "vnd.cisco.nse";
+    reg:xref R:.
+medi:undefined reg:record :.
+

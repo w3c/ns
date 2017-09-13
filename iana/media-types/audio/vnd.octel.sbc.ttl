@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Gre: <../../person/Greg_Vaudreuil#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.octel.sbc"; reg:type "template" ];
+    reg:name "vnd.octel.sbc";
+    reg:xref Gre:.
+medi:undefined reg:record :.
+

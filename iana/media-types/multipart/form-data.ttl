@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+
+medi:undefined reg:record :.
+
+:
+    reg:file [ reg:file "multipart/form-data"; reg:type "template" ];
+    reg:name "form-data";
+    reg:updated "2015-04-15";
+    reg:xref html:rfc7578.

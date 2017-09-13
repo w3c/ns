@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Vic: <../../person/Vicki_DeBarros#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.audiokoz"; reg:type "template" ];
+    reg:name "vnd.audiokoz";
+    reg:xref Vic:.
+medi:undefined reg:record :.
+

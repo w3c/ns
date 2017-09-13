@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mik: <../../person/Mike_Ward#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.dolby.mlp"; reg:type "template" ];
+    reg:name "vnd.dolby.mlp";
+    reg:xref Mik:.
+medi:undefined reg:record :.
+

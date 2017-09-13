@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Ben: <../../person/Benson_Margulies#>.
+
+medi:undefined reg:record :.
+
+:
+    terms:date "2016-01-27"^^XML:date;
+    reg:file
+    [ reg:file "model/vnd.rosette.annotated-data-model"; reg:type "template" ];
+    reg:name "vnd.rosette.annotated-data-model";
+    reg:xref Ben:.

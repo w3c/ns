@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Sim: <../../person/Simon_Butcher#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "image/vnd.microsoft.icon"; reg:type "template" ];
+    reg:name "vnd.microsoft.icon";
+    reg:xref Sim:.
+medi:undefined reg:record :.
+

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ni: <../../person/Ni_Hui#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:date "2014-09-10"^^XML:date;
+    reg:file [ reg:file "image/vnd.tencent.tap"; reg:type "template" ];
+    reg:name "vnd.tencent.tap";
+    reg:xref Ni:.
+medi:undefined reg:record :.
+

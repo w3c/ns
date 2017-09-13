@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Tim: <../../person/Timo_Kosonen#>.
+@prefix Tom: <../../person/Tom_White#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/sp-midi"; reg:type "template" ];
+    reg:name "sp-midi";
+    reg:xref Tim:, Tom:.
+medi:undefined reg:record :.
+

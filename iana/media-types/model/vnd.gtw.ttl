@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Yut: <../../person/Yutaka_Ozaki#>.
+
+medi:undefined reg:record :.
+
+:
+    reg:file [ reg:file "model/vnd.gtw"; reg:type "template" ];
+    reg:name "vnd.gtw";
+    reg:xref Yut:.

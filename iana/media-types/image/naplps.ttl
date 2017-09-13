@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ily: <../../person/Ilya_Ferber#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "image/naplps"; reg:type "template" ];
+    reg:name "naplps";
+    reg:xref Ily:.
+medi:undefined reg:record :.
+

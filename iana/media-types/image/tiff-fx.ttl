@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    terms:description "Tag Image File Format Fax eXtended";
+    reg:file [ reg:file "image/tiff-fx"; reg:type "template" ];
+    reg:name "tiff-fx";
+    reg:xref html:rfc3950.
+medi:undefined reg:record :.
+

@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Je: <../../person/Jean-Philippe_Goulet#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "audio/vnd.cmles.radio-events"; reg:type "template" ];
+    reg:name "vnd.cmles.radio-events";
+    reg:xref Je:.
+medi:undefined reg:record :.
+

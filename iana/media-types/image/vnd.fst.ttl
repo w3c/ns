@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ari: <../../person/Arild_Fuldseth#>.
+@prefix medi: <../media-types.ttl#>.
+
+:
+    reg:file [ reg:file "image/vnd.fst"; reg:type "template" ];
+    reg:name "vnd.fst";
+    reg:xref Ari:.
+medi:undefined reg:record :.
+
