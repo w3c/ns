@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.qcelp"; reg:type "template" ];
     reg:name "vnd.qcelp - DEPRECATED in favor of audio/qcelp";
     reg:xref html:rfc3625.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

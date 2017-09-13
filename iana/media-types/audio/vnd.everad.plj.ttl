@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.everad.plj"; reg:type "template" ];
     reg:name "vnd.everad.plj";
     reg:xref Sh:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

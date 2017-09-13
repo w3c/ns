@@ -8,5 +8,5 @@
     reg:file [ reg:file "application/vnd.oma.bcast.sgdu"; reg:type "template" ];
     reg:name "vnd.oma.bcast.sgdu";
     reg:xref Ope:, Uwe:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

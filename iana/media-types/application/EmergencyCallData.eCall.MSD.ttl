@@ -11,5 +11,5 @@
     [ reg:file "application/EmergencyCallData.eCall.MSD"; reg:type "template" ];
     reg:name "EmergencyCallData.eCall.MSD";
     reg:xref html:rfc8147.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.motorola.iprm"; reg:type "template" ];
     reg:name "vnd.motorola.iprm";
     reg:xref R:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

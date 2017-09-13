@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.etsi.overload-control-policy-dataset+xml";
     reg:xref Mig:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

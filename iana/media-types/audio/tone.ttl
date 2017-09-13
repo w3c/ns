@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/tone"; reg:type "template" ];
     reg:name "tone";
     reg:xref html:rfc4733.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

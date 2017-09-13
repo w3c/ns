@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix M: <../../person/Mark_Patton#>.
 
-medi:undefined reg:record :.
+medi:text reg:record :.
 
 :
     reg:file [ reg:file "text/vnd.motorola.reflex"; reg:type "template" ];

@@ -9,5 +9,5 @@
     [ reg:file "application/vnd.syncml.dm.notification"; reg:type "template" ];
     reg:name "vnd.syncml.dm.notification";
     reg:xref OMA:, Pet:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

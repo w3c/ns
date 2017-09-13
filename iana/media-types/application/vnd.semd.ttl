@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.semd"; reg:type "template" ];
     reg:name "vnd.semd";
     reg:xref And:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

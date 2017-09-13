@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/asc"; reg:type "template" ];
     reg:name "asc";
     reg:xref html:rfc6295.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

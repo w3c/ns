@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.tmd.mediaflex.api+xml"; reg:type "template" ];
     reg:name "vnd.tmd.mediaflex.api+xml";
     reg:xref Ale:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -9,5 +9,5 @@
     [ reg:file "application/vnd.oma.cab-user-prefs+xml"; reg:type "template" ];
     reg:name "vnd.oma.cab-user-prefs+xml";
     reg:xref H:, OMA:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix J: <../../person/James_Riordon#>.
 
-medi:undefined reg:record :.
+medi:model reg:record :.
 
 :
     reg:file [ reg:file "model/vnd.collada+xml"; reg:type "template" ];

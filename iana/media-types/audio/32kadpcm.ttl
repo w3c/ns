@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/32kadpcm"; reg:type "template" ];
     reg:name "32kadpcm";
     reg:xref html:rfc2421, html:rfc3802.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

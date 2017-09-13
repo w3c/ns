@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.dtg.local"; reg:type "template" ];
     reg:name "vnd.dtg.local";
     reg:xref Ali:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

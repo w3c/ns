@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.ms-windows.devicepairing";
     reg:xref Jus:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.fujixerox.docuworks.binder";
     reg:xref T:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

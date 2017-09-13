@@ -9,5 +9,5 @@
     reg:name "font-woff - DEPRECATED in favor of font/woff";
     reg:updated "2016-12-21";
     reg:xref W3C:, html:rfc8081.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

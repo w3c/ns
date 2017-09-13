@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.triscape.mxs"; reg:type "template" ];
     reg:name "vnd.triscape.mxs";
     reg:xref Ste:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

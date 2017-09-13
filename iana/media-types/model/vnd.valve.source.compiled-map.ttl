@@ -5,7 +5,7 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix Hen: <../../person/Henrik_Andersson#>.
 
-medi:undefined reg:record :.
+medi:model reg:record :.
 
 :
     terms:date "2014-05-01"^^XML:date;

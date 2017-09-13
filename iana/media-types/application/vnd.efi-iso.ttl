@@ -11,5 +11,5 @@
     reg:file [ reg:file "application/vnd.efi-iso"; reg:type "template" ];
     reg:name "vnd.efi.iso";
     reg:xref Fu:, UEF:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

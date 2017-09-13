@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.capasystems-pg+json"; reg:type "template" ];
     reg:name "vnd.capasystems-pg+json";
     reg:xref Y:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

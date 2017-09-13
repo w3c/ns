@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.cmles.radio-events"; reg:type "template" ];
     reg:name "vnd.cmles.radio-events";
     reg:xref Je:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

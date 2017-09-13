@@ -5,5 +5,5 @@
 
 : reg:name "G7291"; reg:xref html:rfc4749, html:rfc5459 .
 
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

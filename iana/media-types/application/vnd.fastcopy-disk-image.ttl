@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.fastcopy-disk-image"; reg:type "template" ];
     reg:name "vnd.fastcopy-disk-image";
     reg:xref Thom:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

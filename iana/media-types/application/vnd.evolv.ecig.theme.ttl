@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.evolv.ecig.theme"; reg:type "template" ];
     reg:name "vnd.evolv.ecig.theme";
     reg:xref J:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

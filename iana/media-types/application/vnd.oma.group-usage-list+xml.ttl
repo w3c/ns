@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.oma.group-usage-list+xml";
     reg:xref OMA:, Se:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/LPC"; reg:type "template" ];
     reg:name "LPC";
     reg:xref html:rfc4856.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

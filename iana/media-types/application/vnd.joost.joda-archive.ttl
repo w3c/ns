@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.joost.joda-archive"; reg:type "template" ];
     reg:name "vnd.joost.joda-archive";
     reg:xref Joost:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

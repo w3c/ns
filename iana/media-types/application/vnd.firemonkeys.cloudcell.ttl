@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.firemonkeys.cloudcell"; reg:type "template" ];
     reg:name "vnd.firemonkeys.cloudcell";
     reg:xref Ale:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

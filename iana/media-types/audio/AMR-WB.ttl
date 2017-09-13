@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/AMR-WB"; reg:type "template" ];
     reg:name "AMR-WB";
     reg:xref html:rfc4867.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

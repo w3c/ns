@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.wrq-hp3000-labelled"; reg:type "template" ];
     reg:name "vnd.wrq-hp3000-labelled";
     reg:xref Chr:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

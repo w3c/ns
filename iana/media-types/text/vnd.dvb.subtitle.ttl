@@ -4,7 +4,7 @@
 @prefix Mich: <../../person/Michael_Lagally#>.
 @prefix Pet: <../../person/Peter_Siebert#>.
 
-medi:undefined reg:record :.
+medi:text reg:record :.
 
 :
     reg:file [ reg:file "text/vnd.dvb.subtitle"; reg:type "template" ];

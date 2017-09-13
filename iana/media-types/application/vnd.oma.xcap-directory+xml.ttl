@@ -9,5 +9,5 @@
     [ reg:file "application/vnd.oma.xcap-directory+xml"; reg:type "template" ];
     reg:name "vnd.oma.xcap-directory+xml";
     reg:xref OMA:, Se:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Nic: <../../person/Nicholas_Parks_Young#>.
 
-medi:undefined reg:record :.
+medi:text reg:record :.
 
 :
     reg:file [ reg:file "text/vnd.si.uricatalogue"; reg:type "template" ];

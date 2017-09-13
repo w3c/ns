@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Mich: <../../person/Michael_A_Dolan#>.
 
-medi:undefined reg:record :.
+medi:video reg:record :.
 
 :
     reg:file [ reg:file "video/vnd.dece.sd"; reg:type "template" ];

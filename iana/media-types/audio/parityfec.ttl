@@ -5,5 +5,5 @@
 
 : reg:name "parityfec"; reg:xref html:rfc5109 .
 
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

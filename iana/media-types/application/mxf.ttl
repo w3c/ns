@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/mxf"; reg:type "template" ];
     reg:name "mxf";
     reg:xref html:rfc4539.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

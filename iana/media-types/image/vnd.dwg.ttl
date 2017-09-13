@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd.dwg"; reg:type "template" ];
     reg:name "vnd.dwg";
     reg:xref Jod:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

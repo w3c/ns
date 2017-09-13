@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.dvb.notif-ia-registration-response+xml";
     reg:xref Roy:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

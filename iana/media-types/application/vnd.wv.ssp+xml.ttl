@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.wv.ssp+xml"; reg:type "template" ];
     reg:name "vnd.wv.ssp+xml";
     reg:xref Joh:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

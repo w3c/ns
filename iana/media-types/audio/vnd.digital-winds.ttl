@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.digital-winds"; reg:type "template" ];
     reg:name "vnd.digital-winds";
     reg:xref Arm:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

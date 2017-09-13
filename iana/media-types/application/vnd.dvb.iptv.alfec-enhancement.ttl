@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.dvb.iptv.alfec-enhancement";
     reg:xref Je:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

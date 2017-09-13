@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.cisco.nse"; reg:type "template" ];
     reg:name "vnd.cisco.nse";
     reg:xref R:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

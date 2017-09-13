@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/merge-patch+json"; reg:type "template" ];
     reg:name "merge-patch+json";
     reg:xref html:rfc7396.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

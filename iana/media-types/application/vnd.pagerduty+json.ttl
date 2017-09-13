@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/vnd.pagerduty+json"; reg:type "template" ];
     reg:name "vnd.pagerduty+json";
     reg:xref Ste:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/pwg-raster"; reg:type "template" ];
     reg:name "pwg-raster";
     reg:xref Mich:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

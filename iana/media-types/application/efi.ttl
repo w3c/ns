@@ -11,5 +11,5 @@
     reg:file [ reg:file "application/efi"; reg:type "template" ];
     reg:name "efi";
     reg:xref S:, UEF:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

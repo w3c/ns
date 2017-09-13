@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.oma.poc.optimized-progress-report+xml";
     reg:xref OMA:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

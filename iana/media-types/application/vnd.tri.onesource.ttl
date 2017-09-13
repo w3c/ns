@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/vnd.tri.onesource"; reg:type "template" ];
     reg:name "vnd.tri.onesource";
     reg:xref Ric:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

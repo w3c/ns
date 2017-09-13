@@ -10,5 +10,5 @@
     reg:file [ reg:file "audio/MELP600"; reg:type "template" ];
     reg:name "MELP600";
     reg:xref html:rfc8130.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

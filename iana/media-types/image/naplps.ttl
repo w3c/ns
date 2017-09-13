@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/naplps"; reg:type "template" ];
     reg:name "naplps";
     reg:xref Ily:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

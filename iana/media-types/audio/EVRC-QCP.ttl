@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/EVRC-QCP"; reg:type "template" ];
     reg:name "EVRC-QCP";
     reg:xref html:rfc3625.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

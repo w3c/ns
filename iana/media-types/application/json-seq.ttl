@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/json-seq"; reg:type "template" ];
     reg:name "json-seq";
     reg:xref html:rfc7464.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

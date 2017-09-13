@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.dts.hd"; reg:type "template" ];
     reg:name "vnd.dts.hd";
     reg:xref Willi:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

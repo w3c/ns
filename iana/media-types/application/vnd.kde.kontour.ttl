@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.kde.kontour"; reg:type "template" ];
     reg:name "vnd.kde.kontour";
     reg:xref D:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

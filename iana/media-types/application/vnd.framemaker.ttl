@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.framemaker"; reg:type "template" ];
     reg:name "vnd.framemaker";
     reg:xref Mik:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

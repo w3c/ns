@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.iptc.g2.planningitem+xml";
     reg:xref Mich:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

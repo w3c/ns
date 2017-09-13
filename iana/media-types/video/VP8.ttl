@@ -5,7 +5,7 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix html: <https://tools.ietf.org/html/>.
 
-medi:undefined reg:record :.
+medi:video reg:record :.
 
 :
     terms:date "2015-09-25"^^XML:date;

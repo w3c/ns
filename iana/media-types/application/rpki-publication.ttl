@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/rpki-publication"; reg:type "template" ];
     reg:name "rpki-publication";
     reg:xref html:RFC-ietf-sidr-publication-12.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

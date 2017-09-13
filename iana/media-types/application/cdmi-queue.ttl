@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/cdmi-queue"; reg:type "template" ];
     reg:name "cdmi-queue";
     reg:xref html:rfc6208.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

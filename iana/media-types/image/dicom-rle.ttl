@@ -11,5 +11,5 @@
     reg:file [ reg:file "image/dicom-rle"; reg:type "template" ];
     reg:name "dicom-rle";
     reg:xref D:, DIC:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

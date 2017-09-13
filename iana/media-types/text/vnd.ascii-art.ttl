@@ -5,7 +5,7 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix Kim: <../../person/Kim_Scarborough#>.
 
-medi:undefined reg:record :.
+medi:text reg:record :.
 
 :
     terms:date "2016-08-12"^^XML:date;

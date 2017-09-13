@@ -7,7 +7,7 @@
 @prefix Mich: <../../person/Michael_Sweet#>.
 @prefix www: <http://www.3mf.io/>.
 
-medi:undefined reg:record :.
+medi:model reg:record :.
 
 :
     terms:date "2017-05-12"^^XML:date;

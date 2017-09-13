@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.ms-fontobject"; reg:type "template" ];
     reg:name "vnd.ms-fontobject";
     reg:xref Kim:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

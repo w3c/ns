@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.osgi.bundle"; reg:type "template" ];
     reg:name "vnd.osgi.bundle";
     reg:xref Pet:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

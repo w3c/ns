@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/ppsp-tracker+json"; reg:type "template" ];
     reg:name "ppsp-tracker+json";
     reg:xref html:rfc7846.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

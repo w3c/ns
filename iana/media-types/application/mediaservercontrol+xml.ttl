@@ -8,5 +8,5 @@
     [ reg:file "application/mediaservercontrol+xml"; reg:type "template" ];
     reg:name "mediaservercontrol+xml";
     reg:xref html:rfc5022.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

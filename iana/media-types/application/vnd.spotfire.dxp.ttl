@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.spotfire.dxp"; reg:type "template" ];
     reg:name "vnd.spotfire.dxp";
     reg:xref Stef:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

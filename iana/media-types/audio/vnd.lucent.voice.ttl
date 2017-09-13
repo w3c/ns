@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.lucent.voice"; reg:type "template" ];
     reg:name "vnd.lucent.voice";
     reg:xref Gre:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

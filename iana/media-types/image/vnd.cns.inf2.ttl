@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd.cns.inf2"; reg:type "template" ];
     reg:name "vnd.cns.inf2";
     reg:xref Ann:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

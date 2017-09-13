@@ -5,5 +5,5 @@
 
 : reg:name "svg+xml"; reg:xref W3C:, <http://www.w3.org/TR/SVG/mimereg.html>.
 
-medi:undefined reg:record :.
+medi:image reg:record :.
 

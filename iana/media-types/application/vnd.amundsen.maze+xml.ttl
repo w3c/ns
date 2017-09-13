@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.amundsen.maze+xml"; reg:type "template" ];
     reg:name "vnd.amundsen.maze+xml";
     reg:xref Mik:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

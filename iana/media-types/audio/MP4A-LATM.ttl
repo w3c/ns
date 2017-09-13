@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/MP4A-LATM"; reg:type "template" ];
     reg:name "MP4A-LATM";
     reg:xref html:rfc6416.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

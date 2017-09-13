@@ -5,5 +5,5 @@
 
 : reg:name "QCELP"; reg:xref html:rfc3555, html:rfc3625 .
 
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

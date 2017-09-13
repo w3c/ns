@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.piaccess.application-licence";
     reg:xref Luc:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/clue_info+xml"; reg:type "template" ];
     reg:name "clue_info+xml";
     reg:xref html:RFC-ietf-clue-data-model-schema-17.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

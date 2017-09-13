@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vorbis-config"; reg:type "template" ];
     reg:name "vorbis-config";
     reg:xref html:rfc5215.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

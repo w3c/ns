@@ -12,5 +12,5 @@
     reg:file [ reg:file "application/dicom+xml"; reg:type "template" ];
     reg:name "dicom+xml";
     reg:xref D:, DIC:, J:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

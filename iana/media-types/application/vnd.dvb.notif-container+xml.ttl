@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.dvb.notif-container+xml"; reg:type "template" ];
     reg:name "vnd.dvb.notif-container+xml";
     reg:xref Roy:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

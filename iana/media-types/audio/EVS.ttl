@@ -12,5 +12,5 @@
     reg:name "EVS";
     reg:updated "2016-10-03"^^XML:date;
     reg:xref n1:, Kyu:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

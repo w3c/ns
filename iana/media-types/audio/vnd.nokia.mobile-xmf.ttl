@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.nokia.mobile-xmf"; reg:type "template" ];
     reg:name "vnd.nokia.mobile-xmf";
     reg:xref Noki:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

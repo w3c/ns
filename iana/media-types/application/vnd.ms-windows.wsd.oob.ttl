@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.ms-windows.wsd.oob"; reg:type "template" ];
     reg:name "vnd.ms-windows.wsd.oob";
     reg:xref Jus:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -8,5 +8,5 @@
     reg:file [ reg:file "application/its+xml"; reg:type "template" ];
     reg:name "its+xml";
     reg:xref ITS:, W3C:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

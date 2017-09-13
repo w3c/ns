@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/png"; reg:type "template" ];
     reg:name "png";
     reg:xref Gle:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

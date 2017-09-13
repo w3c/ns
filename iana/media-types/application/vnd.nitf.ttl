@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.nitf"; reg:type "template" ];
     reg:name "vnd.nitf";
     reg:xref Ste:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

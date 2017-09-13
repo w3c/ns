@@ -11,5 +11,5 @@
             ];
     reg:name "xcon-conference-info-diff+xml";
     reg:xref html:rfc6502.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

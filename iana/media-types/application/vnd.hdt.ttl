@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/vnd.hdt"; reg:type "template" ];
     reg:name "vnd.hdt";
     reg:xref J:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

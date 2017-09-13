@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.nuera.ecelp7470"; reg:type "template" ];
     reg:name "vnd.nuera.ecelp7470";
     reg:xref Mich:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

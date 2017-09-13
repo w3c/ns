@@ -12,5 +12,5 @@
     reg:name "vnd.openstreetmap.data+xml";
     reg:updated "2016-10-05"^^XML:date;
     reg:xref P:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

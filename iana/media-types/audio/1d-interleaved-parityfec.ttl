@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/1d-interleaved-parityfec"; reg:type "template" ];
     reg:name "1d-interleaved-parityfec";
     reg:xref html:rfc6015.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

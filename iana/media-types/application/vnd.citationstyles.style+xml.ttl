@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.citationstyles.style+xml";
     reg:xref Rin:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/coap-group+json"; reg:type "template" ];
     reg:name "coap-group+json";
     reg:xref html:rfc7390.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -4,7 +4,7 @@
 @prefix Web: <../../person/Web3D_X3D#>.
 @prefix Web3D: <../../person/Web3D#>.
 
-medi:undefined reg:record :.
+medi:model reg:record :.
 
 :
     reg:file [ reg:file "model/x3d+xml"; reg:type "template" ];

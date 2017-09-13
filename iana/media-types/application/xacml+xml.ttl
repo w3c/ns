@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/xacml+xml"; reg:type "template" ];
     reg:name "xacml+xml";
     reg:xref html:rfc7061.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

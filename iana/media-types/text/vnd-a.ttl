@@ -5,7 +5,7 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix Reg: <../../person/Regis_Dehoux#>.
 
-medi:undefined reg:record :.
+medi:text reg:record :.
 
 :
     terms:date "2014-02-07"^^XML:date;

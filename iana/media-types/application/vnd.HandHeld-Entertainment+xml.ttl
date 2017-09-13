@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.HandHeld-Entertainment+xml";
     reg:xref Eri:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

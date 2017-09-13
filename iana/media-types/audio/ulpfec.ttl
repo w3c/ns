@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/ulpfec"; reg:type "template" ];
     reg:name "ulpfec";
     reg:xref html:rfc5109.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

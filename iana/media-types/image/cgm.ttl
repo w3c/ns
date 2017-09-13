@@ -9,5 +9,5 @@
     reg:file [ reg:file "image/cgm"; reg:type "template" ];
     reg:name "cgm";
     reg:xref Al:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Tom: <../../person/Tom_McGinty#>.
 
-medi:undefined reg:record :.
+medi:video reg:record :.
 
 :
     reg:file [ reg:file "video/vnd.motorola.video"; reg:type "template" ];

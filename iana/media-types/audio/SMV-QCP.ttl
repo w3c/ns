@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/SMV-QCP"; reg:type "template" ];
     reg:name "SMV-QCP";
     reg:xref html:rfc3625.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

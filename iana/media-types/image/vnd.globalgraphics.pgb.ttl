@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd.globalgraphics.pgb"; reg:type "template" ];
     reg:name "vnd.globalgraphics.pgb";
     reg:xref M:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

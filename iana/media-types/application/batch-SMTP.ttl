@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/batch-SMTP"; reg:type "template" ];
     reg:name "batch-SMTP";
     reg:xref html:rfc2442.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/link-format"; reg:type "template" ];
     reg:name "link-format";
     reg:xref html:rfc6690.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

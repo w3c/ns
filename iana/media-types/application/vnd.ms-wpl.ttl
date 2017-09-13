@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.ms-wpl"; reg:type "template" ];
     reg:name "vnd.ms-wpl";
     reg:xref D:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -12,5 +12,5 @@
     reg:name "ttml+xml";
     reg:updated "2016-09-30"^^XML:date;
     reg:xref W3C:, W3:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

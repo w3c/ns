@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.nearst.inv+json"; reg:type "template" ];
     reg:name "vnd.nearst.inv+json";
     reg:xref Thom:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

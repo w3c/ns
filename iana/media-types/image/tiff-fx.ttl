@@ -9,5 +9,5 @@
     reg:file [ reg:file "image/tiff-fx"; reg:type "template" ];
     reg:name "tiff-fx";
     reg:xref html:rfc3950.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

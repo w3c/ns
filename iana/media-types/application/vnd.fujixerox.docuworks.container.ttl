@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.fujixerox.docuworks.container";
     reg:xref Kiy:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

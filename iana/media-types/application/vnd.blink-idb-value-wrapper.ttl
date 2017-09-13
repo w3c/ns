@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.blink-idb-value-wrapper"; reg:type "template" ];
     reg:name "vnd.blink-idb-value-wrapper";
     reg:xref Vic:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

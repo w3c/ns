@@ -6,7 +6,7 @@
 @prefix Web: <../../person/Web3D_X3D#>.
 @prefix Web3D: <../../person/Web3D#>.
 
-medi:undefined reg:record :.
+medi:model reg:record :.
 
 :
     terms:date "2014-01-15"^^XML:date;

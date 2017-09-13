@@ -9,5 +9,5 @@
     [ reg:file "application/vnd.oma.bcast.sgboot"; reg:type "template" ];
     reg:name "vnd.oma.bcast.sgboot";
     reg:xref Ope:, Uwe:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

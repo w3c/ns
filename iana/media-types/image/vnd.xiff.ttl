@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd.xiff"; reg:type "template" ];
     reg:name "vnd.xiff";
     reg:xref Ste:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

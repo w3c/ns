@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd-wap-wbmp"; reg:type "template" ];
     reg:name "vnd.wap.wbmp";
     reg:xref Pet:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

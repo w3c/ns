@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/prs.sid"; reg:type "template" ];
     reg:name "prs.sid";
     reg:xref Lin:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

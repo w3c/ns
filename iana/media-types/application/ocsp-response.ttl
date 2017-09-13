@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/ocsp-response"; reg:type "template" ];
     reg:name "ocsp-response";
     reg:xref html:rfc6960.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

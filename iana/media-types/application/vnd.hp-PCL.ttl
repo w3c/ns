@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.hp-PCL"; reg:type "template" ];
     reg:name "vnd.hp-PCL";
     reg:xref Bob:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -11,5 +11,5 @@
     reg:file [ reg:file "image/jls"; reg:type "template" ];
     reg:name "jls";
     reg:xref D:, DIC:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

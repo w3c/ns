@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.nortel.vbk"; reg:type "template" ];
     reg:name "vnd.nortel.vbk";
     reg:xref Gle:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

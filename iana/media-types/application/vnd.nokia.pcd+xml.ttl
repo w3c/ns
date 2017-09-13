@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.nokia.pcd+xml"; reg:type "template" ];
     reg:name "vnd.nokia.pcd+xml";
     reg:xref Noki:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

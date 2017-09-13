@@ -11,5 +11,5 @@
     reg:file [ reg:file "application/vnd.oma.lwm2m+tlv"; reg:type "template" ];
     reg:name "vnd.oma.lwm2m+tlv";
     reg:xref Joh:, Ope:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

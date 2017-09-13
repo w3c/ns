@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.3gpp.state-and-event-info+xml";
     reg:xref Fre:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

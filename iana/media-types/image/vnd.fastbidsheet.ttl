@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd.fastbidsheet"; reg:type "template" ];
     reg:name "vnd.fastbidsheet";
     reg:xref Sco:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/3gpp"; reg:type "template" ];
     reg:name "3gpp";
     reg:xref html:rfc3839, html:rfc6381.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

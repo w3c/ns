@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/SMV0"; reg:type "template" ];
     reg:name "SMV0";
     reg:xref html:rfc3558.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

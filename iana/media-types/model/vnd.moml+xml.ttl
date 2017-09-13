@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Chr: <../../person/Christopher_Brooks#>.
 
-medi:undefined reg:record :.
+medi:model reg:record :.
 
 :
     reg:file [ reg:file "model/vnd.moml+xml"; reg:type "template" ];

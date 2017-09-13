@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.f-secure.mobile"; reg:type "template" ];
     reg:name "vnd.f-secure.mobile";
     reg:xref S:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

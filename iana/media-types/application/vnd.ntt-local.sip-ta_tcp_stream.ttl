@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.ntt-local.sip-ta_tcp_stream";
     reg:xref NTT:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

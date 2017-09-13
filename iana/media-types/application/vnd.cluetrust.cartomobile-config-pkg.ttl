@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.cluetrust.cartomobile-config-pkg";
     reg:xref G:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

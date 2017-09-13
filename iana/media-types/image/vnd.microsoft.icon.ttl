@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd.microsoft.icon"; reg:type "template" ];
     reg:name "vnd.microsoft.icon";
     reg:xref Sim:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

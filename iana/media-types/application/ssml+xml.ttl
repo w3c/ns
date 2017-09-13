@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/ssml+xml"; reg:type "template" ];
     reg:name "ssml+xml";
     reg:xref html:rfc4267.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

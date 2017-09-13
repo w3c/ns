@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.cloanto.rp9"; reg:type "template" ];
     reg:name "vnd.cloanto.rp9";
     reg:xref Mik:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

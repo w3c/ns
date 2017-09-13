@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix WAP: <../../person/WAP-Forum#>.
 
-medi:undefined reg:record :.
+medi:text reg:record :.
 
 :
     reg:file [ reg:file "text/vnd.wap.sl"; reg:type "template" ];

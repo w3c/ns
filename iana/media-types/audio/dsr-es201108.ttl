@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/dsr-es201108"; reg:type "template" ];
     reg:name "dsr-es201108";
     reg:xref html:rfc3557.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

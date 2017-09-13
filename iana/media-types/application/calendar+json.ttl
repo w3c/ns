@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/calendar+json"; reg:type "template" ];
     reg:name "calendar+json";
     reg:xref html:rfc7265.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -9,5 +9,5 @@
     reg:name "vnd.recordare.musicxml+xml";
     reg:updated "2017-01-19";
     reg:xref W3C:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

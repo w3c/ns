@@ -6,7 +6,7 @@
 @prefix D: <../../person/David_Singer#>.
 @prefix ISO: <../../person/ISO-IEC_JTC1#>.
 
-medi:undefined reg:record :.
+medi:video reg:record :.
 
 :
     terms:date "2014-01-29"^^XML:date;

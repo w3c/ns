@@ -10,5 +10,5 @@
     reg:file [ reg:file "image/vnd.tencent.tap"; reg:type "template" ];
     reg:name "vnd.tencent.tap";
     reg:xref Ni:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/VMR-WB"; reg:type "template" ];
     reg:name "VMR-WB";
     reg:xref html:rfc4348, html:rfc4424.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

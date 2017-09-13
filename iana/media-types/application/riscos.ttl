@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/riscos"; reg:type "template" ];
     reg:name "riscos";
     reg:xref Nic:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

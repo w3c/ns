@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/speex"; reg:type "template" ];
     reg:name "speex";
     reg:xref html:rfc5574.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

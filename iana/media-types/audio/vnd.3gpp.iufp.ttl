@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.3gpp.iufp"; reg:type "template" ];
     reg:name "vnd.3gpp.iufp";
     reg:xref Thom:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

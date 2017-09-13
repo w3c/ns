@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/jwt"; reg:type "template" ];
     reg:name "jwt";
     reg:xref html:rfc7519.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

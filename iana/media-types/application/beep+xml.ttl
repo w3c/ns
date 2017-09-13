@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/beep+xml"; reg:type "template" ];
     reg:name "beep+xml";
     reg:xref html:rfc3080.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.1000minds.decision-model+xml";
     reg:xref Fr:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

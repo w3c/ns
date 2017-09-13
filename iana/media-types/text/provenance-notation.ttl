@@ -4,7 +4,7 @@
 @prefix Iv: <../../person/Ivan_Herman#>.
 @prefix W3C: <../../person/W3C#>.
 
-medi:undefined reg:record :.
+medi:text reg:record :.
 
 :
     reg:file [ reg:file "text/provenance-notation"; reg:type "template" ];

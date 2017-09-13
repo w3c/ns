@@ -11,5 +11,5 @@
     reg:file [ reg:file "application/ATF"; reg:type "template" ];
     reg:name "ATF";
     reg:xref ASAM:, Thom:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

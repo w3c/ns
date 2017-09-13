@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.oipf.cspg-hexbinary"; reg:type "template" ];
     reg:name "vnd.oipf.cspg-hexbinary";
     reg:xref Cl:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

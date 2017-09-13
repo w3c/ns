@@ -6,7 +6,7 @@
 @prefix D: <../../person/David_Underdown#>.
 @prefix N: <../../person/National_Archives_UK#>.
 
-medi:undefined reg:record :.
+medi:text reg:record :.
 
 :
     terms:date "2014-11-21"^^XML:date;

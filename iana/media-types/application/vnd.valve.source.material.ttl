@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.valve.source.material"; reg:type "template" ];
     reg:name "vnd.valve.source.material";
     reg:xref Hen:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

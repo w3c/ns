@@ -10,5 +10,5 @@
     reg:file [ reg:file "font/sfnt"; reg:type "template" ];
     reg:name "sfnt";
     reg:xref html:rfc8081.
-medi:undefined reg:record :.
+medi:font reg:record :.
 

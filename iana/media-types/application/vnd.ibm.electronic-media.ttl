@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.ibm.electronic-media"; reg:type "template" ];
     reg:name "vnd.ibm.electronic-media";
     reg:xref Bru:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

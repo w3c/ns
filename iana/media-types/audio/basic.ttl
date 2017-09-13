@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/basic"; reg:type "template" ];
     reg:name "basic";
     reg:xref html:rfc2045, html:rfc2046.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

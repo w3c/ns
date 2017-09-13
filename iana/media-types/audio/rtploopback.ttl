@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/rtploopback"; reg:type "template" ];
     reg:name "rtploopback";
     reg:xref html:rfc6849.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

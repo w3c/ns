@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.olpc-sugar"; reg:type "template" ];
     reg:name "vnd.olpc-sugar";
     reg:xref Joh:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

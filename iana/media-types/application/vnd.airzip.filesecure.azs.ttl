@@ -9,5 +9,5 @@
     [ reg:file "application/vnd.airzip.filesecure.azs"; reg:type "template" ];
     reg:name "vnd.airzip.filesecure.azs";
     reg:xref D:, G:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.sealedmedia.softseal.pdf";
     reg:xref D:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/vnd.onepagertatx"; reg:type "template" ];
     reg:name "vnd.onepagertatx";
     reg:xref N:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

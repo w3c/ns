@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.CELP"; reg:type "template" ];
     reg:name "vnd.CELP";
     reg:xref Ser:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

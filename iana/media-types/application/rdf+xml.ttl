@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/rdf+xml"; reg:type "template" ];
     reg:name "rdf+xml";
     reg:xref html:rfc3870.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

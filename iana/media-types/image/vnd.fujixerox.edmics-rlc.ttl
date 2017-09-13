@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd.fujixerox.edmics-rlc"; reg:type "template" ];
     reg:name "vnd.fujixerox.edmics-rlc";
     reg:xref M:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

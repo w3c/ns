@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.oma.cab-address-book+xml";
     reg:xref H:, OMA:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

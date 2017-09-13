@@ -12,5 +12,5 @@
         [ reg:file "image/emf"; reg:type "template" ];
     reg:name "emf", "x-emf - DEPRECATED in favor of image/emf";
     reg:xref html:rfc7903.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

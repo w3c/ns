@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.dvb.notif-ia-msglist+xml";
     reg:xref Roy:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

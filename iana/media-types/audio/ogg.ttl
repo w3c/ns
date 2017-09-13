@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/ogg"; reg:type "template" ];
     reg:name "ogg";
     reg:xref html:rfc5334, html:rfc7845.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

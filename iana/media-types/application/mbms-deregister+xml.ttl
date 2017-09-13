@@ -8,5 +8,5 @@
     [ reg:file "application/mbms-deregister+xml"; reg:type "template" ];
     reg:name "mbms-deregister+xml";
     reg:xref n1:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

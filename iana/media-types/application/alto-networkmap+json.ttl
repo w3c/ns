@@ -11,5 +11,5 @@
     [ reg:file "application/alto-networkmap+json"; reg:type "template" ];
     reg:name "alto-networkmap+json";
     reg:xref html:rfc7285.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

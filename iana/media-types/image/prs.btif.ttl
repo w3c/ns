@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/prs.btif"; reg:type "template" ];
     reg:name "prs.btif";
     reg:xref Ben:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

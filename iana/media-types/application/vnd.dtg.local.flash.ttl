@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.dtg.local.flash"; reg:type "template" ];
     reg:name "vnd.dtg.local.flash";
     reg:xref Ali:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

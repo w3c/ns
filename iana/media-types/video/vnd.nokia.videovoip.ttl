@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Noki: <../../person/Nokia#>.
 
-medi:undefined reg:record :.
+medi:video reg:record :.
 
 :
     reg:file [ reg:file "video/vnd.nokia.videovoip"; reg:type "template" ];

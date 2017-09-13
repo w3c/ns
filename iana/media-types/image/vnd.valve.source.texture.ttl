@@ -10,5 +10,5 @@
     reg:file [ reg:file "image/vnd.valve.source.texture"; reg:type "template" ];
     reg:name "vnd.valve.source.texture";
     reg:xref Hen:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

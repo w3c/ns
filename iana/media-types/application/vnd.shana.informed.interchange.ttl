@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.shana.informed.interchange";
     reg:xref Guy:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

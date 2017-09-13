@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.ms-word.template.macroEnabled.12";
     reg:xref Chr:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

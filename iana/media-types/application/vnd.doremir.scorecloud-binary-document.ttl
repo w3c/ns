@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.doremir.scorecloud-binary-document";
     reg:xref Eri:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

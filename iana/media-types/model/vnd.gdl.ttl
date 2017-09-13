@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Attil: <../../person/Attila_Babits#>.
 
-medi:undefined reg:record :.
+medi:model reg:record :.
 
 :
     reg:file [ reg:file "model/vnd.gdl"; reg:type "template" ];

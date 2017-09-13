@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.oma.bcast.smartcard-trigger+xml";
     reg:xref Ope:, Uwe:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

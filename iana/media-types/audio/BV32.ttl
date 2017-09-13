@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/BV32"; reg:type "template" ];
     reg:name "BV32";
     reg:xref html:rfc4298.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

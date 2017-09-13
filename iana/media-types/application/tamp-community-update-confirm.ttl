@@ -11,5 +11,5 @@
             ];
     reg:name "tamp-community-update-confirm";
     reg:xref html:rfc5934.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.neurolanguage.nlu"; reg:type "template" ];
     reg:name "vnd.neurolanguage.nlu";
     reg:xref D:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

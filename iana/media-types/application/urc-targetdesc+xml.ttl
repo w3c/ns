@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/urc-targetdesc+xml"; reg:type "template" ];
     reg:name "urc-targetdesc+xml";
     reg:xref "false", Got:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

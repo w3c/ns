@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.dolby.mlp"; reg:type "template" ];
     reg:name "vnd.dolby.mlp";
     reg:xref Mik:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

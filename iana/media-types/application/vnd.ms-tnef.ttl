@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.ms-tnef"; reg:type "template" ];
     reg:name "vnd.ms-tnef";
     reg:xref Suk:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

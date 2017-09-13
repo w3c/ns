@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.ms-PrintSchemaTicket+xml";
     reg:xref Jus:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

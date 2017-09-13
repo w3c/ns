@@ -8,5 +8,5 @@
     [ reg:file "image/vnd.airzip.accelerator.azv"; reg:type "template" ];
     reg:name "vnd.airzip.accelerator.azv";
     reg:xref G:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

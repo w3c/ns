@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.d2l.coursepackage1p0+zip";
     reg:xref Vik:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

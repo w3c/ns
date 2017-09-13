@@ -10,5 +10,5 @@
     reg:xref
         Ste:, W3C:,
         <http://www.w3.org/TR/widgets/#media-type-registration-for-application/widget>.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

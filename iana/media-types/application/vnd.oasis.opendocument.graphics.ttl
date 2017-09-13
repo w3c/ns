@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.oasis.opendocument.graphics";
     reg:xref OASIS:, Sv:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

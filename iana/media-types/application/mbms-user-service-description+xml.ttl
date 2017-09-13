@@ -11,5 +11,5 @@
             ];
     reg:name "mbms-user-service-description+xml";
     reg:xref n1:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

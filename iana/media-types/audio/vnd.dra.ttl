@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.dra"; reg:type "template" ];
     reg:name "vnd.dra";
     reg:xref Ji:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

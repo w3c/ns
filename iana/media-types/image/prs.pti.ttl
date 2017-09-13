@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/prs.pti"; reg:type "template" ];
     reg:name "prs.pti";
     reg:xref Jue:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

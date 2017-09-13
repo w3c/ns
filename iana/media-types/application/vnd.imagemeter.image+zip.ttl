@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.imagemeter.image+zip"; reg:type "template" ];
     reg:name "vnd.imagemeter.image+zip";
     reg:xref Dir:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

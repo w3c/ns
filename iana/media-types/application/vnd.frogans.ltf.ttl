@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.frogans.ltf"; reg:type "template" ];
     reg:name "vnd.frogans.ltf";
     reg:xref Ale:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

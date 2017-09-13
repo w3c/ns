@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.marlin.drm.conftoken+xml";
     reg:xref G:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

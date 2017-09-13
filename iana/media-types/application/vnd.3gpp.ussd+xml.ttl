@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/vnd.3gpp.ussd+xml"; reg:type "template" ];
     reg:name "vnd.3gpp.ussd+xml";
     reg:xref Fre:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

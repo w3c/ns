@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.trueapp"; reg:type "template" ];
     reg:name "vnd.trueapp";
     reg:xref J:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

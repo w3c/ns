@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.software602.filler.form-xml-zip";
     reg:xref J:, M:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

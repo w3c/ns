@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.ibm.MiniPay"; reg:type "template" ];
     reg:name "vnd.ibm.MiniPay";
     reg:xref Ami:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

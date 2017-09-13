@@ -8,5 +8,5 @@
     [ reg:file "application/simple-message-summary"; reg:type "template" ];
     reg:name "simple-message-summary";
     reg:xref html:rfc3842.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

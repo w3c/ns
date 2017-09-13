@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/font-tdpfr"; reg:type "template" ];
     reg:name "font-tdpfr";
     reg:xref html:rfc3073.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

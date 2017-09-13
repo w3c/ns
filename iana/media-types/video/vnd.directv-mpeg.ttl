@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix N: <../../person/Nathan_Zerbe#>.
 
-medi:undefined reg:record :.
+medi:video reg:record :.
 
 :
     reg:file [ reg:file "video/vnd.directv-mpeg"; reg:type "template" ];

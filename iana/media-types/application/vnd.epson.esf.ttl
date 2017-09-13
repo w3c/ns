@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.epson.esf"; reg:type "template" ];
     reg:name "vnd.epson.esf";
     reg:xref Sho:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

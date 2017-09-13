@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/g3fax"; reg:type "template" ];
     reg:name "g3fax";
     reg:xref html:rfc1494.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

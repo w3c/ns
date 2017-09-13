@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/sdp"; reg:type "template" ];
     reg:name "sdp";
     reg:xref html:rfc4566.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

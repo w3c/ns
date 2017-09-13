@@ -5,5 +5,5 @@
 
 : reg:name "gif"; reg:xref html:rfc2045, html:rfc2046 .
 
-medi:undefined reg:record :.
+medi:image reg:record :.
 

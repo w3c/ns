@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.collection.doc+json"; reg:type "template" ];
     reg:name "vnd.collection.doc+json";
     reg:xref Ir:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

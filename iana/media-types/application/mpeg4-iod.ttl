@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/mpeg4-iod"; reg:type "template" ];
     reg:name "mpeg4-iod";
     reg:xref html:rfc4337.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

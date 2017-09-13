@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/atomcat+xml"; reg:type "template" ];
     reg:name "atomcat+xml";
     reg:xref html:rfc5023.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

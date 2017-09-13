@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.dolby.mobile.1"; reg:type "template" ];
     reg:name "vnd.dolby.mobile.1";
     reg:xref Ste:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

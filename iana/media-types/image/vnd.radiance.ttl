@@ -8,5 +8,5 @@
     reg:file [ reg:file "image/vnd.radiance"; reg:type "template" ];
     reg:name "vnd.radiance";
     reg:xref Gre:, R:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

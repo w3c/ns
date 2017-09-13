@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.oipf.contentaccessstreaming+xml";
     reg:xref Cl:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.microsoft.windows.thumbnail-cache";
     reg:xref Hen:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

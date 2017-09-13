@@ -10,5 +10,5 @@
     reg:file [ reg:file "image/vnd.zbrush.pcx"; reg:type "template" ];
     reg:name "vnd.zbrush.pcx";
     reg:xref Chr:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

@@ -9,5 +9,5 @@
         [ reg:file "application/activemessage"; reg:type "template" ];
     reg:name "activemessage";
     reg:xref Ehu:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

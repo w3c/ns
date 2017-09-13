@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Yut: <../../person/Yutaka_Ozaki#>.
 
-medi:undefined reg:record :.
+medi:model reg:record :.
 
 :
     reg:file [ reg:file "model/vnd.gtw"; reg:type "template" ];

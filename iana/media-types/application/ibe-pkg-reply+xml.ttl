@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/ibe-pkg-reply+xml"; reg:type "template" ];
     reg:name "ibe-pkg-reply+xml";
     reg:xref html:rfc5408.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

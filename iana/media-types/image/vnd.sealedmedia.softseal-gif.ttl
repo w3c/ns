@@ -8,5 +8,5 @@
     [ reg:file "image/vnd.sealedmedia.softseal-gif"; reg:type "template" ];
     reg:name "vnd.sealedmedia.softseal.gif";
     reg:xref D:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

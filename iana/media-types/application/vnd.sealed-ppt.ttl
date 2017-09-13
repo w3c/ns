@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.sealed-ppt"; reg:type "template" ];
     reg:name "vnd.sealed.ppt";
     reg:xref D:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

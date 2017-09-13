@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/fdt+xml"; reg:type "template" ];
     reg:name "fdt+xml";
     reg:xref html:rfc6726.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -8,5 +8,5 @@
     reg:name "G7221";
     reg:updated "2015-07-21";
     reg:xref html:rfc5577.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.octel.sbc"; reg:type "template" ];
     reg:name "vnd.octel.sbc";
     reg:xref Gre:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

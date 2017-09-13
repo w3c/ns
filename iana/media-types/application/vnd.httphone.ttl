@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.httphone"; reg:type "template" ];
     reg:name "vnd.httphone";
     reg:xref Fr:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

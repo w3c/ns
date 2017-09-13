@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.mozilla.xul+xml"; reg:type "template" ];
     reg:name "vnd.mozilla.xul+xml";
     reg:xref Br:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

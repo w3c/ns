@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.kodak-descriptor"; reg:type "template" ];
     reg:name "vnd.kodak-descriptor";
     reg:xref Mich:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

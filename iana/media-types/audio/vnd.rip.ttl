@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.rip"; reg:type "template" ];
     reg:name "vnd.rip";
     reg:xref M:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

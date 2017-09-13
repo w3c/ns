@@ -10,5 +10,5 @@
     reg:file [ reg:file "font/otf"; reg:type "template" ];
     reg:name "otf";
     reg:xref html:rfc8081.
-medi:undefined reg:record :.
+medi:font reg:record :.
 

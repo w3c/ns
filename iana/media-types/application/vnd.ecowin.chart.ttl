@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.ecowin.chart"; reg:type "template" ];
     reg:name "vnd.ecowin.chart";
     reg:xref Thom:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

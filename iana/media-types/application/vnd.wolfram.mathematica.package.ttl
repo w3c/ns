@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.wolfram.mathematica.package";
     reg:xref Wolfr:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

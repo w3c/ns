@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.spotfire.sfs"; reg:type "template" ];
     reg:name "vnd.spotfire.sfs";
     reg:xref Stef:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.Mobius.PLC"; reg:type "template" ];
     reg:name "vnd.Mobius.PLC";
     reg:xref All:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

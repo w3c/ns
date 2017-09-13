@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.qualcomm.brew-app-res"; reg:type "template" ];
     reg:name "vnd.qualcomm.brew-app-res";
     reg:xref Gle:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

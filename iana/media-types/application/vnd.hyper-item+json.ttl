@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.hyper-item+json"; reg:type "template" ];
     reg:name "vnd.hyper-item+json";
     reg:xref M:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

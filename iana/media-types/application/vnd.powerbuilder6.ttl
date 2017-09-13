@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.powerbuilder6"; reg:type "template" ];
     reg:name "vnd.powerbuilder6";
     reg:xref D:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

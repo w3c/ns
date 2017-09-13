@@ -14,5 +14,5 @@
             ];
     reg:name "EmergencyCallData.ServiceInfo+xml";
     reg:xref html:rfc7852.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

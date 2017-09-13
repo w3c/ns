@@ -10,5 +10,5 @@
     reg:file [ reg:file "audio/opus"; reg:type "template" ];
     reg:name "opus";
     reg:xref html:rfc7587.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

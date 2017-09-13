@@ -8,5 +8,5 @@
     reg:file [ reg:file "audio/sp-midi"; reg:type "template" ];
     reg:name "sp-midi";
     reg:xref Tim:, Tom:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

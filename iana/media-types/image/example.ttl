@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/example"; reg:type "template" ];
     reg:name "example";
     reg:xref html:rfc4735.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

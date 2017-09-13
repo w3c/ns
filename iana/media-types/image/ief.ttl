@@ -8,5 +8,5 @@
     terms:description "Image Exchange Format";
     reg:name "ief";
     reg:xref html:rfc1314.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.realvnc.bed"; reg:type "template" ];
     reg:name "vnd.realvnc.bed";
     reg:xref Nic:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

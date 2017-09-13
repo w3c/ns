@@ -5,7 +5,7 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix Web: <../../person/Web3D_X3D#>.
 
-medi:undefined reg:record :.
+medi:model reg:record :.
 
 :
     terms:date "2014-04-08"^^XML:date;

@@ -11,5 +11,5 @@
     reg:name "rfc+xml";
     reg:updated "2016-12-19"^^XML:date;
     reg:xref html:rfc7991.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

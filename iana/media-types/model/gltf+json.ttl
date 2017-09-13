@@ -6,7 +6,7 @@
 @prefix Khr: <../../person/Khronos#>.
 @prefix Uli: <../../person/Uli_Klumpp#>.
 
-medi:undefined reg:record :.
+medi:model reg:record :.
 
 :
     terms:date "2016-07-01"^^XML:date;

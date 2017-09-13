@@ -6,5 +6,5 @@
 
 : reg:name "xslt+xml"; reg:xref W3C:, n1:media-type-registration.
 
-medi:undefined reg:record :.
+medi:application reg:record :.
 

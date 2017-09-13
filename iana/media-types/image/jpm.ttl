@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/jpm"; reg:type "template" ];
     reg:name "jpm";
     reg:xref html:rfc3745.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

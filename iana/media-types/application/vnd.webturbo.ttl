@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.webturbo"; reg:type "template" ];
     reg:name "vnd.webturbo";
     reg:xref Y:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

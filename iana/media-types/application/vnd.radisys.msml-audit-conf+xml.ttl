@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.radisys.msml-audit-conf+xml";
     reg:xref html:rfc5707.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

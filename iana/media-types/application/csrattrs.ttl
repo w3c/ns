@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/csrattrs"; reg:type "template" ];
     reg:name "csrattrs";
     reg:xref html:rfc7030.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

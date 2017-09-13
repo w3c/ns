@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.emclient.accessrequest+xml";
     reg:xref Fil:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

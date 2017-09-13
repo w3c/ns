@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/poc-settings+xml"; reg:type "template" ];
     reg:name "poc-settings+xml";
     reg:xref html:rfc4354.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

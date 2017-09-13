@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.vmx.cvsd"; reg:type "template" ];
     reg:name "vnd.vmx.cvsd";
     reg:xref Gre:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

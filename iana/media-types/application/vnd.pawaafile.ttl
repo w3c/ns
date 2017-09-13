@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.pawaafile"; reg:type "template" ];
     reg:name "vnd.pawaafile";
     reg:xref Pr:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

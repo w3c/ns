@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/vnd.tml"; reg:type "template" ];
     reg:name "vnd.tml";
     reg:xref Joe:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

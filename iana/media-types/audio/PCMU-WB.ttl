@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/PCMU-WB"; reg:type "template" ];
     reg:name "PCMU-WB";
     reg:xref html:rfc5391.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

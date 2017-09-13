@@ -12,5 +12,5 @@
     [ reg:file "application/vnd.gov.sk.e-form+xml"; reg:type "template" ];
     reg:name "vnd.gov.sk.e-form+xml";
     reg:xref Pet:, Stef:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

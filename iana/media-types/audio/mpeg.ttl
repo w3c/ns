@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/mpeg"; reg:type "template" ];
     reg:name "mpeg";
     reg:xref html:rfc3003.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

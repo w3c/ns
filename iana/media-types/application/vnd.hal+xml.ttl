@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.hal+xml"; reg:type "template" ];
     reg:name "vnd.hal+xml";
     reg:xref Mik:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

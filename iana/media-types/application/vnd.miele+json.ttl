@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/vnd.miele+json"; reg:type "template" ];
     reg:name "vnd.miele+json";
     reg:xref Nil:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

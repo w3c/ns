@@ -11,5 +11,5 @@
     reg:name "vnd.anki";
     reg:updated "2015-09-01"^^XML:date;
     reg:xref Ker:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

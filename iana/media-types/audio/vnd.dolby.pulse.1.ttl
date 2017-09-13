@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.dolby.pulse.1"; reg:type "template" ];
     reg:name "vnd.dolby.pulse.1";
     reg:xref Ste:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

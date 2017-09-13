@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.xmpie.xlim"; reg:type "template" ];
     reg:name "vnd.xmpie.xlim";
     reg:xref Reu:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

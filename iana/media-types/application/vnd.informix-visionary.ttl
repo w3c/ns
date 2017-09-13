@@ -9,5 +9,5 @@
     reg:name
     "vnd.informix-visionary - OBSOLETED in favor of application/vnd.visionary";
     reg:xref Chr:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

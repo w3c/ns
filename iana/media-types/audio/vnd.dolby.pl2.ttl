@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.dolby.pl2"; reg:type "template" ];
     reg:name "vnd.dolby.pl2";
     reg:xref Ste:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

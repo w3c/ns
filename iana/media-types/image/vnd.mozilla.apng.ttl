@@ -10,5 +10,5 @@
     reg:file [ reg:file "image/vnd.mozilla.apng"; reg:type "template" ];
     reg:name "vnd.mozilla.apng";
     reg:xref Stu:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

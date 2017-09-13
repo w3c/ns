@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.shana.informed.formdata"; reg:type "template" ];
     reg:name "vnd.shana.informed.formdata";
     reg:xref Guy:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

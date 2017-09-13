@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/vnd.artsquare"; reg:type "template" ];
     reg:name "vnd.artsquare";
     reg:xref Chr:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

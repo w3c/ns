@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.century-systems.tcp_stream";
     reg:xref Shu:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

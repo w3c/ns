@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/samlmetadata+xml"; reg:type "template" ];
     reg:name "samlmetadata+xml";
     reg:xref OAS:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

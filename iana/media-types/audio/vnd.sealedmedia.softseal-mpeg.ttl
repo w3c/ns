@@ -8,5 +8,5 @@
     [ reg:file "audio/vnd.sealedmedia.softseal-mpeg"; reg:type "template" ];
     reg:name "vnd.sealedmedia.softseal.mpeg";
     reg:xref D:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

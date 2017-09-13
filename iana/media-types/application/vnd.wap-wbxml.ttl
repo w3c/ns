@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.wap-wbxml"; reg:type "template" ];
     reg:name "vnd.wap.wbxml";
     reg:xref Pet:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

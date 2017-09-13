@@ -14,5 +14,5 @@
             ];
     reg:name "vnd.ims.lti.v2.toolproxy.id+json";
     reg:xref Lis:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

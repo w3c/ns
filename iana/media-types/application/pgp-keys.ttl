@@ -5,5 +5,5 @@
 
 : reg:name "pgp-keys"; reg:xref html:rfc3156 .
 
-medi:undefined reg:record :.
+medi:application reg:record :.
 

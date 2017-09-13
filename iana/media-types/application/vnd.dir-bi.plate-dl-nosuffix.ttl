@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.dir-bi.plate-dl-nosuffix";
     reg:xref Y:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

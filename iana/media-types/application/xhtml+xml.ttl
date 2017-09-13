@@ -9,5 +9,5 @@
     reg:name "xhtml+xml";
     reg:updated "2014-10-23";
     reg:xref Rob:, W3C:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

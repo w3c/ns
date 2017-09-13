@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/vnd.micro+json"; reg:type "template" ];
     reg:name "vnd.micro+json";
     reg:xref D:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

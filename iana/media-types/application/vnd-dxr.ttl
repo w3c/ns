@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd-dxr"; reg:type "template" ];
     reg:name "vnd.dxr";
     reg:xref Mich:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

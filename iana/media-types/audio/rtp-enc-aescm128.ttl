@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/rtp-enc-aescm128"; reg:type "template" ];
     reg:name "rtp-enc-aescm128";
     reg:xref n1:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

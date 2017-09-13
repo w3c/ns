@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.4SB"; reg:type "template" ];
     reg:name "vnd.4SB";
     reg:xref Ser:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

@@ -9,5 +9,5 @@
     [ reg:file "application/vnd.oma.poc.groups+xml"; reg:type "template" ];
     reg:name "vnd.oma.poc.groups+xml";
     reg:xref OMA:, Se:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

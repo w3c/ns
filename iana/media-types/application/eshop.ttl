@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/eshop"; reg:type "template" ];
     reg:name "eshop";
     reg:xref Ste:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

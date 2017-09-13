@@ -8,5 +8,5 @@
     reg:file [ reg:file "application/vnd.etsi.pstn+xml"; reg:type "template" ];
     reg:name "vnd.etsi.pstn+xml";
     reg:xref Jiw:, Thom:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/resource-lists+xml"; reg:type "template" ];
     reg:name "resource-lists+xml";
     reg:xref html:rfc4826.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/alto-error+json"; reg:type "template" ];
     reg:name "alto-error+json";
     reg:xref html:rfc7285.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

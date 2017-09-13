@@ -3,7 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix html: <https://tools.ietf.org/html/>.
 
-medi:undefined reg:record :.
+medi:multipart reg:record :.
 
 : reg:name "parallel"; reg:xref html:rfc2045, html:rfc2046 .
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd.dece.graphic"; reg:type "template" ];
     reg:name "vnd.dece.graphic";
     reg:xref Mich:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

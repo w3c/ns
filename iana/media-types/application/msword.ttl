@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/msword"; reg:type "template" ];
     reg:name "msword";
     reg:xref P:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

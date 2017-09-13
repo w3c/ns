@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/encaprtp"; reg:type "template" ];
     reg:name "encaprtp";
     reg:xref html:rfc6849.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

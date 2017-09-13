@@ -11,5 +11,5 @@
     reg:file [ reg:file "application/n-triples"; reg:type "template" ];
     reg:name "n-triples";
     reg:xref Eri:, W3C:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

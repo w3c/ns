@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.bint.med-content"; reg:type "template" ];
     reg:name "vnd.bint.med-content";
     reg:xref Hei:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

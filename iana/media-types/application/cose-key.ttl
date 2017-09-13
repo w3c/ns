@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/cose-key"; reg:type "template" ];
     reg:name "cose-key";
     reg:xref html:rfc8152.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

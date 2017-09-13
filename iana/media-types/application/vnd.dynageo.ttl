@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.dynageo"; reg:type "template" ];
     reg:name "vnd.dynageo";
     reg:xref Rol:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

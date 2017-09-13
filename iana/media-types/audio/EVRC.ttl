@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/EVRC"; reg:type "template" ];
     reg:name "EVRC";
     reg:xref html:rfc4788.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

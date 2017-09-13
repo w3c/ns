@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.adobe.flash-movie"; reg:type "template" ];
     reg:name "vnd.adobe.flash.movie";
     reg:xref Hen:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

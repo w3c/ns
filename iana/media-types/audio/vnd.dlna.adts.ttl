@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.dlna.adts"; reg:type "template" ];
     reg:name "vnd.dlna.adts";
     reg:xref Edw:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

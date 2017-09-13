@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/jose+json"; reg:type "template" ];
     reg:name "jose+json";
     reg:xref html:rfc7515.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

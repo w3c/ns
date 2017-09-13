@@ -1994,7 +1994,6 @@
 @prefix n1057: <image/vnd.zbrush.pcx#>.
 @prefix n1058: <../person/Chris_Charabaruk#>.
 @prefix wmf: <image/wmf#>.
-@prefix und: <../person/undefined#>.
 @prefix n1059: <http://www.w3.org/2000/01/rdf-schema#>.
 @prefix CPIM: <message/CPIM#>.
 @prefix del: <message/delivery-status#>.
@@ -2056,7 +2055,54 @@
 @prefix n1081: <multipart/vnd.bint.med-plus#>.
 @prefix voic: <multipart/voice-message#>.
 @prefix n1082: <multipart/x-mixed-replace#>.
-@prefix n1083: <text/1d-interleaved-parityfec#>.
+@prefix n1083: <../person/_3MF#>.
+@prefix Attil: <../person/Attila_Babits#>.
+@prefix Benj: <../person/Benja_Fallenstein#>.
+@prefix Be: <../person/Benson_Margulies#>.
+@prefix Bor: <../person/Boris_Rabinovitch#>.
+@prefix n1084: <../person/Christopher_Brooks#>.
+@prefix D19: <../person/Dan_Bradley#>.
+@prefix D20: <../person/Dave_Crocker#>.
+@prefix D21: <../person/David_Lee_Lambert#>.
+@prefix D22: <../person/David_Underdown#>.
+@prefix n1085: <../person/Eric_Lengyel#>.
+@prefix Fei: <../person/Feiyu_Xie#>.
+@prefix Fr4: <../person/Frank_Rottman#>.
+@prefix G5: <../person/Gary_Adams#>.
+@prefix H3: <../person/Hans-Dieter_A._Hiep#>.
+@prefix Heiko: <../person/Heiko_Recktenwald#>.
+@prefix Henr: <../person/Henry_Spencer#>.
+@prefix IEE: <../person/IEEE-ISTO-PWG-PPP#>.
+@prefix IPTC: <../person/IPTC#>.
+@prefix J17: <../person/James_Riordon#>.
+@prefix J18: <../person/Jan_Nelson#>.
+@prefix J19: <../person/Jason_Pratt#>.
+@prefix Jess: <../person/Jesse_Alama#>.
+@prefix n1086: <../person/John_Clark#>.
+@prefix n1087: <../person/John_Ellson#>.
+@prefix n1088: <../person/John_Lines#>.
+@prefix n1089: <../person/John_Wolfe#>.
+@prefix n1090: <../person/John-Mark_Gurney#>.
+@prefix K1: <../person/Kari_E._Hurtta#>.
+@prefix n1091: <../person/Kevin_Murray#>.
+@prefix Mic14: <../person/Michael_Powers#>.
+@prefix Miku: <../person/Mikusiak_Lubos#>.
+@prefix N2: <../person/Nathan_Zerbe#>.
+@prefix N3: <../person/National_Archives_UK#>.
+@prefix Nich: <../person/Nicholas_Parks_Young#>.
+@prefix P10: <../person/Parasolid#>.
+@prefix Pee: <../person/Peeter_Piegaze#>.
+@prefix Pett: <../person/Petteri_Kangaslampi#>.
+@prefix Reg: <../person/Regis_Dehoux#>.
+@prefix Shuj: <../person/Shuji_Nakamura#>.
+@prefix Ste1: <../person/Stefan_Eilemann#>.
+@prefix n1092: <../person/Steve_Allen#>.
+@prefix n1093: <../person/Tom_McGinty#>.
+@prefix Uli: <../person/Uli_Klumpp#>.
+@prefix Web: <../person/Web3D_X3D#>.
+@prefix Web3D: <../person/Web3D#>.
+@prefix Yut: <../person/Yutaka_Ozaki#>.
+@prefix n1094: <text/1d-interleaved-parityfec#>.
 @prefix c2: <text/cache-manifest#>.
 @prefix c3: <text/calendar#>.
 @prefix css: <text/css#>.
@@ -2080,15 +2126,15 @@
 @prefix p6: <text/parityfec#>.
 @prefix pl: <text/plain#>.
 @prefix prove: <text/provenance-notation#>.
-@prefix n1084: <text/prs.fallenstein.rst#>.
-@prefix n1085: <text/prs.lines.tag#>.
-@prefix n1086: <text/prs.prop.logic#>.
+@prefix n1095: <text/prs.fallenstein.rst#>.
+@prefix n1096: <text/prs.lines.tag#>.
+@prefix n1097: <text/prs.prop.logic#>.
 @prefix r1: <text/raptorfec#>.
 @prefix RE: <text/RED#>.
 @prefix rfc8: <text/rfc822-headers#>.
 @prefix ric: <text/richtext#>.
 @prefix rtf0: <text/rtf#>.
-@prefix n1087: <text/rtp-enc-aescm128#>.
+@prefix n1098: <text/rtp-enc-aescm128#>.
 @prefix rtplo: <text/rtploopback#>.
 @prefix rtx1: <text/rtx#>.
 @prefix SGM: <text/SGML#>.
@@ -2100,39 +2146,39 @@
 @prefix ulpf: <text/ulpfec#>.
 @prefix uri: <text/uri-list#>.
 @prefix vc0: <text/vcard#>.
-@prefix n1088: <text/vnd-a#>.
-@prefix n1089: <text/vnd-curl#>.
-@prefix n1090: <text/vnd.abc#>.
-@prefix n1091: <text/vnd.ascii-art#>.
-@prefix n1092: <text/vnd.debian.copyright#>.
-@prefix n1093: <text/vnd.DMClientScript#>.
-@prefix n1094: <text/vnd.dvb.subtitle#>.
-@prefix n1095: <text/vnd.esmertec.theme-descriptor#>.
-@prefix n1096: <text/vnd.fly#>.
-@prefix n1097: <text/vnd.fmi.flexstor#>.
-@prefix n1098: <text/vnd.graphviz#>.
-@prefix n1099: <text/vnd.in3d.3dml#>.
-@prefix n1100: <text/vnd.in3d.spot#>.
-@prefix n1101: <text/vnd.IPTC.NewsML#>.
-@prefix n1102: <text/vnd.IPTC.NITF#>.
-@prefix n1103: <text/vnd.latex-z#>.
-@prefix n1104: <text/vnd.motorola.reflex#>.
-@prefix n1105: <text/vnd.ms-mediapackage#>.
-@prefix n1106: <text/vnd.net2phone.commcenter.command#>.
-@prefix n1107: <text/vnd.radisys.msml-basic-layout#>.
-@prefix n1108: <text/vnd.si.uricatalogue#>.
-@prefix n1109: <text/vnd.sun.j2me.app-descriptor#>.
-@prefix n1110: <text/vnd.trolltech.linguist#>.
-@prefix n1111: <text/vnd.wap-wml#>.
-@prefix n1112: <text/vnd.wap.si#>.
-@prefix n1113: <text/vnd.wap.sl#>.
-@prefix n1114: <text/vnd.wap.wmlscript#>.
-@prefix n1115: <text/xml-external-parsed-entity#>.
+@prefix n1099: <text/vnd-a#>.
+@prefix n1100: <text/vnd-curl#>.
+@prefix n1101: <text/vnd.abc#>.
+@prefix n1102: <text/vnd.ascii-art#>.
+@prefix n1103: <text/vnd.debian.copyright#>.
+@prefix n1104: <text/vnd.DMClientScript#>.
+@prefix n1105: <text/vnd.dvb.subtitle#>.
+@prefix n1106: <text/vnd.esmertec.theme-descriptor#>.
+@prefix n1107: <text/vnd.fly#>.
+@prefix n1108: <text/vnd.fmi.flexstor#>.
+@prefix n1109: <text/vnd.graphviz#>.
+@prefix n1110: <text/vnd.in3d.3dml#>.
+@prefix n1111: <text/vnd.in3d.spot#>.
+@prefix n1112: <text/vnd.IPTC.NewsML#>.
+@prefix n1113: <text/vnd.IPTC.NITF#>.
+@prefix n1114: <text/vnd.latex-z#>.
+@prefix n1115: <text/vnd.motorola.reflex#>.
+@prefix n1116: <text/vnd.ms-mediapackage#>.
+@prefix n1117: <text/vnd.net2phone.commcenter.command#>.
+@prefix n1118: <text/vnd.radisys.msml-basic-layout#>.
+@prefix n1119: <text/vnd.si.uricatalogue#>.
+@prefix n1120: <text/vnd.sun.j2me.app-descriptor#>.
+@prefix n1121: <text/vnd.trolltech.linguist#>.
+@prefix n1122: <text/vnd.wap-wml#>.
+@prefix n1123: <text/vnd.wap.si#>.
+@prefix n1124: <text/vnd.wap.sl#>.
+@prefix n1125: <text/vnd.wap.wmlscript#>.
+@prefix n1126: <text/xml-external-parsed-entity#>.
 @prefix xml1: <text/xml#>.
-@prefix n1116: <video/1d-interleaved-parityfec#>.
-@prefix n1117: <video/3gpp-tt#>.
-@prefix n1118: <video/3gpp#>.
-@prefix n1119: <video/3gpp2#>.
+@prefix n1127: <video/1d-interleaved-parityfec#>.
+@prefix n1128: <video/3gpp-tt#>.
+@prefix n1129: <video/3gpp#>.
+@prefix n1130: <video/3gpp2#>.
 @prefix BMPEG: <video/BMPEG#>.
 @prefix BT656: <video/BT656#>.
 @prefix CelB: <video/CelB#>.
@@ -2144,7 +2190,7 @@
 @prefix H263: <video/H263-2000#>.
 @prefix H260: <video/H263#>.
 @prefix H264: <video/H264-RCDO#>.
-@prefix n1120: <video/H264-SVC#>.
+@prefix n1131: <video/H264-SVC#>.
 @prefix H262: <video/H264#>.
 @prefix H265: <video/H265#>.
 @prefix iso: <video/iso.segment#>.
@@ -2157,7 +2203,7 @@
 @prefix mp41: <video/mp4#>.
 @prefix MP: <video/MP4V-ES#>.
 @prefix mpe1: <video/mpeg#>.
-@prefix n1121: <video/mpeg4-generic#>.
+@prefix n1132: <video/mpeg4-generic#>.
 @prefix MPV: <video/MPV#>.
 @prefix nv: <video/nv#>.
 @prefix o: <video/ogg#>.
@@ -2166,95 +2212,49 @@
 @prefix qui: <video/quicktime#>.
 @prefix r2: <video/raptorfec#>.
 @prefix r3: <video/raw#>.
-@prefix n1122: <video/rtp-enc-aescm128#>.
+@prefix n1133: <video/rtp-enc-aescm128#>.
 @prefix rtp0: <video/rtploopback#>.
 @prefix rtx2: <video/rtx#>.
 @prefix SMP: <video/SMPTE292M#>.
 @prefix ulpfe: <video/ulpfec#>.
 @prefix vc1: <video/vc1#>.
-@prefix n1123: <video/vnd-mpegurl#>.
-@prefix n1124: <video/vnd-vivo#>.
-@prefix n1125: <video/vnd.CCTV#>.
-@prefix n1126: <video/vnd.dece-mp4#>.
-@prefix n1127: <video/vnd.dece.hd#>.
-@prefix n1128: <video/vnd.dece.mobile#>.
-@prefix n1129: <video/vnd.dece.pd#>.
-@prefix n1130: <video/vnd.dece.sd#>.
-@prefix n1131: <video/vnd.dece.video#>.
-@prefix n1132: <video/vnd.directv-mpeg#>.
-@prefix n1133: <video/vnd.directv.mpeg-tts#>.
-@prefix n1134: <video/vnd.dlna.mpeg-tts#>.
-@prefix n1135: <video/vnd.dvb.file#>.
-@prefix n1136: <video/vnd.fvt#>.
-@prefix n1137: <video/vnd.hns.video#>.
-@prefix n1138: <video/vnd.iptvforum.1dparityfec-1010#>.
-@prefix n1139: <video/vnd.iptvforum.1dparityfec-2005#>.
-@prefix n1140: <video/vnd.iptvforum.2dparityfec-1010#>.
-@prefix n1141: <video/vnd.iptvforum.2dparityfec-2005#>.
-@prefix n1142: <video/vnd.iptvforum.ttsavc#>.
-@prefix n1143: <video/vnd.iptvforum.ttsmpeg2#>.
-@prefix n1144: <video/vnd.motorola.video#>.
-@prefix n1145: <video/vnd.motorola.videop#>.
-@prefix n1146: <video/vnd.ms-playready.media.pyv#>.
-@prefix n1147: <video/vnd.nokia.interleaved-multimedia#>.
-@prefix n1148: <video/vnd.nokia.videovoip#>.
-@prefix n1149: <video/vnd.objectvideo#>.
-@prefix n1150: <video/vnd.radgamettools.bink#>.
-@prefix n1151: <video/vnd.radgamettools.smacker#>.
-@prefix n1152: <video/vnd.sealed-swf#>.
-@prefix n1153: <video/vnd.sealed.mpeg1#>.
-@prefix n1154: <video/vnd.sealed.mpeg4#>.
-@prefix n1155: <video/vnd.sealedmedia.softseal-mov#>.
-@prefix n1156: <video/vnd.uvvu-mp4#>.
+@prefix n1134: <video/vnd-mpegurl#>.
+@prefix n1135: <video/vnd-vivo#>.
+@prefix n1136: <video/vnd.CCTV#>.
+@prefix n1137: <video/vnd.dece-mp4#>.
+@prefix n1138: <video/vnd.dece.hd#>.
+@prefix n1139: <video/vnd.dece.mobile#>.
+@prefix n1140: <video/vnd.dece.pd#>.
+@prefix n1141: <video/vnd.dece.sd#>.
+@prefix n1142: <video/vnd.dece.video#>.
+@prefix n1143: <video/vnd.directv-mpeg#>.
+@prefix n1144: <video/vnd.directv.mpeg-tts#>.
+@prefix n1145: <video/vnd.dlna.mpeg-tts#>.
+@prefix n1146: <video/vnd.dvb.file#>.
+@prefix n1147: <video/vnd.fvt#>.
+@prefix n1148: <video/vnd.hns.video#>.
+@prefix n1149: <video/vnd.iptvforum.1dparityfec-1010#>.
+@prefix n1150: <video/vnd.iptvforum.1dparityfec-2005#>.
+@prefix n1151: <video/vnd.iptvforum.2dparityfec-1010#>.
+@prefix n1152: <video/vnd.iptvforum.2dparityfec-2005#>.
+@prefix n1153: <video/vnd.iptvforum.ttsavc#>.
+@prefix n1154: <video/vnd.iptvforum.ttsmpeg2#>.
+@prefix n1155: <video/vnd.motorola.video#>.
+@prefix n1156: <video/vnd.motorola.videop#>.
+@prefix n1157: <video/vnd.ms-playready.media.pyv#>.
+@prefix n1158: <video/vnd.nokia.interleaved-multimedia#>.
+@prefix n1159: <video/vnd.nokia.videovoip#>.
+@prefix n1160: <video/vnd.objectvideo#>.
+@prefix n1161: <video/vnd.radgamettools.bink#>.
+@prefix n1162: <video/vnd.radgamettools.smacker#>.
+@prefix n1163: <video/vnd.sealed-swf#>.
+@prefix n1164: <video/vnd.sealed.mpeg1#>.
+@prefix n1165: <video/vnd.sealed.mpeg4#>.
+@prefix n1166: <video/vnd.sealedmedia.softseal-mov#>.
+@prefix n1167: <video/vnd.uvvu-mp4#>.
 @prefix VP8: <video/VP8#>.
-@prefix Henr: <../person/Henry_Spencer#>.
-@prefix Nich: <../person/Nicholas_Parks_Young#>.
-@prefix n1157: <../person/_3MF#>.
 @prefix www: <http://www.3mf.io/>.
-@prefix Uli: <../person/Uli_Klumpp#>.
-@prefix J17: <../person/Jason_Pratt#>.
-@prefix J18: <../person/James_Riordon#>.
-@prefix Mic14: <../person/Michael_Powers#>.
-@prefix Attil: <../person/Attila_Babits#>.
-@prefix Yut: <../person/Yutaka_Ozaki#>.
-@prefix n1158: <../person/Christopher_Brooks#>.
-@prefix Bor: <../person/Boris_Rabinovitch#>.
-@prefix n1159: <../person/Eric_Lengyel#>.
-@prefix P10: <../person/Parasolid#>.
-@prefix Be: <../person/Benson_Margulies#>.
-@prefix Web: <../person/Web3D_X3D#>.
-@prefix Web3D: <../person/Web3D#>.
-@prefix D19: <../person/Dave_Crocker#>.
-@prefix D20: <../person/David_Underdown#>.
-@prefix N2: <../person/National_Archives_UK#>.
-@prefix Pee: <../person/Peeter_Piegaze#>.
-@prefix Jess: <../person/Jesse_Alama#>.
-@prefix Benj: <../person/Benja_Fallenstein#>.
-@prefix n1160: <../person/John_Lines#>.
-@prefix H3: <../person/Hans-Dieter_A._Hiep#>.
-@prefix IEE: <../person/IEEE-ISTO-PWG-PPP#>.
-@prefix Reg: <../person/Regis_Dehoux#>.
-@prefix n1161: <../person/Steve_Allen#>.
-@prefix D21: <../person/Dan_Bradley#>.
-@prefix Ste1: <../person/Stefan_Eilemann#>.
-@prefix n1162: <../person/John-Mark_Gurney#>.
-@prefix K1: <../person/Kari_E._Hurtta#>.
-@prefix n1163: <../person/John_Ellson#>.
-@prefix IPTC: <../person/IPTC#>.
-@prefix Miku: <../person/Mikusiak_Lubos#>.
-@prefix J19: <../person/Jan_Nelson#>.
-@prefix Fei: <../person/Feiyu_Xie#>.
-@prefix G5: <../person/Gary_Adams#>.
-@prefix D22: <../person/David_Lee_Lambert#>.
-@prefix Heiko: <../person/Heiko_Recktenwald#>.
-@prefix n1164: <../person/John_Wolfe#>.
-@prefix Fr4: <../person/Frank_Rottmann#>.
-@prefix N3: <../person/Nathan_Zerbe#>.
-@prefix n1165: <../person/Kevin_Murray#>.
-@prefix Shuj: <../person/Shuji_Nakamura#>.
-@prefix n1166: <../person/Tom_McGinty#>.
-@prefix Pett: <../person/Petteri_Kangaslampi#>.
-@prefix n1167: <../person/John_Clark#>.
+@prefix Fr5: <../person/Frank_Rottmann#>.
 
 n0:
     reg:file
@@ -4995,7 +4995,7 @@ n304:
     terms:date "2014-05-20"^^XML:date;
     reg:file [ reg:file "application/vnd.geo+json"; reg:type "template" ];
     reg:name
-    "vnd.geo+json (OBSOLETED by  undefined  in favor of application/geo+json)";
+    "vnd.geo+json (OBSOLETED by  rfc7946  in favor of application/geo+json)";
     reg:xref Se:.
 n305:
     reg:file [ reg:file "application/vnd.geocube+xml"; reg:type "template" ];
@@ -9527,50 +9527,10 @@ wmf:
         [ reg:file "image/wmf"; reg:type "template" ];
     reg:name "wmf", "x-wmf - DEPRECATED in favor of image/wmf";
     reg:xref html:rfc7903.
-<> :registry :undefined.
+<> :registry :media-types.
 
-:n0 reg:person und:.
-
-:undefined
-    n1059:comment
-        "Other MIME Media Type Parameters:  undefined",
-        """Per Section 3.1 of  undefined , Standards Tree requests made through IETF
-documents will be reviewed and approved by the IESG, while requests made by
-other recognized standards organizations will be reviewed by the Designated
-Expert in accordance with the Specification Required policy. IANA will verify
-that this organization is recognized as a standards organization by the
-IESG.""",
-        "See  undefined  for information about 'charset' parameter handling for text media types.",
-        """The 'example' media type is used for examples. Any subtype following the media
-type syntax may be used in those examples. No subtype can be registered with
-IANA. For more information see undefined .
-
-Note: The occurrence of an 'example' media type as a media type outside
-of examples, e.g. in a Content-Type header, is an error and should be
-reported to the implementor. undefined  undefined  
-specifies that Content Types, Content Subtypes, Character Sets, Access 
-Types, and conversion values for MIME mail will be assigned and listed 
-by the IANA.""",
-        """undefined  specifies that Media Types (formerly known as MIME types) and Media
-Subtypes will be assigned and listed by the IANA.
-
-Procedures for registering Media Types can be found in  undefined ,  undefined , 
-and  undefined . Additional procedures for registering media types for transfer via 
-Real-time Transport Protocol (RTP) can be found in  undefined .
-
-The following is the list of Directories of Content Types and Subtypes. If you wish to 
-register a Media Type with the IANA, please see the following for the online application:
-
- undefined 
-
-Other Media Type Parameters:  undefined 
-Media Type Sub-Parameters:  undefined""";
-    reg:category "Multipurpose Internet Mail Extensions (MIME) and Media Types";
-    reg:expert "Ned Freed (primary), Murray Kucherawy (secondary)";
-    reg:id
-        "application", "audio", "examples", "font", "image", "media-types",
-        "message", "model", "multipart", "text", "video";
-    reg:people :n0;
+:application
+    reg:id "application";
     reg:record
         n0:, n1:, n3:, A2L:, n4:, n5:, n6:, n7:, n8:, n9:, n10:, n11:, n12:,
         n13:, n14:, AML:, n15:, n16:, ATF:, ATFX:, n17:, n18:, n19:, n20:, n21:,
@@ -9688,12 +9648,16 @@ Media Type Sub-Parameters:  undefined""";
         n953:, n954:, n955:, n956:, n957:, n958:, voi:, vq:, w:, who:, wh:,
         wid:, wit:, wor:, wsd:, wsp:, x:, x40:, x0:, xc:, xc0:, xc1:, xc2:,
         xc3:, xc4:, xco:, xcon:, xen:, xht:, xm:, n960:, n961:, xml0:, xmp:,
-        xop:, xsl:, xv:, y:, y0:, y1:, y2:, y3:, yin:, zip:, zlib:, n963:,
-        n964:, n965:, n966:, n967:, AMR:, n968:, AM:, n969:, n970:, ATR:, AT:,
-        ATRA:, b1:, BV16:, BV32:, cle:, CN:, DAT12:, dls:, dsr:, n971:, n972:,
-        n973:, DV:, DVI4:, e:, en:, EVR:, EVRC:, EVRC0:, EVRC1:, EVRCB:, EV:,
-        EVR0:, EVRCN:, EVR1:, EVR2:, EVRCW:, EVR3:, EVR4:, EVS:, ex0:, fwd:,
-        G71:, G719:, G722:, G7221:, G723:, G72:, G7:, G726:, n974:, G728:,
+        xop:, xsl:, xv:, y:, y0:, y1:, y2:, y3:, yin:, zip:, zlib:;
+    reg:title "application".
+:audio
+    reg:id "audio";
+    reg:record
+        n963:, n964:, n965:, n966:, n967:, AMR:, n968:, AM:, n969:, n970:, ATR:,
+        AT:, ATRA:, b1:, BV16:, BV32:, cle:, CN:, DAT12:, dls:, dsr:, n971:,
+        n972:, n973:, DV:, DVI4:, e:, en:, EVR:, EVRC:, EVRC0:, EVRC1:, EVRCB:,
+        EV:, EVR0:, EVRCN:, EVR1:, EVR2:, EVRCW:, EVR3:, EVR4:, EVS:, ex0:,
+        fwd:, G71:, G719:, G722:, G7221:, G723:, G72:, G7:, G726:, n974:, G728:,
         G729:, G7291:, G729D:, G729E:, GSM:, GS:, GSM0:, iLBC:, ip:, L16:, L20:,
         L24:, L8:, LPC:, MELP:, MEL:, ME:, MELP6:, mob:, mp40:, MP4:, mp0:,
         MPA:, mpe0:, mpeg4:, og:, opus:, p2:, PCM:, PCMA:, PC:, PCMU:, n975:,
@@ -9702,42 +9666,168 @@ Media Type Sub-Parameters:  undefined""";
         n981:, n982:, n983:, n984:, n985:, n986:, n987:, n988:, n989:, n990:,
         n991:, n992:, n994:, n995:, n996:, n997:, n998:, n999:, n1000:, n1001:,
         n1002:, n1003:, n1004:, n1005:, n1006:, n1008:, n1009:, n1011:, n1012:,
-        n1013:, n1014:, n1015:, n1016:, n1017:, n1018:, n1019:, vor:, vo:, col:,
-        otf:, sfnt:, ttf:, woff:, woff2:, bmp:, cgm:, n1020:, emf:, ex1:, fit:,
-        g3f:, gif:, ief:, jls:, jp2:, jpeg:, jpm:, jpx:, ktx:, n1022:, png:,
-        n1024:, n1025:, pwg:, svg:, t380:, tif:, tiff:, n1026:, n1027:, n1028:,
-        n1029:, n1030:, n1031:, n1032:, n1033:, n1034:, n1035:, n1036:, n1037:,
-        n1038:, n1039:, n1040:, n1041:, n1042:, n1043:, n1044:, n1045:, n1046:,
-        n1047:, n1049:, n1050:, n1051:, n1052:, n1054:, n1055:, n1057:, wmf:,
-        CPIM:, del:, dis:, ex2:, ext:, feedb:, glob:, glo:, gl:, g:, htt:, imd:,
-        new0:, p3:, rf:, n1060:, sip:, sipfr:, tr:, n1061:, n1062:, n1063:,
-        ex3:, glt:, ige:, mesh:, n1064:, n1065:, n1066:, n1067:, n1068:, n1069:,
-        n1070:, n1071:, n1072:, n1073:, n1074:, n1075:, n1076:, n1077:, vrml:,
-        x3d:, x3:, n1078:, n1079:, n1080:, byter:, dig:, encr:, ex4:, for:, he:,
-        mixed:, p4:, rel0:, repo:, sig:, n1081:, voic:, n1082:, n1083:, c2:,
-        c3:, css:, cs:, csv0:, dir:, dn:, ec:, enc0:, enr:, ex5:, fw:, gr:,
-        htm:, j0:, jcr:, m8:, miz:, n3100:, p5:, p6:, pl:, prove:, n1084:,
-        n1085:, n1086:, r1:, RE:, rfc8:, ric:, rtf0:, n1087:, rtplo:, rtx1:,
-        SGM:, str:, t140:, t10:, troff:, tur:, ulpf:, uri:, vc0:, n1088:,
-        n1089:, n1090:, n1091:, n1092:, n1093:, n1094:, n1095:, n1096:, n1097:,
-        n1098:, n1099:, n1100:, n1101:, n1102:, n1103:, n1104:, n1105:, n1106:,
-        n1107:, n1108:, n1109:, n1110:, n1111:, n1112:, n1113:, n1114:, n1115:,
-        xml1:, n1116:, n1117:, n1118:, n1119:, BMPEG:, BT656:, CelB:, DV0:,
-        enc1:, ex6:, H261:, H26:, H263:, H260:, H264:, n1120:, H262:, H265:,
-        iso:, JPEG:, jpe:, mj2:, MP1S:, MP2P:, MP2T:, mp41:, MP:, mpe1:, n1121:,
-        MPV:, nv:, o:, p7:, poi:, qui:, r2:, r3:, n1122:, rtp0:, rtx2:, SMP:,
-        ulpfe:, vc1:, n1123:, n1124:, n1125:, n1126:, n1127:, n1128:, n1129:,
-        n1130:, n1131:, n1132:, n1133:, n1134:, n1135:, n1136:, n1137:, n1138:,
-        n1139:, n1140:, n1141:, n1142:, n1143:, n1144:, n1145:, n1146:, n1147:,
-        n1148:, n1149:, n1150:, n1151:, n1152:, n1153:, n1154:, n1155:, n1156:,
-        VP8:;
+        n1013:, n1014:, n1015:, n1016:, n1017:, n1018:, n1019:, vor:, vo:;
+    reg:title "audio".
+:examples
+    n1059:comment
+        "Other MIME Media Type Parameters:  media-types-parameters",
+        """The 'example' media type is used for examples. Any subtype following the media
+type syntax may be used in those examples. No subtype can be registered with
+IANA. For more information see rfc4735 .
+
+Note: The occurrence of an 'example' media type as a media type outside
+of examples, e.g. in a Content-Type header, is an error and should be
+reported to the implementor. rfc2045  rfc2046  
+specifies that Content Types, Content Subtypes, Character Sets, Access 
+Types, and conversion values for MIME mail will be assigned and listed 
+by the IANA.""";
+    reg:id "examples";
+    reg:title "example".
+:font
+    reg:id "font";
+    reg:record col:, otf:, sfnt:, ttf:, woff:, woff2:;
+    reg:title "font".
+:image
+    reg:id "image";
+    reg:record
+        bmp:, cgm:, n1020:, emf:, ex1:, fit:, g3f:, gif:, ief:, jls:, jp2:,
+        jpeg:, jpm:, jpx:, ktx:, n1022:, png:, n1024:, n1025:, pwg:, svg:,
+        t380:, tif:, tiff:, n1026:, n1027:, n1028:, n1029:, n1030:, n1031:,
+        n1032:, n1033:, n1034:, n1035:, n1036:, n1037:, n1038:, n1039:, n1040:,
+        n1041:, n1042:, n1043:, n1044:, n1045:, n1046:, n1047:, n1049:, n1050:,
+        n1051:, n1052:, n1054:, n1055:, n1057:, wmf:;
+    reg:title "image".
+:media-types
+    n1059:comment
+        """Per Section 3.1 of  rfc6838 , Standards Tree requests made through IETF
+documents will be reviewed and approved by the IESG, while requests made by
+other recognized standards organizations will be reviewed by the Designated
+Expert in accordance with the Specification Required policy. IANA will verify
+that this organization is recognized as a standards organization by the
+IESG.""",
+        """rfc2046  specifies that Media Types (formerly known as MIME types) and Media
+Subtypes will be assigned and listed by the IANA.
+
+Procedures for registering Media Types can be found in  rfc6838 ,  rfc4289 , 
+and  rfc6657 . Additional procedures for registering media types for transfer via 
+Real-time Transport Protocol (RTP) can be found in  rfc4855 .
+
+The following is the list of Directories of Content Types and Subtypes. If you wish to 
+register a Media Type with the IANA, please see the following for the online application:
+
+ http://www.iana.org/form/media-types 
+
+Other Media Type Parameters:  media-types-parameters 
+Media Type Sub-Parameters:  media-type-sub-parameters""";
+    reg:category "Multipurpose Internet Mail Extensions (MIME) and Media Types";
+    reg:expert "Ned Freed (primary), Murray Kucherawy (secondary)";
+    reg:id "media-types";
+    reg:people :n0;
     reg:registration_rule "Expert Review for Vendor and Personal Trees.";
-    reg:registry :undefined;
-    reg:title
-        "Media Types", "application", "audio", "example", "font", "image",
-        "message", "model", "multipart", "text", "video";
+    reg:registry
+        :application, :audio, :examples, :font, :image, :message, :model,
+        :multipart, :text, :video;
+    reg:title "Media Types";
     reg:updated "2017-07-24";
     reg:xref html:rfc4855, html:rfc6838.
+:message
+    reg:id "message";
+    reg:record
+        CPIM:, del:, dis:, ex2:, ext:, feedb:, glob:, glo:, gl:, g:, htt:, imd:,
+        new0:, p3:, rf:, n1060:, sip:, sipfr:, tr:, n1061:, n1062:;
+    reg:title "message".
+:model
+    reg:id "model";
+    reg:record
+        n1063:, ex3:, glt:, ige:, mesh:, n1064:, n1065:, n1066:, n1067:, n1068:,
+        n1069:, n1070:, n1071:, n1072:, n1073:, n1074:, n1075:, n1076:, n1077:,
+        vrml:, x3d:, x3:, n1078:;
+    reg:title "model".
+:multipart
+    reg:id "multipart";
+    reg:record
+        n1079:, n1080:, byter:, dig:, encr:, ex4:, for:, he:, mixed:, p4:,
+        rel0:, repo:, sig:, n1081:, voic:, n1082:;
+    reg:title "multipart".
+:n0
+    reg:person
+        n2:, n1083:, AC:, Adri:, Aki:, Al0:, Ale:, A:, Al:, n871:, Alex:, Ali:,
+        All:, Alle:, Alo:, Ami:, Am:, An0:, An:, And:, Andr:, Andy:, n544:,
+        Ann:, Apr:, Ari:, Arm:, Arn:, ASAM:, As:, ASH:, Attil:, Avi:, Axe:, B:,
+        Ben:, Benj:, Be:, Bi:, Bil:, Bill:, Bin:, Bipl:, Bjo:, Bl:, Bob:, Bor:,
+        Br1:, Br0:, Bre:, Bri:, Bri0:, Br:, Bruc:, Bru:, Bry:, n747:, C0:, C2:,
+        C1:, Ch0:, Ch2:, Ch1:, Ch3:, C:, CHA:, n465:, n1058:, Chris:, n491:,
+        Chr:, Chr0:, Chr1:, n1084:, n377:, Ch:, Chri:, Chu:, Cl:, Cle:, Cli:,
+        Cr0:, Cr:, Cur:, D10:, D19:, D13:, D12:, D4:, D11:, D5:, D8:, D20:,
+        D16:, D:, D6:, D17:, D2:, D9:, D1:, D0:, D14:, D21:, D18:, D7:, D15:,
+        D3:, D22:, De:, Del:, Der:, Dev:, Dic:, DIC:, Di:, Dir:, Do:, Don:,
+        Dou:, Dov:, Ecm:, Edw:, Ehu:, Ele:, Eli:, n846:, n488:, Eric:, n499:,
+        n1085:, Er:, Eri:, n454:, Erik:, Et:, Fei:, Fil:, Fr1:, Fr0:, Fr3:, F:,
+        Fr4:, Fr2:, Fr:, Fred:, Fre:, Fu:, Fum:, G1:, G5:, G:, G2:, G0:, G3:,
+        G4:, Ge:, Geo:, Ger:, Gi:, Gil:, Giu:, Gius:, n869:, Gl:, Gle:, Glen:,
+        n1010:, n1023:, Glenn:, Got:, Gr:, Gre:, Greg:, n1048:, Grego:, Gue:,
+        Gus:, Gu:, Guy:, Gwen:, H2:, H3:, H1:, H:, H0:, Heik:, Heiko:, Hei:,
+        Hem:, Hen:, He:, Henr:, Hiro:, Hir:, Holst:, Hori:, I:, I0:, IEE:,
+        IETF:, Il:, Ily:, Ing:, Int:, Ios:, IPTC:, Ir:, ISO:, ITS:, Iv:, n879:,
+        J8:, J13:, J3:, J9:, J:, J2:, J7:, J17:, J12:, J15:, J14:, J16:, J18:,
+        J5:, J10:, J4:, J11:, J19:, J6:, J0:, J1:, Je:, Je0:, Jeff:, Jef:, Jeg:,
+        Jen:, Jer:, Jerr:, Jess:, Jes:, Ji0:, Ji:, Jim:, Jiw:, Jod:, n459:,
+        Joe:, Joer:, Joey:, Jo:, n1086:, n1087:, n933:, n753:, n818:, n1088:,
+        Joh:, n636:, John:, n1089:, n1090:, Jon:, Jon0:, Jon1:, Joost:, Jorg:,
+        Jor:, Jos:, Jue:, Jul:, Ju:, Jun:, Juo:, Jus:, K1:, K0:, K:, Keii:,
+        Kei:, Ken:, Ker:, Kev:, Kevi:, Ke:, n1091:, Kevin:, Khe:, Khr:, Kim:,
+        Ki:, Kiy:, Kyu:, L:, L0:, Lee:, Leo:, Lev:, Lind:, Lin:, Lis:, Lu:,
+        Luc:, Luk:, Lyn:, M19:, M:, M18:, M15:, M32:, M24:, M4:, M3:, M9:, M31:,
+        M29:, M28:, M17:, M14:, M1:, M26:, M11:, M0:, M33:, M30:, M12:, M22:,
+        M25:, M23:, M13:, M5:, M21:, M7:, M6:, M10:, M2:, M8:, M16:, M20:, M27:,
+        Mer:, Mic2:, Mic6:, Mic11:, Mic3:, Mich:, Mi:, Mic13:, Mic:, Mic5:,
+        Mic8:, Mic10:, Mic4:, Mic9:, Mic12:, Mic0:, Mic14:, Mic7:, Mic1:,
+        Miche:, Mick:, Mig:, Mike:, n129:, n119:, n332:, n147:, n993:, Mik:,
+        Mikh:, Miku:, Mon:, Mr:, N1:, N0:, N2:, N:, N3:, n1053:, Nich:, Ni:,
+        Nic:, Nicol:, Nil:, Nin:, Nobuk:, Noki:, Nor:, NTT:, OAS:, OASIS:, OGC:,
+        n648:, OM:, O:, n856:, OMA:, Op:, Ope:, Ore:, Osk:, Ozg:, P10:, P3:,
+        P2:, P9:, P:, P1:, P0:, P8:, P5:, P6:, P4:, P7:, Pee:, Per:, n427:,
+        n772:, n268:, Pete:, Pe:, n319:, n742:, Peter:, Pet:, n857:, Petr:,
+        Pett:, Ph:, Phi:, Pr:, Pr0:, Priy:, Purv:, R3:, R4:, R5:, R2:, R1:, R0:,
+        Ree:, Reg:, Reinh:, Ren:, Reu:, Rhy:, Ric:, Rin:, n430:, Rob:, Robe:,
+        Ro:, Rober:, R:, Robi:, Roge:, Rog:, Rol:, Rom:, Roy:, Ry:, S:, S0:,
+        S1:, S2:, Sc:, Sco:, Se:, Se0:, Seb:, Seb0:, Sei:, Ser:, Sh0:, Sh1:,
+        Sh:, Shi:, Shin:, Sho:, Shu:, Shuj:, Sim:, Si:, SIS:, Sl:, Ste1:, Ste0:,
+        Stef:, n1092:, n344:, n161:, n1007:, n193:, n542:, Ste:, n109:, Stev:,
+        n531:, n749:, n549:, n826:, St:, Steve:, n739:, n1056:, n959:, n877:,
+        Stu:, Suk:, Sv:, Sw:, Syb:, Szi:, T0:, T4:, T2:, T1:, T5:, T3:, T:,
+        Ter:, Thi:, Tho1:, Th:, Tho2:, Tho5:, Tho0:, Tho4:, Tho:, Thom:, Tho3:,
+        Tim:, n534:, Ti:, n414:, n884:, Timo:, Tob:, Tod:, Tom:, n383:, n1093:,
+        n978:, Tomo:, Tor:, To:, Tro:, UEF:, Uli:, Ulr:, Uni:, Uw:, Uwe:, Vi:,
+        Vic:, Vik:, Vl:, n801:, W3:, W:, W3C:, WAP:, Web:, Web3D:, Wen:, Wes:,
+        n920:, Wil:, Willi:, Wi:, Will:, Wolfr:, XEN:, Y0:, Y3:, Y1:, Y2:, Yil:,
+        Yokoy:, Yu:, Yuk:, Y:, Yut:, Yv:, Yve:, Zig:.
+:text
+    n1059:comment
+        "See  rfc6657  for information about 'charset' parameter handling for text media types.";
+    reg:id "text";
+    reg:record
+        n1094:, c2:, c3:, css:, cs:, csv0:, dir:, dn:, ec:, enc0:, enr:, ex5:,
+        fw:, gr:, htm:, j0:, jcr:, m8:, miz:, n3100:, p5:, p6:, pl:, prove:,
+        n1095:, n1096:, n1097:, r1:, RE:, rfc8:, ric:, rtf0:, n1098:, rtplo:,
+        rtx1:, SGM:, str:, t140:, t10:, troff:, tur:, ulpf:, uri:, vc0:, n1099:,
+        n1100:, n1101:, n1102:, n1103:, n1104:, n1105:, n1106:, n1107:, n1108:,
+        n1109:, n1110:, n1111:, n1112:, n1113:, n1114:, n1115:, n1116:, n1117:,
+        n1118:, n1119:, n1120:, n1121:, n1122:, n1123:, n1124:, n1125:, n1126:,
+        xml1:;
+    reg:title "text".
+:video
+    reg:id "video";
+    reg:record
+        n1127:, n1128:, n1129:, n1130:, BMPEG:, BT656:, CelB:, DV0:, enc1:,
+        ex6:, H261:, H26:, H263:, H260:, H264:, n1131:, H262:, H265:, iso:,
+        JPEG:, jpe:, mj2:, MP1S:, MP2P:, MP2T:, mp41:, MP:, mpe1:, n1132:, MPV:,
+        nv:, o:, p7:, poi:, qui:, r2:, r3:, n1133:, rtp0:, rtx2:, SMP:, ulpfe:,
+        vc1:, n1134:, n1135:, n1136:, n1137:, n1138:, n1139:, n1140:, n1141:,
+        n1142:, n1143:, n1144:, n1145:, n1146:, n1147:, n1148:, n1149:, n1150:,
+        n1151:, n1152:, n1153:, n1154:, n1155:, n1156:, n1157:, n1158:, n1159:,
+        n1160:, n1161:, n1162:, n1163:, n1164:, n1165:, n1166:, n1167:, VP8:;
+    reg:title "video".
 CPIM:
     reg:file [ reg:file "message/CPIM"; reg:type "template" ];
     reg:name "CPIM";
@@ -9822,7 +9912,7 @@ n1063:
     terms:date "2017-05-12"^^XML:date;
     reg:file [ reg:file "model/3mf"; reg:type "template" ];
     reg:name "3mf";
-    reg:xref n1157:, Mic1:, www:specification.
+    reg:xref n1083:, Mic1:, www:specification.
 ex3:
     reg:file [ reg:file "model/example"; reg:type "template" ];
     reg:name "example";
@@ -9841,11 +9931,11 @@ mesh: reg:name "mesh"; reg:xref html:rfc2077 .
 n1064:
     reg:file [ reg:file "model/vnd-dwf"; reg:type "template" ];
     reg:name "vnd.dwf";
-    reg:xref J17:.
+    reg:xref J19:.
 n1065:
     reg:file [ reg:file "model/vnd.collada+xml"; reg:type "template" ];
     reg:name "vnd.collada+xml";
-    reg:xref J18:.
+    reg:xref J17:.
 n1066:
     reg:file [ reg:file "model/vnd.flatland.3dml"; reg:type "template" ];
     reg:name "vnd.flatland.3dml";
@@ -9865,7 +9955,7 @@ n1069:
 n1070:
     reg:file [ reg:file "model/vnd.moml+xml"; reg:type "template" ];
     reg:name "vnd.moml+xml";
-    reg:xref n1158:.
+    reg:xref n1084:.
 n1071:
     reg:file [ reg:file "model/vnd.mts"; reg:type "template" ];
     reg:name "vnd.mts";
@@ -9874,7 +9964,7 @@ n1072:
     terms:date "2014-04-24"^^XML:date;
     reg:file [ reg:file "model/vnd.opengex"; reg:type "template" ];
     reg:name "vnd.opengex";
-    reg:xref n1159:.
+    reg:xref n1085:.
 n1073:
     reg:file
     [ reg:file "model/vnd.parasolid.transmit-binary"; reg:type "template" ];
@@ -9945,7 +10035,7 @@ for:
 he:
     reg:file [ reg:file "multipart/header-set"; reg:type "template" ];
     reg:name "header-set";
-    reg:xref D19:.
+    reg:xref D20:.
 mixed: reg:name "mixed"; reg:xref html:rfc2045, html:rfc2046 .
 
 p4: reg:name "parallel"; reg:xref html:rfc2045, html:rfc2046 .
@@ -9977,7 +10067,7 @@ n1082:
     reg:file [ reg:file "multipart/x-mixed-replace"; reg:type "template" ];
     reg:name "x-mixed-replace";
     reg:xref Robi:, W3C:.
-n1083:
+n1094:
     reg:file [ reg:file "text/1d-interleaved-parityfec"; reg:type "template" ];
     reg:name "1d-interleaved-parityfec";
     reg:xref html:rfc6015.
@@ -9998,7 +10088,7 @@ cs:
     terms:date "2014-11-21"^^XML:date;
     reg:file [ reg:file "text/csv-schema"; reg:type "template" ];
     reg:name "csv-schema";
-    reg:xref D20:, N2:.
+    reg:xref D22:, N3:.
 csv0:
     reg:file [ reg:file "text/csv"; reg:type "template" ];
     reg:name "csv";
@@ -10072,15 +10162,15 @@ prove:
     reg:file [ reg:file "text/provenance-notation"; reg:type "template" ];
     reg:name "provenance-notation";
     reg:xref Iv:, W3C:.
-n1084:
+n1095:
     reg:file [ reg:file "text/prs.fallenstein.rst"; reg:type "template" ];
     reg:name "prs.fallenstein.rst";
     reg:xref Benj:.
-n1085:
+n1096:
     reg:file [ reg:file "text/prs.lines.tag"; reg:type "template" ];
     reg:name "prs.lines.tag";
-    reg:xref n1160:.
-n1086:
+    reg:xref n1088:.
+n1097:
     terms:date "2016-04-04"^^XML:date;
     reg:file [ reg:file "text/prs.prop.logic"; reg:type "template" ];
     reg:name "prs.prop.logic";
@@ -10103,7 +10193,7 @@ rtf0:
     reg:file [ reg:file "text/rtf"; reg:type "template" ];
     reg:name "rtf";
     reg:xref P0:.
-n1087:
+n1098:
     reg:file [ reg:file "text/rtp-enc-aescm128"; reg:type "template" ];
     reg:name "rtp-enc-aescm128";
     reg:xref n2:.
@@ -10152,121 +10242,121 @@ vc0:
     reg:file [ reg:file "text/vcard"; reg:type "template" ];
     reg:name "vcard";
     reg:xref html:rfc6350.
-n1088:
+n1099:
     terms:date "2014-02-07"^^XML:date;
     reg:file [ reg:file "text/vnd-a"; reg:type "template" ];
     reg:name "vnd.a";
     reg:xref Reg:.
-n1089:
+n1100:
     reg:file [ reg:file "text/vnd-curl"; reg:type "template" ];
     reg:name "vnd.curl";
     reg:xref Ro:.
-n1090:
+n1101:
     reg:file [ reg:file "text/vnd.abc"; reg:type "template" ];
     reg:name "vnd.abc";
-    reg:xref n1161:.
-n1091:
+    reg:xref n1092:.
+n1102:
     terms:date "2016-08-12"^^XML:date;
     reg:file [ reg:file "text/vnd.ascii-art"; reg:type "template" ];
     reg:name "vnd.ascii-art";
     reg:xref Kim:.
-n1092:
+n1103:
     reg:file [ reg:file "text/vnd.debian.copyright"; reg:type "template" ];
     reg:name "vnd.debian.copyright";
     reg:xref C:.
-n1093:
+n1104:
     reg:file [ reg:file "text/vnd.DMClientScript"; reg:type "template" ];
     reg:name "vnd.DMClientScript";
-    reg:xref D21:.
-n1094:
+    reg:xref D19:.
+n1105:
     reg:file [ reg:file "text/vnd.dvb.subtitle"; reg:type "template" ];
     reg:name "vnd.dvb.subtitle";
     reg:xref Mic4:, Peter:.
-n1095:
+n1106:
     reg:file
     [ reg:file "text/vnd.esmertec.theme-descriptor"; reg:type "template" ];
     reg:name "vnd.esmertec.theme-descriptor";
     reg:xref Ste1:.
-n1096:
+n1107:
     reg:file [ reg:file "text/vnd.fly"; reg:type "template" ];
     reg:name "vnd.fly";
-    reg:xref n1162:.
-n1097:
+    reg:xref n1090:.
+n1108:
     reg:file [ reg:file "text/vnd.fmi.flexstor"; reg:type "template" ];
     reg:name "vnd.fmi.flexstor";
     reg:xref K1:.
-n1098:
+n1109:
     reg:file [ reg:file "text/vnd.graphviz"; reg:type "template" ];
     reg:name "vnd.graphviz";
-    reg:xref n1163:.
-n1099:
+    reg:xref n1087:.
+n1110:
     reg:file [ reg:file "text/vnd.in3d.3dml"; reg:type "template" ];
     reg:name "vnd.in3d.3dml";
     reg:xref Mic14:.
-n1100:
+n1111:
     reg:file [ reg:file "text/vnd.in3d.spot"; reg:type "template" ];
     reg:name "vnd.in3d.spot";
     reg:xref Mic14:.
-n1101:
+n1112:
     reg:file [ reg:file "text/vnd.IPTC.NewsML"; reg:type "template" ];
     reg:name "vnd.IPTC.NewsML";
     reg:xref IPTC:.
-n1102:
+n1113:
     reg:file [ reg:file "text/vnd.IPTC.NITF"; reg:type "template" ];
     reg:name "vnd.IPTC.NITF";
     reg:xref IPTC:.
-n1103:
+n1114:
     reg:file [ reg:file "text/vnd.latex-z"; reg:type "template" ];
     reg:name "vnd.latex-z";
     reg:xref Miku:.
-n1104:
+n1115:
     reg:file [ reg:file "text/vnd.motorola.reflex"; reg:type "template" ];
     reg:name "vnd.motorola.reflex";
     reg:xref M14:.
-n1105:
+n1116:
     reg:file [ reg:file "text/vnd.ms-mediapackage"; reg:type "template" ];
     reg:name "vnd.ms-mediapackage";
-    reg:xref J19:.
-n1106:
+    reg:xref J18:.
+n1117:
     reg:file
     [ reg:file "text/vnd.net2phone.commcenter.command"; reg:type "template" ];
     reg:name "vnd.net2phone.commcenter.command";
     reg:xref Fei:.
-n1107:
+n1118:
     reg:file
     [ reg:file "text/vnd.radisys.msml-basic-layout"; reg:type "template" ];
     reg:name "vnd.radisys.msml-basic-layout";
     reg:xref html:rfc5707.
-n1108:
+n1119:
     reg:file [ reg:file "text/vnd.si.uricatalogue"; reg:type "template" ];
     reg:name "vnd.si.uricatalogue - OBSOLETED by request";
     reg:xref Nich:.
-n1109:
+n1120:
     reg:file
     [ reg:file "text/vnd.sun.j2me.app-descriptor"; reg:type "template" ];
     reg:name "vnd.sun.j2me.app-descriptor";
     reg:xref G5:.
-n1110:
+n1121:
     reg:file [ reg:file "text/vnd.trolltech.linguist"; reg:type "template" ];
     reg:name "vnd.trolltech.linguist";
-    reg:xref D22:.
-n1111:
+    reg:xref D21:.
+n1122:
     reg:file [ reg:file "text/vnd.wap-wml"; reg:type "template" ];
     reg:name "vnd.wap.wml";
     reg:xref Pet:.
-n1112:
+n1123:
     reg:file [ reg:file "text/vnd.wap.si"; reg:type "template" ];
     reg:name "vnd.wap.si";
     reg:xref WAP:.
-n1113:
+n1124:
     reg:file [ reg:file "text/vnd.wap.sl"; reg:type "template" ];
     reg:name "vnd.wap.sl";
     reg:xref WAP:.
-n1114:
+n1125:
     reg:file [ reg:file "text/vnd.wap.wmlscript"; reg:type "template" ];
     reg:name "vnd.wap.wmlscript";
     reg:xref Pet:.
-n1115:
+n1126:
     reg:file
     [ reg:file "text/xml-external-parsed-entity"; reg:type "template" ];
     reg:name "xml-external-parsed-entity";
@@ -10275,19 +10365,19 @@ xml1:
     reg:file [ reg:file "text/xml"; reg:type "template" ];
     reg:name "xml";
     reg:xref html:rfc7303.
-n1116:
+n1127:
     reg:file [ reg:file "video/1d-interleaved-parityfec"; reg:type "template" ];
     reg:name "1d-interleaved-parityfec";
     reg:xref html:rfc6015.
-n1117:
+n1128:
     reg:file [ reg:file "video/3gpp-tt"; reg:type "template" ];
     reg:name "3gpp-tt";
     reg:xref html:rfc4396.
-n1118:
+n1129:
     reg:file [ reg:file "video/3gpp"; reg:type "template" ];
     reg:name "3gpp";
     reg:xref html:rfc3839, html:rfc6381.
-n1119:
+n1130:
     reg:file [ reg:file "video/3gpp2"; reg:type "template" ];
     reg:name "3gpp2";
     reg:xref html:rfc4393, html:rfc6381.
@@ -10335,7 +10425,7 @@ H264:
     reg:file [ reg:file "video/H264-RCDO"; reg:type "template" ];
     reg:name "H264-RCDO";
     reg:xref html:rfc6185.
-n1120:
+n1131:
     reg:file [ reg:file "video/H264-SVC"; reg:type "template" ];
     reg:name "H264-SVC";
     reg:xref html:rfc6190.
@@ -10387,7 +10477,7 @@ MP:
     reg:xref html:rfc6416.
 mpe1: reg:name "mpeg"; reg:xref html:rfc2045, html:rfc2046 .
 
-n1121:
+n1132:
     reg:file [ reg:file "video/mpeg4-generic"; reg:type "template" ];
     reg:name "mpeg4-generic";
     reg:xref html:rfc3640.
@@ -10419,7 +10509,7 @@ r2:
     reg:xref html:rfc6682.
 r3: reg:name "raw"; reg:xref html:rfc4175 .
 
-n1122:
+n1133:
     reg:file [ reg:file "video/rtp-enc-aescm128"; reg:type "template" ];
     reg:name "rtp-enc-aescm128";
     reg:xref n2:.
@@ -10443,147 +10533,147 @@ vc1:
     reg:file [ reg:file "video/vc1"; reg:type "template" ];
     reg:name "vc1";
     reg:xref html:rfc4425.
-n1123:
+n1134:
     reg:file [ reg:file "video/vnd-mpegurl"; reg:type "template" ];
     reg:name "vnd.mpegurl";
     reg:xref Heiko:.
-n1124:
+n1135:
     reg:file [ reg:file "video/vnd-vivo"; reg:type "template" ];
     reg:name "vnd.vivo";
-    reg:xref n1164:.
-n1125:
+    reg:xref n1089:.
+n1136:
     reg:file [ reg:file "video/vnd.CCTV"; reg:type "template" ];
     reg:name "vnd.CCTV";
-    reg:xref Fr4:.
-n1126:
+    reg:xref Fr5:.
+n1137:
     reg:file [ reg:file "video/vnd.dece-mp4"; reg:type "template" ];
     reg:name "vnd.dece.mp4";
     reg:xref Mic2:.
-n1127:
+n1138:
     reg:file [ reg:file "video/vnd.dece.hd"; reg:type "template" ];
     reg:name "vnd.dece.hd";
     reg:xref Mic2:.
-n1128:
+n1139:
     reg:file [ reg:file "video/vnd.dece.mobile"; reg:type "template" ];
     reg:name "vnd.dece.mobile";
     reg:xref Mic2:.
-n1129:
+n1140:
     reg:file [ reg:file "video/vnd.dece.pd"; reg:type "template" ];
     reg:name "vnd.dece.pd";
     reg:xref Mic2:.
-n1130:
+n1141:
     reg:file [ reg:file "video/vnd.dece.sd"; reg:type "template" ];
     reg:name "vnd.dece.sd";
     reg:xref Mic2:.
-n1131:
+n1142:
     reg:file [ reg:file "video/vnd.dece.video"; reg:type "template" ];
     reg:name "vnd.dece.video";
     reg:xref Mic2:.
-n1132:
+n1143:
     reg:file [ reg:file "video/vnd.directv-mpeg"; reg:type "template" ];
     reg:name "vnd.directv.mpeg";
-    reg:xref N3:.
-n1133:
+    reg:xref N2:.
+n1144:
     reg:file [ reg:file "video/vnd.directv.mpeg-tts"; reg:type "template" ];
     reg:name "vnd.directv.mpeg-tts";
-    reg:xref N3:.
-n1134:
+    reg:xref N2:.
+n1145:
     reg:file [ reg:file "video/vnd.dlna.mpeg-tts"; reg:type "template" ];
     reg:name "vnd.dlna.mpeg-tts";
     reg:xref Edw:.
-n1135:
+n1146:
     reg:file [ reg:file "video/vnd.dvb.file"; reg:type "template" ];
     reg:name "vnd.dvb.file";
-    reg:xref n1165:, Peter:.
-n1136:
+    reg:xref n1091:, Peter:.
+n1147:
     reg:file [ reg:file "video/vnd.fvt"; reg:type "template" ];
     reg:name "vnd.fvt";
     reg:xref Ari:.
-n1137:
+n1148:
     reg:file [ reg:file "video/vnd.hns.video"; reg:type "template" ];
     reg:name "vnd.hns.video";
     reg:xref Sw:.
-n1138:
+n1149:
     reg:file
     [ reg:file "video/vnd.iptvforum.1dparityfec-1010"; reg:type "template" ];
     reg:name "vnd.iptvforum.1dparityfec-1010";
     reg:xref Shuj:.
-n1139:
+n1150:
     reg:file
     [ reg:file "video/vnd.iptvforum.1dparityfec-2005"; reg:type "template" ];
     reg:name "vnd.iptvforum.1dparityfec-2005";
     reg:xref Shuj:.
-n1140:
+n1151:
     reg:file
     [ reg:file "video/vnd.iptvforum.2dparityfec-1010"; reg:type "template" ];
     reg:name "vnd.iptvforum.2dparityfec-1010";
     reg:xref Shuj:.
-n1141:
+n1152:
     reg:file
     [ reg:file "video/vnd.iptvforum.2dparityfec-2005"; reg:type "template" ];
     reg:name "vnd.iptvforum.2dparityfec-2005";
     reg:xref Shuj:.
-n1142:
+n1153:
     reg:file [ reg:file "video/vnd.iptvforum.ttsavc"; reg:type "template" ];
     reg:name "vnd.iptvforum.ttsavc";
     reg:xref Shuj:.
-n1143:
+n1154:
     reg:file [ reg:file "video/vnd.iptvforum.ttsmpeg2"; reg:type "template" ];
     reg:name "vnd.iptvforum.ttsmpeg2";
     reg:xref Shuj:.
-n1144:
+n1155:
     reg:file [ reg:file "video/vnd.motorola.video"; reg:type "template" ];
     reg:name "vnd.motorola.video";
-    reg:xref n1166:.
-n1145:
+    reg:xref n1093:.
+n1156:
     reg:file [ reg:file "video/vnd.motorola.videop"; reg:type "template" ];
     reg:name "vnd.motorola.videop";
-    reg:xref n1166:.
-n1146:
+    reg:xref n1093:.
+n1157:
     reg:file
     [ reg:file "video/vnd.ms-playready.media.pyv"; reg:type "template" ];
     reg:name "vnd.ms-playready.media.pyv";
     reg:xref n1007:.
-n1147:
+n1158:
     reg:file
     [ reg:file "video/vnd.nokia.interleaved-multimedia"; reg:type "template" ];
     reg:name "vnd.nokia.interleaved-multimedia";
     reg:xref Pett:.
-n1148:
+n1159:
     reg:file [ reg:file "video/vnd.nokia.videovoip"; reg:type "template" ];
     reg:name "vnd.nokia.videovoip";
     reg:xref Noki:.
-n1149:
+n1160:
     reg:file [ reg:file "video/vnd.objectvideo"; reg:type "template" ];
     reg:name "vnd.objectvideo";
-    reg:xref n1167:.
-n1150:
+    reg:xref n1086:.
+n1161:
     reg:file [ reg:file "video/vnd.radgamettools.bink"; reg:type "template" ];
     reg:name "vnd.radgamettools.bink";
     reg:xref Hen:.
-n1151:
+n1162:
     reg:file
     [ reg:file "video/vnd.radgamettools.smacker"; reg:type "template" ];
     reg:name "vnd.radgamettools.smacker";
     reg:xref Hen:.
-n1152:
+n1163:
     reg:file [ reg:file "video/vnd.sealed-swf"; reg:type "template" ];
     reg:name "vnd.sealed.swf";
     reg:xref D15:.
-n1153:
+n1164:
     reg:file [ reg:file "video/vnd.sealed.mpeg1"; reg:type "template" ];
     reg:name "vnd.sealed.mpeg1";
     reg:xref D15:.
-n1154:
+n1165:
     reg:file [ reg:file "video/vnd.sealed.mpeg4"; reg:type "template" ];
     reg:name "vnd.sealed.mpeg4";
     reg:xref D15:.
-n1155:
+n1166:
     reg:file
     [ reg:file "video/vnd.sealedmedia.softseal-mov"; reg:type "template" ];
     reg:name "vnd.sealedmedia.softseal.mov";
     reg:xref D15:.
-n1156:
+n1167:
     reg:file [ reg:file "video/vnd.uvvu-mp4"; reg:type "template" ];
     reg:name "vnd.uvvu.mp4";
     reg:xref Mic2:.
@@ -10592,720 +10682,2916 @@ VP8:
     reg:file [ reg:file "video/VP8"; reg:type "template" ];
     reg:name "VP8";
     reg:xref html:rfc7741.
-und:
-    reg:id
-        "AC_Mahendran", "ASAM", "ASHRAE", "Adrian_F\u00f6der", "Akinori_Taya",
-        "Alan_Francis", "Alex_Crawford", "Alex_Devasia", "Alex_Dubov",
-        "Alex_Sibilev", "Alexis_Tamas", "Ali_Teffahi", "Allen_Gillam",
-        "Allen_K._Kabayama", "Aloke_Gupta", "Amir_Gaash", "Amir_Herzberg",
-        "Anatoly_Techtonik", "Anders_Hansson", "Anders_Sandholm", "Andrew_Burt",
-        "Andy_Dryden", "Andy_Mutz", "Ann_McLaughlin", "April_Gandert",
-        "Arild_Fuldseth", "Armands_Strazds", "Arne_Gerdes", "Asang_Dani",
-        "Attila_Babits", "Avi_Primo", "Axel_Ferrazzini", "Bayard_Kohlhepp",
-        "Ben_Simon", "Benja_Fallenstein", "Benson_Margulies", "Bill_Fenner",
-        "Bill_Janssen", "Bill_Wohler", "Bindu_Rama_Rao", "Biplab_Sarkar",
-        "Bjorn_Wennerstrom", "Blake_Thompson", "Bob_Pentecost",
-        "Boris_Rabinovitch", "Brad_Chase", "Braden_N_McDaniel",
-        "Brett_McDowell", "Brian_Korver", "Brian_McColgan", "Brijesh_Kumar",
-        "Bruce_Martin", "Bruce_Tantlinger", "Bryan_Sullivan", "C._Titus_Brown",
-        "CHATRAS_Bruno", "Carl_Anderson", "Casper_Joost_Eyckelhof",
-        "Catherine_E._White", "Chad_Trabant", "Chandrashekhara_Anantharamu",
-        "Charles_Engelke", "Charles_P._Lamb", "Charles_Plessy", "Chris_Bartram",
-        "Chris_Charabaruk", "Chris_Eich", "Chris_Rae", "Chris_Solc",
-        "Christian_Mercat", "Christian_V._Sciberras", "Christopher_Brooks",
-        "Christopher_Gales", "Christopher_Smith", "Christopher_Snazell",
-        "Chunyun_Xiong", "Claire_DEsclercs", "Clemens_Portele",
-        "Cliff_Gauntlett", "Craig_Bradney", "Craig_Bruce", "Curtis_Parks",
-        "DICOM_Standards_Committee", "Dali_Zheng", "Dan_Bradley", "Dan_DuFeu",
-        "Dan_Plastina", "Daniel_Mould", "Daniel_Schneider", "Daniel_Shelton",
-        "Daniel_Sims", "Dave_Crocker", "Dave_Manning", "Dave_Robin",
-        "David_Applebaum", "David_Brossard", "David_Clunie", "David_Faure",
-        "David_Furbeck", "David_Glazer", "David_Guy", "David_Lee_Lambert",
-        "David_Matthewman", "David_Parker", "David_Petersen", "David_Singer",
-        "David_Underdown", "Dean_Slawson", "Delton_Rowe", "Derek_Smith",
-        "Devyn_Collier_Johnson", "Dick_Floersch", "Dirk_DiGiorgio-Haag",
-        "Dirk_Farin", "Don_Wright", "Donald_E._Eastlake_3rd", "Doug_R._Serres",
-        "Dovid_Lubin", "Ecma_International_Helpdesk", "Edwin_Heredia",
-        "Ehud_Shapiro", "ElectronicZombieCorp", "Eli_Grey", "Eric_Bruno",
-        "Eric_Fleischman", "Eric_Hamilton", "Eric_Ledoux", "Eric_Lengyel",
-        "Eric_Prudhommeaux", "Eric_Turcotte", "Eric_Wedel",
-        "Erik_Ronstr\u00f6m", "Etay_Szekely", "Feiyu_Xie", "Filip_Navara",
-        "Franck_Lefevre", "Francois_Pirsch", "Frank_Cusack", "Frank_Patz",
-        "Frank_Rottman", "Frank_Schoonjans", "Franz_Ombler", "Fred_Waskiewicz",
-        "Frederic_Firmin", "Fu_Siyuan", "Fumio_Tanabe", "Gaige_Paulsen",
-        "Gary_Adams", "Gary_Clueit", "Gary_Ellison", "Gary_Sands",
-        "Gavin_Peacock", "Gayatri_Aravindakumar", "GeoGebra", "George_Williams",
-        "Gert_Buettgenbach", "Giacomo_Guilizzoni", "Gil_Bernabeu",
-        "Giulio_Zambon", "Giuseppe_Naccarato", "Glen_Turner", "Glenn_Forrester",
-        "Glenn_Howes", "Glenn_Levitt", "Glenn_Parsons", "Glenn_Randers-Pehrson",
-        "Glenn_Widener", "Gottfried_Zimmermann", "Greg_Adams",
-        "Greg_Scratchley", "Greg_Vaudreuil", "Greg_Ward", "Gregory_Vaughan",
-        "Guenther_Brammer", "Gus_Asadi", "Guy_Harris", "Guy_Selzler",
-        "Gwenael_Le_Bodic", "Hannes_Scheidler", "Hans-Dieter_A._Hiep",
-        "Hao_Wang", "Harald_T._Alvestrand", "Harms_Moeller",
-        "Heikki_Vesalainen", "Heiko_Recktenwald", "Heinz-Peter_Sch\u00fctz",
-        "Hemant_Thakkar", "Henrik_Andersson", "Henry_Flurry", "Henry_Spencer",
-        "Hiroaki_Takahashi", "Hiroyoshi_Mori", "Holstage",
-        "Horia_Cristian_Slusanschi", "IEEE-ISTO-PWG-PPP", "IETF", "IPTC",
-        "ISO-IEC_JTC1", "ITS-IG-W3C", "Iain_Downs", "Ian_Medland",
-        "Ilan_Mahalal", "Ilya_Ferber", "Ingo_Hammann",
-        "International_Digital_Publishing_Forum", "Ioseb_Dzmanashvili",
-        "Irakli_Nadareishvili", "Ivan_Herman", "J._Scott_Hepler",
-        "Jack_Bennett", "Jakub_Hytka", "James_Bellinger", "James_Berry",
-        "James_F_Philbin", "James_Fields", "James_Minnis", "James_Riordon",
-        "James_Wick", "James_Wigger", "Jamie_Riden", "Jan_Bostrom",
-        "Jan_Nelson", "Jan_Sch\u00fctze", "Janine_Swenson", "Jann_Pruulman",
-        "Jason_Birch", "Jason_Pratt", "Javier_D._Fern\u00e1ndez", "Jay_Doggett",
-        "Jay_Moskowitz", "Jean-Baptiste_Henry", "Jean-Philippe_Goulet",
-        "Jeff_Lawson", "Jeff_Tupper", "Jegulsky", "Jens_Jorgensen",
-        "Jerome_Marcon", "Jerry_Harris", "Jesse_Alama", "Jesse_McGatha",
-        "Jiang_Tian", "Jim_Ancona", "Jim_Spiller", "Jiwan_Han", "Jodi_Moline",
-        "Joe_Prevo", "Joerg_Falkenberg", "Joerg_Heuer", "Joey_Smith",
-        "John-Mark_Gurney", "John_Brinkman", "John_Clark", "John_Ellson",
-        "John_Ingi_Ingimundarson", "John_Kemp", "John_Kwan", "John_Lines",
-        "John_M_Meredith", "John_Mudge", "John_Palmieri", "John_Wolfe",
-        "Jon_Swanson", "Jonathan_Neitz", "Jonathan_Niedfeldt", "Joost",
-        "Jorge_Pando", "Jorn_Wildt", "Joseph_Reagle", "Juern_Laun",
-        "Julien_Grange", "Jun_Sato", "Jun_Yoshitake", "Juoko_Tenhunen",
-        "Justin_Hutchings", "Kari_E._Hurtta", "Katsuhiko_Ichinose",
-        "Kazuyuki_Ashimura", "Keiichi_Shinoda", "Keith_Kester", "Ken_Jibiki",
-        "Kerrick_Staley", "Kevin_Blumberg", "Kevin_Crook", "Kevin_Lau",
-        "Kevin_Murray", "Kevin_Swiber", "Khemchart_Rungchavalnont", "Khronos",
-        "Kim_Scarborough", "Kiyofusa_Fujii", "Kiyoshi_Tashiro", "Kyunghun_Jung",
-        "Larry_Campbell", "Lauri_Tarkkala", "Lee_Harding", "Leon_Bottou",
-        "Levantovsky", "Linda_Welsh", "Linus_Walleij", "Lisa_Mattson",
-        "Luc_Rogge", "Lucas_Maneos", "Luke_Tomasello", "Lyndsey_Ferguson",
-        "Magnus_Nystrom", "Maik_St\u00fchrenberg", "Makoto_Murata",
-        "Malte_Borcherding", "Marc_Douglas_Spencer", "Marc_Hadley",
-        "Marc_Winter", "Marcus_Ligi_B\u00fcschleb", "Mario_Demuth",
-        "Mark_Callow", "Mark_Nottingham", "Mark_Olleson", "Mark_Otaris",
-        "Mark_Patton", "Mark_Powell", "Mark_Risher", "Mark_Wahl",
-        "Marshall_Rose", "Martin_Bailey", "Martin_Dawe", "Martin_Knowles",
-        "Martin_Lambert", "Martin_Talbot", "Martin_Vondrous", "Masaaki_Hirai",
-        "Masahiko_Sugimoto", "Masanori_Murai", "Masanori_Onda", "Masumi_Ogita",
-        "Mathieu_Villegas", "Matt_Kern", "Matthias_Ehmann", "Matthias_Hessling",
-        "Matthias_Ludwig", "Matti_Salmi", "Meredith_Searcy", "Michael_A_Dolan",
-        "Michael_Ashbridge", "Michael_Boyle", "Michael_Dixon", "Michael_Domino",
-        "Michael_Duffy", "Michael_Fox", "Michael_Hammer", "Michael_Hvidsten",
-        "Michael_J._Donahue", "Michael_Koster", "Michael_Lagally",
-        "Michael_Laramie", "Michael_Mansell", "Michael_OBrien",
-        "Michael_Powers", "Michael_Steidl", "Michael_Sweet", "Micheal_Hewett",
-        "Mick_Conley", "Miguel_Angel_Reina_Ortega", "Mike_Amundsen",
-        "Mike_Foley", "Mike_Hearn", "Mike_Kelly", "Mike_Labatt", "Mike_Ward",
-        "Mike_Wexler", "Mikhail_Gorshenev", "Mikusiak_Lubos", "Monty_Solomon",
-        "Mr._Yellow", "NTT-local", "Natarajan_Balasundara", "Nathan_Black",
-        "Nathan_Zerbe", "Nathaniel_Borenstein", "National_Archives_UK",
-        "Ni_Hui", "Nicholas_Parks_Young", "Nick_Reeves", "Nick_Smith",
-        "Nicolas_Helin", "Nils_Langhammer", "Ning_Dong", "Nobukazu_Togashi",
-        "Nokia", "Nor_Helmee", "OASIS",
-        "OASIS_Security_Services_Technical_Committee_SSTC", "OGC", "OMA",
-        "OMA-DM_Work_Group", "OMA_Data_Synchronization_Working_Group",
-        "OMA_Presence_and_Availability_PAG_Working_Group",
-        "OMA_Push_to_Talk_over_Cellular_POC_Working_Group",
-        "Open_Mobile_Alliance_BAC_DLDRM_Working_Group",
-        "Open_Mobile_Naming_Authority", "Oren_Ben-Kiki", "Oskar_Jonsson",
-        "Ozgur_Oyman", "Parasolid", "Pascal_Mayeux", "Pathway_Commons",
-        "Patrick_Koh", "Patrik_Faltstrom", "Paul_Grosso", "Paul_Lindner",
-        "Paul_Norman", "Paul_Santinelli_Jr.", "Paul_Tidwell", "Paul_Walsh",
-        "Paul_Wattenberger", "Peeter_Piegaze", "Per_Ersson", "Pete_Cole",
-        "Pete_Hoch", "Pete_Resnick", "Peter_Astrand", "Peter_Bierman",
-        "Peter_Biro", "Peter_Kriens", "Peter_Siebert", "Peter_Stark",
-        "Peter_Thompson", "Petr_Peterka", "Petteri_Kangaslampi", "Phil_Green",
-        "Philippe_Imoucha", "Prakash_Baskaran", "Prakash_Iyer",
-        "Priya_Dandawate", "Purva_R_Rajkotia", "Rafie_Shamsaasef",
-        "Rajesh_Kumar", "Randolph_Fritz", "Randy_Jones", "Ravinder_Chandhok",
-        "Ray_Simpson", "Reed_Shilts", "Regis_Dehoux", "Reinhard_Hohensee",
-        "Rene_Grothmann", "Reuven_Sherwin", "Rhys_Lewis", "Rick_Rupp",
-        "Rintze_M._Zelle", "Rob_Bailey", "Robby_Simpson", "Robert_Brambley",
-        "Robert_Byrnes", "Robert_Hess", "Roberto_Perelman", "Robin_Berjon",
-        "Roger_Buis", "Roger_Meier", "Roland_Mechling", "Roman_Smolgovsky",
-        "Roy_Yue", "Ryan_Brinkman", "SIS", "Samer_El-Haj-Mahmoud",
-        "Samu_Sarivaara", "Satish_Navarajan", "Saveen_Reddy", "Scott_Becker",
-        "Scott_Simmons", "Sean_Gillies", "Sean_Kelley", "Sebastiaan_Deckers",
-        "Sebastian_Baer", "Seiji_Okudaira", "Serge_De_Jaham", "Shawn_Maloney",
-        "Shay_Cicelsky", "Shicheng_Hu", "Shin_Muto", "Shinji_Kusakari",
-        "Shoji_Hoshina", "Shuji_Fujii", "Shuji_Nakamura", "Simon_Birtwistle",
-        "Simon_Butcher", "Slawomir_Lisznianski", "Stefan_Eilemann",
-        "Stefan_Jernberg", "Stefan_Szilva", "Steve_Allen", "Steve_Aubrey",
-        "Steve_Dellutri", "Steve_DiAcetis", "Steve_Hattersley", "Steve_Judkins",
-        "Steve_Katz", "Steve_Klabnik", "Steve_Leow", "Steve_Mills",
-        "Steve_Rice", "Steve_Rogan", "Steve_Webb", "Steve_Zilles",
-        "Steven_Heintz", "Steven_Klos", "Steven_Martin", "Steven_Pemberton",
-        "Steven_Simonoff", "Stuart_Parmenter", "Sukvinder_S._Gill",
-        "Svante_Schubert", "Swaminathan", "Sybren_Kikstra",
-        "Szilveszter_T\u00f3th", "Tadashi_Gotoh", "Taisuke_Sugimoto",
-        "Takanori_Sudo", "Takashi_Matsumoto", "Takehiro_Sukizaki", "Tanaka",
-        "Tapani_Otala", "Terry_Crowley", "Thinh_Nguyenphu", "Thomas_Belling",
-        "Thomas_Holmstrom", "Thomas_Huth", "Thomas_Kjornes", "Thomas_Olsson",
-        "Thomas_Schoffelen", "Thomas_Stockhammer", "Thomas_Thomsen",
-        "Thomas_Weyn", "Tim_Brody", "Tim_Butler", "Tim_Fisher", "Tim_Macdonald",
-        "Tim_Ocock", "Timo_Kosonen", "Toby_Inkster", "Todd_Joseph",
-        "Tom_Christie", "Tom_Gurak", "Tom_McGinty", "Tom_White",
-        "Tomohiro_Yamamoto", "Tor_Kristensen", "Torben_Frey", "Troy_Sandal",
-        "UEFI_Forum", "Uli_Klumpp", "Ulrich_Kortenkamp", "Unity3d",
-        "Uwe_Hermann", "Uwe_Rauschenbach", "Vicki_DeBarros", "Victor_Costan",
-        "Viktor_Haag", "Vladimir_Vysotsky", "W3C",
-        "W3C_Music_Notation_Community_Group", "W3C_RDF_Working_Group",
-        "W3C_Timed_Text_Working_Group", "WAP-Forum", "Web3D", "Web3D_X3D",
-        "Wenjun_Zeng", "Wesley_Beary", "Wi-Fi_Alliance", "William_C._Appleton",
-        "William_McCoy", "William_Stevenson", "William_Zou", "Wolfram",
-        "XENC_Working_Group", "Yamanaka", "Yaser_Rehem", "Yasuhito_Nagatomo",
-        "Yasuo_Taguchi", "Yiling_Xu", "Yokoyama_Kiyonobu", "Yu_Gu",
-        "Yukari_Ikeda", "Yutaka_Ozaki", "Yves_Kreis", "Yves_Kreis_2",
-        "Y\u00fcksel_Aydemir", "ZigBee", "_3GPP", "_3MF";
+n2:
+    reg:id "_3GPP";
+    reg:name "3GPP - Third Generation Partnership Project";
+    reg:uri "mailto:3gppContact&etsi.org".
+n1083: reg:id "_3MF"; reg:name "3MF Consortium"; reg:uri "http://3mf.io".
+
+AC:
+    reg:id "AC_Mahendran";
+    reg:name "AC Mahendran";
+    reg:updated "2007-11-06";
+    reg:uri "mailto:ac&qualcomm.com".
+Adri:
+    reg:id "Adrian_F\u00f6der";
+    reg:name "Adrian F\u00f6der";
+    reg:updated "2017-02-07";
+    reg:uri "mailto:adrian.foeder&netformic.de".
+Aki:
+    reg:id "Akinori_Taya";
+    reg:name "Akinori Taya";
+    reg:updated "2012-07-09";
+    reg:uri "mailto:a.taya&west.east.ntt.co.jp".
+Al0:
+    reg:id "Alan_Francis";
+    reg:name "Alan Francis";
+    reg:updated "1995-12-19";
+    reg:uri "mailto:A.H.Francis&open.ac.uk".
+Ale:
+    reg:id "Alex_Crawford";
+    reg:name "Alex Crawford";
+    reg:updated "2016-04-15";
+    reg:uri "mailto:alex.crawford&coreos.com".
+A:
+    reg:id "Alex_Devasia";
+    reg:name "Alex Devasia";
+    reg:updated "2001-03-20";
+    reg:uri "mailto:adevasia&mobius.com".
+Al:
+    reg:id "Alex_Dubov";
+    reg:name "Alex Dubov";
+    reg:updated "2015-09-01";
+    reg:uri "mailto:adubov&ea.com".
+n871:
+    reg:id "Alex_Sibilev";
+    reg:name "Alex Sibilev";
+    reg:updated "2014-11-06";
+    reg:uri "mailto:alex.sibilev&tmd.tv".
+Alex:
+    reg:id "Alexis_Tamas";
+    reg:name "Alexis Tamas";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:fsdl&frogans.com".
+Ali:
+    reg:id "Ali_Teffahi";
+    reg:name "Ali Teffahi";
+    reg:updated "2012-04-19";
+    reg:uri "mailto:ateffahi&dtg.org.uk".
+All:
+    reg:id "Allen_Gillam";
+    reg:name "Allen Gillam";
+    reg:updated "2008-07-28";
+    reg:uri "mailto:allen.gillam&hydrostatix.com".
+Alle:
+    reg:id "Allen_K._Kabayama";
+    reg:name "Allen K. Kabayama";
+    reg:updated "1999-06-19";
+    reg:uri "mailto:akabayam&mobius.com".
+Alo:
+    reg:id "Aloke_Gupta";
+    reg:name "Aloke Gupta";
+    reg:updated "1999-04-19";
+    reg:uri "mailto:Aloke_Gupta&ex.cv.hp.com".
+Ami:
+    reg:id "Amir_Gaash";
+    reg:name "Amir Gaash";
+    reg:updated "2006-04-25";
+    reg:uri "mailto:amir.gaash&hp.com".
+Am:
+    reg:id "Amir_Herzberg";
+    reg:name "Amir Herzberg";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:amirh&haifa.vnet.ibm.com".
+An0:
+    reg:id "Anatoly_Techtonik";
+    reg:name "Anatoly Techtonik";
+    reg:updated "2006-04-11";
+    reg:uri "mailto:techtonik&php.net".
+An:
+    reg:id "Anders_Hansson";
+    reg:name "Anders Hansson";
+    reg:updated "2006-09-13";
+    reg:uri "mailto:anders.hansson&securedemail.com".
+And:
+    reg:id "Anders_Sandholm";
+    reg:name "Anders Sandholm";
+    reg:updated "2011-12-14";
+    reg:uri "mailto:sandholm&google.com".
+Andr:
+    reg:id "Andrew_Burt";
+    reg:name "Andrew Burt";
+    reg:updated "2006-03-20";
+    reg:uri "mailto:andrewburt&cricksoft.com".
+Andy:
+    reg:id "Andy_Dryden";
+    reg:name "Andy Dryden";
+    reg:updated "2006-03-20";
+    reg:uri "mailto:adryden&tiaonline.org".
+n544:
+    reg:id "Andy_Mutz";
+    reg:name "Andy Mutz";
+    reg:updated "1997-12-19";
+    reg:uri "mailto:andy_mutz&hp.com".
+Ann:
+    reg:id "Ann_McLaughlin";
+    reg:name "Ann McLaughlin";
+    reg:updated "1999-04-19";
+    reg:uri "mailto:amclaughlin&comversens.com".
+Apr:
+    reg:id "April_Gandert";
+    reg:name "April Gandert";
+    reg:updated "1999-04-19";
+    reg:uri "mailto:gandert.am&pg.com".
+Ari:
+    reg:id "Arild_Fuldseth";
+    reg:name "Arild Fuldseth";
+    reg:updated "2000-06-20";
+    reg:uri "mailto:Arild.Fuldseth&fast.no".
+Arm:
+    reg:id "Armands_Strazds";
+    reg:name "Armands Strazds";
+    reg:updated "1999-01-19";
+    reg:uri "mailto:armands.strazds&medienhaus-bremen.de".
+Arn:
+    reg:id "Arne_Gerdes";
+    reg:name "Arne Gerdes";
+    reg:updated "2006-04-25";
+    reg:uri "mailto:arnegerdes&uniqueobject.com".
+ASAM:
+    reg:id "ASAM";
+    reg:name "ASAM";
+    reg:updated "2014-12-04";
+    reg:uri "mailto:info&asam.net".
+As:
+    reg:id "Asang_Dani";
+    reg:name "Asang Dani";
+    reg:updated "2001-06-20";
+    reg:uri "mailto:adani&solution-soft.com".
+ASH:
+    reg:id "ASHRAE";
     reg:name
-        "3GPP - Third Generation Partnership Project", "3MF Consortium",
-        "AC Mahendran", "ASAM", "Adrian F\u00f6der", "Akinori Taya",
-        "Alan Francis", "Alex Crawford", "Alex Devasia", "Alex Dubov",
-        "Alex Sibilev", "Alexander Jegulsky", "Alexis Tamas", "Ali Teffahi",
-        "Allen Gillam", "Allen K. Kabayama", "Aloke Gupta",
-        "American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE)",
-        "Amir Gaash", "Amir Herzberg", "Anatoly Techtonik", "Anders Hansson",
-        "Anders Sandholm", "Andrew Burt", "Andy Dryden", "Andy Mutz",
-        "Ann McLaughlin", "April Gandert", "Arild Fuldseth", "Armands Strazds",
-        "Arne Gerdes", "Asang Dani", "Attila Babits", "Avi Primo",
-        "Axel Ferrazzini", "Bayard Kohlhepp", "Ben Simon", "Benja Fallenstein",
-        "Benson Margulies", "Bill Fenner", "Bill Janssen", "Bill Wohler",
-        "Bindu Rama Rao", "Biplab Sarkar", "Bjorn Wennerstrom",
-        "Blake Thompson", "Bob Pentecost", "Boris Rabinovitch", "Brad Chase",
-        "Braden N. McDaniel", "Brett McDowell", "Brian Korver",
-        "Brian McColgan", "Brijesh Kumar", "Bruce Martin", "Bruce Tantlinger",
-        "Bryan Sullivan", "C. Titus Brown", "CHATRAS Bruno", "Carl Anderson",
-        "Casper Joost Eyckelhof", "Catherine E. White", "Chad Trabant",
-        "Chandrashekhara Anantharamu", "Charles Engelke", "Charles P. Lamb",
-        "Charles Plessy", "Chris Bartram", "Chris Charabaruk", "Chris Eich",
-        "Chris Rae", "Chris Solc", "Christian Mercat", "Christian V. Sciberras",
-        "Christopher Brooks", "Christopher Gales", "Christopher Smith",
-        "Christopher Snazell", "Chunyun Xiong", "Claire D'Esclercs",
-        "Clemens Portele", "Cliff Gauntlett", "Craig Bradney", "Craig Bruce",
-        "Curtis Parks", "DICOM Standards Committee", "Dali Zheng",
-        "Dan Bradley", "Dan DuFeu", "Dan Plastina", "Daniel Mould",
-        "Daniel Schneider", "Daniel Shelton", "Daniel Sims", "Dave Crocker",
-        "Dave Manning", "Dave Robin", "David Applebaum", "David Brossard",
-        "David Clunie", "David Faure", "David Furbeck", "David Glazer",
-        "David Guy", "David Lee Lambert", "David Matthewman", "David Parker",
-        "David Petersen", "David Singer", "David Underdown", "Dean Slawson",
-        "Delton Rowe", "Derek Smith", "Devyn Collier Johnson", "Dick Floersch",
-        "Dirk DiGiorgio-Haag", "Dirk Farin", "Don Wright",
-        "Donald E. Eastlake 3rd", "Doug R. Serres", "Dovid Lubin",
-        "Ecma International Helpdesk", "Edwin Heredia", "Ehud Shapiro",
-        "Electronic Zombie, Corp.", "Eli Grey", "Eric Bruno", "Eric Fleischman",
-        "Eric Hamilton", "Eric Ledoux", "Eric Lengyel", "Eric Prud'hommeaux",
-        "Eric Turcotte", "Eric Wedel", "Erik Ronstr\u00f6m", "Etay Szekely",
-        "Feiyu Xie", "Filip Navara", "Franck Lefevre", "Francois Pirsch",
-        "Frank Cusack", "Frank Patz", "Frank Rottman", "Frank Schoonjans",
-        "Franz Ombler", "Fred Waskiewicz", "Frederic Firmin", "Fu Siyuan",
-        "Fumio Tanabe", "Gaige Paulsen", "Gary Adams", "Gary Clueit",
-        "Gary Ellison", "Gary Sands", "Gavin Peacock", "Gayatri Aravindakumar",
-        "GeoGebra", "George Williams", "Gert Buettgenbach",
-        "Giacomo Guilizzoni", "Gil Bernabeu", "Giulio Zambon",
-        "Giuseppe Naccarato", "Glen Turner", "Glenn Forrester", "Glenn Howes",
-        "Glenn Levitt", "Glenn Parsons", "Glenn Randers-Pehrson",
-        "Glenn Widener", "Gottfried Zimmermann", "Greg Adams",
-        "Greg Scratchley", "Greg Vaudreuil", "Greg Ward", "Gregory Vaughan",
-        "Gus Asadi", "Guy Harris", "Guy Selzler", "Gwenael Le Bodic",
-        "G\u00fcnther Brammer", "Hannes Scheidler", "Hans-Dieter A. Hiep",
-        "Hao Wang", "Harald T. Alvestrand", "Harms Moeller",
-        "Heikki Vesalainen", "Heiko Recktenwald", "Heinz-Peter Sch\u00fctz",
-        "Hemant Thakkar", "Henrik Andersson", "Henry Flurry", "Henry Spencer",
-        "Hiroaki Takahashi", "Hiroyoshi Mori", "Horia Cristian Slusanschi",
-        "IETF", "ISO/IEC JTC1", "ISTO-PWG Internet Printing Protocol Workgroup",
-        "Iain Downs", "Ian Medland", "Ilan Mahalal", "Ilya Ferber",
-        "Ingo Hammann", "International Digital Publishing Forum",
-        "International Press Telecommunications Council (David Allen)",
-        "Internationalization Tag Set Interest Group (W3C)",
-        "Ioseb Dzmanashvili", "Irakli Nadareishvili", "Ivan Herman",
-        "J. Scott Hepler", "Jack Bennett", "Jakub Hytka", "James Bellinger",
-        "James Berry", "James F Philbin", "James Fields", "James Minnis",
-        "James Riordon", "James Wick", "James Wigger", "Jamie Riden",
-        "Jan Bostrom", "Jan Nelson", "Jan Sch\u00fctze", "Janine Swenson",
-        "Jann Pruulmann", "Jason Birch", "Jason Pratt",
-        "Javier D. Fern\u00e1ndez", "Jay Doggett", "Jay Moskowitz",
-        "Jean-Baptiste Henry", "Jean-Philippe Goulet", "Jeff Lawson",
-        "Jeff Tupper", "Jens Jorgensen", "Jerry Harris", "Jesse Alama",
-        "Jesse McGatha", "Jiang Tian", "Jim Ancona", "Jim Spiller", "Jiwan Han",
-        "Jodi Moline", "Joe Prevo", "Joerg Heuer", "Joey Smith",
-        "John Brinkman", "John Clark", "John Ellson", "John Ingi Ingimundarson",
-        "John Kemp", "John Kwan", "John Lines", "John M. Meredith",
-        "John Mudge", "John Palmieri", "John Wolfe", "John-Mark Gurney",
-        "Jon Swanson", "Jonathan Neitz", "Jonathan Niedfeldt",
-        "Joost Technologies B.V.", "Jorge Pando", "Joseph Reagle",
-        "Jouko Tenhunen", "Juern Laun", "Julien Grange", "Jun Sato",
-        "Jun Yoshitake", "Justin Hutchings", "J\u00e9r\u00f4me Marcon",
-        "J\u00f6rg Falkenberg", "J\u00f8rn Wildt", "Kari E. Hurtta",
-        "Katsuhiko Ichinose", "Kazuyuki Ashimura", "Keiichi Shinoda",
-        "Keith Kester", "Ken Jibiki", "Kerrick Staley", "Kevin Blumberg",
-        "Kevin Crook", "Kevin Lau", "Kevin Murray", "Kevin Swiber",
-        "Khemchart Rungchavalnont", "Kim Scarborough", "Kiyofusa Fujii",
-        "Kiyoshi Tashiro", "Kumar Swaminathan", "Kyunghun Jung",
-        "Larry Campbell", "Lauri Tarkkala", "Lee Harding", "Leon Bottou",
-        "Linda Welsh", "Linus Walleij", "Lisa Mattson", "Luc Rogge",
-        "Lucas Maneos", "Luke Tomasello", "Lyndsey Ferguson",
-        "Magnus Nystr\u00f6m", "Maik St\u00fchrenberg", "Makoto Murata",
-        "Malte Borcherding", "Manabu Tanaka", "Marc Douglas Spencer",
-        "Marc Hadley", "Marc Winter", "Marcus Ligi B\u00fcschleb",
-        "Mario Demuth", "Mark Callow",
-        "Mark Nottingham, see registration template for e-mail", "Mark Olleson",
-        "Mark Otaris", "Mark Patton", "Mark Powell", "Mark Risher", "Mark Wahl",
-        "Marshall Rose", "Martin Bailey", "Martin Dawe", "Martin Knowles",
-        "Martin Lambert", "Martin Talbot", "Martin Vondrous", "Mary Holstage",
-        "Masaaki Hirai", "Masahiko Sugimoto", "Masanori Murai", "Masanori Onda",
-        "Masumi Ogita", "Mathieu Villegas", "Matt Kern", "Matthias Ehmann",
-        "Matthias Hessling", "Matthias Ludwig", "Matti Salmi",
-        "Meredith Searcy", "Michael A Dolan", "Michael Ashbridge",
-        "Michael Boyle", "Michael Dixon", "Michael Domino", "Michael Duffy",
-        "Michael Fox", "Michael Hammer", "Michael Hewett", "Michael Hvidsten",
-        "Michael J. Donahue", "Michael Koster", "Michael Lagally",
-        "Michael Laramie", "Michael Mansell", "Michael O'Brien",
-        "Michael Powers", "Michael Steidl", "Michael Sweet", "Mick Conley",
-        "Miguel Angel Reina Ortega", "Mike Amundsen", "Mike Foley",
-        "Mike Hearn", "Mike Kelly", "Mike Labatt", "Mike Ward", "Mike Wexler",
-        "Mikhail Gorshenev", "Mikusiak Lubos", "Monty Solomon", "Mr. Yellow",
-        "NTT-local", "Natarajan Balasundara", "Nathan Black", "Nathan Zerbe",
-        "Nathaniel Borenstein", "Ni Hui", "Nicholas Parks Young", "Nick Reeves",
-        "Nick Smith", "Nicolas Helin", "Nils Langhammer", "Ning Dong",
-        "Nobukazu Togashi", "Nokia Corporation", "Nor Helmee", "OASIS",
-        "OASIS Security Services Technical Committee (SSTC), see registration template for e-mail",
-        "OMA Data Synchronization Working Group",
-        "OMA Presence and Availability (PAG) Working Group",
-        "OMA Push to Talk over Cellular (POC) Working Group",
-        "OMA-DM Work Group", "Open Geospatial Consortium (OGC)",
-        "Open Mobile Alliance",
-        "Open Mobile Alliance's BAC DLDRM Working Group",
-        "Open Mobile Naming Authority (OMNA)", "Oren Ben-Kiki", "Oskar Jonsson",
-        "Ozgur Oyman", "Parasolid", "Pascal Mayeux", "Pathway Commons",
-        "Patrick Koh", "Patrik Faltstrom", "Paul Grosso", "Paul Lindner",
-        "Paul Norman", "Paul Santinelli, Jr.", "Paul Tidwell", "Paul Walsh",
-        "Paul Wattenberger", "Peeter Piegaze", "Per Ersson", "Pete Cole",
-        "Pete Hoch", "Pete Resnick", "Peter Bierman", "Peter Biro",
-        "Peter Kriens", "Peter Siebert", "Peter Stark", "Peter Thompson",
-        "Peter \u00c5strand", "Petr Peterka", "Petteri Kangaslampi",
-        "Phil Green", "Philippe Imoucha", "Prakash Baskaran", "Prakash Iyer",
-        "Priya Dandawate", "Purva R Rajkotia", "RDF Working Group",
-        "Rafie Shamsaasef", "Rajesh Kumar", "Randolph Fritz", "Randy Jones",
-        "Ravinder Chandhok", "Ray Simpson", "Reed Shilts", "Regis Dehoux",
-        "Reinhard Hohensee", "Rene Grothmann", "Reuven Sherwin", "Rhys Lewis",
-        "Rick Rupp", "Rintze M. Zelle", "Rob Bailey", "Robby Simpson",
-        "Robert Brambley", "Robert Byrnes", "Robert Hess", "Roberto Perelman",
-        "Robin Berjon", "Roger Buis", "Roger Meier", "Roland Mechling",
-        "Roman Smolgovsky", "Roy Yue", "Ryan Brinkman", "Samer El-Haj-Mahmoud",
-        "Samu Sarivaara", "Satish Natarajan", "Saveen Reddy", "Scott Becker",
-        "Scott Simmons", "Sean Gillies", "Sean Kelley", "Sebastiaan Deckers",
-        "Sebastian Baer", "Seiji Okudaira", "Serge De Jaham", "Shawn Maloney",
-        "Shay Cicelsky", "Shicheng Hu", "Shin Muto", "Shinji Kusakari",
-        "Shoji Hoshina", "Shuji Fujii", "Shuji Nakamura", "Simon Birtwistle",
-        "Simon Butcher", "Slawomir Lisznianski", "Stefan Eilemann",
-        "Stefan Jernberg", "Stefan Szilva", "Steve Allen", "Steve Aubrey",
-        "Steve Dellutri", "Steve DiAcetis", "Steve Hattersley", "Steve Judkins",
-        "Steve Katz", "Steve Klabnik", "Steve Leow", "Steve Mills",
-        "Steve Rice", "Steve Rogan", "Steve Webb", "Steve Zilles",
-        "Steven Heintz", "Steven Klos", "Steven Martin", "Steven Pemberton",
-        "Steven Simonoff", "Stuart Parmenter", "Sukvinder S. Gill",
-        "Svante Schubert", "Swedish Standards Institute (SIS)",
-        "Sybren Kikstra", "Szilveszter T\u00f3th", "Tadashi Gotoh",
-        "Taisuke Sugimoto", "Takanori Sudo", "Takashi Matsumoto",
-        "Takehiro Sukizaki", "Tapani Otala", "Terry Crowley",
-        "The Khronos Group", "The National Archives, UK", "Thinh Nguyenphu",
-        "Thomas Belling", "Thomas Holmstrom", "Thomas Huth",
-        "Thomas Kj\u00f8rnes", "Thomas Olsson", "Thomas Schoffelen",
-        "Thomas Stockhammer", "Thomas Thomsen", "Thomas Weyn", "Tim Brody",
-        "Tim Butler", "Tim Fisher", "Tim Macdonald", "Tim Ocock",
-        "Timed Text Working Group", "Timo Kosonen", "Toby Inkster",
-        "Todd Joseph", "Tom Christie", "Tom Gurak", "Tom McGinty", "Tom White",
-        "Tomohiro Yamamoto", "Tor Kristensen", "Torben Frey", "Troy Sandal",
-        "UEFI Forum", "Uli Klumpp", "Ulrich Kortenkamp", "Unity3d",
-        "Uwe Hermann", "Uwe Rauschenbach", "Vicki DeBarros", "Victor Costan",
-        "Viktor Haag", "Vladimir Levantovsky", "Vladimir Vysotsky", "W3C",
-        "W3C Music Notation Community Group", "WAP Forum Ltd.",
-        "Web3D Consortium", "Web3D X3D Working Group Chairs", "Wenjun Zeng",
-        "Wesley Beary", "Wi-Fi Alliance", "William C. Appleton",
-        "William McCoy", "William Stevenson", "William Zou", "Wolfram Research",
-        "XENC Working Group", "Yaser Rehem", "Yasuhito Nagatomo",
-        "Yasuo Taguchi", "Yasuo Yamanaka", "Yiling Xu", "Yokoyama Kiyonobu",
-        "Yu Gu", "Yukari Ikeda", "Yutaka Ozaki", "Yves Kreis",
-        "Y\u00fcksel Aydemir", "ZigBee Alliance";
-    reg:updated
-        "1985-12-19", "1993-06-19", "1994-04-19", "1995-04-19", "1995-06-19",
-        "1995-12-19", "1996-04-19", "1996-05-19", "1996-06-19", "1996-08-19",
-        "1996-10-19", "1997-01-19", "1997-02-19", "1997-03-19", "1997-04-19",
-        "1997-05-19", "1997-06-19", "1997-07-19", "1997-08-19", "1997-09-19",
-        "1997-10-19", "1997-11-19", "1997-12-19", "1998-01-19", "1998-03-19",
-        "1998-04-19", "1998-05-19", "1998-07-19", "1998-08-19", "1998-09-19",
-        "1998-10-19", "1998-11-19", "1998-12-19", "1999-01-19", "1999-02-19",
-        "1999-03-19", "1999-04-19", "1999-06-19", "1999-07-19", "1999-08-19",
-        "2000-02-20", "2000-04-20", "2000-05-20", "2000-06-20", "2000-07-20",
-        "2000-08-20", "2000-09-20", "2000-10-20", "2000-11-20", "2000-12-20",
-        "2001-01-20", "2001-03-20", "2001-06-20", "2001-08-20", "2002-01-20",
-        "2002-02-20", "2002-03-20", "2002-04-20", "2002-06-20", "2002-08-20",
-        "2002-10-20", "2002-12-20", "2003-02-20", "2003-03-20", "2003-04-20",
-        "2003-05-20", "2003-06-20", "2003-07-20", "2003-09-20", "2003-10-20",
-        "2003-11", "2003-11-01", "2003-12-20", "2004-02-20", "2004-03-20",
-        "2004-04-20", "2004-12", "2004-12-20", "2005-10-28", "2005-11-20",
-        "2005-12-20", "2006-03-20", "2006-03-21", "2006-03-23", "2006-03-27",
-        "2006-03-31", "2006-04-11", "2006-04-25", "2006-05-18", "2006-06-20",
-        "2006-06-27", "2006-07-25", "2006-07-31", "2006-08-11", "2006-08-20",
-        "2006-09-13", "2006-09-14", "2006-09-20", "2006-09-29", "2006-10-24",
-        "2006-11-13", "2006-12-14", "2007-01-18", "2007-01-23", "2007-01-30",
-        "2007-02-13", "2007-03-20", "2007-04-26", "2007-05-03", "2007-05-04",
-        "2007-05-22", "2007-05-25", "2007-06-07", "2007-06-12", "2007-06-18",
-        "2007-06-19", "2007-06-25", "2007-07-03", "2007-07-05", "2007-07-31",
-        "2007-08-14", "2007-10-11", "2007-10-16", "2007-10-17", "2007-11-06",
-        "2007-12-03", "2007-12-20", "2008-01-04", "2008-01-24", "2008-01-25",
-        "2008-02-07", "2008-03-17", "2008-04-28", "2008-05-01", "2008-05-13",
-        "2008-06-03", "2008-06-30", "2008-07-23", "2008-07-24", "2008-07-28",
-        "2008-08-06", "2008-08-12", "2008-09-19", "2008-10-16", "2008-10-22",
-        "2008-12-19", "2009-01-16", "2009-02-18", "2009-02-24", "2009-03-04",
-        "2009-03-11", "2009-03-13", "2009-03-17", "2009-04-07", "2009-05-12",
-        "2009-06-02", "2009-07-28", "2009-08-04", "2009-08-18", "2009-08-20",
-        "2009-09-01", "2009-09-15", "2009-10-13", "2009-10-15", "2009-12-15",
-        "2009-12-17", "2010-01-13", "2010-02-24", "2010-03-09", "2010-03-26",
-        "2010-04-22", "2010-06-16", "2010-07-20", "2010-07-23", "2010-08-31",
-        "2010-09-09", "2010-09-22", "2010-09-27", "2010-10-12", "2010-10-19",
-        "2010-11-16", "2010-11-17", "2011-01-25", "2011-01-27", "2011-02-01",
-        "2011-02-22", "2011-02-25", "2011-03-08", "2011-03-10", "2011-03-23",
-        "2011-03-30", "2011-04-07", "2011-05-04", "2011-05-09", "2011-05-17",
-        "2011-05-25", "2011-06-08", "2011-06-22", "2011-07-12", "2011-07-14",
-        "2011-09-06", "2011-12-14", "2012-02-16", "2012-03-02", "2012-03-27",
-        "2012-04-19", "2012-04-20", "2012-06-05", "2012-06-15", "2012-07-09",
-        "2012-08-09", "2012-09-19", "2012-11-27", "2012-12-21", "2013-02-19",
-        "2013-03-29", "2013-05-13", "2013-06-24", "2013-06-25", "2013-07-21",
-        "2013-07-23", "2013-08-20", "2013-09-06", "2013-10-15", "2013-10-29",
-        "2013-10-30", "2013-11-06", "2013-11-20", "2014-01-01", "2014-01-15",
-        "2014-01-29", "2014-01-31", "2014-02-07", "2014-04-08", "2014-04-11",
-        "2014-04-16", "2014-04-28", "2014-05-01", "2014-05-20", "2014-05-27",
-        "2014-07-09", "2014-07-25", "2014-08-01", "2014-09-10", "2014-09-16",
-        "2014-10-23", "2014-11-06", "2014-11-10", "2014-11-21", "2014-11-25",
-        "2014-12-04", "2014-12-22", "2015-01-08", "2015-02-05", "2015-02-10",
-        "2015-02-23", "2015-03-02", "2015-03-05", "2015-03-16", "2015-04-03",
-        "2015-05-06", "2015-06-01", "2015-06-09", "2015-07-21", "2015-08-04",
-        "2015-08-21", "2015-08-28", "2015-09-01", "2015-09-11", "2015-09-30",
-        "2015-10-05", "2015-12-21", "2015-12-23", "2015-12-24", "2016-01-07",
-        "2016-01-27", "2016-02-29", "2016-04-04", "2016-04-06", "2016-04-15",
-        "2016-05-19", "2016-06-20", "2016-07-01", "2016-08-12", "2016-09-13",
-        "2016-09-26", "2016-09-27", "2016-10-03", "2016-10-05", "2016-11-30",
-        "2017-01-09", "2017-01-19", "2017-01-30", "2017-02-07", "2017-03-03",
-        "2017-03-07", "2017-03-09", "2017-04-06", "2017-04-07", "2017-04-12",
-        "2017-05-01", "2017-05-03", "2017-05-11", "2017-05-12", "2017-06-06",
-        "2017-06-12", "2017-06-27", "2017-07-18";
+        "American Society of Heating, Refrigerating and Air-Conditioning Engineers (ASHRAE)";
+    reg:updated "2014-01-29";
+    reg:uri "mailto:ashrae&ashrae.org".
+Attil:
+    reg:id "Attila_Babits";
+    reg:name "Attila Babits";
+    reg:updated "2000-05-20";
+    reg:uri "mailto:ababits&graphisoft.hu".
+Avi:
+    reg:id "Avi_Primo";
+    reg:name "Avi Primo";
+    reg:updated "2008-04-28";
+    reg:uri "mailto:aprimo&celltick.com".
+Axe:
+    reg:id "Axel_Ferrazzini";
+    reg:name "Axel Ferrazzini";
+    reg:updated "2012-03-27";
+    reg:uri "mailto:aferrazzini&rim.com".
+B:
+    reg:id "Bayard_Kohlhepp";
+    reg:name "Bayard Kohlhepp";
+    reg:updated "2000-04-20";
+    reg:uri "mailto:bayard&ctcexchange.com".
+Ben:
+    reg:id "Ben_Simon";
+    reg:name "Ben Simon";
+    reg:updated "1998-09-19";
+    reg:uri "mailto:BenS&crt.com".
+Benj:
+    reg:id "Benja_Fallenstein";
+    reg:name "Benja Fallenstein";
+    reg:updated "2003-10-20";
+    reg:uri "mailto:b.fallenstein&gmx.de".
+Be:
+    reg:id "Benson_Margulies";
+    reg:name "Benson Margulies";
+    reg:updated "2016-01-27";
+    reg:uri "mailto:benson&basistech.com".
+Bi:
+    reg:id "Bill_Fenner";
+    reg:name "Bill Fenner";
+    reg:updated "2009-08-18";
+    reg:uri "mailto:fenner&aristanetworks.com".
+Bil:
+    reg:id "Bill_Janssen";
+    reg:name "Bill Janssen";
+    reg:updated "2002-06-20";
+    reg:uri "mailto:bill&janssen.org".
+Bill:
+    reg:id "Bill_Wohler";
+    reg:name "Bill Wohler";
+    reg:updated "1997-07-19";
+    reg:uri "mailto:wohler&newt.com".
+Bin:
+    reg:id "Bindu_Rama_Rao";
+    reg:name "Bindu Rama Rao";
+    reg:updated "2006-09-14";
+    reg:uri "mailto:brao&bitfone.com".
+Bipl:
+    reg:id "Biplab_Sarkar";
+    reg:name "Biplab Sarkar";
+    reg:updated "2008-10-16";
+    reg:uri "mailto:Biplab&nemetschek.net".
+Bjo:
+    reg:id "Bjorn_Wennerstrom";
+    reg:name "Bjorn Wennerstrom";
+    reg:updated "2002-06-20";
+    reg:uri "mailto:bjorn.wennerstrom&synergenix.se".
+Bl:
+    reg:id "Blake_Thompson";
+    reg:name "Blake Thompson";
+    reg:updated "2015-12-21";
+    reg:uri "mailto:flippmoke&gmail.com".
+Bob:
+    reg:id "Bob_Pentecost";
+    reg:name "Bob Pentecost";
+    reg:updated "1997-03-19";
+    reg:uri "mailto:bpenteco&boi.hp.com".
+Bor:
+    reg:id "Boris_Rabinovitch";
+    reg:name "Boris Rabinovitch";
+    reg:updated "2000-02-20";
+    reg:uri "mailto:boris&virtue3d.com".
+Br1:
+    reg:id "Brad_Chase";
+    reg:name "Brad Chase";
+    reg:updated "1996-05-19";
+    reg:uri "mailto:brad_chase&bitstream.com".
+Br0:
+    reg:id "Braden_N_McDaniel";
+    reg:name "Braden N. McDaniel";
+    reg:updated "2000-10-20";
+    reg:uri "mailto:braden&endoframe.com".
+Bre:
+    reg:id "Brett_McDowell";
+    reg:name "Brett McDowell";
+    reg:updated "2003-02-20";
+    reg:uri "mailto:brett.mcdowell&ieee-isto.org".
+Bri:
+    reg:id "Brian_Korver";
+    reg:name "Brian Korver";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:briank&terisa.com".
+Bri0:
+    reg:id "Brian_McColgan";
+    reg:name "Brian McColgan";
+    reg:updated "2011-05-04";
+    reg:uri "mailto:b_mccolgan&hotmail.com".
+Br:
+    reg:id "Brijesh_Kumar";
+    reg:name "Brijesh Kumar";
+    reg:updated "2007-04-26";
+    reg:uri "mailto:bkumar&lightspeedaudiolabs.com".
+Bruc:
+    reg:id "Bruce_Martin";
+    reg:name "Bruce Martin";
+    reg:updated "1998-11-19";
+    reg:uri "mailto:iana-registrar&uplanet.com".
+Bru:
+    reg:id "Bruce_Tantlinger";
+    reg:name "Bruce Tantlinger";
+    reg:updated "2003-05-20";
+    reg:uri "mailto:bat&us.ibm.com".
+Bry:
+    reg:id "Bryan_Sullivan";
+    reg:name "Bryan Sullivan";
+    reg:updated "2009-08-20";
+    reg:uri "mailto:bryan.sullivan&att.com".
+n747:
+    reg:id "C._Titus_Brown";
+    reg:name "C. Titus Brown";
+    reg:updated "2015-10-05";
+    reg:uri "mailto:khmer-project&idyll.org".
+C0:
+    reg:id "Carl_Anderson";
+    reg:name "Carl Anderson";
+    reg:updated "2014-05-27";
+    reg:uri "mailto:ca&deezer.com".
+C2:
+    reg:id "Casper_Joost_Eyckelhof";
+    reg:name "Casper Joost Eyckelhof";
+    reg:updated "2016-05-19";
+    reg:uri "mailto:info&quarantainenet.nl".
+C1:
+    reg:id "Catherine_E._White";
+    reg:name "Catherine E. White";
+    reg:updated "2003-03-20";
+    reg:uri "mailto:cewhite&llamagraphics.com".
+Ch0:
+    reg:id "Chad_Trabant";
+    reg:name "Chad Trabant";
+    reg:updated "2009-04-07";
+    reg:uri "mailto:chad&iris.washington.edu".
+Ch2:
+    reg:id "Chandrashekhara_Anantharamu";
+    reg:name "Chandrashekhara Anantharamu";
+    reg:updated "2007-10-16";
+    reg:uri "mailto:chandra&muvee.com".
+Ch1:
+    reg:id "Charles_Engelke";
+    reg:name "Charles Engelke";
+    reg:updated "2010-09-09";
+    reg:uri "mailto:charles.engelke&infotechfl.com".
+Ch3:
+    reg:id "Charles_P._Lamb";
+    reg:name "Charles P. Lamb";
+    reg:updated "2001-06-20";
+    reg:uri "mailto:CLamb&pvimage.com".
+C:
+    reg:id "Charles_Plessy";
+    reg:name "Charles Plessy";
+    reg:updated "2014-05-20";
+    reg:uri "mailto:plessy&debian.org".
+CHA:
+    reg:id "CHATRAS_Bruno";
+    reg:name "CHATRAS Bruno";
+    reg:updated "2012-04-19";
+    reg:uri "mailto:bruno.chatras&orange.com".
+n465:
+    reg:id "Chris_Bartram";
+    reg:name "Chris Bartram";
+    reg:updated "1998-05-19";
+    reg:uri "mailto:RCB&3k.com".
+n1058:
+    reg:id "Chris_Charabaruk";
+    reg:name "Chris Charabaruk";
+    reg:updated "2015-04-03";
+    reg:uri "mailto:chris&charabaruk.com".
+Chris:
+    reg:id "Chris_Eich";
+    reg:name "Chris Eich";
+    reg:updated "2014-11-10";
+    reg:uri "mailto:ceich&enphaseenergy.com".
+n491:
+    reg:id "Chris_Rae";
+    reg:name "Chris Rae";
+    reg:updated "2011-02-22";
+    reg:uri "mailto:chris.rae&microsoft.com".
+Chr:
+    reg:id "Chris_Solc";
+    reg:name "Chris Solc";
+    reg:updated "2012-02-16";
+    reg:uri "mailto:csolc&adobe.com".
+Chr0:
+    reg:id "Christian_Mercat";
+    reg:name "Christian Mercat";
+    reg:updated "2009-05-12";
+    reg:uri "mailto:Christian.Mercat&univ-montp2.fr".
+Chr1:
+    reg:id "Christian_V._Sciberras";
+    reg:name "Christian V. Sciberras";
+    reg:updated "2008-09-19";
+    reg:uri "mailto:contact&covac-software.com".
+n1084:
+    reg:id "Christopher_Brooks";
+    reg:name "Christopher Brooks";
+    reg:updated "2006-08-20";
+    reg:uri "mailto:cxh&eecs.berkeley.edu".
+n377:
+    reg:id "Christopher_Gales";
+    reg:name "Christopher Gales";
+    reg:updated "2000-08-20";
+    reg:uri "mailto:christopher.gales&informix.com".
+Ch:
+    reg:id "Christopher_Smith";
+    reg:name "Christopher Smith";
+    reg:updated "2014-08-01";
+    reg:uri "mailto:christopher.smith+iana&artsquare.com".
+Chri:
+    reg:id "Christopher_Snazell";
+    reg:name "Christopher Snazell";
+    reg:updated "2011-05-04";
+    reg:uri "mailto:csnazell&astraea-software.com".
+Chu:
+    reg:id "Chunyun_Xiong";
+    reg:name "Chunyun Xiong";
+    reg:updated "2006-06-27";
+    reg:uri "mailto:frankxiong&chipnuts.com".
+Cl:
+    reg:id "Claire_DEsclercs";
+    reg:name "Claire D'Esclercs";
+    reg:updated "2011-02-25";
+    reg:uri "mailto:contact&oipf.tv".
+Cle:
+    reg:id "Clemens_Portele";
+    reg:name "Clemens Portele";
+    reg:updated "2017-01-09";
+    reg:uri "mailto:portele&interactive-instruments.de".
+Cli:
+    reg:id "Cliff_Gauntlett";
+    reg:name "Cliff Gauntlett";
+    reg:updated "2006-04-25";
+    reg:uri "mailto:cliff&solenttec.net".
+Cr0:
+    reg:id "Craig_Bradney";
+    reg:name "Craig Bradney";
+    reg:updated "2006-06-20";
+    reg:uri "mailto:cbradney&zip.com.au".
+Cr:
+    reg:id "Craig_Bruce";
+    reg:name "Craig Bruce";
+    reg:updated "2013-10-29";
+    reg:uri "mailto:craig&eyesopen.com".
+Cur:
+    reg:id "Curtis_Parks";
+    reg:name "Curtis Parks";
+    reg:updated "1995-04-19";
+    reg:uri "mailto:parks&eeel.nist.gov".
+D10:
+    reg:id "Dali_Zheng";
+    reg:name "Dali Zheng";
+    reg:updated "2015-03-16";
+    reg:uri "mailto:d&liwa.li".
+D19:
+    reg:id "Dan_Bradley";
+    reg:name "Dan Bradley";
+    reg:updated "2000-10-20";
+    reg:uri "mailto:dan&dantom.com".
+D13:
+    reg:id "Dan_DuFeu";
+    reg:name "Dan DuFeu";
+    reg:updated "2007-06-19";
+    reg:uri "mailto:ddufeu&neurolanguage.com".
+D12:
+    reg:id "Dan_Plastina";
+    reg:name "Dan Plastina";
+    reg:updated "2002-03-20";
+    reg:uri "mailto:danpl&microsoft.com".
+D4:
+    reg:id "Daniel_Mould";
+    reg:name "Daniel Mould";
+    reg:updated "2009-02-18";
+    reg:uri "mailto:dmould&airzip.com".
+D11:
+    reg:id "Daniel_Schneider";
+    reg:name "Daniel Schneider";
+    reg:updated "2007-05-03";
+    reg:uri "mailto:danielsc&microsoft.com".
+D5:
+    reg:id "Daniel_Shelton";
+    reg:name "Daniel Shelton";
+    reg:updated "2007-08-14";
+    reg:uri "mailto:sheltond&tao-group.com".
+D8:
+    reg:id "Daniel_Sims";
+    reg:name "Daniel Sims";
+    reg:updated "2015-06-01";
+    reg:uri "mailto:danielgarthsims&gmail.com".
+D20:
+    reg:id "Dave_Crocker";
+    reg:name "Dave Crocker";
+    reg:updated "2011-03-10";
+    reg:uri "mailto:dcrocker@mordor.stanford.edu%3E%3Cbr%3E".
+D16:
+    reg:id "Dave_Manning";
+    reg:name "Dave Manning";
+    reg:updated "2014-01-01";
+    reg:uri "mailto:dmanning&uwi.com".
+D:
+    reg:id "Dave_Robin";
+    reg:name "Dave Robin";
+    reg:updated "2014-01-29";
+    reg:uri "mailto:iana2&daverobin.com".
+D6:
+    reg:id "David_Applebaum";
+    reg:name "David Applebaum";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:applebau&battelle.org".
+D17:
+    reg:id "David_Brossard";
+    reg:name "David Brossard";
+    reg:updated "2013-02-19";
+    reg:uri "mailto:david.brossard&axiomatics.com".
+D2:
+    reg:id "David_Clunie";
+    reg:name "David Clunie";
+    reg:updated "2016-09-26";
+    reg:uri "mailto:dclunie&dclunie.com".
+D9:
+    reg:id "David_Faure";
+    reg:name "David Faure";
+    reg:updated "2002-08-20";
+    reg:uri "mailto:faure&kde.org".
+D1:
+    reg:id "David_Furbeck";
+    reg:name "David Furbeck";
+    reg:updated "2013-09-06";
+    reg:uri "mailto:dfurbeck&blackberry.com".
+D0:
+    reg:id "David_Glazer";
+    reg:name "David Glazer";
+    reg:updated "1995-04-19";
+    reg:uri "mailto:dglazer&best.com".
+D14:
+    reg:id "David_Guy";
+    reg:name "David Guy";
+    reg:updated "1997-06-19";
+    reg:uri "mailto:dguy&powersoft.com".
+D21:
+    reg:id "David_Lee_Lambert";
+    reg:name "David Lee Lambert";
+    reg:updated "2006-09-14";
+    reg:uri "mailto:davidl&lmert.com".
+D18:
+    reg:id "David_Matthewman";
+    reg:name "David Matthewman";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:david&xara.com".
+D7:
+    reg:id "David_Parker";
+    reg:name "David Parker";
+    reg:updated "1999-08-19";
+    reg:uri "mailto:davidparker&davidparker.com".
+D15:
+    reg:id "David_Petersen";
+    reg:name "David Petersen";
+    reg:updated "2003-09-20";
+    reg:uri "mailto:david.petersen&sealedmedia.com".
+D3:
+    reg:id "David_Singer";
+    reg:name "David Singer";
+    reg:updated "2014-01-29";
+    reg:uri "mailto:singer&apple.com".
+D22:
+    reg:id "David_Underdown";
+    reg:name "David Underdown";
+    reg:updated "2014-11-21";
+    reg:uri "mailto:DigitalPreservation&nationalarchives.gsi.gov.uk".
+De:
+    reg:id "Dean_Slawson";
+    reg:name "Dean Slawson";
+    reg:updated "1996-05-19";
+    reg:uri "mailto:deansl&microsoft.com".
+Del:
+    reg:id "Delton_Rowe";
+    reg:name "Delton Rowe";
+    reg:updated "2002-01-20";
+    reg:uri "mailto:cadman&gte.net".
+Der:
+    reg:id "Derek_Smith";
+    reg:name "Derek Smith";
+    reg:updated "2000-11-20";
+    reg:uri "mailto:derek&friendlysoftware.com".
+Dev:
+    reg:id "Devyn_Collier_Johnson";
+    reg:name "Devyn Collier Johnson";
+    reg:updated "2014-11-21";
+    reg:uri "mailto:DevynCJohnson&Gmail.com".
+Dic:
+    reg:id "Dick_Floersch";
+    reg:name "Dick Floersch";
+    reg:updated "1997-03-19";
+    reg:uri "mailto:floersch&echo.sound.net".
+DIC:
+    reg:id "DICOM_Standards_Committee";
+    reg:name "DICOM Standards Committee";
+    reg:updated "2016-09-26";
+    reg:uri "mailto:dicom&medicalimaging.org".
+Di:
+    reg:id "Dirk_DiGiorgio-Haag";
+    reg:name "Dirk DiGiorgio-Haag";
+    reg:updated "2002-03-20";
+    reg:uri "mailto:dirk&kenamea.com".
+Dir:
+    reg:id "Dirk_Farin";
+    reg:name "Dirk Farin";
+    reg:updated "2017-04-12";
+    reg:uri "mailto:dirk.farin&gmail.com".
+Do:
+    reg:id "Don_Wright";
+    reg:name "Don Wright";
+    reg:updated "2001-08-20";
+    reg:uri "mailto:don&lexmark.com".
+Don:
+    reg:id "Donald_E._Eastlake_3rd";
+    reg:name "Donald E. Eastlake 3rd";
+    reg:updated "2000-05-20";
+    reg:uri "mailto:Donald.Eastlake&motorola.com".
+Dou:
+    reg:id "Doug_R._Serres";
+    reg:name "Doug R. Serres";
+    reg:updated "2014-05-01";
+    reg:uri "mailto:doug.serres&hummingbird.com".
+Dov:
+    reg:id "Dovid_Lubin";
+    reg:name "Dovid Lubin";
+    reg:updated "2002-06-20";
+    reg:uri "mailto:dovid&acucorp.com".
+Ecm:
+    reg:id "Ecma_International_Helpdesk";
+    reg:name "Ecma International Helpdesk";
+    reg:updated "2011-05-17";
+    reg:uri "mailto:helpdesk&ecma-international.org".
+Edw:
+    reg:id "Edwin_Heredia";
+    reg:name "Edwin Heredia";
+    reg:updated "2005-12-20";
+    reg:uri "mailto:eheredia&microsoft.com".
+Ehu: reg:id "Ehud_Shapiro"; reg:name "Ehud Shapiro".
+
+Ele:
+    reg:id "ElectronicZombieCorp";
+    reg:name "Electronic Zombie, Corp.";
+    reg:updated "2006-07-31";
+    reg:uri "mailto:support&electroniczombie.com".
+Eli:
+    reg:id "Eli_Grey";
+    reg:name "Eli Grey";
+    reg:updated "2011-04-07";
+    reg:uri "mailto:me&eligrey.com".
+n846:
+    reg:id "Eric_Bruno";
+    reg:name "Eric Bruno";
+    reg:updated "2001-06-20";
+    reg:uri "mailto:ebruno&solution-soft.com".
+n488:
+    reg:id "Eric_Fleischman";
+    reg:name "Eric Fleischman";
+    reg:updated "1997-04-19";
+    reg:uri "mailto:ericfl&MICROSOFT.com".
+Eric:
+    reg:id "Eric_Hamilton";
+    reg:name "Eric Hamilton";
+    reg:updated "2006-07-31";
+    reg:uri "mailto:erich&hheld.com".
+n499:
+    reg:id "Eric_Ledoux";
+    reg:name "Eric Ledoux";
+    reg:updated "2005-12-20";
+    reg:uri "mailto:ericle&microsoft.com".
+n1085:
+    reg:id "Eric_Lengyel";
+    reg:name "Eric Lengyel";
+    reg:updated "2014-04-28";
+    reg:uri "mailto:lengyel&terathon.com".
+Er:
+    reg:id "Eric_Prudhommeaux";
+    reg:name "Eric Prud'hommeaux";
+    reg:updated "2017-03-07";
+    reg:uri "mailto:eric at w3.org".
+Eri:
+    reg:id "Eric_Turcotte";
+    reg:name "Eric Turcotte";
+    reg:updated "2013-07-23";
+    reg:uri "mailto:eric.turcotte&ericsson.com".
+n454:
+    reg:id "Eric_Wedel";
+    reg:name "Eric Wedel";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:ewedel&meridian-data.com".
+Erik:
+    reg:id "Erik_Ronstr\u00f6m";
+    reg:name "Erik Ronstr\u00f6m";
+    reg:updated "2014-07-25";
+    reg:uri "mailto:erik.ronstrom&doremir.com".
+Et:
+    reg:id "Etay_Szekely";
+    reg:name "Etay Szekely";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:etay&emultek.co.il".
+Fei:
+    reg:id "Feiyu_Xie";
+    reg:name "Feiyu Xie";
+    reg:updated "2002-01-20";
+    reg:uri "mailto:xie&net2phone.com".
+Fil:
+    reg:id "Filip_Navara";
+    reg:name "Filip Navara";
+    reg:updated "2009-02-18";
+    reg:uri "mailto:navara&emclient.com".
+Fr1:
+    reg:id "Franck_Lefevre";
+    reg:name "Franck Lefevre";
+    reg:updated "2011-05-25";
+    reg:uri "mailto:franck&k1info.com".
+Fr0:
+    reg:id "Francois_Pirsch";
+    reg:name "Francois Pirsch";
+    reg:updated "2009-12-15";
+    reg:uri "mailto:fpirsch&geocube.fr".
+Fr3:
+    reg:id "Frank_Cusack";
+    reg:name "Frank Cusack";
+    reg:updated "2007-07-05";
+    reg:uri "mailto:frank&tri-dsystems.com".
+F:
+    reg:id "Frank_Patz";
+    reg:name "Frank Patz";
+    reg:updated "2000-09-20";
+    reg:uri "mailto:fp&contact.de".
+Fr4:
+    reg:id "Frank_Rottman";
+    reg:name "Frank Rottman";
+    reg:updated "2008-07-23";
+    reg:uri "mailto:Frank.Rottmann&web.de".
+Fr2:
+    reg:id "Frank_Schoonjans";
+    reg:name "Frank Schoonjans";
+    reg:updated "2006-03-20";
+    reg:uri "mailto:info&medcalc.be".
+Fr:
+    reg:id "Franz_Ombler";
+    reg:name "Franz Ombler";
+    reg:updated "2017-06-06";
+    reg:uri "mailto:franz&1000minds.com".
+Fred:
+    reg:id "Fred_Waskiewicz";
+    reg:name "Fred Waskiewicz";
+    reg:updated "2008-05-01";
+    reg:uri "mailto:wask&omg.org".
+Fre:
+    reg:id "Frederic_Firmin";
+    reg:name "Frederic Firmin";
+    reg:updated "2017-07-18";
+    reg:uri "mailto:Frederic.Firmin&etsi.org".
+Fu:
+    reg:id "Fu_Siyuan";
+    reg:name "Fu Siyuan";
+    reg:updated "2017-01-30";
+    reg:uri "mailto:siyuan.fu&intel.com".
+Fum:
+    reg:id "Fumio_Tanabe";
+    reg:name "Fumio Tanabe";
+    reg:updated "2006-05-18";
+    reg:uri "mailto:fumio.tanabe&fujixerox.co.jp".
+G1:
+    reg:id "Gaige_Paulsen";
+    reg:name "Gaige Paulsen";
+    reg:updated "2010-11-16";
+    reg:uri "mailto:iana&gbp.gaige.net".
+G5:
+    reg:id "Gary_Adams";
+    reg:name "Gary Adams";
+    reg:updated "2002-01-20";
+    reg:uri "mailto:gary.adams&sun.com".
+G:
+    reg:id "Gary_Clueit";
+    reg:name "Gary Clueit";
+    reg:updated "2012-06-05";
+    reg:uri "mailto:clueit&airzip.com".
+G2:
+    reg:id "Gary_Ellison";
+    reg:name "Gary Ellison";
+    reg:updated "2008-07-23";
+    reg:uri "mailto:gary.ellison&intertrust.com".
+G0:
+    reg:id "Gary_Sands";
+    reg:name "Gary Sands";
+    reg:updated "2008-01-25";
+    reg:uri "mailto:gsands&tycoint.com".
+G3:
+    reg:id "Gavin_Peacock";
+    reg:name "Gavin Peacock";
+    reg:updated "2000-11-20";
+    reg:uri "mailto:gpeacock&palm.com".
+G4:
+    reg:id "Gayatri_Aravindakumar";
+    reg:name "Gayatri Aravindakumar";
+    reg:updated "2002-02-20";
+    reg:uri "mailto:gayatri&informix.com".
+Ge:
+    reg:id "GeoGebra";
+    reg:name "GeoGebra";
+    reg:updated "2009-03-13";
+    reg:uri "mailto:office&geogebra.org".
+Geo:
+    reg:id "George_Williams";
+    reg:name "George Williams";
+    reg:updated "2008-05-13";
+    reg:uri "mailto:gww&silcom.com".
+Ger:
+    reg:id "Gert_Buettgenbach";
+    reg:name "Gert Buettgenbach";
+    reg:updated "1997-05-19";
+    reg:uri "mailto:bue&sevencs.com".
+Gi:
+    reg:id "Giacomo_Guilizzoni";
+    reg:name "Giacomo Guilizzoni";
+    reg:updated "2015-05-06";
+    reg:uri "mailto:peldi&balsamiq.com".
+Gil:
+    reg:id "Gil_Bernabeu";
+    reg:name "Gil Bernabeu";
+    reg:updated "2009-09-01";
+    reg:uri "mailto:gil.bernabeu&globalglatform.org".
+Giu:
+    reg:id "Giulio_Zambon";
+    reg:name "Giulio Zambon";
+    reg:updated "2013-11-06";
+    reg:uri "mailto:giulio&giuliozambon.org".
+Gius:
+    reg:id "Giuseppe_Naccarato";
+    reg:name "Giuseppe Naccarato";
+    reg:updated "2003-11";
+    reg:uri "mailto:giuseppe.naccarato&picsel.com".
+n869:
+    reg:id "Glen_Turner";
+    reg:name "Glen Turner";
+    reg:updated "2011-03-30";
+    reg:uri "mailto:gdt&gdt.id.au".
+Gl:
+    reg:id "Glenn_Forrester";
+    reg:name "Glenn Forrester";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:glennf&qualcomm.com".
+Gle:
+    reg:id "Glenn_Howes";
+    reg:name "Glenn Howes";
+    reg:updated "2007-06-25";
+    reg:uri "mailto:ghowes&cambridgesoft.com".
+Glen:
+    reg:id "Glenn_Levitt";
+    reg:name "Glenn Levitt";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:streetd1&ix.netcom.com".
+n1010:
+    reg:id "Glenn_Parsons";
+    reg:name "Glenn Parsons";
+    reg:updated "1999-02-19";
+    reg:uri "mailto:gparsons&nortelnetworks.com".
+n1023:
+    reg:id "Glenn_Randers-Pehrson";
+    reg:name "Glenn Randers-Pehrson";
+    reg:updated "2015-05-06";
+    reg:uri "mailto:glennrp&gmail.com".
+Glenn:
+    reg:id "Glenn_Widener";
+    reg:name "Glenn Widener";
+    reg:updated "1997-06-19";
+    reg:uri "mailto:glennw&ndg.com".
+Got:
+    reg:id "Gottfried_Zimmermann";
+    reg:name "Gottfried Zimmermann";
+    reg:updated "2013-06-24";
+    reg:uri "mailto:gzimmermann at acm.org".
+Gr:
+    reg:id "Greg_Adams";
+    reg:name "Greg Adams";
+    reg:updated "1997-03-19";
+    reg:uri "mailto:gadams&waynesworld.ucsd.edu".
+Gre:
+    reg:id "Greg_Scratchley";
+    reg:name "Greg Scratchley";
+    reg:updated "1998-10-19";
+    reg:uri "mailto:greg_scratchley&intuit.com".
+Greg:
+    reg:id "Greg_Vaudreuil";
+    reg:name "Greg Vaudreuil";
+    reg:updated "1999-01-19";
+    reg:uri "mailto:gregv&lucent.com".
+n1048:
+    reg:id "Greg_Ward";
+    reg:name "Greg Ward";
+    reg:updated "2009-03-04";
+    reg:uri "mailto:gregoryjward&gmail.com".
+Grego:
+    reg:id "Gregory_Vaughan";
+    reg:name "Gregory Vaughan";
+    reg:updated "2003-03-20";
+    reg:uri "mailto:gregva&microsoft.com".
+Gue:
+    reg:id "Guenther_Brammer";
+    reg:name "G\u00fcnther Brammer";
+    reg:updated "2007-06-12";
+    reg:uri "mailto:gbrammer&gmx.de".
+Gus:
+    reg:id "Gus_Asadi";
+    reg:name "Gus Asadi";
+    reg:updated "2016-02-29";
+    reg:uri "mailto:gasadi&me.com".
+Gu:
+    reg:id "Guy_Harris";
+    reg:name "Guy Harris";
+    reg:updated "2011-03-30";
+    reg:uri "mailto:guy&alum.mit.edu".
+Guy:
+    reg:id "Guy_Selzler";
+    reg:name "Guy Selzler";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:gselzler&shana.com".
+Gwen:
+    reg:id "Gwenael_Le_Bodic";
+    reg:name "Gwenael Le Bodic";
+    reg:updated "2001-03-20";
+    reg:uri "mailto:Gwenael.Le_Bodic&alcatel.fr".
+H2:
+    reg:id "Hannes_Scheidler";
+    reg:name "Hannes Scheidler";
+    reg:updated "2002-10-20";
+    reg:uri "mailto:hscheidler&quark.com".
+H3:
+    reg:id "Hans-Dieter_A._Hiep";
+    reg:name "Hans-Dieter A. Hiep";
+    reg:updated "2016-04-04";
+    reg:uri "mailto:info&aexiz.com".
+H1:
+    reg:id "Hao_Wang";
+    reg:name "Hao Wang";
+    reg:updated "2012-08-09";
+    reg:uri "mailto:howard.wang&huawei.com".
+H:
+    reg:id "Harald_T._Alvestrand";
+    reg:name "Harald T. Alvestrand";
+    reg:updated "1997-01-19";
+    reg:uri "mailto:Harald.T.Alvestrand&uninett.no".
+H0:
+    reg:id "Harms_Moeller";
+    reg:name "Harms Moeller";
+    reg:updated "2015-12-23";
+    reg:uri "mailto:harms&film-it.co.za".
+Heik:
+    reg:id "Heikki_Vesalainen";
+    reg:name "Heikki Vesalainen";
+    reg:updated "2009-10-13";
+    reg:uri "mailto:heikkivesalainen&yahoo.com".
+Heiko:
+    reg:id "Heiko_Recktenwald";
+    reg:name "Heiko Recktenwald";
+    reg:updated "2000-11-20";
+    reg:uri "mailto:uzs106&uni-bonn.de".
+Hei:
+    reg:id "Heinz-Peter_Sch\u00fctz";
+    reg:name "Heinz-Peter Sch\u00fctz";
+    reg:updated "2017-04-07";
+    reg:uri "mailto:heinz.schuetz&bint.ch".
+Hem:
+    reg:id "Hemant_Thakkar";
+    reg:name "Hemant Thakkar";
+    reg:updated "2004-03-20";
+    reg:uri "mailto:hemant&kinar.com".
+Hen:
+    reg:id "Henrik_Andersson";
+    reg:name "Henrik Andersson";
+    reg:updated "2017-04-06";
+    reg:uri "mailto:henke&henke37.cjb.net".
+He:
+    reg:id "Henry_Flurry";
+    reg:name "Henry Flurry";
+    reg:updated "1999-04-19";
+    reg:uri "mailto:henryf&mediastation.com".
+Henr:
+    reg:id "Henry_Spencer";
+    reg:name "Henry Spencer";
+    reg:updated "1993-06-19";
+    reg:uri "mailto:henry&zoo.utoronto.ca".
+Hiro:
+    reg:id "Hiroaki_Takahashi";
+    reg:name "Hiroaki Takahashi";
+    reg:updated "2002-01-20";
+    reg:uri "mailto:takaha&beat.yamaha.co.jp".
+Hir:
+    reg:id "Hiroyoshi_Mori";
+    reg:name "Hiroyoshi Mori";
+    reg:updated "1998-08-19";
+    reg:uri "mailto:mori&mm.rd.nttdata.co.jp".
+Holst:
+    reg:id "Holstage";
+    reg:name "Mary Holstage";
+    reg:updated "1998-05-19";
+    reg:uri "mailto:holstege&firstfloor.com".
+Hori:
+    reg:id "Horia_Cristian_Slusanschi";
+    reg:name "Horia Cristian Slusanschi";
+    reg:updated "1998-01-19";
+    reg:uri "mailto:H.C.Slusanschi&massey.ac.nz".
+I:
+    reg:id "Iain_Downs";
+    reg:name "Iain Downs";
+    reg:updated "2010-11-16";
+    reg:uri "mailto:iain&easykaraoke.com".
+I0:
+    reg:id "Ian_Medland";
+    reg:name "Ian Medland";
+    reg:updated "2012-12-21";
+    reg:uri "mailto:imedland&dtg.org.uk".
+IEE:
+    reg:id "IEEE-ISTO-PWG-PPP";
+    reg:name "ISTO-PWG Internet Printing Protocol Workgroup";
+    reg:updated "2017-05-01";
+    reg:uri "mailto:ipp&pwg.org".
+IETF:
+    reg:id "IETF";
+    reg:name "IETF";
+    reg:updated "2015-08-21";
+    reg:uri "mailto:ietf&ietf.org".
+Il:
+    reg:id "Ilan_Mahalal";
+    reg:name "Ilan Mahalal";
+    reg:updated "2006-09-13";
+    reg:uri "mailto:ilan.mahalal&gemalto.com".
+Ily:
+    reg:id "Ilya_Ferber";
+    reg:name "Ilya Ferber";
+    reg:updated "1985-12-19";
+    reg:uri "mailto:iferber&netvision.net.il".
+Ing:
+    reg:id "Ingo_Hammann";
+    reg:name "Ingo Hammann";
+    reg:updated "2003-05-20";
+    reg:uri "mailto:ingo.hammann&ppi.de".
+Int:
+    reg:id "International_Digital_Publishing_Forum";
+    reg:name "International Digital Publishing Forum";
+    reg:updated "2014-11-06";
+    reg:uri "http://www.idpf.org".
+Ios:
+    reg:id "Ioseb_Dzmanashvili";
+    reg:name "Ioseb Dzmanashvili";
+    reg:updated "2012-04-20";
+    reg:uri "mailto:ioseb.dzmanashvili&gmail.com".
+IPTC:
+    reg:id "IPTC";
+    reg:name "International Press Telecommunications Council (David Allen)";
+    reg:updated "2000-07-20";
+    reg:uri "mailto:m_director_iptc&dial.pipex.com".
+Ir:
+    reg:id "Irakli_Nadareishvili";
+    reg:name "Irakli Nadareishvili";
+    reg:updated "2014-01-31";
+    reg:uri "mailto:irakli&gmail.com".
+ISO:
+    reg:id "ISO-IEC_JTC1";
+    reg:name "ISO/IEC JTC1";
+    reg:updated "2014-01-29";
+    reg:uri "http://www.iso.org/iso/jtc1_home.html".
+ITS:
+    reg:id "ITS-IG-W3C";
+    reg:name "Internationalization Tag Set Interest Group (W3C)";
+    reg:updated "2013-08-20";
+    reg:uri "mailto:public-i18n-its-ig&w3.org".
+Iv:
+    reg:id "Ivan_Herman";
+    reg:name "Ivan Herman";
+    reg:updated "2017-06-27";
+    reg:uri "mailto:ivan&w3.org".
+n879:
+    reg:id "J._Scott_Hepler";
+    reg:name "J. Scott Hepler";
+    reg:updated "2000-05-20";
+    reg:uri "mailto:scott&truebasic.com".
+J8:
+    reg:id "Jack_Bennett";
+    reg:name "Jack Bennett";
+    reg:updated "2003-07-20";
+    reg:uri "mailto:jbennett&inspiration.com".
+J13:
+    reg:id "Jakub_Hytka";
+    reg:name "Jakub Hytka";
+    reg:updated "2008-08-06";
+    reg:uri "mailto:hytka&602.cz".
+J3:
+    reg:id "James_Bellinger";
+    reg:name "James Bellinger";
+    reg:updated "2017-07-18";
+    reg:uri "mailto:james&dimensionengineering.com".
+J9:
+    reg:id "James_Berry";
+    reg:name "James Berry";
+    reg:updated "2007-05-04";
+    reg:uri "mailto:jberry&macports.org".
+J:
+    reg:id "James_F_Philbin";
+    reg:name "James F Philbin";
+    reg:updated "2016-09-26";
+    reg:uri "mailto:jfphilbin&gmail.com".
+J2:
+    reg:id "James_Fields";
+    reg:name "James Fields";
+    reg:updated "2002-06-20";
+    reg:uri "mailto:jaime&d-vision.com".
+J7:
+    reg:id "James_Minnis";
+    reg:name "James Minnis";
+    reg:updated "2000-02-20";
+    reg:uri "mailto:james-minnis&glimpse-of-tomorrow.com".
+J17:
+    reg:id "James_Riordon";
+    reg:name "James Riordon";
+    reg:updated "2011-02-01";
+    reg:uri "mailto:webmaster&khronos.org".
+J12:
+    reg:id "James_Wick";
+    reg:name "James Wick";
+    reg:updated "2004-02-20";
+    reg:uri "mailto:jrwick&renlearn.com".
+J15:
+    reg:id "James_Wigger";
+    reg:name "James Wigger";
+    reg:updated "2016-04-04";
+    reg:uri "mailto:james&rootstudio.co.uk".
+J14:
+    reg:id "Jamie_Riden";
+    reg:name "Jamie Riden";
+    reg:updated "2006-03-31";
+    reg:uri "mailto:jamie&umajin.com".
+J16:
+    reg:id "Jan_Bostrom";
+    reg:name "Jan Bostrom";
+    reg:updated "2003-07-20";
+    reg:uri "mailto:jan&sundahus.se".
+J18:
+    reg:id "Jan_Nelson";
+    reg:name "Jan Nelson";
+    reg:updated "2000-05-20";
+    reg:uri "mailto:jann&microsoft.com".
+J5:
+    reg:id "Jan_Sch\u00fctze";
+    reg:name "Jan Sch\u00fctze";
+    reg:updated "2017-01-09";
+    reg:uri "mailto:jans&dracoblue.de".
+J10:
+    reg:id "Janine_Swenson";
+    reg:name "Janine Swenson";
+    reg:updated "1998-01-19";
+    reg:uri "mailto:janine&novadigm.com".
+J4:
+    reg:id "Jann_Pruulman";
+    reg:name "Jann Pruulmann";
+    reg:updated "1998-12-19";
+    reg:uri "mailto:jaan&fut.ee".
+J11:
+    reg:id "Jason_Birch";
+    reg:name "Jason Birch";
+    reg:updated "2010-07-20";
+    reg:uri "mailto:jason.birch&osgeo.org".
+J19:
+    reg:id "Jason_Pratt";
+    reg:name "Jason Pratt";
+    reg:updated "1997-08-19";
+    reg:uri "mailto:jason.pratt&autodesk.com".
+J6:
+    reg:id "Javier_D._Fern\u00e1ndez";
+    reg:name "Javier D. Fern\u00e1ndez";
+    reg:updated "2016-01-07";
+    reg:uri "mailto:javier.fernandez&wu.ac.at".
+J0:
+    reg:id "Jay_Doggett";
+    reg:name "Jay Doggett";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:jdoggett&tiac.net".
+J1:
+    reg:id "Jay_Moskowitz";
+    reg:name "Jay Moskowitz";
+    reg:updated "2001-03-20";
+    reg:uri "mailto:jay&aethersystems.com".
+Je:
+    reg:id "Jean-Baptiste_Henry";
+    reg:name "Jean-Baptiste Henry";
+    reg:updated "2008-07-23";
+    reg:uri "mailto:jean-baptiste.henry&thomson.net".
+Je0:
+    reg:id "Jean-Philippe_Goulet";
+    reg:name "Jean-Philippe Goulet";
+    reg:updated "2005-11-20";
+    reg:uri "mailto:jpgoulet&cmles.com".
+Jeff:
+    reg:id "Jeff_Lawson";
+    reg:name "Jeff Lawson";
+    reg:updated "2006-09-14";
+    reg:uri "mailto:jlawson&ud.com".
+Jef:
+    reg:id "Jeff_Tupper";
+    reg:name "Jeff Tupper";
+    reg:updated "2000-02-20";
+    reg:uri "mailto:tupper&peda.com".
+Jeg:
+    reg:id "Jegulsky";
+    reg:name "Alexander Jegulsky";
+    reg:updated "2013-11-20";
+    reg:uri "mailto:alexj&bekitzur.com".
+Jen:
+    reg:id "Jens_Jorgensen";
+    reg:name "Jens Jorgensen";
+    reg:updated "2014-05-01";
+    reg:uri "mailto:jbj1&ultraemail.net".
+Jer:
+    reg:id "Jerome_Marcon";
+    reg:name "J\u00e9r\u00f4me Marcon";
+    reg:updated "2010-02-24";
+    reg:uri "mailto:jerome.marcon&alcatel-lucent.com".
+Jerr:
+    reg:id "Jerry_Harris";
+    reg:name "Jerry Harris";
+    reg:updated "2005-11-20";
+    reg:uri "mailto:jharris&ruckusnetwork.com".
+Jess:
+    reg:id "Jesse_Alama";
+    reg:name "Jesse Alama";
+    reg:updated "2006-09-13";
+    reg:uri "mailto:j.alama&fct.unl.pt".
+Jes:
+    reg:id "Jesse_McGatha";
+    reg:name "Jesse McGatha";
+    reg:updated "2006-03-20";
+    reg:uri "mailto:jessmc&microsoft.com".
+Ji0:
+    reg:id "Jiang_Tian";
+    reg:name "Jiang Tian";
+    reg:updated "2009-06-02";
+    reg:uri "mailto:jiangt&digitalwave.cn".
+Ji:
+    reg:id "Jim_Ancona";
+    reg:name "Jim Ancona";
+    reg:updated "2008-03-17";
+    reg:uri "mailto:jancona&constantcontact.com".
+Jim:
+    reg:id "Jim_Spiller";
+    reg:name "Jim Spiller";
+    reg:updated "2003-06-20";
+    reg:uri "mailto:jspiller&criticaltools.com".
+Jiw:
+    reg:id "Jiwan_Han";
+    reg:name "Jiwan Han";
+    reg:updated "2013-05-13";
+    reg:uri "mailto:jiwan.han&etsi.org".
+Jod:
+    reg:id "Jodi_Moline";
+    reg:name "Jodi Moline";
+    reg:updated "1996-04-19";
+    reg:uri "mailto:jodim&softsource.com".
+n459:
+    reg:id "Joe_Prevo";
+    reg:name "Joe Prevo";
+    reg:updated "2002-01-20";
+    reg:uri "mailto:joe&prevo.com".
+Joe:
+    reg:id "Joerg_Falkenberg";
+    reg:name "J\u00f6rg Falkenberg";
+    reg:updated "2007-01-18";
+    reg:uri "mailto:j.falkenberg&cabgmbh.com".
+Joer:
+    reg:id "Joerg_Heuer";
+    reg:name "Joerg Heuer";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:Joerg.Heuer&siemens.com".
+Joey:
+    reg:id "Joey_Smith";
+    reg:name "Joey Smith";
+    reg:updated "2015-12-24";
+    reg:uri "mailto:joeysmith&gmail.com".
+Jo:
+    reg:id "John_Brinkman";
+    reg:name "John Brinkman";
+    reg:updated "2007-05-22";
+    reg:uri "mailto:john.brinkman&adobe.com".
+n1086:
+    reg:id "John_Clark";
+    reg:name "John Clark";
+    reg:updated "2002-06-20";
+    reg:uri "mailto:jclark&dbvision.net".
+n1087:
+    reg:id "John_Ellson";
+    reg:name "John Ellson";
+    reg:updated "2008-07-24";
+    reg:uri "mailto:ellson&research.att.com".
+n933:
+    reg:id "John_Ingi_Ingimundarson";
+    reg:name "John Ingi Ingimundarson";
+    reg:updated "2003-12-20";
+    reg:uri "mailto:jii&oz.com".
+n753:
+    reg:id "John_Kemp";
+    reg:name "John Kemp";
+    reg:updated "2003-09-20";
+    reg:uri "mailto:john.kemp&earthlink.net".
+n818:
+    reg:id "John_Kwan";
+    reg:name "John Kwan";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:John.Kwan&sealedmedia.com".
+n1088:
+    reg:id "John_Lines";
+    reg:name "John Lines";
+    reg:updated "1998-01-19";
+    reg:uri "mailto:john&paladin.demon.co.uk".
+Joh:
+    reg:id "John_M_Meredith";
+    reg:name "John M. Meredith";
+    reg:updated "2009-10-13";
+    reg:uri "mailto:john.meredith&etsi.org".
+n636:
+    reg:id "John_Mudge";
+    reg:name "John Mudge";
+    reg:updated "2016-06-20";
+    reg:uri "mailto:helpdesk&omaorg.org".
+John:
+    reg:id "John_Palmieri";
+    reg:name "John Palmieri";
+    reg:updated "2007-06-07";
+    reg:uri "mailto:johnp&redhat.com".
+n1089:
+    reg:id "John_Wolfe";
+    reg:name "John Wolfe";
+    reg:updated "1996-04-19";
+    reg:uri "mailto:John_Wolfe.VIVO&vivo.com".
+n1090:
+    reg:id "John-Mark_Gurney";
+    reg:name "John-Mark Gurney";
+    reg:updated "1999-08-19";
+    reg:uri "mailto:jmg&flyidea.com".
+Jon:
+    reg:id "Jon_Swanson";
+    reg:name "Jon Swanson";
+    reg:updated "2010-10-12";
+    reg:uri "mailto:jswanson&insors.com".
+Jon0:
+    reg:id "Jonathan_Neitz";
+    reg:name "Jonathan Neitz";
+    reg:updated "2009-12-17";
+    reg:uri "mailto:jneitz&smarttech.com".
+Jon1:
+    reg:id "Jonathan_Niedfeldt";
+    reg:name "Jonathan Niedfeldt";
+    reg:updated "2004-04-20";
+    reg:uri "mailto:jniedfeldt&americature.org".
+Joost:
+    reg:id "Joost";
+    reg:name "Joost Technologies B.V.";
+    reg:updated "2007-10-16";
+    reg:uri "mailto:joda&joost.com".
+Jorg:
+    reg:id "Jorge_Pando";
+    reg:name "Jorge Pando";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:jpan&pocketlearn.com".
+Jor:
+    reg:id "Jorn_Wildt";
+    reg:name "J\u00f8rn Wildt";
+    reg:updated "2014-04-08";
+    reg:uri "mailto:jw&fjeldgruppen.dk".
+Jos:
+    reg:id "Joseph_Reagle";
+    reg:name "Joseph Reagle";
+    reg:updated "2006-03-20";
+    reg:uri "mailto:reagle&w3.org".
+Jue:
+    reg:id "Juern_Laun";
+    reg:name "Juern Laun";
+    reg:updated "1999-04-19";
+    reg:uri "mailto:juern.laun&gmx.de".
+Jul:
+    reg:id "Julien_Grange";
+    reg:name "Julien Grange";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:julien.grange&francetelecom.com".
+Ju:
+    reg:id "Jun_Sato";
+    reg:name "Jun Sato";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:junn.sato&toshiba.co.jp".
+Jun:
+    reg:id "Jun_Yoshitake";
+    reg:name "Jun Yoshitake";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:yositake&iss.isl.melco.co.jp".
+Juo:
+    reg:id "Juoko_Tenhunen";
+    reg:name "Jouko Tenhunen";
+    reg:updated "2003-11-01";
+    reg:uri "mailto:jouko.tenhunen&nokia.com".
+Jus:
+    reg:id "Justin_Hutchings";
+    reg:name "Justin Hutchings";
+    reg:updated "2016-01-27";
+    reg:uri "mailto:justhu at microsoft.com".
+K1:
+    reg:id "Kari_E._Hurtta";
+    reg:name "Kari E. Hurtta";
+    reg:uri "mailto:flexstor&ozone.FMI.FI".
+K0:
+    reg:id "Katsuhiko_Ichinose";
+    reg:name "Katsuhiko Ichinose";
+    reg:updated "2010-11-17";
+    reg:uri "mailto:xml-info&antenna.co.jp".
+K:
+    reg:id "Kazuyuki_Ashimura";
+    reg:name "Kazuyuki Ashimura";
+    reg:updated "2013-10-30";
+    reg:uri "mailto:ashimura&w3.org".
+Keii:
+    reg:id "Keiichi_Shinoda";
+    reg:name "Keiichi Shinoda";
+    reg:updated "2003-07-20";
+    reg:uri "mailto:shino-k&post.yamaha.co.jp".
+Kei:
+    reg:id "Keith_Kester";
+    reg:name "Keith Kester";
+    reg:updated "2015-09-11";
+    reg:uri "mailto:kkester&digitalriver.com".
+Ken:
+    reg:id "Ken_Jibiki";
+    reg:name "Ken Jibiki";
+    reg:updated "2010-07-23";
+    reg:uri "mailto:ken&kenjij.com".
+Ker:
+    reg:id "Kerrick_Staley";
+    reg:name "Kerrick Staley";
+    reg:updated "2015-09-01";
+    reg:uri "mailto:kerrick&kerrickstaley.com".
+Kev:
+    reg:id "Kevin_Blumberg";
+    reg:name "Kevin Blumberg";
+    reg:updated "2002-01-20";
+    reg:uri "mailto:kevin&amiga.com".
+Kevi:
+    reg:id "Kevin_Crook";
+    reg:name "Kevin Crook";
+    reg:updated "2011-03-10";
+    reg:uri "mailto:productmanagement&rainstor.com".
+Ke:
+    reg:id "Kevin_Lau";
+    reg:name "Kevin Lau";
+    reg:updated "2006-09-29";
+    reg:uri "mailto:kevinlau&microsoft.com".
+n1091:
+    reg:id "Kevin_Murray";
+    reg:name "Kevin Murray";
+    reg:updated "2011-05-09";
+    reg:uri "mailto:kamurray&nds.com".
+Kevin:
+    reg:id "Kevin_Swiber";
+    reg:name "Kevin Swiber";
+    reg:updated "2012-11-27";
+    reg:uri "mailto:kswiber&gmail.com".
+Khe:
+    reg:id "Khemchart_Rungchavalnont";
+    reg:name "Khemchart Rungchavalnont";
+    reg:updated "1997-07-19";
+    reg:uri "mailto:khemcr&cpu.cp.eng.chula.ac.th".
+Khr:
+    reg:id "Khronos";
+    reg:name "The Khronos Group";
+    reg:updated "2016-07-01";
+    reg:uri "http://www.khronos.org".
+Kim:
+    reg:id "Kim_Scarborough";
+    reg:name "Kim Scarborough";
+    reg:updated "2016-08-12";
+    reg:uri "mailto:user&unknown.nu".
+Ki:
+    reg:id "Kiyofusa_Fujii";
+    reg:name "Kiyofusa Fujii";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:kfujii&japannet.or.jp".
+Kiy:
+    reg:id "Kiyoshi_Tashiro";
+    reg:name "Kiyoshi Tashiro";
+    reg:updated "2013-06-25";
+    reg:uri "mailto:Kiyoshi.Tashiro&fujixerox.co.jp".
+Kyu:
+    reg:id "Kyunghun_Jung";
+    reg:name "Kyunghun Jung";
+    reg:updated "2016-10-03";
+    reg:uri "mailto:kyunghun.jung&samsung.com".
+L:
+    reg:id "Larry_Campbell";
+    reg:name "Larry Campbell";
+    reg:uri "mailto:campbell&redsox.bsw.com".
+L0:
+    reg:id "Lauri_Tarkkala";
+    reg:name "Lauri Tarkkala";
+    reg:updated "2007-12-20";
+    reg:uri "mailto:Lauri.Tarkkala&sonera.com".
+Lee:
+    reg:id "Lee_Harding";
+    reg:name "Lee Harding";
+    reg:updated "2012-02-16";
+    reg:uri "mailto:lee.harding&circuitpeople.com".
+Leo:
+    reg:id "Leon_Bottou";
+    reg:name "Leon Bottou";
+    reg:updated "2002-01-20";
+    reg:uri "mailto:leonb&research.att.com".
+Lev:
+    reg:id "Levantovsky";
+    reg:name "Vladimir Levantovsky";
+    reg:updated "2013-03-29";
+    reg:uri "mailto:vladimir.levantovsky&monotypeimaging.com".
+Lind:
+    reg:id "Linda_Welsh";
+    reg:name "Linda Welsh";
+    reg:updated "2000-11-20";
+    reg:uri "mailto:linda&intel.com".
+Lin:
+    reg:id "Linus_Walleij";
+    reg:name "Linus Walleij";
+    reg:updated "2000-07-20";
+    reg:uri "mailto:triad&df.lth.se".
+Lis:
+    reg:id "Lisa_Mattson";
+    reg:name "Lisa Mattson";
+    reg:updated "2015-01-08";
+    reg:uri "mailto:lmattson&imsglobal.org".
+Lu:
+    reg:id "Luc_Rogge";
+    reg:name "Luc Rogge";
+    reg:updated "2006-05-18";
+    reg:uri "mailto:rluc&villagedata.com".
+Luc:
+    reg:id "Lucas_Maneos";
+    reg:name "Lucas Maneos";
+    reg:updated "2005-12-20";
+    reg:uri "mailto:iana&pragmaticomm.com".
+Luk:
+    reg:id "Luke_Tomasello";
+    reg:name "Luke Tomasello";
+    reg:uri "mailto:luket&intertrust.com".
+Lyn:
+    reg:id "Lyndsey_Ferguson";
+    reg:name "Lyndsey Ferguson";
+    reg:updated "2008-10-16";
+    reg:uri "mailto:Lyndsey&nemetschek.net".
+M19:
+    reg:id "Magnus_Nystrom";
+    reg:name "Magnus Nystr\u00f6m";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:magnus&rsasecurity.com".
+M:
+    reg:id "Maik_St\u00fchrenberg";
+    reg:name "Maik St\u00fchrenberg";
+    reg:updated "2010-04-22";
+    reg:uri "mailto:maik&xstandoff.net".
+M18:
+    reg:id "Makoto_Murata";
+    reg:name "Makoto Murata";
+    reg:updated "2011-03-23";
+    reg:uri "mailto:eb2m-mrt&asahi-net.or.jp".
+M15:
+    reg:id "Malte_Borcherding";
+    reg:name "Malte Borcherding";
+    reg:updated "2000-08-20";
+    reg:uri "mailto:Malte.Borcherding&brokat.com".
+M32:
+    reg:id "Marc_Douglas_Spencer";
+    reg:name "Marc Douglas Spencer";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:marcs&itc.kodak.com".
+M24:
+    reg:id "Marc_Hadley";
+    reg:name "Marc Hadley";
+    reg:updated "2006-03-20";
+    reg:uri "mailto:marc.hadley&sun.com".
+M4:
+    reg:id "Marc_Winter";
+    reg:name "Marc Winter";
+    reg:updated "2005-12-20";
+    reg:uri "mailto:info&fluxtime.com".
+M3:
+    reg:id "Marcus_Ligi_B\u00fcschleb";
+    reg:name "Marcus Ligi B\u00fcschleb";
+    reg:updated "2016-08-12";
+    reg:uri "mailto:marcus.bueschleb&googlemail.com".
+M9:
+    reg:id "Mario_Demuth";
+    reg:name "Mario Demuth";
+    reg:updated "2017-05-11";
+    reg:uri "mailto:mario&demuth-ww.de".
+M31:
+    reg:id "Mark_Callow";
+    reg:name "Mark Callow";
+    reg:updated "2010-09-27";
+    reg:uri "mailto:callow_mark&hicorp.co.jp".
+M29:
+    reg:id "Mark_Nottingham";
+    reg:name "Mark Nottingham, see registration template for e-mail";
+    reg:updated "2004-12".
+M28:
+    reg:id "Mark_Olleson";
+    reg:name "Mark Olleson";
+    reg:updated "2009-03-11";
+    reg:uri "mailto:mark.olleson&yamaha.co.uk".
+M17:
+    reg:id "Mark_Otaris";
+    reg:name "Mark Otaris";
+    reg:updated "2015-08-28";
+    reg:uri "mailto:mark.otaris&openmailbox.org".
+M14:
+    reg:id "Mark_Patton";
+    reg:name "Mark Patton";
+    reg:updated "1999-03-19";
+    reg:uri "mailto:fmp014&email.mot.com".
+M1:
+    reg:id "Mark_Powell";
+    reg:name "Mark Powell";
+    reg:updated "2013-09-06";
+    reg:uri "mailto:mpowell&bluetooth.com".
+M26:
+    reg:id "Mark_Risher";
+    reg:name "Mark Risher";
+    reg:updated "2000-12-20";
+    reg:uri "mailto:markr&vividence.com".
+M11:
+    reg:id "Mark_Wahl";
+    reg:name "Mark Wahl";
+    reg:updated "2006-10-24";
+    reg:uri "mailto:Mark.Wahl&informed-control.com".
+M0:
+    reg:id "Marshall_Rose";
+    reg:name "Marshall Rose";
+    reg:updated "1995-04-19";
+    reg:uri "mailto:mrose&dbc.mtview.ca.us".
+M33:
+    reg:id "Martin_Bailey";
+    reg:name "Martin Bailey";
+    reg:updated "2002-12-20";
+    reg:uri "mailto:martin.bailey&globalgraphics.com".
+M30:
+    reg:id "Martin_Dawe";
+    reg:name "Martin Dawe";
+    reg:updated "2011-01-27";
+    reg:uri "mailto:mdawe&hitnmix.com".
+M12:
+    reg:id "Martin_Knowles";
+    reg:name "Martin Knowles";
+    reg:updated "2001-06-20";
+    reg:uri "mailto:mjk&irepository.net".
+M22:
+    reg:id "Martin_Lambert";
+    reg:name "Martin Lambert";
+    reg:updated "2006-03-27";
+    reg:uri "mailto:martin.lambert&sealedmedia.com".
+M25:
+    reg:id "Martin_Talbot";
+    reg:name "Martin Talbot";
+    reg:updated "2011-01-25";
+    reg:uri "mailto:Martin.Talbot&ubisoft.com".
+M23:
+    reg:id "Martin_Vondrous";
+    reg:name "Martin Vondrous";
+    reg:updated "2008-08-06";
+    reg:uri "mailto:vondrous&602.cz".
+M13:
+    reg:id "Masaaki_Hirai";
+    reg:name "Masaaki Hirai";
+    reg:updated "2006-09-20";
+    reg:uri "mailto:masaaki_hirai&mb1.nkc.co.jp".
+M5:
+    reg:id "Masahiko_Sugimoto";
+    reg:name "Masahiko Sugimoto";
+    reg:updated "1997-10-19";
+    reg:uri "mailto:sugimoto&sz.sel.fujitsu.co.jp".
+M21:
+    reg:id "Masanori_Murai";
+    reg:name "Masanori Murai";
+    reg:updated "2007-12-20";
+    reg:uri "mailto:masanori.murai&mb.softbank.co.jp".
+M7:
+    reg:id "Masanori_Onda";
+    reg:name "Masanori Onda";
+    reg:updated "2000-02-20";
+    reg:uri "mailto:Masanori.Onda&fujixerox.co.jp".
+M6:
+    reg:id "Masumi_Ogita";
+    reg:name "Masumi Ogita";
+    reg:updated "1997-10-19";
+    reg:uri "mailto:ogita&oa.tfl.fujitsu.co.jp".
+M10:
+    reg:id "Mathieu_Villegas";
+    reg:name "Mathieu Villegas";
+    reg:updated "2007-03-20";
+    reg:uri "mailto:mimetype&immervision.com".
+M2:
+    reg:id "Matt_Kern";
+    reg:name "Matt Kern";
+    reg:updated "2012-09-19";
+    reg:uri "mailto:matt.kern&cyantechnology.com".
+M8:
+    reg:id "Matthias_Ehmann";
+    reg:name "Matthias Ehmann";
+    reg:updated "2009-07-28";
+    reg:uri "mailto:matthias.ehmann&uni-bayreuth.de".
+M16:
+    reg:id "Matthias_Hessling";
+    reg:name "Matthias Hessling";
+    reg:updated "2002-12-20";
+    reg:uri "mailto:info-mime-obn&blaupunkt.de".
+M20:
+    reg:id "Matthias_Ludwig";
+    reg:name "Matthias Ludwig";
+    reg:updated "2011-03-08";
+    reg:uri "mailto:mludwig&quobject.com".
+M27:
+    reg:id "Matti_Salmi";
+    reg:name "Matti Salmi";
+    reg:updated "2003-03-20";
+    reg:uri "mailto:matti.salmi&nokia.com".
+Mer:
+    reg:id "Meredith_Searcy";
+    reg:name "Meredith Searcy";
+    reg:updated "1997-06-19";
+    reg:uri "mailto:msearcy&newmoon.com".
+Mic2:
+    reg:id "Michael_A_Dolan";
+    reg:name "Michael A Dolan";
+    reg:updated "2011-09-06";
+    reg:uri "mailto:md.iana&newtbt.com".
+Mic6:
+    reg:id "Michael_Ashbridge";
+    reg:name "Michael Ashbridge";
+    reg:updated "2006-12-14";
+    reg:uri "mailto:mashbridge+iana&google.com".
+Mic11:
+    reg:id "Michael_Boyle";
+    reg:name "Michael Boyle";
+    reg:updated "2008-12-19";
+    reg:uri "mailto:michaelboyle&smarttech.com".
+Mic3:
+    reg:id "Michael_Dixon";
+    reg:name "Michael Dixon";
+    reg:updated "2007-05-25";
+    reg:uri "mailto:michael.dixon&denovosoftware.com".
+Mich:
+    reg:id "Michael_Domino";
+    reg:name "Michael Domino";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:michaeldomino&mediaone.net".
+Mi:
+    reg:id "Michael_Duffy";
+    reg:name "Michael Duffy";
+    reg:updated "1997-09-19";
+    reg:uri "mailto:miked&psiaustin.com".
+Mic13:
+    reg:id "Michael_Fox";
+    reg:name "Michael Fox";
+    reg:updated "2001-01-20";
+    reg:uri "mailto:mfox&nuera.com".
+Mic:
+    reg:id "Michael_Hammer";
+    reg:name "Michael Hammer";
+    reg:updated "2005-10-28";
+    reg:uri "mailto:mhammer&cisco.com".
+Mic5:
+    reg:id "Michael_Hvidsten";
+    reg:name "Michael Hvidsten";
+    reg:updated "2009-03-17";
+    reg:uri "mailto:hvidsten&gac.edu".
+Mic8:
+    reg:id "Michael_J._Donahue";
+    reg:name "Michael J. Donahue";
+    reg:updated "2008-01-04";
+    reg:uri "mailto:donahue&kodak.com".
+Mic10:
+    reg:id "Michael_Koster";
+    reg:name "Michael Koster";
+    reg:updated "2017-03-03";
+    reg:uri "mailto:michael.koster&smartthings.com".
+Mic4:
+    reg:id "Michael_Lagally";
+    reg:name "Michael Lagally";
+    reg:updated "2011-06-08";
+    reg:uri "mailto:Michael.Lagally&oracle.com".
+Mic9:
+    reg:id "Michael_Laramie";
+    reg:name "Michael Laramie";
+    reg:updated "1999-02-19";
+    reg:uri "mailto:laramiem&btv.ibm.com".
+Mic12:
+    reg:id "Michael_Mansell";
+    reg:name "Michael Mansell";
+    reg:updated "2009-02-18";
+    reg:uri "mailto:mmansell&ca.ibm.com".
+Mic0:
+    reg:id "Michael_OBrien";
+    reg:name "Michael O'Brien";
+    reg:updated "1998-01-19";
+    reg:uri "mailto:meobrien1&mmm.com".
+Mic14:
+    reg:id "Michael_Powers";
+    reg:name "Michael Powers";
+    reg:updated "1999-01-19";
+    reg:uri "mailto:powers&insideout.net".
+Mic7:
+    reg:id "Michael_Steidl";
+    reg:name "Michael Steidl";
+    reg:updated "2014-01-29";
+    reg:uri "mailto:mdirector&iptc.org".
+Mic1:
+    reg:id "Michael_Sweet";
+    reg:name "Michael Sweet";
+    reg:updated "2017-05-12";
+    reg:uri "mailto:msweet&apple.com".
+Miche:
+    reg:id "Micheal_Hewett";
+    reg:name "Michael Hewett";
+    reg:updated "2005-12-20";
+    reg:uri "mailto:mike&hewettresearch.com".
+Mick:
+    reg:id "Mick_Conley";
+    reg:name "Mick Conley";
+    reg:updated "2013-09-06";
+    reg:uri "mailto:mconley&wi-fi.org".
+Mig:
+    reg:id "Miguel_Angel_Reina_Ortega";
+    reg:name "Miguel Angel Reina Ortega";
+    reg:updated "2013-10-15";
+    reg:uri "mailto:MiguelAngel.ReinaOrtega&etsi.org".
+Mike:
+    reg:id "Mike_Amundsen";
+    reg:name "Mike Amundsen";
+    reg:updated "2011-07-12";
+    reg:uri "mailto:mca&amundsen.com".
+n129:
+    reg:id "Mike_Foley";
+    reg:name "Mike Foley";
+    reg:updated "2008-12-19";
+    reg:uri "mailto:mfoley&bluetooth.com".
+n119:
+    reg:id "Mike_Hearn";
+    reg:name "Mike Hearn";
+    reg:updated "2005-11-20";
+    reg:uri "mailto:mike&navi.cx".
+n332:
+    reg:id "Mike_Kelly";
+    reg:name "Mike Kelly";
+    reg:updated "2011-07-14";
+    reg:uri "mailto:mike&stateless.co".
+n147:
+    reg:id "Mike_Labatt";
+    reg:name "Mike Labatt";
+    reg:updated "2009-09-01";
+    reg:uri "mailto:mike-labatt.iana-mime&cloanto.net".
+n993:
+    reg:id "Mike_Ward";
+    reg:name "Mike Ward";
+    reg:updated "2007-06-18";
+    reg:uri "mailto:mcw&dolby.com".
+Mik:
+    reg:id "Mike_Wexler";
+    reg:name "Mike Wexler";
+    reg:updated "1996-04-19";
+    reg:uri "mailto:mwexler&frame.com".
+Mikh:
+    reg:id "Mikhail_Gorshenev";
+    reg:name "Mikhail Gorshenev";
+    reg:updated "2007-06-25";
+    reg:uri "mailto:Mikhail.Gorshenev&sun.com".
+Miku:
+    reg:id "Mikusiak_Lubos";
+    reg:name "Mikusiak Lubos";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:lmikusia&blava-s.bratisla.ingr.com".
+Mon:
+    reg:id "Monty_Solomon";
+    reg:name "Monty Solomon";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:monty&noblenet.com".
+Mr:
+    reg:id "Mr._Yellow";
+    reg:name "Mr. Yellow";
+    reg:updated "1998-03-19";
+    reg:uri "mailto:yellowriversw&yahoo.com".
+N1:
+    reg:id "Natarajan_Balasundara";
+    reg:name "Natarajan Balasundara";
+    reg:updated "2014-05-01";
+    reg:uri "mailto:rajan&ipanoramii.com".
+N0:
+    reg:id "Nathan_Black";
+    reg:name "Nathan Black";
+    reg:updated "2017-04-12";
+    reg:uri "mailto:nblack&onepager.com".
+N2:
+    reg:id "Nathan_Zerbe";
+    reg:name "Nathan Zerbe";
+    reg:updated "2010-09-22";
+    reg:uri "mailto:nzerbe&directv.com".
+N:
+    reg:id "Nathaniel_Borenstein";
+    reg:name "Nathaniel Borenstein";
+    reg:updated "1994-04-19";
+    reg:uri "mailto:NSB&bellcore.com".
+N3:
+    reg:id "National_Archives_UK";
+    reg:name "The National Archives, UK";
+    reg:updated "2014-11-21";
+    reg:uri "mailto:DigitalPreservation&nationalarchives.gsi.gov.uk".
+n1053:
+    reg:id "Ni_Hui";
+    reg:name "Ni Hui";
+    reg:updated "2014-09-10";
+    reg:uri "mailto:nihuini&tencent.com".
+Nich:
+    reg:id "Nicholas_Parks_Young";
+    reg:name "Nicholas Parks Young";
+    reg:updated "2007-12-03";
+    reg:uri "mailto:nick&shadyindustries.com".
+Ni:
+    reg:id "Nick_Reeves";
+    reg:name "Nick Reeves";
+    reg:updated "2009-08-04";
+    reg:uri "mailto:ndr&realvnc.com".
+Nic:
+    reg:id "Nick_Smith";
+    reg:name "Nick Smith";
+    reg:updated "1995-06-19";
+    reg:uri "mailto:nas&ant.co.uk".
+Nicol:
+    reg:id "Nicolas_Helin";
+    reg:name "Nicolas Helin";
+    reg:updated "2007-01-23";
+    reg:uri "mailto:helin&pv.com".
+Nil:
+    reg:id "Nils_Langhammer";
+    reg:name "Nils Langhammer";
+    reg:updated "2014-05-01";
+    reg:uri "mailto:nils.langhammer&miele.de".
+Nin:
+    reg:id "Ning_Dong";
+    reg:name "Ning Dong";
+    reg:updated "2014-12-22";
+    reg:uri "mailto:ning.dong&oracle.com".
+Nobuk:
+    reg:id "Nobukazu_Togashi";
+    reg:name "Nobukazu Togashi";
+    reg:updated "1997-06-19";
+    reg:uri "mailto:togashi&ai.cs.fujitsu.co.jp".
+Noki:
+    reg:id "Nokia";
+    reg:name "Nokia Corporation";
+    reg:updated "2007-05-25";
+    reg:uri "mailto:mime&nokia.com".
+Nor:
+    reg:id "Nor_Helmee";
+    reg:name "Nor Helmee";
+    reg:updated "1998-11-19";
+    reg:uri "mailto:helmee&my.cybank.net".
+NTT:
+    reg:id "NTT-local";
+    reg:name "NTT-local";
+    reg:updated "2014-07-25";
+    reg:uri "mailto:ngn-fmt-regist&ml.east.ntt.co.jp".
+OAS:
+    reg:id "OASIS_Security_Services_Technical_Committee_SSTC";
+    reg:name
+        "OASIS Security Services Technical Committee (SSTC), see registration template for e-mail";
+    reg:updated "2004-12".
+OASIS:
+    reg:id "OASIS";
+    reg:name "OASIS";
+    reg:updated "2009-01-16";
+    reg:uri "mailto:tc-admin&oasis-open.org".
+OGC: reg:id "OGC"; reg:name "Open Geospatial Consortium (OGC)".
+
+n648:
+    reg:id "OMA_Data_Synchronization_Working_Group";
+    reg:name "OMA Data Synchronization Working Group";
+    reg:updated "2014-05-01";
+    reg:uri "mailto:technical-comments&mail.openmobilealliance.org".
+OM:
+    reg:id "OMA_Presence_and_Availability_PAG_Working_Group";
+    reg:name "OMA Presence and Availability (PAG) Working Group";
+    reg:updated "2006-09-14";
+    reg:uri "mailto:technical-comments&mail.openmobilealliance.org".
+O:
+    reg:id "OMA_Push_to_Talk_over_Cellular_POC_Working_Group";
+    reg:name "OMA Push to Talk over Cellular (POC) Working Group";
+    reg:updated "2008-01-24";
+    reg:uri "mailto:technical-comments&mail.openmobilealliance.org".
+n856:
+    reg:id "OMA-DM_Work_Group";
+    reg:name "OMA-DM Work Group";
+    reg:updated "2012-06-15";
+    reg:uri "mailto:technical-comments&openmobilealliance.org".
+OMA:
+    reg:id "OMA";
+    reg:name "Open Mobile Alliance";
+    reg:updated "2010-07-20";
+    reg:uri "mailto:technical-comments&openmobilealliance.org".
+Op:
+    reg:id "Open_Mobile_Alliance_BAC_DLDRM_Working_Group";
+    reg:name "Open Mobile Alliance's BAC DLDRM Working Group";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:technical-comments&mail.openmobilealliance.org".
+Ope:
+    reg:id "Open_Mobile_Naming_Authority";
+    reg:name "Open Mobile Naming Authority (OMNA)";
+    reg:updated "2016-06-20";
+    reg:uri "mailto:OMA-OMNA&mail.openmobilealliance.org".
+Ore:
+    reg:id "Oren_Ben-Kiki";
+    reg:name "Oren Ben-Kiki";
+    reg:updated "1998-10-19";
+    reg:uri "mailto:oren&capella.co.il".
+Osk:
+    reg:id "Oskar_Jonsson";
+    reg:name "Oskar Jonsson";
+    reg:updated "2014-09-16";
+    reg:uri "mailto:oskar.jonsson&mfd.se".
+Ozg:
+    reg:id "Ozgur_Oyman";
+    reg:name "Ozgur Oyman";
+    reg:updated "2014-04-16";
+    reg:uri "mailto:ozgur.oyman&intel.com".
+P10:
+    reg:id "Parasolid";
+    reg:name "Parasolid";
+    reg:updated "2000-10-20";
+    reg:uri "mailto:ps-mimetype&ugs.com".
+P3:
+    reg:id "Pascal_Mayeux";
+    reg:name "Pascal Mayeux";
+    reg:updated "2006-11-13";
+    reg:uri "mailto:pmayeux&cirpack.com".
+P2:
+    reg:id "Pathway_Commons";
+    reg:name "Pathway Commons";
+    reg:updated "2015-06-09";
     reg:uri
-        "http://3mf.io", "http://www.idpf.org",
-        "http://www.iso.org/iso/jtc1_home.html", "http://www.khronos.org",
-        "http://www.sis.se/", "http://www.w3.org/",
-        "mailto:3gppContact&etsi.org", "mailto:A.H.Francis&open.ac.uk",
-        "mailto:Aloke_Gupta&ex.cv.hp.com", "mailto:Arild.Fuldseth&fast.no",
-        "mailto:BenS&crt.com", "mailto:Biplab&nemetschek.net",
-        "mailto:CLamb&pvimage.com", "mailto:Christian.Mercat&univ-montp2.fr",
-        "mailto:DevynCJohnson&Gmail.com",
-        "mailto:DigitalPreservation&nationalarchives.gsi.gov.uk",
-        "mailto:Donald.Eastlake&motorola.com", "mailto:Frank.Rottmann&web.de",
-        "mailto:Frederic.Firmin&etsi.org", "mailto:Gwenael.Le_Bodic&alcatel.fr",
-        "mailto:H.C.Slusanschi&massey.ac.nz",
-        "mailto:Harald.T.Alvestrand&uninett.no",
-        "mailto:Hoshina.Shoji&exc.epson.co.jp",
-        "mailto:Joerg.Heuer&siemens.com", "mailto:John.Kwan&sealedmedia.com",
-        "mailto:John_Wolfe.VIVO&vivo.com",
-        "mailto:Kiyoshi.Tashiro&fujixerox.co.jp",
-        "mailto:Lauri.Tarkkala&sonera.com", "mailto:Leost01&accpac.com",
-        "mailto:Lyndsey&nemetschek.net", "mailto:Malte.Borcherding&brokat.com",
-        "mailto:Mark.Wahl&informed-control.com",
-        "mailto:Martin.Talbot&ubisoft.com",
-        "mailto:Masanori.Onda&fujixerox.co.jp",
-        "mailto:Michael.Lagally&oracle.com",
-        "mailto:MiguelAngel.ReinaOrtega&etsi.org",
-        "mailto:Mikhail.Gorshenev&sun.com", "mailto:NSB&bellcore.com",
-        "mailto:OMA-OMNA&mail.openmobilealliance.org",
-        "mailto:Paul_Wattenberger&lotus.com", "mailto:Peter.Kriens&aQute.biz",
-        "mailto:Prakash.iyer&intel.com", "mailto:RCB&3k.com",
-        "mailto:SJernber&TIBCO.com", "mailto:Samer.el-haj-mahmoud&hpe.com",
-        "mailto:Svante.Schubert&sun.com", "mailto:Thomas.Belling&siemens.com",
-        "mailto:Viktor.Haag&D2L.com", "mailto:a.taya&west.east.ntt.co.jp",
-        "mailto:ababits&graphisoft.hu", "mailto:ac&qualcomm.com",
-        "mailto:adani&solution-soft.com", "mailto:adevasia&mobius.com",
-        "mailto:adrian.foeder&netformic.de", "mailto:adryden&tiaonline.org",
-        "mailto:adubov&ea.com", "mailto:aferrazzini&rim.com",
-        "mailto:akabayam&mobius.com", "mailto:alex.crawford&coreos.com",
-        "mailto:alex.sibilev&tmd.tv", "mailto:alexj&bekitzur.com",
-        "mailto:allen.gillam&hydrostatix.com",
-        "mailto:amclaughlin&comversens.com", "mailto:amir.gaash&hp.com",
-        "mailto:amirh&haifa.vnet.ibm.com",
-        "mailto:anders.hansson&securedemail.com",
-        "mailto:andrewburt&cricksoft.com", "mailto:andy_mutz&hp.com",
-        "mailto:api&heroku.com", "mailto:applebau&battelle.org",
-        "mailto:aprimo&celltick.com",
-        "mailto:armands.strazds&medienhaus-bremen.de",
-        "mailto:arnegerdes&uniqueobject.com", "mailto:ashimura&w3.org",
-        "mailto:ashrae&ashrae.org", "mailto:assoc&intercon.roc.servtech.com",
-        "mailto:astrand&cendio.se", "mailto:ateffahi&dtg.org.uk",
-        "mailto:b.fallenstein&gmx.de", "mailto:b_mccolgan&hotmail.com",
-        "mailto:bat&us.ibm.com", "mailto:bayard&ctcexchange.com",
-        "mailto:benson&basistech.com", "mailto:bill&janssen.org",
-        "mailto:bill.zou&dts.com", "mailto:billappleton&dreamfactory.com",
-        "mailto:biopax-discuss&googlegroups.org", "mailto:biznis&regadou.net",
-        "mailto:bjorn.wennerstrom&synergenix.se",
-        "mailto:bkumar&lightspeedaudiolabs.com", "mailto:bmccoy&idpf.org",
-        "mailto:boris&virtue3d.com", "mailto:bpenteco&boi.hp.com",
-        "mailto:brad_chase&bitstream.com", "mailto:braden&endoframe.com",
-        "mailto:brambley&adobe.com", "mailto:brao&bitfone.com",
-        "mailto:brett.mcdowell&ieee-isto.org", "mailto:briank&terisa.com",
-        "mailto:bruno.chatras&orange.com", "mailto:bryan.sullivan&att.com",
-        "mailto:bue&sevencs.com", "mailto:buis&us.ibm.com",
-        "mailto:ca&deezer.com", "mailto:cadman&gte.net",
-        "mailto:callow_mark&hicorp.co.jp", "mailto:campbell&redsox.bsw.com",
-        "mailto:cbas&rhymbox.com", "mailto:cbradney&zip.com.au",
-        "mailto:ceich&enphaseenergy.com", "mailto:cewhite&llamagraphics.com",
-        "mailto:chad&iris.washington.edu", "mailto:chandhok&within.com",
-        "mailto:chandra&muvee.com", "mailto:charles.engelke&infotechfl.com",
-        "mailto:chris&charabaruk.com", "mailto:chris.rae&microsoft.com",
-        "mailto:christopher.gales&informix.com",
-        "mailto:christopher.smith+iana&artsquare.com",
-        "mailto:cliff&solenttec.net", "mailto:clueit&airzip.com",
-        "mailto:contact&covac-software.com", "mailto:contact&oipf.tv",
-        "mailto:craig&eyesopen.com", "mailto:csnazell&astraea-software.com",
-        "mailto:csolc&adobe.com", "mailto:cxh&eecs.berkeley.edu",
-        "mailto:d&liwa.li", "mailto:dan&dantom.com",
-        "mailto:danielgarthsims&gmail.com", "mailto:danielsc&microsoft.com",
-        "mailto:danpl&microsoft.com", "mailto:david&xara.com",
-        "mailto:david.brossard&axiomatics.com",
-        "mailto:david.petersen&sealedmedia.com", "mailto:davidl&lmert.com",
-        "mailto:davidparker&davidparker.com", "mailto:dclunie&dclunie.com",
-        "mailto:dcrocker@mordor.stanford.edu%3E%3Cbr%3E",
-        "mailto:ddufeu&neurolanguage.com", "mailto:deansl&microsoft.com",
-        "mailto:derek&friendlysoftware.com", "mailto:dev&maxmind.com",
-        "mailto:developers&pagerduty.com", "mailto:dfurbeck&blackberry.com",
-        "mailto:dglazer&best.com", "mailto:dguy&powersoft.com",
-        "mailto:dicom&medicalimaging.org", "mailto:dirk&kenamea.com",
-        "mailto:dirk.farin&gmail.com", "mailto:dmanning&uwi.com",
-        "mailto:dmould&airzip.com", "mailto:don&lexmark.com",
-        "mailto:donahue&kodak.com", "mailto:doug.serres&hummingbird.com",
-        "mailto:dovid&acucorp.com", "mailto:eb2m-mrt&asahi-net.or.jp",
-        "mailto:ebruno&solution-soft.com", "mailto:eheredia&microsoft.com",
-        "mailto:eile&esmertec.com", "mailto:ellson&research.att.com",
-        "mailto:eric at w3.org", "mailto:eric.turcotte&ericsson.com",
-        "mailto:ericfl&MICROSOFT.com", "mailto:erich&hheld.com",
-        "mailto:ericle&microsoft.com", "mailto:erik.ronstrom&doremir.com",
-        "mailto:etay&emultek.co.il", "mailto:ewedel&meridian-data.com",
-        "mailto:faure&kde.org", "mailto:fenner&aristanetworks.com",
-        "mailto:flexstor&ozone.FMI.FI", "mailto:flippmoke&gmail.com",
-        "mailto:floersch&echo.sound.net", "mailto:fmp014&email.mot.com",
-        "mailto:fp&contact.de", "mailto:fpirsch&geocube.fr",
-        "mailto:franck&k1info.com", "mailto:frank&tri-dsystems.com",
-        "mailto:frankxiong&chipnuts.com", "mailto:franz&1000minds.com",
-        "mailto:frey&genomatix.de", "mailto:fsdl&frogans.com",
-        "mailto:fujii&centurysys.co.jp", "mailto:fumio.tanabe&fujixerox.co.jp",
-        "mailto:gadams&waynesworld.ucsd.edu", "mailto:gandert.am&pg.com",
-        "mailto:gary.adams&sun.com", "mailto:gary.ellison&intertrust.com",
-        "mailto:gasadi&me.com", "mailto:gayatri&informix.com",
-        "mailto:gbrammer&gmx.de", "mailto:gdt&gdt.id.au",
-        "mailto:ghowes&cambridgesoft.com",
-        "mailto:gil.bernabeu&globalglatform.org",
-        "mailto:giulio&giuliozambon.org",
-        "mailto:giuseppe.naccarato&picsel.com", "mailto:glennf&qualcomm.com",
-        "mailto:glennrp&gmail.com", "mailto:glennw&ndg.com",
-        "mailto:gparsons&nortelnetworks.com", "mailto:gpeacock&palm.com",
-        "mailto:green&colourspace.demon.co.uk",
-        "mailto:greg_scratchley&intuit.com", "mailto:gregoryjward&gmail.com",
-        "mailto:gregv&lucent.com", "mailto:gregva&microsoft.com",
-        "mailto:gsands&tycoint.com", "mailto:gselzler&shana.com",
-        "mailto:guy&alum.mit.edu", "mailto:guyu&rd.oda.epson.co.jp",
-        "mailto:gww&silcom.com", "mailto:gzimmermann at acm.org",
-        "mailto:harms&film-it.co.za", "mailto:heikkivesalainen&yahoo.com",
-        "mailto:heintz&adobe.com", "mailto:heinz.schuetz&bint.ch",
-        "mailto:helin&pv.com", "mailto:helmee&my.cybank.net",
-        "mailto:helpdesk&ecma-international.org", "mailto:helpdesk&omaorg.org",
-        "mailto:hemant&kinar.com", "mailto:henke&henke37.cjb.net",
-        "mailto:henry&zoo.utoronto.ca", "mailto:henryf&mediastation.com",
-        "mailto:hess&vidsoft.de", "mailto:holstege&firstfloor.com",
-        "mailto:howard.wang&huawei.com", "mailto:hscheidler&quark.com",
-        "mailto:http://www.zigbee.org", "mailto:huth&tuxfamily.org",
-        "mailto:hvidsten&gac.edu", "mailto:hytka&602.cz",
-        "mailto:iain&easykaraoke.com", "mailto:iana&gbp.gaige.net",
-        "mailto:iana&pragmaticomm.com", "mailto:iana&uliklumpp.com",
-        "mailto:iana-contact&f-secure.com", "mailto:iana-registrar&uplanet.com",
-        "mailto:iana2&daverobin.com", "mailto:ietf&ietf.org",
-        "mailto:iferber&netvision.net.il", "mailto:ikeda&tokoyo.faith.co.jp",
-        "mailto:ilan.mahalal&gemalto.com", "mailto:imedland&dtg.org.uk",
-        "mailto:info&aexiz.com", "mailto:info&asam.net",
-        "mailto:info&fluxtime.com", "mailto:info&medcalc.be",
-        "mailto:info&quarantainenet.nl", "mailto:info&verimatrix.com",
-        "mailto:info&wolfram.com", "mailto:info-mime-obn&blaupunkt.de",
-        "mailto:ingo.hammann&ppi.de", "mailto:installer-mime&group.apple.com",
-        "mailto:ioseb.dzmanashvili&gmail.com", "mailto:ipp&pwg.org",
-        "mailto:irakli&gmail.com", "mailto:ivan&w3.org",
-        "mailto:j.alama&fct.unl.pt", "mailto:j.falkenberg&cabgmbh.com",
-        "mailto:jaan&fut.ee", "mailto:jaime&d-vision.com",
-        "mailto:james&dimensionengineering.com",
-        "mailto:james&rootstudio.co.uk",
-        "mailto:james-minnis&glimpse-of-tomorrow.com",
-        "mailto:jamie&umajin.com", "mailto:jan&sundahus.se",
-        "mailto:jancona&constantcontact.com", "mailto:janine&novadigm.com",
-        "mailto:jann&microsoft.com", "mailto:jans&dracoblue.de",
-        "mailto:jason.birch&osgeo.org", "mailto:jason.pratt&autodesk.com",
-        "mailto:javier.fernandez&wu.ac.at", "mailto:jay&aethersystems.com",
-        "mailto:jbennett&inspiration.com", "mailto:jberry&macports.org",
-        "mailto:jbj1&ultraemail.net", "mailto:jclark&dbvision.net",
-        "mailto:jdoggett&tiac.net", "mailto:jean-baptiste.henry&thomson.net",
-        "mailto:jerome.marcon&alcatel-lucent.com",
-        "mailto:jessmc&microsoft.com", "mailto:jfphilbin&gmail.com",
-        "mailto:jharris&ruckusnetwork.com", "mailto:jiangt&digitalwave.cn",
-        "mailto:jii&oz.com", "mailto:jiwan.han&etsi.org",
-        "mailto:jlawson&ud.com", "mailto:jmg&flyidea.com",
-        "mailto:jneitz&smarttech.com", "mailto:jniedfeldt&americature.org",
-        "mailto:joda&joost.com", "mailto:jodim&softsource.com",
-        "mailto:joe&prevo.com", "mailto:joeysmith&gmail.com",
-        "mailto:john&paladin.demon.co.uk", "mailto:john.brinkman&adobe.com",
-        "mailto:john.kemp&earthlink.net", "mailto:john.meredith&etsi.org",
-        "mailto:johnp&redhat.com", "mailto:jouko.tenhunen&nokia.com",
-        "mailto:jpan&pocketlearn.com", "mailto:jpgoulet&cmles.com",
-        "mailto:jrwick&renlearn.com", "mailto:jspiller&criticaltools.com",
-        "mailto:jswanson&insors.com", "mailto:juern.laun&gmx.de",
-        "mailto:julien.grange&francetelecom.com",
-        "mailto:junn.sato&toshiba.co.jp", "mailto:justhu at microsoft.com",
-        "mailto:jw&fjeldgruppen.dk", "mailto:kamurray&nds.com",
-        "mailto:ken&kenjij.com", "mailto:kerrick&kerrickstaley.com",
-        "mailto:kevin&amiga.com", "mailto:kevinlau&microsoft.com",
-        "mailto:kfujii&japannet.or.jp", "mailto:khemcr&cpu.cp.eng.chula.ac.th",
-        "mailto:khmer-project&idyll.org", "mailto:kkester&digitalriver.com",
-        "mailto:kortenkamp&cinderella.de", "mailto:kswami&hns.com",
-        "mailto:kswiber&gmail.com", "mailto:kyunghun.jung&samsung.com",
-        "mailto:laramiem&btv.ibm.com", "mailto:lee.harding&circuitpeople.com",
-        "mailto:lengyel&terathon.com", "mailto:leonb&research.att.com",
-        "mailto:linda&intel.com", "mailto:lindner&mudhoney.micro.umn.edu",
-        "mailto:lmattson&imsglobal.org",
-        "mailto:lmikusia&blava-s.bratisla.ingr.com",
-        "mailto:luket&intertrust.com", "mailto:m_director_iptc&dial.pipex.com",
-        "mailto:magnus&rsasecurity.com", "mailto:maik&xstandoff.net",
-        "mailto:mail&tobyinkster.co.uk", "mailto:marc.hadley&sun.com",
-        "mailto:marcs&itc.kodak.com", "mailto:marcus.bueschleb&googlemail.com",
-        "mailto:mario&demuth-ww.de", "mailto:mark.olleson&yamaha.co.uk",
-        "mailto:mark.otaris&openmailbox.org", "mailto:markr&vividence.com",
-        "mailto:martin.bailey&globalgraphics.com",
-        "mailto:martin.lambert&sealedmedia.com",
-        "mailto:masaaki_hirai&mb1.nkc.co.jp",
-        "mailto:masanori.murai&mb.softbank.co.jp",
-        "mailto:mashbridge+iana&google.com",
-        "mailto:matt.kern&cyantechnology.com",
-        "mailto:matthias.ehmann&uni-bayreuth.de",
-        "mailto:matti.salmi&nokia.com", "mailto:mca&amundsen.com",
-        "mailto:mconley&wi-fi.org", "mailto:mcw&dolby.com",
-        "mailto:md.iana&newtbt.com", "mailto:mdawe&hitnmix.com",
-        "mailto:mdirector&iptc.org", "mailto:me&eligrey.com",
-        "mailto:member-webapps&w3.org", "mailto:meobrien1&mmm.com",
-        "mailto:mfoley&bluetooth.com", "mailto:mfox&nuera.com",
-        "mailto:mhammer&cisco.com", "mailto:michael.dixon&denovosoftware.com",
-        "mailto:michael.koster&smartthings.com",
-        "mailto:michaelboyle&smarttech.com",
-        "mailto:michaeldomino&mediaone.net", "mailto:mike&hewettresearch.com",
-        "mailto:mike&navi.cx", "mailto:mike&stateless.co",
-        "mailto:mike-labatt.iana-mime&cloanto.net",
-        "mailto:miked&psiaustin.com", "mailto:mime&20000.org",
-        "mailto:mime&nokia.com", "mailto:mime&unity3d.com",
-        "mailto:mimetype&immervision.com", "mailto:mjk&irepository.net",
-        "mailto:mludwig&quobject.com", "mailto:mmansell&ca.ibm.com",
-        "mailto:monty&noblenet.com", "mailto:mori&mm.rd.nttdata.co.jp",
-        "mailto:mpowell&bluetooth.com", "mailto:mrose&dbc.mtview.ca.us",
-        "mailto:msearcy&newmoon.com", "mailto:msweet&apple.com",
-        "mailto:mtana&iss.isl.melco.co.jp", "mailto:mwexler&frame.com",
-        "mailto:naga&rd.oda.epson.co.jp", "mailto:nas&ant.co.uk",
-        "mailto:navara&emclient.com", "mailto:nblack&onepager.com",
-        "mailto:ndr&realvnc.com", "mailto:ngn&nihon-seigyo.co.jp",
-        "mailto:ngn-fmt-regist&ml.east.ntt.co.jp",
-        "mailto:nick&shadyindustries.com", "mailto:nihuini&tencent.com",
-        "mailto:nils.langhammer&miele.de", "mailto:ning.dong&oracle.com",
-        "mailto:nzerbe&directv.com", "mailto:office&geogebra.org",
-        "mailto:ogita&oa.tfl.fujitsu.co.jp",
-        "mailto:okudaira&candy.paso.fujitsu.co.jp",
-        "mailto:onesource-mediatype&tr.com", "mailto:oren&capella.co.il",
-        "mailto:oskar.jonsson&mfd.se", "mailto:otala&adobe.com",
-        "mailto:ozgur.oyman&intel.com", "mailto:paf&nada.kth.se",
-        "mailto:parks&eeel.nist.gov", "mailto:patrick.koh&mindmapper.com",
-        "mailto:paul&arbortext.com", "mailto:paul.norman&osmfoundation.org",
-        "mailto:paul.tidwell&ericsson.com", "mailto:paul.walsh&okfn.org",
-        "mailto:pavlov&pavlov.net", "mailto:pc-info&pathwaycommons.org",
-        "mailto:pcole&sseyod.demon.co.uk", "mailto:pdandaw&microsoft.com",
-        "mailto:peldi&balsamiq.com", "mailto:per&ipunplugged.com",
-        "mailto:pete.hoch&efi.com", "mailto:petteri.kangaslampi&nokia.com",
-        "mailto:pimoucha&businessobjects.com", "mailto:plessy&debian.org",
-        "mailto:pmayeux&cirpack.com",
-        "mailto:portele&interactive-instruments.de",
-        "mailto:powers&insideout.net", "mailto:ppiegaze at adobe.com",
-        "mailto:prajkoti&qca.qualcomm.com", "mailto:prakash&pawaa.com",
-        "mailto:presnick&qualcomm.com", "mailto:productmanagement&rainstor.com",
-        "mailto:ps-mimetype&ugs.com", "mailto:psantinelli&narrative.com",
-        "mailto:pthompso&qualcomm.com", "mailto:public-i18n-its-ig&w3.org",
-        "mailto:public-music-notation&w3.org",
-        "mailto:public-rdf-comments&w3.org", "mailto:public-tt&w3.org",
-        "mailto:pwnall&chromium.org", "mailto:rafie&motorola.com",
-        "mailto:rajan&ipanoramii.com", "mailto:randy_jones&archipelago.com",
-        "mailto:ray&cnation.com", "mailto:rbrinkman&bccrc.ca",
-        "mailto:reagle&w3.org", "mailto:reed.shilts&sybase.com",
-        "mailto:rene.grothmann&ku-eichstaett.de",
-        "mailto:reuven.sherwin&xmpie.com", "mailto:rfritz&u.washington.edu",
-        "mailto:rhohensee&VNET.IBM.COM", "mailto:rhys&qualcomm.com",
-        "mailto:rintze.zelle&gmail.com", "mailto:rkumar&cisco.com",
-        "mailto:rluc&villagedata.com", "mailto:robin&w3.org",
-        "mailto:rogans&nga.mil", "mailto:roger&apache.org",
-        "mailto:roland&mechling.de", "mailto:romans&previewsystems.com",
-        "mailto:rperelma&adobe.com", "mailto:rsimpson&gmail.com",
-        "mailto:sandholm&google.com", "mailto:satish&infoseek.com",
-        "mailto:saveenr&miscrosoft.com", "mailto:scott&truebasic.com",
-        "mailto:scottb&bxwa.com", "mailto:scs&triscape.com",
-        "mailto:sdejaham&aeta-audio.com", "mailto:sdellutri&cosmocom.com",
-        "mailto:sean.gillies&gmail.com", "mailto:seankelley&motorola.com",
-        "mailto:sebastian.baer&elektrobit.com", "mailto:shawnmal&microsoft.com",
-        "mailto:shayc&everad.com", "mailto:sheltond&tao-group.com",
-        "mailto:shicheng.hu&etsi.org",
-        "mailto:shinji.kusakari&mb.softbank.co.jp",
-        "mailto:shinmuto&pure.cpdc.canon.co.jp",
-        "mailto:shino-k&post.yamaha.co.jp", "mailto:shuji&mri.co.jp",
-        "mailto:siebert&dvb.org", "mailto:simon&alien.net.au",
-        "mailto:singer&apple.com", "mailto:siyuan.fu&intel.com",
-        "mailto:skatz&eshop.com", "mailto:skikstra&66.com",
-        "mailto:sl&pushcoin.com", "mailto:sla&ucolick.org",
-        "mailto:smartin&xis.xerox.com", "mailto:smills&multiad.com",
-        "mailto:ssimmons&opengeospatial.org", "mailto:standard&mfsr.sk",
-        "mailto:stark&uplanet.com", "mailto:steve&steveklabnik.com",
-        "mailto:steve&wynde.com", "mailto:steve.hattersley&dolby.com",
-        "mailto:steve_aubrey&hp.com", "mailto:stevedia&microsoft.com",
-        "mailto:stevek&osa.com", "mailto:stevenj007&hotmail.com",
-        "mailto:stockhammer&nomor.de", "mailto:streetd1&ix.netcom.com",
-        "mailto:sugimoto&sz.sel.fujitsu.co.jp",
-        "mailto:sugimototi&noanet.nttdata.co.jp",
-        "mailto:sukizaki&soundnet.yamaha.co.jp", "mailto:sukvg&microsoft.com",
-        "mailto:support&electroniczombie.com", "mailto:sysadmin&laserapp.com",
-        "mailto:systems-vendor&curl.com", "mailto:szilles&adobe.com",
-        "mailto:szilva&changenet.sk", "mailto:sztoth&microsec.hu",
-        "mailto:takaha&beat.yamaha.co.jp",
-        "mailto:takashi.matsumoto&fujixerox.co.jp",
-        "mailto:tc-admin&oasis-open.org", "mailto:tdb2&ecs.soton.ac.uk",
-        "mailto:tech&wi-fi.org",
-        "mailto:technical-comments&mail.openmobilealliance.org",
-        "mailto:technical-comments&openmobilealliance.org",
-        "mailto:techtonik&php.net", "mailto:tgotoh&cadamsystems.co.jp",
-        "mailto:thinh.nguyenphu&nsn.com", "mailto:thomas&blueiceresearch.com",
-        "mailto:thomas&ipv.no", "mailto:thomas&nearst.co",
-        "mailto:thomas&vinga.se", "mailto:thomas.thomsen&asam.net",
-        "mailto:thomas.weyn&ucamco.com", "mailto:tim&its.bldrdoc.gov",
-        "mailto:tim.fisher&indiepath.com", "mailto:tim.macdonald&actf.com.au",
-        "mailto:tim.ocock&symbian.com", "mailto:timo.kosonen&nokia.com",
-        "mailto:tmcginty&dma.isg.mot.com", "mailto:todd_joseph&groove.net",
-        "mailto:togashi&ai.cs.fujitsu.co.jp", "mailto:tom&tomchristie.com",
-        "mailto:tor&lila.io", "mailto:triad&df.lth.se",
-        "mailto:troys&visio.com", "mailto:tsudo&innopath.com",
-        "mailto:tupper&peda.com", "mailto:twhite&midi.org",
-        "mailto:tyamamoto&asc.yamaha.co.jp", "mailto:unst&uefi.org",
-        "mailto:user&unknown.nu", "mailto:uwe&hermann-uwe.de",
-        "mailto:uwe.rauschenbach&nokia.com", "mailto:uzs106&uni-bonn.de",
-        "mailto:vicki&chaoticom.com",
-        "mailto:vladimir.levantovsky&monotypeimaging.com",
-        "mailto:vondrous&602.cz", "mailto:vvysotsky&avistar.com",
-        "mailto:wap-feedback&mail.wapforum.org", "mailto:wask&omg.org",
-        "mailto:webmaster&khronos.org", "mailto:wohler&newt.com",
-        "mailto:x3d-chair&web3d.org", "mailto:xie&net2phone.com",
-        "mailto:xml-encryption&w3.org", "mailto:xml-info&antenna.co.jp",
-        "mailto:yasuo.taguchi&fujixerox.co.jp",
-        "mailto:yasuo.yamanaka&dir-bi.co.jp", "mailto:yay&capasystems.com",
-        "mailto:yellowriversw&yahoo.com", "mailto:yiling.xu&samsung.com",
-        "mailto:yositake&iss.isl.melco.co.jp", "mailto:yrehem&sapient.com",
-        "mailto:yuepeiyu&huawei.com", "mailto:yutaka_ozaki&gen.co.jp",
-        "mailto:yves&geogebra.org", "mailto:yves.kreis&inter2geo.eu",
-        "mailto:zengw&huawei.com".
+        "mailto:biopax-discuss&googlegroups.org",
+        "mailto:pc-info&pathwaycommons.org".
+P9:
+    reg:id "Patrick_Koh";
+    reg:name "Patrick Koh";
+    reg:updated "2007-02-13";
+    reg:uri "mailto:patrick.koh&mindmapper.com".
+P:
+    reg:id "Patrik_Faltstrom";
+    reg:name "Patrik Faltstrom";
+    reg:uri "mailto:paf&nada.kth.se".
+P1:
+    reg:id "Paul_Grosso";
+    reg:name "Paul Grosso";
+    reg:updated "1996-08-19";
+    reg:uri "mailto:paul&arbortext.com".
+P0:
+    reg:id "Paul_Lindner";
+    reg:name "Paul Lindner";
+    reg:updated "1993-06-19";
+    reg:uri "mailto:lindner&mudhoney.micro.umn.edu".
+P8:
+    reg:id "Paul_Norman";
+    reg:name "Paul Norman";
+    reg:updated "2016-10-05";
+    reg:uri "mailto:paul.norman&osmfoundation.org".
+P5:
+    reg:id "Paul_Santinelli_Jr.";
+    reg:name "Paul Santinelli, Jr.";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:psantinelli&narrative.com".
+P6:
+    reg:id "Paul_Tidwell";
+    reg:name "Paul Tidwell";
+    reg:updated "2000-02-20";
+    reg:uri "mailto:paul.tidwell&ericsson.com".
+P4:
+    reg:id "Paul_Walsh";
+    reg:name "Paul Walsh";
+    reg:updated "2017-05-01";
+    reg:uri "mailto:paul.walsh&okfn.org".
+P7:
+    reg:id "Paul_Wattenberger";
+    reg:name "Paul Wattenberger";
+    reg:updated "1997-06-19";
+    reg:uri "mailto:Paul_Wattenberger&lotus.com".
+Pee:
+    reg:id "Peeter_Piegaze";
+    reg:name "Peeter Piegaze";
+    reg:updated "2003-09-20";
+    reg:uri "mailto:ppiegaze at adobe.com".
+Per:
+    reg:id "Per_Ersson";
+    reg:name "Per Ersson";
+    reg:updated "2003-12-20";
+    reg:uri "mailto:per&ipunplugged.com".
+n427:
+    reg:id "Pete_Cole";
+    reg:name "Pete Cole";
+    reg:updated "1996-06-19";
+    reg:uri "mailto:pcole&sseyod.demon.co.uk".
+n772:
+    reg:id "Pete_Hoch";
+    reg:name "Pete Hoch";
+    reg:updated "2005-11-20";
+    reg:uri "mailto:pete.hoch&efi.com".
+n268:
+    reg:id "Pete_Resnick";
+    reg:name "Pete Resnick";
+    reg:updated "2000-02-20";
+    reg:uri "mailto:presnick&qualcomm.com".
+Pete:
+    reg:id "Peter_Astrand";
+    reg:name "Peter \u00c5strand";
+    reg:updated "2007-06-12";
+    reg:uri "mailto:astrand&cendio.se".
+Pe:
+    reg:id "Peter_Bierman";
+    reg:name "Peter Bierman";
+    reg:updated "2005-11-20";
+    reg:uri "mailto:installer-mime&group.apple.com".
+n319:
+    reg:id "Peter_Biro";
+    reg:name "Peter Biro";
+    reg:updated "2015-02-10";
+    reg:uri "mailto:standard&mfsr.sk".
+n742:
+    reg:id "Peter_Kriens";
+    reg:name "Peter Kriens";
+    reg:updated "2012-03-02";
+    reg:uri "mailto:Peter.Kriens&aQute.biz".
+Peter:
+    reg:id "Peter_Siebert";
+    reg:name "Peter Siebert";
+    reg:updated "2011-06-08";
+    reg:uri "mailto:siebert&dvb.org".
+Pet:
+    reg:id "Peter_Stark";
+    reg:name "Peter Stark";
+    reg:updated "1999-03-19";
+    reg:uri "mailto:stark&uplanet.com".
+n857:
+    reg:id "Peter_Thompson";
+    reg:name "Peter Thompson";
+    reg:updated "2009-03-17";
+    reg:uri "mailto:pthompso&qualcomm.com".
+Petr:
+    reg:id "Petr_Peterka";
+    reg:name "Petr Peterka";
+    reg:updated "2010-08-31";
+    reg:uri "mailto:info&verimatrix.com".
+Pett:
+    reg:id "Petteri_Kangaslampi";
+    reg:name "Petteri Kangaslampi";
+    reg:updated "2001-03-20";
+    reg:uri "mailto:petteri.kangaslampi&nokia.com".
+Ph:
+    reg:id "Phil_Green";
+    reg:name "Phil Green";
+    reg:updated "2008-02-07";
+    reg:uri "mailto:green&colourspace.demon.co.uk".
+Phi:
+    reg:id "Philippe_Imoucha";
+    reg:name "Philippe Imoucha";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:pimoucha&businessobjects.com".
+Pr:
+    reg:id "Prakash_Baskaran";
+    reg:name "Prakash Baskaran";
+    reg:updated "2009-12-15";
+    reg:uri "mailto:prakash&pawaa.com".
+Pr0:
+    reg:id "Prakash_Iyer";
+    reg:name "Prakash Iyer";
+    reg:updated "2008-02-07";
+    reg:uri "mailto:Prakash.iyer&intel.com".
+Priy:
+    reg:id "Priya_Dandawate";
+    reg:name "Priya Dandawate";
+    reg:updated "2013-07-23";
+    reg:uri "mailto:pdandaw&microsoft.com".
+Purv:
+    reg:id "Purva_R_Rajkotia";
+    reg:name "Purva R Rajkotia";
+    reg:updated "2012-06-05";
+    reg:uri "mailto:prajkoti&qca.qualcomm.com".
+R3:
+    reg:id "Rafie_Shamsaasef";
+    reg:name "Rafie Shamsaasef";
+    reg:updated "2008-08-12";
+    reg:uri "mailto:rafie&motorola.com".
+R4:
+    reg:id "Rajesh_Kumar";
+    reg:name "Rajesh Kumar";
+    reg:updated "2001-08-20";
+    reg:uri "mailto:rkumar&cisco.com".
+R5:
+    reg:id "Randolph_Fritz";
+    reg:name "Randolph Fritz";
+    reg:updated "2009-03-04";
+    reg:uri "mailto:rfritz&u.washington.edu".
+R2:
+    reg:id "Randy_Jones";
+    reg:name "Randy Jones";
+    reg:updated "2001-01-20";
+    reg:uri "mailto:randy_jones&archipelago.com".
+R1:
+    reg:id "Ravinder_Chandhok";
+    reg:name "Ravinder Chandhok";
+    reg:updated "1998-12-19";
+    reg:uri "mailto:chandhok&within.com".
+R0:
+    reg:id "Ray_Simpson";
+    reg:name "Ray Simpson";
+    reg:updated "1998-01-19";
+    reg:uri "mailto:ray&cnation.com".
+Ree:
+    reg:id "Reed_Shilts";
+    reg:name "Reed Shilts";
+    reg:updated "1999-08-19";
+    reg:uri "mailto:reed.shilts&sybase.com".
+Reg:
+    reg:id "Regis_Dehoux";
+    reg:name "Regis Dehoux";
+    reg:updated "2014-02-07";
+    reg:uri "mailto:biznis&regadou.net".
+Reinh:
+    reg:id "Reinhard_Hohensee";
+    reg:name "Reinhard Hohensee";
+    reg:updated "1997-09-19";
+    reg:uri "mailto:rhohensee&VNET.IBM.COM".
+Ren:
+    reg:id "Rene_Grothmann";
+    reg:name "Rene Grothmann";
+    reg:updated "2009-02-24";
+    reg:uri "mailto:rene.grothmann&ku-eichstaett.de".
+Reu:
+    reg:id "Reuven_Sherwin";
+    reg:name "Reuven Sherwin";
+    reg:updated "2007-03-20";
+    reg:uri "mailto:reuven.sherwin&xmpie.com".
+Rhy:
+    reg:id "Rhys_Lewis";
+    reg:name "Rhys Lewis";
+    reg:updated "2009-12-15";
+    reg:uri "mailto:rhys&qualcomm.com".
+Ric:
+    reg:id "Rick_Rupp";
+    reg:name "Rick Rupp";
+    reg:updated "2016-09-27";
+    reg:uri "mailto:onesource-mediatype&tr.com".
+Rin:
+    reg:id "Rintze_M._Zelle";
+    reg:name "Rintze M. Zelle";
+    reg:updated "2015-02-23";
+    reg:uri "mailto:rintze.zelle&gmail.com".
+n430:
+    reg:id "Rob_Bailey";
+    reg:name "Rob Bailey";
+    reg:updated "2017-03-09";
+    reg:uri "mailto:sysadmin&laserapp.com".
+Rob:
+    reg:id "Robby_Simpson";
+    reg:name "Robby Simpson";
+    reg:updated "2012-11-27";
+    reg:uri "mailto:rsimpson&gmail.com".
+Robe:
+    reg:id "Robert_Brambley";
+    reg:name "Robert Brambley";
+    reg:updated "2010-01-13";
+    reg:uri "mailto:brambley&adobe.com".
+Ro:
+    reg:id "Robert_Byrnes";
+    reg:name "Robert Byrnes";
+    reg:updated "2001-03-20";
+    reg:uri "mailto:systems-vendor&curl.com".
+Rober:
+    reg:id "Robert_Hess";
+    reg:name "Robert Hess";
+    reg:updated "2001-03-20";
+    reg:uri "mailto:hess&vidsoft.de".
+R:
+    reg:id "Roberto_Perelman";
+    reg:name "Roberto Perelman";
+    reg:updated "2000-11-20";
+    reg:uri "mailto:rperelma&adobe.com".
+Robi:
+    reg:id "Robin_Berjon";
+    reg:name "Robin Berjon";
+    reg:updated "2014-10-23";
+    reg:uri "mailto:robin&w3.org".
+Roge:
+    reg:id "Roger_Buis";
+    reg:name "Roger Buis";
+    reg:updated "2001-03-20";
+    reg:uri "mailto:buis&us.ibm.com".
+Rog:
+    reg:id "Roger_Meier";
+    reg:name "Roger Meier";
+    reg:updated "2014-11-25";
+    reg:uri "mailto:roger&apache.org".
+Rol:
+    reg:id "Roland_Mechling";
+    reg:name "Roland Mechling";
+    reg:updated "2009-03-04";
+    reg:uri "mailto:roland&mechling.de".
+Rom:
+    reg:id "Roman_Smolgovsky";
+    reg:name "Roman Smolgovsky";
+    reg:updated "1999-04-19";
+    reg:uri "mailto:romans&previewsystems.com".
+Roy:
+    reg:id "Roy_Yue";
+    reg:name "Roy Yue";
+    reg:updated "2009-03-04";
+    reg:uri "mailto:yuepeiyu&huawei.com".
+Ry:
+    reg:id "Ryan_Brinkman";
+    reg:name "Ryan Brinkman";
+    reg:updated "2010-03-26";
+    reg:uri "mailto:rbrinkman&bccrc.ca".
+S:
+    reg:id "Samer_El-Haj-Mahmoud";
+    reg:name "Samer El-Haj-Mahmoud";
+    reg:updated "2016-04-06";
+    reg:uri "mailto:Samer.el-haj-mahmoud&hpe.com".
+S0:
+    reg:id "Samu_Sarivaara";
+    reg:name "Samu Sarivaara";
+    reg:updated "2008-10-22";
+    reg:uri "mailto:iana-contact&f-secure.com".
+S1:
+    reg:id "Satish_Navarajan";
+    reg:name "Satish Natarajan";
+    reg:updated "1998-08-19";
+    reg:uri "mailto:satish&infoseek.com".
+S2:
+    reg:id "Saveen_Reddy";
+    reg:name "Saveen Reddy";
+    reg:updated "1999-07-19";
+    reg:uri "mailto:saveenr&miscrosoft.com".
+Sc:
+    reg:id "Scott_Becker";
+    reg:name "Scott Becker";
+    reg:updated "1998-10-19";
+    reg:uri "mailto:scottb&bxwa.com".
+Sco:
+    reg:id "Scott_Simmons";
+    reg:name "Scott Simmons";
+    reg:updated "2017-07-18";
+    reg:uri "mailto:ssimmons&opengeospatial.org".
+Se:
+    reg:id "Sean_Gillies";
+    reg:name "Sean Gillies";
+    reg:updated "2014-05-20";
+    reg:uri "mailto:sean.gillies&gmail.com".
+Se0:
+    reg:id "Sean_Kelley";
+    reg:name "Sean Kelley";
+    reg:updated "2006-09-14";
+    reg:uri "mailto:seankelley&motorola.com".
+Seb:
+    reg:id "Sebastiaan_Deckers";
+    reg:name "Sebastiaan Deckers";
+    reg:updated "2002-10-20";
+    reg:uri "mailto:cbas&rhymbox.com".
+Seb0:
+    reg:id "Sebastian_Baer";
+    reg:name "Sebastian Baer";
+    reg:updated "2015-07-21";
+    reg:uri "mailto:sebastian.baer&elektrobit.com".
+Sei:
+    reg:id "Seiji_Okudaira";
+    reg:name "Seiji Okudaira";
+    reg:updated "1997-10-19";
+    reg:uri "mailto:okudaira&candy.paso.fujitsu.co.jp".
+Ser:
+    reg:id "Serge_De_Jaham";
+    reg:name "Serge De Jaham";
+    reg:updated "2006-03-27";
+    reg:uri "mailto:sdejaham&aeta-audio.com".
+Sh0:
+    reg:id "Shawn_Maloney";
+    reg:name "Shawn Maloney";
+    reg:updated "2014-04-11";
+    reg:uri "mailto:shawnmal&microsoft.com".
+Sh1:
+    reg:id "Shay_Cicelsky";
+    reg:name "Shay Cicelsky";
+    reg:updated "2000-05-20";
+    reg:uri "mailto:shayc&everad.com".
+Sh:
+    reg:id "Shicheng_Hu";
+    reg:name "Shicheng Hu";
+    reg:updated "2009-09-15";
+    reg:uri "mailto:shicheng.hu&etsi.org".
+Shi:
+    reg:id "Shin_Muto";
+    reg:name "Shin Muto";
+    reg:updated "2000-05-20";
+    reg:uri "mailto:shinmuto&pure.cpdc.canon.co.jp".
+Shin:
+    reg:id "Shinji_Kusakari";
+    reg:name "Shinji Kusakari";
+    reg:updated "2008-06-30";
+    reg:uri "mailto:shinji.kusakari&mb.softbank.co.jp".
+Sho:
+    reg:id "Shoji_Hoshina";
+    reg:name "Shoji Hoshina";
+    reg:updated "2000-09-20";
+    reg:uri "mailto:Hoshina.Shoji&exc.epson.co.jp".
+Shu:
+    reg:id "Shuji_Fujii";
+    reg:name "Shuji Fujii";
+    reg:updated "2012-04-20";
+    reg:uri "mailto:fujii&centurysys.co.jp".
+Shuj:
+    reg:id "Shuji_Nakamura";
+    reg:name "Shuji Nakamura";
+    reg:updated "2008-02-07";
+    reg:uri "mailto:shuji&mri.co.jp".
+Sim:
+    reg:id "Simon_Birtwistle";
+    reg:name "Simon Birtwistle";
+    reg:updated "2007-01-18";
+    reg:uri "mailto:mime&20000.org".
+Si:
+    reg:id "Simon_Butcher";
+    reg:name "Simon Butcher";
+    reg:updated "2003-09-20";
+    reg:uri "mailto:simon&alien.net.au".
+SIS:
+    reg:id "SIS";
+    reg:name "Swedish Standards Institute (SIS)";
+    reg:updated "2014-07-09";
+    reg:uri "http://www.sis.se/".
+Sl:
+    reg:id "Slawomir_Lisznianski";
+    reg:name "Slawomir Lisznianski";
+    reg:updated "2014-01-31";
+    reg:uri "mailto:sl&pushcoin.com".
+Ste1:
+    reg:id "Stefan_Eilemann";
+    reg:name "Stefan Eilemann";
+    reg:updated "2004-12-20";
+    reg:uri "mailto:eile&esmertec.com".
+Ste0:
+    reg:id "Stefan_Jernberg";
+    reg:name "Stefan Jernberg";
+    reg:updated "2006-09-13";
+    reg:uri "mailto:SJernber&TIBCO.com".
+Stef:
+    reg:id "Stefan_Szilva";
+    reg:name "Stefan Szilva";
+    reg:updated "2015-02-10";
+    reg:uri "mailto:szilva&changenet.sk".
+n1092:
+    reg:id "Steve_Allen";
+    reg:name "Steve Allen";
+    reg:updated "1997-09-19";
+    reg:uri "mailto:sla&ucolick.org".
+n344:
+    reg:id "Steve_Aubrey";
+    reg:name "Steve Aubrey";
+    reg:updated "1998-07-19";
+    reg:uri "mailto:steve_aubrey&hp.com".
+n161:
+    reg:id "Steve_Dellutri";
+    reg:name "Steve Dellutri";
+    reg:updated "1998-03-19";
+    reg:uri "mailto:sdellutri&cosmocom.com".
+n1007:
+    reg:id "Steve_DiAcetis";
+    reg:name "Steve DiAcetis";
+    reg:updated "2008-06-03";
+    reg:uri "mailto:stevedia&microsoft.com".
+n193:
+    reg:id "Steve_Hattersley";
+    reg:name "Steve Hattersley";
+    reg:updated "2009-06-02";
+    reg:uri "mailto:steve.hattersley&dolby.com".
+n542:
+    reg:id "Steve_Judkins";
+    reg:name "Steve Judkins";
+    reg:updated "2003-07-20";
+    reg:uri "mailto:stevenj007&hotmail.com".
+Ste:
+    reg:id "Steve_Katz";
+    reg:name "Steve Katz";
+    reg:updated "1995-06-19";
+    reg:uri "mailto:skatz&eshop.com".
+n109:
+    reg:id "Steve_Klabnik";
+    reg:name "Steve Klabnik";
+    reg:updated "2013-07-21";
+    reg:uri "mailto:steve&steveklabnik.com".
+Stev:
+    reg:id "Steve_Leow";
+    reg:name "Steve Leow";
+    reg:updated "1999-04-19";
+    reg:uri "mailto:Leost01&accpac.com".
+n531:
+    reg:id "Steve_Mills";
+    reg:name "Steve Mills";
+    reg:updated "2007-10-17";
+    reg:uri "mailto:smills&multiad.com".
+n749:
+    reg:id "Steve_Rice";
+    reg:name "Steve Rice";
+    reg:updated "2015-09-30";
+    reg:uri "mailto:developers&pagerduty.com".
+n549:
+    reg:id "Steve_Rogan";
+    reg:name "Steve Rogan";
+    reg:updated "2012-02-16";
+    reg:uri "mailto:rogans&nga.mil".
+n826:
+    reg:id "Steve_Webb";
+    reg:name "Steve Webb";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:steve&wynde.com".
+St:
+    reg:id "Steve_Zilles";
+    reg:name "Steve Zilles";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:szilles&adobe.com".
+Steve:
+    reg:id "Steven_Heintz";
+    reg:name "Steven Heintz";
+    reg:updated "2010-01-13";
+    reg:uri "mailto:heintz&adobe.com".
+n739:
+    reg:id "Steven_Klos";
+    reg:name "Steven Klos";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:stevek&osa.com".
+n1056:
+    reg:id "Steven_Martin";
+    reg:name "Steven Martin";
+    reg:updated "1997-10-19";
+    reg:uri "mailto:smartin&xis.xerox.com".
+n959:
+    reg:id "Steven_Pemberton";
+    reg:name "Steven Pemberton";
+    reg:updated "2010-03-09";
+    reg:uri "mailto:member-webapps&w3.org".
+n877:
+    reg:id "Steven_Simonoff";
+    reg:name "Steven Simonoff";
+    reg:updated "1999-08-19";
+    reg:uri "mailto:scs&triscape.com".
+Stu:
+    reg:id "Stuart_Parmenter";
+    reg:name "Stuart Parmenter";
+    reg:updated "2015-08-04";
+    reg:uri "mailto:pavlov&pavlov.net".
+Suk:
+    reg:id "Sukvinder_S._Gill";
+    reg:name "Sukvinder S. Gill";
+    reg:updated "1996-04-19";
+    reg:uri "mailto:sukvg&microsoft.com".
+Sv:
+    reg:id "Svante_Schubert";
+    reg:name "Svante Schubert";
+    reg:updated "2009-01-16";
+    reg:uri "mailto:Svante.Schubert&sun.com".
+Sw:
+    reg:id "Swaminathan";
+    reg:name "Kumar Swaminathan";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:kswami&hns.com".
+Syb:
+    reg:id "Sybren_Kikstra";
+    reg:name "Sybren Kikstra";
+    reg:updated "2008-05-13";
+    reg:uri "mailto:skikstra&66.com".
+Szi:
+    reg:id "Szilveszter_T\u00f3th";
+    reg:name "Szilveszter T\u00f3th";
+    reg:updated "2007-07-31";
+    reg:uri "mailto:sztoth&microsec.hu".
+T0:
+    reg:id "Tadashi_Gotoh";
+    reg:name "Tadashi Gotoh";
+    reg:updated "2000-06-20";
+    reg:uri "mailto:tgotoh&cadamsystems.co.jp".
+T4:
+    reg:id "Taisuke_Sugimoto";
+    reg:name "Taisuke Sugimoto";
+    reg:updated "1999-04-19";
+    reg:uri "mailto:sugimototi&noanet.nttdata.co.jp".
+T2:
+    reg:id "Takanori_Sudo";
+    reg:name "Takanori Sudo";
+    reg:updated "2011-12-14";
+    reg:uri "mailto:tsudo&innopath.com".
+T1:
+    reg:id "Takashi_Matsumoto";
+    reg:name "Takashi Matsumoto";
+    reg:updated "2000-02-20";
+    reg:uri "mailto:takashi.matsumoto&fujixerox.co.jp".
+T5:
+    reg:id "Takehiro_Sukizaki";
+    reg:name "Takehiro Sukizaki";
+    reg:updated "2011-04-07";
+    reg:uri "mailto:sukizaki&soundnet.yamaha.co.jp".
+T3:
+    reg:id "Tanaka";
+    reg:name "Manabu Tanaka";
+    reg:updated "1997-09-19";
+    reg:uri "mailto:mtana&iss.isl.melco.co.jp".
+T:
+    reg:id "Tapani_Otala";
+    reg:name "Tapani Otala";
+    reg:updated "2009-07-28";
+    reg:uri "mailto:otala&adobe.com".
+Ter: reg:id "Terry_Crowley"; reg:name "Terry Crowley".
+
+Thi:
+    reg:id "Thinh_Nguyenphu";
+    reg:name "Thinh Nguyenphu";
+    reg:updated "2008-02-07";
+    reg:uri "mailto:thinh.nguyenphu&nsn.com".
+Tho1:
+    reg:id "Thomas_Belling";
+    reg:name "Thomas Belling";
+    reg:updated "2013-05-13";
+    reg:uri "mailto:Thomas.Belling&siemens.com".
+Th:
+    reg:id "Thomas_Holmstrom";
+    reg:name "Thomas Holmstrom";
+    reg:updated "2002-04-20";
+    reg:uri "mailto:thomas&blueiceresearch.com".
+Tho2:
+    reg:id "Thomas_Huth";
+    reg:name "Thomas Huth";
+    reg:updated "2015-03-02";
+    reg:uri "mailto:huth&tuxfamily.org".
+Tho5:
+    reg:id "Thomas_Kjornes";
+    reg:name "Thomas Kj\u00f8rnes";
+    reg:updated "2007-10-11";
+    reg:uri "mailto:thomas&ipv.no".
+Tho0:
+    reg:id "Thomas_Olsson";
+    reg:name "Thomas Olsson";
+    reg:updated "1998-04-19";
+    reg:uri "mailto:thomas&vinga.se".
+Tho4:
+    reg:id "Thomas_Schoffelen";
+    reg:name "Thomas Schoffelen";
+    reg:updated "2016-08-12";
+    reg:uri "mailto:thomas&nearst.co".
+Tho:
+    reg:id "Thomas_Stockhammer";
+    reg:name "Thomas Stockhammer";
+    reg:updated "2013-03-29";
+    reg:uri "mailto:stockhammer&nomor.de".
+Thom:
+    reg:id "Thomas_Thomsen";
+    reg:name "Thomas Thomsen";
+    reg:updated "2014-12-04";
+    reg:uri "mailto:thomas.thomsen&asam.net".
+Tho3:
+    reg:id "Thomas_Weyn";
+    reg:name "Thomas Weyn";
+    reg:updated "2015-02-05";
+    reg:uri "mailto:thomas.weyn&ucamco.com".
+Tim:
+    reg:id "Tim_Brody";
+    reg:name "Tim Brody";
+    reg:updated "2011-06-22";
+    reg:uri "mailto:tdb2&ecs.soton.ac.uk".
+n534:
+    reg:id "Tim_Butler";
+    reg:name "Tim Butler";
+    reg:updated "1996-04-19";
+    reg:uri "mailto:tim&its.bldrdoc.gov".
+Ti:
+    reg:id "Tim_Fisher";
+    reg:name "Tim Fisher";
+    reg:updated "2006-07-25";
+    reg:uri "mailto:tim.fisher&indiepath.com".
+n414:
+    reg:id "Tim_Macdonald";
+    reg:name "Tim Macdonald";
+    reg:updated "2005-11-20";
+    reg:uri "mailto:tim.macdonald&actf.com.au".
+n884:
+    reg:id "Tim_Ocock";
+    reg:name "Tim Ocock";
+    reg:updated "2003-09-20";
+    reg:uri "mailto:tim.ocock&symbian.com".
+Timo:
+    reg:id "Timo_Kosonen";
+    reg:name "Timo Kosonen";
+    reg:updated "2007-01-30";
+    reg:uri "mailto:timo.kosonen&nokia.com".
+Tob:
+    reg:id "Toby_Inkster";
+    reg:name "Toby Inkster";
+    reg:updated "2010-10-19";
+    reg:uri "mailto:mail&tobyinkster.co.uk".
+Tod:
+    reg:id "Todd_Joseph";
+    reg:name "Todd Joseph";
+    reg:updated "2002-10-20";
+    reg:uri "mailto:todd_joseph&groove.net".
+Tom:
+    reg:id "Tom_Christie";
+    reg:name "Tom Christie";
+    reg:updated "2013-09-06";
+    reg:uri "mailto:tom&tomchristie.com".
+n383:
+    reg:id "Tom_Gurak";
+    reg:name "Tom Gurak";
+    reg:updated "1997-03-19";
+    reg:uri "mailto:assoc&intercon.roc.servtech.com".
+n1093:
+    reg:id "Tom_McGinty";
+    reg:name "Tom McGinty";
+    reg:uri "mailto:tmcginty&dma.isg.mot.com".
+n978:
+    reg:id "Tom_White";
+    reg:name "Tom White";
+    reg:updated "2007-01-30";
+    reg:uri "mailto:twhite&midi.org".
+Tomo:
+    reg:id "Tomohiro_Yamamoto";
+    reg:name "Tomohiro Yamamoto";
+    reg:updated "2003-04-20";
+    reg:uri "mailto:tyamamoto&asc.yamaha.co.jp".
+Tor:
+    reg:id "Tor_Kristensen";
+    reg:name "Tor Kristensen";
+    reg:updated "2010-10-19";
+    reg:uri "mailto:tor&lila.io".
+To:
+    reg:id "Torben_Frey";
+    reg:name "Torben Frey";
+    reg:updated "2003-10-20";
+    reg:uri "mailto:frey&genomatix.de".
+Tro:
+    reg:id "Troy_Sandal";
+    reg:name "Troy Sandal";
+    reg:updated "1997-11-19";
+    reg:uri "mailto:troys&visio.com".
+UEF:
+    reg:id "UEFI_Forum";
+    reg:name "UEFI Forum";
+    reg:updated "2016-04-06";
+    reg:uri "mailto:unst&uefi.org".
+Uli:
+    reg:id "Uli_Klumpp";
+    reg:name "Uli Klumpp";
+    reg:updated "2016-07-01";
+    reg:uri "mailto:iana&uliklumpp.com".
+Ulr:
+    reg:id "Ulrich_Kortenkamp";
+    reg:name "Ulrich Kortenkamp";
+    reg:updated "2002-04-20";
+    reg:uri "mailto:kortenkamp&cinderella.de".
+Uni:
+    reg:id "Unity3d";
+    reg:name "Unity3d";
+    reg:updated "2007-07-03";
+    reg:uri "mailto:mime&unity3d.com".
+Uw:
+    reg:id "Uwe_Hermann";
+    reg:name "Uwe Hermann";
+    reg:updated "2017-06-06";
+    reg:uri "mailto:uwe&hermann-uwe.de".
+Uwe:
+    reg:id "Uwe_Rauschenbach";
+    reg:name "Uwe Rauschenbach";
+    reg:updated "2015-03-05";
+    reg:uri "mailto:uwe.rauschenbach&nokia.com".
+Vi:
+    reg:id "Vicki_DeBarros";
+    reg:name "Vicki DeBarros";
+    reg:updated "2004-03-20";
+    reg:uri "mailto:vicki&chaoticom.com".
+Vic:
+    reg:id "Victor_Costan";
+    reg:name "Victor Costan";
+    reg:updated "2017-06-12";
+    reg:uri "mailto:pwnall&chromium.org".
+Vik:
+    reg:id "Viktor_Haag";
+    reg:name "Viktor Haag";
+    reg:updated "2016-09-13";
+    reg:uri "mailto:Viktor.Haag&D2L.com".
+Vl:
+    reg:id "Vladimir_Vysotsky";
+    reg:name "Vladimir Vysotsky";
+    reg:updated "2006-09-14";
+    reg:uri "mailto:vvysotsky&avistar.com".
+n801:
+    reg:id "W3C_Music_Notation_Community_Group";
+    reg:name "W3C Music Notation Community Group";
+    reg:updated "2017-01-19";
+    reg:uri "mailto:public-music-notation&w3.org".
+W3:
+    reg:id "W3C_RDF_Working_Group";
+    reg:name "RDF Working Group";
+    reg:updated "2016-11-30";
+    reg:uri "mailto:public-rdf-comments&w3.org".
+W:
+    reg:id "W3C_Timed_Text_Working_Group";
+    reg:name "Timed Text Working Group";
+    reg:updated "2016-09-27";
+    reg:uri "mailto:public-tt&w3.org".
+W3C: reg:id "W3C"; reg:name "W3C"; reg:uri "http://www.w3.org/".
+
+WAP:
+    reg:id "WAP-Forum";
+    reg:name "WAP Forum Ltd.";
+    reg:updated "2000-02-20";
+    reg:uri "mailto:wap-feedback&mail.wapforum.org".
+Web:
+    reg:id "Web3D_X3D";
+    reg:name "Web3D X3D Working Group Chairs";
+    reg:updated "2014-04-08";
+    reg:uri "mailto:x3d-chair&web3d.org".
+Web3D: reg:id "Web3D"; reg:name "Web3D Consortium"; reg:updated "2014-01-15".
+
+Wen:
+    reg:id "Wenjun_Zeng";
+    reg:name "Wenjun Zeng";
+    reg:updated "2009-12-15";
+    reg:uri "mailto:zengw&huawei.com".
+Wes:
+    reg:id "Wesley_Beary";
+    reg:name "Wesley Beary";
+    reg:updated "2013-09-06";
+    reg:uri "mailto:api&heroku.com".
+n920:
+    reg:id "Wi-Fi_Alliance";
+    reg:name "Wi-Fi Alliance";
+    reg:updated "2006-08-11";
+    reg:uri "mailto:tech&wi-fi.org".
+Wil:
+    reg:id "William_C._Appleton";
+    reg:name "William C. Appleton";
+    reg:updated "2002-01-20";
+    reg:uri "mailto:billappleton&dreamfactory.com".
+Willi:
+    reg:id "William_McCoy";
+    reg:name "William McCoy";
+    reg:updated "2014-11-06";
+    reg:uri "mailto:bmccoy&idpf.org".
+Wi:
+    reg:id "William_Stevenson";
+    reg:name "William Stevenson";
+    reg:updated "2014-07-25";
+    reg:uri "mailto:dev&maxmind.com".
+Will:
+    reg:id "William_Zou";
+    reg:name "William Zou";
+    reg:updated "2008-08-06";
+    reg:uri "mailto:bill.zou&dts.com".
+Wolfr:
+    reg:id "Wolfram";
+    reg:name "Wolfram Research";
+    reg:updated "2009-10-15";
+    reg:uri "mailto:info&wolfram.com".
+XEN:
+    reg:id "XENC_Working_Group";
+    reg:name "XENC Working Group";
+    reg:updated "2006-03-21";
+    reg:uri "mailto:xml-encryption&w3.org".
+Y0:
+    reg:id "Yamanaka";
+    reg:name "Yasuo Yamanaka";
+    reg:updated "2009-02-24";
+    reg:uri "mailto:yasuo.yamanaka&dir-bi.co.jp".
+Y3:
+    reg:id "Yaser_Rehem";
+    reg:name "Yaser Rehem";
+    reg:updated "1997-02-19";
+    reg:uri "mailto:yrehem&sapient.com".
+Y1:
+    reg:id "Yasuhito_Nagatomo";
+    reg:name "Yasuhito Nagatomo";
+    reg:updated "1998-01-19";
+    reg:uri "mailto:naga&rd.oda.epson.co.jp".
+Y2:
+    reg:id "Yasuo_Taguchi";
+    reg:name "Yasuo Taguchi";
+    reg:updated "1998-07-19";
+    reg:uri "mailto:yasuo.taguchi&fujixerox.co.jp".
+Yil:
+    reg:id "Yiling_Xu";
+    reg:name "Yiling Xu";
+    reg:updated "2009-03-11";
+    reg:uri "mailto:yiling.xu&samsung.com".
+Yokoy:
+    reg:id "Yokoyama_Kiyonobu";
+    reg:name "Yokoyama Kiyonobu";
+    reg:updated "2012-03-27";
+    reg:uri "mailto:ngn&nihon-seigyo.co.jp".
+Yu:
+    reg:id "Yu_Gu";
+    reg:name "Yu Gu";
+    reg:updated "1998-12-19";
+    reg:uri "mailto:guyu&rd.oda.epson.co.jp".
+Yuk:
+    reg:id "Yukari_Ikeda";
+    reg:name "Yukari Ikeda";
+    reg:updated "2004-04-20";
+    reg:uri "mailto:ikeda&tokoyo.faith.co.jp".
+Y:
+    reg:id "Y\u00fcksel_Aydemir";
+    reg:name "Y\u00fcksel Aydemir";
+    reg:updated "2017-05-03";
+    reg:uri "mailto:yay&capasystems.com".
+Yut:
+    reg:id "Yutaka_Ozaki";
+    reg:name "Yutaka Ozaki";
+    reg:updated "1999-01-19";
+    reg:uri "mailto:yutaka_ozaki&gen.co.jp".
+Yv:
+    reg:id "Yves_Kreis_2";
+    reg:name "Yves Kreis";
+    reg:updated "2010-06-16";
+    reg:uri "mailto:yves.kreis&inter2geo.eu".
+Yve:
+    reg:id "Yves_Kreis";
+    reg:name "Yves Kreis";
+    reg:updated "2009-03-13";
+    reg:uri "mailto:yves&geogebra.org".
+Zig:
+    reg:id "ZigBee";
+    reg:name "ZigBee Alliance";
+    reg:updated "2012-11-27";
+    reg:uri "mailto:http://www.zigbee.org".

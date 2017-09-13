@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.ms-wmdrm.meter-chlg-req"; reg:type "template" ];
     reg:name "vnd.ms-wmdrm.meter-chlg-req";
     reg:xref Kev:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

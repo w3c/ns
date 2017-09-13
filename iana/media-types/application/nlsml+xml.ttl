@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/nlsml+xml"; reg:type "template" ];
     reg:name "nlsml+xml";
     reg:xref html:rfc6787.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

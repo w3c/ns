@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.collection.next+json"; reg:type "template" ];
     reg:name "vnd.collection.next+json";
     reg:xref Ios:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

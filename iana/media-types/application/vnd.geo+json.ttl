@@ -9,7 +9,7 @@
     terms:date "2014-05-20"^^XML:date;
     reg:file [ reg:file "application/vnd.geo+json"; reg:type "template" ];
     reg:name
-    "vnd.geo+json (OBSOLETED by  undefined  in favor of application/geo+json)";
+    "vnd.geo+json (OBSOLETED by  rfc7946  in favor of application/geo+json)";
     reg:xref Se:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

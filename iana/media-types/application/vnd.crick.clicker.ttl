@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.crick.clicker"; reg:type "template" ];
     reg:name "vnd.crick.clicker";
     reg:xref And:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

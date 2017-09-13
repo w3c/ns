@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd.net-fpx"; reg:type "template" ];
     reg:name "vnd.net-fpx";
     reg:xref M:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

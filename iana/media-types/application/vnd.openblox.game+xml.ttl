@@ -11,5 +11,5 @@
     [ reg:file "application/vnd.openblox.game+xml"; reg:type "template" ];
     reg:name "vnd.openblox.game+xml";
     reg:xref M:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -8,5 +8,5 @@
     [ reg:file "application/vnd.shana.informed.package"; reg:type "template" ];
     reg:name "vnd.shana.informed.package";
     reg:xref Guy:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd.sealed-png"; reg:type "template" ];
     reg:name "vnd.sealed.png";
     reg:xref D:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

@@ -11,5 +11,5 @@
             ];
     reg:name "vnd.tao.intent-module-archive";
     reg:xref D:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

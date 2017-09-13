@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/pkix-cert"; reg:type "template" ];
     reg:name "pkix-cert";
     reg:xref html:rfc2585.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

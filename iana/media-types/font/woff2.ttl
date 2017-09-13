@@ -10,5 +10,5 @@
     reg:file [ reg:file "font/woff2"; reg:type "template" ];
     reg:name "woff2";
     reg:xref html:rfc8081.
-medi:undefined reg:record :.
+medi:font reg:record :.
 

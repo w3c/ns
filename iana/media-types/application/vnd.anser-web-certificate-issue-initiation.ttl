@@ -12,5 +12,5 @@
             ];
     reg:name "vnd.anser-web-certificate-issue-initiation";
     reg:xref Hir:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

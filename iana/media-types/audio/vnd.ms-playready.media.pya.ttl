@@ -8,5 +8,5 @@
     [ reg:file "audio/vnd.ms-playready.media.pya"; reg:type "template" ];
     reg:name "vnd.ms-playready.media.pya";
     reg:xref Ste:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

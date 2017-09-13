@@ -7,5 +7,5 @@
     reg:file [ reg:file "image/vnd.adobe.photoshop"; reg:type "template" ];
     reg:name "vnd.adobe.photoshop";
     reg:xref Kim:.
-medi:undefined reg:record :.
+medi:image reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/set-registration"; reg:type "template" ];
     reg:name "set-registration";
     reg:xref Bri:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

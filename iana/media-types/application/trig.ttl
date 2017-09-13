@@ -11,5 +11,5 @@
     reg:file [ reg:file "application/trig"; reg:type "template" ];
     reg:name "trig";
     reg:xref W3C:, W3:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

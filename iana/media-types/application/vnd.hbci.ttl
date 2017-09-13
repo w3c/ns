@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.hbci"; reg:type "template" ];
     reg:name "vnd.hbci";
     reg:xref Ing:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.pvi.ptid1"; reg:type "template" ];
     reg:name "vnd.pvi.ptid1";
     reg:xref Ch:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

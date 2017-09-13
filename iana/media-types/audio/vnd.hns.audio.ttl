@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/vnd.hns.audio"; reg:type "template" ];
     reg:name "vnd.hns.audio";
     reg:xref Sw:.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

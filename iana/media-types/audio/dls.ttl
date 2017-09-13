@@ -7,5 +7,5 @@
     reg:file [ reg:file "audio/dls"; reg:type "template" ];
     reg:name "dls";
     reg:xref html:rfc4613.
-medi:undefined reg:record :.
+medi:audio reg:record :.
 

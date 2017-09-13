@@ -7,5 +7,5 @@
     reg:file [ reg:file "application/vnd.rainstor.data"; reg:type "template" ];
     reg:name "vnd.rainstor.data";
     reg:xref Kev:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

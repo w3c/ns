@@ -13,5 +13,5 @@
     reg:name
     "vnd.openxmlformats-officedocument.spreadsheetml.tableSingleCells+xml";
     reg:xref M:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

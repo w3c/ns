@@ -10,5 +10,5 @@
     reg:file [ reg:file "application/vnd.chess-pgn"; reg:type "template" ];
     reg:name "vnd.chess-pgn";
     reg:xref Kim:.
-medi:undefined reg:record :.
+medi:application reg:record :.
 

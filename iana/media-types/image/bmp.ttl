@@ -10,5 +10,5 @@
     reg:file [ reg:file "image/bmp"; reg:type "template" ];
     reg:name "bmp";
     reg:xref html:rfc7903.
-medi:undefined reg:record :.
+medi:image reg:record :.
 
