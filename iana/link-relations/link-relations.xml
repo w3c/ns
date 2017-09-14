@@ -4,12 +4,12 @@
 <registry xmlns="http://www.iana.org/assignments" id="link-relations">
   <title>Link Relations</title>
   <created>2005-08-26</created>
-  <updated>2016-11-03</updated>
+  <updated>2017-08-23</updated>
 
 <registry id="link-relations-1">
   <title>Link Relation Types</title>
-  <xref type="rfc" data="rfc5988"/>
-  <registration_rule>Expert Review</registration_rule>
+  <xref type="draft" data="RFC-nottingham-rfc5988bis-08"/>
+  <registration_rule>Specification Required</registration_rule>
   <expert>Mark Nottingham, Julian Reschke, Jan Algermissen</expert>  
   
   <record>
@@ -86,7 +86,7 @@
       document that contains this link relation.  For example, an RFC can
       have a link to the Internet-Draft that became the RFC; in that case,
       the link relation would be "convertedFrom".</description>
-    <spec><xref type="draft" data="RFC-iab-xml2rfc-04"/></spec>
+    <spec><xref type="rfc" data="rfc7991"/></spec>
     <note>This relation is different than "predecessor-version" in that
       "predecessor-version" is for items in a version control system.  It
       is also different than "previous" in that this relation is used for
@@ -114,11 +114,7 @@
     <spec><xref type="rfc" data="rfc5005"/></spec>
   </record>
   
-  <record date="2015-01-21">
-    <value>derivedfrom</value>
-    <description>The target IRI points to a resource from which this material was derived.</description>
-    <spec><xref type="draft" data="draft-hoffman-xml2rfc"/></spec>
-  </record>
+  
   
   <record>
     <value>describedby</value>
@@ -202,7 +198,7 @@
     <value>first</value>
     <description>An IRI that refers to the furthest preceding resource
     in a series of resources.</description>
-    <spec><xref type="rfc" data="rfc5988"/></spec>
+    <spec><xref type="draft" data="RFC-nottingham-rfc5988bis-08"/></spec>
     <note>This relation type registration did not indicate a
       reference.  Originally requested by Mark Nottingham in December
       2004.
@@ -261,7 +257,7 @@
     <value>last</value>
     <description>An IRI that refers to the furthest following resource
       in a series of resources.</description>
-    <spec><xref type="rfc" data="rfc5988"/></spec>
+    <spec><xref type="draft" data="RFC-nottingham-rfc5988bis-08"/></spec>
     <note>This relation type registration did not indicate a
       reference. Originally requested by Mark Nottingham in December
       2004.
@@ -357,7 +353,7 @@
   <record>
     <value>payment</value>
     <description>Indicates a resource where payment is accepted.</description>
-    <spec><xref type="rfc" data="rfc5988"/></spec>
+    <spec><xref type="draft" data="RFC-nottingham-rfc5988bis-08"/></spec>
     <note>This relation type registration did not indicate a
       reference.  Requested by Joshua Kinberg and Robert Sayre.  It is
       meant as a general way to facilitate acts of payment, and thus
@@ -478,10 +474,10 @@ profile URIs.</note>
   <record>
     <value>restconf</value>
     <description>Identifies the root of RESTCONF API as configured on this HTTP server.
-      The "restconf" relation defines the root of the API defined in RFC-ietf-netconf-restconf-18.
+      The "restconf" relation defines the root of the API defined in RFC8040.
       Subsequent revisions of RESTCONF will use alternate relation values to support 
       protocol versioning.</description>
-    <spec><xref type="draft" data="RFC-ietf-netconf-restconf-18"/></spec>
+    <spec><xref type="rfc" data="rfc8040"/></spec>
   </record>
   
   <record>
@@ -595,7 +591,7 @@ profile URIs.</note>
     <description>Refers to a parent document in a hierarchy of
       documents.
     </description>
-    <spec><xref type="rfc" data="rfc5988"/></spec>
+    <spec><xref type="draft" data="RFC-nottingham-rfc5988bis-08"/></spec>
     <note>This relation type registration did not indicate a
       reference.  Requested by Noah Slater.</note>
   </record>
@@ -642,14 +638,6 @@ profile URIs.</note>
   </record>
  
 </registry>
-  
-  <registry id="link-relations-2">
-    <title>Link Relation Application Data</title>
-    <xref type="rfc" data="rfc5988"/>
-    <registration_rule>Expert Review</registration_rule>
-    <expert>Mark Nottingham, Julian Reschke, Jan Algermissen</expert>
-    
-   </registry>
   
   <people/>
 </registry>
