@@ -14,3 +14,6 @@ Content-Type: text/plain;qs=0.8
 
 URI: ODRL22.rdf
 Content-Type: application/rdf+xml;qs=0.5
+
+URI: ODRL22.json
+Content-Type: application/json;qs-0.9
