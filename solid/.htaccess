@@ -4,6 +4,8 @@ RewriteEngine On
 RewriteBase /ns/solid/
 
 RewriteRule ^app\.(.*)$	  https://solid.github.io/vocab/solid-app.$1 [P]
+RewriteRule ^app$	  https://solid.github.io/vocab/solid-app.ttl [P]
+
 RewriteRule ^terms\.(.*)$ https://solid.github.io/vocab/solid-terms.$1 [P]
 RewriteRule ^terms$ https://solid.github.io/vocab/solid-terms.ttl [P]
 
