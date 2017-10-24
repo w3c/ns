@@ -1,0 +1,25 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#>.
+
+@prefix reg: <https://www.w3.org/ns/assignments/reg#> .
+
+<> s:comment """This ontology is one of terms used by IANA
+in their registries, when converted in RDF.
+""".
+reg:xref a rdf:Property;
+  s:label "Reference"@en.
+
+reg:spec a rdf:Property;
+  s:label "Specification"@en.
+
+reg:expert a rdf:Property;
+  s:label "expert"@en.
+
+reg:id a rdf:Property;
+  s:label "IANA identifier".
+
+reg:record a rdf:Property;
+  s:label "defines";
+  s:comment """The object is a thing defined by the registry subject""".
+
+# endds
