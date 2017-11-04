@@ -1,1 +1,5 @@
-DirectoryIndex Overview.ttl
+RewriteEngine On
+RewriteBase  /ns/sosa/prov/
+RewriteCond  %{REQUEST_URI}  !/ns/sosa/prov/Overview.*
+RewriteCond  %{REQUEST_URI}  /ns/sosa/prov/(.*)(#.*)?
+RewriteRule  ^(.*)$  /ns/sosa/prov/Overview$2 [P] 
