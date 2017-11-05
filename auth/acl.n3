@@ -15,6 +15,7 @@
     rdfs:comment """Defines the class Authorization and its essential properties,
     and also some classes of access such as read and write. """.
 
+<https://www.w3.org/wiki/WebAccessControl> dc:describes <>.
 
 
 Authorization a rdfs:Class;
@@ -34,6 +35,18 @@ agentClass   a rdf:Property;
         rdfs:domain     Authorization;
         rdfs:range      rdfs:Class.  # Typically be subclass of foaf:Agent.
                         # For public access, use foaf:Agent.
+
+AuthenticatedAgent a rdfs:Class;
+        rdfs:subClassOf foaf:Agent;
+        rdfs:label "Anyone authenticated";
+        rdfs:comment """A class of agents who have been authenticated.
+In other words, anyone can access this resource, but not anonymously.
+The social expectation is that the authentication process will provide an
+identify and a name, or pseudonym.
+(A new ID should not be minted for every access: the intent is that the user
+is able to continue to use the ID for continues interactions with peers,
+and for example to develop a reputation)
+""" .
 
 agentGroup a rdf:Property;
           rdfs:label "agent group";
