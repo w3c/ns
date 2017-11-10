@@ -1,5 +1,53 @@
+DirectoryIndex index.html
+
 RewriteEngine On
 RewriteBase  /ns/sosa/prov/
-RewriteCond  %{REQUEST_URI}  !/ns/sosa/prov/Overview.*
-RewriteCond  %{REQUEST_URI}  /ns/sosa/prov/(.*)(#.*)?
-RewriteRule  ^(.*)$  /ns/sosa/prov/Overview$2 [P] 
+
+
+# Documents
+
+<Files ~ "sosa-prov\.rdf$">
+    Header set Content-Type "application/rdf+xml"
+    Header set Content-Disposition "filename= sosa-prov.rdf"
+    Header set Content-Location "http://www.w3.org/ns/sosa/prov/sosa-prov.rdf" env=REDIRECT_redirect
+</Files>
+
+<Files ~ "sosa-prov\.ttl$">
+    Header set Content-Type "text/turtle"
+    Header set Content-Disposition "filename= sosa-prov.ttl"
+    Header set Content-Location "http://www.w3.org/ns/sosa/prov/sosa-prov.ttl" env=REDIRECT_redirect
+</Files>
+
+
+# Directory index
+
+RewriteCond  %{REQUEST_URI}  /ns/sosa/prov/$
+RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/html)
+RewriteRule  ^(.*)$  /ns/sosa/prov/sosa-prov.ttl [env=redirect:1]
+
+RewriteCond  %{REQUEST_URI}  /ns/sosa/prov/$
+RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
+RewriteRule  ^(.*)$  /ns/sosa/prov/sosa-prov.rdf [env=redirect:1]
+
+RewriteCond  %{REQUEST_URI}  /ns/sosa/prov/$
+RewriteCond %{HTTP_ACCEPT} text/html
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#PROV_Alignment [R=303,NE,env=redirect:1]
+
+
+# Resources
+
+RewriteCond  %{REQUEST_URI}  /ns/sosa/prov/(eventAssociation|hadProcedure)
+RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/html)
+RewriteRule  ^(.*)$  /ns/sosa/prov/sosa-prov.ttl [R=303,env=ttl:1]
+Header always set Content-Type "text/turtle" env=ttl
+
+RewriteCond  %{REQUEST_URI}  /ns/sosa/prov/(eventAssociation|hadProcedure)
+RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
+RewriteRule  ^(.*)$  /ns/sosa/prov/sosa-prov.rdf [R=303,env=rdf:1]
+Header always set Content-Type "application/rdf+xml" env=rdf
+
+RewriteCond  %{REQUEST_URI}  /ns/sosa/prov/(eventAssociation|hadProcedure)
+RewriteCond %{HTTP_ACCEPT} text/html
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#PROV_Alignment [R=303,NE,env=html:1]
+
+

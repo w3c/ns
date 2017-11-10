@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:dc="http://purl.org/dc/terms/"
+         xmlns:foaf="http://xmlns.com/foaf/0.1/">
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuator">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservableProperty">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Plan"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Result">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampler">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Activity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sensor">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Agent"/>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/prov#Entity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#used"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasResult">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#generated"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOf">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasGeneratedBy"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isSampleOf">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasDerivedFrom"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeByActuator">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySampler">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySensor">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#wasAssociatedWith"/>
+  </rdf:Description>
+
+  <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/prov">
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2016-12-14</dc:created>
+    <dc:creator>Simon J D Cox</dc:creator>
+    <dc:creator>
+      <foaf:Agent>
+        <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+      </foaf:Agent>
+    </dc:creator>
+
+    <dc:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dc:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-13</dc:modified>
+    <dc:rights>Copyright 2017 W3C/OGC.</dc:rights>
+    <rdfs:comment xml:lang="en">Alignment of the the W3C/OGC SOSA Ontology with the W3C PROV-O Ontology</rdfs:comment>
+    <rdfs:label xml:lang="en">Alignment of SOSA with PROV-O</rdfs:label>
+    <owl:imports rdf:resource="http://www.w3.org/ns/prov-o#"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+  </owl:Ontology>
+
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/prov/eventAssociation">
+    <rdfs:domain>
+      <owl:Class>
+        <owl:unionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+                <rdf:rest>
+                  <rdf:Description>
+                    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+                    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                  </rdf:Description>
+                </rdf:rest>
+
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:unionOf>
+
+      </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#qualifiedAssociation"/>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/prov/hadProcedure">
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#hadPlan"/>
+  </owl:ObjectProperty>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/resultTime">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/prov#endedAtTime"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
+    <owl:propertyChainAxiom>
+      <rdf:Description>
+        <rdf:first rdf:resource="http://www.w3.org/ns/sosa/prov/eventAssociation"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://www.w3.org/ns/sosa/prov/hadProcedure"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:Description>
+        </rdf:rest>
+
+      </rdf:Description>
+    </owl:propertyChainAxiom>
+
+  </rdf:Description>
+
+</rdf:RDF>
