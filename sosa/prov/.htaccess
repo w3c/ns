@@ -50,4 +50,4 @@ RewriteCond  %{REQUEST_URI}  /ns/sosa/prov/(eventAssociation|hadProcedure)
 RewriteCond %{HTTP_ACCEPT} text/html
 RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#PROV_Alignment [R=303,NE,env=html:1]
 
-
+Header merge Vary "Accept"
