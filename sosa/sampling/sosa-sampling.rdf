@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:schema="http://schema.org/">
+
+  <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/sampling/">
+    <owl:imports rdf:resource="http://www.w3.org/2004/02/skos/core"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+  </owl:Ontology>
+
+  <rdfs:Class rdf:about="http://www.w3.org/ns/sosa/sampling/RelationshipNature">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Nature of relationship (between samples)</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+    <skos:definition xml:lang="en">Members of this class indicate the nature of a relationship between two samples</skos:definition>
+    <skos:example>Adjacent flight-line</skos:example>
+    <skos:example>Females</skos:example>
+    <skos:example>Juveniles</skos:example>
+    <skos:example>Males</skos:example>
+    <skos:example>Pixel within image or scene</skos:example>
+    <skos:example>Probe spot on polished specimen</skos:example>
+    <skos:example>Specimen taken from borehole</skos:example>
+    <skos:example>Split of core sample</skos:example>
+    <skos:example>Station along a traverse</skos:example>
+    <skos:example>Sub-sample with grain size smaller than specified seive mesh</skos:example>
+  </rdfs:Class>
+
+  <rdfs:Class rdf:about="http://www.w3.org/ns/sosa/sampling/SampleRelationship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+    <rdfs:label xml:lang="en">Sample relationship</rdfs:label>
+    <skos:definition xml:lang="en">Members of this class represent a relationship between a sample and another</skos:definition>
+  </rdfs:Class>
+
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/sampling/hasSampleRelationship">
+    <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/SampleRelationship"/>
+    <rdfs:label xml:lang="en">has sample relationship</rdfs:label>
+    <skos:definition xml:lang="en">Links a sample to a sample relationship (which links to a related sample)</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/sampling/natureOfRelationship">
+    <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/SampleRelationship"/>
+    <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/RelationshipNature"/>
+    <rdfs:label xml:lang="en">nature of (sample) relationship</rdfs:label>
+    <skos:definition xml:lang="en">Links a SampleRelationship to an indication of the nature of the relationship</skos:definition>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/sampling/relatedSample">
+    <schema:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/sampling/SampleRelationship"/>
+    <schema:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <rdfs:label xml:lang="en">related sample</rdfs:label>
+    <skos:definition xml:lang="en">Links a sample relationship to the related sample</skos:definition>
+  </owl:ObjectProperty>
+
+</rdf:RDF>
