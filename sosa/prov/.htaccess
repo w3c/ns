@@ -8,13 +8,13 @@ RewriteBase  /ns/sosa/prov/
 
 <Files ~ "sosa-prov\.rdf$">
     Header set Content-Type "application/rdf+xml"
-    Header set Content-Disposition "filename= sosa-prov.rdf"
+    Header set Content-Disposition "inline; filename=sosa-prov.rdf"
     Header set Content-Location "http://www.w3.org/ns/sosa/prov/sosa-prov.rdf" env=REDIRECT_redirect
 </Files>
 
 <Files ~ "sosa-prov\.ttl$">
     Header set Content-Type "text/turtle"
-    Header set Content-Disposition "filename= sosa-prov.ttl"
+    Header set Content-Disposition "inline; filename=sosa-prov.ttl"
     Header set Content-Location "http://www.w3.org/ns/sosa/prov/sosa-prov.ttl" env=REDIRECT_redirect
 </Files>
 
