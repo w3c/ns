@@ -62,17 +62,17 @@ RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#Axiomatization [R=303,NE,e
 ######################################################################
 # Redirect requests to individual ontology terms
 ######################################################################
-RewriteCond  %{REQUEST_URI}  /ns/ssn/(Deployment|Input|Output|Property|Stimulus|System|deployedOnPlatform|deployedSystem|detects|forProperty|hasDeployment|hasInput|hasOutput|hasProperty|hasSubSystem|implementedBy|implements|inDeployment|isPropertyOf|isProxyFor|wasOriginatedBy)
+RewriteCond  %{REQUEST_URI}  /ns/ssn/(Deployment|Input|Output|Property|Stimulus|System|deployedOnPlatform|deployedSystem|detects|forProperty|hasDeployment|hasInput|hasOutput|hasProperty|hasSubSystem|implementedBy|implements|inDeployment|isPropertyOf|isProxyFor|wasOriginatedBy)$
 RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/html)
 RewriteRule  ^(.*)$  /ns/ssn/ssn.ttl [R=303,env=ttl:1]
 Header always set Content-Type "text/turtle" env=ttl
 
-RewriteCond  %{REQUEST_URI}  /ns/ssn/(Deployment|Input|Output|Property|Stimulus|System|deployedOnPlatform|deployedSystem|detects|forProperty|hasDeployment|hasInput|hasOutput|hasProperty|hasSubSystem|implementedBy|implements|inDeployment|isPropertyOf|isProxyFor|wasOriginatedBy)
+RewriteCond  %{REQUEST_URI}  /ns/ssn/(Deployment|Input|Output|Property|Stimulus|System|deployedOnPlatform|deployedSystem|detects|forProperty|hasDeployment|hasInput|hasOutput|hasProperty|hasSubSystem|implementedBy|implements|inDeployment|isPropertyOf|isProxyFor|wasOriginatedBy)$
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
 RewriteRule  ^(.*)$  /ns/ssn/ssn.rdf [R=303,env=rdf:1]
 Header always set Content-Type "application/rdf+xml" env=rdf
 
-RewriteCond  %{REQUEST_URI}  /ns/ssn/(Deployment|Input|Output|Property|Stimulus|System|deployedOnPlatform|deployedSystem|detects|forProperty|hasDeployment|hasInput|hasOutput|hasProperty|hasSubSystem|implementedBy|implements|inDeployment|isPropertyOf|isProxyFor|wasOriginatedBy)
+RewriteCond  %{REQUEST_URI}  /ns/ssn/(Deployment|Input|Output|Property|Stimulus|System|deployedOnPlatform|deployedSystem|detects|forProperty|hasDeployment|hasInput|hasOutput|hasProperty|hasSubSystem|implementedBy|implements|inDeployment|isPropertyOf|isProxyFor|wasOriginatedBy)$
 RewriteCond %{HTTP_ACCEPT} text/html
 RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#SSN$1 [R=303,NE,env=html:1]
 
