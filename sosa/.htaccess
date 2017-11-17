@@ -110,16 +110,16 @@ Header always set Content-Type "text/turtle" env=ttl
 # SOSA to O&M mapping - Apply the same logic as for the SOSA ontology
 ######################################################################
 RewriteCond  %{REQUEST_URI}  /ns/sosa/om$
-RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/html)
-RewriteRule  ^(.*)$  /ns/sosa/om.ttl [env=redirect:1]
+RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/turtle)
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#OM_Alignment [R=303,NE,env=redirect:1]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/om$
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
 RewriteRule  ^(.*)$  /ns/sosa/om.rdf [env=redirect:1]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/om$
-RewriteCond %{HTTP_ACCEPT} text/html
-RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#OM_Alignment [R=303,NE,env=redirect:1]
+RewriteCond %{HTTP_ACCEPT} text/turtle
+RewriteRule  ^(.*)$  /ns/sosa/om.ttl [env=redirect:1]
 
 
 ######################################################################
