@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:dc11="http://purl.org/dc/elements/1.1/"
+         xmlns:dc="http://purl.org/dc/terms/">
+
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Characteristic">
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Measurement">
+    <rdfs:comment>an oboe-core:Measurement is a (atomic) sosa:Observation, whose result (value) is an estimate of the value of one of the characteristics of the observed Entity. A collection of oboe-core:Measurement individuals together compose an oboe-core:Observation, whose results together provide a full description of the feature of interest. </rdfs:comment>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Protocol">
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasMeasurement">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#member"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#hasValue">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor">
+    <rdfs:subPropertyOf>
+      <rdf:Description>
+        <owl:inverseOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#member"/>
+      </rdf:Description>
+    </rdfs:subPropertyOf>
+
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofCharacteristic">
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/observedProperty"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#usesMethod">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#usesProtocol">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Result">
+    <rdfs:subClassOf rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#Entity"/>
+  </rdf:Description>
+
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+    <owl:propertyChainAxiom>
+      <rdf:Description>
+        <rdf:first rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#measurementFor"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl#ofEntity"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:Description>
+        </rdf:rest>
+
+      </rdf:Description>
+    </owl:propertyChainAxiom>
+
+  </rdf:Description>
+
+  <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/oboe">
+    <dc11:creator>Simon J D COX</dc11:creator>
+    <dc:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-03-05</dc:created>
+    <dc:creator rdf:resource="http://orcid.org/0000-0002-3884-3420"/>
+    <rdfs:comment>Mapping of classes and properties from OBOE to SOSA</rdfs:comment>
+    <rdfs:label>OBOE -&gt; SOSA map</rdfs:label>
+    <owl:imports rdf:resource="http://ecoinformatics.org/oboe/oboe.1.0/oboe-core.owl"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+  </owl:Ontology>
+
+</rdf:RDF>
