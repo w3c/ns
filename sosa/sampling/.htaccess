@@ -62,6 +62,7 @@ RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#SAMP$1 [R=303,NE,env=html:
 # Rewrite rules vary the response based on the Accept HTTP header, so
 # make sure we tell network caches about that.
 ######################################################################
+Header always merge Vary "Accept" env=redirect
 Header always merge Vary "Accept" env=rdf
 Header always merge Vary "Accept" env=ttl
 Header always merge Vary "Accept" env=html
