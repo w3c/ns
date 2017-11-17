@@ -1,0 +1,48 @@
+######################################################################
+# Rewrite rules for the SOSA ontology, the SOSA to OBOE and the SOSA
+# to O&M alignments.
+#
+# Ontologies and rules developed by the Spatial Data on the Web WG.
+######################################################################
+
+RewriteEngine On
+RewriteBase  /ns/sosa/test/
+
+
+######################################################################
+# File-specific headers
+# 
+# Set the Content-Disposition HTTP header to improve "save as" dialogs
+# and the Content-Location HTTP header when an internal redirect
+# occurred.
+#
+# Note the Content-Type directive is probably useless since our server
+# should already return the right one based on the file extension.
+######################################################################
+<Files ~ "om\.rdf$">
+    Header set Content-Type "application/rdf+xml"
+    Header set Content-Disposition "inline; filename= sosa-om.rdf"
+    Header set Content-Location "http://www.w3.org/ns/sosa/test/om.rdf" env=REDIRECT_redirect
+</Files>
+
+<Files ~ "om\.ttl$">
+    Header set Content-Type "text/turtle"
+    Header set Content-Disposition "inline; filename= sosa-om.ttl"
+    Header set Content-Location "http://www.w3.org/ns/sosa/test/om.ttl" env=REDIRECT_redirect
+</Files>
+
+
+######################################################################
+# SOSA to O&M mapping - Apply the same logic as for the SOSA ontology
+######################################################################
+RewriteCond  %{REQUEST_URI}  /ns/sosa/test/om$
+RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/html)
+RewriteRule  ^(.*)$  /ns/sosa/test/om.ttl [env=redirect:1]
+
+RewriteCond  %{REQUEST_URI}  /ns/sosa/test/om$
+RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
+RewriteRule  ^(.*)$  /ns/sosa/test/om.rdf [env=redirect:1]
+
+RewriteCond  %{REQUEST_URI}  /ns/sosa/test/om$
+RewriteCond %{HTTP_ACCEPT} text/html
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#OM_Alignment [R=303,NE,env=redirect:1]
