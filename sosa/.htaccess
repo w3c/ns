@@ -91,19 +91,19 @@ RewriteRule  ^(.*)$  /ns/sosa/sosa.ttl [env=redirect:1]
 #
 # Redirection done with a 303 (See Other) code, see above for details.
 ######################################################################
-RewriteCond  %{REQUEST_URI}  /ns/sosa/(ActuatableProperty|Actuation|Actuator|FeatureOfInterest|ObservableProperty|Observation|Platform|Procedure|Repeatability|Result|Sample|Sampler|Sampling|Sensor|actsOnProperty|madeByActuator|hasFeatureOfInterest|hasResult|hasResultingSample|hasSample|hosts|isActedOnBy|isFeatureOfInterestOf|isHostedBy|isObservedBy|isResultOf|isSampleOf|isSamplingResultOf|madeActuation|madeBySampler|madeBySensor|madeObservation|madeSampling|observedProperty|observes|phenomenonTime|usedProcedure|hasSimpleResult|hasResultTime)
-RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/turtle)
-RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#SOSA$1 [R=303,NE,env=html:1]
+#RewriteCond  %{REQUEST_URI}  /ns/sosa/(ActuatableProperty|Actuation|Actuator|FeatureOfInterest|ObservableProperty|Observation|Platform|Procedure|Repeatability|Result|Sample|Sampler|Sampling|Sensor|actsOnProperty|madeByActuator|hasFeatureOfInterest|hasResult|hasResultingSample|hasSample|hosts|isActedOnBy|isFeatureOfInterestOf|isHostedBy|isObservedBy|isResultOf|isSampleOf|isSamplingResultOf|madeActuation|madeBySampler|madeBySensor|madeObservation|madeSampling|observedProperty|observes|phenomenonTime|usedProcedure|hasSimpleResult|hasResultTime)
+#RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/turtle)
+#RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#SOSA$1 [R=303,NE,env=html:1]
 
-RewriteCond  %{REQUEST_URI}  /ns/sosa/(ActuatableProperty|Actuation|Actuator|FeatureOfInterest|ObservableProperty|Observation|Platform|Procedure|Repeatability|Result|Sample|Sampler|Sampling|Sensor|actsOnProperty|madeByActuator|hasFeatureOfInterest|hasResult|hasResultingSample|hasSample|hosts|isActedOnBy|isFeatureOfInterestOf|isHostedBy|isObservedBy|isResultOf|isSampleOf|isSamplingResultOf|madeActuation|madeBySampler|madeBySensor|madeObservation|madeSampling|observedProperty|observes|phenomenonTime|usedProcedure|hasSimpleResult|hasResultTime)
-RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-RewriteRule  ^(.*)$  /ns/sosa/sosa.rdf [R=303,env=rdf:1]
-Header always set Content-Type "application/rdf+xml" env=rdf
+#RewriteCond  %{REQUEST_URI}  /ns/sosa/(ActuatableProperty|Actuation|Actuator|FeatureOfInterest|ObservableProperty|Observation|Platform|Procedure|Repeatability|Result|Sample|Sampler|Sampling|Sensor|actsOnProperty|madeByActuator|hasFeatureOfInterest|hasResult|hasResultingSample|hasSample|hosts|isActedOnBy|isFeatureOfInterestOf|isHostedBy|isObservedBy|isResultOf|isSampleOf|isSamplingResultOf|madeActuation|madeBySampler|madeBySensor|madeObservation|madeSampling|observedProperty|observes|phenomenonTime|usedProcedure|hasSimpleResult|hasResultTime)
+#RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
+#RewriteRule  ^(.*)$  /ns/sosa/sosa.rdf [R=303,env=rdf:1]
+#Header always set Content-Type "application/rdf+xml" env=rdf
 
-RewriteCond  %{REQUEST_URI}  /ns/sosa/(ActuatableProperty|Actuation|Actuator|FeatureOfInterest|ObservableProperty|Observation|Platform|Procedure|Repeatability|Result|Sample|Sampler|Sampling|Sensor|actsOnProperty|madeByActuator|hasFeatureOfInterest|hasResult|hasResultingSample|hasSample|hosts|isActedOnBy|isFeatureOfInterestOf|isHostedBy|isObservedBy|isResultOf|isSampleOf|isSamplingResultOf|madeActuation|madeBySampler|madeBySensor|madeObservation|madeSampling|observedProperty|observes|phenomenonTime|usedProcedure|hasSimpleResult|hasResultTime)
-RewriteCond %{HTTP_ACCEPT} text/turtle
-RewriteRule  ^(.*)$  /ns/sosa/sosa.ttl [R=303,env=ttl:1]
-Header always set Content-Type "text/turtle" env=ttl
+#RewriteCond  %{REQUEST_URI}  /ns/sosa/(ActuatableProperty|Actuation|Actuator|FeatureOfInterest|ObservableProperty|Observation|Platform|Procedure|Repeatability|Result|Sample|Sampler|Sampling|Sensor|actsOnProperty|madeByActuator|hasFeatureOfInterest|hasResult|hasResultingSample|hasSample|hosts|isActedOnBy|isFeatureOfInterestOf|isHostedBy|isObservedBy|isResultOf|isSampleOf|isSamplingResultOf|madeActuation|madeBySampler|madeBySensor|madeObservation|madeSampling|observedProperty|observes|phenomenonTime|usedProcedure|hasSimpleResult|hasResultTime)
+#RewriteCond %{HTTP_ACCEPT} text/turtle
+#RewriteRule  ^(.*)$  /ns/sosa/sosa.ttl [R=303,env=ttl:1]
+#Header always set Content-Type "text/turtle" env=ttl
 
 
 ######################################################################
