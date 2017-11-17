@@ -10,6 +10,13 @@ RewriteBase  /ns/sosa/
 
 
 ######################################################################
+# Disable content negotiation for om and oboe files
+# (we'll use custom rewrite rules)
+######################################################################
+Options -MultiViews
+
+
+######################################################################
 # File-specific headers
 # 
 # Set the Content-Disposition HTTP header to improve "save as" dialogs
@@ -127,15 +134,15 @@ RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#OM_Alignment [R=303,NE,env
 ######################################################################
 RewriteCond  %{REQUEST_URI}  /ns/sosa/oboe$
 RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/html)
-RewriteRule  ^(.*)/?$  /ns/sosa/oboe.ttl [env=redirect:1]
+RewriteRule  ^(.*)$  /ns/sosa/oboe.ttl [env=redirect:1]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/oboe$
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-RewriteRule  ^(.*)/?$  /ns/sosa/oboe.rdf [env=redirect:1]
+RewriteRule  ^(.*)$  /ns/sosa/oboe.rdf [env=redirect:1]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/oboe$
 RewriteCond %{HTTP_ACCEPT} text/html
-RewriteRule  ^(.*)/?$  https://www.w3.org/TR/vocab-ssn/#OBOE_Alignment [R=303,NE,env=redirect:1]
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#OBOE_Alignment [R=303,NE,env=redirect:1]
 
 
 ######################################################################
