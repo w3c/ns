@@ -5,6 +5,8 @@
 # Ontologies and rules developed by the Spatial Data on the Web WG.
 ######################################################################
 
+Options -MultiViews
+
 RewriteEngine On
 RewriteBase  /ns/sosa/test/
 
