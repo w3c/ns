@@ -111,15 +111,15 @@ Header always set Content-Type "text/turtle" env=ttl
 ######################################################################
 RewriteCond  %{REQUEST_URI}  /ns/sosa/om$
 RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/html)
-RewriteRule  ^(.*)/?$  /ns/sosa/om.ttl [env=redirect:1]
+RewriteRule  ^(.*)$  /ns/sosa/om.ttl [env=redirect:1]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/om$
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-RewriteRule  ^(.*)/?$  /ns/sosa/om.rdf [env=redirect:1]
+RewriteRule  ^(.*)$  /ns/sosa/om.rdf [env=redirect:1]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/om$
 RewriteCond %{HTTP_ACCEPT} text/html
-RewriteRule  ^(.*)/?$  https://www.w3.org/TR/vocab-ssn/#OM_Alignment [R=303,NE,env=redirect:1]
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#OM_Alignment [R=303,NE,env=redirect:1]
 
 
 ######################################################################
@@ -127,15 +127,15 @@ RewriteRule  ^(.*)/?$  https://www.w3.org/TR/vocab-ssn/#OM_Alignment [R=303,NE,e
 ######################################################################
 RewriteCond  %{REQUEST_URI}  /ns/sosa/oboe$
 RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/html)
-RewriteRule  ^(.*)/?$  /ns/sosa/oboe.ttl [env=redirect:1]
+RewriteRule  ^(.*)$  /ns/sosa/oboe.ttl [env=redirect:1]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/oboe$
 RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-RewriteRule  ^(.*)/?$  /ns/sosa/oboe.rdf [env=redirect:1]
+RewriteRule  ^(.*)$  /ns/sosa/oboe.rdf [env=redirect:1]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/oboe$
 RewriteCond %{HTTP_ACCEPT} text/html
-RewriteRule  ^(.*)/?$  https://www.w3.org/TR/vocab-ssn/#OBOE_Alignment [R=303,NE,env=redirect:1]
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#OBOE_Alignment [R=303,NE,env=redirect:1]
 
 
 ######################################################################
