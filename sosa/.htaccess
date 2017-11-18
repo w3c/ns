@@ -10,6 +10,12 @@ RewriteBase  /ns/sosa/
 
 
 ######################################################################
+# Serve the SOSA ontology by default
+######################################################################
+DirectoryIndex sosa.rdf sosa.ttl
+
+
+######################################################################
 # File-specific headers
 # 
 # Set the Content-Disposition HTTP header to improve "save as" dialogs
@@ -53,5 +59,5 @@ RewriteCond %{HTTP_ACCEPT} text/html
 RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#SOSA$1 [R=303,NE]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/(ActuatableProperty|Actuation|Actuator|FeatureOfInterest|ObservableProperty|Observation|Platform|Procedure|Repeatability|Result|Sample|Sampler|Sampling|Sensor|actsOnProperty|madeByActuator|hasFeatureOfInterest|hasResult|hasResultingSample|hasSample|hosts|isActedOnBy|isFeatureOfInterestOf|isHostedBy|isObservedBy|isResultOf|isSampleOf|isSamplingResultOf|madeActuation|madeBySampler|madeBySensor|madeObservation|madeSampling|observedProperty|observes|phenomenonTime|usedProcedure|hasSimpleResult|hasResultTime)$
-RewriteCond %{HTTP_ACCEPT} !(text/html)
+RewriteCond %{HTTP_ACCEPT} !text/html
 RewriteRule  ^(.*)$  /ns/sosa/ [R=303]
