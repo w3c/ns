@@ -50,4 +50,4 @@ RewriteRule  ^(.*)$  /ns/ssn/ [R=303,env=redirect:1]
 # Rewrite rules vary the response based on the Accept HTTP header, so
 # make sure we tell network caches about that.
 ######################################################################
-Header merge Vary "Accept" env=REDIRECT_redirect
+Header always merge Vary "Accept" env=redirect
