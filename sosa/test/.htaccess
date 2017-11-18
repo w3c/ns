@@ -5,8 +5,6 @@
 # Ontologies and rules developed by the Spatial Data on the Web WG.
 ######################################################################
 
-Options +MultiViews
-
 RewriteEngine On
 RewriteBase  /ns/sosa/test/
 
@@ -22,9 +20,9 @@ RewriteBase  /ns/sosa/test/
 # should already return the right one based on the file extension.
 ######################################################################
 <Files ~ "om\.rdf$">
-    Header set Content-Disposition "inline; filename= sosa-om.rdf"
+    Header set Content-Disposition "inline; filename=sosa-om.rdf"
 </Files>
 
 <Files ~ "om\.ttl$">
-    Header set Content-Disposition "inline; filename= sosa-om.ttl"
+    Header set Content-Disposition "inline; filename=sosa-om.ttl"
 </Files>
