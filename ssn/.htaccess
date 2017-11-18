@@ -9,95 +9,38 @@ RewriteBase  /ns/ssn/
 
 
 ######################################################################
-# Disable content negotiation for dul file
-# (we'll use custom rewrite rules)
+# Serve the ontology file by default
 ######################################################################
-Options -MultiViews
+DirectoryIndex ssn
 
 
 ######################################################################
 # File-specific headers
 ######################################################################
 <Files ~ "ssn\.rdf$">
-    Header set Content-Type "application/rdf+xml"
-    Header set Content-Disposition "inline; filename= ssn.rdf"
-    Header set Content-Location "http://www.w3.org/ns/ssn/ssn.rdf" env=REDIRECT_redirect
+    Header set Content-Disposition "inline; filename=ssn.rdf"
 </Files>
 
 <Files ~ "ssn\.ttl$">
-    Header set Content-Type "text/turtle"
-    Header set Content-Disposition "inline; filename= ssn.ttl"
-    Header set Content-Location "http://www.w3.org/ns/ssn/ssn.ttl" env=REDIRECT_redirect
+    Header set Content-Disposition "inline; filename=ssn.ttl"
 </Files>
 
 <Files ~ "dul\.rdf$">
-    Header set Content-Type "application/rdf+xml"
-    Header set Content-Disposition "inline; filename= ssn-dul.rdf"
-    Header set Content-Location "http://www.w3.org/ns/ssn/dul.rdf" env=REDIRECT_redirect
+    Header set Content-Disposition "inline; filename=ssn-dul.rdf"
 </Files>
 
 <Files ~ "dul\.ttl$">
-    Header set Content-Type "text/turtle"
-    Header set Content-Disposition "inline; filename= ssn-dul.ttl"
-    Header set Content-Location "http://www.w3.org/ns/ssn/dul.ttl" env=REDIRECT_redirect
+    Header set Content-Disposition "inline; filename=ssn-dul.ttl"
 </Files>
-
-
-######################################################################
-# Serve request to the directory based on the Accept HTTP header
-######################################################################
-RewriteCond  %{REQUEST_URI}  /ns/ssn/$
-RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/html)
-RewriteRule  ^(.*)$  /ns/ssn/ssn.ttl [env=redirect:1]
-
-RewriteCond  %{REQUEST_URI}  /ns/ssn/$
-RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-RewriteRule  ^(.*)$  /ns/ssn/ssn.rdf [env=redirect:1]
-
-RewriteCond  %{REQUEST_URI}  /ns/ssn/$
-RewriteCond %{HTTP_ACCEPT} text/html
-RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#Axiomatization [R=303,NE,env=redirect:1]
 
 
 ######################################################################
 # Redirect requests to individual ontology terms
 ######################################################################
 RewriteCond  %{REQUEST_URI}  /ns/ssn/(Deployment|Input|Output|Property|Stimulus|System|deployedOnPlatform|deployedSystem|detects|forProperty|hasDeployment|hasInput|hasOutput|hasProperty|hasSubSystem|implementedBy|implements|inDeployment|isPropertyOf|isProxyFor|wasOriginatedBy)$
-RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/html)
-RewriteRule  ^(.*)$  /ns/ssn/ssn.ttl [R=303,env=ttl:1]
-Header always set Content-Type "text/turtle" env=ttl
+RewriteCond  %{HTTP_ACCEPT}  text/html
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#SSN$1 [R=303,NE]
 
 RewriteCond  %{REQUEST_URI}  /ns/ssn/(Deployment|Input|Output|Property|Stimulus|System|deployedOnPlatform|deployedSystem|detects|forProperty|hasDeployment|hasInput|hasOutput|hasProperty|hasSubSystem|implementedBy|implements|inDeployment|isPropertyOf|isProxyFor|wasOriginatedBy)$
-RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-RewriteRule  ^(.*)$  /ns/ssn/ssn.rdf [R=303,env=rdf:1]
-Header always set Content-Type "application/rdf+xml" env=rdf
-
-RewriteCond  %{REQUEST_URI}  /ns/ssn/(Deployment|Input|Output|Property|Stimulus|System|deployedOnPlatform|deployedSystem|detects|forProperty|hasDeployment|hasInput|hasOutput|hasProperty|hasSubSystem|implementedBy|implements|inDeployment|isPropertyOf|isProxyFor|wasOriginatedBy)$
-RewriteCond %{HTTP_ACCEPT} text/html
-RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#SSN$1 [R=303,NE,env=html:1]
-
-
-######################################################################
-# SSN DUL aligment - Apply the same logic as for the SSN ontology
-######################################################################
-RewriteCond  %{REQUEST_URI}  /ns/ssn/dul$
-RewriteCond %{HTTP_ACCEPT} !(application/rdf\+xml|text/html)
-RewriteRule  ^(.*)$  /ns/ssn/dul.ttl [env=redirect:1]
-
-RewriteCond  %{REQUEST_URI}  /ns/ssn/dul$
-RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
-RewriteRule  ^(.*)$  /ns/ssn/dul.rdf [env=redirect:1]
-
-RewriteCond  %{REQUEST_URI}  /ns/ssn/dul$
-RewriteCond %{HTTP_ACCEPT} text/html
-RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#DUL_Alignment [R=303,NE,env=redirect:1]
-
-
-######################################################################
-# Rewrite rules vary the response based on the Accept HTTP header, so
-# make sure we tell network caches about that.
-######################################################################
-Header always merge Vary "Accept" env=REDIRECT_redirect
-Header always merge Vary "Accept" env=REDIRECT_rdf
-Header always merge Vary "Accept" env=REDIRECT_ttl
-Header always merge Vary "Accept" env=REDIRECT_html
+RewriteCond  %{HTTP_ACCEPT}  !text/html
+RewriteRule  ^(.*)$  /ns/ssn/ [R=303]
