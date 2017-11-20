@@ -1,28 +1,10 @@
-######################################################################
-# Rewrite rules for the SOSA ontology, the SOSA to OBOE and the SOSA
-# to O&M alignments.
-#
-# Ontologies and rules developed by the Spatial Data on the Web WG.
-######################################################################
-
 RewriteEngine On
 RewriteBase  /ns/sosa/test/
 
+RewriteCond  %{REQUEST_URI}  /ns/sosa/test/toto$
+RewriteCond  %{HTTP_ACCEPT}  text/html
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/ [R=303,NE]
 
-######################################################################
-# File-specific headers
-# 
-# Set the Content-Disposition HTTP header to improve "save as" dialogs
-# and the Content-Location HTTP header when an internal redirect
-# occurred.
-#
-# Note the Content-Type directive is probably useless since our server
-# should already return the right one based on the file extension.
-######################################################################
-<Files ~ "om\.rdf$">
-    Header set Content-Disposition "inline; filename=sosa-om.rdf"
-</Files>
-
-<Files ~ "om\.ttl$">
-    Header set Content-Disposition "inline; filename=sosa-om.ttl"
-</Files>
+RewriteCond  %{REQUEST_URI}  /ns/sosa/test/toto$
+RewriteCond  %{HTTP_ACCEPT}  !text/html
+RewriteRule  ^(.*)$  /ns/sosa/test/om [R=303]
