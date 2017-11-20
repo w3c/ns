@@ -3,8 +3,10 @@ RewriteBase  /ns/sosa/test/
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/test/toto$
 RewriteCond  %{HTTP_ACCEPT}  text/html
-RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/ [R=303,NE,L]
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/ [R=303,NE]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/test/toto$
 RewriteCond  %{HTTP_ACCEPT}  !text/html
 RewriteRule  ^(.*)$  /ns/sosa/test/om [R=303]
+
+Header always merge Vary "Accept"
