@@ -2,9 +2,11 @@ RewriteEngine On
 RewriteBase  /ns/sosa/test/
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/test/toto$
-RewriteCond  %{HTTP:ACCEPT}  text/html
-RewriteRule  ^(.*)$  https://github.com/w3c/ [R=303,NE]
+RewriteCond  %{HTTP:Accept}  text/html
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/ [R=303,NE]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/test/toto$
-RewriteCond  %{HTTP:ACCEPT}  !text/html
+RewriteCond  %{HTTP:Accept}  !text/html
 RewriteRule  ^(.*)$  /ns/sosa/test/om [R=303]
+
+Header always merge Vary "Accept"
