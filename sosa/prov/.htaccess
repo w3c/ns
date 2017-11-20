@@ -31,8 +31,10 @@ DirectoryIndex sosa-prov
 ######################################################################
 RewriteCond  %{REQUEST_URI}  /ns/sosa/prov/(eventAssociation|hadProcedure)$
 RewriteCond  %{HTTP_ACCEPT}  text/html
-RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#PROV_Alignment [R=303,NE]
+RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#PROV_Alignment [R=303,NE,env=redirect:1]
 
 RewriteCond  %{REQUEST_URI}  /ns/sosa/prov/(eventAssociation|hadProcedure)$
 RewriteCond  %{HTTP_ACCEPT}  !text/html
-RewriteRule  ^(.*)$  /ns/sosa/prov/ [R=303]
+RewriteRule  ^(.*)$  /ns/sosa/prov/ [R=303,env=redirect:1]
+
+Header always merge Vary "Accept" env=redirect
