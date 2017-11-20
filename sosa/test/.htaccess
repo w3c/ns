@@ -9,4 +9,4 @@ RewriteCond  %{REQUEST_URI}  /ns/sosa/test/toto$
 RewriteCond  %{HTTP:Accept}  !text/html
 RewriteRule  ^(.*)$  /ns/sosa/test/om [R=303]
 
-Header always merge Vary "Accept"
+Header onsuccess merge Vary "Accept"
