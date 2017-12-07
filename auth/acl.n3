@@ -29,6 +29,14 @@ agent   a rdf:Property;
         rdfs:domain     Authorization;
         rdfs:range      foaf:Agent.
 
+origin   a rdf:Property;
+        rdfs:label "origin";
+        rdfs:comment """A web application, identified by its Origin, such as
+        <https://scripts.example.com>, being given the right.""";
+        rdfs:seeAlso <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin>;
+        rdfs:domain     Authorization;
+        rdfs:range      Origin.
+
 agentClass   a rdf:Property;
         rdfs:label "agent class";
         rdfs:comment "A class of persons or social entities to being given the right";
@@ -89,6 +97,17 @@ mode
         rdfs:domain     Authorization;
         rdfs:range      rdfs:Class.
 
+#################################### Origins
+
+Origin a rdfs:Class;
+        rdfs:label "Origin";
+        rdfs:seeAlso <https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin>;
+        rdfs:comment """An Origin is basically a web site
+        (Note WITHOUT the trailing slash after the domain name and port in its URI)
+        and is the basis for controlling access to data by web apps
+        in the Same Origin Model of web security.
+        All scripts from the same origin are given the same right.""".
+
 #################################### Access modes
 
 Access a rdfs:Class;
@@ -127,7 +146,7 @@ accessControl
         rdfs:label "access control";
         rdfs:subPropertyOf rdfs:seeAlso;
         rdfs:comment """The Access Control file for this information resource.
-        This may of course be a virtual resorce implemented by the access control system.
+        This may of course be a virtual resource implemented by the access control system.
         Note also HTTP's header  Link:  foo.meta ;rel=meta can be used for this.""";
         rdfs:domain      gen:InformationResource;
         rdfs:range      gen:InformationResource.

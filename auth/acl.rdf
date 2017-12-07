@@ -56,6 +56,16 @@ and for example to develop a reputation)
         <subClassOf rdf:resource="http://www.w3.org/ns/auth/acl#Access"/>
     </Class>
 
+    <Class rdf:about="http://www.w3.org/ns/auth/acl#Origin">
+        <comment>An Origin is basically a web site
+        (Note WITHOUT the trailing slash after the domain name and port in its URI)
+        and is the basis for controlling access to data by web apps
+        in the Same Origin Model of web security.
+        All scripts from the same origin are given the same right.</comment>
+        <label>Origin</label>
+        <seeAlso rdf:resource="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin"/>
+    </Class>
+
     <Class rdf:about="http://www.w3.org/ns/auth/acl#Read">
         <comment>The class of read operations</comment>
         <label xml:lang="en">read</label>
@@ -69,7 +79,7 @@ and for example to develop a reputation)
 
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#accessControl">
         <comment>The Access Control file for this information resource.
-        This may of course be a virtual resorce implemented by the access control system.
+        This may of course be a virtual resource implemented by the access control system.
         Note also HTTP's header  Link:  foo.meta ;rel=meta can be used for this.</comment>
         <domain rdf:resource="http://www.w3.org/2006/gen/ont#InformationResource"/>
         <label>access control</label>
@@ -137,6 +147,15 @@ and for example to develop a reputation)
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
         <label>access mode</label>
         <range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#origin">
+        <comment>A web application, identified by its Origin, such as
+        &#60;https://scripts.example.com&#62;, being given the right.</comment>
+        <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
+        <label>origin</label>
+        <range rdf:resource="http://www.w3.org/ns/auth/acl#Origin"/>
+        <seeAlso rdf:resource="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Origin"/>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#owner">
