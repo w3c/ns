@@ -1,1706 +1,1421 @@
-<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <style>
-    /*
-
-github.com style (c) Vasily Polovnyov <vast@whiteants.net>
-
-*/
-
-    .hljs {
-      display: block;
-      overflow-x: auto;
-      padding: 0.5em;
-      color: #333;
-      background: #f8f8f8;
-    }
-
-    .hljs-comment,
-    .hljs-quote {
-      color: #998;
-      font-style: italic;
-    }
-
-    .hljs-keyword,
-    .hljs-selector-tag,
-    .hljs-subst {
-      color: #333;
-      font-weight: bold;
-    }
-
-    .hljs-number,
-    .hljs-literal,
-    .hljs-variable,
-    .hljs-template-variable,
-    .hljs-tag .hljs-attr {
-      color: #008080;
-    }
-
-    .hljs-string,
-    .hljs-doctag {
-      color: #d14;
-    }
-
-    .hljs-title,
-    .hljs-section,
-    .hljs-selector-id {
-      color: #900;
-      font-weight: bold;
-    }
-
-    .hljs-subst {
-      font-weight: normal;
-    }
-
-    .hljs-type,
-    .hljs-class .hljs-title {
-      color: #458;
-      font-weight: bold;
-    }
-
-    .hljs-tag,
-    .hljs-name,
-    .hljs-attribute {
-      color: #000080;
-      font-weight: normal;
-    }
-
-    .hljs-regexp,
-    .hljs-link {
-      color: #009926;
-    }
-
-    .hljs-symbol,
-    .hljs-bullet {
-      color: #990073;
-    }
-
-    .hljs-built_in,
-    .hljs-builtin-name {
-      color: #0086b3;
-    }
-
-    .hljs-meta {
-      color: #999;
-      font-weight: bold;
-    }
-
-    .hljs-deletion {
-      background: #fdd;
-    }
-
-    .hljs-addition {
-      background: #dfd;
-    }
-
-    .hljs-emphasis {
-      font-style: italic;
-    }
-
-    .hljs-strong {
-      font-weight: bold;
-    }
-  </style>
-
-  <title>Shape Expression Vocabulary</title>
-
-
-  <style type="text/css">
-    dl.terms dt {
-      float: left;
-      clear: left;
-      width: 17vw;
-    }
-
-    dl.terms dd:after {
-      content: '';
-      display: block;
-      clear: both;
-      margin-bottom: 5px;
-    }
-
-    table.rdfs-definition td {
-      vertical-align: top;
-    }
-
-    .bold {
-      font-weight: bold;
-    }
-  </style>
-  <style id="respec-mainstyle">
-    /*****************************************************************
- * ReSpec 3 CSS
- * Robin Berjon - http://berjon.com/
- *****************************************************************/
-    /* Override code highlighter background */
-
-    .hljs {
-      background: transparent !important;
-    }
-    /* --- INLINES --- */
-
-    em.rfc2119 {
-      text-transform: lowercase;
-      font-style: normal;
-      color: #900;
-    }
-
-    h1 abbr,
-    h2 abbr,
-    h3 abbr,
-    h4 abbr,
-    h5 abbr,
-    h6 abbr,
-    a abbr {
-      border: none;
-    }
-
-    dfn {
-      font-weight: bold;
-    }
-
-    a.internalDFN {
-      color: inherit;
-      border-bottom: 1px solid #99c;
-      text-decoration: none;
-    }
-
-    a.externalDFN {
-      color: inherit;
-      border-bottom: 1px dotted #ccc;
-      text-decoration: none;
-    }
-
-    a.bibref {
-      text-decoration: none;
-    }
-
-    cite .bibref {
-      font-style: normal;
-    }
-
-    code {
-      color: #C83500;
-    }
-
-    th code {
-      color: inherit;
-    }
-    /* --- TOC --- */
-
-    .toc a,
-    .tof a {
-      text-decoration: none;
-    }
-
-    a .secno,
-    a .figno {
-      color: #000;
-    }
-
-    ul.tof,
-    ol.tof {
-      list-style: none outside none;
-    }
-
-    .caption {
-      margin-top: 0.5em;
-      font-style: italic;
-    }
-    /* --- TABLE --- */
-
-    table.simple {
-      border-spacing: 0;
-      border-collapse: collapse;
-      border-bottom: 3px solid #005a9c;
-    }
-
-    .simple th {
-      background: #005a9c;
-      color: #fff;
-      padding: 3px 5px;
-      text-align: left;
-    }
-
-    .simple th[scope="row"] {
-      background: inherit;
-      color: inherit;
-      border-top: 1px solid #ddd;
-    }
-
-    .simple td {
-      padding: 3px 10px;
-      border-top: 1px solid #ddd;
-    }
-
-    .simple tr:nth-child(even) {
-      background: #f0f6ff;
-    }
-    /* --- DL --- */
-
-    .section dd>p:first-child {
-      margin-top: 0;
-    }
-
-    .section dd>p:last-child {
-      margin-bottom: 0;
-    }
-
-    .section dd {
-      margin-bottom: 1em;
-    }
-
-    .section dl.attrs dd,
-    .section dl.eldef dd {
-      margin-bottom: 0;
-    }
-
-    #issue-summary>ul,
-    .respec-dfn-list {
-      column-count: 2;
-    }
-
-    #issue-summary li,
-    .respec-dfn-list li {
-      list-style: none;
-    }
-
-    @media print {
-      .removeOnSave {
-        display: none;
+  <head>
+    <meta charset='utf-8'/>
+    <title>Shape Expression Vocabulary</title>
+    <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
+    <script class="remove">
+var respecConfig = {
+    localBiblio: {
+      "shex-semantics": {
+        "authors": [
+          "Eric Prud'hommeaux",
+          "Iovka Boneva",
+          "Jose Labra Gayo",
+          "Gregg Kellogg"
+        ],
+        "title": "Shape Expressions Language",
+        "href" : "http://shex.io/shex-semantics",
+        "rawDate": "2016-12-22",
+        "status" : "CG-NOTE",
+        "publisher": "W3C"
       }
-    }
-  </style>
-  <link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/base.css">
-  <link rel="canonical" href="https://www.w3.org/TR/shexns/">
-  <meta name="generator" content="ReSpec 14.1.0">
-  <script id="initialUserConfig" type="application/json">
-    {
-      "localBiblio":
-      {
-        "shex-semantics":
-        {
-          "authors": [
-            "Eric Prud'hommeaux",
-            "Iovka Boneva",
-            "Jose Labra Gayo",
-            "Gregg Kellogg"
-          ],
-          "title": "Shape Expressions Language",
-          "href": "http://shex.io/shex-semantics",
-          "rawDate": "2016-12-22",
-          "status": "CG-NOTE",
-          "publisher": "W3C"
-        }
-      },
-      "specStatus": "base",
-      "shortName": "shexns",
-      "publishDate": "2017-06-25",
-      "thisVersion": "http://www.w3.org/ns/shex",
-      "edDraftURI": "http://shexspec.github.io/ns/",
-      "editors": [
-      {
-        "name": "Gregg Kellogg",
-        "url": "http://greggkellogg.net/",
-        "company": "Spec-Ops",
-        "companyURL": "https://spec-ops.io/",
-        "w3cid": "44770"
-      }],
-      "wg": "Shape Expressions Community Group",
-      "wgURI": "https://www.w3.org/community/shex/",
-      "wgPublicList": "public-csv-wg",
-      "wgPatentURI": "http://www.w3.org/2004/01/pp-impl/68238/status",
-      "alternateFormats": [
-      {
-        "uri": "shex.ttl",
-        "label": "Turtle"
-      },
-      {
-        "uri": "shex.jsonld",
-        "label": "JSON-LD"
-      }],
-      "otherLinks": [
-      {
-        "key": "Repository",
-        "data": [
-        {
-          "value": "We are on GitHub",
-          "href": "https://github.com/shexSpec/shexspec.github.io/"
-        },
-        {
-          "value": "File a bug",
-          "href": "https://github.com/shexSpec/shex/issues"
-        }]
-      },
-      {
-        "key": "Changes",
-        "data": [
-        {
-          "value": "Commit history",
-          "href": "https://github.com/shexSpec/shexspec.github.io/commits/master"
-        }]
-      }],
-      "inlineCSS": true,
-      "doRDFa": false,
-      "noIDLIn": true,
-      "issueBase": "https://github.com/shexSpec/shex/issues/",
-      "noLegacyStyle": false,
-      "publishISODate": "2017-06-25T00:00:00.000Z",
-      "generatedSubtitle": "Document 25 June 2017"
-    }
-  </script>
-</head>
-<body resource="http://www.w3.org/ns/shex#" typeof="owl:Ontology" prefix="shex: http://www.w3.org/ns/shex#" aria-busy="false" class="h-entry" id="respecDocument">
-  <div class="head" role="contentinfo" id="respecHeader">
-    <p>
-      <a class="logo" href="https://www.w3.org/"><img width="72" height="48" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" alt="W3C"></a>
-    </p>
-    <p></p>
-    <h1 class="title p-name" id="title">Shape Expression Vocabulary</h1>
-    <h2 id="w3c-document-25-june-2017"><abbr title="World Wide Web Consortium">W3C</abbr> Document <time class="dt-published" datetime="2017-06-25">25 June 2017</time></h2>
-    <dl>
-      <dt>Latest editor's draft:</dt>
-      <dd><a href="http://shexspec.github.io/ns/">http://shexspec.github.io/ns/</a></dd>
-      <dt>Editor:</dt>
-      <dd class="p-author h-card vcard" data-editor-id="44770"><a class="u-url url p-name fn" href="http://greggkellogg.net/">Gregg Kellogg</a>, <a class="p-org org h-org h-card" href="https://spec-ops.io/">Spec-Ops</a></dd>
-
-      <dt>Repository:</dt>
-      <dd>
-        <a href="https://github.com/shexSpec/shexspec.github.io/">
-                      We are on GitHub
-                    </a>
-      </dd>
-      <dd>
-        <a href="https://github.com/shexSpec/shex/issues">
-                      File a bug
-                    </a>
-      </dd>
-      <dt>Changes:</dt>
-      <dd>
-        <a href="https://github.com/shexSpec/shexspec.github.io/commits/master">
-                      Commit history
-                    </a>
-      </dd>
-    </dl>
-    <p>
-      This document is also available in these non-normative formats:
-      <a rel="alternate" href="shex.ttl">Turtle</a> and <a rel="alternate" href="shex.jsonld">JSON-LD</a>
-    </p>
-    <p class="copyright">
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a> © 2017
-
-      <a href="https://www.w3.org/"><abbr title="World Wide Web Consortium">W3C</abbr></a><sup>®</sup> (<a href="https://www.csail.mit.edu/"><abbr title="Massachusetts Institute of Technology">MIT</abbr></a>,
-      <a href="https://www.ercim.eu/"><abbr title="European Research Consortium for Informatics and Mathematics">ERCIM</abbr></a>,
-      <a href="https://www.keio.ac.jp/">Keio</a>, <a href="http://ev.buaa.edu.cn/">Beihang</a>).
-      <abbr title="World Wide Web Consortium">W3C</abbr> <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Legal_Disclaimer">liability</a>,
-      <a href="https://www.w3.org/Consortium/Legal/ipr-notice#W3C_Trademarks">trademark</a> and
-      <a rel="license" href="https://www.w3.org/Consortium/Legal/2015/copyright-software-and-document">permissive document license</a> rules apply.
-    </p>
-    <hr title="Separator for header">
-  </div>
-
-  <section id="abstract" class="introductory">
-    <h2>Abstract</h2>
-    <p>This document describes the
-      <span property="dc:title">Shape Expression Vocabulary</span> and Term definitions used for describing Shape Expressions [<cite><a class="bibref" href="#bib-shex-semantics">shex-semantics</a></cite>]. This document provides the RDFS [<cite><a class="bibref" href="#bib-RDF-SCHEMA">RDF-SCHEMA</a></cite>] vocabulary definition and a description of the JSON-LD context definition for use with defining shape expressions.</p>
-    <p>Alternate versions of the vocabulary definition exist in
-      <a rel="alternate" href="shex.ttl">Turtle</a> and
-      <a rel="alternate" href="shex.jsonld">JSON-LD</a>, which also includes the <code>@context</code> required for metadata descriptions.
-      <!--These versions may also be retrieved from <code>FIXME</code> using an appropiate HTTP <em>Accept</em> header.-->
-    </p>
-    <dl>
-      <dt>Published:</dt>
-      <dd><time property="dc:date">2017-06-25</time></dd>
-      <dt>Version Info:</dt>
-      <dd><a href="https://github.com/shexSpec/shexspec.github.io/commit/62daf29953bf341fc4f57a4b2b960f593db5ec2c" property="owl:versionInfo">https://github.com/shexSpec/shexspec.github.io/commit/62daf29953bf341fc4f57a4b2b960f593db5ec2c</a></dd>
-      <dt>See Also:</dt>
-      <dd><a href="http://shex.io/shex-semantics" property="rdfs:seeAlso">http://shex.io/shex-semantics</a></dd>
-    </dl>
-  </section>
-
-  <section id="sotd" class="introductory">
-    <h2>Status of This Document</h2>
-    <p>
-      This document is merely a <abbr title="World Wide Web Consortium">W3C</abbr>-internal document. It has no official standing of any kind and does not represent consensus of the <abbr title="World Wide Web Consortium">W3C</abbr> Membership.
-    </p>
-
-    <p>
-      FIXME
-    </p>
-
-
-  </section>
-  <nav id="toc">
-    <h2 class="introductory" id="table-of-contents">Table of Contents</h2>
-    <ol class="toc" role="directory">
-      <li class="tocline"><a href="#introduction" class="tocxref"><span class="secno">1. </span>Introduction</a></li>
-      <li class="tocline"><a href="#class-definitions" class="tocxref"><span class="secno">2. </span>Class Definitions</a></li>
-      <li class="tocline"><a href="#property-definitions" class="tocxref"><span class="secno">3. </span>Property Definitions</a></li>
-      <li class="tocline"><a href="#datatype-definitions" class="tocxref"><span class="secno">4. </span>Datatype Definitions</a></li>
-      <li class="tocline"><a href="#instance-definitions" class="tocxref"><span class="secno">5. </span>Instance Definitions</a></li>
-      <li class="tocline"><a href="#term-definitions" class="tocxref"><span class="secno">6. </span>Term Definitions</a></li>
-      <li class="tocline"><a href="#references" class="tocxref"><span class="secno">A. </span>References</a>
-        <ol class="toc">
-          <li class="tocline"><a href="#informative-references" class="tocxref"><span class="secno">A.1 </span>Informative references</a></li>
-        </ol>
-      </li>
-    </ol>
-  </nav>
-
-  <section id="introduction">
-    <!--OddPage-->
-    <h2><span class="secno">1. </span>Introduction</h2>
-    <p property="dc:description">This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [<cite><a class="bibref" href="#bib-shex-semantics">shex-semantics</a></cite>] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes.</p>
-    <p>This specification makes use of the following namespaces:</p>
-    <dl class="terms">
-      <dt><code>shex</code>:</dt>
-      <dd><code>http://www.w3.org/ns/shex#</code></dd>
-      <dt><code>rdf</code>:</dt>
-      <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
-      <dt><code>rdfs</code>:</dt>
-      <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
-      <dt><code>xsd</code>:</dt>
-      <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
-    </dl>
-  </section>
-
-  <section id="class-definitions">
-    <!--OddPage-->
-    <h2><span class="secno">2. </span>Class Definitions</h2>
-    <p>The following are class definitions in the <code>shex</code> namespace:</p>
-    <table class="rdfs-definition">
-      <tbody>
-        <tr>
+    },
+    specStatus:       "base",
+    shortName:        "shexns",
+    publishDate:      "2017-06-25",
+    thisVersion:      "https://www.w3.org/ns/shex",
+    edDraftURI:       "https://shexspec.github.io/ns/shex.html",
+    // lcEnd: "3000-01-01",
+    // crEnd: "3000-01-01",
+    testSuiteURI:     "https://shexspec.github.io/shexTest/",
+    includePermalinks:true,
+    noRecTrack:       true,
+    github:           "https://github.com/shexspec/shexspec.github.io",
+    editors: [{
+      name:       "Gregg Kellogg",
+      url:        "http://greggkellogg.net/",
+      company:    "Spec-Ops",
+      companyURL: "https://spec-ops.io/",
+      w3cid:      "44770"
+    }],
+    wg: "Shape Expressions Community Group",
+    wgURI: "https://www.w3.org/community/shex/",
+    wgPublicList: "public-csv-wg",
+    wgPatentURI: "https://www.w3.org/2004/01/pp-impl/68238/status",
+    alternateFormats: [
+      {uri: "shex.ttl", label: "Turtle"},
+      {uri: "shex.jsonld", label: "JSON-LD"}
+    ],
+    inlineCSS: true,
+    doRDFa: false,
+    noIDLIn: true,
+    issueBase: "https://github.com/shexSpec/shex/issues/",
+    noLegacyStyle: false
+    };
+    </script>
+    <style type="text/css">
+      dl.terms dt {
+        float: left;
+        clear: left;
+        width: 17vw;
+      }
+      dl.terms dd:after {
+          content: '';
+          display: block;
+          clear: both;
+          margin-bottom: 5px;
+      }
+      table.rdfs-definition td {vertical-align: top;}
+      .bold {font-weight: bold;}
+    </style>
+  </head>
+  <body resource="http://www.w3.org/ns/shex#" typeof="owl:Ontology" prefix="shex: http://www.w3.org/ns/shex#">
+    <section id="abstract">
+      <p>This document describes the
+        <span property="dc:title">Shape Expression Vocabulary</span>
+        and Term definitions used
+        for describing Shape Expressions [[shex-semantics]]. This document provides the RDFS [[RDF-SCHEMA]] vocabulary definition and a description of the JSON-LD context definition for use with
+        defining shape expressions.</p>
+      <p>Alternate versions of the vocabulary definition exist in
+        <a rel="alternate" href="shex.ttl">Turtle</a> and
+        <a rel="alternate" href="shex.jsonld">JSON-LD</a>,
+        which also includes the <code>@context</code> required for metadata descriptions.
+        <!--These versions may also be retrieved from <code>FIXME</code> using an appropiate HTTP <em>Accept</em> header.-->
+      </p>
+      <dl>
+        <dt>Published:</dt><dd><time property="dc:date">2017-06-25</time></dd>
+        <dt>Version Info:</dt>
+        <dd><a href="https://github.com/shexSpec/shexspec.github.io/commit/9afd8152bc475006164c92662d9ea6b31450b66f" property="owl:versionInfo">https://github.com/shexSpec/shexspec.github.io/commit/9afd8152bc475006164c92662d9ea6b31450b66f</a></dd>
+        <dt>See Also:</dt>
+          <dd><a href="http://shex.io/shex-semantics" property="rdfs:seeAlso">http://shex.io/shex-semantics</a></dd>
+      </dl>
+    </section>
+    <section id="sotd">
+      <p>
+        FIXME
+      </p>
+    </section>
+    <section>
+      <h2>Introduction</h2>
+      <p property="dc:description">This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex-semantics]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes.</p>
+      <p>This specification makes use of the following namespaces:</p>
+      <dl class="terms">
+        <dt><code>shex</code>:</dt>
+        <dd><code>http://www.w3.org/ns/shex#</code></dd>
+        <dt><code>rdf</code>:</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt><code>rdfs</code>:</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt><code>xsd</code>:</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+      </dl>
+    </section>
+    <section>
+      <h2>Class Definitions</h2>
+      <p>The following are class definitions in the <code>shex</code> namespace:</p>
+      <table class="rdfs-definition">
+        <tr id="Annotation">
           <td class="bold">Annotation</td>
           <td resource="shex:Annotation" typeof="rdfs:Class">
             <em property="rdfs:label">Annotation</em>
+            <span class="permalink"><a href="#Annotation" aria-label="Permalink for Annotation" title="Permalink for Annotation"><span>§</span></a></span>
             <p property="rdfs:comment">Annotations provide a format-independent way to provide additional information about elements in a schema. </p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-        <tr>
+        <tr id="EachOf">
           <td class="bold">EachOf</td>
           <td resource="shex:EachOf" typeof="rdfs:Class">
             <em property="rdfs:label">Each Of</em>
+            <span class="permalink"><a href="#EachOf" aria-label="Permalink for Each Of" title="Permalink for Each Of"><span>§</span></a></span>
             <p property="rdfs:comment">A TripleExpression composed of one or more sub-expressions, all of which must match.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:TripleExpression">shex:TripleExpression</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:TripleExpression">shex:TripleExpression</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="IriStem">
           <td class="bold">IriStem</td>
           <td resource="shex:IriStem" typeof="rdfs:Class">
             <em property="rdfs:label">IRI Stem</em>
+            <span class="permalink"><a href="#IriStem" aria-label="Permalink for IRI Stem" title="Permalink for IRI Stem"><span>§</span></a></span>
             <p property="rdfs:comment">An IRI prefix used for matching IRIs.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:Stem">shex:Stem</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:Stem">shex:Stem</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="IriStemRange">
           <td class="bold">IriStemRange</td>
           <td resource="shex:IriStemRange" typeof="rdfs:Class">
             <em property="rdfs:label">IRI StemRange</em>
+            <span class="permalink"><a href="#IriStemRange" aria-label="Permalink for IRI StemRange" title="Permalink for IRI StemRange"><span>§</span></a></span>
             <p property="rdfs:comment">An IRI prefix (or wildcard) along with a set of excluded values, used for node matching.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:StemRange">shex:StemRange</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:StemRange">shex:StemRange</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="LanguageStem">
           <td class="bold">LanguageStem</td>
           <td resource="shex:LanguageStem" typeof="rdfs:Class">
             <em property="rdfs:label">Language Stem</em>
+            <span class="permalink"><a href="#LanguageStem" aria-label="Permalink for Language Stem" title="Permalink for Language Stem"><span>§</span></a></span>
             <p property="rdfs:comment">An Language prefix used for matching Literal Languages.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:Stem">shex:Stem</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:Stem">shex:Stem</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="LanguageStemRange">
           <td class="bold">LanguageStemRange</td>
           <td resource="shex:LanguageStemRange" typeof="rdfs:Class">
             <em property="rdfs:label">Language StemRange</em>
+            <span class="permalink"><a href="#LanguageStemRange" aria-label="Permalink for Language StemRange" title="Permalink for Language StemRange"><span>§</span></a></span>
             <p property="rdfs:comment">An Language prefix (or wildcard) along with a set of excluded values, used for node matching.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:StemRange">shex:StemRange</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:StemRange">shex:StemRange</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="LiteralStem">
           <td class="bold">LiteralStem</td>
           <td resource="shex:LiteralStem" typeof="rdfs:Class">
             <em property="rdfs:label">Literal Stem</em>
+            <span class="permalink"><a href="#LiteralStem" aria-label="Permalink for Literal Stem" title="Permalink for Literal Stem"><span>§</span></a></span>
             <p property="rdfs:comment">An Literal prefix used for matching Literals.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:Stem">shex:Stem</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:Stem">shex:Stem</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="LiteralStemRange">
           <td class="bold">LiteralStemRange</td>
           <td resource="shex:LiteralStemRange" typeof="rdfs:Class">
             <em property="rdfs:label">Literal StemRange</em>
+            <span class="permalink"><a href="#LiteralStemRange" aria-label="Permalink for Literal StemRange" title="Permalink for Literal StemRange"><span>§</span></a></span>
             <p property="rdfs:comment">An Literal prefix (or wildcard) along with a set of excluded values, used for node matching.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:StemRange">shex:StemRange</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:StemRange">shex:StemRange</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="NodeConstraint">
           <td class="bold">NodeConstraint</td>
           <td resource="shex:NodeConstraint" typeof="rdfs:Class">
             <em property="rdfs:label">Node Constraint</em>
+            <span class="permalink"><a href="#NodeConstraint" aria-label="Permalink for Node Constraint" title="Permalink for Node Constraint"><span>§</span></a></span>
             <p property="rdfs:comment">A constraint on the type or value of an RDF Node.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="NodeKind">
           <td class="bold">NodeKind</td>
           <td resource="shex:NodeKind" typeof="rdfs:Class">
             <em property="rdfs:label">Node Kind</em>
+            <span class="permalink"><a href="#NodeKind" aria-label="Permalink for Node Kind" title="Permalink for Node Kind"><span>§</span></a></span>
             <p property="rdfs:comment">The set of kinds of RDF Nodes.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-        <tr>
+        <tr id="OneOf">
           <td class="bold">OneOf</td>
           <td resource="shex:OneOf" typeof="rdfs:Class">
             <em property="rdfs:label">One Of</em>
+            <span class="permalink"><a href="#OneOf" aria-label="Permalink for One Of" title="Permalink for One Of"><span>§</span></a></span>
             <p property="rdfs:comment">A TripleExpression composed of one or more sub-expressions, one of which must match.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:TripleExpression">shex:TripleExpression</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:TripleExpression">shex:TripleExpression</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="Schema">
           <td class="bold">Schema</td>
           <td resource="shex:Schema" typeof="rdfs:Class">
             <em property="rdfs:label">Schema</em>
+            <span class="permalink"><a href="#Schema" aria-label="Permalink for Schema" title="Permalink for Schema"><span>§</span></a></span>
             <p property="rdfs:comment">A Schema contains the set of shapes, used for matching a focus node.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-        <tr>
+        <tr id="SemAct">
           <td class="bold">SemAct</td>
           <td resource="shex:SemAct" typeof="rdfs:Class">
             <em property="rdfs:label">Semantic Actions</em>
+            <span class="permalink"><a href="#SemAct" aria-label="Permalink for Semantic Actions" title="Permalink for Semantic Actions"><span>§</span></a></span>
             <p property="rdfs:comment">A list of Semantic Actions that serve as an extension point for Shape Expressions. They appear in lists in Schema's startActs and Shape, OneOf, EachOf and TripleConstraint's semActs.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-        <tr>
+        <tr id="Shape">
           <td class="bold">Shape</td>
           <td resource="shex:Shape" typeof="rdfs:Class">
             <em property="rdfs:label">Shape Or</em>
+            <span class="permalink"><a href="#Shape" aria-label="Permalink for Shape Or" title="Permalink for Shape Or"><span>§</span></a></span>
             <p property="rdfs:comment">A shapes schema is captured in a Schema object where shapes is a mapping from shape label to shape expression.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="ShapeAnd">
           <td class="bold">ShapeAnd</td>
           <td resource="shex:ShapeAnd" typeof="rdfs:Class">
             <em property="rdfs:label">Shape And</em>
+            <span class="permalink"><a href="#ShapeAnd" aria-label="Permalink for Shape And" title="Permalink for Shape And"><span>§</span></a></span>
             <p property="rdfs:comment">A ShapeExpression composed of one or more sub-expressions, all of which must match.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="ShapeExpression">
           <td class="bold">ShapeExpression</td>
           <td resource="shex:ShapeExpression" typeof="rdfs:Class">
             <em property="rdfs:label">Shape Expression</em>
+            <span class="permalink"><a href="#ShapeExpression" aria-label="Permalink for Shape Expression" title="Permalink for Shape Expression"><span>§</span></a></span>
             <p property="rdfs:comment">The abstract class of Shape Expressions.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-        <tr>
+        <tr id="ShapeExternal">
           <td class="bold">ShapeExternal</td>
           <td resource="shex:ShapeExternal" typeof="rdfs:Class">
             <em property="rdfs:label">Shape External</em>
+            <span class="permalink"><a href="#ShapeExternal" aria-label="Permalink for Shape External" title="Permalink for Shape External"><span>§</span></a></span>
             <p property="rdfs:comment">A reference to a shape defined in some external Schema.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="ShapeNot">
           <td class="bold">ShapeNot</td>
           <td resource="shex:ShapeNot" typeof="rdfs:Class">
             <em property="rdfs:label">Shape Not</em>
+            <span class="permalink"><a href="#ShapeNot" aria-label="Permalink for Shape Not" title="Permalink for Shape Not"><span>§</span></a></span>
             <p property="rdfs:comment">A ShapeNot is satisfied when it’s included ShapeExpression is not satisfied.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="ShapeOr">
           <td class="bold">ShapeOr</td>
           <td resource="shex:ShapeOr" typeof="rdfs:Class">
             <em property="rdfs:label">Shape Or</em>
+            <span class="permalink"><a href="#ShapeOr" aria-label="Permalink for Shape Or" title="Permalink for Shape Or"><span>§</span></a></span>
             <p property="rdfs:comment">A ShapeExpression composed of one or more sub-expressions, one of which must match.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="Stem">
           <td class="bold">Stem</td>
           <td resource="shex:Stem" typeof="rdfs:Class">
             <em property="rdfs:label">Stem</em>
+            <span class="permalink"><a href="#Stem" aria-label="Permalink for Stem" title="Permalink for Stem"><span>§</span></a></span>
             <p property="rdfs:comment">Abstract class for Stems</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-        <tr>
+        <tr id="StemRange">
           <td class="bold">StemRange</td>
           <td resource="shex:StemRange" typeof="rdfs:Class">
             <em property="rdfs:label">StemRange</em>
+            <span class="permalink"><a href="#StemRange" aria-label="Permalink for StemRange" title="Permalink for StemRange"><span>§</span></a></span>
             <p property="rdfs:comment">Abstract Class for Stem Ranges</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-        <tr>
+        <tr id="TripleConstraint">
           <td class="bold">TripleConstraint</td>
           <td resource="shex:TripleConstraint" typeof="rdfs:Class">
             <em property="rdfs:label">Triple Constraint</em>
+            <span class="permalink"><a href="#TripleConstraint" aria-label="Permalink for Triple Constraint" title="Permalink for Triple Constraint"><span>§</span></a></span>
             <p property="rdfs:comment">A constraint on a triple having a specific predicate and optionally a shape expression used for matching values.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subClassOf</dt>
-              <dd property="rdfs:subClassOf" resource="shex:TripleExpression">shex:TripleExpression</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subClassOf</dt>
+                      <dd property="rdfs:subClassOf" resource="shex:TripleExpression">shex:TripleExpression</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="TripleExpression">
           <td class="bold">TripleExpression</td>
           <td resource="shex:TripleExpression" typeof="rdfs:Class">
             <em property="rdfs:label">Triple Expression</em>
+            <span class="permalink"><a href="#TripleExpression" aria-label="Permalink for Triple Expression" title="Permalink for Triple Expression"><span>§</span></a></span>
             <p property="rdfs:comment">The abstract class of Triple Expressions.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-        <tr>
+        <tr id="Wildcard">
           <td class="bold">Wildcard</td>
           <td resource="shex:Wildcard" typeof="rdfs:Class">
             <em property="rdfs:label">Wildcard</em>
+            <span class="permalink"><a href="#Wildcard" aria-label="Permalink for Wildcard" title="Permalink for Wildcard"><span>§</span></a></span>
             <p property="rdfs:comment">Indicates that a stem is a Wildcard, rather than a URI prefix.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="property-definitions">
-    <!--OddPage-->
-    <h2><span class="secno">3. </span>Property Definitions</h2>
-    <p>The following are property definitions in the <code>shex</code> namespace:</p>
-    <table class="rdfs-definition">
-      <tbody>
-        <tr>
+      </table>
+    </section>
+    <section>
+      <h2>Property Definitions</h2>
+      <p>The following are property definitions in the <code>shex</code> namespace:</p>
+      <table class="rdfs-definition">
+        <tr id="annotation">
           <td class="bold">annotation</td>
           <td resource="shex:annotation" typeof="rdf:Property">
             <em property="rdfs:label">annotation</em>
+            <span class="permalink"><a href="#annotation" aria-label="Permalink for annotation" title="Permalink for annotation"><span>§</span></a></span>
             <p property="rdfs:comment">Annotations on a TripleExpression.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="shex:Annotation">shex:Annotation</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="shex:EachOf">shex:EachOf</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:OneOf">shex:OneOf</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:TripleConstraint">shex:TripleConstraint</span>
-              </dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shex:Annotation">shex:Annotation</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="shex:EachOf">shex:EachOf</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:OneOf">shex:OneOf</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:TripleConstraint">shex:TripleConstraint</span>
+                      </dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="closed">
           <td class="bold">closed</td>
           <td resource="shex:closed" typeof="rdf:Property">
             <em property="rdfs:label">closed</em>
+            <span class="permalink"><a href="#closed" aria-label="Permalink for closed" title="Permalink for closed"><span>§</span></a></span>
             <p property="rdfs:comment">Indicates that a Shape is closed, meaning that it may contain no property values other than those used within TripleConstraints.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:boolean">xsd:boolean</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:Shape">shex:Shape</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:boolean">xsd:boolean</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:Shape">shex:Shape</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="code">
           <td class="bold">code</td>
           <td resource="shex:code" typeof="rdf:Property">
             <em property="rdfs:label">code</em>
+            <span class="permalink"><a href="#code" aria-label="Permalink for code" title="Permalink for code"><span>§</span></a></span>
             <p property="rdfs:comment">Code executed by Semantic Action.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:SemAct">shex:SemAct</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:SemAct">shex:SemAct</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="datatype">
           <td class="bold">datatype</td>
           <td resource="shex:datatype" typeof="rdf:Property">
             <em property="rdfs:label">datatype</em>
+            <span class="permalink"><a href="#datatype" aria-label="Permalink for datatype" title="Permalink for datatype"><span>§</span></a></span>
             <p property="rdfs:comment">A datatype constraint.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="rdfs:Datatype">rdfs:Datatype</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="rdfs:Datatype">rdfs:Datatype</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="exclusion">
           <td class="bold">exclusion</td>
           <td resource="shex:exclusion" typeof="rdf:Property">
             <em property="rdfs:label">exclusion</em>
+            <span class="permalink"><a href="#exclusion" aria-label="Permalink for exclusion" title="Permalink for exclusion"><span>§</span></a></span>
             <p property="rdfs:comment">Values that are excluded from value matching.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="rdfs:Resource">rdfs:Resource</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:Stem">shex:Stem</span>
-              </dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:StemRange">shex:StemRange</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="rdfs:Resource">rdfs:Resource</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:Stem">shex:Stem</span>
+                      </dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:StemRange">shex:StemRange</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="expression">
           <td class="bold">expression</td>
           <td resource="shex:expression" typeof="rdf:Property">
             <em property="rdfs:label">expression</em>
+            <span class="permalink"><a href="#expression" aria-label="Permalink for expression" title="Permalink for expression"><span>§</span></a></span>
             <p property="rdfs:comment">Expression associated with the TripleExpression.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="shex:TripleExpression">shex:TripleExpression</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:Shape">shex:Shape</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shex:TripleExpression">shex:TripleExpression</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:Shape">shex:Shape</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="expressions">
           <td class="bold">expressions</td>
           <td resource="shex:expressions" typeof="rdf:Property">
             <em property="rdfs:label">expressions</em>
+            <span class="permalink"><a href="#expressions" aria-label="Permalink for expressions" title="Permalink for expressions"><span>§</span></a></span>
             <p property="rdfs:comment">List of 2 or more expressions associated with the TripleExpression.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="shex:TripleExpression">shex:TripleExpression</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="shex:EachOf">shex:EachOf</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:OneOf">shex:OneOf</span>
-              </dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shex:TripleExpression">shex:TripleExpression</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="shex:EachOf">shex:EachOf</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:OneOf">shex:OneOf</span>
+                      </dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="extra">
           <td class="bold">extra</td>
           <td resource="shex:extra" typeof="rdf:Property">
             <em property="rdfs:label">extra</em>
+            <span class="permalink"><a href="#extra" aria-label="Permalink for extra" title="Permalink for extra"><span>§</span></a></span>
             <p property="rdfs:comment">Properties which may have extra values beyond those matched through a constraint.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="rdfs:Resource">rdfs:Resource</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:Shape">shex:Shape</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="rdfs:Resource">rdfs:Resource</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:Shape">shex:Shape</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="flags">
           <td class="bold">flags</td>
           <td resource="shex:flags" typeof="rdf:Property">
             <em property="rdfs:label">flags</em>
+            <span class="permalink"><a href="#flags" aria-label="Permalink for flags" title="Permalink for flags"><span>§</span></a></span>
             <p property="rdfs:comment">Regular expression flags</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="fractiondigits">
           <td class="bold">fractiondigits</td>
           <td resource="shex:fractiondigits" typeof="rdf:Property">
             <em property="rdfs:label">fraction digits</em>
+            <span class="permalink"><a href="#fractiondigits" aria-label="Permalink for fraction digits" title="Permalink for fraction digits"><span>§</span></a></span>
             <p property="rdfs:comment">for "fractiondigits" constraints, v is less than or equals the number of digits to the right of the decimal place in the XML Schema canonical form[xmlschema-2] of the value of n, ignoring trailing zeros.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="inverse">
           <td class="bold">inverse</td>
           <td resource="shex:inverse" typeof="rdf:Property">
             <em property="rdfs:label">inverse</em>
+            <span class="permalink"><a href="#inverse" aria-label="Permalink for inverse" title="Permalink for inverse"><span>§</span></a></span>
             <p property="rdfs:comment">Constrains the subject of a triple, rather than the object.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:boolean">xsd:boolean</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:TripleConstraint">shex:TripleConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:boolean">xsd:boolean</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:TripleConstraint">shex:TripleConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="length">
           <td class="bold">length</td>
           <td resource="shex:length" typeof="rdf:Property">
             <em property="rdfs:label">length</em>
+            <span class="permalink"><a href="#length" aria-label="Permalink for length" title="Permalink for length"><span>§</span></a></span>
             <p property="rdfs:comment">The exact length of the value of the cell.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:stringFacet">shex:stringFacet</dd>
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:stringFacet">shex:stringFacet</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="max">
           <td class="bold">max</td>
           <td resource="shex:max" typeof="rdf:Property">
             <em property="rdfs:label">maximum cardinality</em>
+            <span class="permalink"><a href="#max" aria-label="Permalink for maximum cardinality" title="Permalink for maximum cardinality"><span>§</span></a></span>
             <p property="rdfs:comment">Maximum number of times this TripleExpression may match; -1 for “*”</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="shex:EachOf">shex:EachOf</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:OneOf">shex:OneOf</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:TripleConstraint">shex:TripleConstraint</span>
-              </dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="shex:EachOf">shex:EachOf</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:OneOf">shex:OneOf</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:TripleConstraint">shex:TripleConstraint</span>
+                      </dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="maxexclusive">
           <td class="bold">maxexclusive</td>
           <td resource="shex:maxexclusive" typeof="rdf:Property">
             <em property="rdfs:label">max exclusive</em>
+            <span class="permalink"><a href="#maxexclusive" aria-label="Permalink for max exclusive" title="Permalink for max exclusive"><span>§</span></a></span>
             <p property="rdfs:comment">An atomic property that contains a single number that is the maximum valid value (exclusive).</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="xsd:integer">xsd:integer</span>
-                <span property="owl:unionOf" inlist="true" resource="xsd:decimal">xsd:decimal</span>
-                <span property="owl:unionOf" inlist="true" resource="xsd:double">xsd:double</span>
-              </dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="xsd:integer">xsd:integer</span>
+                        <span property="owl:unionOf" inlist=true resource="xsd:decimal">xsd:decimal</span>
+                        <span property="owl:unionOf" inlist=true resource="xsd:double">xsd:double</span>
+                      </dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="maxinclusive">
           <td class="bold">maxinclusive</td>
           <td resource="shex:maxinclusive" typeof="rdf:Property">
             <em property="rdfs:label">max inclusive</em>
+            <span class="permalink"><a href="#maxinclusive" aria-label="Permalink for max inclusive" title="Permalink for max inclusive"><span>§</span></a></span>
             <p property="rdfs:comment">An atomic property that contains a single number that is the maximum valid value (inclusive).</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="xsd:integer">xsd:integer</span>
-                <span property="owl:unionOf" inlist="true" resource="xsd:decimal">xsd:decimal</span>
-                <span property="owl:unionOf" inlist="true" resource="xsd:double">xsd:double</span>
-              </dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="xsd:integer">xsd:integer</span>
+                        <span property="owl:unionOf" inlist=true resource="xsd:decimal">xsd:decimal</span>
+                        <span property="owl:unionOf" inlist=true resource="xsd:double">xsd:double</span>
+                      </dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="maxlength">
           <td class="bold">maxlength</td>
           <td resource="shex:maxlength" typeof="rdf:Property">
             <em property="rdfs:label">max length</em>
+            <span class="permalink"><a href="#maxlength" aria-label="Permalink for max length" title="Permalink for max length"><span>§</span></a></span>
             <p property="rdfs:comment">A numeric atomic property that contains a single integer that is the maximum length of the value.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:stringFacet">shex:stringFacet</dd>
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:stringFacet">shex:stringFacet</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="min">
           <td class="bold">min</td>
           <td resource="shex:min" typeof="rdf:Property">
             <em property="rdfs:label">minimum cardinatliy</em>
+            <span class="permalink"><a href="#min" aria-label="Permalink for minimum cardinatliy" title="Permalink for minimum cardinatliy"><span>§</span></a></span>
             <p property="rdfs:comment">Minimum number of times this TripleExpression may match.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="shex:EachOf">shex:EachOf</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:OneOf">shex:OneOf</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:TripleConstraint">shex:TripleConstraint</span>
-              </dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="shex:EachOf">shex:EachOf</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:OneOf">shex:OneOf</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:TripleConstraint">shex:TripleConstraint</span>
+                      </dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="minexclusive">
           <td class="bold">minexclusive</td>
           <td resource="shex:minexclusive" typeof="rdf:Property">
             <em property="rdfs:label">min exclusive</em>
+            <span class="permalink"><a href="#minexclusive" aria-label="Permalink for min exclusive" title="Permalink for min exclusive"><span>§</span></a></span>
             <p property="rdfs:comment">An atomic property that contains a single number that is the minimum valid value (exclusive).</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="xsd:integer">xsd:integer</span>
-                <span property="owl:unionOf" inlist="true" resource="xsd:decimal">xsd:decimal</span>
-                <span property="owl:unionOf" inlist="true" resource="xsd:double">xsd:double</span>
-              </dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="xsd:integer">xsd:integer</span>
+                        <span property="owl:unionOf" inlist=true resource="xsd:decimal">xsd:decimal</span>
+                        <span property="owl:unionOf" inlist=true resource="xsd:double">xsd:double</span>
+                      </dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="mininclusive">
           <td class="bold">mininclusive</td>
           <td resource="shex:mininclusive" typeof="rdf:Property">
             <em property="rdfs:label">min inclusive</em>
+            <span class="permalink"><a href="#mininclusive" aria-label="Permalink for min inclusive" title="Permalink for min inclusive"><span>§</span></a></span>
             <p property="rdfs:comment">An atomic property that contains a single number that is the minimum valid value (inclusive).</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="xsd:integer">xsd:integer</span>
-                <span property="owl:unionOf" inlist="true" resource="xsd:decimal">xsd:decimal</span>
-                <span property="owl:unionOf" inlist="true" resource="xsd:double">xsd:double</span>
-              </dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="xsd:integer">xsd:integer</span>
+                        <span property="owl:unionOf" inlist=true resource="xsd:decimal">xsd:decimal</span>
+                        <span property="owl:unionOf" inlist=true resource="xsd:double">xsd:double</span>
+                      </dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="minlength">
           <td class="bold">minlength</td>
           <td resource="shex:minlength" typeof="rdf:Property">
             <em property="rdfs:label">min length</em>
+            <span class="permalink"><a href="#minlength" aria-label="Permalink for min length" title="Permalink for min length"><span>§</span></a></span>
             <p property="rdfs:comment">An atomic property that contains a single integer that is the minimum length of the value.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:stringFacet">shex:stringFacet</dd>
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:stringFacet">shex:stringFacet</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="name">
           <td class="bold">name</td>
           <td resource="shex:name" typeof="rdf:Property">
             <em property="rdfs:label">name</em>
+            <span class="permalink"><a href="#name" aria-label="Permalink for name" title="Permalink for name"><span>§</span></a></span>
             <p property="rdfs:comment">Identifier of SemAct extension.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="rdfs:Resource">rdfs:Resource</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:SemAct">shex:SemAct</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="rdfs:Resource">rdfs:Resource</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:SemAct">shex:SemAct</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="nodeKind">
           <td class="bold">nodeKind</td>
           <td resource="shex:nodeKind" typeof="rdf:Property">
             <em property="rdfs:label">node kind</em>
+            <span class="permalink"><a href="#nodeKind" aria-label="Permalink for node kind" title="Permalink for node kind"><span>§</span></a></span>
             <p property="rdfs:comment">Restiction on the kind of node matched; restricted to the defined instances of NodeKind. One of shex:iri, shex:bnode, shex:literal, or shex:nonliteral.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="shex:NodeKind">shex:NodeKind</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shex:NodeKind">shex:NodeKind</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="numericFacet">
           <td class="bold">numericFacet</td>
           <td resource="shex:numericFacet" typeof="rdf:Property">
             <em property="rdfs:label"></em>
+            <span class="permalink"><a href="#numericFacet" aria-label="Permalink for " title="Permalink for "><span>§</span></a></span>
             <p property="rdfs:comment">Abstract property of numeric facets on a NodeConstraint.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:xsFacet">shex:xsFacet</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:xsFacet">shex:xsFacet</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="object">
           <td class="bold">object</td>
           <td resource="shex:object" typeof="rdf:Property">
             <em property="rdfs:label">object</em>
+            <span class="permalink"><a href="#object" aria-label="Permalink for object" title="Permalink for object"><span>§</span></a></span>
             <p property="rdfs:comment">The object of an Annotation.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="rdfs:Resource">rdfs:Resource</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:Annotation">shex:Annotation</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="rdfs:Resource">rdfs:Resource</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:Annotation">shex:Annotation</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="pattern">
           <td class="bold">pattern</td>
           <td resource="shex:pattern" typeof="rdf:Property">
             <em property="rdfs:label">pattern</em>
+            <span class="permalink"><a href="#pattern" aria-label="Permalink for pattern" title="Permalink for pattern"><span>§</span></a></span>
             <p property="rdfs:comment">A regular expression used for matching a value.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:stringFacet">shex:stringFacet</dd>
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:stringFacet">shex:stringFacet</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="predicate">
           <td class="bold">predicate</td>
           <td resource="shex:predicate" typeof="rdf:Property">
             <em property="rdfs:label">predicate</em>
+            <span class="permalink"><a href="#predicate" aria-label="Permalink for predicate" title="Permalink for predicate"><span>§</span></a></span>
             <p property="rdfs:comment">The predicate of a TripleConstraint or Annotation.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="rdfs:Resource">rdfs:Resource</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="shex:Annotation">shex:Annotation</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:TripleConstraint">shex:TripleConstraint</span>
-              </dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="rdfs:Resource">rdfs:Resource</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="shex:Annotation">shex:Annotation</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:TripleConstraint">shex:TripleConstraint</span>
+                      </dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="semActs">
           <td class="bold">semActs</td>
           <td resource="shex:semActs" typeof="rdf:Property">
             <em property="rdfs:label">semantic action</em>
+            <span class="permalink"><a href="#semActs" aria-label="Permalink for semantic action" title="Permalink for semantic action"><span>§</span></a></span>
             <p property="rdfs:comment">Semantic Actions on this TripleExpression.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="shex:SemAct">shex:SemAct</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="shex:EachOf">shex:EachOf</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:OneOf">shex:OneOf</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:TripleConstraint">shex:TripleConstraint</span>
-              </dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shex:SemAct">shex:SemAct</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="shex:EachOf">shex:EachOf</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:OneOf">shex:OneOf</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:TripleConstraint">shex:TripleConstraint</span>
+                      </dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="shapeExpr">
           <td class="bold">shapeExpr</td>
           <td resource="shex:shapeExpr" typeof="rdf:Property">
             <em property="rdfs:label">shape expression</em>
+            <span class="permalink"><a href="#shapeExpr" aria-label="Permalink for shape expression" title="Permalink for shape expression"><span>§</span></a></span>
             <p property="rdfs:comment">Shape Expression referenced by this shape.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:ShapeNot">shex:ShapeNot</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:ShapeNot">shex:ShapeNot</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="shapeExprs">
           <td class="bold">shapeExprs</td>
           <td resource="shex:shapeExprs" typeof="rdf:Property">
             <em property="rdfs:label">shape expressions</em>
+            <span class="permalink"><a href="#shapeExprs" aria-label="Permalink for shape expressions" title="Permalink for shape expressions"><span>§</span></a></span>
             <p property="rdfs:comment">A list of 2 or more Shape Expressions referenced by this shape.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:shapeExpr">shex:shapeExpr</dd>
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="shex:ShapeAnd">shex:ShapeAnd</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:ShapeOr">shex:ShapeOr</span>
-              </dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:shapeExpr">shex:shapeExpr</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="shex:ShapeAnd">shex:ShapeAnd</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:ShapeOr">shex:ShapeOr</span>
+                      </dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="shapes">
           <td class="bold">shapes</td>
           <td resource="shex:shapes" typeof="rdf:Property">
             <em property="rdfs:label">shapes</em>
+            <span class="permalink"><a href="#shapes" aria-label="Permalink for shapes" title="Permalink for shapes"><span>§</span></a></span>
             <p property="rdfs:comment">Shapes in this Schema.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:Schema">shex:Schema</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:Schema">shex:Schema</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="start">
           <td class="bold">start</td>
           <td resource="shex:start" typeof="rdf:Property">
             <em property="rdfs:label">start</em>
+            <span class="permalink"><a href="#start" aria-label="Permalink for start" title="Permalink for start"><span>§</span></a></span>
             <p property="rdfs:comment">A ShapeExpression matched against the focus node prior to any other mapped expressions.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:Schema">shex:Schema</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:Schema">shex:Schema</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="startActs">
           <td class="bold">startActs</td>
           <td resource="shex:startActs" typeof="rdf:Property">
             <em property="rdfs:label">start actions</em>
+            <span class="permalink"><a href="#startActs" aria-label="Permalink for start actions" title="Permalink for start actions"><span>§</span></a></span>
             <p property="rdfs:comment">Semantic Actions run on the Schema.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="shex:SemAct">shex:SemAct</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:Schema">shex:Schema</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shex:SemAct">shex:SemAct</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:Schema">shex:Schema</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="stem">
           <td class="bold">stem</td>
           <td resource="shex:stem" typeof="rdf:Property">
             <em property="rdfs:label">stem</em>
+            <span class="permalink"><a href="#stem" aria-label="Permalink for stem" title="Permalink for stem"><span>§</span></a></span>
             <p property="rdfs:comment">A stem value used for matching or excluding values.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="xsd:string">xsd:string</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:Wildcard">shex:Wildcard</span>
-              </dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="shex:Stem">shex:Stem</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:StemRange">shex:StemRange</span>
-              </dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="xsd:string">xsd:string</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:Wildcard">shex:Wildcard</span>
+                      </dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="shex:Stem">shex:Stem</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:StemRange">shex:StemRange</span>
+                      </dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="stringFacet">
           <td class="bold">stringFacet</td>
           <td resource="shex:stringFacet" typeof="rdf:Property">
             <em property="rdfs:label"></em>
+            <span class="permalink"><a href="#stringFacet" aria-label="Permalink for " title="Permalink for "><span>§</span></a></span>
             <p property="rdfs:comment">An abstract property of string facets on a NodeConstraint.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:xsFacet">shex:xsFacet</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:xsFacet">shex:xsFacet</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="totaldigits">
           <td class="bold">totaldigits</td>
           <td resource="shex:totaldigits" typeof="rdf:Property">
             <em property="rdfs:label">total digits</em>
+            <span class="permalink"><a href="#totaldigits" aria-label="Permalink for total digits" title="Permalink for total digits"><span>§</span></a></span>
             <p property="rdfs:comment">for "totaldigits" constraints, v equals the number of digits in the XML Schema canonical form[xmlschema-2] of the value of n</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:subPropertyOf</dt>
-              <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:subPropertyOf</dt>
+                      <dd property="rdfs:subPropertyOf" resource="shex:numericFacet">shex:numericFacet</dd>
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="valueExpr">
           <td class="bold">valueExpr</td>
           <td resource="shex:valueExpr" typeof="rdf:Property">
             <em property="rdfs:label">value expression</em>
+            <span class="permalink"><a href="#valueExpr" aria-label="Permalink for value expression" title="Permalink for value expression"><span>§</span></a></span>
             <p property="rdfs:comment">A ShapeExpression used for matching the object (or subject if inverted) of a TripleConstraint.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:TripleConstraint">shex:TripleConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shex:ShapeExpression">shex:ShapeExpression</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:TripleConstraint">shex:TripleConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="values">
           <td class="bold">values</td>
           <td resource="shex:values" typeof="rdf:Property">
             <em property="rdfs:label">values</em>
+            <span class="permalink"><a href="#values" aria-label="Permalink for values" title="Permalink for values"><span>§</span></a></span>
             <p property="rdfs:comment">A value restriction on a NodeConstraint.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:range</dt>
-              <dd property="rdfs:range" resource="_:">
-                Union of
-                <span property="owl:unionOf" inlist="true" resource="rdfs:Resource">rdfs:Resource</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:Stem">shex:Stem</span>
-                <span property="owl:unionOf" inlist="true" resource="shex:StemRange">shex:StemRange</span>
-              </dd>
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="_:">
+                        Union of
+                        <span property="owl:unionOf" inlist=true resource="rdfs:Resource">rdfs:Resource</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:Stem">shex:Stem</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:StemRange">shex:StemRange</span>
+                      </dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-        <tr>
+        <tr id="xsFacet">
           <td class="bold">xsFacet</td>
           <td resource="shex:xsFacet" typeof="rdf:Property">
             <em property="rdfs:label"></em>
+            <span class="permalink"><a href="#xsFacet" aria-label="Permalink for " title="Permalink for "><span>§</span></a></span>
             <p property="rdfs:comment">An abstract property of string and numeric facets on a NodeConstraint.</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
-            <dl class="terms">
-              <dt>rdfs:domain</dt>
-              <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
-            </dl>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:NodeConstraint">shex:NodeConstraint</dd>
+              </dl>
           </td>
         </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="datatype-definitions">
-    <!--OddPage-->
-    <h2><span class="secno">4. </span>Datatype Definitions</h2>
-    <p>The following are datatype definitions in the <code>shex</code> namespace:</p>
-    <table class="rdfs-definition">
-    </table>
-  </section>
-
-  <section id="instance-definitions">
-    <!--OddPage-->
-    <h2><span class="secno">5. </span>Instance Definitions</h2>
-    <p>The following are instance definitions in the <code>shex</code> namespace:</p>
-    <table class="rdfs-definition">
-      <tbody>
-        <tr>
+      </table>
+    </section>
+    <section>
+      <h2>Datatype Definitions</h2>
+      <p>The following are datatype definitions in the <code>shex</code> namespace:</p>
+      <table class="rdfs-definition">
+      </table>
+    </section>
+    <section>
+      <h2>Instance Definitions</h2>
+      <p>The following are instance definitions in the <code>shex</code> namespace:</p>
+      <table class="rdfs-definition">
+        <tr id="bnode">
           <td class="bold">bnode</td>
           <td resource="shex:bnode" typeof="NodeKind">
             <em property="rdfs:label">bnode</em>
+            <span class="permalink"><a href="#bnode" aria-label="Permalink for bnode" title="Permalink for bnode"><span>§</span></a></span>
             <p property="rdfs:comment">Requires node to be a Blank Node</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-        <tr>
+        <tr id="iri">
           <td class="bold">iri</td>
           <td resource="shex:iri" typeof="NodeKind">
             <em property="rdfs:label">iri</em>
+            <span class="permalink"><a href="#iri" aria-label="Permalink for iri" title="Permalink for iri"><span>§</span></a></span>
             <p property="rdfs:comment">Requires node to be an IRI</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-        <tr>
+        <tr id="literal">
           <td class="bold">literal</td>
           <td resource="shex:literal" typeof="NodeKind">
             <em property="rdfs:label">literal</em>
+            <span class="permalink"><a href="#literal" aria-label="Permalink for literal" title="Permalink for literal"><span>§</span></a></span>
             <p property="rdfs:comment">Requires node to be an rdf:Literal</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-        <tr>
+        <tr id="nonliteral">
           <td class="bold">nonliteral</td>
           <td resource="shex:nonliteral" typeof="NodeKind">
             <em property="rdfs:label">nonliteral</em>
+            <span class="permalink"><a href="#nonliteral" aria-label="Permalink for nonliteral" title="Permalink for nonliteral"><span>§</span></a></span>
             <p property="rdfs:comment">Requires node to be a Blank Node or IRI</p>
             <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section id="term-definitions">
-    <!--OddPage-->
-    <h2><span class="secno">6. </span>Term Definitions</h2>
-    <dl class="terms">
-      <dt>Annotation</dt>
-      <dd>
-        shex:Annotation
-      </dd>
-      <dt>EachOf</dt>
-      <dd>
-        shex:EachOf
-      </dd>
-      <dt>IriStem</dt>
-      <dd>
-        shex:IriStem
-      </dd>
-      <dt>IriStemRange</dt>
-      <dd>
-        shex:IriStemRange
-      </dd>
-      <dt>LanguageStem</dt>
-      <dd>
-        shex:LanguageStem
-      </dd>
-      <dt>LanguageStemRange</dt>
-      <dd>
-        shex:LanguageStemRange
-      </dd>
-      <dt>LiteralStem</dt>
-      <dd>
-        shex:LiteralStem
-      </dd>
-      <dt>LiteralStemRange</dt>
-      <dd>
-        shex:LiteralStemRange
-      </dd>
-      <dt>NodeConstraint</dt>
-      <dd>
-        shex:NodeConstraint
-      </dd>
-      <dt>OneOf</dt>
-      <dd>
-        shex:OneOf
-      </dd>
-      <dt>Schema</dt>
-      <dd>
-        shex:Schema
-      </dd>
-      <dt>SemAct</dt>
-      <dd>
-        shex:SemAct
-      </dd>
-      <dt>Shape</dt>
-      <dd>
-        shex:Shape
-      </dd>
-      <dt>ShapeAnd</dt>
-      <dd>
-        shex:ShapeAnd
-      </dd>
-      <dt>ShapeExternal</dt>
-      <dd>
-        shex:ShapeExternal
-      </dd>
-      <dt>ShapeNot</dt>
-      <dd>
-        shex:ShapeNot
-      </dd>
-      <dt>ShapeOr</dt>
-      <dd>
-        shex:ShapeOr
-      </dd>
-      <dt>Stem</dt>
-      <dd>
-        shex:Stem
-      </dd>
-      <dt>StemRange</dt>
-      <dd>
-        shex:StemRange
-      </dd>
-      <dt>TripleConstraint</dt>
-      <dd>
-        shex:TripleConstraint
-      </dd>
-      <dt>Wildcard</dt>
-      <dd>
-        shex:Wildcard
-      </dd>
-      <dt>annotations</dt>
-      <dd>
-        shex:annotation with string values interpreted as @id with array values interpreted as @list
-      </dd>
-      <dt>bnode</dt>
-      <dd>
-        shex:bnode
-      </dd>
-      <dt>closed</dt>
-      <dd>
-        shex:closed with string values interpreted as xsd:boolean
-      </dd>
-      <dt>code</dt>
-      <dd>
-        shex:code
-      </dd>
-      <dt>datatype</dt>
-      <dd>
-        shex:datatype with string values interpreted as @id
-      </dd>
-      <dt>exclusions</dt>
-      <dd>
-        shex:exclusion with string values interpreted as @id with array values interpreted as @list
-      </dd>
-      <dt>expression</dt>
-      <dd>
-        shex:expression with string values interpreted as @id
-      </dd>
-      <dt>expressions</dt>
-      <dd>
-        shex:expressions with string values interpreted as @id with array values interpreted as @list
-      </dd>
-      <dt>extra</dt>
-      <dd>
-        shex:extra with string values interpreted as @id
-      </dd>
-      <dt>flags</dt>
-      <dd>
-        shex:flags
-      </dd>
-      <dt>fractiondigits</dt>
-      <dd>
-        shex:fractiondigits with string values interpreted as xsd:integer
-      </dd>
-      <dt>id</dt>
-      <dd>
-        @id
-      </dd>
-      <dt>inverse</dt>
-      <dd>
-        shex:inverse with string values interpreted as xsd:boolean
-      </dd>
-      <dt>iri</dt>
-      <dd>
-        shex:iri
-      </dd>
-      <dt>language</dt>
-      <dd>
-        @language
-      </dd>
-      <dt>length</dt>
-      <dd>
-        shex:length with string values interpreted as xsd:integer
-      </dd>
-      <dt>literal</dt>
-      <dd>
-        shex:literal
-      </dd>
-      <dt>max</dt>
-      <dd>
-        shex:max with string values interpreted as xsd:integer
-      </dd>
-      <dt>maxexclusive</dt>
-      <dd>
-        shex:maxexclusive with string values interpreted as xsd:integer
-      </dd>
-      <dt>maxinclusive</dt>
-      <dd>
-        shex:maxinclusive with string values interpreted as xsd:integer
-      </dd>
-      <dt>maxlength</dt>
-      <dd>
-        shex:maxlength with string values interpreted as xsd:integer
-      </dd>
-      <dt>min</dt>
-      <dd>
-        shex:min with string values interpreted as xsd:integer
-      </dd>
-      <dt>minexclusive</dt>
-      <dd>
-        shex:minexclusive with string values interpreted as xsd:integer
-      </dd>
-      <dt>mininclusive</dt>
-      <dd>
-        shex:mininclusive with string values interpreted as xsd:integer
-      </dd>
-      <dt>minlength</dt>
-      <dd>
-        shex:minlength with string values interpreted as xsd:integer
-      </dd>
-      <dt>name</dt>
-      <dd>
-        shex:name with string values interpreted as @id
-      </dd>
-      <dt>nodeKind</dt>
-      <dd>
-        shex:nodeKind with string values interpreted as @vocab
-      </dd>
-      <dt>nonliteral</dt>
-      <dd>
-        shex:nonliteral
-      </dd>
-      <dt>object</dt>
-      <dd>
-        shex:object with string values interpreted as @id
-      </dd>
-      <dt>pattern</dt>
-      <dd>
-        shex:pattern
-      </dd>
-      <dt>predicate</dt>
-      <dd>
-        shex:predicate with string values interpreted as @id
-      </dd>
-      <dt>rdf</dt>
-      <dd>
-        http://www.w3.org/1999/02/22-rdf-syntax-ns#
-      </dd>
-      <dt>rdfs</dt>
-      <dd>
-        http://www.w3.org/2000/01/rdf-schema#
-      </dd>
-      <dt>semActs</dt>
-      <dd>
-        shex:semActs with string values interpreted as @id with array values interpreted as @list
-      </dd>
-      <dt>shapeExpr</dt>
-      <dd>
-        shex:shapeExpr with string values interpreted as @id
-      </dd>
-      <dt>shapeExprs</dt>
-      <dd>
-        shex:shapeExprs with string values interpreted as @id with array values interpreted as @list
-      </dd>
-      <dt>shapes</dt>
-      <dd>
-        shex:shapes with string values interpreted as @id
-      </dd>
-      <dt>shex</dt>
-      <dd>
-        http://www.w3.org/ns/shex#
-      </dd>
-      <dt>start</dt>
-      <dd>
-        shex:start with string values interpreted as @id
-      </dd>
-      <dt>startActs</dt>
-      <dd>
-        shex:startActs with string values interpreted as @id with array values interpreted as @list
-      </dd>
-      <dt>stem</dt>
-      <dd>
-        shex:stem with string values interpreted as xsd:string
-      </dd>
-      <dt>totaldigits</dt>
-      <dd>
-        shex:totaldigits with string values interpreted as xsd:integer
-      </dd>
-      <dt>type</dt>
-      <dd>
-        @type
-      </dd>
-      <dt>value</dt>
-      <dd>
-        @value
-      </dd>
-      <dt>valueExpr</dt>
-      <dd>
-        shex:valueExpr with string values interpreted as @id
-      </dd>
-      <dt>values</dt>
-      <dd>
-        shex:values with string values interpreted as @id with array values interpreted as @list
-      </dd>
-      <dt>xsd</dt>
-      <dd>
-        http://www.w3.org/2001/XMLSchema#
-      </dd>
-    </dl>
-  </section>
-
-
-  <section id="references" class="appendix">
-    <!--OddPage-->
-    <h2><span class="secno">A. </span>References</h2>
-
-    <section id="informative-references">
-      <h3><span class="secno">A.1 </span>Informative references</h3>
-      <dl class="bibliography"><dt id="bib-RDF-SCHEMA">[RDF-SCHEMA]</dt>
-        <dd><a href="https://www.w3.org/TR/rdf-schema/"><cite>RDF Schema 1.1</cite></a>. Dan Brickley; Ramanathan Guha. W3C. 25 February 2014. W3C Recommendation. URL: <a href="https://www.w3.org/TR/rdf-schema/">https://www.w3.org/TR/rdf-schema/</a>
-        </dd><dt id="bib-shex-semantics">[shex-semantics]</dt>
-        <dd><a href="http://shex.io/shex-semantics"><cite>Shape Expressions Language</cite></a>. Eric Prud'hommeaux; Iovka Boneva; Jose Labra Gayo; Gregg Kellogg. W3C. CG-NOTE. URL: <a href="http://shex.io/shex-semantics">http://shex.io/shex-semantics</a>
+      </table>
+    </section>
+    <section>
+      <h2>Term Definitions</h2>
+      <dl class="terms">
+        <dt>Annotation</dt>
+        <dd>
+            shex:Annotation
+        </dd>
+        <dt>EachOf</dt>
+        <dd>
+            shex:EachOf
+        </dd>
+        <dt>IriStem</dt>
+        <dd>
+            shex:IriStem
+        </dd>
+        <dt>IriStemRange</dt>
+        <dd>
+            shex:IriStemRange
+        </dd>
+        <dt>LanguageStem</dt>
+        <dd>
+            shex:LanguageStem
+        </dd>
+        <dt>LanguageStemRange</dt>
+        <dd>
+            shex:LanguageStemRange
+        </dd>
+        <dt>LiteralStem</dt>
+        <dd>
+            shex:LiteralStem
+        </dd>
+        <dt>LiteralStemRange</dt>
+        <dd>
+            shex:LiteralStemRange
+        </dd>
+        <dt>NodeConstraint</dt>
+        <dd>
+            shex:NodeConstraint
+        </dd>
+        <dt>OneOf</dt>
+        <dd>
+            shex:OneOf
+        </dd>
+        <dt>Schema</dt>
+        <dd>
+            shex:Schema
+        </dd>
+        <dt>SemAct</dt>
+        <dd>
+            shex:SemAct
+        </dd>
+        <dt>Shape</dt>
+        <dd>
+            shex:Shape
+        </dd>
+        <dt>ShapeAnd</dt>
+        <dd>
+            shex:ShapeAnd
+        </dd>
+        <dt>ShapeExternal</dt>
+        <dd>
+            shex:ShapeExternal
+        </dd>
+        <dt>ShapeNot</dt>
+        <dd>
+            shex:ShapeNot
+        </dd>
+        <dt>ShapeOr</dt>
+        <dd>
+            shex:ShapeOr
+        </dd>
+        <dt>Stem</dt>
+        <dd>
+            shex:Stem
+        </dd>
+        <dt>StemRange</dt>
+        <dd>
+            shex:StemRange
+        </dd>
+        <dt>TripleConstraint</dt>
+        <dd>
+            shex:TripleConstraint
+        </dd>
+        <dt>Wildcard</dt>
+        <dd>
+            shex:Wildcard
+        </dd>
+        <dt>annotations</dt>
+        <dd>
+            shex:annotation
+            with string values interpreted as @id
+              with array values interpreted as @list
+        </dd>
+        <dt>bnode</dt>
+        <dd>
+            shex:bnode
+        </dd>
+        <dt>closed</dt>
+        <dd>
+            shex:closed
+            with string values interpreted as xsd:boolean
+        </dd>
+        <dt>code</dt>
+        <dd>
+            shex:code
+        </dd>
+        <dt>datatype</dt>
+        <dd>
+            shex:datatype
+            with string values interpreted as @id
+        </dd>
+        <dt>exclusions</dt>
+        <dd>
+            shex:exclusion
+            with string values interpreted as @id
+              with array values interpreted as @list
+        </dd>
+        <dt>expression</dt>
+        <dd>
+            shex:expression
+            with string values interpreted as @id
+        </dd>
+        <dt>expressions</dt>
+        <dd>
+            shex:expressions
+            with string values interpreted as @id
+              with array values interpreted as @list
+        </dd>
+        <dt>extra</dt>
+        <dd>
+            shex:extra
+            with string values interpreted as @id
+        </dd>
+        <dt>flags</dt>
+        <dd>
+            shex:flags
+        </dd>
+        <dt>fractiondigits</dt>
+        <dd>
+            shex:fractiondigits
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>id</dt>
+        <dd>
+            @id
+        </dd>
+        <dt>inverse</dt>
+        <dd>
+            shex:inverse
+            with string values interpreted as xsd:boolean
+        </dd>
+        <dt>iri</dt>
+        <dd>
+            shex:iri
+        </dd>
+        <dt>language</dt>
+        <dd>
+            @language
+        </dd>
+        <dt>length</dt>
+        <dd>
+            shex:length
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>literal</dt>
+        <dd>
+            shex:literal
+        </dd>
+        <dt>max</dt>
+        <dd>
+            shex:max
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>maxexclusive</dt>
+        <dd>
+            shex:maxexclusive
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>maxinclusive</dt>
+        <dd>
+            shex:maxinclusive
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>maxlength</dt>
+        <dd>
+            shex:maxlength
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>min</dt>
+        <dd>
+            shex:min
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>minexclusive</dt>
+        <dd>
+            shex:minexclusive
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>mininclusive</dt>
+        <dd>
+            shex:mininclusive
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>minlength</dt>
+        <dd>
+            shex:minlength
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>name</dt>
+        <dd>
+            shex:name
+            with string values interpreted as @id
+        </dd>
+        <dt>nodeKind</dt>
+        <dd>
+            shex:nodeKind
+            with string values interpreted as @vocab
+        </dd>
+        <dt>nonliteral</dt>
+        <dd>
+            shex:nonliteral
+        </dd>
+        <dt>object</dt>
+        <dd>
+            shex:object
+            with string values interpreted as @id
+        </dd>
+        <dt>pattern</dt>
+        <dd>
+            shex:pattern
+        </dd>
+        <dt>predicate</dt>
+        <dd>
+            shex:predicate
+            with string values interpreted as @id
+        </dd>
+        <dt>rdf</dt>
+        <dd>
+            http://www.w3.org/1999/02/22-rdf-syntax-ns#
+        </dd>
+        <dt>rdfs</dt>
+        <dd>
+            http://www.w3.org/2000/01/rdf-schema#
+        </dd>
+        <dt>semActs</dt>
+        <dd>
+            shex:semActs
+            with string values interpreted as @id
+              with array values interpreted as @list
+        </dd>
+        <dt>shapeExpr</dt>
+        <dd>
+            shex:shapeExpr
+            with string values interpreted as @id
+        </dd>
+        <dt>shapeExprs</dt>
+        <dd>
+            shex:shapeExprs
+            with string values interpreted as @id
+              with array values interpreted as @list
+        </dd>
+        <dt>shapes</dt>
+        <dd>
+            shex:shapes
+            with string values interpreted as @id
+        </dd>
+        <dt>shex</dt>
+        <dd>
+            http://www.w3.org/ns/shex#
+        </dd>
+        <dt>start</dt>
+        <dd>
+            shex:start
+            with string values interpreted as @id
+        </dd>
+        <dt>startActs</dt>
+        <dd>
+            shex:startActs
+            with string values interpreted as @id
+              with array values interpreted as @list
+        </dd>
+        <dt>stem</dt>
+        <dd>
+            shex:stem
+            with string values interpreted as xsd:string
+        </dd>
+        <dt>totaldigits</dt>
+        <dd>
+            shex:totaldigits
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>type</dt>
+        <dd>
+            @type
+        </dd>
+        <dt>value</dt>
+        <dd>
+            @value
+        </dd>
+        <dt>valueExpr</dt>
+        <dd>
+            shex:valueExpr
+            with string values interpreted as @id
+        </dd>
+        <dt>values</dt>
+        <dd>
+            shex:values
+            with string values interpreted as @id
+              with array values interpreted as @list
+        </dd>
+        <dt>xsd</dt>
+        <dd>
+            http://www.w3.org/2001/XMLSchema#
         </dd>
       </dl>
     </section>
-  </section>
-  <p role="navigation" id="back-to-top"><a href="#toc"><abbr title="Back to Top">↑</abbr></a></p>
-  <script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script>
-</body>
+  </body>
 </html>

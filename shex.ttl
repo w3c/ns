@@ -1,3 +1,5 @@
+@prefix dc: <http;//purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix shex: <http://www.w3.org/ns/shex#> .
@@ -9,7 +11,7 @@ shex: a owl:Ontology;
   dc:description """This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex-semantics]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes."""@en;
   dc:date "2017-06-25"^^xsd:date;
   dc:imports ;
-  owl:versionInfo <https://github.com/shexSpec/shexspec.github.io/commit/62daf29953bf341fc4f57a4b2b960f593db5ec2c>;
+  owl:versionInfo <https://github.com/shexSpec/shexspec.github.io/commit/9afd8152bc475006164c92662d9ea6b31450b66f>;
   rdfs:seeAlso <http://shex.io/shex-semantics>;
   .
 
