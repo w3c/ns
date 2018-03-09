@@ -10,16 +10,20 @@
 
 @prefix sosa: <http://www.w3.org/ns/sosa/> .
 @prefix ssn: <http://www.w3.org/ns/ssn/> .
+@prefix old-ssn: <http://purl.oclc.org/NET/ssnx/ssn#> .
+@prefix sr: <http://www.w3.org/ns/sosa/sampling/> .
+
+
 
 <http://www.w3.org/ns/ssn/dul> rdf:type owl:Ontology ;
   owl:imports <http://www.ontologydesignpatterns.org/ont/dul/DUL.owl> ;
-  owl:imports ssn: .
+  owl:imports <http://www.w3.org/ns/sosa/sampling> .
 
 
 ## Features of interest and observable property
 
 sosa:FeatureOfInterest
-  rdfs:subClassOf [ owl:unionOf ( dul:Event dul:Object dul:Quality ) ] ;
+  rdfs:subClassOf dul:Entity ;
   rdfs:isDefinedBy sosa: .
 
 ssn:Property 
@@ -34,11 +38,18 @@ ssn:Property
     rdfs:subPropertyOf dul:isQualityOf ;
     rdfs:isDefinedBy ssn: .
 
+sr:RelationshipNature
+  rdfs:subClassOf dul:Concept ;
+  rdfs:isDefinedBy sr: .
+
+sr:SampleRelationship
+  rdfs:subClassOf dul:Relation ;
+  rdfs:isDefinedBy sr: .
 
 ## Platform
 
 sosa:Platform
-  rdfs:subClassOf dul:PhysicalObject ;
+  rdfs:subClassOf dul:Object ;
   rdfs:isDefinedBy sosa: .
 
   sosa:hosts
@@ -75,12 +86,20 @@ sosa:Sensor
 ## ProcedureExecutions
 
 sosa:usedProcedure
-  rdfs:subPropertyOf dul:satisfies ;
+  rdfs:subPropertyOf dul:hasParticipant ;
   rdfs:isDefinedBy sosa: .
 
 sosa:Observation
   rdfs:subClassOf dul:Event ;
   rdfs:isDefinedBy sosa: .
+
+ [ owl:intersectionOf  ( 
+    [ owl:complementOf old-ssn:Observation ]
+    [
+      rdf:type            owl:Restriction ;
+      owl:onProperty      old-ssn:observationResult ;
+      owl:someValuesFrom  owl:Thing
+    ] ) ] rdfs:subClassOf sosa:Observation.
 
 sosa:madeObservation
   rdfs:subPropertyOf dul:associatedWith ;
@@ -124,14 +143,14 @@ ssn:hasSubSystem
   rdfs:isDefinedBy ssn: .
 
 sosa:Platform 
-  rdfs:subClassOf dul:PhysicalObject ;
+  rdfs:subClassOf dul:Object ;
   rdfs:isDefinedBy sosa: .
 
 
 ## Deployment
 
 ssn:Deployment
-  rdfs:subClassOf [ owl:unionOf ( dul:Situation dul:Process ) ] ;
+  rdfs:subClassOf dul:Event ;
   rdfs:isDefinedBy ssn: .
 
 ssn:deployedOnPlatform
