@@ -64,6 +64,7 @@ RewriteRule ^hydra/(.*)$ https://www.markus-lanthaler.com/hydra/$1 [P,L]
     Header unset Content-Security-Policy
     Header unset Server
     Header unset Strict-Transport-Security
+    Header set Access-Control-Allow-Origin "*"
 </If>
 
 # Added ivan@w3.org 2014-05-02
