@@ -1,0 +1,73 @@
+{
+    "@context": {
+        "author": {
+            "@container": "@list",
+            "@id": "https://schema.org/author"
+        },
+        "creator": {
+            "@container": "@list",
+            "@id": "https://schema.org/creator"
+        },
+        "editor": {
+            "@container": "@list",
+            "@id": "https://schema.org/editor"
+        },
+        "publisher": {
+            "@container": "@list",
+            "@id": "https://schema.org/publisher"
+        },
+        "illustrator": {
+            "@container": "@list",
+            "@id": "https://schema.org/illustrator"
+        },
+        "translator": {
+            "@container": "@list",
+            "@id": "https://schema.org/translator"
+        },
+        "readBy": {
+            "@container": "@list",
+            "@id": "https://schema.org/readBy"
+        },
+        "artist": {
+            "@container": "@list",
+            "@id": "https://schema.org/artist"
+        },
+        "colorist": {
+            "@container": "@list",
+            "@id": "https://schema.org/colorist"
+        },
+        "letterer": {
+            "@container": "@list",
+            "@id": "https://schema.org/letterer"
+        },
+        "penciler": {
+            "@container": "@list",
+            "@id": "https://schema.org/penciler"
+        },
+        "readingProgression": {
+            "@id": "https://www.w3.org/ns/wp#readingProgression"
+        },
+        "readingOrder": {
+            "@container": "@list",
+            "@id": "https://www.w3.org/ns/wp#readingOrder"
+        },
+        "resources": {
+            "@container": "@set",
+            "@id": "https://www.w3.org/ns/wp#resources"
+        },
+        "lists": {
+            "@container": "@set",
+            "@id": "https://www.w3.org/ns/wp#lists"
+        },
+        "tableOfContents": {
+            "@id": "https://www.w3.org/ns/wp#tableOfContents"
+        },
+        "PublicationLink": {
+            "@id": "https://www.w3.org/ns/wp#PublicationLink"
+        },
+        "rel": {
+            "@container": "@set",
+            "@id": "https://www.w3.org/ns/wp#PublicationLink"
+        }
+    }
+}
