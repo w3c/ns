@@ -112,9 +112,3 @@ RewriteRule ^td$ td/td.ttl [R=303]
 RewriteCond %{HTTP_ACCEPT} application/ld+json
 RewriteRule ^td$ td/w3c-wot-td-context.jsonld [R=303]
 
-# Added by Ivan Herman (ivan@w3.org) for a temporary redirection of the WPUB context while developing...
-RewriteRule ^wpub.jsonld$ https://w3c.github.io/wpub/common/context.jsonld [R=303]
-<Files ~ "wpub.jsonld">
-ForceType 'application/ld+json'
-Header set Access-Control-Allow-Origin "*"
-</Files>
