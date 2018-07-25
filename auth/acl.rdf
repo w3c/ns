@@ -116,14 +116,23 @@ and for example to develop a reputation)
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#agentGroup">
-        <comment>A group of persons or social entities to being given the right</comment>
+        <comment>A group of persons or social entities to being given the right.
+          The right is given to any entity which is a vcard:member of the group,
+          as defined by the document received when the Group is dereferenced.</comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
         <label>agent group</label>
         <range rdf:resource="http://www.w3.org/2006/vcard/ns#Group"/>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#default">
-        <comment>A directory for which this authorization is used for new files in the directory.</comment>
+        <comment>If a resource has no ACL file (it is 404),
+        then access to the resource if given by the ACL of the immediately
+        containing directory, or failing that (404) the ACL of the recursively next
+        containing directory which has an ACL file.
+        Within that ACL file,
+        any Authentication which has that directory as its acl:default applies to the
+        resource. (The highest directory must have an ACL file.)
+</comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
         <label>default access for things in this</label>
     </rdf:Property>
@@ -151,7 +160,11 @@ and for example to develop a reputation)
 
     <rdf:Property rdf:about="http://www.w3.org/ns/auth/acl#origin">
         <comment>A web application, identified by its Origin, such as
-        &#60;https://scripts.example.com&#62;, being given the right.</comment>
+        &#60;https://scripts.example.com&#62;, being given the right.
+        When a user of the web application at a certain origin accesses the server,
+        then the browser sets the Origin: header to warn that a possibly untrusted webapp
+        is being used.
+        Then, BOTH the user AND the origin must have the required access.</comment>
         <domain rdf:resource="http://www.w3.org/ns/auth/acl#Authorization"/>
         <label>origin</label>
         <range rdf:resource="http://www.w3.org/ns/auth/acl#Origin"/>
@@ -166,6 +179,10 @@ and for example to develop a reputation)
         <label xml:lang="en">owner</label>
         <range rdf:resource="http://xmlns.com/foaf/0.1/Agent"/>
     </rdf:Property>
+
+    <rdf:Description rdf:about="https://github.com/solid/web-access-control-spec">
+        <dc:describes rdf:resource=""/>
+    </rdf:Description>
 
     <rdf:Description rdf:about="https://www.w3.org/wiki/WebAccessControl">
         <dc:describes rdf:resource=""/>
