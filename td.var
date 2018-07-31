@@ -1,0 +1,7 @@
+URI: td
+
+URI: td.ttl
+Content-Type: text/turtle
+
+URI:td.html
+Content-Type: text/html

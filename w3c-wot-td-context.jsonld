@@ -1,0 +1,45 @@
+{
+    "@context": {
+        "xsd": "http://www.w3.org/2001/XMLSchema#",
+        "td": "http://www.w3.org/ns/td#",
+        "Thing": "td:Thing",
+        "name": "td:name",
+        "base": {
+            "@id": "td:base",
+            "@type": "@id"
+        },
+        "Link": "td:Link",
+        "href": {
+            "@id": "td:href",
+            "@type": "@id"
+        },
+        "mediaType": {
+            "@id": "td:mediaType"
+        },
+        "Interaction": "td:Interaction",
+        "interaction": {
+            "@id": "td:interaction",
+            "@type": "@id",
+            "@container": "@set"
+        },
+        "link": {
+            "@id": "td:link",
+            "@type": "@id"
+        },
+        "security": "td:security",
+        "Property": "td:Property",
+        "writable": {
+            "@id": "td:writable",
+            "@type": "xsd:boolean"
+        },
+        "Event": "td:Event",
+        "Action": "td:Action",
+        "inputData": {
+            "@id": "td:inputData"
+        },
+        "outputData": {
+            "@id": "td:inputData"
+        }
+    }
+
+}
