@@ -1,19 +1,15 @@
 @prefix : <http://www.w3.org/ns/td#> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
-@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix wot: <http://xmlns.com/wot/0.1/> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
-@base <http://www.w3.org/ns/td#> .
 
 <http://www.w3.org/ns/td#> rdf:type owl:Ontology ;
                            
@@ -32,9 +28,11 @@
                            dcterms:creator <http://purl.org/net/mpoveda> ,
                                            <http://www.garcia-castro.com/foaf.rdf#me> ;
                            
-                           dc:publisher <http://www.oeg-upm.net/> ;
+                           dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> ;
                            
-                           dcterms:contributor <http://www.oeg-upm.net/index.php/en/universitystaff/402-fserena/> .
+                           dc:publisher <https://www.w3.org/WoT/WG/> ;
+                           
+                           dcterms:contributor <mailto:victor.charpenay@siemens.com> .
 
 
 #################################################################
@@ -59,47 +57,117 @@ vs:term_status rdf:type owl:AnnotationProperty .
 #################################################################
 
 
-###  http://www.w3.org/ns/td#inputData
+###  http://www.w3.org/ns/td#actions
 
-:inputData rdf:type owl:ObjectProperty ;
-           
-           rdfs:label "inputData"@en ;
-           
-           rdfs:comment "link to the n-ary class that allows the declaration of the data type and unit of measure expected by an interaction pattern."@en .
-
-
-
-###  http://www.w3.org/ns/td#interaction
-
-:interaction rdf:type owl:ObjectProperty ;
-             
-             rdfs:label "interaction"@en ;
-             
-             rdfs:comment "Link from a Thing to the interaction patterns it provides"@en ;
-             
-             rdfs:range :InteractionPattern ;
-             
-             rdfs:domain :Thing .
+:actions rdf:type owl:ObjectProperty ;
+         
+         rdfs:label "actions" ;
+         
+         rdfs:comment "Keeps all Action-based interaction patterns of the Thing."@en ;
+         
+         rdfs:range :Action ;
+         
+         rdfs:domain :Thing ;
+         
+         rdfs:subPropertyOf :interactions .
 
 
 
-###  http://www.w3.org/ns/td#link
+###  http://www.w3.org/ns/td#events
 
-:link rdf:type owl:ObjectProperty ;
-      
-      rdfs:label "link"@en ;
-      
-      rdfs:comment "Indicates the endpoints from which an interaction pattern is accessible"@en .
+:events rdf:type owl:ObjectProperty ;
+        
+        rdfs:label "events" ;
+        
+        rdfs:comment "Keeps all Event-based interaction patterns of the Thing."@en ;
+        
+        rdfs:range :Event ;
+        
+        rdfs:domain :Thing ;
+        
+        rdfs:subPropertyOf :interactions .
 
 
 
-###  http://www.w3.org/ns/td#outputData
+###  http://www.w3.org/ns/td#forms
 
-:outputData rdf:type owl:ObjectProperty ;
+:forms rdf:type owl:ObjectProperty ;
+       
+       rdfs:label "forms" ;
+       
+       rdfs:comment "Indicates one or more endpoints from which an interaction pattern is accessible"@en ;
+       
+       rdfs:range :Form ;
+       
+       rdfs:domain :InteractionPattern .
+
+
+
+###  http://www.w3.org/ns/td#input
+
+:input rdf:type owl:ObjectProperty ;
+       
+       rdfs:label "input" ;
+       
+       rdfs:comment "Link to the n-ary class that allows the declaration of the accepted data type of an action."@en ;
+       
+       rdfs:domain :Action ;
+       
+       rdfs:range :Specification .
+
+
+
+###  http://www.w3.org/ns/td#interactions
+
+:interactions rdf:type owl:ObjectProperty ;
+              
+              rdfs:range :InteractionPattern ;
+              
+              rdfs:domain :Thing .
+
+
+
+###  http://www.w3.org/ns/td#links
+
+:links rdf:type owl:ObjectProperty ;
+       
+       rdfs:label "links" ;
+       
+       rdfs:comment "Provides Web links to arbitrary resources that relate to the specified Thing Description."@en ;
+       
+       rdfs:range :Link ;
+       
+       rdfs:domain :Thing .
+
+
+
+###  http://www.w3.org/ns/td#output
+
+:output rdf:type owl:ObjectProperty ;
+        
+        rdfs:label "output" ;
+        
+        rdfs:comment "Link to the n-ary class that allows the declaration of the data type returned by an action."@en ;
+        
+        rdfs:domain :Action ;
+        
+        rdfs:range :Specification .
+
+
+
+###  http://www.w3.org/ns/td#properties
+
+:properties rdf:type owl:ObjectProperty ;
             
-            rdfs:label "outputData"@en ;
+            rdfs:label "properties" ;
             
-            rdfs:comment "link to the n-ary class that allows the declaration of the data type and unit of measure provided by an interaction pattern."@en .
+            rdfs:comment "Keeps all Property-based interaction patterns of the Thing."@en ;
+            
+            rdfs:range :Property ;
+            
+            rdfs:domain :Thing ;
+            
+            rdfs:subPropertyOf :interactions .
 
 
 
@@ -107,9 +175,18 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 :security rdf:type owl:ObjectProperty ;
           
-          rdfs:label "security"@en ;
+          rdfs:label "security" ;
           
-          rdfs:comment "Links a given Thing to the security information that indicates the access metadata information for securely transmitting information via all the resources of the Thing."@en .
+          rdfs:comment "Set of security configurations that must all be satisfied for access to resources at or below the annotated level."@en ;
+          
+          rdfs:range :SecurityScheme ;
+          
+          rdfs:domain [ rdf:type owl:Class ;
+                        owl:unionOf ( :Form
+                                      :InteractionPattern
+                                      :Thing
+                                    )
+                      ] .
 
 
 
@@ -122,6 +199,20 @@ vs:term_status rdf:type owl:AnnotationProperty .
 #################################################################
 
 
+###  http://www.w3.org/ns/td#anchor
+
+:anchor rdf:type owl:DatatypeProperty ;
+        
+        rdfs:label "anchor" ;
+        
+        rdfs:comment "By default, the context of a link is the URL of the representation it is associated with, and is serialised as a URI. When present, the anchor parameter overrides this with another URI, such as a fragment of this resource, or a third resource (i.e., when the anchor value is an absolute URI)."@en ;
+        
+        rdfs:range xsd:anyURI ;
+        
+        rdfs:domain :Link .
+
+
+
 ###  http://www.w3.org/ns/td#base
 
 :base rdf:type owl:DatatypeProperty ;
@@ -130,7 +221,28 @@ vs:term_status rdf:type owl:AnnotationProperty .
       
       rdfs:comment "Define base URI that is valid for all defined local interaction resources. All other URIs in the TD must then be resolved using the algorithm defined in [[!RFC3986]]. This field is optional."@en ;
       
-      rdfs:range xsd:anyURI .
+      rdfs:range xsd:anyURI ;
+      
+      rdfs:domain :Thing .
+
+
+
+###  http://www.w3.org/ns/td#description
+
+:description rdf:type owl:DatatypeProperty ;
+             
+             rdfs:label "description" ;
+             
+             rdfs:comment "Provides additional (human) readable information."@en ;
+             
+             rdfs:range xsd:string ;
+             
+             rdfs:domain [ rdf:type owl:Class ;
+                           owl:unionOf ( :DataSchema
+                                         :InteractionPattern
+                                         :Thing
+                                       )
+                         ] .
 
 
 
@@ -139,25 +251,31 @@ vs:term_status rdf:type owl:AnnotationProperty .
 :href rdf:type owl:DatatypeProperty ,
                owl:FunctionalProperty ;
       
-      rdfs:label "href"@en ;
+      rdfs:label "href" ;
       
       rdfs:comment "URI of the endpoint where an interaction pattern is provided"@en ;
       
-      rdfs:range xsd:anyURI .
+      rdfs:range xsd:anyURI ;
+      
+      rdfs:domain [ rdf:type owl:Class ;
+                    owl:unionOf ( :Form
+                                  :Link
+                                )
+                  ] .
 
 
 
-###  http://www.w3.org/ns/td#writable
+###  http://www.w3.org/ns/td#label
 
-:writable rdf:type owl:DatatypeProperty ,
-                     owl:FunctionalProperty ;
-            
-            rdfs:label "writable"@en ;
-            
-            rdfs:comment "Boolean value that indicates whether a property is writable (=true) or not (=false)"@en ;
-            
-            
-            rdfs:range xsd:boolean .
+:label rdf:type owl:DatatypeProperty ;
+       
+       rdfs:label "label" ;
+       
+       rdfs:comment "Provides a label (e.g., display a text for UI representation) of the interaction pattern."@en ;
+       
+       rdfs:range xsd:string ;
+       
+       rdfs:domain :InteractionPattern .
 
 
 
@@ -165,11 +283,17 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 :mediaType rdf:type owl:DatatypeProperty ;
            
-           rdfs:label "mediaType"@en ;
+           rdfs:label "mediaType" ;
            
            rdfs:comment "Assign underlying media type of the interaction pattern based on IANA (https://www.iana.org/assignments/media-types/media-types.xhtml)"@en ;
            
-           rdfs:range xsd:string .
+           rdfs:range xsd:string ;
+           
+           rdfs:domain [ rdf:type owl:Class ;
+                         owl:unionOf ( :Form
+                                       :Link
+                                     )
+                       ] .
 
 
 
@@ -177,11 +301,73 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 :name rdf:type owl:DatatypeProperty ;
       
-      rdfs:label "name"@en ;
+      rdfs:label "name" ;
       
-      rdfs:comment "Name of the Thing or interaction pattern (must be a valid keyword to be used in the scripting API)" ;
+      rdfs:comment "Name of the Thing."@en ;
       
-      rdfs:range xsd:string .
+      rdfs:range xsd:string ;
+      
+      rdfs:domain :Thing .
+
+
+
+###  http://www.w3.org/ns/td#observable
+
+:observable rdf:type owl:DatatypeProperty ,
+                     owl:FunctionalProperty ;
+            
+            rdfs:label "observable" ;
+            
+            rdfs:comment "Indicates whether a remote servient can subscribe to (\"observe\") the Property, to receive change notifications or periodic updates (true/false)."@en ;
+            
+            rdfs:range xsd:boolean ;
+            
+            rdfs:domain :Property .
+
+
+
+###  http://www.w3.org/ns/td#rel
+
+:rel rdf:type owl:DatatypeProperty ;
+     
+     rdfs:label "rel" ;
+     
+     rdfs:comment """Indicates the expected result of performing the operation described by the form.
+
+For example, the Property interaction allows get and set operations. The protocol binding may contain a form for the get operation and a different form for the set operation. The value of the \"rel\" attribute of the form indicates which form is which and allows the client to select the correct form for the oeration required"""@en ;
+     
+     rdfs:range xsd:string ;
+     
+     rdfs:domain :Link .
+
+
+
+###  http://www.w3.org/ns/td#support
+
+:support rdf:type owl:DatatypeProperty ;
+         
+         rdfs:label "support" ;
+         
+         rdfs:comment "Provides information about TD maintainer (e.g., author, link or telephone number to get support, etc)."@en ;
+         
+         rdfs:range xsd:string ;
+         
+         rdfs:domain :Thing .
+
+
+
+###  http://www.w3.org/ns/td#writable
+
+:writable rdf:type owl:DatatypeProperty ,
+                   owl:FunctionalProperty ;
+          
+          rdfs:label "writable" ;
+          
+          rdfs:comment "Boolean value that indicates whether a property is writable (=true) or not (=false)"@en ;
+          
+          rdfs:range xsd:boolean ;
+          
+          rdfs:domain :Property .
 
 
 
@@ -198,19 +384,33 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 :Action rdf:type owl:Class ;
         
-        rdfs:label "Action"@en ;
+        rdfs:label "Action" ;
         
         rdfs:subClassOf :InteractionPattern ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :inputData ;
-                          owl:allValuesFrom :DataSchema
+                          owl:onProperty :output ;
+                          owl:allValuesFrom :Specification
                         ] ,
                         [ rdf:type owl:Restriction ;
-                          owl:onProperty :outputData ;
-                          owl:allValuesFrom :DataSchema
+                          owl:onProperty :input ;
+                          owl:allValuesFrom :Specification
                         ] ;
         
-        rdfs:comment "The Action interaction pattern triggers changes or processes on a Thing that take a certain time to complete (i.e., actions cannot be applied instantaneously like property writes). Examples include an LED fade in, moving a robot, brewing a cup of coffee, etc. Usually, ongoing Actions are modelled as Task resources, which are created when an Action invocation is received by the Thing. Please note, this class also inherited all vocabulary from the InteractionPattern class."@en .
+        rdfs:comment "Actions offer functions of the Thing. These functions may manipulate the interal state of a Thing in a way that is not possible through setting Properties. Examples are changing internal state that is not exposed as Property, changing multiple Properties, changing Properties over time or with a process that shall not be disclosed. Actions may also be pure functions, that is, they do not use any internal state at all, e.g., for processing input data and returning the result directly."@en .
+
+
+
+###  http://www.w3.org/ns/td#Data
+
+:Data rdf:type owl:Class ;
+      
+      rdfs:label "Data" ;
+      
+      rdfs:subClassOf :DataSchema ;
+      
+      rdfs:comment "Any part of a Thing that is represented by some piece of data (e.g. a temperarture quantity represented by a JSON number). Data and Specification are related in the sense that the former can embed specification elements, for the sake of conciseness." ;
+      
+      rdfs:seeAlso <http://schema.org/PropertyValue> .
 
 
 
@@ -218,9 +418,9 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 :DataSchema rdf:type owl:Class ;
             
-            rdfs:label "DataSchema"@en ;
+            rdfs:label "DataSchema" ;
             
-            rdfs:comment "This class embeds JSON Schema declaration in a Linked Data form to allow, e.g., the representation of pairs (data type, semantic meaning such as unit of measure) that are expected as input data or output data of a given interaction pattern."@en .
+            rdfs:comment "Any entity providing schema information against which concrete data can be validated. The DataSchema class should be specialized by external ontology classes (e.g. by the JSON Schema ontology class DataSchema)" .
 
 
 
@@ -228,15 +428,43 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 :Event rdf:type owl:Class ;
        
-       rdfs:label "Event"@en ;
+       rdfs:label "Event" ;
        
-       rdfs:subClassOf :InteractionPattern ,
-                       [ rdf:type owl:Restriction ;
-                         owl:onProperty :outputData ;
-                         owl:allValuesFrom :DataSchema
-                       ] ;
+       rdfs:subClassOf :Specification ,
+                       :InteractionPattern ;
        
-       rdfs:comment "The Event interaction pattern enables a mechanism for events to be notified by a Thing on a certain condition (e.g., the fill level of the water tank reached a given threshold). Please note, this class also inherited all vocabulary from the InteractionPattern class."@en .
+       rdfs:comment "The Event Interaction Pattern describes event sources that asynchronously push messages. Here not state, but state transitions (events) are communicated (e.g., \"clicked\"). Events may be triggered by internal state changes that are not exposed as Properties. Events usually follow strong consistency, where messages need to be queued to ensure eventual delivery of all occured events."@en .
+
+
+
+###  http://www.w3.org/ns/td#Form
+
+:Form rdf:type owl:Class ;
+      
+      rdfs:label "Form" ;
+      
+      rdfs:subClassOf [ rdf:type owl:Restriction ;
+                        owl:onProperty :security ;
+                        owl:allValuesFrom :SecurityScheme
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :rel ;
+                        owl:allValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :href ;
+                        owl:allValuesFrom xsd:anyURI
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :href ;
+                        owl:someValuesFrom xsd:anyURI
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :mediaType ;
+                        owl:allValuesFrom xsd:string
+                      ] ;
+      
+      rdfs:comment "Communication metadata indicating where a service can be accessed by a client application. An interaction might have more than one form."@en .
 
 
 
@@ -244,20 +472,30 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 :InteractionPattern rdf:type owl:Class ;
                     
-                    rdfs:label "InteractionPattern"@en ;
+                    rdfs:label "InteractionPattern" ;
                     
                     rdfs:subClassOf [ rdf:type owl:Restriction ;
-                                      owl:onProperty :link ;
-                                      owl:someValuesFrom :Link
+                                      owl:onProperty :description ;
+                                      owl:allValuesFrom xsd:string
                                     ] ,
                                     [ rdf:type owl:Restriction ;
-                                      owl:onProperty :name ;
-                                      owl:someValuesFrom xsd:string
+                                      owl:onProperty :forms ;
+                                      owl:allValuesFrom :Form
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :forms ;
+                                      owl:someValuesFrom :Form
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :label ;
+                                      owl:allValuesFrom xsd:string
+                                    ] ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty :security ;
+                                      owl:allValuesFrom :SecurityScheme
                                     ] ;
                     
-                    rdfs:comment "Three interaction patterns are defined as subclasses: Property, Action and Event. When a concrete Property, Action or Event is defined in a Thing Description, it is called an \"interaction resource\". Interactions between Things can be as simple as one Thing accessing another Thing's data to get or (in the case the data is also writable) change representation of data such as metadata, status or mode. A Thing may also be interested in getting asynchronously notified of future changes in another Thing, or may want to initiate a process served in another Thing that may take some time to complete and monitor the progress. Interactions between Things may involve exchanges of data between them. This data can be either given as input by the client Thing, returned as output by the server Thing or both.  "@en .
-
-#"An interaction in the context of the Web of Things may an exchange of data between a Web client and a Thing. This data can be either given as input by the client, returned as output by the Thing or both. Three interaction patterns have been defined so far: Property, Action and Event."@en .
+                    rdfs:comment "Three interaction patterns are defined as subclasses: Property, Action and Event. When a concrete Property, Action or Event is defined in a Thing Description, it is called an \\\"interaction resource\\\". Interactions between Things can be as simple as one Thing accessing another Thing's data to get or (in the case the data is also writable) change representation of data such as metadata, status or mode. A Thing may also be interested in getting asynchronously notified of future changes in another Thing, or may want to initiate a process served in another Thing that may take some time to complete and monitor the progress. Interactions between Things may involve exchanges of data between them. This data can be either given as input by the client Thing, returned as output by the server Thing or both."@en .
 
 
 
@@ -265,18 +503,30 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 :Link rdf:type owl:Class ;
       
-      rdfs:label "Link"@en ;
+      rdfs:label "Link" ;
       
       rdfs:subClassOf [ rdf:type owl:Restriction ;
-                        owl:onProperty :mediaType ;
-                        owl:allValuesFrom xsd:string
+                        owl:onProperty :anchor ;
+                        owl:allValuesFrom xsd:anyURI
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :href ;
+                        owl:allValuesFrom xsd:anyURI
                       ] ,
                       [ rdf:type owl:Restriction ;
                         owl:onProperty :href ;
                         owl:someValuesFrom xsd:anyURI
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :mediaType ;
+                        owl:allValuesFrom xsd:string
+                      ] ,
+                      [ rdf:type owl:Restriction ;
+                        owl:onProperty :rel ;
+                        owl:allValuesFrom xsd:string
                       ] ;
       
-      rdfs:comment "Communication metadata where a service can be accessed by a client application. An interaction might have more than one link."@en .
+      rdfs:comment "A Web link, as specified by IETF RFC 8288 (https://tools.ietf.org/html/rfc8288)."@en .
 
 
 
@@ -284,35 +534,45 @@ vs:term_status rdf:type owl:AnnotationProperty .
 
 :Property rdf:type owl:Class ;
           
-          rdfs:label "Property"@en ;
+          rdfs:label "Property" ;
           
-          rdfs:subClassOf :InteractionPattern ,
+          rdfs:subClassOf :Data ,
+                          :InteractionPattern ,
                           [ rdf:type owl:Restriction ;
                             owl:onProperty :writable ;
                             owl:allValuesFrom xsd:boolean
                           ] ,
                           [ rdf:type owl:Restriction ;
-                            owl:onProperty :outputData ;
-                            owl:allValuesFrom :DataSchema
-                          ] ,
-                          [ rdf:type owl:Restriction ;
-                            owl:onProperty :outputData ;
-                            owl:someValuesFrom :DataSchema
+                            owl:onProperty :observable ;
+                            owl:allValuesFrom xsd:boolean
                           ] ;
           
-          rdfs:comment "Property provides readable and/or writeable data that can be static (e.g., supported mode, rated output voltage, etc.) or dynamic (e.g., current fill level of water, minimum recorded temperature, etc.).  Please note, this class also inherited all vocabulary from the InteractionPattern class."@en .
+          rdfs:comment "Properties expose internal state of a Thing that can be directly accessed (get) and optionally manipulated (set). In addition, Things can also choose to make Properties observable by pushing the new state (not an event) after a change; this must follow eventual consistency (also see CAP Theorem)."@en .
 
 
 
-###  http://www.w3.org/ns/td#Security
+###  http://www.w3.org/ns/td#SecurityScheme
 
-:Security rdf:type owl:Class ;
-          
-          rdfs:label "Security"@en ;
-          
-          rdfs:comment "The (optional) security field can be used to provide access metadata (self-contained) information of the Thing for securely transmitting information via all its resources. Also see Section Security Consideration. Definition taken from http://w3c.github.io/wot/current-practices/wot-practices#security"@en ;
-          
-          vs:term_status "testing"@en .
+:SecurityScheme rdf:type owl:Class ;
+                
+                rdfs:label "SecurityScheme" ;
+                
+                rdfs:comment """An optional security configuration defines metadata for a security mechanism to allow access to one or more resources.  More than one security configuration may be specified in which case they all need to be satisfied for access to be permitted.  Security configurations can be given at the level of a Thing, an Interaction pattern, or a Form.  In this case security configurations given at lower levels override security configurations given at higher levels.  Additional security schemes can be used beyond those defined here if an appropriate external vocabulary is included in the context.  See also Security and Privacy Considerations.
+The SecurityScheme class should be specialized by external ontology classes."""@en .
+
+
+
+###  http://www.w3.org/ns/td#Specification
+
+:Specification rdf:type owl:Class ;
+               
+               rdfs:label "Specification" ;
+               
+               rdfs:subClassOf :DataSchema ;
+               
+               rdfs:comment "Data specification (e.g. a JSON schema) to use for validation of concrete data exchanged between servients. Data and Specification are related in the sense that the former can embed specification elements, for the sake of conciseness."@en ;
+               
+               rdfs:seeAlso <http://schema.org/PropertyValueSpecification> .
 
 
 
@@ -323,23 +583,43 @@ vs:term_status rdf:type owl:AnnotationProperty .
        rdfs:label "Thing"@en ;
        
        rdfs:subClassOf [ rdf:type owl:Restriction ;
-                         owl:onProperty :base ;
-                         owl:allValuesFrom xsd:anyURI
-                       ] ,
-                       [ rdf:type owl:Restriction ;
                          owl:onProperty :name ;
                          owl:someValuesFrom xsd:string
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :security ;
-                         owl:allValuesFrom :Security
+                         owl:onProperty :description ;
+                         owl:allValuesFrom xsd:string
                        ] ,
                        [ rdf:type owl:Restriction ;
-                         owl:onProperty :interaction ;
-                         owl:allValuesFrom :InteractionPattern
+                         owl:onProperty :security ;
+                         owl:allValuesFrom :SecurityScheme
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :base ;
+                         owl:allValuesFrom xsd:anyURI
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :actions ;
+                         owl:allValuesFrom :Action
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :properties ;
+                         owl:allValuesFrom :Property
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :links ;
+                         owl:allValuesFrom :Link
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :events ;
+                         owl:allValuesFrom :Event
+                       ] ,
+                       [ rdf:type owl:Restriction ;
+                         owl:onProperty :support ;
+                         owl:allValuesFrom xsd:string
                        ] ;
        
-       rdfs:comment """Describes a physical and/or virtual Thing (may represent one or more physical and / or virtual Things) in the Web of Thing context."""@en .
+       rdfs:comment "Describes a physical and/or virtual Thing (may represent one or more physical and / or virtual Things) in the Web of Things context."@en .
 
 
 
