@@ -1,0 +1,7 @@
+URI: wot-security
+
+URI: wot-security.ttl
+Content-Type: text/turtle
+
+URI:wot-security.html
+Content-Type: text/html
