@@ -1,0 +1,7 @@
+URI: json-schema
+
+URI: json-schema.ttl
+Content-Type: text/turtle
+
+URI:json-schema.html
+Content-Type: text/html
