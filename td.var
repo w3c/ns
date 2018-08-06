@@ -3,5 +3,8 @@ URI: td
 URI: td.ttl
 Content-Type: text/turtle
 
+URI: td.jsonld
+Content-Type: application/ld+json
+
 URI:td.html
 Content-Type: text/html
