@@ -3,57 +3,6 @@
         "artist": {
             "@container": "@list",
             "@id": "https://schema.org/artist"
-        },
-        "author": {
-            "@container": "@list",
-            "@id": "https://schema.org/author"
-        },
-        "contributor": {
-            "@container": "@list",
-            "@id": "https://schema.org/contributor"
-        },
-        "colorist": {
-            "@container": "@list",
-            "@id": "https://schema.org/colorist"
-        },
-        "creator": {
-            "@container": "@list",
-            "@id": "https://schema.org/creator"
-        },
-        "editor": {
-            "@container": "@list",
-            "@id": "https://schema.org/editor"
-        },
-        "illustrator": {
-            "@container": "@list",
-            "@id": "https://schema.org/illustrator"
-        },
-        "inker": {
-            "@container": "@list",
-            "@id": "https://schema.org/illustrator"
-        },
-        "letterer": {
-            "@container": "@list",
-            "@id": "https://schema.org/letterer"
-        },
-        "penciler": {
-            "@container": "@list",
-            "@id": "https://schema.org/penciler"
-        },
-        "publisher": {
-            "@container": "@list",
-            "@id": "https://schema.org/publisher"
-        },
-        "readBy": {
-            "@container": "@list",
-            "@id": "https://schema.org/readBy"
-        },
-        "translator": {
-            "@container": "@list",
-            "@id": "https://schema.org/translator"
-        },
-         "readingProgression": {
-            "@id": "https://www.w3.org/ns/wp#readingProgression"
         }
     }
 }
