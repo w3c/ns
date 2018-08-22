@@ -79,8 +79,8 @@
             "@id": "https://www.w3.org/ns/wp#inDirection"
         },
         "encodingFormat" : "http://schema.org/encodingFormat",
-        "type" : "@type",
-        "id" : "@id",
-        "title" : "http://schema.org/name"
+        "title" : {
+            "@id" : "http://schema.org/name"
+        }
     }
 }
