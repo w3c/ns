@@ -54,29 +54,6 @@
         },
          "readingProgression": {
             "@id": "https://www.w3.org/ns/wp#readingProgression"
-        },
-        "readingOrder": {
-            "@container": "@list",
-            "@id": "https://www.w3.org/ns/wp#readingOrder"
-        },
-        "resources": {
-            "@container": "@set",
-            "@id": "https://www.w3.org/ns/wp#resources"
-        },
-        "links": {
-            "@container": "@set",
-            "@id": "https://www.w3.org/ns/wp#links"
-        },
-        "PublicationLink": {
-            "@id": "https://www.w3.org/ns/wp#PublicationLink"
-        },
-        "rel": {
-            "@container": "@set",
-            "@id": "https://www.w3.org/ns/wp#rel"
-        },
-        "inDirection": {
-            "@container": "@set",
-            "@id": "https://www.w3.org/ns/wp#inDirection"
         }
     }
 }
