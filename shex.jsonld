@@ -23,6 +23,7 @@
     "IriStem": "shex:IriStem",
     "IriStemRange": "shex:IriStemRange",
     "LanguageStem": "shex:LanguageStem",
+    "languageTag": "shex:languageTag",
     "LanguageStemRange": "shex:LanguageStemRange",
     "LiteralStem": "shex:LiteralStem",
     "LiteralStemRange": "shex:LiteralStemRange",
