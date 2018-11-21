@@ -9,9 +9,9 @@
 shex: a owl:Ontology;
   dc:title "Shape Expression Vocabulary"@en;
   dc:description """This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex-semantics]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes."""@en;
-  dc:date "2017-06-25"^^xsd:date;
+  dc:date "2017-07-07"^^xsd:date;
   dc:imports ;
-  owl:versionInfo <https://github.com/shexSpec/shexspec.github.io/commit/9afd8152bc475006164c92662d9ea6b31450b66f>;
+  owl:versionInfo <https://github.com/shexSpec/shexspec.github.io/commit/e05f8e97471f5271f50612bed253102f770364b4>;
   rdfs:seeAlso <http://shex.io/shex-semantics>;
   .
 
@@ -35,6 +35,10 @@ shex:IriStemRange a rdfs:Class;
   rdfs:label "IRI StemRange"@en;
   rdfs:comment """An IRI prefix (or wildcard) along with a set of excluded values, used for node matching."""@en;
   rdfs:subClassOf shex:StemRange;
+  rdfs:isDefinedBy shex: .
+shex:Language a rdfs:Class;
+  rdfs:label "Language"@en;
+  rdfs:comment """An Language tag used for matching Literal Languages."""@en;
   rdfs:isDefinedBy shex: .
 shex:LanguageStem a rdfs:Class;
   rdfs:label "Language Stem"@en;
@@ -196,6 +200,12 @@ shex:inverse a rdf:Property;
   rdfs:comment """Constrains the subject of a triple, rather than the object."""@en;
   rdfs:domain shex:TripleConstraint;
   rdfs:range xsd:boolean;
+  rdfs:isDefinedBy shex: .
+shex:languageTag a rdf:Property;
+  rdfs:label "language tag"@en;
+  rdfs:comment """The value used to match the language tag of a language-tagged string."""@en;
+  rdfs:domain shex:Language;
+  rdfs:range xsd:string;
   rdfs:isDefinedBy shex: .
 shex:length a rdf:Property;
   rdfs:label "length"@en;
@@ -359,7 +369,7 @@ shex:values a rdf:Property;
   rdfs:label "values"@en;
   rdfs:comment """A value restriction on a NodeConstraint."""@en;
   rdfs:domain shex:NodeConstraint;
-  rdfs:range [ owl:unionOf (rdfs:Resource shex:Stem shex:StemRange)];
+  rdfs:range [ owl:unionOf (rdfs:Resource shex:Language shex:Stem shex:StemRange)];
   rdfs:isDefinedBy shex: .
 shex:xsFacet a rdf:Property;
   rdfs:label ""@en;

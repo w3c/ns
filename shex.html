@@ -22,7 +22,7 @@ var respecConfig = {
     },
     specStatus:       "base",
     shortName:        "shexns",
-    publishDate:      "2017-06-25",
+    publishDate:      "2017-07-07",
     thisVersion:      "https://www.w3.org/ns/shex",
     edDraftURI:       "https://shexspec.github.io/ns/shex.html",
     // lcEnd: "3000-01-01",
@@ -83,9 +83,9 @@ var respecConfig = {
         <!--These versions may also be retrieved from <code>FIXME</code> using an appropiate HTTP <em>Accept</em> header.-->
       </p>
       <dl>
-        <dt>Published:</dt><dd><time property="dc:date">2017-06-25</time></dd>
+        <dt>Published:</dt><dd><time property="dc:date">2017-07-07</time></dd>
         <dt>Version Info:</dt>
-        <dd><a href="https://github.com/shexSpec/shexspec.github.io/commit/9afd8152bc475006164c92662d9ea6b31450b66f" property="owl:versionInfo">https://github.com/shexSpec/shexspec.github.io/commit/9afd8152bc475006164c92662d9ea6b31450b66f</a></dd>
+        <dd><a href="https://github.com/shexSpec/shexspec.github.io/commit/e05f8e97471f5271f50612bed253102f770364b4" property="owl:versionInfo">https://github.com/shexSpec/shexspec.github.io/commit/e05f8e97471f5271f50612bed253102f770364b4</a></dd>
         <dt>See Also:</dt>
           <dd><a href="http://shex.io/shex-semantics" property="rdfs:seeAlso">http://shex.io/shex-semantics</a></dd>
       </dl>
@@ -160,6 +160,15 @@ var respecConfig = {
                   <dt>rdfs:subClassOf</dt>
                       <dd property="rdfs:subClassOf" resource="shex:StemRange">shex:StemRange</dd>
               </dl>
+          </td>
+        </tr>
+        <tr id="Language">
+          <td class="bold">Language</td>
+          <td resource="shex:Language" typeof="rdfs:Class">
+            <em property="rdfs:label">Language</em>
+            <span class="permalink"><a href="#Language" aria-label="Permalink for Language" title="Permalink for Language"><span>§</span></a></span>
+            <p property="rdfs:comment">An Language tag used for matching Literal Languages.</p>
+            <span property="rdfs:isDefinedBy" resource="shex:"></span>
           </td>
         </tr>
         <tr id="LanguageStem">
@@ -573,6 +582,21 @@ var respecConfig = {
                       <dd property="rdfs:range" resource="xsd:boolean">xsd:boolean</dd>
                   <dt>rdfs:domain</dt>
                       <dd property="rdfs:domain" resource="shex:TripleConstraint">shex:TripleConstraint</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="languageTag">
+          <td class="bold">languageTag</td>
+          <td resource="shex:languageTag" typeof="rdf:Property">
+            <em property="rdfs:label">language tag</em>
+            <span class="permalink"><a href="#languageTag" aria-label="Permalink for language tag" title="Permalink for language tag"><span>§</span></a></span>
+            <p property="rdfs:comment">The value used to match the language tag of a language-tagged string.</p>
+            <span property="rdfs:isDefinedBy" resource="shex:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:Language">shex:Language</dd>
               </dl>
           </td>
         </tr>
@@ -1030,6 +1054,7 @@ var respecConfig = {
                       <dd property="rdfs:range" resource="_:">
                         Union of
                         <span property="owl:unionOf" inlist=true resource="rdfs:Resource">rdfs:Resource</span>
+                        <span property="owl:unionOf" inlist=true resource="shex:Language">shex:Language</span>
                         <span property="owl:unionOf" inlist=true resource="shex:Stem">shex:Stem</span>
                         <span property="owl:unionOf" inlist=true resource="shex:StemRange">shex:StemRange</span>
                       </dd>
@@ -1119,6 +1144,10 @@ var respecConfig = {
         <dt>IriStemRange</dt>
         <dd>
             shex:IriStemRange
+        </dd>
+        <dt>Language</dt>
+        <dd>
+            shex:Language
         </dd>
         <dt>LanguageStem</dt>
         <dd>
@@ -1259,6 +1288,10 @@ var respecConfig = {
         <dt>language</dt>
         <dd>
             @language
+        </dd>
+        <dt>languageTag</dt>
+        <dd>
+            shex:languageTag
         </dd>
         <dt>length</dt>
         <dd>
