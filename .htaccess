@@ -57,6 +57,8 @@ RewriteBase /ns/
 
 # added sandro@w3.org 2013-11-29 per
 # https://lists.w3.org/Archives/Team/vocab-services/2013Nov/0002.html
+# JK: the following header unset rules are very specific to 
+# this proxy endpoint; don't duplicate them elsewhere.
 RewriteRule ^hydra/(.*)$ http://www.markus-lanthaler.com/hydra/$1 [P,L]
 <If "%{REQUEST_URI} =~ m#^/ns/hydra/#">
     Header unset Set-Cookie
@@ -112,3 +114,14 @@ RewriteRule ^td$ td/td.ttl [R=303]
 RewriteCond %{HTTP_ACCEPT} application/ld+json
 RewriteRule ^td$ td/w3c-wot-td-context.jsonld [R=303]
 
+#
+# /dx/prof
+# Requested by DSR 11/Feb/2019
+# See: https://www.w3.org/mid/2CF65B55-B28E-4153-A92B-D9972DCB9CA6@w3.org
+#
+# If requested with text/turtle
+RewriteCond %{HTTP_ACCEPT} text/turtle
+RewriteRule ^dx/prof/$ https://raw.githubusercontent.com/w3c/dxwg/gh-pages/profilesont/profilesont.ttl [P]
+
+# otherwise return rdf by default
+RewriteRule ^dx/prof/$ https://raw.githubusercontent.com/w3c/dxwg/gh-pages/profilesont/profilesont.rdf [P]
