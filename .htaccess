@@ -104,6 +104,9 @@ RewriteRule ^ldt/topic-hierarchy/templates$ https://raw.githubusercontent.com/At
 # Hopefully it's now safe to include this one
 RewriteRule ^ldt$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ldt.ttl [P]
 
+# added by fd@w3.org for N-triples content negotiation
+AddType application/n-triples .nt
+
 # added by dsr@w3.org for thing description content negotiation
 AddType text/turtle .ttl
 AddType application/ld+json .jsonld
