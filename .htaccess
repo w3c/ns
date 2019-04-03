@@ -127,4 +127,4 @@ RewriteCond %{HTTP_ACCEPT} text/turtle
 RewriteRule ^dx/prof/$ https://raw.githubusercontent.com/w3c/dxwg/gh-pages/profilesont/profilesont.ttl [P]
 
 # otherwise return html by default
-RewriteRule ^dx/prof/$ https://github.com/w3c/dxwg/blob/gh-pages/profilesont/ns.html [P]
+RewriteRule ^dx/prof/$ https://w3c.github.io/dxwg/profilesont/ns.html [P]
