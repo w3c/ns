@@ -10,5 +10,3 @@ RewriteRule ^$ https://www.w3.org/ns/prof/prof.ttl [P]
 RewriteCond %{HTTP_ACCEPT} application/rdf+xml
 RewriteRule ^$ https://www.w3.org/ns/prof/prof.ttl [P]
 
-# otherwise return html by default
-RewriteRule ^dx/prof/$ https://www.w3.org/ns/prof/prof.html [P]
