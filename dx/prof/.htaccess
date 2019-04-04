@@ -4,9 +4,9 @@
 #
 # If requested with text/turtle
 RewriteCond %{HTTP_ACCEPT} text/turtle
-RewriteRule ^$ https://www.w3.org/ns/dx/prof/prof.ttl [P]
+RewriteRule ^$ https://www.w3.org/ns/dx/prof/profilesont.ttl [P]
 
 # If requested with application/rdf+xml
 RewriteCond %{HTTP_ACCEPT} application/rdf+xml
-RewriteRule ^$ https://www.w3.org/ns/dx/prof/prof.ttl [P]
+RewriteRule ^$ https://www.w3.org/ns/dx/prof/profilesont.ttl [P]
 
