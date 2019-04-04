@@ -8,5 +8,5 @@ RewriteRule ^$ https://www.w3.org/ns/dx/prof/profilesont.ttl [P]
 
 # If requested with application/rdf+xml
 RewriteCond %{HTTP_ACCEPT} application/rdf+xml
-RewriteRule ^$ https://www.w3.org/ns/dx/prof/profilesont.ttl [P]
+RewriteRule ^$ https://www.w3.org/ns/dx/prof/profilesont.rdf [P]
 
