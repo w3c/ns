@@ -10,6 +10,6 @@ RewriteCond "%{HTTP_ACCEPT}" "text/turtle"
 RewriteRule ^$ /ns/dx/prof/profilesont.ttl [P,L]
 
 # If requested with application/rdf+xml
-RewriteCond "%{HTTP_ACCEPT}" "application/rdf+xml"
+RewriteCond "%{HTTP_ACCEPT}" "application/rdf\+xml"
 RewriteRule ^$ /ns/dx/prof/profilesont.rdf [P,L]
 
