@@ -123,7 +123,7 @@ RewriteRule ^wp.jsonld$ https://w3c.github.io/wp-vocab/wp.jsonld [P]
 RewriteRule ^wp.json$ https://w3c.github.io/wp-vocab/wp.jsonld [P]
 RewriteRule ^wp.rdf$ https://w3c.github.io/wp-vocab/wp.rdf [P]
 RewriteRule ^wp.ttl$ https://w3c.github.io/wp-vocab/wp.ttl [P]
-RewriteRule ^wp.html$ https://w3c.github.io/wp-vocab/index.html [P]
+RewriteRule ^wp.html$ https://w3c.github.io/wp-vocab/wp.html [P]
 RewriteRule ^wp-context.jsonld$ https://w3c.github.io/wp-vocab/wp-context.jsonld [P]
 RewriteRule ^wp-context.json$ https://w3c.github.io/wp-vocab/wp-context.jsonld [P]
 
