@@ -116,3 +116,14 @@ RewriteRule ^td$ td/td.ttl [R=303]
 
 RewriteCond %{HTTP_ACCEPT} application/ld+json
 RewriteRule ^td$ td/w3c-wot-td-context.jsonld [R=303]
+
+# added by ivan@w3.org to serve the JSON-LD related files directly from their github repo
+# 2019-04-17
+RewriteRule ^wp.jsonld$ https://w3c.github.io/wp-vocab/wp.jsonld [P]
+RewriteRule ^wp.json$ https://w3c.github.io/wp-vocab/wp.jsonld [P]
+RewriteRule ^wp.rdf$ https://w3c.github.io/wp-vocab/wp.rdf [P]
+RewriteRule ^wp.ttl$ https://w3c.github.io/wp-vocab/wp.ttl [P]
+RewriteRule ^wp.html$ https://w3c.github.io/wp-vocab/index.html [P]
+RewriteRule ^wp-context.jsonld$ https://w3c.github.io/wp-vocab/wp-context.jsonld [P]
+RewriteRule ^wp-context.json$ https://w3c.github.io/wp-vocab/wp-context.jsonld [P]
+
