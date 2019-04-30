@@ -1,0 +1,63 @@
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix dct: <http://purl.org/dc/terms/> .
+    @prefix fp: <http://www.w3.org/ns/footprints#> .
+    @prefix r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    
+    <>     dct:title "Ontology for Footprints";
+         :comment """Just as a shape tells a system constraints on what graph may be made,
+a footprint gives information, in a linked data world, as to where
+information about a new thing will be put.
+
+ A footprint gives information to allow the construction of the URI
+for a new thing, and specifies whether link from the old thing (source)
+to the new thing (destination) is forward or bidirectional.
+
+Footprints may also give consistency information
+about making separate links of new things also in specific places,
+such as master lists and indexes, etc.""" .
+    
+    fp:Footprint     a :Class;
+         :comment "A constraint on where information is written";
+         :label "Footprint"@en .
+    
+    fp:arc     a r:Property;
+         :comment "An arc or property constrain in a shape to which this footprint applies";
+         :label "arc" .
+    
+    fp:base     a r:Property;
+         :comment "An object (such as a solid folder) whose URI is to be used  as base for the URI construction. ";
+         :label "URI base" .
+    
+    fp:binding     a r:Property;
+         :comment """Template substitution is done by applying this binding.
+        One binding for each variable in the template""";
+         :label "binding" .
+    
+    fp:objectOfArc     a r:Property;
+         :comment """A function which at run-time finds the object of an this arc
+        from the destination node""";
+         :label "object of property" .
+    
+    fp:objectOfProperty     a r:Property;
+         :comment """A function which at run-time finds the object of an arc
+        with this property from the destination node""";
+         :label "object of property" .
+    
+    fp:sanitizeOf     a r:Property;
+         :comment "The subject is a function which evaluates the object function and then sanitizes the output.";
+         :label "sanitizeOf" .
+    
+    fp:uriTemplate     a r:Property;
+         :comment """A template for generating the URI of the destination of the arc.
+    Processed according to rfc6570, then parsed relative to the
+    thing given in fp:base, or by default the source of the new link.""";
+         :label "URI template" .
+    
+    fp:value     a r:Property;
+         :comment "The expression to be evaluated and substituted in place of the variable";
+         :label "value" .
+    
+    fp:variable     a r:Property;
+         :comment "The string name of the variable to be substituted";
+         :label "variable" .
+    

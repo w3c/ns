@@ -1,0 +1,78 @@
+
+
+
+<r:RDF xmlns="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:dct="http://purl.org/dc/terms/"
+    xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
+
+    <r:Description r:about="">
+        <dct:title>Ontology for Footprints</dct:title>
+        <comment>Just as a shape tells a system constraints on what graph may be made,
+a footprint gives information, in a linked data world, as to where
+information about a new thing will be put.
+
+ A footprint gives information to allow the construction of the URI
+for a new thing, and specifies whether link from the old thing (source)
+to the new thing (destination) is forward or bidirectional.
+
+Footprints may also give consistency information
+about making separate links of new things also in specific places,
+such as master lists and indexes, etc.</comment>
+    </r:Description>
+
+    <Class r:about="http://www.w3.org/ns/footprints#Footprint">
+        <comment>A constraint on where information is written</comment>
+        <label xml:lang="en">Footprint</label>
+    </Class>
+
+    <r:Property r:about="http://www.w3.org/ns/footprints#arc">
+        <comment>An arc or property constrain in a shape to which this footprint applies</comment>
+        <label>arc</label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/footprints#base">
+        <comment>An object (such as a solid folder) whose URI is to be used  as base for the URI construction. </comment>
+        <label>URI base</label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/footprints#binding">
+        <comment>Template substitution is done by applying this binding.
+        One binding for each variable in the template</comment>
+        <label>binding</label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/footprints#objectOfArc">
+        <comment>A function which at run-time finds the object of an this arc
+        from the destination node</comment>
+        <label>object of property</label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/footprints#objectOfProperty">
+        <comment>A function which at run-time finds the object of an arc
+        with this property from the destination node</comment>
+        <label>object of property</label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/footprints#sanitizeOf">
+        <comment>The subject is a function which evaluates the object function and then sanitizes the output.</comment>
+        <label>sanitizeOf</label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/footprints#uriTemplate">
+        <comment>A template for generating the URI of the destination of the arc.
+    Processed according to rfc6570, then parsed relative to the
+    thing given in fp:base, or by default the source of the new link.</comment>
+        <label>URI template</label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/footprints#value">
+        <comment>The expression to be evaluated and substituted in place of the variable</comment>
+        <label>value</label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/footprints#variable">
+        <comment>The string name of the variable to be substituted</comment>
+        <label>variable</label>
+    </r:Property>
+</r:RDF>

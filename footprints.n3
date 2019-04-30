@@ -1,0 +1,74 @@
+#  Ontology for Footprints
+#
+@prefix contact: <http://www.w3.org/2000/10/swap/pim/contact#>.
+@prefix dct:  <http://purl.org/dc/terms/>.
+@prefix doc: <http://www.w3.org/2000/10/swap/pim/doc#>.
+@prefix foaf: <http://xmlns.com/foaf/0.1/>.
+@prefix owl: <http://www.w3.org/2002/07/owl#>.
+@prefix r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix s: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix tt: <http://dig.csail.mit.edu/2010/issues/track#>.
+@prefix ui: <http://www.w3.org/ns/ui#>.
+@prefix fp: <http://www.w3.org/ns/footprints#>.
+@prefix : <http://www.w3.org/ns/footprints#>.
+@prefix wf: <http://www.w3.org/2005/01/wf/flow#>.
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#>.
+
+@prefix : <http://www.w3.org/ns/footprints#>.
+@keywords is, of, a.
+
+<> dct:title "Ontology for Footprints" ;
+
+    s:comment """Just as a shape tells a system constraints on what graph may be made,
+a footprint gives information, in a linked data world, as to where
+information about a new thing will be put.
+
+ A footprint gives information to allow the construction of the URI
+for a new thing, and specifies whether link from the old thing (source)
+to the new thing (destination) is forward or bidirectional.
+
+Footprints may also give consistency information
+about making separate links of new things also in specific places,
+such as master lists and indexes, etc.""" .
+
+Footprint a s:Class;
+    s:label "Footprint"@en;
+    s:comment "A constraint on where information is written".
+
+arc a r:Property; s:label "arc";
+    s:comment "An arc or property constrain in a shape to which this footprint applies".
+
+uriTemplate  a r:Property; s:label "URI template";
+    s:comment """A template for generating the URI of the destination of the arc.
+    Processed according to rfc6570, then parsed relative to the
+    thing given in fp:base, or by default the source of the new link.""" .
+
+base  a r:Property; s:label "URI base";
+        s:comment """An object (such as a solid folder) whose URI is to be used  as base for the URI construction. """.
+
+binding a r:Property; s:label "binding";
+        s:comment """Template substitution is done by applying this binding.
+        One binding for each variable in the template""".
+
+variable a r:Property; s:label "variable";
+        s:comment "The string name of the variable to be substituted".
+
+value a r:Property; s:label "value";
+        s:comment "The expression to be evaluated and substituted in place of the variable".
+
+ #################  Even more experimental
+
+objectOfProperty a  r:Property; s:label "object of property";
+        s:comment """A function which at run-time finds the object of an arc
+        with this property from the destination node""" .
+
+objectOfArc a  r:Property; s:label "object of property";
+        s:comment """A function which at run-time finds the object of an this arc
+        from the destination node""" .
+
+sanitizeOf  a  r:Property; s:label "sanitizeOf";
+        s:comment """The subject is a function which evaluates the object function and then sanitizes the output.""" .
+
+
+
+# Ends
