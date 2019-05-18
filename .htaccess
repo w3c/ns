@@ -85,7 +85,7 @@ Header set Access-Control-Allow-Origin "*"
 </Files>
 
 <Files ~ "ui*">
-Header always set Access-Control-Allow-Origin "*"
+# Header always set Access-Control-Allow-Origin "*"
 Header always set access-control-allow-credentials "true"
 Header always set access-control-allow-methods "GET, HEAD, OPTIONS"
 Header always set access-control-allow-headers "Link, Location, Accept-Post, Content-Type, Accept, Vary"
