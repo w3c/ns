@@ -84,6 +84,15 @@ ForceType 'application/ld+json'
 Header set Access-Control-Allow-Origin "*"
 </Files>
 
+<Files ~ "ui*">
+Header always set Access-Control-Allow-Origin "*"
+Header always set access-control-allow-credentials "true"
+Header always set access-control-allow-methods "GET, HEAD, OPTIONS"
+Header always set access-control-allow-headers "Link, Location, Accept-Post, Content-Type, Accept, Vary"
+Header always set access-control-expose-headers "User, Location, Link, Vary, Last-Modified, ETag, Allow, Content-Length, Accept"
+</Files>
+
+
 #### Big Data Europe #####
 # added by phila (phil@philarcher.org) 2017-06-28 for BigDataEurope Project
 # Vocabulary Contact is Aad Versteden of TenForce and the mu.semte.ch endeavour <aad.versteden@gmail.com>
@@ -126,4 +135,3 @@ RewriteRule ^wp.ttl$ https://w3c.github.io/wp-vocab/wp.ttl [P]
 RewriteRule ^wp.html$ https://w3c.github.io/wp-vocab/wp.html [P]
 RewriteRule ^wp-context.jsonld$ https://w3c.github.io/wp-vocab/wp-context.jsonld [P]
 RewriteRule ^wp-context.json$ https://w3c.github.io/wp-vocab/wp-context.jsonld [P]
-
