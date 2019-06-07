@@ -1,0 +1,7 @@
+URI: dpv
+
+URI: dpv.html
+Content-Type: text/html
+
+URI: dpv.ttl
+Content-Type: text/turtle; qs=0.5

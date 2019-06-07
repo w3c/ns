@@ -1,0 +1,7 @@
+URI: dpv-gdpr
+
+URI: dpv-gdpr.html
+Content-Type: text/html
+
+URI: dpv-gdpr.ttl
+Content-Type: text/turtle; qs=0.5
