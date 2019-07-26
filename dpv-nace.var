@@ -1,0 +1,8 @@
+URI: dpv-nace
+
+# The documentation is in the dpv.html file; there is no dpv-nace.html
+URI: dpv.html
+Content-Type: text/html
+
+URI: dpv-nace.ttl
+Content-Type: text/turtle; qs=0.5
