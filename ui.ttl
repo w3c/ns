@@ -402,6 +402,7 @@
          s:subClassOf :ValueField;
          owl:disjointUnionOf  (
         :BooleanField
+        :TriStateField
         :IntegerField
         :DecimalField
         :FloatField ) .
@@ -428,6 +429,8 @@
          owl:disjointUnionOf  (
         :SingleLineTextField
         :MultiLineTextField ) .
+    
+    :TriStateField     s:subClassOf :NumericField .
     
     :ValueField     a s:Class;
          s:subClassOf :Form,

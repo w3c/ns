@@ -529,12 +529,15 @@
         <owl:disjointUnionOf r:parseType="Resource">
             <r:first r:resource="http://www.w3.org/ns/ui#BooleanField"/>
             <r:rest r:parseType="Resource">
-                <r:first r:resource="http://www.w3.org/ns/ui#IntegerField"/>
+                <r:first r:resource="http://www.w3.org/ns/ui#TriStateField"/>
                 <r:rest r:parseType="Resource">
-                    <r:first r:resource="http://www.w3.org/ns/ui#DecimalField"/>
+                    <r:first r:resource="http://www.w3.org/ns/ui#IntegerField"/>
                     <r:rest r:parseType="Resource">
-                        <r:first r:resource="http://www.w3.org/ns/ui#FloatField"/>
-                        <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        <r:first r:resource="http://www.w3.org/ns/ui#DecimalField"/>
+                        <r:rest r:parseType="Resource">
+                            <r:first r:resource="http://www.w3.org/ns/ui#FloatField"/>
+                            <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                        </r:rest>
                     </r:rest>
                 </r:rest>
             </r:rest>
@@ -589,6 +592,10 @@
             </r:rest>
         </owl:disjointUnionOf>
     </s:Class>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#TriStateField">
+        <s:subClassOf r:resource="http://www.w3.org/ns/ui#NumericField"/>
+    </r:Description>
 
     <s:Class r:about="http://www.w3.org/ns/ui#ValueField">
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
