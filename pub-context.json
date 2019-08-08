@@ -1,0 +1,122 @@
+{
+    "@context": {
+        "accessMode" : {
+            "@id" : "https://schema.org/accessMode",
+            "@language": null
+        },
+        "accessModeSufficient": {
+            "@id" : "https://schema.org/accessModeSufficient",
+            "@language": null
+        },
+        "accessibilityFeature": {
+            "@id" : "https://schema.org/accessibilityFeature",
+            "@language": null
+        },
+        "accessibilityHazard": {
+            "@id" : "https://schema.org/accessibilityHazard",
+            "@language": null
+        },
+        "artist": {
+            "@container": "@list",
+            "@id": "https://schema.org/artist"
+        },
+        "author": {
+            "@container": "@list",
+            "@id": "https://schema.org/author"
+        },
+        "contributor": {
+            "@container": "@list",
+            "@id": "https://schema.org/contributor"
+        },
+        "colorist": {
+            "@container": "@list",
+            "@id": "https://schema.org/colorist"
+        },
+        "creator": {
+            "@container": "@list",
+            "@id": "https://schema.org/creator"
+        },
+        "editor": {
+            "@container": "@list",
+            "@id": "https://schema.org/editor"
+        },
+        "illustrator": {
+            "@container": "@list",
+            "@id": "https://schema.org/illustrator"
+        },
+        "inker": {
+            "@container": "@list",
+            "@id": "https://schema.org/inker"
+        },
+        "letterer": {
+            "@container": "@list",
+            "@id": "https://schema.org/letterer"
+        },
+        "penciler": {
+            "@container": "@list",
+            "@id": "https://schema.org/penciler"
+        },
+        "publisher": {
+            "@container": "@list",
+            "@id": "https://schema.org/publisher"
+        },
+        "readBy": {
+            "@container": "@list",
+            "@id": "https://schema.org/readBy"
+        },
+        "translator": {
+            "@container": "@list",
+            "@id": "https://schema.org/translator"
+        },
+        "duration" : {
+            "@language" : null,
+            "@id" : "http://schema.org/duration"
+        },
+        "encodingFormat" : {
+            "@language" : null,
+            "@id" : "http://schema.org/encodingFormat"
+        },
+        "readingProgression": {
+            "@id": "https://www.w3.org/ns/pub#readingProgression"
+        },
+        "readingOrder": {
+            "@container": "@list",
+            "@type" : "@id",
+            "@id": "https://www.w3.org/ns/pub#readingOrder"
+        },
+        "resources": {
+            "@container": "@set",
+            "@type" : "@id",
+            "@id": "https://www.w3.org/ns/pub#resources"
+        },
+        "links": {
+            "@container": "@set",
+            "@type" : "@id",
+            "@id": "https://www.w3.org/ns/pub#links"
+        },
+        "LinkedResource": {
+            "@id": "https://www.w3.org/ns/pub#LinkedResource"
+        },
+        "rel": {
+            "@language" : null,
+            "@container": "@set",
+            "@id": "https://www.w3.org/ns/pub#rel"
+        },
+        "inDirection": {
+            "@language" : null,
+            "@id": "https://www.w3.org/ns/pub#inDirection"
+        },
+        "length": {
+            "@type": "xsd:double",
+            "@id": "https://www.w3.org/ns/pub#length"
+        },
+        "integrity": {
+            "@language" : null,
+            "@id": "https://www.w3.org/ns/pub#integrity"
+        },
+        "id"       : "@id",
+        "type"     : "@type",
+        "value"    : "@value",
+        "language" : "@language"
+    }
+}
