@@ -1,0 +1,278 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.w3.org/ns/lemon/lexicog#"
+     xml:base="http://www.w3.org/ns/lemon/lexicog"
+     xmlns:cc="http://creativecommons.org/ns#"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:lime="http://www.w3.org/ns/lemon/lime#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:void="http://rdfs.org/ns/void#"
+     xmlns:lexicog="http://www.w3.org/ns/lemon/lexicog#"
+     xmlns:ontolex="http://www.w3.org/ns/lemon/ontolex#"
+     xmlns:vartrans="http://www.w3.org/ns/lemon/vartrans#">
+    <owl:Ontology rdf:about="http://www.w3.org/ns/lemon/lexicog">
+        <owl:imports rdf:resource="http://www.w3.org/ns/lemon/ontolex"/>
+        <cc:license rdf:resource="https://creativecommons.org/publicdomain/zero/1.0/"/>
+        <dc:contributor rdf:resource="http://ekvv.uni-bielefeld.de/pers_publ/publ/PersonDetail.jsp?personId=15020699"/>
+        <dc:contributor rdf:resource="http://john.mccr.ae/"/>
+        <dc:contributor rdf:resource="http://www.ilc.cnr.it/en/content/anas-fahad-khan"/>
+        <dc:contributor rdf:resource="https://ivdnt.org/over-ons/contact/medewerkers"/>
+        <dc:contributor rdf:resource="https://sites.google.com/site/francescafrontini/"/>
+        <dc:contributor rdf:resource="https://www.lexicala.com/k-dictionaries#team"/>
+        <dc:contributor rdf:resource="https://www.universiteitleiden.nl/en/staffmembers/sander-stolk"/>
+        <dc:creator rdf:resource="http://mayor2.dia.fi.upm.es/oeg-upm/index.php/en/phdstudents/360-jbosque/index.html"/>
+        <dc:creator rdf:resource="http://purl.org/net/jorge-gracia"/>
+        <dc:description xml:lang="en">A model for the representation of lexicographic data that extends the Lexicon Model for Ontologies (lemon).</dc:description>
+        <dc:description xml:lang="nl">Een model voor de representatie van lexicografische data dat de Lexicon Model for Ontologies (lemon) uitbreidt.</dc:description>
+        <dc:description xml:lang="es">Un modelo para la representacion de datos lexicográficos que extiende el Lexicon Model for Ontologies (lemon).</dc:description>
+        <dc:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2019-03-08</dc:modified>
+        <dc:publisher rdf:resource="http://www.w3.org/community/ontolex"/>
+        <dc:rights>CC-Zero</dc:rights>
+        <dc:title xml:lang="nl">De lemon lexicografie module - Lexicog</dc:title>
+        <dc:title xml:lang="es">El módulo de lexicografía de lemon - Lexicog</dc:title>
+        <dc:title xml:lang="en">The lemon lexicography module - Lexicog</dc:title>
+        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.w3.org/2000/01/rdf-schema#member -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2000/01/rdf-schema#member"/>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#topObjectProperty -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#topObjectProperty">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/lemon/lexicog#LexicographicComponent"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/lexicog#describes -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/lemon/lexicog#describes">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/lemon/lexicog#LexicographicComponent"/>
+        <rdfs:comment xml:lang="nl">De relatie &quot;describes&quot; relateert een lexicografisch component aan een element dat de daadwerkelijke informatie representeert dat is vastgelegd in het desbetreffende component in het lexicografisch werk. In de meeste gevallen zal deze informatie lexicaal van aard zijn, en zal de relatie dus verwijzen naar een instantie van ontolex:LexicalEntry of ontolex:LexicalSense.</rdfs:comment>
+        <rdfs:comment xml:lang="es">La propiedad &quot;describes&quot; relaciona un componente lexicográfico con un elemento que representa la información proporcionada por dicho componente del recurso lexicográfico. En la mayoría de los casos, dicha información será léxica y por tanto el objeto de dicha propiedad será una instancia de ontolex:LexicalEntry u ontolex:LexicalSense.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The &quot;describes&quot; property relates a lexicographic component to an element that represents the actual information provided by that component in the lexicographic resource. In most cases, this information will be lexical, and hence the object of the property will be an instance of ontolex:LexicalEntry or ontolex:LexicalSense.</rdfs:comment>
+        <rdfs:label xml:lang="nl">beschrijft</rdfs:label>
+        <rdfs:label xml:lang="es">describe</rdfs:label>
+        <rdfs:label xml:lang="en">describes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/lexicog#entry -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/lemon/lexicog#entry">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/lemon/lexicog#LexicographicResource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/lemon/lexicog#Entry"/>
+        <rdfs:comment xml:lang="nl">De relatie &quot;entry&quot; relateert een lexicografisch werk aan een item (of &apos;record&apos; in de literatuur).</rdfs:comment>
+        <rdfs:comment xml:lang="es">La propiedad &quot;entry&quot; relaciona un recurso lexicográfico con una entrada (o &apos;registro&apos; en la literatura).</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property &quot;entry&quot; relates a lexicographic resource to an entry (or &apos;record&apos; in the literature).</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/lemon/lexicog"/>
+        <rdfs:label xml:lang="es">entrada</rdfs:label>
+        <rdfs:label xml:lang="en">entry</rdfs:label>
+        <rdfs:label xml:lang="nl">item</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/lexicog#restrictedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/lemon/lexicog#restrictedTo">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/lemon/lexicog#FormRestriction"/>
+        <rdfs:comment xml:lang="nl">De relatie &quot;restrictedTo&quot; relateert een LexicalSense aan een FormRestriction wanneer een lexicografisch werk informatie verschaft over de specifieke morfologische kenmerken van de ontolex:Form in de desbetreffende zin.</rdfs:comment>
+        <rdfs:comment xml:lang="es">La propiedad &quot;restrictedTo&quot; relaciona un LexicalSense con una FormRestriction cuando un recurso lexicográfico proporciona información acerca de los aspectos morfológicos de la ontolex:Form para ese sentido.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property &quot;restrictedTo&quot; relates a LexicalSense to a FormRestriction when a lexicographic resource provides information about the specific morphological features of the ontolex:Form in that sense.</rdfs:comment>
+        <rdfs:label xml:lang="nl">beperkt tot</rdfs:label>
+        <rdfs:label xml:lang="en">restricted to</rdfs:label>
+        <rdfs:label xml:lang="es">restringido a</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/lexicog#subComponent -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/lemon/lexicog#subComponent">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2000/01/rdf-schema#member"/>
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/lemon/lexicog#LexicographicComponent"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/lemon/lexicog#LexicographicComponent"/>
+        <rdfs:comment xml:lang="nl">De relatie &quot;subComponent&quot; relateert een lexicografisch component aan een ander lexicografisch component welke hierarchisch ondergeschikt is.</rdfs:comment>
+        <rdfs:comment xml:lang="es">La propiedad &quot;subComponent&quot; relaciona un componente lexicográfico con otro que se considera subordinado en la jerarquía.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property &quot;subComponent&quot; relates a lexicographic component to another lexicographic component which is considered subordinate hierarchically.</rdfs:comment>
+        <rdfs:label xml:lang="en">subcomponent</rdfs:label>
+        <rdfs:label xml:lang="nl">subcomponent</rdfs:label>
+        <rdfs:label xml:lang="es">subcomponente</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/lexicog#usageExample -->
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/ns/lemon/lexicog#usageExample">
+        <rdfs:domain rdf:resource="http://www.w3.org/ns/lemon/ontolex#LexicalSense"/>
+        <rdfs:range rdf:resource="http://www.w3.org/ns/lemon/lexicog#UsageExample"/>
+        <rdfs:comment xml:lang="nl">De relatie usageExample relateert een ontolex:LexicalSense aan een lexciog:UsageExample.</rdfs:comment>
+        <rdfs:comment xml:lang="es">La propiedad usageExample relaciona un ontolex:LexicalSense con un lexicog:UsageExample.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The property usageExample relates an ontolex:LexicalSense with a lexicog:UsageExample.</rdfs:comment>
+        <rdfs:label xml:lang="es">ejemplo de uso</rdfs:label>
+        <rdfs:label xml:lang="nl">gebruiksvoorbeeld</rdfs:label>
+        <rdfs:label xml:lang="en">usage example</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/elements/1.1/language -->
+
+    <owl:DatatypeProperty rdf:about="http://purl.org/dc/elements/1.1/language"/>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://rdfs.org/ns/void#Dataset -->
+
+    <owl:Class rdf:about="http://rdfs.org/ns/void#Dataset"/>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/lexicog#Entry -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/lemon/lexicog#Entry">
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/lemon/lexicog#LexicographicComponent"/>
+        <rdfs:comment xml:lang="en">An entry is a structural element that represents a lexicographic article or record as it is arranged in a source lexicographic resource. As such, it supports the description of lexical entries or senses according to the lexicographic micro-structure, decided upon during a lexicographic resource compilation process.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een item is een structureel element dat een lexicografisch artikel of record representeert zoals het gepresenteerd wordt in een lexicografisch werk als bron. Als zodanig ondersteunt het de beschrijving van lexicale items of zinnen volgens de lexicografische microstructuur waarvoor gekozen is tijdens de samenstelling van het lexicografische werk.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Una entrada es un elemento estructural que representa un artículo o registro lexicográfico tal como se presenta en cierto reurso lexicográfico fuente. Como tal, da cuenta de la descripción de las entradas léxicas o sentidos de acuerdo a la micro-estructura lexicográfica, decidida durante el proceso de compilación del recurso lexicográfico.</rdfs:comment>
+        <rdfs:label xml:lang="es">entrada</rdfs:label>
+        <rdfs:label xml:lang="en">entry</rdfs:label>
+        <rdfs:label xml:lang="nl">item</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/lexicog#FormRestriction -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/lemon/lexicog#FormRestriction">
+        <rdfs:comment xml:lang="nl">Er zijn gevallen waarin een gegeven ontolex:LexicalSense niet voorkomt met alle mogelijke ontolex:Form(s) van de ontolex:LexicalEntry. In zulke gevallen representeert de klasse FormRestriction (een set van) grammaticale kenmerken van de ontolex:Form(s) waarin die zin voorkomt. De zin komt niet voor in de vormen waarvan de kenmerken niet voldoen aan die aangegeven door de vastgelegde set.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Hay situaciones en las que un  ontolex:LexicalSense expecífico no tiene lugar con todas las posibles ontolex:Form(s) de una ontolex:LexicalEntry. En esos casos, la clase FormRestriction representa (un conjunto de) aspectos gramaticales de las ontolex:Form(s) en las que dicho sentido ocurre. El senido no ocurre en formas cuyos aspectos no estén contenidos con aquellos de dicho conjunto.</rdfs:comment>
+        <rdfs:comment xml:lang="en">There are cases in which a specific ontolex:LexicalSense does not occur with all the available ontolex:Form(s) of the ontolex:LexicalEntry. In those cases, the class FormRestriction represents (a set of) grammatical features of the ontolex:Form(s) in which that sense occurs. The sense does not occur in forms whose features do not match with those of such a set.</rdfs:comment>
+        <rdfs:label xml:lang="en">form restriction</rdfs:label>
+        <rdfs:label xml:lang="es">restricción de forma</rdfs:label>
+        <rdfs:label xml:lang="en">vormbeperking</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/lexicog#LexicographicComponent -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/lemon/lexicog#LexicographicComponent">
+        <rdfs:comment xml:lang="en">A lexicographic component is a structural element that represents the (sub-)structures of lexicographic articles providing information about lexical entries, senses or sub-entries. If desired, lexicographic components can be arranged in a specific order and/or hierarchy.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een lexicografisch component is een structureel element dat de (sub)structuren van lexicografische items die informatie over lexicale items, zinnen of subitems beschrijven. Indien gewenst kunnen lexicografische componenten geordend worden in een specifieke volgorde en/of hierarchie.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un componente lexicográfico es un elemento estructural que representa las (sub)estructuras de los artículos lexicográficos, proporcionando información acerca de entradas, sentidos o sub-entradas. Se se desea, los componentes lexicográficos se pueden organizar de acuerdo a un orden específico y/o jerarquía.</rdfs:comment>
+        <rdfs:label xml:lang="es">componente lexicográfico</rdfs:label>
+        <rdfs:label xml:lang="nl">lexicografisch component</rdfs:label>
+        <rdfs:label xml:lang="en">lexicographic component</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/lexicog#LexicographicResource -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/lemon/lexicog#LexicographicResource">
+        <rdfs:subClassOf rdf:resource="http://rdfs.org/ns/void#Dataset"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/dc/elements/1.1/language"/>
+                <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="en">A lexicographic resource represents a collection of lexicographic entries (lexicog:Entry) in accord with the lexicographic criteria followed in the development of that resource.</rdfs:comment>
+        <rdfs:comment xml:lang="nl">Een lexicografisch werk representeert een collectie van lexicografische items (lexicog:Entry) die conformeren aan de lexicografische criteria die gehanteerd worden tijdens het samenstellen van het werk.</rdfs:comment>
+        <rdfs:comment xml:lang="es">Un recurso lexicográfico representa una colección de entradas lexicográficas (lexicog:Entry) conforme al criterio lexicográfico seguido en el desarrollo de dicho recurso.</rdfs:comment>
+        <rdfs:label xml:lang="nl">lexicografisch werk</rdfs:label>
+        <rdfs:label xml:lang="en">lexicographic resource</rdfs:label>
+        <rdfs:label xml:lang="es">recurso lexicográfico</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://www.w3.org/ns/lemon/lexicog#UsageExample -->
+
+    <owl:Class rdf:about="http://www.w3.org/ns/lemon/lexicog#UsageExample">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#value"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment xml:lang="nl">De klasse UsageExample representeert een tekstueel voorbeeld van het gebruik van een zin binnen een gegeven lexicografisch item. Een gebruiksvoorbeeld kan verscheidene tekstwaardes groeperen, waarbij deze waardes dezelfde betekenis duiden. Indien zulke waardes in verschillende talen zijn vastgelegd, kunnen ze dus geïnterpreteerd worden als vertalingen van elkaar.</rdfs:comment>
+        <rdfs:comment xml:lang="es">La clase UsageExample representa un ejemplo textual del uso de un sentido en un registro lexicográfico dado. Un ejemplo de uso puede agupar varios valores de cadenas de caracteres, en cuyo caso dichos valores codifican el mismo significado. Por tanto si dichos valores se expresan en distintos idiomas pueden ser interpretados como traducciones.</rdfs:comment>
+        <rdfs:comment xml:lang="en">The class UsageExample represents a textual example of the usage of a sense in a given lexicographic record. A usage example can group several string values, in which case they will encode the same meaning. Thus, if such values are expressed in different languages, they can be interpreted as translations.</rdfs:comment>
+        <rdfs:label xml:lang="es">ejemplo de uso</rdfs:label>
+        <rdfs:label xml:lang="nl">gebruiksvoorbeeld</rdfs:label>
+        <rdfs:label xml:lang="en">usage example</rdfs:label>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
