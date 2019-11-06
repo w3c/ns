@@ -7,12 +7,6 @@ RewriteBase /ns/did/
 AddType application/ld+json .jsonld
 
 
-# <Files ~ "v1.jsonld">
-# Header set Access-Control-Allow-Origin "*"
-# ForceType 'application/ld+json'
-# </Files>
-
-
 # Changes added on the latest block due URL name changes, 2019-10-12 (Ivan Herman)
 RewriteRule ^v1.jsonld$ https://w3c.github.io/did-core/contexts/did-v1.jsonld [P]
 RewriteRule ^v1.json$ https://w3c.github.io/did-core/contexts/did-v1.jsonld [P]
