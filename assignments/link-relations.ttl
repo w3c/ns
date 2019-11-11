@@ -433,7 +433,7 @@
        "Refers to a license associated with this context.";
     a    rdf:Property;
     rd:comment
-        """For implications of use in HTML, see: 
+        """For implications of use in HTML, see:
       http://www.w3.org/TR/html5/links.html#link-type-license""";
     rd:label
        "license";
