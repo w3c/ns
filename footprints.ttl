@@ -2,8 +2,10 @@
     @prefix dct: <http://purl.org/dc/terms/> .
     @prefix fp: <http://www.w3.org/ns/footprints#> .
     @prefix r: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+    @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
     
-    <>     dct:title "Ontology for Footprints";
+    <>     dct:created "2019-04-30Z"^^xsd:date;
+         dct:title "Ontology for Footprints";
          :comment """Just as a shape tells a system constraints on what graph may be made,
 a footprint gives information, in a linked data world, as to where
 information about a new thing will be put.

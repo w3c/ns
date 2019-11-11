@@ -18,6 +18,7 @@
 @keywords is, of, a.
 
 <> dct:title "Ontology for Footprints" ;
+    dct:created 2019-04-30Z ;
 
     s:comment """Just as a shape tells a system constraints on what graph may be made,
 a footprint gives information, in a linked data world, as to where
@@ -69,6 +70,10 @@ objectOfArc a  r:Property; s:label "object of property";
 sanitizeOf  a  r:Property; s:label "sanitizeOf";
         s:comment """The subject is a function which evaluates the object function and then sanitizes the output.""" .
 
-
+### To be defined
+#  hash
+# Timestamp-based id   id1872345613285
+#  Time 2019-04-89T123456.0Z
+# user id
 
 # Ends
