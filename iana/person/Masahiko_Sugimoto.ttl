@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.fujitsu.oasysgp#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Masahiko_Sugimoto";
+    reg:name "Masahiko Sugimoto";
+    reg:updated "1997-10-19";
+    reg:uri "mailto:sugimoto&sz.sel.fujitsu.co.jp".

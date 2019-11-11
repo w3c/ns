@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.easykaraoke.cdgdownload#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Iain_Downs";
+    reg:name "Iain Downs";
+    reg:updated "2010-11-16";
+    reg:uri "mailto:iain&easykaraoke.com".

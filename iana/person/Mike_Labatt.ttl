@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.cloanto.rp9#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Mike_Labatt";
+    reg:name "Mike Labatt";
+    reg:updated "2009-09-01";
+    reg:uri "mailto:mike-labatt.iana-mime&cloanto.net".

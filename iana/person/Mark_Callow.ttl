@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix ktx: <../media-types/image/ktx#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-ktx: reg:xref :.
+ktx:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Mark_Callow";
+    reg:name "Mark Callow";
+    reg:updated "2010-09-27";
+    reg:uri "mailto:callow_mark&hicorp.co.jp".

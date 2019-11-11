@@ -6,16 +6,24 @@
 @prefix n1: <../media-types/application/vnd.onepagertat#>.
 @prefix n2: <../media-types/application/vnd.onepagertatp#>.
 @prefix n3: <../media-types/application/vnd.onepagertatx#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
-n3: reg:xref :.
+n3:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Nathan_Black";
+    reg:name "Nathan Black";
+    reg:updated "2017-04-12";
+    reg:uri "mailto:nblack&onepager.com".

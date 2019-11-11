@@ -1,6 +1,14 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/text/vnd.DMClientScript#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/text/vnd.DMClientScript#>.
 
-vnd: reg:xref :.
+medi:n0 reg:person :.
 
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Dan_Bradley";
+    reg:name "Dan Bradley";
+    reg:updated "2000-10-20";
+    reg:uri "mailto:dan&dantom.com".

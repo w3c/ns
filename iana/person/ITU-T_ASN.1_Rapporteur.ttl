@@ -4,9 +4,9 @@
 @prefix f0: <../media-types/application/fastsoap#>.
 @prefix so: <../media-types/application/soap+fastinfoset#>.
 
-f: reg:xref :.
+f:Resource reg:xref :.
 
-f0: reg:xref :.
+f0:Resource reg:xref :.
 
-so: reg:xref :.
+so:Resource reg:xref :.
 

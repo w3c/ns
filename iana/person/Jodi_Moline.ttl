@@ -3,10 +3,18 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/image/vnd.dwg#>.
 @prefix v: <../media-types/image/vnd.dxf#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Jodi_Moline";
+    reg:name "Jodi Moline";
+    reg:updated "1996-04-19";
+    reg:uri "mailto:jodim&softsource.com".

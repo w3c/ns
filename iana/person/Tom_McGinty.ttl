@@ -1,9 +1,16 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/video/vnd.motorola.video#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/video/vnd.motorola.video#>.
 @prefix vn: <../media-types/video/vnd.motorola.videop#>.
 
-vnd: reg:xref :.
+medi:n0 reg:person :.
 
-vn: reg:xref :.
+vnd:Resource reg:xref :.
 
+vn:Resource reg:xref :.
+
+:
+    reg:id "Tom_McGinty";
+    reg:name "Tom McGinty";
+    reg:uri "mailto:tmcginty&dma.isg.mot.com".

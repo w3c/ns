@@ -20,44 +20,52 @@
 @prefix n15: <../media-types/application/vnd.oma.lwm2m+tlv#>.
 @prefix n16: <../media-types/application/vnd.oma.pal+xml#>.
 @prefix n17: <../media-types/application/vnd.oma.scidm.messages+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
-n3: reg:xref :.
+n3:Resource reg:xref :.
 
-n4: reg:xref :.
+n4:Resource reg:xref :.
 
-n5: reg:xref :.
+n5:Resource reg:xref :.
 
-n6: reg:xref :.
+n6:Resource reg:xref :.
 
-n7: reg:xref :.
+n7:Resource reg:xref :.
 
-n8: reg:xref :.
+n8:Resource reg:xref :.
 
-n9: reg:xref :.
+n9:Resource reg:xref :.
 
-n10: reg:xref :.
+n10:Resource reg:xref :.
 
-n11: reg:xref :.
+n11:Resource reg:xref :.
 
-n12: reg:xref :.
+n12:Resource reg:xref :.
 
-n13: reg:xref :.
+n13:Resource reg:xref :.
 
-n14: reg:xref :.
+n14:Resource reg:xref :.
 
-n15: reg:xref :.
+n15:Resource reg:xref :.
 
-n16: reg:xref :.
+n16:Resource reg:xref :.
 
-n17: reg:xref :.
+n17:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Open_Mobile_Naming_Authority";
+    reg:name "Open Mobile Naming Authority (OMNA)";
+    reg:updated "2016-06-20";
+    reg:uri "mailto:OMA-OMNA&mail.openmobilealliance.org".

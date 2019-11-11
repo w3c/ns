@@ -1,6 +1,14 @@
 @prefix : <#>.
-@prefix prs: <../media-types/text/prs.prop.logic#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix prs: <../media-types/text/prs.prop.logic#>.
 
-prs: reg:xref :.
+medi:n0 reg:person :.
 
+prs:Resource reg:xref :.
+
+:
+    reg:id "Hans-Dieter_A._Hiep";
+    reg:name "Hans-Dieter A. Hiep";
+    reg:updated "2016-04-04";
+    reg:uri "mailto:info&aexiz.com".

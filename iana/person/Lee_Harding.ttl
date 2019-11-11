@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.rs-274x#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Lee_Harding";
+    reg:name "Lee Harding";
+    reg:updated "2012-02-16";
+    reg:uri "mailto:lee.harding&circuitpeople.com".

@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.coffeescript#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Devyn_Collier_Johnson";
+    reg:name "Devyn Collier Johnson";
+    reg:updated "2014-11-21";
+    reg:uri "mailto:DevynCJohnson&Gmail.com".

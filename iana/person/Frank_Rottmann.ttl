@@ -2,5 +2,5 @@
 @prefix vnd: <../media-types/video/vnd.CCTV#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 

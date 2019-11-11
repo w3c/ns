@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.mseq#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Gwenael_Le_Bodic";
+    reg:name "Gwenael Le Bodic";
+    reg:updated "2001-03-20";
+    reg:uri "mailto:Gwenael.Le_Bodic&alcatel.fr".

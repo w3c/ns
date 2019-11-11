@@ -3,10 +3,18 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.gov.sk.e-form+zip#>.
 @prefix v: <../media-types/application/vnd.gov.sk.xmldatacontainer+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Stefan_Szilva";
+    reg:name "Stefan Szilva";
+    reg:updated "2015-02-10";
+    reg:uri "mailto:szilva&changenet.sk".

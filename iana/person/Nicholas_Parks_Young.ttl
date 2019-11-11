@@ -1,9 +1,17 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/message/vnd.si.simp#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/message/vnd.si.simp#>.
 @prefix vn: <../media-types/text/vnd.si.uricatalogue#>.
 
-vnd: reg:xref :.
+medi:n0 reg:person :.
 
-vn: reg:xref :.
+vnd:Resource reg:xref :.
 
+vn:Resource reg:xref :.
+
+:
+    reg:id "Nicholas_Parks_Young";
+    reg:name "Nicholas Parks Young";
+    reg:updated "2007-12-03";
+    reg:uri "mailto:nick&shadyindustries.com".

@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.omaloc-supl-init#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Julien_Grange";
+    reg:name "Julien Grange";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:julien.grange&francetelecom.com".

@@ -2,8 +2,16 @@
 @prefix n1: <../media-types/application/andrew-inset#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix n2: <../media-types/application/atomicmail#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Nathaniel_Borenstein";
+    reg:name "Nathaniel Borenstein";
+    reg:updated "1994-04-19";
+    reg:uri "mailto:NSB&bellcore.com".

@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.etsi.pstn+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/audio/vnd.3gpp.iufp#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Thomas_Belling";
+    reg:name "Thomas Belling";
+    reg:updated "2013-05-13";
+    reg:uri "mailto:Thomas.Belling&siemens.com".

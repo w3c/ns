@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix epu: <../media-types/application/epub+zip#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-epu: reg:xref :.
+epu:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "William_McCoy";
+    reg:name "William McCoy";
+    reg:updated "2014-11-06";
+    reg:uri "mailto:bmccoy&idpf.org".

@@ -1,9 +1,17 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.wfa.p2p#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix vn: <../media-types/message/vnd.wfa.wsc#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+medi:n0 reg:person :.
 
+vn:Resource reg:xref :.
+
+:
+    reg:id "Mick_Conley";
+    reg:name "Mick Conley";
+    reg:updated "2013-09-06";
+    reg:uri "mailto:mconley&wi-fi.org".

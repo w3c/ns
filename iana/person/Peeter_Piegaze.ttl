@@ -1,6 +1,14 @@
 @prefix : <#>.
-@prefix jcr: <../media-types/text/jcr-cnd#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix jcr: <../media-types/text/jcr-cnd#>.
 
-jcr: reg:xref :.
+medi:n0 reg:person :.
 
+jcr:Resource reg:xref :.
+
+:
+    reg:id "Peeter_Piegaze";
+    reg:name "Peeter Piegaze";
+    reg:updated "2003-09-20";
+    reg:uri "mailto:ppiegaze at adobe.com".

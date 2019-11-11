@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.software602.filler.form-xml-zip#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.software602.filler.form+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Martin_Vondrous";
+    reg:name "Martin Vondrous";
+    reg:updated "2008-08-06";
+    reg:uri "mailto:vondrous&602.cz".

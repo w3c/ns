@@ -1,9 +1,17 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/model/vnd.parasolid.transmit-binary#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/model/vnd.parasolid.transmit-binary#>.
 @prefix vn: <../media-types/model/vnd.parasolid.transmit-text#>.
 
-vnd: reg:xref :.
+medi:n0 reg:person :.
 
-vn: reg:xref :.
+vnd:Resource reg:xref :.
 
+vn:Resource reg:xref :.
+
+:
+    reg:id "Parasolid";
+    reg:name "Parasolid";
+    reg:updated "2000-10-20";
+    reg:uri "mailto:ps-mimetype&ugs.com".

@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.verimatrix.vcas#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Petr_Peterka";
+    reg:name "Petr Peterka";
+    reg:updated "2010-08-31";
+    reg:uri "mailto:info&verimatrix.com".

@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.las.las+json#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.las.las+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Rob_Bailey";
+    reg:name "Rob Bailey";
+    reg:updated "2017-03-09";
+    reg:uri "mailto:sysadmin&laserapp.com".

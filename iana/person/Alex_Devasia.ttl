@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.Mobius.MBK#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.Mobius.MQY#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Alex_Devasia";
+    reg:name "Alex Devasia";
+    reg:updated "2001-03-20";
+    reg:uri "mailto:adevasia&mobius.com".

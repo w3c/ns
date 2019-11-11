@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix png: <../media-types/image/png#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-png: reg:xref :.
+png:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Glenn_Randers-Pehrson";
+    reg:name "Glenn Randers-Pehrson";
+    reg:updated "2015-05-06";
+    reg:uri "mailto:glennrp&gmail.com".

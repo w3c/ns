@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.maxmind.maxmind-db#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "William_Stevenson";
+    reg:name "William Stevenson";
+    reg:updated "2014-07-25";
+    reg:uri "mailto:dev&maxmind.com".

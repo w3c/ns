@@ -4,12 +4,20 @@
 @prefix di: <../media-types/application/dicom+xml#>.
 @prefix dico: <../media-types/image/dicom-rle#>.
 @prefix jls: <../media-types/image/jls#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-dic: reg:xref :.
+dic:Resource reg:xref :.
 
-di: reg:xref :.
+di:Resource reg:xref :.
 
-dico: reg:xref :.
+dico:Resource reg:xref :.
 
-jls: reg:xref :.
+jls:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "DICOM_Standards_Committee";
+    reg:name "DICOM Standards Committee";
+    reg:updated "2016-09-26";
+    reg:uri "mailto:dicom&medicalimaging.org".

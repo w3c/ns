@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.denovo.fcselayout-link#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Michael_Dixon";
+    reg:name "Michael Dixon";
+    reg:updated "2007-05-25";
+    reg:uri "mailto:michael.dixon&denovosoftware.com".

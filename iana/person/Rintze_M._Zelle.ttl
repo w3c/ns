@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.citationstyles.style+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Rintze_M._Zelle";
+    reg:name "Rintze M. Zelle";
+    reg:updated "2015-02-23";
+    reg:uri "mailto:rintze.zelle&gmail.com".

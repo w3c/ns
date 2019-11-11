@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.bluetooth.ep.oob#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Mike_Foley";
+    reg:name "Mike Foley";
+    reg:updated "2008-12-19";
+    reg:uri "mailto:mfoley&bluetooth.com".

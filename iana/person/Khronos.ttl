@@ -1,9 +1,17 @@
 @prefix : <#>.
 @prefix ktx: <../media-types/image/ktx#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix glt: <../media-types/model/gltf+json#>.
 
-ktx: reg:xref :.
+ktx:Resource reg:xref :.
 
-glt: reg:xref :.
+medi:n0 reg:person :.
 
+glt:Resource reg:xref :.
+
+:
+    reg:id "Khronos";
+    reg:name "The Khronos Group";
+    reg:updated "2016-07-01";
+    reg:uri "http://www.khronos.org".

@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.fastcopy-disk-image#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.msa-disk-image#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Thomas_Huth";
+    reg:name "Thomas Huth";
+    reg:updated "2015-03-02";
+    reg:uri "mailto:huth&tuxfamily.org".

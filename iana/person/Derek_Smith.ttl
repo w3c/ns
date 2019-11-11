@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.fsc.weblaunch#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Derek_Smith";
+    reg:name "Derek Smith";
+    reg:updated "2000-11-20";
+    reg:uri "mailto:derek&friendlysoftware.com".

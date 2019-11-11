@@ -8,23 +8,31 @@
 @prefix n3: <../media-types/application/vnd.rar#>.
 @prefix n4: <../media-types/application/vnd.wordperfect#>.
 @prefix n5: <../media-types/image/vnd.adobe.photoshop#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n6: <../media-types/text/vnd.ascii-art#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
-n3: reg:xref :.
+n3:Resource reg:xref :.
 
-n4: reg:xref :.
+n4:Resource reg:xref :.
 
-n5: reg:xref :.
+n5:Resource reg:xref :.
 
-n6: reg:xref :.
+medi:n0 reg:person :.
 
+n6:Resource reg:xref :.
+
+:
+    reg:id "Kim_Scarborough";
+    reg:name "Kim Scarborough";
+    reg:updated "2016-08-12";
+    reg:uri "mailto:user&unknown.nu".

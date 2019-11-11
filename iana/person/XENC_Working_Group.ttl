@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix xen: <../media-types/application/xenc+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-xen: reg:xref :.
+xen:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "XENC_Working_Group";
+    reg:name "XENC Working Group";
+    reg:updated "2006-03-21";
+    reg:uri "mailto:xml-encryption&w3.org".

@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.rainstor.data#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Kevin_Crook";
+    reg:name "Kevin Crook";
+    reg:updated "2011-03-10";
+    reg:uri "mailto:productmanagement&rainstor.com".

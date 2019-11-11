@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix n1: <../media-types/application/3gpdash-qoe-report+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Ozgur_Oyman";
+    reg:name "Ozgur Oyman";
+    reg:updated "2014-04-16";
+    reg:uri "mailto:ozgur.oyman&intel.com".

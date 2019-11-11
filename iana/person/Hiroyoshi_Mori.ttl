@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.anser-web-certificate-issue-initiation#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Hiroyoshi_Mori";
+    reg:name "Hiroyoshi Mori";
+    reg:updated "1998-08-19";
+    reg:uri "mailto:mori&mm.rd.nttdata.co.jp".

@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/audio/vnd.cisco.nse#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Rajesh_Kumar";
+    reg:name "Rajesh Kumar";
+    reg:updated "2001-08-20";
+    reg:uri "mailto:rkumar&cisco.com".

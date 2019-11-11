@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.mozilla.xul+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Braden_N_McDaniel";
+    reg:name "Braden N. McDaniel";
+    reg:updated "2000-10-20";
+    reg:uri "mailto:braden&endoframe.com".

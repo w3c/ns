@@ -3,10 +3,18 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.apache.thrift.compact#>.
 @prefix v: <../media-types/application/vnd.apache.thrift.json#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Roger_Meier";
+    reg:name "Roger Meier";
+    reg:updated "2014-11-25";
+    reg:uri "mailto:roger&apache.org".

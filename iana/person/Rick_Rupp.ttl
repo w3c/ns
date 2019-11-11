@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.tri.onesource#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Rick_Rupp";
+    reg:name "Rick Rupp";
+    reg:updated "2016-09-27";
+    reg:uri "mailto:onesource-mediatype&tr.com".

@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.geoplan#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.geospace#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Christian_Mercat";
+    reg:name "Christian Mercat";
+    reg:updated "2009-05-12";
+    reg:uri "mailto:Christian.Mercat&univ-montp2.fr".

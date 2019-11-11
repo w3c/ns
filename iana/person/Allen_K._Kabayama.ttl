@@ -5,14 +5,22 @@
 @prefix v: <../media-types/application/vnd.Mobius.MSL#>.
 @prefix n1: <../media-types/application/vnd.Mobius.PLC#>.
 @prefix n2: <../media-types/application/vnd.Mobius.TXF#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Allen_K._Kabayama";
+    reg:name "Allen K. Kabayama";
+    reg:updated "1999-06-19";
+    reg:uri "mailto:akabayam&mobius.com".

@@ -4,12 +4,20 @@
 @prefix vn: <../media-types/application/vnd.powerbuilder7#>.
 @prefix v: <../media-types/application/vnd.powerbuilder75-s#>.
 @prefix n1: <../media-types/application/vnd.powerbuilder75#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Reed_Shilts";
+    reg:name "Reed Shilts";
+    reg:updated "1999-08-19";
+    reg:uri "mailto:reed.shilts&sybase.com".

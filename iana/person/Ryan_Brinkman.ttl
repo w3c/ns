@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.isac.fcs#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Ryan_Brinkman";
+    reg:name "Ryan Brinkman";
+    reg:updated "2010-03-26";
+    reg:uri "mailto:rbrinkman&bccrc.ca".

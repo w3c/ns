@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix sp: <../media-types/audio/sp-midi#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-sp: reg:xref :.
+sp:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Tom_White";
+    reg:name "Tom White";
+    reg:updated "2007-01-30";
+    reg:uri "mailto:twhite&midi.org".

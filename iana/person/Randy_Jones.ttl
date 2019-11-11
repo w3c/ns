@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.hhe.lesson-player#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Randy_Jones";
+    reg:name "Randy Jones";
+    reg:updated "2001-01-20";
+    reg:uri "mailto:randy_jones&archipelago.com".

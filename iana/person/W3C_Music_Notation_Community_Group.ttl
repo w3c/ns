@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.recordare.musicxml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.recordare.musicxml+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "W3C_Music_Notation_Community_Group";
+    reg:name "W3C Music Notation Community Group";
+    reg:updated "2017-01-19";
+    reg:uri "mailto:public-music-notation&w3.org".

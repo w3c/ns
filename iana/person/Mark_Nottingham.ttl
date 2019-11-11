@@ -1,6 +1,13 @@
 @prefix : <#>.
 @prefix xop: <../media-types/application/xop+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-xop: reg:xref :.
+xop:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Mark_Nottingham";
+    reg:name "Mark Nottingham, see registration template for e-mail";
+    reg:updated "2004-12".

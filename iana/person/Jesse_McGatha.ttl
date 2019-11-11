@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.ms-xpsdocument#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Jesse_McGatha";
+    reg:name "Jesse McGatha";
+    reg:updated "2006-03-20";
+    reg:uri "mailto:jessmc&microsoft.com".

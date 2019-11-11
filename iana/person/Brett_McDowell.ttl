@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.liberty-request+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Brett_McDowell";
+    reg:name "Brett McDowell";
+    reg:updated "2003-02-20";
+    reg:uri "mailto:brett.mcdowell&ieee-isto.org".

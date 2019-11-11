@@ -5,14 +5,22 @@
 @prefix v: <../media-types/application/vnd.xmpie.plan#>.
 @prefix n1: <../media-types/application/vnd.xmpie.ppkg#>.
 @prefix n2: <../media-types/application/vnd.xmpie.xlim#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Reuven_Sherwin";
+    reg:name "Reuven Sherwin";
+    reg:updated "2007-03-20";
+    reg:uri "mailto:reuven.sherwin&xmpie.com".

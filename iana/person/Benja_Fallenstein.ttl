@@ -1,6 +1,14 @@
 @prefix : <#>.
-@prefix prs: <../media-types/text/prs.fallenstein.rst#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix prs: <../media-types/text/prs.fallenstein.rst#>.
 
-prs: reg:xref :.
+medi:n0 reg:person :.
 
+prs:Resource reg:xref :.
+
+:
+    reg:id "Benja_Fallenstein";
+    reg:name "Benja Fallenstein";
+    reg:updated "2003-10-20";
+    reg:uri "mailto:b.fallenstein&gmx.de".

@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/audio/vnd.4SB#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/audio/vnd.CELP#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Serge_De_Jaham";
+    reg:name "Serge De Jaham";
+    reg:updated "2006-03-27";
+    reg:uri "mailto:sdejaham&aeta-audio.com".

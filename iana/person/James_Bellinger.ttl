@@ -3,10 +3,18 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.evolv.ecig.settings#>.
 @prefix v: <../media-types/application/vnd.evolv.ecig.theme#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "James_Bellinger";
+    reg:name "James Bellinger";
+    reg:updated "2017-07-18";
+    reg:uri "mailto:james&dimensionengineering.com".

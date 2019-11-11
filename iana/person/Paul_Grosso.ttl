@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix sgm: <../media-types/application/sgml-open-catalog#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-sgm: reg:xref :.
+sgm:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Paul_Grosso";
+    reg:name "Paul Grosso";
+    reg:updated "1996-08-19";
+    reg:uri "mailto:paul&arbortext.com".

@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.spotfire.dxp#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.spotfire.sfs#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Stefan_Jernberg";
+    reg:name "Stefan Jernberg";
+    reg:updated "2006-09-13";
+    reg:uri "mailto:SJernber&TIBCO.com".

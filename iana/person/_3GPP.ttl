@@ -17,44 +17,51 @@
 @prefix sim: <../media-types/application/simpleSymbolContainer#>.
 @prefix EVS: <../media-types/audio/EVS#>.
 @prefix rtp: <../media-types/audio/rtp-enc-aescm128#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix rt: <../media-types/text/rtp-enc-aescm128#>.
 @prefix r: <../media-types/video/rtp-enc-aescm128#>.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-cccex: reg:xref :.
+cccex:Resource reg:xref :.
 
-mbm: reg:xref :.
+mbm:Resource reg:xref :.
 
-mb: reg:xref :.
+mb:Resource reg:xref :.
 
-mbms: reg:xref :.
+mbms:Resource reg:xref :.
 
-m: reg:xref :.
+m:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
-n3: reg:xref :.
+n3:Resource reg:xref :.
 
-n4: reg:xref :.
+n4:Resource reg:xref :.
 
-n5: reg:xref :.
+n5:Resource reg:xref :.
 
-n6: reg:xref :.
+n6:Resource reg:xref :.
 
-n7: reg:xref :.
+n7:Resource reg:xref :.
 
-n8: reg:xref :.
+n8:Resource reg:xref :.
 
-ses: reg:xref :.
+ses:Resource reg:xref :.
 
-sim: reg:xref :.
+sim:Resource reg:xref :.
 
-EVS: reg:xref :.
+EVS:Resource reg:xref :.
 
-rtp: reg:xref :.
+rtp:Resource reg:xref :.
 
-rt: reg:xref :.
+medi:n0 reg:person :.
 
-r: reg:xref :.
+rt:Resource reg:xref :.
 
+r:Resource reg:xref :.
+
+:
+    reg:id "_3GPP";
+    reg:name "3GPP - Third Generation Partnership Project";
+    reg:uri "mailto:3gppContact&etsi.org".

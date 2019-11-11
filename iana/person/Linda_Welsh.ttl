@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix tve: <../media-types/application/tve-trigger#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-tve: reg:xref :.
+tve:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Linda_Welsh";
+    reg:name "Linda Welsh";
+    reg:updated "2000-11-20";
+    reg:uri "mailto:linda&intel.com".

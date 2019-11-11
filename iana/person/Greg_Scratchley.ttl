@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.intu.qbo#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.intu.qfx#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Greg_Scratchley";
+    reg:name "Greg Scratchley";
+    reg:updated "1998-10-19";
+    reg:uri "mailto:greg_scratchley&intuit.com".

@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.airzip.filesecure.azf#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.airzip.filesecure.azs#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Daniel_Mould";
+    reg:name "Daniel Mould";
+    reg:updated "2009-02-18";
+    reg:uri "mailto:dmould&airzip.com".

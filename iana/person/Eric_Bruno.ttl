@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.sss-dtf#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.sss-ntf#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Eric_Bruno";
+    reg:name "Eric Bruno";
+    reg:updated "2001-06-20";
+    reg:uri "mailto:ebruno&solution-soft.com".

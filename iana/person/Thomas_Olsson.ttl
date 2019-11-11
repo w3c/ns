@@ -6,16 +6,24 @@
 @prefix n1: <../media-types/application/vnd.ecowin.series#>.
 @prefix n2: <../media-types/application/vnd.ecowin.seriesrequest#>.
 @prefix n3: <../media-types/application/vnd.ecowin.seriesupdate#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
-n3: reg:xref :.
+n3:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Thomas_Olsson";
+    reg:name "Thomas Olsson";
+    reg:updated "1998-04-19";
+    reg:uri "mailto:thomas&vinga.se".

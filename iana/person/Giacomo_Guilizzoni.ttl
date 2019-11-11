@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.balsamiq.bmml+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.balsamiq.bmpr#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Giacomo_Guilizzoni";
+    reg:name "Giacomo Guilizzoni";
+    reg:updated "2015-05-06";
+    reg:uri "mailto:peldi&balsamiq.com".

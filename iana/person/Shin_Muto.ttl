@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.canon-cpdl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.canon-lips#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Shin_Muto";
+    reg:name "Shin Muto";
+    reg:updated "2000-05-20";
+    reg:uri "mailto:shinmuto&pure.cpdc.canon.co.jp".

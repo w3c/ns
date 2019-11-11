@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.Quark.QuarkXPress#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Hannes_Scheidler";
+    reg:name "Hannes Scheidler";
+    reg:updated "2002-10-20";
+    reg:uri "mailto:hscheidler&quark.com".

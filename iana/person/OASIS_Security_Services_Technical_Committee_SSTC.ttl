@@ -2,8 +2,16 @@
 @prefix s: <../media-types/application/samlassertion+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix s0: <../media-types/application/samlmetadata+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-s: reg:xref :.
+s:Resource reg:xref :.
 
-s0: reg:xref :.
+s0:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "OASIS_Security_Services_Technical_Committee_SSTC";
+    reg:name
+        "OASIS Security Services Technical Committee (SSTC), see registration template for e-mail";
+    reg:updated "2004-12".

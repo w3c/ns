@@ -25,6 +25,7 @@
 @prefix xht: <../media-types/application/xhtml+xml#>.
 @prefix xsl: <../media-types/application/xslt+xml#>.
 @prefix svg: <../media-types/image/svg+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n2: <../media-types/multipart/x-mixed-replace#>.
 @prefix c: <../media-types/text/cache-manifest#>.
 @prefix html: <../media-types/text/html#>.
@@ -32,65 +33,69 @@
 @prefix pr: <../media-types/text/provenance-notation#>.
 @prefix tur: <../media-types/text/turtle#>.
 
-csv: reg:xref :.
+csv:Resource reg:xref :.
 
-emm: reg:xref :.
+emm:Resource reg:xref :.
 
-emo: reg:xref :.
+emo:Resource reg:xref :.
 
-exi: reg:xref :.
+exi:Resource reg:xref :.
 
-fon: reg:xref :.
+fon:Resource reg:xref :.
 
-its: reg:xref :.
+its:Resource reg:xref :.
 
-jf2: reg:xref :.
+jf2:Resource reg:xref :.
 
-ld: reg:xref :.
+ld:Resource reg:xref :.
 
-m: reg:xref :.
+m:Resource reg:xref :.
 
-m0: reg:xref :.
+m0:Resource reg:xref :.
 
-m1: reg:xref :.
+m1:Resource reg:xref :.
 
-n: reg:xref :.
+n:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-pro: reg:xref :.
+pro:Resource reg:xref :.
 
-sp: reg:xref :.
+sp:Resource reg:xref :.
 
-s: reg:xref :.
+s:Resource reg:xref :.
 
-trig: reg:xref :.
+trig:Resource reg:xref :.
 
-ttm: reg:xref :.
+ttm:Resource reg:xref :.
 
-wid: reg:xref :.
+wid:Resource reg:xref :.
 
-wsd: reg:xref :.
+wsd:Resource reg:xref :.
 
-wsp: reg:xref :.
+wsp:Resource reg:xref :.
 
-x: reg:xref :.
+x:Resource reg:xref :.
 
-xht: reg:xref :.
+xht:Resource reg:xref :.
 
-xsl: reg:xref :.
+xsl:Resource reg:xref :.
 
-svg: reg:xref :.
+svg:Resource reg:xref :.
 
-n2: reg:xref :.
+medi:n0 reg:person :.
 
-c: reg:xref :.
+n2:Resource reg:xref :.
 
-html: reg:xref :.
+c:Resource reg:xref :.
 
-n3: reg:xref :.
+html:Resource reg:xref :.
 
-pr: reg:xref :.
+n3:Resource reg:xref :.
 
-tur: reg:xref :.
+pr:Resource reg:xref :.
+
+tur:Resource reg:xref :.
+
+: reg:id "W3C"; reg:name "W3C"; reg:uri "http://www.w3.org/".
 

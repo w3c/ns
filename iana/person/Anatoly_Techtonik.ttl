@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.ms-htmlhelp#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Anatoly_Techtonik";
+    reg:name "Anatoly Techtonik";
+    reg:updated "2006-04-11";
+    reg:uri "mailto:techtonik&php.net".

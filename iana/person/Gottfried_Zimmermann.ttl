@@ -5,14 +5,22 @@
 @prefix ur: <../media-types/application/urc-ressheet+xml#>.
 @prefix u: <../media-types/application/urc-targetdesc+xml#>.
 @prefix n1: <../media-types/application/urc-uisocketdesc+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-ce: reg:xref :.
+ce:Resource reg:xref :.
 
-urc: reg:xref :.
+urc:Resource reg:xref :.
 
-ur: reg:xref :.
+ur:Resource reg:xref :.
 
-u: reg:xref :.
+u:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Gottfried_Zimmermann";
+    reg:name "Gottfried Zimmermann";
+    reg:updated "2013-06-24";
+    reg:uri "mailto:gzimmermann at acm.org".

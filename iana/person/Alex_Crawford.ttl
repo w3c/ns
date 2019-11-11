@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.coreos.ignition+json#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Alex_Crawford";
+    reg:name "Alex Crawford";
+    reg:updated "2016-04-15";
+    reg:uri "mailto:alex.crawford&coreos.com".

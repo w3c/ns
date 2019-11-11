@@ -1,9 +1,17 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/audio/vnd.hns.audio#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix vn: <../media-types/video/vnd.hns.video#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+medi:n0 reg:person :.
 
+vn:Resource reg:xref :.
+
+:
+    reg:id "Swaminathan";
+    reg:name "Kumar Swaminathan";
+    reg:updated "2006-03-23";
+    reg:uri "mailto:kswami&hns.com".

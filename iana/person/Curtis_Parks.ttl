@@ -1,9 +1,17 @@
 @prefix : <#>.
 @prefix iges: <../media-types/application/iges#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix ige: <../media-types/model/iges#>.
 
-iges: reg:xref :.
+iges:Resource reg:xref :.
 
-ige: reg:xref :.
+medi:n0 reg:person :.
 
+ige:Resource reg:xref :.
+
+:
+    reg:id "Curtis_Parks";
+    reg:name "Curtis Parks";
+    reg:updated "1995-04-19";
+    reg:uri "mailto:parks&eeel.nist.gov".

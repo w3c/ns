@@ -4,12 +4,20 @@
 @prefix vnd: <../media-types/application/vnd.wolfram.mathematica.package#>.
 @prefix vn: <../media-types/application/vnd.wolfram.mathematica#>.
 @prefix v: <../media-types/application/vnd.wolfram.player#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-m: reg:xref :.
+m:Resource reg:xref :.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Wolfram";
+    reg:name "Wolfram Research";
+    reg:updated "2009-10-15";
+    reg:uri "mailto:info&wolfram.com".

@@ -10,33 +10,41 @@
 @prefix n5: <../media-types/application/vnd.stepmania.stepchart#>.
 @prefix n6: <../media-types/application/vnd.valve.source.material#>.
 @prefix n7: <../media-types/image/vnd.valve.source.texture#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n8: <../media-types/model/vnd.valve.source.compiled-map#>.
 @prefix n9: <../media-types/video/vnd.radgamettools.bink#>.
 @prefix n10: <../media-types/video/vnd.radgamettools.smacker#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
-n3: reg:xref :.
+n3:Resource reg:xref :.
 
-n4: reg:xref :.
+n4:Resource reg:xref :.
 
-n5: reg:xref :.
+n5:Resource reg:xref :.
 
-n6: reg:xref :.
+n6:Resource reg:xref :.
 
-n7: reg:xref :.
+n7:Resource reg:xref :.
 
-n8: reg:xref :.
+medi:n0 reg:person :.
 
-n9: reg:xref :.
+n8:Resource reg:xref :.
 
-n10: reg:xref :.
+n9:Resource reg:xref :.
 
+n10:Resource reg:xref :.
+
+:
+    reg:id "Henrik_Andersson";
+    reg:name "Henrik Andersson";
+    reg:updated "2017-04-06";
+    reg:uri "mailto:henke&henke37.cjb.net".

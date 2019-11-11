@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix prs: <../media-types/application/prs.alvestrand.titrax-sheet#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-prs: reg:xref :.
+prs:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Harald_T._Alvestrand";
+    reg:name "Harald T. Alvestrand";
+    reg:updated "1997-01-19";
+    reg:uri "mailto:Harald.T.Alvestrand&uninett.no".

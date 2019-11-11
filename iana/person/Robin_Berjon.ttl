@@ -2,17 +2,25 @@
 @prefix x: <../media-types/application/x-www-form-urlencoded#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix xht: <../media-types/application/xhtml+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n1: <../media-types/multipart/x-mixed-replace#>.
 @prefix c: <../media-types/text/cache-manifest#>.
 @prefix html: <../media-types/text/html#>.
 
-x: reg:xref :.
+x:Resource reg:xref :.
 
-xht: reg:xref :.
+xht:Resource reg:xref :.
 
-n1: reg:xref :.
+medi:n0 reg:person :.
 
-c: reg:xref :.
+n1:Resource reg:xref :.
 
-html: reg:xref :.
+c:Resource reg:xref :.
 
+html:Resource reg:xref :.
+
+:
+    reg:id "Robin_Berjon";
+    reg:name "Robin Berjon";
+    reg:updated "2014-10-23";
+    reg:uri "mailto:robin&w3.org".

@@ -1,9 +1,17 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/audio/vnd.ms-playready.media.pya#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix vn: <../media-types/video/vnd.ms-playready.media.pyv#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+medi:n0 reg:person :.
 
+vn:Resource reg:xref :.
+
+:
+    reg:id "Steve_DiAcetis";
+    reg:name "Steve DiAcetis";
+    reg:updated "2008-06-03";
+    reg:uri "mailto:stevedia&microsoft.com".

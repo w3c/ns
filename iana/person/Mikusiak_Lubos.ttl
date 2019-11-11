@@ -1,6 +1,14 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/text/vnd.latex-z#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/text/vnd.latex-z#>.
 
-vnd: reg:xref :.
+medi:n0 reg:person :.
 
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Mikusiak_Lubos";
+    reg:name "Mikusiak Lubos";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:lmikusia&blava-s.bratisla.ingr.com".

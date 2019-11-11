@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.intercon.formnet#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Tom_Gurak";
+    reg:name "Tom Gurak";
+    reg:updated "1997-03-19";
+    reg:uri "mailto:assoc&intercon.roc.servtech.com".

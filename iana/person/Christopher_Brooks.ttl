@@ -1,6 +1,14 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/model/vnd.moml+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/model/vnd.moml+xml#>.
 
-vnd: reg:xref :.
+medi:n0 reg:person :.
 
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Christopher_Brooks";
+    reg:name "Christopher Brooks";
+    reg:updated "2006-08-20";
+    reg:uri "mailto:cxh&eecs.berkeley.edu".

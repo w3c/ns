@@ -6,16 +6,24 @@
 @prefix n1: <../media-types/application/vnd.oma.poc.invocation-descriptor+xml#>.
 @prefix n2: <../media-types/application/vnd.oma.poc.optimized-progress-report+xml#>.
 @prefix n3: <../media-types/application/vnd.poc.group-advertisement+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
-n3: reg:xref :.
+n3:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "OMA_Push_to_Talk_over_Cellular_POC_Working_Group";
+    reg:name "OMA Push to Talk over Cellular (POC) Working Group";
+    reg:updated "2008-01-24";
+    reg:uri "mailto:technical-comments&mail.openmobilealliance.org".

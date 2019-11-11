@@ -14,32 +14,40 @@
 @prefix n9: <../media-types/application/vnd.oma.bcast.sprov+xml#>.
 @prefix n10: <../media-types/application/vnd.oma.bcast.stkm#>.
 @prefix n11: <../media-types/application/vnd.oma.drm.risd+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
-n3: reg:xref :.
+n3:Resource reg:xref :.
 
-n4: reg:xref :.
+n4:Resource reg:xref :.
 
-n5: reg:xref :.
+n5:Resource reg:xref :.
 
-n6: reg:xref :.
+n6:Resource reg:xref :.
 
-n7: reg:xref :.
+n7:Resource reg:xref :.
 
-n8: reg:xref :.
+n8:Resource reg:xref :.
 
-n9: reg:xref :.
+n9:Resource reg:xref :.
 
-n10: reg:xref :.
+n10:Resource reg:xref :.
 
-n11: reg:xref :.
+n11:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Uwe_Rauschenbach";
+    reg:name "Uwe Rauschenbach";
+    reg:updated "2015-03-05";
+    reg:uri "mailto:uwe.rauschenbach&nokia.com".

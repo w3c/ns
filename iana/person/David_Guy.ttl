@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/application/vnd.powerbuilder6-s#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.powerbuilder6#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "David_Guy";
+    reg:name "David Guy";
+    reg:updated "1997-06-19";
+    reg:uri "mailto:dguy&powersoft.com".

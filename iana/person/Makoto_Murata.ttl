@@ -74,152 +74,160 @@
 @prefix n69: <../media-types/application/vnd.openxmlformats-package.core-properties+xml#>.
 @prefix n70: <../media-types/application/vnd.openxmlformats-package.digital-signature-xmlsignature+xml#>.
 @prefix n71: <../media-types/application/vnd.openxmlformats-package.relationships+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
-n3: reg:xref :.
+n3:Resource reg:xref :.
 
-n4: reg:xref :.
+n4:Resource reg:xref :.
 
-n5: reg:xref :.
+n5:Resource reg:xref :.
 
-n6: reg:xref :.
+n6:Resource reg:xref :.
 
-n7: reg:xref :.
+n7:Resource reg:xref :.
 
-n8: reg:xref :.
+n8:Resource reg:xref :.
 
-n9: reg:xref :.
+n9:Resource reg:xref :.
 
-n10: reg:xref :.
+n10:Resource reg:xref :.
 
-n11: reg:xref :.
+n11:Resource reg:xref :.
 
-n12: reg:xref :.
+n12:Resource reg:xref :.
 
-n13: reg:xref :.
+n13:Resource reg:xref :.
 
-n14: reg:xref :.
+n14:Resource reg:xref :.
 
-n15: reg:xref :.
+n15:Resource reg:xref :.
 
-n16: reg:xref :.
+n16:Resource reg:xref :.
 
-n17: reg:xref :.
+n17:Resource reg:xref :.
 
-n18: reg:xref :.
+n18:Resource reg:xref :.
 
-n19: reg:xref :.
+n19:Resource reg:xref :.
 
-n20: reg:xref :.
+n20:Resource reg:xref :.
 
-n21: reg:xref :.
+n21:Resource reg:xref :.
 
-n22: reg:xref :.
+n22:Resource reg:xref :.
 
-n23: reg:xref :.
+n23:Resource reg:xref :.
 
-n24: reg:xref :.
+n24:Resource reg:xref :.
 
-n25: reg:xref :.
+n25:Resource reg:xref :.
 
-n26: reg:xref :.
+n26:Resource reg:xref :.
 
-n27: reg:xref :.
+n27:Resource reg:xref :.
 
-n28: reg:xref :.
+n28:Resource reg:xref :.
 
-n29: reg:xref :.
+n29:Resource reg:xref :.
 
-n30: reg:xref :.
+n30:Resource reg:xref :.
 
-n31: reg:xref :.
+n31:Resource reg:xref :.
 
-n32: reg:xref :.
+n32:Resource reg:xref :.
 
-n33: reg:xref :.
+n33:Resource reg:xref :.
 
-n34: reg:xref :.
+n34:Resource reg:xref :.
 
-n35: reg:xref :.
+n35:Resource reg:xref :.
 
-n36: reg:xref :.
+n36:Resource reg:xref :.
 
-n37: reg:xref :.
+n37:Resource reg:xref :.
 
-n38: reg:xref :.
+n38:Resource reg:xref :.
 
-n39: reg:xref :.
+n39:Resource reg:xref :.
 
-n40: reg:xref :.
+n40:Resource reg:xref :.
 
-n41: reg:xref :.
+n41:Resource reg:xref :.
 
-n42: reg:xref :.
+n42:Resource reg:xref :.
 
-n43: reg:xref :.
+n43:Resource reg:xref :.
 
-n44: reg:xref :.
+n44:Resource reg:xref :.
 
-n45: reg:xref :.
+n45:Resource reg:xref :.
 
-n46: reg:xref :.
+n46:Resource reg:xref :.
 
-n47: reg:xref :.
+n47:Resource reg:xref :.
 
-n48: reg:xref :.
+n48:Resource reg:xref :.
 
-n49: reg:xref :.
+n49:Resource reg:xref :.
 
-n50: reg:xref :.
+n50:Resource reg:xref :.
 
-n51: reg:xref :.
+n51:Resource reg:xref :.
 
-n52: reg:xref :.
+n52:Resource reg:xref :.
 
-n53: reg:xref :.
+n53:Resource reg:xref :.
 
-n54: reg:xref :.
+n54:Resource reg:xref :.
 
-n55: reg:xref :.
+n55:Resource reg:xref :.
 
-n56: reg:xref :.
+n56:Resource reg:xref :.
 
-n57: reg:xref :.
+n57:Resource reg:xref :.
 
-n58: reg:xref :.
+n58:Resource reg:xref :.
 
-n59: reg:xref :.
+n59:Resource reg:xref :.
 
-n60: reg:xref :.
+n60:Resource reg:xref :.
 
-n61: reg:xref :.
+n61:Resource reg:xref :.
 
-n62: reg:xref :.
+n62:Resource reg:xref :.
 
-n63: reg:xref :.
+n63:Resource reg:xref :.
 
-n64: reg:xref :.
+n64:Resource reg:xref :.
 
-n65: reg:xref :.
+n65:Resource reg:xref :.
 
-n66: reg:xref :.
+n66:Resource reg:xref :.
 
-n67: reg:xref :.
+n67:Resource reg:xref :.
 
-n68: reg:xref :.
+n68:Resource reg:xref :.
 
-n69: reg:xref :.
+n69:Resource reg:xref :.
 
-n70: reg:xref :.
+n70:Resource reg:xref :.
 
-n71: reg:xref :.
+n71:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Makoto_Murata";
+    reg:name "Makoto Murata";
+    reg:updated "2011-03-23";
+    reg:uri "mailto:eb2m-mrt&asahi-net.or.jp".

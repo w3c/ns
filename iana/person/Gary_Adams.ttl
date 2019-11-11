@@ -1,6 +1,14 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/text/vnd.sun.j2me.app-descriptor#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/text/vnd.sun.j2me.app-descriptor#>.
 
-vnd: reg:xref :.
+medi:n0 reg:person :.
 
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Gary_Adams";
+    reg:name "Gary Adams";
+    reg:updated "2002-01-20";
+    reg:uri "mailto:gary.adams&sun.com".

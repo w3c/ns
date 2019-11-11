@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix fon: <../media-types/application/font-sfnt#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-fon: reg:xref :.
+fon:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Levantovsky";
+    reg:name "Vladimir Levantovsky";
+    reg:updated "2013-03-29";
+    reg:uri "mailto:vladimir.levantovsky&monotypeimaging.com".

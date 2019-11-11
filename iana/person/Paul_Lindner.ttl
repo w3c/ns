@@ -5,23 +5,31 @@
 @prefix rtf: <../media-types/application/rtf#>.
 @prefix wor: <../media-types/application/wordperfect5.1#>.
 @prefix zip: <../media-types/application/zip#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix rt: <../media-types/text/rtf#>.
 @prefix t: <../media-types/text/tab-separated-values#>.
 @prefix qui: <../media-types/video/quicktime#>.
 
-m: reg:xref :.
+m:Resource reg:xref :.
 
-msw: reg:xref :.
+msw:Resource reg:xref :.
 
-rtf: reg:xref :.
+rtf:Resource reg:xref :.
 
-wor: reg:xref :.
+wor:Resource reg:xref :.
 
-zip: reg:xref :.
+zip:Resource reg:xref :.
 
-rt: reg:xref :.
+medi:n0 reg:person :.
 
-t: reg:xref :.
+rt:Resource reg:xref :.
 
-qui: reg:xref :.
+t:Resource reg:xref :.
 
+qui:Resource reg:xref :.
+
+:
+    reg:id "Paul_Lindner";
+    reg:name "Paul Lindner";
+    reg:updated "1993-06-19";
+    reg:uri "mailto:lindner&mudhoney.micro.umn.edu".

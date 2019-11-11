@@ -2,8 +2,16 @@
 @prefix vnd: <../media-types/image/vnd.fpx#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/image/vnd.net-fpx#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Marc_Douglas_Spencer";
+    reg:name "Marc Douglas Spencer";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:marcs&itc.kodak.com".

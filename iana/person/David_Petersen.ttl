@@ -11,38 +11,46 @@
 @prefix n6: <../media-types/image/vnd.sealed-png#>.
 @prefix n7: <../media-types/image/vnd.sealedmedia.softseal-gif#>.
 @prefix n8: <../media-types/image/vnd.sealedmedia.softseal-jpg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n9: <../media-types/video/vnd.sealed-swf#>.
 @prefix n10: <../media-types/video/vnd.sealed.mpeg1#>.
 @prefix n11: <../media-types/video/vnd.sealed.mpeg4#>.
 @prefix n12: <../media-types/video/vnd.sealedmedia.softseal-mov#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
-n3: reg:xref :.
+n3:Resource reg:xref :.
 
-n4: reg:xref :.
+n4:Resource reg:xref :.
 
-n5: reg:xref :.
+n5:Resource reg:xref :.
 
-n6: reg:xref :.
+n6:Resource reg:xref :.
 
-n7: reg:xref :.
+n7:Resource reg:xref :.
 
-n8: reg:xref :.
+n8:Resource reg:xref :.
 
-n9: reg:xref :.
+medi:n0 reg:person :.
 
-n10: reg:xref :.
+n9:Resource reg:xref :.
 
-n11: reg:xref :.
+n10:Resource reg:xref :.
 
-n12: reg:xref :.
+n11:Resource reg:xref :.
 
+n12:Resource reg:xref :.
+
+:
+    reg:id "David_Petersen";
+    reg:name "David Petersen";
+    reg:updated "2003-09-20";
+    reg:uri "mailto:david.petersen&sealedmedia.com".

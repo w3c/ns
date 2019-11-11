@@ -4,12 +4,20 @@
 @prefix se: <../media-types/application/set-payment#>.
 @prefix s: <../media-types/application/set-registration-initiation#>.
 @prefix n1: <../media-types/application/set-registration#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-set: reg:xref :.
+set:Resource reg:xref :.
 
-se: reg:xref :.
+se:Resource reg:xref :.
 
-s: reg:xref :.
+s:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Brian_Korver";
+    reg:name "Brian Korver";
+    reg:updated "1996-10-19";
+    reg:uri "mailto:briank&terisa.com".

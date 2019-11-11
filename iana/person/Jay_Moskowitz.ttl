@@ -1,6 +1,14 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.aether.imp#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Jay_Moskowitz";
+    reg:name "Jay Moskowitz";
+    reg:updated "2001-03-20";
+    reg:uri "mailto:jay&aethersystems.com".

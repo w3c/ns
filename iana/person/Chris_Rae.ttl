@@ -13,30 +13,38 @@
 @prefix n8: <../media-types/application/vnd.ms-powerpoint.template.macroEnabled.12#>.
 @prefix n9: <../media-types/application/vnd.ms-word.document.macroEnabled.12#>.
 @prefix n10: <../media-types/application/vnd.ms-word.template.macroEnabled.12#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
-vnd: reg:xref :.
+vnd:Resource reg:xref :.
 
-vn: reg:xref :.
+vn:Resource reg:xref :.
 
-v: reg:xref :.
+v:Resource reg:xref :.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-n2: reg:xref :.
+n2:Resource reg:xref :.
 
-n3: reg:xref :.
+n3:Resource reg:xref :.
 
-n4: reg:xref :.
+n4:Resource reg:xref :.
 
-n5: reg:xref :.
+n5:Resource reg:xref :.
 
-n6: reg:xref :.
+n6:Resource reg:xref :.
 
-n7: reg:xref :.
+n7:Resource reg:xref :.
 
-n8: reg:xref :.
+n8:Resource reg:xref :.
 
-n9: reg:xref :.
+n9:Resource reg:xref :.
 
-n10: reg:xref :.
+n10:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "Chris_Rae";
+    reg:name "Chris Rae";
+    reg:updated "2011-02-22";
+    reg:uri "mailto:chris.rae&microsoft.com".

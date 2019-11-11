@@ -2,11 +2,18 @@
 @prefix n1: <../media-types/application/applefile#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix m: <../media-types/application/mac-binhex40#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix n2: <../media-types/multipart/appledouble#>.
 
-n1: reg:xref :.
+n1:Resource reg:xref :.
 
-m: reg:xref :.
+m:Resource reg:xref :.
 
-n2: reg:xref :.
+medi:n0 reg:person :.
 
+n2:Resource reg:xref :.
+
+:
+    reg:id "Patrik_Faltstrom";
+    reg:name "Patrik Faltstrom";
+    reg:uri "mailto:paf&nada.kth.se".
