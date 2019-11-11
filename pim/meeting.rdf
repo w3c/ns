@@ -21,6 +21,12 @@ also in time evolve to give a clear idea of the take-aways for posterity</commen
         <mee:label xml:lang="fr">reunion</mee:label>
     </Class>
 
+    <Class rdf:about="http://www.w3.org/ns/pim/meeting#VideoCallPage">
+        <comment>A web page (eg on appear.in, or wherever) for  a live video chat.
+    The URI should be as accurate as possible ideally without requiring meeting numbers, room numbers, etc to be entered.</comment>
+        <label xml:lang="en">video call page</label>
+    </Class>
+
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#actionItems">
         <label>action items</label>
     </rdf:Property>
@@ -32,6 +38,11 @@ also in time evolve to give a clear idea of the take-aways for posterity</commen
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#attendeeGroup">
         <label xml:lang="en">attendees</label>
         <label xml:lang="fr">participants</label>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#chat">
+        <comment>A live text-based chat object or chat document.</comment>
+        <label>chat</label>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#nextMeeting">
@@ -48,8 +59,17 @@ also in time evolve to give a clear idea of the take-aways for posterity</commen
         <label xml:lang="fr">notes</label>
     </rdf:Property>
 
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#toolList">
+    </rdf:Property>
+
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#trip">
         <label>trip</label>
         <range rdf:resource="http://www.w3.org/ns/pim/trip#Trip"/>
+    </rdf:Property>
+
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/meeting#videoCallPage">
+        <comment>For a meeting, a web page (eg on appear.in, or wherever) for  a live video chat for the meeting.
+  The URI should be as accurate as possible ideally without requiring meeting numbers etc to be entered.</comment>
+        <label xml:lang="en">video call</label>
     </rdf:Property>
 </rdf:RDF>

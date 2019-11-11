@@ -16,6 +16,11 @@ also in time evolve to give a clear idea of the take-aways for posterity""" .
          mee:label "meeting"@en,
                 "reunion"@fr .
     
+    mee:VideoCallPage     a :Class;
+         :comment """A web page (eg on appear.in, or wherever) for  a live video chat.
+    The URI should be as accurate as possible ideally without requiring meeting numbers, room numbers, etc to be entered.""";
+         :label "video call page"@en .
+    
     mee:actionItems     a rdf:Property;
          :label "action items" .
     
@@ -25,6 +30,10 @@ also in time evolve to give a clear idea of the take-aways for posterity""" .
     mee:attendeeGroup     a rdf:Property;
          :label "attendees"@en,
                 "participants"@fr .
+    
+    mee:chat     a rdf:Property;
+         :comment "A live text-based chat object or chat document.";
+         :label "chat" .
     
     mee:nextMeeting     a rdf:Property;
          :label "next meeting" .
@@ -37,7 +46,14 @@ also in time evolve to give a clear idea of the take-aways for posterity""" .
          :label "notes"@en,
                 "notes"@fr .
     
+    mee:toolList     a rdf:Property .
+    
     mee:trip     a rdf:Property;
          :label "trip";
          :range trip:Trip .
+    
+    mee:videoCallPage     a rdf:Property;
+         :comment """For a meeting, a web page (eg on appear.in, or wherever) for  a live video chat for the meeting.
+  The URI should be as accurate as possible ideally without requiring meeting numbers etc to be entered.""";
+         :label "video call"@en .
     
