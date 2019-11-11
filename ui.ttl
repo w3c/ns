@@ -20,20 +20,21 @@
     
     :CaseForm     a :Group;
          dc:title "Form for a conditional case in a form";
-         :part  [
-             a :Choice;
-             :canMintNew :true;
-             :from s:Class;
-             :label "when it is";
-             :property :for;
-             :sequence 1 ],
-                 [
-             a :Choice;
-             :canMintNew :true;
-             :from :Form;
-             :property :use;
-             :sequence 2;
-             :use :FieldForm ] .
+         :parts  (
+         [
+                 a :Choice;
+                 :canMintNew :true;
+                 :from s:Class;
+                 :label "when it is";
+                 :property :for;
+                 :sequence 1 ]
+         [
+                 a :Choice;
+                 :canMintNew :true;
+                 :from :Form;
+                 :property :use;
+                 :sequence 2;
+                 :use :FieldForm ] ) .
     
     :Choice     s:subClassOf :Form,
                 :Single .
@@ -67,287 +68,327 @@
     
     :EmailField     s:subClassOf :ValueField .
     
+    :FF1     a :Heading;
+         :contents "Edit Form"@en;
+         :sequence 1 .
+    
+    :FF2     a :SingleLineTextField;
+         :property dc:title;
+         :sequence 2;
+         :size 60 .
+    
+    :FF3     a :Comment;
+         :contents """To add a field to the form, press the blue plus at the bottom,
+        and then select what sort of field you want."""@en;
+         :sequence 3;
+         :style "background-color: #ffe;" .
+    
     :FieldForm     a :Group;
          dc:title "Form for selecting a type of field";
-         :part  [
-             a :Classifier;
-             :category :Form;
-             :property r:type;
-             :sequence 1 ],
-                 [
-             a :Options;
-             :case  [
-                 :for :TextField;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from owl:DatatypeProperty;
-                         :label "property";
-                         :property :property ],
-                             [
-                         a :IntegerField;
-                         :label "field size";
-                         :max 4096;
-                         :min 1;
-                         :property :size ],
-                             [
-                         a :IntegerField;
-                         :label "Max. length of string";
-                         :min 1;
-                         :property :maxLength ] ] ],
-                     [
-                 :for :IntegerField;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from owl:DatatypeProperty;
-                         :label "property";
-                         :property :property;
-                         :sequence 1 ],
-                             [
-                         a :IntegerField;
-                         :label "minimum value";
-                         :property :min;
-                         :sequence 2 ],
-                             [
-                         a :IntegerField;
-                         :label "maximum value";
-                         :property :max;
-                         :sequence 3 ] ] ],
-                     [
-                 :for :DecimalField;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from owl:DatatypeProperty;
-                         :label "property";
-                         :property :property;
-                         :sequence 1 ],
-                             [
-                         a :DecimalField;
-                         :label "minimum value";
-                         :property :min;
-                         :sequence 2 ],
-                             [
-                         a :DecimalField;
-                         :label "maximum value";
-                         :property :max;
-                         :sequence 3 ] ] ],
-                     [
-                 :for :FloatField;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from owl:DatatypeProperty;
-                         :label "property";
-                         :property :property;
-                         :sequence 1 ],
-                             [
-                         a :FloatField;
-                         :label "minimum value";
-                         :property :min;
-                         :sequence 2 ],
-                             [
-                         a :FloatField;
-                         :label "maximum value";
-                         :property :max;
-                         :sequence 3 ] ] ],
-                     [
-                 :for :ColorField;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from owl:DatatypeProperty;
-                         :label "property";
-                         :property :property;
-                         :sequence 1 ] ] ],
-                     [
-                 :for :DateField;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from owl:DatatypeProperty;
-                         :label "property";
-                         :property :property;
-                         :sequence 1 ],
-                             [
-                         a :DateField;
-                         :label "min";
-                         :property :min;
-                         :sequence 2 ],
-                             [
-                         a :DateField;
-                         :label "max";
-                         :property :max;
-                         :sequence 3 ] ] ],
-                     [
-                 :for :DateTimeField;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from owl:DatatypeProperty;
-                         :label "property";
-                         :property :property;
-                         :sequence 1 ],
-                             [
-                         a :DateTimeField;
-                         :label "min";
-                         :property :min;
-                         :sequence 2 ],
-                             [
-                         a :DateTimeField;
-                         :label "max";
-                         :property :max;
-                         :sequence 3 ] ] ],
-                     [
-                 :for :EmailField;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from owl:ObjectProperty;
-                         :label "property";
-                         :property :property;
-                         :sequence 1 ] ] ],
-                     [
-                 :for :PhoneField;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from owl:ObjectProperty;
-                         :label "property";
-                         :property :property;
-                         :sequence 1 ] ] ],
-                     [
-                 :for :Group;
-                 :use :FieldList ],
-                     [
-                 :for :Options;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :default r:type;
-                         :from r:Property;
-                         :label "depending on";
-                         :property :dependingOn;
-                         :sequence 1 ],
-                             [
-                         a :Multiple;
-                         :part :CaseForm;
-                         :property :case;
-                         :sequence 2 ] ] ],
-                     [
-                 :for :Choice;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from owl:ObjectProperty;
-                         :label "property";
-                         :property :property;
-                         :sequence 1 ],
-                             [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from s:Class;
-                         :label "destination class";
-                         :property :from;
-                         :sequence 2 ],
-                             [
-                         a :BooleanField;
-                         :label "user can add new";
-                         :property :canMintNew;
-                         :sequence 3 ],
-                             [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from :Form;
-                         :label "Nested Form (if any)";
-                         :optional :true;
-                         :property :use;
-                         :sequence 4;
-                         :use :FormForm ] ] ],
-                     [
-                 :for :Classifier;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Comment;
-                         :contents "A classifier allows the user to which classes the item belongs to, given a common superclass of the allowed classes.  Give the superclass here:";
-                         :sequence 2 ],
-                             [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from s:Class;
-                         :label "superclass";
-                         :property :category;
-                         :sequence 4 ],
-                             [
-                         a :Comment;
-                         :contents "(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)";
-                         :sequence 6 ],
-                             [
-                         a :Choice;
-                         :canMintNew :true;
-                         :default r:type;
-                         :from owl:ObjectProperty;
-                         :label "property";
-                         :property :property;
-                         :sequence 8 ] ] ],
-                     [
-                 :for :Multiple;
-                 :use  [
-                     a :Group;
-                     :part  [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from r:Property;
-                         :label "property";
-                         :property :property;
-                         :sequence 1 ],
-                             [
-                         a :Choice;
-                         :canMintNew :true;
-                         :from :Form;
-                         :property :part;
-                         :sequence 2;
-                         :use :FieldForm ] ] ],
-                     [
-                 :for :Heading;
-                 :use  [
-                     a :SingleLineTextField;
-                     :property :contents ] ],
-                     [
-                 :for :Comment;
-                 :use  [
-                     a :MultiLineTextField;
-                     :property :contents ] ];
-             :dependingOn r:type;
-             :sequence 2 ] .
+         :parts  (
+         [
+                 a :Classifier;
+                 :category :Form;
+                 :property r:type;
+                 :sequence 1 ]
+         [
+                 a :Options;
+                 :case  [
+                     :for :TextField;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from owl:DatatypeProperty;
+                                 :label "property";
+                                 :property :property ]
+                         [
+                                 a :IntegerField;
+                                 :label "field size";
+                                 :max 4096;
+                                 :min 1;
+                                 :property :size ]
+                         [
+                                 a :IntegerField;
+                                 :label "Max. length of string";
+                                 :min 1;
+                                 :property :maxLength ] ) ] ],
+                         [
+                     :for :IntegerField;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from owl:DatatypeProperty;
+                                 :label "property";
+                                 :property :property;
+                                 :sequence 1 ]
+                         [
+                                 a :IntegerField;
+                                 :label "minimum value";
+                                 :property :min;
+                                 :sequence 2 ]
+                         [
+                                 a :IntegerField;
+                                 :label "maximum value";
+                                 :property :max;
+                                 :sequence 3 ] ) ] ],
+                         [
+                     :for :DecimalField;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from owl:DatatypeProperty;
+                                 :label "property";
+                                 :property :property;
+                                 :sequence 1 ]
+                         [
+                                 a :DecimalField;
+                                 :label "minimum value";
+                                 :property :min;
+                                 :sequence 2 ]
+                         [
+                                 a :DecimalField;
+                                 :label "maximum value";
+                                 :property :max;
+                                 :sequence 3 ] ) ] ],
+                         [
+                     :for :FloatField;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from owl:DatatypeProperty;
+                                 :label "property";
+                                 :property :property;
+                                 :sequence 1 ]
+                         [
+                                 a :FloatField;
+                                 :label "minimum value";
+                                 :property :min;
+                                 :sequence 2 ]
+                         [
+                                 a :FloatField;
+                                 :label "maximum value";
+                                 :property :max;
+                                 :sequence 3 ] ) ] ],
+                         [
+                     :for :ColorField;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from owl:DatatypeProperty;
+                                 :label "property";
+                                 :property :property;
+                                 :sequence 1 ] ) ] ],
+                         [
+                     :for :DateField;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from owl:DatatypeProperty;
+                                 :label "property";
+                                 :property :property;
+                                 :sequence 1 ]
+                         [
+                                 a :DateField;
+                                 :label "min";
+                                 :property :min;
+                                 :sequence 2 ]
+                         [
+                                 a :DateField;
+                                 :label "max";
+                                 :property :max;
+                                 :sequence 3 ] ) ] ],
+                         [
+                     :for :DateTimeField;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from owl:DatatypeProperty;
+                                 :label "property";
+                                 :property :property;
+                                 :sequence 1 ]
+                         [
+                                 a :DateTimeField;
+                                 :label "min";
+                                 :property :min;
+                                 :sequence 2 ]
+                         [
+                                 a :DateTimeField;
+                                 :label "max";
+                                 :property :max;
+                                 :sequence 3 ] ) ] ],
+                         [
+                     :for :EmailField;
+                     :use  [
+                         a :Group;
+                         :parts  [
+                             a :Choice;
+                             :canMintNew :true;
+                             :from owl:ObjectProperty;
+                             :label "property";
+                             :property :property;
+                             :sequence 1 ] ] ],
+                         [
+                     :for :PhoneField;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from owl:ObjectProperty;
+                                 :label "property";
+                                 :property :property;
+                                 :sequence 1 ] ) ] ],
+                         [
+                     :for :Group;
+                     :use :FieldList ],
+                         [
+                     :for :Options;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :default r:type;
+                                 :from r:Property;
+                                 :label "depending on";
+                                 :property :dependingOn;
+                                 :sequence 1 ]
+                         [
+                                 a :Multiple;
+                                 :part :CaseForm;
+                                 :property :case;
+                                 :sequence 2 ] ) ] ],
+                         [
+                     :for :Choice;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from owl:ObjectProperty;
+                                 :label "property";
+                                 :property :property;
+                                 :sequence 1 ]
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from s:Class;
+                                 :label "destination class";
+                                 :property :from;
+                                 :sequence 2 ]
+                         [
+                                 a :BooleanField;
+                                 :label "user can add new";
+                                 :property :canMintNew;
+                                 :sequence 3 ]
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from :Form;
+                                 :label "Nested Form (if any)";
+                                 :optional :true;
+                                 :property :use;
+                                 :sequence 4;
+                                 :use :FormForm ] ) ] ],
+                         [
+                     :for :Classifier;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :Comment;
+                                 :contents "A classifier allows the user to which classes the item belongs to, given a common superclass of the allowed classes.  Give the superclass here:";
+                                 :sequence 2 ]
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from s:Class;
+                                 :label "superclass";
+                                 :property :category;
+                                 :sequence 4 ]
+                         [
+                                 a :Comment;
+                                 :contents "(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)";
+                                 :sequence 6 ]
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :default r:type;
+                                 :from owl:ObjectProperty;
+                                 :label "property";
+                                 :property :property;
+                                 :sequence 8 ] ) ] ],
+                         [
+                     :for :Multiple;
+                     :use  [
+                         a :Group;
+                         :parts  (
+                         [
+                                 a :BooleanField;
+                                 :label "ordered";
+                                 :property :ordered;
+                                 :sequence 0 ]
+                         [
+                                 a :IntergerField;
+                                 :label "miniumum number";
+                                 :property :ordered;
+                                 :sequence 0 ]
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from r:Property;
+                                 :label "property";
+                                 :property :property;
+                                 :sequence 1 ]
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from :Form;
+                                 :property :part;
+                                 :sequence 2;
+                                 :use :FieldForm ] ) ] ],
+                         [
+                     :for :Heading;
+                     :use  [
+                         a :SingleLineTextField;
+                         :property :contents ] ],
+                         [
+                     :for :Comment;
+                     :use  [
+                         a :MultiLineTextField;
+                         :property :contents ] ];
+                 :dependingOn r:type;
+                 :sequence 2 ] ) .
     
     :FieldList     a :Multiple;
-         :part :FieldForm;
-         :property :part;
+         :ordered :true;
+         :parts  (
+        :FieldForm );
+         :property :parts;
          :sequence 10 .
     
     :FloatField     s:subClassOf :NumericField .
@@ -369,22 +410,11 @@
     :FormForm     a :Form,
                 :Group;
          dc:title "Form for editing Forms";
-         :part :FieldList,
-                 [
-             a :Heading;
-             :contents "Edit Form"@en;
-             :sequence 1 ],
-                 [
-             a :SingleLineTextField;
-             :property dc:title;
-             :sequence 2;
-             :size 60 ],
-                 [
-             a :Comment;
-             :contents """To add a field to the form, press the blue plus at the bottom,
-        and then select what sort of field you want."""@en;
-             :sequence 3;
-             :style "background-color: #ffe;" ] .
+         :parts  (
+        :FF1
+        :FF2
+        :FF3
+        :FieldList ) .
     
     :Group     s:subClassOf :Form,
                 :Single .
@@ -491,7 +521,7 @@ facet of the thing.
          s:range :Form .
     
     :dependingOn     a r:Property;
-         s:comment "Many fields prompt for infromation about a gven property of the subject";
+         s:comment "Many fields prompt for information about a given property of the subject";
          s:domain :Options;
          s:label "depending on"@en;
          s:range r:Property .
@@ -532,10 +562,19 @@ facet of the thing.
          s:domain :ValueField;
          s:label "min" .
     
+    :ordered     s:label "ordered";
+         s:range xsd:Boolean;
+         :e r:Property .
+    
     :part     a r:Property;
          s:domain :Form;
          s:label "part"@en;
          s:range :Form .
+    
+    :parts     a r:Property;
+         s:domain :Form;
+         s:label "parts"@en;
+         s:range r:Collection .
     
     :prompt     a r:Property;
          s:comment """A string for the UI to use if the user needs a longer
@@ -544,7 +583,7 @@ facet of the thing.
          :prompt "A longer prompt for a user inputting this property" .
     
     :property     a r:Property;
-         s:comment """Many fields prompt for infromation about a given property of the subject.
+         s:comment """Many fields prompt for information about a given property of the subject.
     When field is filled in, this gives which property is written into the data.""";
          s:domain :Form;
          s:label "property to be stored"@en;

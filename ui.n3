@@ -139,7 +139,7 @@ ui:Classifier a s:Class; s:label "classifier";
 
 ui:property a r:Property; s:domain ui:Form; s:range r:Property;
     s:label "property to be stored"@en;
-    s:comment """Many fields prompt for infromation about a given property of the subject.
+    s:comment """Many fields prompt for information about a given property of the subject.
     When field is filled in, this gives which property is written into the data.""".
 
 ui:category  a r:Property; s:domain ui:Classifier; s:range s:Class;
@@ -148,12 +148,14 @@ ui:category  a r:Property; s:domain ui:Classifier; s:range s:Class;
 
 ui:dependingOn a r:Property; s:domain ui:Options; s:range r:Property;
     s:label "depending on"@en;
-    s:comment """Many fields prompt for infromation about a gven property of the subject""".
+    s:comment """Many fields prompt for information about a given property of the subject""".
 
 ui:for a r:Property; s:label "for"@en; s:comment "The value for which this case is selected.".
 ui:use a r:Property; s:range ui:Form.
 
-ui:part a r:Property; s:label "part"@en ; s:domain ui:Form; s:range ui:Form.  #  Was: s:domain ui:Multiple; s:range ui:Single.
+ui:part a r:Property; s:label "part"@en ; s:domain ui:Form; s:range ui:Form. # Used for Multiple field - the subform for each item
+ui:parts a r:Property; s:label "parts"@en ; s:domain ui:Form; s:range r:Collection. # (of Forms) The ordered set of fields in a group
+ui:ordered e r:Property; s:label "ordered"; s:range xsd:Boolean . # Could be useful for all kinds of things in future so not restricted to Multiple
 
 ui:from a r:Property; s:domain ui:Choice; s:range r:Class;
     s:label "from"; ui:prompt "from what class".
@@ -182,120 +184,125 @@ facet of the thing.
 """.
 
 
-########
-
+#############################################
+#
+# Form for editing Forms
+#
 
 FormForm a ui:Form;
     dc:title "Form for editing Forms";
     is ui:creationForm of Form;
-    a ui:Group; ui:part
-        [ ui:sequence 1; a ui:Heading;  ui:contents "Edit Form"@en],
-        [ ui:sequence 2; a ui:SingleLineTextField; ui:property dc:title; ui:size 60 ],
-        [ ui:sequence 3; a ui:Comment;  ui:contents
-        """To add a field to the form, press the blue plus at the bottom,
-        and then select what sort of field you want."""@en; ui:style "background-color: #ffe;"],
-        FieldList.
+    a ui:Group; ui:parts (FF1 FF2 FF3 FieldList) .
 
-FieldList  ui:sequence 10; a ui:Multiple; ui:property ui:part; ui:part FieldForm .
+    FF1 ui:sequence 1; a ui:Heading;  ui:contents "Edit Form"@en .
+  	FF2 ui:sequence 2; a ui:SingleLineTextField; ui:property dc:title; ui:size 60 .
+    FF3 ui:sequence 3; a ui:Comment;  ui:contents
+        """To add a field to the form, press the blue plus at the bottom,
+        and then select what sort of field you want."""@en; ui:style "background-color: #ffe;" .
+
+    FieldList  ui:sequence 10; a ui:Multiple; ui:ordered true; ui:property ui:parts; ui:parts ( FieldForm ).
 
 FieldForm a ui:Group;
     dc:title "Form for selecting a type of field";
-    ui:part
+    ui:parts (
 
-        [ ui:sequence 1; a ui:Classifier; ui:property r:type; ui:category ui:Form],
+        [ ui:sequence 1; a ui:Classifier; ui:property r:type; ui:category ui:Form]
 
         [ a ui:Options; ui:sequence 2; ui:dependingOn r:type;
 
-            ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:part
-                [ a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],  # @@@ Needs inference on current web
-                [ a ui:IntegerField; ui:property ui:size; ui:label "field size"; ui:min 1; ui:max 4096],
+            ui:case [ ui:for ui:TextField; ui:use [a ui:Group; ui:parts (
+                [ a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty]  # @@@ Needs inference on current web
+                [ a ui:IntegerField; ui:property ui:size; ui:label "field size"; ui:min 1; ui:max 4096]
                 [ a ui:IntegerField; ui:property ui:maxLength; ui:label "Max. length of string"; ui:min 1]
-            ]];
+            )]];
 
-            ui:case [ ui:for ui:IntegerField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],
-                [ ui:sequence 2; a ui:IntegerField; ui:property ui:min; ui:label "minimum value"],
-                [ ui:sequence 3; a ui:IntegerField; ui:property ui:max; ui:label "maximum value"]  ]];
-
-            ui:case [ ui:for ui:DecimalField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],
-                [ ui:sequence 2; a ui:DecimalField; ui:property ui:min; ui:label "minimum value"],
-                [ ui:sequence 3; a ui:DecimalField; ui:property ui:max; ui:label "maximum value"]  ]];
-
-            ui:case [ ui:for ui:FloatField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],
-                [ ui:sequence 2; a ui:FloatField; ui:property ui:min; ui:label "minimum value"],
-                [ ui:sequence 3; a ui:FloatField; ui:property ui:max; ui:label "maximum value"]  ]];
-
-            ui:case [ ui:for ui:ColorField; ui:use [a ui:Group; ui:part
+            ui:case [ ui:for ui:IntegerField; ui:use [a ui:Group; ui:parts (
                 [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty]
+                [ ui:sequence 2; a ui:IntegerField; ui:property ui:min; ui:label "minimum value"]
+                [ ui:sequence 3; a ui:IntegerField; ui:property ui:max; ui:label "maximum value"] ) ]];
+
+            ui:case [ ui:for ui:DecimalField; ui:use [a ui:Group; ui:parts (
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty]
+                [ ui:sequence 2; a ui:DecimalField; ui:property ui:min; ui:label "minimum value"]
+                [ ui:sequence 3; a ui:DecimalField; ui:property ui:max; ui:label "maximum value"] )  ]];
+
+            ui:case [ ui:for ui:FloatField; ui:use [a ui:Group; ui:parts (
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty]
+                [ ui:sequence 2; a ui:FloatField; ui:property ui:min; ui:label "minimum value"]
+                [ ui:sequence 3; a ui:FloatField; ui:property ui:max; ui:label "maximum value"] ) ]];
+
+            ui:case [ ui:for ui:ColorField; ui:use [a ui:Group; ui:parts (
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty] )
             ]];
 
-            ui:case [ ui:for ui:DateField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],
-                [ ui:sequence 2; a ui:DateField; ui:property ui:min; ui:label "min"],
+            ui:case [ ui:for ui:DateField; ui:use [a ui:Group; ui:parts (
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty]
+                [ ui:sequence 2; a ui:DateField; ui:property ui:min; ui:label "min"]
                 [ ui:sequence 3; a ui:DateField; ui:property ui:max ; ui:label "max"]
-            ]];
+            ) ]];
 
-            ui:case [ ui:for ui:DateTimeField; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty],
-                [ ui:sequence 2; a ui:DateTimeField; ui:property ui:min; ui:label "min"],
+            ui:case [ ui:for ui:DateTimeField; ui:use [a ui:Group; ui:parts (
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:DatatypeProperty]
+                [ ui:sequence 2; a ui:DateTimeField; ui:property ui:min; ui:label "min"]
                 [ ui:sequence 3; a ui:DateTimeField; ui:property ui:max ; ui:label "max"]
-            ]];
+            ) ]];
 
-            ui:case [ ui:for ui:EmailField; ui:use [a ui:Group; ui:part
+            ui:case [ ui:for ui:EmailField; ui:use [a ui:Group; ui:parts
                 [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty]
             ]];
 
-            ui:case [ ui:for ui:PhoneField; ui:use [a ui:Group; ui:part
+            ui:case [ ui:for ui:PhoneField; ui:use [a ui:Group; ui:parts (
                 [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty]
-            ]];
+            )]];
 
             ui:case [ ui:for ui:Group; ui:use FieldList];
 
-            ui:case [ ui:for ui:Options; ui:use [a ui:Group; ui:part
-                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:dependingOn; ui:label "depending on"; ui:from r:Property; ui:default r:type],
-                [ ui:sequence 2; a ui:Multiple; ui:property ui:case; ui:part CaseForm]]];
+            ui:case [ ui:for ui:Options; ui:use [a ui:Group; ui:parts (
+                [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:dependingOn; ui:label "depending on"; ui:from r:Property; ui:default r:type]
+                [ ui:sequence 2; a ui:Multiple; ui:property ui:case; ui:part CaseForm]
+								) ]];
 
-            ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:part
+            ui:case [ ui:for ui:Choice; ui:use [a ui:Group; ui:parts (
                 [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property";
-                    ui:canMintNew true; ui:from owl:ObjectProperty],
+                    ui:canMintNew true; ui:from owl:ObjectProperty]
                 [ ui:sequence 2; a ui:Choice;  ui:canMintNew true; ui:property ui:from; ui:label "destination class";
-                                    ui:from s:Class; ui:canMintNew true; ],
+                                    ui:from s:Class; ui:canMintNew true; ]
                 [ ui:sequence 3; a ui:BooleanField; ui:property ui:canMintNew; # No class form yet
-                            ui:label "user can add new"],
+                            ui:label "user can add new"]
                 [ ui:sequence 4; a ui:Choice;  ui:canMintNew true; ui:property ui:use; ui:label "Nested Form (if any)";
                             ui:from ui:Form; ui:optional true; ui:use FormForm] # @@ optional
 
-            ]];
+            ) ]];
 
-            ui:case [ ui:for ui:Classifier; ui:use [a ui:Group; ui:part
-                [ ui:sequence 2; a ui:Comment; ui:contents """A classifier allows the user to which classes the item belongs to, given a common superclass of the allowed classes.  Give the superclass here:""" ],
+            ui:case [ ui:for ui:Classifier; ui:use [a ui:Group; ui:parts (
+                [ ui:sequence 2; a ui:Comment; ui:contents """A classifier allows the user to which classes the item belongs to, given a common superclass of the allowed classes.  Give the superclass here:""" ]
 
-                [ ui:sequence 4; a ui:Choice;  ui:canMintNew true; ui:property ui:category; ui:label "superclass"; ui:from s:Class],
+                [ ui:sequence 4; a ui:Choice;  ui:canMintNew true; ui:property ui:category; ui:label "superclass"; ui:from s:Class]
 
-                [ ui:sequence 6; a ui:Comment; ui:contents """(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)""" ],
+                [ ui:sequence 6; a ui:Comment; ui:contents """(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)""" ]
 
                 [ ui:sequence 8; a ui:Choice;  ui:canMintNew true; ui:property ui:property;
-                        ui:label "property"; ui:from owl:ObjectProperty; ui:default r:type] # @@ restsriction
+                        ui:label "property"; ui:from owl:ObjectProperty; ui:default r:type] # @@ restriction
 
-            ]];
+            ) ]];
 
-            ui:case [ ui:for ui:Multiple; ui:use [a ui:Group; ui:part
-                [ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from r:Property],
-                [ui:sequence 2; a ui:Choice;  ui:canMintNew true; ui:property ui:part; ui:from ui:Form; ui:use FieldForm] ;  # Form for details of the field part of the multiple
-            ]];
+            ui:case [ ui:for ui:Multiple; ui:use [a ui:Group; ui:parts (
+						[ui:sequence 0; a ui:BooleanField;  ui:property ui:ordered; ui:label "ordered"] # If this an ordered array or an unordered set?
+						[ui:sequence 0; a ui:IntergerField;  ui:property ui:min; ui:label "minimum number"] # If this an ordered array or an unordered set?
+						[ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from r:Property]
+                [ui:sequence 2; a ui:Choice;  ui:canMintNew true; ui:property ui:part; ui:from ui:Form; ui:use FieldForm]   # Form for details of the field part of the multiple
+            ) ]];
 
             ui:case [ ui:for ui:Heading; ui:use [a ui:SingleLineTextField; ui:property ui:contents]];
 
             ui:case [ ui:for ui:Comment; ui:use [a ui:MultiLineTextField; ui:property ui:contents]]
-        ].
+        ]).
 
 
 CaseForm a ui:Group;
    dc:title "Form for a conditional case in a form";
-   ui:part
-        [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:for; ui:label "when it is"; ui:canMintNew true; ui:from s:Class] ,
-        [ui:sequence 2; a ui:Choice;  ui:canMintNew true; ui:property ui:use; ui:from ui:Form; ui:canMintNew true; ui:use FieldForm] . # Form for details of the field part of the multiple
+   ui:parts (
+        [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:for; ui:label "when it is"; ui:canMintNew true; ui:from s:Class]
+        [ui:sequence 2; a ui:Choice;  ui:canMintNew true; ui:property ui:use; ui:from ui:Form; ui:canMintNew true; ui:use FieldForm] ). # Form for details of the field part of the multiple
 
 # ENDS

@@ -27,22 +27,27 @@
 
     <Group r:about="http://www.w3.org/ns/ui#CaseForm">
         <dc:title>Form for a conditional case in a form</dc:title>
-        <part r:parseType="Resource">
-            <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-            <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-            <from r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-            <label>when it is</label>
-            <property r:resource="http://www.w3.org/ns/ui#for"/>
-            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-        </part>
-        <part r:parseType="Resource">
-            <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-            <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-            <from r:resource="http://www.w3.org/ns/ui#Form"/>
-            <property r:resource="http://www.w3.org/ns/ui#use"/>
-            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-            <use r:resource="http://www.w3.org/ns/ui#FieldForm"/>
-        </part>
+        <parts r:parseType="Resource">
+            <r:first r:parseType="Resource">
+                <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                <from r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+                <label>when it is</label>
+                <property r:resource="http://www.w3.org/ns/ui#for"/>
+                <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+            </r:first>
+            <r:rest r:parseType="Resource">
+                <r:first r:parseType="Resource">
+                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                    <from r:resource="http://www.w3.org/ns/ui#Form"/>
+                    <property r:resource="http://www.w3.org/ns/ui#use"/>
+                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                    <use r:resource="http://www.w3.org/ns/ui#FieldForm"/>
+                </r:first>
+                <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </r:rest>
+        </parts>
     </Group>
 
     <r:Description r:about="http://www.w3.org/ns/ui#Choice">
@@ -92,354 +97,473 @@
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#ValueField"/>
     </r:Description>
 
+    <Heading r:about="http://www.w3.org/ns/ui#FF1">
+        <contents xml:lang="en">Edit Form</contents>
+        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+    </Heading>
+
+    <SingleLineTextField r:about="http://www.w3.org/ns/ui#FF2">
+        <property r:resource="http://purl.org/dc/elements/1.1/title"/>
+        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+        <size r:datatype="http://www.w3.org/2001/XMLSchema#integer">60</size>
+    </SingleLineTextField>
+
+    <Comment r:about="http://www.w3.org/ns/ui#FF3">
+        <contents xml:lang="en">To add a field to the form, press the blue plus at the bottom,
+        and then select what sort of field you want.</contents>
+        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
+        <style>background-color: #ffe;</style>
+    </Comment>
+
     <Group r:about="http://www.w3.org/ns/ui#FieldForm">
         <dc:title>Form for selecting a type of field</dc:title>
-        <part r:parseType="Resource">
-            <r:type r:resource="http://www.w3.org/ns/ui#Classifier"/>
-            <category r:resource="http://www.w3.org/ns/ui#Form"/>
-            <property r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-        </part>
-        <part r:parseType="Resource">
-            <r:type r:resource="http://www.w3.org/ns/ui#Options"/>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#TextField"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#IntegerField"/>
-                        <label>field size</label>
-                        <max r:datatype="http://www.w3.org/2001/XMLSchema#integer">4096</max>
-                        <min r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</min>
-                        <property r:resource="http://www.w3.org/ns/ui#size"/>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#IntegerField"/>
-                        <label>Max. length of string</label>
-                        <min r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</min>
-                        <property r:resource="http://www.w3.org/ns/ui#maxLength"/>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#IntegerField"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#IntegerField"/>
-                        <label>minimum value</label>
-                        <property r:resource="http://www.w3.org/ns/ui#min"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#IntegerField"/>
-                        <label>maximum value</label>
-                        <property r:resource="http://www.w3.org/ns/ui#max"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#DecimalField"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#DecimalField"/>
-                        <label>minimum value</label>
-                        <property r:resource="http://www.w3.org/ns/ui#min"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#DecimalField"/>
-                        <label>maximum value</label>
-                        <property r:resource="http://www.w3.org/ns/ui#max"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#FloatField"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#FloatField"/>
-                        <label>minimum value</label>
-                        <property r:resource="http://www.w3.org/ns/ui#min"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#FloatField"/>
-                        <label>maximum value</label>
-                        <property r:resource="http://www.w3.org/ns/ui#max"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#ColorField"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#DateField"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#DateField"/>
-                        <label>min</label>
-                        <property r:resource="http://www.w3.org/ns/ui#min"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#DateField"/>
-                        <label>max</label>
-                        <property r:resource="http://www.w3.org/ns/ui#max"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#DateTimeField"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#DateTimeField"/>
-                        <label>min</label>
-                        <property r:resource="http://www.w3.org/ns/ui#min"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#DateTimeField"/>
-                        <label>max</label>
-                        <property r:resource="http://www.w3.org/ns/ui#max"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#EmailField"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#PhoneField"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#Group"/>
-                <use r:resource="http://www.w3.org/ns/ui#FieldList"/>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#Options"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <default r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-                        <from r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-                        <label>depending on</label>
-                        <property r:resource="http://www.w3.org/ns/ui#dependingOn"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Multiple"/>
-                        <part r:resource="http://www.w3.org/ns/ui#CaseForm"/>
-                        <property r:resource="http://www.w3.org/ns/ui#case"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#Choice"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-                        <label>destination class</label>
-                        <property r:resource="http://www.w3.org/ns/ui#from"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#BooleanField"/>
-                        <label>user can add new</label>
-                        <property r:resource="http://www.w3.org/ns/ui#canMintNew"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/ns/ui#Form"/>
-                        <label>Nested Form (if any)</label>
-                        <optional r:resource="http://www.w3.org/ns/ui#true"/>
-                        <property r:resource="http://www.w3.org/ns/ui#use"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sequence>
-                        <use r:resource="http://www.w3.org/ns/ui#FormForm"/>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#Classifier"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Comment"/>
-                        <contents>A classifier allows the user to which classes the item belongs to, given a common superclass of the allowed classes.  Give the superclass here:</contents>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
-                        <label>superclass</label>
-                        <property r:resource="http://www.w3.org/ns/ui#category"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Comment"/>
-                        <contents>(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)</contents>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">6</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <default r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-                        <from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">8</sequence>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#Multiple"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
-                        <label>property</label>
-                        <property r:resource="http://www.w3.org/ns/ui#property"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-                    </part>
-                    <part r:parseType="Resource">
-                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                        <from r:resource="http://www.w3.org/ns/ui#Form"/>
-                        <property r:resource="http://www.w3.org/ns/ui#part"/>
-                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-                        <use r:resource="http://www.w3.org/ns/ui#FieldForm"/>
-                    </part>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#Heading"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#SingleLineTextField"/>
-                    <property r:resource="http://www.w3.org/ns/ui#contents"/>
-                </use>
-            </case>
-            <case r:parseType="Resource">
-                <for r:resource="http://www.w3.org/ns/ui#Comment"/>
-                <use r:parseType="Resource">
-                    <r:type r:resource="http://www.w3.org/ns/ui#MultiLineTextField"/>
-                    <property r:resource="http://www.w3.org/ns/ui#contents"/>
-                </use>
-            </case>
-            <dependingOn r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
-            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-        </part>
+        <parts r:parseType="Resource">
+            <r:first r:parseType="Resource">
+                <r:type r:resource="http://www.w3.org/ns/ui#Classifier"/>
+                <category r:resource="http://www.w3.org/ns/ui#Form"/>
+                <property r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+                <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+            </r:first>
+            <r:rest r:parseType="Resource">
+                <r:first r:parseType="Resource">
+                    <r:type r:resource="http://www.w3.org/ns/ui#Options"/>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#TextField"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                    <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+                                    <label>property</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                </r:first>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:parseType="Resource">
+                                        <r:type r:resource="http://www.w3.org/ns/ui#IntegerField"/>
+                                        <label>field size</label>
+                                        <max r:datatype="http://www.w3.org/2001/XMLSchema#integer">4096</max>
+                                        <min r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</min>
+                                        <property r:resource="http://www.w3.org/ns/ui#size"/>
+                                    </r:first>
+                                    <r:rest r:parseType="Resource">
+                                        <r:first r:parseType="Resource">
+                                            <r:type r:resource="http://www.w3.org/ns/ui#IntegerField"/>
+                                            <label>Max. length of string</label>
+                                            <min r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</min>
+                                            <property r:resource="http://www.w3.org/ns/ui#maxLength"/>
+                                        </r:first>
+                                        <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </r:rest>
+                                </r:rest>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#IntegerField"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                    <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+                                    <label>property</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                </r:first>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:parseType="Resource">
+                                        <r:type r:resource="http://www.w3.org/ns/ui#IntegerField"/>
+                                        <label>minimum value</label>
+                                        <property r:resource="http://www.w3.org/ns/ui#min"/>
+                                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                                    </r:first>
+                                    <r:rest r:parseType="Resource">
+                                        <r:first r:parseType="Resource">
+                                            <r:type r:resource="http://www.w3.org/ns/ui#IntegerField"/>
+                                            <label>maximum value</label>
+                                            <property r:resource="http://www.w3.org/ns/ui#max"/>
+                                            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
+                                        </r:first>
+                                        <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </r:rest>
+                                </r:rest>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#DecimalField"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                    <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+                                    <label>property</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                </r:first>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:parseType="Resource">
+                                        <r:type r:resource="http://www.w3.org/ns/ui#DecimalField"/>
+                                        <label>minimum value</label>
+                                        <property r:resource="http://www.w3.org/ns/ui#min"/>
+                                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                                    </r:first>
+                                    <r:rest r:parseType="Resource">
+                                        <r:first r:parseType="Resource">
+                                            <r:type r:resource="http://www.w3.org/ns/ui#DecimalField"/>
+                                            <label>maximum value</label>
+                                            <property r:resource="http://www.w3.org/ns/ui#max"/>
+                                            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
+                                        </r:first>
+                                        <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </r:rest>
+                                </r:rest>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#FloatField"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                    <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+                                    <label>property</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                </r:first>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:parseType="Resource">
+                                        <r:type r:resource="http://www.w3.org/ns/ui#FloatField"/>
+                                        <label>minimum value</label>
+                                        <property r:resource="http://www.w3.org/ns/ui#min"/>
+                                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                                    </r:first>
+                                    <r:rest r:parseType="Resource">
+                                        <r:first r:parseType="Resource">
+                                            <r:type r:resource="http://www.w3.org/ns/ui#FloatField"/>
+                                            <label>maximum value</label>
+                                            <property r:resource="http://www.w3.org/ns/ui#max"/>
+                                            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
+                                        </r:first>
+                                        <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </r:rest>
+                                </r:rest>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#ColorField"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                    <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+                                    <label>property</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                </r:first>
+                                <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#DateField"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                    <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+                                    <label>property</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                </r:first>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:parseType="Resource">
+                                        <r:type r:resource="http://www.w3.org/ns/ui#DateField"/>
+                                        <label>min</label>
+                                        <property r:resource="http://www.w3.org/ns/ui#min"/>
+                                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                                    </r:first>
+                                    <r:rest r:parseType="Resource">
+                                        <r:first r:parseType="Resource">
+                                            <r:type r:resource="http://www.w3.org/ns/ui#DateField"/>
+                                            <label>max</label>
+                                            <property r:resource="http://www.w3.org/ns/ui#max"/>
+                                            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
+                                        </r:first>
+                                        <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </r:rest>
+                                </r:rest>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#DateTimeField"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                    <from r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+                                    <label>property</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                </r:first>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:parseType="Resource">
+                                        <r:type r:resource="http://www.w3.org/ns/ui#DateTimeField"/>
+                                        <label>min</label>
+                                        <property r:resource="http://www.w3.org/ns/ui#min"/>
+                                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                                    </r:first>
+                                    <r:rest r:parseType="Resource">
+                                        <r:first r:parseType="Resource">
+                                            <r:type r:resource="http://www.w3.org/ns/ui#DateTimeField"/>
+                                            <label>max</label>
+                                            <property r:resource="http://www.w3.org/ns/ui#max"/>
+                                            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
+                                        </r:first>
+                                        <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </r:rest>
+                                </r:rest>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#EmailField"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                <from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+                                <label>property</label>
+                                <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#PhoneField"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                    <from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+                                    <label>property</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                </r:first>
+                                <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#Group"/>
+                        <use r:resource="http://www.w3.org/ns/ui#FieldList"/>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#Options"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                    <default r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+                                    <from r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+                                    <label>depending on</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#dependingOn"/>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                </r:first>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:parseType="Resource">
+                                        <r:type r:resource="http://www.w3.org/ns/ui#Multiple"/>
+                                        <part r:resource="http://www.w3.org/ns/ui#CaseForm"/>
+                                        <property r:resource="http://www.w3.org/ns/ui#case"/>
+                                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                                    </r:first>
+                                    <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                </r:rest>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#Choice"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                    <from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+                                    <label>property</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                </r:first>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:parseType="Resource">
+                                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                        <from r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+                                        <label>destination class</label>
+                                        <property r:resource="http://www.w3.org/ns/ui#from"/>
+                                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                                    </r:first>
+                                    <r:rest r:parseType="Resource">
+                                        <r:first r:parseType="Resource">
+                                            <r:type r:resource="http://www.w3.org/ns/ui#BooleanField"/>
+                                            <label>user can add new</label>
+                                            <property r:resource="http://www.w3.org/ns/ui#canMintNew"/>
+                                            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
+                                        </r:first>
+                                        <r:rest r:parseType="Resource">
+                                            <r:first r:parseType="Resource">
+                                                <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                                <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                                <from r:resource="http://www.w3.org/ns/ui#Form"/>
+                                                <label>Nested Form (if any)</label>
+                                                <optional r:resource="http://www.w3.org/ns/ui#true"/>
+                                                <property r:resource="http://www.w3.org/ns/ui#use"/>
+                                                <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sequence>
+                                                <use r:resource="http://www.w3.org/ns/ui#FormForm"/>
+                                            </r:first>
+                                            <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                        </r:rest>
+                                    </r:rest>
+                                </r:rest>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#Classifier"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Comment"/>
+                                    <contents>A classifier allows the user to which classes the item belongs to, given a common superclass of the allowed classes.  Give the superclass here:</contents>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                                </r:first>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:parseType="Resource">
+                                        <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                        <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                        <from r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+                                        <label>superclass</label>
+                                        <property r:resource="http://www.w3.org/ns/ui#category"/>
+                                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">4</sequence>
+                                    </r:first>
+                                    <r:rest r:parseType="Resource">
+                                        <r:first r:parseType="Resource">
+                                            <r:type r:resource="http://www.w3.org/ns/ui#Comment"/>
+                                            <contents>(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)</contents>
+                                            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">6</sequence>
+                                        </r:first>
+                                        <r:rest r:parseType="Resource">
+                                            <r:first r:parseType="Resource">
+                                                <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                                <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                                <default r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+                                                <from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+                                                <label>property</label>
+                                                <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                                <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">8</sequence>
+                                            </r:first>
+                                            <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                        </r:rest>
+                                    </r:rest>
+                                </r:rest>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#Multiple"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
+                            <parts r:parseType="Resource">
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#BooleanField"/>
+                                    <label>ordered</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#ordered"/>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sequence>
+                                </r:first>
+                                <r:rest r:parseType="Resource">
+                                    <r:first r:parseType="Resource">
+                                        <r:type r:resource="http://www.w3.org/ns/ui#IntergerField"/>
+                                        <label>miniumum number</label>
+                                        <property r:resource="http://www.w3.org/ns/ui#ordered"/>
+                                        <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sequence>
+                                    </r:first>
+                                    <r:rest r:parseType="Resource">
+                                        <r:first r:parseType="Resource">
+                                            <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                            <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                            <from r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+                                            <label>property</label>
+                                            <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                        </r:first>
+                                        <r:rest r:parseType="Resource">
+                                            <r:first r:parseType="Resource">
+                                                <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                                <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                                <from r:resource="http://www.w3.org/ns/ui#Form"/>
+                                                <property r:resource="http://www.w3.org/ns/ui#part"/>
+                                                <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                                                <use r:resource="http://www.w3.org/ns/ui#FieldForm"/>
+                                            </r:first>
+                                            <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                        </r:rest>
+                                    </r:rest>
+                                </r:rest>
+                            </parts>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#Heading"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#SingleLineTextField"/>
+                            <property r:resource="http://www.w3.org/ns/ui#contents"/>
+                        </use>
+                    </case>
+                    <case r:parseType="Resource">
+                        <for r:resource="http://www.w3.org/ns/ui#Comment"/>
+                        <use r:parseType="Resource">
+                            <r:type r:resource="http://www.w3.org/ns/ui#MultiLineTextField"/>
+                            <property r:resource="http://www.w3.org/ns/ui#contents"/>
+                        </use>
+                    </case>
+                    <dependingOn r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
+                </r:first>
+                <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </r:rest>
+        </parts>
     </Group>
 
     <Multiple r:about="http://www.w3.org/ns/ui#FieldList">
-        <part r:resource="http://www.w3.org/ns/ui#FieldForm"/>
-        <property r:resource="http://www.w3.org/ns/ui#part"/>
+        <ordered r:resource="http://www.w3.org/ns/ui#true"/>
+        <parts r:parseType="Resource">
+            <r:first r:resource="http://www.w3.org/ns/ui#FieldForm"/>
+            <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </parts>
+        <property r:resource="http://www.w3.org/ns/ui#parts"/>
         <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">10</sequence>
     </Multiple>
 
@@ -481,25 +605,19 @@
     <Form r:about="http://www.w3.org/ns/ui#FormForm">
         <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
         <dc:title>Form for editing Forms</dc:title>
-        <part r:resource="http://www.w3.org/ns/ui#FieldList"/>
-        <part r:parseType="Resource">
-            <r:type r:resource="http://www.w3.org/ns/ui#Heading"/>
-            <contents xml:lang="en">Edit Form</contents>
-            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
-        </part>
-        <part r:parseType="Resource">
-            <r:type r:resource="http://www.w3.org/ns/ui#SingleLineTextField"/>
-            <property r:resource="http://purl.org/dc/elements/1.1/title"/>
-            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">2</sequence>
-            <size r:datatype="http://www.w3.org/2001/XMLSchema#integer">60</size>
-        </part>
-        <part r:parseType="Resource">
-            <r:type r:resource="http://www.w3.org/ns/ui#Comment"/>
-            <contents xml:lang="en">To add a field to the form, press the blue plus at the bottom,
-        and then select what sort of field you want.</contents>
-            <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
-            <style>background-color: #ffe;</style>
-        </part>
+        <parts r:parseType="Resource">
+            <r:first r:resource="http://www.w3.org/ns/ui#FF1"/>
+            <r:rest r:parseType="Resource">
+                <r:first r:resource="http://www.w3.org/ns/ui#FF2"/>
+                <r:rest r:parseType="Resource">
+                    <r:first r:resource="http://www.w3.org/ns/ui#FF3"/>
+                    <r:rest r:parseType="Resource">
+                        <r:first r:resource="http://www.w3.org/ns/ui#FieldList"/>
+                        <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </r:rest>
+                </r:rest>
+            </r:rest>
+        </parts>
     </Form>
 
     <r:Description r:about="http://www.w3.org/ns/ui#Group">
@@ -677,7 +795,7 @@ facet of the thing.
     </r:Property>
 
     <r:Property r:about="http://www.w3.org/ns/ui#dependingOn">
-        <s:comment>Many fields prompt for infromation about a gven property of the subject</s:comment>
+        <s:comment>Many fields prompt for information about a given property of the subject</s:comment>
         <s:domain r:resource="http://www.w3.org/ns/ui#Options"/>
         <s:label xml:lang="en">depending on</s:label>
         <s:range r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
@@ -725,10 +843,22 @@ facet of the thing.
         <s:label>min</s:label>
     </r:Property>
 
+    <r:Description r:about="http://www.w3.org/ns/ui#ordered">
+        <s:label>ordered</s:label>
+        <s:range r:resource="http://www.w3.org/2001/XMLSchema#Boolean"/>
+        <e r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </r:Description>
+
     <r:Property r:about="http://www.w3.org/ns/ui#part">
         <s:domain r:resource="http://www.w3.org/ns/ui#Form"/>
         <s:label xml:lang="en">part</s:label>
         <s:range r:resource="http://www.w3.org/ns/ui#Form"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#parts">
+        <s:domain r:resource="http://www.w3.org/ns/ui#Form"/>
+        <s:label xml:lang="en">parts</s:label>
+        <s:range r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Collection"/>
     </r:Property>
 
     <r:Property r:about="http://www.w3.org/ns/ui#prompt">
@@ -739,7 +869,7 @@ facet of the thing.
     </r:Property>
 
     <r:Property r:about="http://www.w3.org/ns/ui#property">
-        <s:comment>Many fields prompt for infromation about a given property of the subject.
+        <s:comment>Many fields prompt for information about a given property of the subject.
     When field is filled in, this gives which property is written into the data.</s:comment>
         <s:domain r:resource="http://www.w3.org/ns/ui#Form"/>
         <s:label xml:lang="en">property to be stored</s:label>
