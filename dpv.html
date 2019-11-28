@@ -1,4 +1,4 @@
-<!DOCTYPE html><html dir="ltr" lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="content-type"><meta name="generator" content="ReSpec 24.27.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
+<!DOCTYPE html><html dir="ltr" lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="content-type"><meta name="generator" content="ReSpec 24.35.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- EXAMPLES --- */
 span.example-title {
     text-transform: none;
 }
@@ -52,12 +52,10 @@ span.warning { padding: .1em .5em .15em; }
 
 .warning-title:before{
     content: "⚠"; /*U+26A0 WARNING SIGN*/
-    font-size: 3em;
+    font-size: 1.3em;
     float: left;
-    height: 100%;
     padding-right: .3em;
-    vertical-align: top;
-    margin-top: -0.5em;
+    margin-top: -0.3em;
 }
 
 li.task-list-item {
@@ -225,6 +223,12 @@ table.simple {
 
 .simple th {
   background: #005a9c;
+  color: #fff;
+  padding: 3px 5px;
+  text-align: left;
+}
+
+.simple th a {
   color: #fff;
   padding: 3px 5px;
   text-align: left;
@@ -428,7 +432,7 @@ h6 > a.self-link::before {
       MARGIN: 0px 0px 10px
     }
   </style>
-<style>/*
+<meta name="description" content="The Data Privacy Vocabulary (DPV) provides terms (classes and properties) to annotate and categorize instances of legally compliant personal data handling according to the EU General Data Protection Regulation. This scope could be extended by later versions to other data and privacy protection regulations. The vocabulary provides terms to describe which personal data Categories are undergoing a specified kind of processing by a specific data controller and/or transferred to some recipient for a particular purpose, based on a specific legal ground (e.g., consent, or other legal grounds such as legitimate interest, etc.), with specified technical and organisational measures and restrictions (e.g., storage locations and storage durations) in place."><style>/*
 
 github.com style (c) Vasily Polovnyov <vast@whiteants.net>
 
@@ -668,16 +672,16 @@ var[data-type]:hover::before {
       "id": "nace-naics"
     }
   },
-  "publishISODate": "2019-07-26T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 26 July 2019"
-}</script><meta name="description" content="The Data Privacy Vocabulary (DPV) provides terms (classes and properties) to annotate and categorize instances of legally compliant personal data handling according to the EU General Data Protection Regulation. This scope could be extended by later versions to other data and privacy protection regulations. The vocabulary provides terms to describe which personal data Categories are undergoing a specified kind of processing by a specific data controller and/or transferred to some recipient for a particular purpose, based on a specific legal ground (e.g., consent, or other legal grounds such as legitimate interest, etc.), with specified technical and organisational measures and restrictions (e.g., storage locations and storage durations) in place."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
-<body class="h-entry informative"><div class="head">
+  "publishISODate": "2019-11-28T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 28 November 2019"
+}</script><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
+<body class="h-entry informative toc-inline"><div class="head">
       <a class="logo" href="https://www.w3.org/"><img alt="W3C" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72" height="48"></a>
       <h1 class="title p-name" id="title">Data Privacy Vocabulary v0.1</h1>
       
       <h2>
         Draft Community Group Report
-        <time class="dt-published" datetime="2019-07-26">26 July 2019</time>
+        <time class="dt-published" datetime="2019-11-28">28 November 2019</time>
       </h2>
       <dl>
         
@@ -781,7 +785,7 @@ var[data-type]:hover::before {
           <li>source - mention where the new term originates from (e.g., from a legal regulation or from an existing ontology, if possible with a link confirming the reference.</li>
         </ul>
     </section></div>
-  </section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#namespaces"><bdi class="secno">2. </bdi>Namespaces</a></li><li class="tocline"><a class="tocxref" href="#vocab-base"><bdi class="secno">3. </bdi>Base Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#baseontology-classes"><bdi class="secno">3.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#data-controller"><bdi class="secno">3.1.1 </bdi>Data Controller</a></li><li class="tocline"><a class="tocxref" href="#data-subject"><bdi class="secno">3.1.2 </bdi>Data Subject</a></li><li class="tocline"><a class="tocxref" href="#legal-basis"><bdi class="secno">3.1.3 </bdi>Legal Basis</a></li><li class="tocline"><a class="tocxref" href="#personal-data-category"><bdi class="secno">3.1.4 </bdi>Personal Data Category</a></li><li class="tocline"><a class="tocxref" href="#personal-data-handling"><bdi class="secno">3.1.5 </bdi>Personal Data Handling</a></li><li class="tocline"><a class="tocxref" href="#processing"><bdi class="secno">3.1.6 </bdi>Processing</a></li><li class="tocline"><a class="tocxref" href="#purpose"><bdi class="secno">3.1.7 </bdi>Purpose</a></li><li class="tocline"><a class="tocxref" href="#recipient"><bdi class="secno">3.1.8 </bdi>Recipient</a></li><li class="tocline"><a class="tocxref" href="#technical-organisational-measure"><bdi class="secno">3.1.9 </bdi>Technical Organisational Measure</a></li></ol></li><li class="tocline"><a class="tocxref" href="#baseontology-properties"><bdi class="secno">3.2 </bdi>Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#has-data-controller"><bdi class="secno">3.2.1 </bdi>has Data Controller</a></li><li class="tocline"><a class="tocxref" href="#has-data-subject"><bdi class="secno">3.2.2 </bdi>has Data Subject</a></li><li class="tocline"><a class="tocxref" href="#has-legal-basis"><bdi class="secno">3.2.3 </bdi>has Legal Basis</a></li><li class="tocline"><a class="tocxref" href="#has-personal-data-category"><bdi class="secno">3.2.4 </bdi>has Personal Data Category</a></li><li class="tocline"><a class="tocxref" href="#has-processing"><bdi class="secno">3.2.5 </bdi>has Processing</a></li><li class="tocline"><a class="tocxref" href="#has-purpose"><bdi class="secno">3.2.6 </bdi>has Purpose</a></li><li class="tocline"><a class="tocxref" href="#has-recipient"><bdi class="secno">3.2.7 </bdi>has Recipient</a></li><li class="tocline"><a class="tocxref" href="#has-technical-organisational-measure"><bdi class="secno">3.2.8 </bdi>has Technical Organisational Measure</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-personal-data-categories"><bdi class="secno">4. </bdi>Personal Data Categories</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#personaldatacategory-classes"><bdi class="secno">4.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accent"><bdi class="secno">4.1.1 </bdi>Accent</a></li><li class="tocline"><a class="tocxref" href="#account-identifier"><bdi class="secno">4.1.2 </bdi>Account Identifier</a></li><li class="tocline"><a class="tocxref" href="#acquantaince"><bdi class="secno">4.1.3 </bdi>Acquantaince</a></li><li class="tocline"><a class="tocxref" href="#age"><bdi class="secno">4.1.4 </bdi>Age</a></li><li class="tocline"><a class="tocxref" href="#apartment-owned"><bdi class="secno">4.1.5 </bdi>Apartment Owned</a></li><li class="tocline"><a class="tocxref" href="#association"><bdi class="secno">4.1.6 </bdi>Association</a></li><li class="tocline"><a class="tocxref" href="#attitude"><bdi class="secno">4.1.7 </bdi>Attitude</a></li><li class="tocline"><a class="tocxref" href="#authenticating"><bdi class="secno">4.1.8 </bdi>Authenticating</a></li><li class="tocline"><a class="tocxref" href="#bank-account"><bdi class="secno">4.1.9 </bdi>Bank Account</a></li><li class="tocline"><a class="tocxref" href="#behavioral"><bdi class="secno">4.1.10 </bdi>Behavioral</a></li><li class="tocline"><a class="tocxref" href="#biometric"><bdi class="secno">4.1.11 </bdi>Biometric</a></li><li class="tocline"><a class="tocxref" href="#blood-type"><bdi class="secno">4.1.12 </bdi>Blood Type</a></li><li class="tocline"><a class="tocxref" href="#browser-fingerprint"><bdi class="secno">4.1.13 </bdi>Browser Fingerprint</a></li><li class="tocline"><a class="tocxref" href="#browsing-behavior"><bdi class="secno">4.1.14 </bdi>Browsing Behavior</a></li><li class="tocline"><a class="tocxref" href="#call-log"><bdi class="secno">4.1.15 </bdi>Call Log</a></li><li class="tocline"><a class="tocxref" href="#car-owned"><bdi class="secno">4.1.16 </bdi>Car Owned</a></li><li class="tocline"><a class="tocxref" href="#certification"><bdi class="secno">4.1.17 </bdi>Certification</a></li><li class="tocline"><a class="tocxref" href="#character"><bdi class="secno">4.1.18 </bdi>Character</a></li><li class="tocline"><a class="tocxref" href="#communication"><bdi class="secno">4.1.19 </bdi>Communication</a></li><li class="tocline"><a class="tocxref" href="#communications-metadata"><bdi class="secno">4.1.20 </bdi>Communications Metadata</a></li><li class="tocline"><a class="tocxref" href="#connection"><bdi class="secno">4.1.21 </bdi>Connection</a></li><li class="tocline"><a class="tocxref" href="#contact"><bdi class="secno">4.1.22 </bdi>Contact</a></li><li class="tocline"><a class="tocxref" href="#country"><bdi class="secno">4.1.23 </bdi>Country</a></li><li class="tocline"><a class="tocxref" href="#credit"><bdi class="secno">4.1.24 </bdi>Credit</a></li><li class="tocline"><a class="tocxref" href="#credit-0"><bdi class="secno">4.1.25 </bdi>Credit</a></li><li class="tocline"><a class="tocxref" href="#credit-capacity"><bdi class="secno">4.1.26 </bdi>Credit Capacity</a></li><li class="tocline"><a class="tocxref" href="#credit-card-number"><bdi class="secno">4.1.27 </bdi>Credit Card Number</a></li><li class="tocline"><a class="tocxref" href="#credit-record"><bdi class="secno">4.1.28 </bdi>Credit Record</a></li><li class="tocline"><a class="tocxref" href="#credit-score"><bdi class="secno">4.1.29 </bdi>Credit Score</a></li><li class="tocline"><a class="tocxref" href="#credit-standing"><bdi class="secno">4.1.30 </bdi>Credit Standing</a></li><li class="tocline"><a class="tocxref" href="#credit-worthiness"><bdi class="secno">4.1.31 </bdi>Credit Worthiness</a></li><li class="tocline"><a class="tocxref" href="#criminal"><bdi class="secno">4.1.32 </bdi>Criminal</a></li><li class="tocline"><a class="tocxref" href="#criminal-charge"><bdi class="secno">4.1.33 </bdi>Criminal Charge</a></li><li class="tocline"><a class="tocxref" href="#criminal-conviction"><bdi class="secno">4.1.34 </bdi>Criminal Conviction</a></li><li class="tocline"><a class="tocxref" href="#criminal-pardon"><bdi class="secno">4.1.35 </bdi>Criminal Pardon</a></li><li class="tocline"><a class="tocxref" href="#dnacode"><bdi class="secno">4.1.36 </bdi>DNACode</a></li><li class="tocline"><a class="tocxref" href="#demeanor"><bdi class="secno">4.1.37 </bdi>Demeanor</a></li><li class="tocline"><a class="tocxref" href="#demographic"><bdi class="secno">4.1.38 </bdi>Demographic</a></li><li class="tocline"><a class="tocxref" href="#derived-personal-data"><bdi class="secno">4.1.39 </bdi>Derived Personal Data</a></li><li class="tocline"><a class="tocxref" href="#device-based"><bdi class="secno">4.1.40 </bdi>Device Based</a></li><li class="tocline"><a class="tocxref" href="#dialect"><bdi class="secno">4.1.41 </bdi>Dialect</a></li><li class="tocline"><a class="tocxref" href="#disability"><bdi class="secno">4.1.42 </bdi>Disability</a></li><li class="tocline"><a class="tocxref" href="#disciplinary-action"><bdi class="secno">4.1.43 </bdi>Disciplinary Action</a></li><li class="tocline"><a class="tocxref" href="#dislike"><bdi class="secno">4.1.44 </bdi>Dislike</a></li><li class="tocline"><a class="tocxref" href="#divorce"><bdi class="secno">4.1.45 </bdi>Divorce</a></li><li class="tocline"><a class="tocxref" href="#drug-test-result"><bdi class="secno">4.1.46 </bdi>Drug Test Result</a></li><li class="tocline"><a class="tocxref" href="#email-address"><bdi class="secno">4.1.47 </bdi>Email Address</a></li><li class="tocline"><a class="tocxref" href="#email-content"><bdi class="secno">4.1.48 </bdi>Email Content</a></li><li class="tocline"><a class="tocxref" href="#employment-history"><bdi class="secno">4.1.49 </bdi>Employment History</a></li><li class="tocline"><a class="tocxref" href="#ethnic-origin"><bdi class="secno">4.1.50 </bdi>Ethnic Origin</a></li><li class="tocline"><a class="tocxref" href="#ethnicity"><bdi class="secno">4.1.51 </bdi>Ethnicity</a></li><li class="tocline"><a class="tocxref" href="#external"><bdi class="secno">4.1.52 </bdi>External</a></li><li class="tocline"><a class="tocxref" href="#family"><bdi class="secno">4.1.53 </bdi>Family</a></li><li class="tocline"><a class="tocxref" href="#family-health-history"><bdi class="secno">4.1.54 </bdi>Family Health History</a></li><li class="tocline"><a class="tocxref" href="#family-structure"><bdi class="secno">4.1.55 </bdi>Family Structure</a></li><li class="tocline"><a class="tocxref" href="#favorite"><bdi class="secno">4.1.56 </bdi>Favorite</a></li><li class="tocline"><a class="tocxref" href="#favorite-color"><bdi class="secno">4.1.57 </bdi>Favorite Color</a></li><li class="tocline"><a class="tocxref" href="#favorite-food"><bdi class="secno">4.1.58 </bdi>Favorite Food</a></li><li class="tocline"><a class="tocxref" href="#favorite-music"><bdi class="secno">4.1.59 </bdi>Favorite Music</a></li><li class="tocline"><a class="tocxref" href="#fetish"><bdi class="secno">4.1.60 </bdi>Fetish</a></li><li class="tocline"><a class="tocxref" href="#financial"><bdi class="secno">4.1.61 </bdi>Financial</a></li><li class="tocline"><a class="tocxref" href="#financial-account"><bdi class="secno">4.1.62 </bdi>Financial Account</a></li><li class="tocline"><a class="tocxref" href="#financial-account-number"><bdi class="secno">4.1.63 </bdi>Financial Account Number</a></li><li class="tocline"><a class="tocxref" href="#fingerprint"><bdi class="secno">4.1.64 </bdi>Fingerprint</a></li><li class="tocline"><a class="tocxref" href="#friend"><bdi class="secno">4.1.65 </bdi>Friend</a></li><li class="tocline"><a class="tocxref" href="#gpscoordinate"><bdi class="secno">4.1.66 </bdi>GPSCoordinate</a></li><li class="tocline"><a class="tocxref" href="#gender"><bdi class="secno">4.1.67 </bdi>Gender</a></li><li class="tocline"><a class="tocxref" href="#general-reputation"><bdi class="secno">4.1.68 </bdi>General Reputation</a></li><li class="tocline"><a class="tocxref" href="#geographic"><bdi class="secno">4.1.69 </bdi>Geographic</a></li><li class="tocline"><a class="tocxref" href="#group-membership"><bdi class="secno">4.1.70 </bdi>Group Membership</a></li><li class="tocline"><a class="tocxref" href="#hair-color"><bdi class="secno">4.1.71 </bdi>Hair Color</a></li><li class="tocline"><a class="tocxref" href="#health"><bdi class="secno">4.1.72 </bdi>Health</a></li><li class="tocline"><a class="tocxref" href="#health-history"><bdi class="secno">4.1.73 </bdi>Health History</a></li><li class="tocline"><a class="tocxref" href="#health-record"><bdi class="secno">4.1.74 </bdi>Health Record</a></li><li class="tocline"><a class="tocxref" href="#height"><bdi class="secno">4.1.75 </bdi>Height</a></li><li class="tocline"><a class="tocxref" href="#historical"><bdi class="secno">4.1.76 </bdi>Historical</a></li><li class="tocline"><a class="tocxref" href="#house-owned"><bdi class="secno">4.1.77 </bdi>House Owned</a></li><li class="tocline"><a class="tocxref" href="#ipaddress"><bdi class="secno">4.1.78 </bdi>IPAddress</a></li><li class="tocline"><a class="tocxref" href="#identifying"><bdi class="secno">4.1.79 </bdi>Identifying</a></li><li class="tocline"><a class="tocxref" href="#income"><bdi class="secno">4.1.80 </bdi>Income</a></li><li class="tocline"><a class="tocxref" href="#income-bracket"><bdi class="secno">4.1.81 </bdi>Income Bracket</a></li><li class="tocline"><a class="tocxref" href="#individual-health-history"><bdi class="secno">4.1.82 </bdi>Individual Health History</a></li><li class="tocline"><a class="tocxref" href="#intention"><bdi class="secno">4.1.83 </bdi>Intention</a></li><li class="tocline"><a class="tocxref" href="#interaction"><bdi class="secno">4.1.84 </bdi>Interaction</a></li><li class="tocline"><a class="tocxref" href="#interest"><bdi class="secno">4.1.85 </bdi>Interest</a></li><li class="tocline"><a class="tocxref" href="#internal"><bdi class="secno">4.1.86 </bdi>Internal</a></li><li class="tocline"><a class="tocxref" href="#job"><bdi class="secno">4.1.87 </bdi>Job</a></li><li class="tocline"><a class="tocxref" href="#knowledge-belief"><bdi class="secno">4.1.88 </bdi>Knowledge Belief</a></li><li class="tocline"><a class="tocxref" href="#language"><bdi class="secno">4.1.89 </bdi>Language</a></li><li class="tocline"><a class="tocxref" href="#life-history"><bdi class="secno">4.1.90 </bdi>Life History</a></li><li class="tocline"><a class="tocxref" href="#like"><bdi class="secno">4.1.91 </bdi>Like</a></li><li class="tocline"><a class="tocxref" href="#link-clicked"><bdi class="secno">4.1.92 </bdi>Link Clicked</a></li><li class="tocline"><a class="tocxref" href="#loan-record"><bdi class="secno">4.1.93 </bdi>Loan Record</a></li><li class="tocline"><a class="tocxref" href="#location"><bdi class="secno">4.1.94 </bdi>Location</a></li><li class="tocline"><a class="tocxref" href="#macaddress"><bdi class="secno">4.1.95 </bdi>MACAddress</a></li><li class="tocline"><a class="tocxref" href="#marital-status"><bdi class="secno">4.1.96 </bdi>Marital Status</a></li><li class="tocline"><a class="tocxref" href="#marriage"><bdi class="secno">4.1.97 </bdi>Marriage</a></li><li class="tocline"><a class="tocxref" href="#medical-health"><bdi class="secno">4.1.98 </bdi>Medical Health</a></li><li class="tocline"><a class="tocxref" href="#mental-health"><bdi class="secno">4.1.99 </bdi>Mental Health</a></li><li class="tocline"><a class="tocxref" href="#name"><bdi class="secno">4.1.100 </bdi>Name</a></li><li class="tocline"><a class="tocxref" href="#official-id"><bdi class="secno">4.1.101 </bdi>Official ID</a></li><li class="tocline"><a class="tocxref" href="#offspring"><bdi class="secno">4.1.102 </bdi>Offspring</a></li><li class="tocline"><a class="tocxref" href="#opinion"><bdi class="secno">4.1.103 </bdi>Opinion</a></li><li class="tocline"><a class="tocxref" href="#ownership"><bdi class="secno">4.1.104 </bdi>Ownership</a></li><li class="tocline"><a class="tocxref" href="#pincode"><bdi class="secno">4.1.105 </bdi>PINCode</a></li><li class="tocline"><a class="tocxref" href="#parent"><bdi class="secno">4.1.106 </bdi>Parent</a></li><li class="tocline"><a class="tocxref" href="#password"><bdi class="secno">4.1.107 </bdi>Password</a></li><li class="tocline"><a class="tocxref" href="#personal-possession"><bdi class="secno">4.1.108 </bdi>Personal Possession</a></li><li class="tocline"><a class="tocxref" href="#personality"><bdi class="secno">4.1.109 </bdi>Personality</a></li><li class="tocline"><a class="tocxref" href="#philosophical-belief"><bdi class="secno">4.1.110 </bdi>Philosophical Belief</a></li><li class="tocline"><a class="tocxref" href="#physical-address"><bdi class="secno">4.1.111 </bdi>Physical Address</a></li><li class="tocline"><a class="tocxref" href="#physical-characteristic"><bdi class="secno">4.1.112 </bdi>Physical Characteristic</a></li><li class="tocline"><a class="tocxref" href="#physical-health"><bdi class="secno">4.1.113 </bdi>Physical Health</a></li><li class="tocline"><a class="tocxref" href="#physical-trait"><bdi class="secno">4.1.114 </bdi>Physical Trait</a></li><li class="tocline"><a class="tocxref" href="#picture"><bdi class="secno">4.1.115 </bdi>Picture</a></li><li class="tocline"><a class="tocxref" href="#piercing"><bdi class="secno">4.1.116 </bdi>Piercing</a></li><li class="tocline"><a class="tocxref" href="#political-affiliation"><bdi class="secno">4.1.117 </bdi>Political Affiliation</a></li><li class="tocline"><a class="tocxref" href="#preference"><bdi class="secno">4.1.118 </bdi>Preference</a></li><li class="tocline"><a class="tocxref" href="#prescription"><bdi class="secno">4.1.119 </bdi>Prescription</a></li><li class="tocline"><a class="tocxref" href="#privacy-preference"><bdi class="secno">4.1.120 </bdi>Privacy Preference</a></li><li class="tocline"><a class="tocxref" href="#proclivitie"><bdi class="secno">4.1.121 </bdi>Proclivitie</a></li><li class="tocline"><a class="tocxref" href="#professional"><bdi class="secno">4.1.122 </bdi>Professional</a></li><li class="tocline"><a class="tocxref" href="#professional-evaluation"><bdi class="secno">4.1.123 </bdi>Professional Evaluation</a></li><li class="tocline"><a class="tocxref" href="#professional-interview"><bdi class="secno">4.1.124 </bdi>Professional Interview</a></li><li class="tocline"><a class="tocxref" href="#public-life"><bdi class="secno">4.1.125 </bdi>Public Life</a></li><li class="tocline"><a class="tocxref" href="#purchase"><bdi class="secno">4.1.126 </bdi>Purchase</a></li><li class="tocline"><a class="tocxref" href="#purchases-and-spending-habit"><bdi class="secno">4.1.127 </bdi>Purchases And Spending Habit</a></li><li class="tocline"><a class="tocxref" href="#race"><bdi class="secno">4.1.128 </bdi>Race</a></li><li class="tocline"><a class="tocxref" href="#reference"><bdi class="secno">4.1.129 </bdi>Reference</a></li><li class="tocline"><a class="tocxref" href="#relationship"><bdi class="secno">4.1.130 </bdi>Relationship</a></li><li class="tocline"><a class="tocxref" href="#religion"><bdi class="secno">4.1.131 </bdi>Religion</a></li><li class="tocline"><a class="tocxref" href="#religious-belief"><bdi class="secno">4.1.132 </bdi>Religious Belief</a></li><li class="tocline"><a class="tocxref" href="#retina"><bdi class="secno">4.1.133 </bdi>Retina</a></li><li class="tocline"><a class="tocxref" href="#room-number"><bdi class="secno">4.1.134 </bdi>Room Number</a></li><li class="tocline"><a class="tocxref" href="#salary"><bdi class="secno">4.1.135 </bdi>Salary</a></li><li class="tocline"><a class="tocxref" href="#sale"><bdi class="secno">4.1.136 </bdi>Sale</a></li><li class="tocline"><a class="tocxref" href="#school"><bdi class="secno">4.1.137 </bdi>School</a></li><li class="tocline"><a class="tocxref" href="#secret-text"><bdi class="secno">4.1.138 </bdi>Secret Text</a></li><li class="tocline"><a class="tocxref" href="#sexual"><bdi class="secno">4.1.139 </bdi>Sexual</a></li><li class="tocline"><a class="tocxref" href="#sexual-history"><bdi class="secno">4.1.140 </bdi>Sexual History</a></li><li class="tocline"><a class="tocxref" href="#sexual-preference"><bdi class="secno">4.1.141 </bdi>Sexual Preference</a></li><li class="tocline"><a class="tocxref" href="#sibling"><bdi class="secno">4.1.142 </bdi>Sibling</a></li><li class="tocline"><a class="tocxref" href="#skin-tone"><bdi class="secno">4.1.143 </bdi>Skin Tone</a></li><li class="tocline"><a class="tocxref" href="#social"><bdi class="secno">4.1.144 </bdi>Social</a></li><li class="tocline"><a class="tocxref" href="#social-media-communication"><bdi class="secno">4.1.145 </bdi>Social Media Communication</a></li><li class="tocline"><a class="tocxref" href="#social-network"><bdi class="secno">4.1.146 </bdi>Social Network</a></li><li class="tocline"><a class="tocxref" href="#social-status"><bdi class="secno">4.1.147 </bdi>Social Status</a></li><li class="tocline"><a class="tocxref" href="#special-category-personal-data"><bdi class="secno">4.1.148 </bdi>Special Category Personal Data</a></li><li class="tocline"><a class="tocxref" href="#tattoo"><bdi class="secno">4.1.149 </bdi>Tattoo</a></li><li class="tocline"><a class="tocxref" href="#tax"><bdi class="secno">4.1.150 </bdi>Tax</a></li><li class="tocline"><a class="tocxref" href="#telephone-number"><bdi class="secno">4.1.151 </bdi>Telephone Number</a></li><li class="tocline"><a class="tocxref" href="#thought"><bdi class="secno">4.1.152 </bdi>Thought</a></li><li class="tocline"><a class="tocxref" href="#tracking"><bdi class="secno">4.1.153 </bdi>Tracking</a></li><li class="tocline"><a class="tocxref" href="#transaction"><bdi class="secno">4.1.154 </bdi>Transaction</a></li><li class="tocline"><a class="tocxref" href="#transactional"><bdi class="secno">4.1.155 </bdi>Transactional</a></li><li class="tocline"><a class="tocxref" href="#uid"><bdi class="secno">4.1.156 </bdi>UID</a></li><li class="tocline"><a class="tocxref" href="#username"><bdi class="secno">4.1.157 </bdi>Username</a></li><li class="tocline"><a class="tocxref" href="#voice-communication-recording"><bdi class="secno">4.1.158 </bdi>Voice Communication Recording</a></li><li class="tocline"><a class="tocxref" href="#voice-mail"><bdi class="secno">4.1.159 </bdi>Voice Mail</a></li><li class="tocline"><a class="tocxref" href="#weight"><bdi class="secno">4.1.160 </bdi>Weight</a></li><li class="tocline"><a class="tocxref" href="#work-history"><bdi class="secno">4.1.161 </bdi>Work History</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-purposes"><bdi class="secno">5. </bdi>Purposes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#purpose-classes"><bdi class="secno">5.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#academic-research"><bdi class="secno">5.1.1 </bdi>Academic Research</a></li><li class="tocline"><a class="tocxref" href="#access-control"><bdi class="secno">5.1.2 </bdi>Access Control</a></li><li class="tocline"><a class="tocxref" href="#beneficiary"><bdi class="secno">5.1.3 </bdi>Beneficiary</a></li><li class="tocline"><a class="tocxref" href="#commercial-interest"><bdi class="secno">5.1.4 </bdi>Commercial Interest</a></li><li class="tocline"><a class="tocxref" href="#commercial-research"><bdi class="secno">5.1.5 </bdi>Commercial Research</a></li><li class="tocline"><a class="tocxref" href="#context"><bdi class="secno">5.1.6 </bdi>Context</a></li><li class="tocline"><a class="tocxref" href="#create-product-recommendations"><bdi class="secno">5.1.7 </bdi>Create Product Recommendations</a></li><li class="tocline"><a class="tocxref" href="#customer-care"><bdi class="secno">5.1.8 </bdi>Customer Care</a></li><li class="tocline"><a class="tocxref" href="#delivery-of-goods"><bdi class="secno">5.1.9 </bdi>Delivery Of Goods</a></li><li class="tocline"><a class="tocxref" href="#fraud-prevention-and-detection"><bdi class="secno">5.1.10 </bdi>Fraud Prevention And Detection</a></li><li class="tocline"><a class="tocxref" href="#identity-verification"><bdi class="secno">5.1.11 </bdi>Identity Verification</a></li><li class="tocline"><a class="tocxref" href="#improve-existing-products-and-services"><bdi class="secno">5.1.12 </bdi>Improve Existing Products And Services</a></li><li class="tocline"><a class="tocxref" href="#improve-internal-crmprocesses"><bdi class="secno">5.1.13 </bdi>Improve Internal CRMProcesses</a></li><li class="tocline"><a class="tocxref" href="#increase-service-robustness"><bdi class="secno">5.1.14 </bdi>Increase Service Robustness</a></li><li class="tocline"><a class="tocxref" href="#internal-resource-optimisation"><bdi class="secno">5.1.15 </bdi>Internal Resource Optimisation</a></li><li class="tocline"><a class="tocxref" href="#non-commercial-research"><bdi class="secno">5.1.16 </bdi>Non Commercial Research</a></li><li class="tocline"><a class="tocxref" href="#optimisation-for-consumer"><bdi class="secno">5.1.17 </bdi>Optimisation For Consumer</a></li><li class="tocline"><a class="tocxref" href="#optimisation-for-controller"><bdi class="secno">5.1.18 </bdi>Optimisation For Controller</a></li><li class="tocline"><a class="tocxref" href="#optimise-user-interface"><bdi class="secno">5.1.19 </bdi>Optimise User Interface</a></li><li class="tocline"><a class="tocxref" href="#personalised-benefits"><bdi class="secno">5.1.20 </bdi>Personalised Benefits</a></li><li class="tocline"><a class="tocxref" href="#research-and-development"><bdi class="secno">5.1.21 </bdi>Research And Development</a></li><li class="tocline"><a class="tocxref" href="#sector"><bdi class="secno">5.1.22 </bdi>Sector</a></li><li class="tocline"><a class="tocxref" href="#security"><bdi class="secno">5.1.23 </bdi>Security</a></li><li class="tocline"><a class="tocxref" href="#sell-data-to-third-parties"><bdi class="secno">5.1.24 </bdi>Sell Data To Third Parties</a></li><li class="tocline"><a class="tocxref" href="#sell-insights-from-data"><bdi class="secno">5.1.25 </bdi>Sell Insights From Data</a></li><li class="tocline"><a class="tocxref" href="#sell-products-to-data-subject"><bdi class="secno">5.1.26 </bdi>Sell Products To Data Subject</a></li><li class="tocline"><a class="tocxref" href="#sell-targetted-advertisements"><bdi class="secno">5.1.27 </bdi>Sell Targetted Advertisements</a></li><li class="tocline"><a class="tocxref" href="#service-optimization"><bdi class="secno">5.1.28 </bdi>Service Optimization</a></li><li class="tocline"><a class="tocxref" href="#service-personalization"><bdi class="secno">5.1.29 </bdi>Service Personalization</a></li><li class="tocline"><a class="tocxref" href="#service-provision"><bdi class="secno">5.1.30 </bdi>Service Provision</a></li><li class="tocline"><a class="tocxref" href="#user-interface-personalisation"><bdi class="secno">5.1.31 </bdi>User Interface Personalisation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#purpose-properties"><bdi class="secno">5.2 </bdi>Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#has-beneficiary"><bdi class="secno">5.2.1 </bdi>has Beneficiary</a></li><li class="tocline"><a class="tocxref" href="#has-context"><bdi class="secno">5.2.2 </bdi>has Context</a></li><li class="tocline"><a class="tocxref" href="#has-sector"><bdi class="secno">5.2.3 </bdi>has Sector</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-processing-categories"><bdi class="secno">6. </bdi>Processing Categories</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#processing-classes"><bdi class="secno">6.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#acquire"><bdi class="secno">6.1.1 </bdi>Acquire</a></li><li class="tocline"><a class="tocxref" href="#adapt"><bdi class="secno">6.1.2 </bdi>Adapt</a></li><li class="tocline"><a class="tocxref" href="#align"><bdi class="secno">6.1.3 </bdi>Align</a></li><li class="tocline"><a class="tocxref" href="#alter"><bdi class="secno">6.1.4 </bdi>Alter</a></li><li class="tocline"><a class="tocxref" href="#analyse"><bdi class="secno">6.1.5 </bdi>Analyse</a></li><li class="tocline"><a class="tocxref" href="#anonymise"><bdi class="secno">6.1.6 </bdi>Anonymise</a></li><li class="tocline"><a class="tocxref" href="#collect"><bdi class="secno">6.1.7 </bdi>Collect</a></li><li class="tocline"><a class="tocxref" href="#combine"><bdi class="secno">6.1.8 </bdi>Combine</a></li><li class="tocline"><a class="tocxref" href="#consult"><bdi class="secno">6.1.9 </bdi>Consult</a></li><li class="tocline"><a class="tocxref" href="#copy"><bdi class="secno">6.1.10 </bdi>Copy</a></li><li class="tocline"><a class="tocxref" href="#derive"><bdi class="secno">6.1.11 </bdi>Derive</a></li><li class="tocline"><a class="tocxref" href="#destruct"><bdi class="secno">6.1.12 </bdi>Destruct</a></li><li class="tocline"><a class="tocxref" href="#disclose"><bdi class="secno">6.1.13 </bdi>Disclose</a></li><li class="tocline"><a class="tocxref" href="#disclose-by-transmission"><bdi class="secno">6.1.14 </bdi>Disclose By Transmission</a></li><li class="tocline"><a class="tocxref" href="#disseminate"><bdi class="secno">6.1.15 </bdi>Disseminate</a></li><li class="tocline"><a class="tocxref" href="#erase"><bdi class="secno">6.1.16 </bdi>Erase</a></li><li class="tocline"><a class="tocxref" href="#make-available"><bdi class="secno">6.1.17 </bdi>Make Available</a></li><li class="tocline"><a class="tocxref" href="#move"><bdi class="secno">6.1.18 </bdi>Move</a></li><li class="tocline"><a class="tocxref" href="#obtain"><bdi class="secno">6.1.19 </bdi>Obtain</a></li><li class="tocline"><a class="tocxref" href="#organise"><bdi class="secno">6.1.20 </bdi>Organise</a></li><li class="tocline"><a class="tocxref" href="#profiling"><bdi class="secno">6.1.21 </bdi>Profiling</a></li><li class="tocline"><a class="tocxref" href="#pseudo-anonymise"><bdi class="secno">6.1.22 </bdi>Pseudo Anonymise</a></li><li class="tocline"><a class="tocxref" href="#record"><bdi class="secno">6.1.23 </bdi>Record</a></li><li class="tocline"><a class="tocxref" href="#remove"><bdi class="secno">6.1.24 </bdi>Remove</a></li><li class="tocline"><a class="tocxref" href="#restrict"><bdi class="secno">6.1.25 </bdi>Restrict</a></li><li class="tocline"><a class="tocxref" href="#retrieve"><bdi class="secno">6.1.26 </bdi>Retrieve</a></li><li class="tocline"><a class="tocxref" href="#share"><bdi class="secno">6.1.27 </bdi>Share</a></li><li class="tocline"><a class="tocxref" href="#store"><bdi class="secno">6.1.28 </bdi>Store</a></li><li class="tocline"><a class="tocxref" href="#structure"><bdi class="secno">6.1.29 </bdi>Structure</a></li><li class="tocline"><a class="tocxref" href="#transfer"><bdi class="secno">6.1.30 </bdi>Transfer</a></li><li class="tocline"><a class="tocxref" href="#transform"><bdi class="secno">6.1.31 </bdi>Transform</a></li><li class="tocline"><a class="tocxref" href="#transmit"><bdi class="secno">6.1.32 </bdi>Transmit</a></li><li class="tocline"><a class="tocxref" href="#use"><bdi class="secno">6.1.33 </bdi>Use</a></li></ol></li><li class="tocline"><a class="tocxref" href="#processing-properties"><bdi class="secno">6.2 </bdi>Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#innovative-use-of-new-solutions"><bdi class="secno">6.2.1 </bdi>innovative Use Of New Solutions</a></li><li class="tocline"><a class="tocxref" href="#is-automated-decision-making"><bdi class="secno">6.2.2 </bdi>is Automated Decision Making</a></li><li class="tocline"><a class="tocxref" href="#is-evaluation-scoring"><bdi class="secno">6.2.3 </bdi>is Evaluation Scoring</a></li><li class="tocline"><a class="tocxref" href="#is-large-scale"><bdi class="secno">6.2.4 </bdi>is Large Scale</a></li><li class="tocline"><a class="tocxref" href="#is-matching-combining"><bdi class="secno">6.2.5 </bdi>is Matching Combining</a></li><li class="tocline"><a class="tocxref" href="#is-systematic-monitoring"><bdi class="secno">6.2.6 </bdi>is Systematic Monitoring</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-technical-organisational-measures"><bdi class="secno">7. </bdi>Technical and Organisational Measures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#technicalorganisationalmeasure-classes"><bdi class="secno">7.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#access-control-method"><bdi class="secno">7.1.1 </bdi>Access Control Method</a></li><li class="tocline"><a class="tocxref" href="#anonymization"><bdi class="secno">7.1.2 </bdi>Anonymization</a></li><li class="tocline"><a class="tocxref" href="#authentication-protocols"><bdi class="secno">7.1.3 </bdi>Authentication Protocols</a></li><li class="tocline"><a class="tocxref" href="#authorisation-procedure"><bdi class="secno">7.1.4 </bdi>Authorisation Procedure</a></li><li class="tocline"><a class="tocxref" href="#certification-0"><bdi class="secno">7.1.5 </bdi>Certification</a></li><li class="tocline"><a class="tocxref" href="#certification-seal"><bdi class="secno">7.1.6 </bdi>Certification Seal</a></li><li class="tocline"><a class="tocxref" href="#code-of-conduct"><bdi class="secno">7.1.7 </bdi>Code Of Conduct</a></li><li class="tocline"><a class="tocxref" href="#contract"><bdi class="secno">7.1.8 </bdi>Contract</a></li><li class="tocline"><a class="tocxref" href="#de-identification"><bdi class="secno">7.1.9 </bdi>De Identification</a></li><li class="tocline"><a class="tocxref" href="#design-standard"><bdi class="secno">7.1.10 </bdi>Design Standard</a></li><li class="tocline"><a class="tocxref" href="#encryption-in-rest"><bdi class="secno">7.1.11 </bdi>Encryption In Rest</a></li><li class="tocline"><a class="tocxref" href="#encryption-in-transfer"><bdi class="secno">7.1.12 </bdi>Encryption In Transfer</a></li><li class="tocline"><a class="tocxref" href="#guidelines-principle"><bdi class="secno">7.1.13 </bdi>Guidelines Principle</a></li><li class="tocline"><a class="tocxref" href="#legal-agreement"><bdi class="secno">7.1.14 </bdi>Legal Agreement</a></li><li class="tocline"><a class="tocxref" href="#nda"><bdi class="secno">7.1.15 </bdi>NDA</a></li><li class="tocline"><a class="tocxref" href="#organisational-measure"><bdi class="secno">7.1.16 </bdi>Organisational Measure</a></li><li class="tocline"><a class="tocxref" href="#privacy-by-default"><bdi class="secno">7.1.17 </bdi>Privacy By Default</a></li><li class="tocline"><a class="tocxref" href="#privacy-by-design"><bdi class="secno">7.1.18 </bdi>Privacy By Design</a></li><li class="tocline"><a class="tocxref" href="#pseudo-anonymization"><bdi class="secno">7.1.19 </bdi>Pseudo Anonymization</a></li><li class="tocline"><a class="tocxref" href="#pseudonymisation-encryption"><bdi class="secno">7.1.20 </bdi>Pseudonymisation Encryption</a></li><li class="tocline"><a class="tocxref" href="#regularity-of-recertification"><bdi class="secno">7.1.21 </bdi>Regularity Of Recertification</a></li><li class="tocline"><a class="tocxref" href="#risk-management-procedure"><bdi class="secno">7.1.22 </bdi>Risk Management Procedure</a></li><li class="tocline"><a class="tocxref" href="#seal"><bdi class="secno">7.1.23 </bdi>Seal</a></li><li class="tocline"><a class="tocxref" href="#staff-training"><bdi class="secno">7.1.24 </bdi>Staff Training</a></li><li class="tocline"><a class="tocxref" href="#storage-deletion"><bdi class="secno">7.1.25 </bdi>Storage Deletion</a></li><li class="tocline"><a class="tocxref" href="#storage-duration"><bdi class="secno">7.1.26 </bdi>Storage Duration</a></li><li class="tocline"><a class="tocxref" href="#storage-location"><bdi class="secno">7.1.27 </bdi>Storage Location</a></li><li class="tocline"><a class="tocxref" href="#storage-restoration"><bdi class="secno">7.1.28 </bdi>Storage Restoration</a></li><li class="tocline"><a class="tocxref" href="#storage-restriction"><bdi class="secno">7.1.29 </bdi>Storage Restriction</a></li><li class="tocline"><a class="tocxref" href="#technical-measure"><bdi class="secno">7.1.30 </bdi>Technical Measure</a></li></ol></li><li class="tocline"><a class="tocxref" href="#technicalorganisationalmeasure-properties"><bdi class="secno">7.2 </bdi>Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#duration"><bdi class="secno">7.2.1 </bdi>duration</a></li><li class="tocline"><a class="tocxref" href="#location-0"><bdi class="secno">7.2.2 </bdi>location</a></li><li class="tocline"><a class="tocxref" href="#measure-implemented-by"><bdi class="secno">7.2.3 </bdi>measure Implemented By</a></li><li class="tocline"><a class="tocxref" href="#storage"><bdi class="secno">7.2.4 </bdi>storage</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-consent"><bdi class="secno">8. </bdi>Consent</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#consent-classes"><bdi class="secno">8.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#consent"><bdi class="secno">8.1.1 </bdi>Consent</a></li><li class="tocline"><a class="tocxref" href="#legal-entity"><bdi class="secno">8.1.2 </bdi>Legal Entity</a></li></ol></li><li class="tocline"><a class="tocxref" href="#consent-properties"><bdi class="secno">8.2 </bdi>Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#consent-notice"><bdi class="secno">8.2.1 </bdi>consent Notice</a></li><li class="tocline"><a class="tocxref" href="#expiry"><bdi class="secno">8.2.2 </bdi>expiry</a></li><li class="tocline"><a class="tocxref" href="#expiry-condition"><bdi class="secno">8.2.3 </bdi>expiry Condition</a></li><li class="tocline"><a class="tocxref" href="#expiry-time"><bdi class="secno">8.2.4 </bdi>expiry Time</a></li><li class="tocline"><a class="tocxref" href="#is-explicit"><bdi class="secno">8.2.5 </bdi>is Explicit</a></li><li class="tocline"><a class="tocxref" href="#provision-by"><bdi class="secno">8.2.6 </bdi>provision By</a></li><li class="tocline"><a class="tocxref" href="#provision-by-justification"><bdi class="secno">8.2.7 </bdi>provision By Justification</a></li><li class="tocline"><a class="tocxref" href="#provision-method"><bdi class="secno">8.2.8 </bdi>provision Method</a></li><li class="tocline"><a class="tocxref" href="#provision-time"><bdi class="secno">8.2.9 </bdi>provision Time</a></li><li class="tocline"><a class="tocxref" href="#withdrawal-by"><bdi class="secno">8.2.10 </bdi>withdrawal By</a></li><li class="tocline"><a class="tocxref" href="#withdrawal-by-justification"><bdi class="secno">8.2.11 </bdi>withdrawal By Justification</a></li><li class="tocline"><a class="tocxref" href="#withdrawal-method"><bdi class="secno">8.2.12 </bdi>withdrawal Method</a></li><li class="tocline"><a class="tocxref" href="#withdrawal-time"><bdi class="secno">8.2.13 </bdi>withdrawal Time</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-recipients-controllers-data-subjects"><bdi class="secno">9. </bdi>Recipients, Data Controllers, and Data Subjects</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recipientsdatacontrollersdatasubjects-classes"><bdi class="secno">9.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#child"><bdi class="secno">9.1.1 </bdi>Child</a></li><li class="tocline"><a class="tocxref" href="#data-processor"><bdi class="secno">9.1.2 </bdi>Data Processor</a></li><li class="tocline"><a class="tocxref" href="#third-party"><bdi class="secno">9.1.3 </bdi>Third Party</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#issues"><bdi class="secno">A. </bdi>Issues</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.1 </bdi>Informative references</a></li></ol></li></ol></nav>
+  </section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#namespaces"><bdi class="secno">2. </bdi>Namespaces</a></li><li class="tocline"><a class="tocxref" href="#vocab-base"><bdi class="secno">3. </bdi>Base Vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#baseontology-classes"><bdi class="secno">3.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#data-controller"><bdi class="secno">3.1.1 </bdi>Data Controller</a></li><li class="tocline"><a class="tocxref" href="#data-subject"><bdi class="secno">3.1.2 </bdi>Data Subject</a></li><li class="tocline"><a class="tocxref" href="#legal-basis"><bdi class="secno">3.1.3 </bdi>Legal Basis</a></li><li class="tocline"><a class="tocxref" href="#personal-data-category"><bdi class="secno">3.1.4 </bdi>Personal Data Category</a></li><li class="tocline"><a class="tocxref" href="#personal-data-handling"><bdi class="secno">3.1.5 </bdi>Personal Data Handling</a></li><li class="tocline"><a class="tocxref" href="#processing"><bdi class="secno">3.1.6 </bdi>Processing</a></li><li class="tocline"><a class="tocxref" href="#purpose"><bdi class="secno">3.1.7 </bdi>Purpose</a></li><li class="tocline"><a class="tocxref" href="#recipient"><bdi class="secno">3.1.8 </bdi>Recipient</a></li><li class="tocline"><a class="tocxref" href="#technical-organisational-measure"><bdi class="secno">3.1.9 </bdi>Technical Organisational Measure</a></li></ol></li><li class="tocline"><a class="tocxref" href="#baseontology-properties"><bdi class="secno">3.2 </bdi>Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#has-data-controller"><bdi class="secno">3.2.1 </bdi>has Data Controller</a></li><li class="tocline"><a class="tocxref" href="#has-data-subject"><bdi class="secno">3.2.2 </bdi>has Data Subject</a></li><li class="tocline"><a class="tocxref" href="#has-legal-basis"><bdi class="secno">3.2.3 </bdi>has Legal Basis</a></li><li class="tocline"><a class="tocxref" href="#has-personal-data-category"><bdi class="secno">3.2.4 </bdi>has Personal Data Category</a></li><li class="tocline"><a class="tocxref" href="#has-processing"><bdi class="secno">3.2.5 </bdi>has Processing</a></li><li class="tocline"><a class="tocxref" href="#has-purpose"><bdi class="secno">3.2.6 </bdi>has Purpose</a></li><li class="tocline"><a class="tocxref" href="#has-recipient"><bdi class="secno">3.2.7 </bdi>has Recipient</a></li><li class="tocline"><a class="tocxref" href="#has-technical-organisational-measure"><bdi class="secno">3.2.8 </bdi>has Technical Organisational Measure</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-personal-data-categories"><bdi class="secno">4. </bdi>Personal Data Categories</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#personaldatacategory-classes"><bdi class="secno">4.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#accent"><bdi class="secno">4.1.1 </bdi>Accent</a></li><li class="tocline"><a class="tocxref" href="#account-identifier"><bdi class="secno">4.1.2 </bdi>Account Identifier</a></li><li class="tocline"><a class="tocxref" href="#acquantaince"><bdi class="secno">4.1.3 </bdi>Acquantaince</a></li><li class="tocline"><a class="tocxref" href="#age"><bdi class="secno">4.1.4 </bdi>Age</a></li><li class="tocline"><a class="tocxref" href="#apartment-owned"><bdi class="secno">4.1.5 </bdi>Apartment Owned</a></li><li class="tocline"><a class="tocxref" href="#association"><bdi class="secno">4.1.6 </bdi>Association</a></li><li class="tocline"><a class="tocxref" href="#attitude"><bdi class="secno">4.1.7 </bdi>Attitude</a></li><li class="tocline"><a class="tocxref" href="#authenticating"><bdi class="secno">4.1.8 </bdi>Authenticating</a></li><li class="tocline"><a class="tocxref" href="#bank-account"><bdi class="secno">4.1.9 </bdi>Bank Account</a></li><li class="tocline"><a class="tocxref" href="#behavioral"><bdi class="secno">4.1.10 </bdi>Behavioral</a></li><li class="tocline"><a class="tocxref" href="#biometric"><bdi class="secno">4.1.11 </bdi>Biometric</a></li><li class="tocline"><a class="tocxref" href="#blood-type"><bdi class="secno">4.1.12 </bdi>Blood Type</a></li><li class="tocline"><a class="tocxref" href="#browser-fingerprint"><bdi class="secno">4.1.13 </bdi>Browser Fingerprint</a></li><li class="tocline"><a class="tocxref" href="#browsing-behavior"><bdi class="secno">4.1.14 </bdi>Browsing Behavior</a></li><li class="tocline"><a class="tocxref" href="#call-log"><bdi class="secno">4.1.15 </bdi>Call Log</a></li><li class="tocline"><a class="tocxref" href="#car-owned"><bdi class="secno">4.1.16 </bdi>Car Owned</a></li><li class="tocline"><a class="tocxref" href="#certification"><bdi class="secno">4.1.17 </bdi>Certification</a></li><li class="tocline"><a class="tocxref" href="#character"><bdi class="secno">4.1.18 </bdi>Character</a></li><li class="tocline"><a class="tocxref" href="#communication"><bdi class="secno">4.1.19 </bdi>Communication</a></li><li class="tocline"><a class="tocxref" href="#communications-metadata"><bdi class="secno">4.1.20 </bdi>Communications Metadata</a></li><li class="tocline"><a class="tocxref" href="#connection"><bdi class="secno">4.1.21 </bdi>Connection</a></li><li class="tocline"><a class="tocxref" href="#contact"><bdi class="secno">4.1.22 </bdi>Contact</a></li><li class="tocline"><a class="tocxref" href="#country"><bdi class="secno">4.1.23 </bdi>Country</a></li><li class="tocline"><a class="tocxref" href="#credit"><bdi class="secno">4.1.24 </bdi>Credit</a></li><li class="tocline"><a class="tocxref" href="#credit-0"><bdi class="secno">4.1.25 </bdi>Credit</a></li><li class="tocline"><a class="tocxref" href="#credit-capacity"><bdi class="secno">4.1.26 </bdi>Credit Capacity</a></li><li class="tocline"><a class="tocxref" href="#credit-card-number"><bdi class="secno">4.1.27 </bdi>Credit Card Number</a></li><li class="tocline"><a class="tocxref" href="#credit-record"><bdi class="secno">4.1.28 </bdi>Credit Record</a></li><li class="tocline"><a class="tocxref" href="#credit-score"><bdi class="secno">4.1.29 </bdi>Credit Score</a></li><li class="tocline"><a class="tocxref" href="#credit-standing"><bdi class="secno">4.1.30 </bdi>Credit Standing</a></li><li class="tocline"><a class="tocxref" href="#credit-worthiness"><bdi class="secno">4.1.31 </bdi>Credit Worthiness</a></li><li class="tocline"><a class="tocxref" href="#criminal"><bdi class="secno">4.1.32 </bdi>Criminal</a></li><li class="tocline"><a class="tocxref" href="#criminal-charge"><bdi class="secno">4.1.33 </bdi>Criminal Charge</a></li><li class="tocline"><a class="tocxref" href="#criminal-conviction"><bdi class="secno">4.1.34 </bdi>Criminal Conviction</a></li><li class="tocline"><a class="tocxref" href="#criminal-pardon"><bdi class="secno">4.1.35 </bdi>Criminal Pardon</a></li><li class="tocline"><a class="tocxref" href="#dnacode"><bdi class="secno">4.1.36 </bdi>DNACode</a></li><li class="tocline"><a class="tocxref" href="#demeanor"><bdi class="secno">4.1.37 </bdi>Demeanor</a></li><li class="tocline"><a class="tocxref" href="#demographic"><bdi class="secno">4.1.38 </bdi>Demographic</a></li><li class="tocline"><a class="tocxref" href="#derived-personal-data"><bdi class="secno">4.1.39 </bdi>Derived Personal Data</a></li><li class="tocline"><a class="tocxref" href="#device-based"><bdi class="secno">4.1.40 </bdi>Device Based</a></li><li class="tocline"><a class="tocxref" href="#dialect"><bdi class="secno">4.1.41 </bdi>Dialect</a></li><li class="tocline"><a class="tocxref" href="#disability"><bdi class="secno">4.1.42 </bdi>Disability</a></li><li class="tocline"><a class="tocxref" href="#disciplinary-action"><bdi class="secno">4.1.43 </bdi>Disciplinary Action</a></li><li class="tocline"><a class="tocxref" href="#dislike"><bdi class="secno">4.1.44 </bdi>Dislike</a></li><li class="tocline"><a class="tocxref" href="#divorce"><bdi class="secno">4.1.45 </bdi>Divorce</a></li><li class="tocline"><a class="tocxref" href="#drug-test-result"><bdi class="secno">4.1.46 </bdi>Drug Test Result</a></li><li class="tocline"><a class="tocxref" href="#email-address"><bdi class="secno">4.1.47 </bdi>Email Address</a></li><li class="tocline"><a class="tocxref" href="#email-content"><bdi class="secno">4.1.48 </bdi>Email Content</a></li><li class="tocline"><a class="tocxref" href="#employment-history"><bdi class="secno">4.1.49 </bdi>Employment History</a></li><li class="tocline"><a class="tocxref" href="#ethnic-origin"><bdi class="secno">4.1.50 </bdi>Ethnic Origin</a></li><li class="tocline"><a class="tocxref" href="#ethnicity"><bdi class="secno">4.1.51 </bdi>Ethnicity</a></li><li class="tocline"><a class="tocxref" href="#external"><bdi class="secno">4.1.52 </bdi>External</a></li><li class="tocline"><a class="tocxref" href="#family"><bdi class="secno">4.1.53 </bdi>Family</a></li><li class="tocline"><a class="tocxref" href="#family-health-history"><bdi class="secno">4.1.54 </bdi>Family Health History</a></li><li class="tocline"><a class="tocxref" href="#family-structure"><bdi class="secno">4.1.55 </bdi>Family Structure</a></li><li class="tocline"><a class="tocxref" href="#favorite"><bdi class="secno">4.1.56 </bdi>Favorite</a></li><li class="tocline"><a class="tocxref" href="#favorite-color"><bdi class="secno">4.1.57 </bdi>Favorite Color</a></li><li class="tocline"><a class="tocxref" href="#favorite-food"><bdi class="secno">4.1.58 </bdi>Favorite Food</a></li><li class="tocline"><a class="tocxref" href="#favorite-music"><bdi class="secno">4.1.59 </bdi>Favorite Music</a></li><li class="tocline"><a class="tocxref" href="#fetish"><bdi class="secno">4.1.60 </bdi>Fetish</a></li><li class="tocline"><a class="tocxref" href="#financial"><bdi class="secno">4.1.61 </bdi>Financial</a></li><li class="tocline"><a class="tocxref" href="#financial-account"><bdi class="secno">4.1.62 </bdi>Financial Account</a></li><li class="tocline"><a class="tocxref" href="#financial-account-number"><bdi class="secno">4.1.63 </bdi>Financial Account Number</a></li><li class="tocline"><a class="tocxref" href="#fingerprint"><bdi class="secno">4.1.64 </bdi>Fingerprint</a></li><li class="tocline"><a class="tocxref" href="#friend"><bdi class="secno">4.1.65 </bdi>Friend</a></li><li class="tocline"><a class="tocxref" href="#gpscoordinate"><bdi class="secno">4.1.66 </bdi>GPSCoordinate</a></li><li class="tocline"><a class="tocxref" href="#gender"><bdi class="secno">4.1.67 </bdi>Gender</a></li><li class="tocline"><a class="tocxref" href="#general-reputation"><bdi class="secno">4.1.68 </bdi>General Reputation</a></li><li class="tocline"><a class="tocxref" href="#geographic"><bdi class="secno">4.1.69 </bdi>Geographic</a></li><li class="tocline"><a class="tocxref" href="#group-membership"><bdi class="secno">4.1.70 </bdi>Group Membership</a></li><li class="tocline"><a class="tocxref" href="#hair-color"><bdi class="secno">4.1.71 </bdi>Hair Color</a></li><li class="tocline"><a class="tocxref" href="#health"><bdi class="secno">4.1.72 </bdi>Health</a></li><li class="tocline"><a class="tocxref" href="#health-history"><bdi class="secno">4.1.73 </bdi>Health History</a></li><li class="tocline"><a class="tocxref" href="#health-record"><bdi class="secno">4.1.74 </bdi>Health Record</a></li><li class="tocline"><a class="tocxref" href="#height"><bdi class="secno">4.1.75 </bdi>Height</a></li><li class="tocline"><a class="tocxref" href="#historical"><bdi class="secno">4.1.76 </bdi>Historical</a></li><li class="tocline"><a class="tocxref" href="#house-owned"><bdi class="secno">4.1.77 </bdi>House Owned</a></li><li class="tocline"><a class="tocxref" href="#ipaddress"><bdi class="secno">4.1.78 </bdi>IPAddress</a></li><li class="tocline"><a class="tocxref" href="#identifying"><bdi class="secno">4.1.79 </bdi>Identifying</a></li><li class="tocline"><a class="tocxref" href="#income"><bdi class="secno">4.1.80 </bdi>Income</a></li><li class="tocline"><a class="tocxref" href="#income-bracket"><bdi class="secno">4.1.81 </bdi>Income Bracket</a></li><li class="tocline"><a class="tocxref" href="#individual-health-history"><bdi class="secno">4.1.82 </bdi>Individual Health History</a></li><li class="tocline"><a class="tocxref" href="#intention"><bdi class="secno">4.1.83 </bdi>Intention</a></li><li class="tocline"><a class="tocxref" href="#interaction"><bdi class="secno">4.1.84 </bdi>Interaction</a></li><li class="tocline"><a class="tocxref" href="#interest"><bdi class="secno">4.1.85 </bdi>Interest</a></li><li class="tocline"><a class="tocxref" href="#internal"><bdi class="secno">4.1.86 </bdi>Internal</a></li><li class="tocline"><a class="tocxref" href="#job"><bdi class="secno">4.1.87 </bdi>Job</a></li><li class="tocline"><a class="tocxref" href="#knowledge-belief"><bdi class="secno">4.1.88 </bdi>Knowledge Belief</a></li><li class="tocline"><a class="tocxref" href="#language"><bdi class="secno">4.1.89 </bdi>Language</a></li><li class="tocline"><a class="tocxref" href="#life-history"><bdi class="secno">4.1.90 </bdi>Life History</a></li><li class="tocline"><a class="tocxref" href="#like"><bdi class="secno">4.1.91 </bdi>Like</a></li><li class="tocline"><a class="tocxref" href="#link-clicked"><bdi class="secno">4.1.92 </bdi>Link Clicked</a></li><li class="tocline"><a class="tocxref" href="#loan-record"><bdi class="secno">4.1.93 </bdi>Loan Record</a></li><li class="tocline"><a class="tocxref" href="#location"><bdi class="secno">4.1.94 </bdi>Location</a></li><li class="tocline"><a class="tocxref" href="#macaddress"><bdi class="secno">4.1.95 </bdi>MACAddress</a></li><li class="tocline"><a class="tocxref" href="#marital-status"><bdi class="secno">4.1.96 </bdi>Marital Status</a></li><li class="tocline"><a class="tocxref" href="#marriage"><bdi class="secno">4.1.97 </bdi>Marriage</a></li><li class="tocline"><a class="tocxref" href="#medical-health"><bdi class="secno">4.1.98 </bdi>Medical Health</a></li><li class="tocline"><a class="tocxref" href="#mental-health"><bdi class="secno">4.1.99 </bdi>Mental Health</a></li><li class="tocline"><a class="tocxref" href="#name"><bdi class="secno">4.1.100 </bdi>Name</a></li><li class="tocline"><a class="tocxref" href="#official-id"><bdi class="secno">4.1.101 </bdi>Official ID</a></li><li class="tocline"><a class="tocxref" href="#offspring"><bdi class="secno">4.1.102 </bdi>Offspring</a></li><li class="tocline"><a class="tocxref" href="#opinion"><bdi class="secno">4.1.103 </bdi>Opinion</a></li><li class="tocline"><a class="tocxref" href="#ownership"><bdi class="secno">4.1.104 </bdi>Ownership</a></li><li class="tocline"><a class="tocxref" href="#pincode"><bdi class="secno">4.1.105 </bdi>PINCode</a></li><li class="tocline"><a class="tocxref" href="#parent"><bdi class="secno">4.1.106 </bdi>Parent</a></li><li class="tocline"><a class="tocxref" href="#password"><bdi class="secno">4.1.107 </bdi>Password</a></li><li class="tocline"><a class="tocxref" href="#personal-possession"><bdi class="secno">4.1.108 </bdi>Personal Possession</a></li><li class="tocline"><a class="tocxref" href="#personality"><bdi class="secno">4.1.109 </bdi>Personality</a></li><li class="tocline"><a class="tocxref" href="#philosophical-belief"><bdi class="secno">4.1.110 </bdi>Philosophical Belief</a></li><li class="tocline"><a class="tocxref" href="#physical-address"><bdi class="secno">4.1.111 </bdi>Physical Address</a></li><li class="tocline"><a class="tocxref" href="#physical-characteristic"><bdi class="secno">4.1.112 </bdi>Physical Characteristic</a></li><li class="tocline"><a class="tocxref" href="#physical-health"><bdi class="secno">4.1.113 </bdi>Physical Health</a></li><li class="tocline"><a class="tocxref" href="#physical-trait"><bdi class="secno">4.1.114 </bdi>Physical Trait</a></li><li class="tocline"><a class="tocxref" href="#picture"><bdi class="secno">4.1.115 </bdi>Picture</a></li><li class="tocline"><a class="tocxref" href="#piercing"><bdi class="secno">4.1.116 </bdi>Piercing</a></li><li class="tocline"><a class="tocxref" href="#political-affiliation"><bdi class="secno">4.1.117 </bdi>Political Affiliation</a></li><li class="tocline"><a class="tocxref" href="#preference"><bdi class="secno">4.1.118 </bdi>Preference</a></li><li class="tocline"><a class="tocxref" href="#prescription"><bdi class="secno">4.1.119 </bdi>Prescription</a></li><li class="tocline"><a class="tocxref" href="#privacy-preference"><bdi class="secno">4.1.120 </bdi>Privacy Preference</a></li><li class="tocline"><a class="tocxref" href="#proclivitie"><bdi class="secno">4.1.121 </bdi>Proclivitie</a></li><li class="tocline"><a class="tocxref" href="#professional"><bdi class="secno">4.1.122 </bdi>Professional</a></li><li class="tocline"><a class="tocxref" href="#professional-evaluation"><bdi class="secno">4.1.123 </bdi>Professional Evaluation</a></li><li class="tocline"><a class="tocxref" href="#professional-interview"><bdi class="secno">4.1.124 </bdi>Professional Interview</a></li><li class="tocline"><a class="tocxref" href="#public-life"><bdi class="secno">4.1.125 </bdi>Public Life</a></li><li class="tocline"><a class="tocxref" href="#purchase"><bdi class="secno">4.1.126 </bdi>Purchase</a></li><li class="tocline"><a class="tocxref" href="#purchases-and-spending-habit"><bdi class="secno">4.1.127 </bdi>Purchases And Spending Habit</a></li><li class="tocline"><a class="tocxref" href="#race"><bdi class="secno">4.1.128 </bdi>Race</a></li><li class="tocline"><a class="tocxref" href="#reference"><bdi class="secno">4.1.129 </bdi>Reference</a></li><li class="tocline"><a class="tocxref" href="#relationship"><bdi class="secno">4.1.130 </bdi>Relationship</a></li><li class="tocline"><a class="tocxref" href="#religion"><bdi class="secno">4.1.131 </bdi>Religion</a></li><li class="tocline"><a class="tocxref" href="#religious-belief"><bdi class="secno">4.1.132 </bdi>Religious Belief</a></li><li class="tocline"><a class="tocxref" href="#retina"><bdi class="secno">4.1.133 </bdi>Retina</a></li><li class="tocline"><a class="tocxref" href="#room-number"><bdi class="secno">4.1.134 </bdi>Room Number</a></li><li class="tocline"><a class="tocxref" href="#salary"><bdi class="secno">4.1.135 </bdi>Salary</a></li><li class="tocline"><a class="tocxref" href="#sale"><bdi class="secno">4.1.136 </bdi>Sale</a></li><li class="tocline"><a class="tocxref" href="#school"><bdi class="secno">4.1.137 </bdi>School</a></li><li class="tocline"><a class="tocxref" href="#secret-text"><bdi class="secno">4.1.138 </bdi>Secret Text</a></li><li class="tocline"><a class="tocxref" href="#serviceconsumptionbehavior"><bdi class="secno">4.1.139 </bdi>ServiceConsumptionBehavior</a></li><li class="tocline"><a class="tocxref" href="#sexual"><bdi class="secno">4.1.140 </bdi>Sexual</a></li><li class="tocline"><a class="tocxref" href="#sexual-history"><bdi class="secno">4.1.141 </bdi>Sexual History</a></li><li class="tocline"><a class="tocxref" href="#sexual-preference"><bdi class="secno">4.1.142 </bdi>Sexual Preference</a></li><li class="tocline"><a class="tocxref" href="#sibling"><bdi class="secno">4.1.143 </bdi>Sibling</a></li><li class="tocline"><a class="tocxref" href="#skin-tone"><bdi class="secno">4.1.144 </bdi>Skin Tone</a></li><li class="tocline"><a class="tocxref" href="#social"><bdi class="secno">4.1.145 </bdi>Social</a></li><li class="tocline"><a class="tocxref" href="#social-media-communication"><bdi class="secno">4.1.146 </bdi>Social Media Communication</a></li><li class="tocline"><a class="tocxref" href="#social-network"><bdi class="secno">4.1.147 </bdi>Social Network</a></li><li class="tocline"><a class="tocxref" href="#social-status"><bdi class="secno">4.1.148 </bdi>Social Status</a></li><li class="tocline"><a class="tocxref" href="#special-category-personal-data"><bdi class="secno">4.1.149 </bdi>Special Category Personal Data</a></li><li class="tocline"><a class="tocxref" href="#tattoo"><bdi class="secno">4.1.150 </bdi>Tattoo</a></li><li class="tocline"><a class="tocxref" href="#tax"><bdi class="secno">4.1.151 </bdi>Tax</a></li><li class="tocline"><a class="tocxref" href="#telephone-number"><bdi class="secno">4.1.152 </bdi>Telephone Number</a></li><li class="tocline"><a class="tocxref" href="#thought"><bdi class="secno">4.1.153 </bdi>Thought</a></li><li class="tocline"><a class="tocxref" href="#tracking"><bdi class="secno">4.1.154 </bdi>Tracking</a></li><li class="tocline"><a class="tocxref" href="#transaction"><bdi class="secno">4.1.155 </bdi>Transaction</a></li><li class="tocline"><a class="tocxref" href="#transactional"><bdi class="secno">4.1.156 </bdi>Transactional</a></li><li class="tocline"><a class="tocxref" href="#tv-viewing-behavior"><bdi class="secno">4.1.157 </bdi>TV Viewing Behavior</a></li><li class="tocline"><a class="tocxref" href="#uid"><bdi class="secno">4.1.158 </bdi>UID</a></li><li class="tocline"><a class="tocxref" href="#username"><bdi class="secno">4.1.159 </bdi>Username</a></li><li class="tocline"><a class="tocxref" href="#voice-communication-recording"><bdi class="secno">4.1.160 </bdi>Voice Communication Recording</a></li><li class="tocline"><a class="tocxref" href="#voice-mail"><bdi class="secno">4.1.161 </bdi>Voice Mail</a></li><li class="tocline"><a class="tocxref" href="#weight"><bdi class="secno">4.1.162 </bdi>Weight</a></li><li class="tocline"><a class="tocxref" href="#work-history"><bdi class="secno">4.1.163 </bdi>Work History</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-purposes"><bdi class="secno">5. </bdi>Purposes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#purpose-classes"><bdi class="secno">5.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#academic-research"><bdi class="secno">5.1.1 </bdi>Academic Research</a></li><li class="tocline"><a class="tocxref" href="#access-control"><bdi class="secno">5.1.2 </bdi>Access Control</a></li><li class="tocline"><a class="tocxref" href="#beneficiary"><bdi class="secno">5.1.3 </bdi>Beneficiary</a></li><li class="tocline"><a class="tocxref" href="#commercial-interest"><bdi class="secno">5.1.4 </bdi>Commercial Interest</a></li><li class="tocline"><a class="tocxref" href="#commercial-research"><bdi class="secno">5.1.5 </bdi>Commercial Research</a></li><li class="tocline"><a class="tocxref" href="#context"><bdi class="secno">5.1.6 </bdi>Context</a></li><li class="tocline"><a class="tocxref" href="#create-event-recommendations"><bdi class="secno">5.1.7 </bdi>Create Event Recommendations</a></li><li class="tocline"><a class="tocxref" href="#create-personalized-recommendations"><bdi class="secno">5.1.8 </bdi>Create Personalized Recommendations</a></li><li class="tocline"><a class="tocxref" href="#create-product-recommendations"><bdi class="secno">5.1.9 </bdi>Create Product Recommendations</a></li><li class="tocline"><a class="tocxref" href="#customer-care"><bdi class="secno">5.1.10 </bdi>Customer Care</a></li><li class="tocline"><a class="tocxref" href="#delivery-of-goods"><bdi class="secno">5.1.11 </bdi>Delivery Of Goods</a></li><li class="tocline"><a class="tocxref" href="#fraud-prevention-and-detection"><bdi class="secno">5.1.12 </bdi>Fraud Prevention And Detection</a></li><li class="tocline"><a class="tocxref" href="#identity-verification"><bdi class="secno">5.1.13 </bdi>Identity Verification</a></li><li class="tocline"><a class="tocxref" href="#improve-existing-products-and-services"><bdi class="secno">5.1.14 </bdi>Improve Existing Products And Services</a></li><li class="tocline"><a class="tocxref" href="#improve-internal-crmprocesses"><bdi class="secno">5.1.15 </bdi>Improve Internal CRMProcesses</a></li><li class="tocline"><a class="tocxref" href="#increase-service-robustness"><bdi class="secno">5.1.16 </bdi>Increase Service Robustness</a></li><li class="tocline"><a class="tocxref" href="#internal-resource-optimisation"><bdi class="secno">5.1.17 </bdi>Internal Resource Optimisation</a></li><li class="tocline"><a class="tocxref" href="#non-commercial-research"><bdi class="secno">5.1.18 </bdi>Non Commercial Research</a></li><li class="tocline"><a class="tocxref" href="#optimisation-for-consumer"><bdi class="secno">5.1.19 </bdi>Optimisation For Consumer</a></li><li class="tocline"><a class="tocxref" href="#optimisation-for-controller"><bdi class="secno">5.1.20 </bdi>Optimisation For Controller</a></li><li class="tocline"><a class="tocxref" href="#optimise-user-interface"><bdi class="secno">5.1.21 </bdi>Optimise User Interface</a></li><li class="tocline"><a class="tocxref" href="#personalised-benefits"><bdi class="secno">5.1.22 </bdi>Personalised Benefits</a></li><li class="tocline"><a class="tocxref" href="#research-and-development"><bdi class="secno">5.1.23 </bdi>Research And Development</a></li><li class="tocline"><a class="tocxref" href="#sector"><bdi class="secno">5.1.24 </bdi>Sector</a></li><li class="tocline"><a class="tocxref" href="#security"><bdi class="secno">5.1.25 </bdi>Security</a></li><li class="tocline"><a class="tocxref" href="#sell-data-to-third-parties"><bdi class="secno">5.1.26 </bdi>Sell Data To Third Parties</a></li><li class="tocline"><a class="tocxref" href="#sell-insights-from-data"><bdi class="secno">5.1.27 </bdi>Sell Insights From Data</a></li><li class="tocline"><a class="tocxref" href="#sell-products-to-data-subject"><bdi class="secno">5.1.28 </bdi>Sell Products To Data Subject</a></li><li class="tocline"><a class="tocxref" href="#sell-targetted-advertisements"><bdi class="secno">5.1.29 </bdi>Sell Targetted Advertisements</a></li><li class="tocline"><a class="tocxref" href="#service-optimization"><bdi class="secno">5.1.30 </bdi>Service Optimization</a></li><li class="tocline"><a class="tocxref" href="#service-personalization"><bdi class="secno">5.1.31 </bdi>Service Personalization</a></li><li class="tocline"><a class="tocxref" href="#service-provision"><bdi class="secno">5.1.32 </bdi>Service Provision</a></li><li class="tocline"><a class="tocxref" href="#user-interface-personalisation"><bdi class="secno">5.1.33 </bdi>User Interface Personalisation</a></li></ol></li><li class="tocline"><a class="tocxref" href="#purpose-properties"><bdi class="secno">5.2 </bdi>Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#has-beneficiary"><bdi class="secno">5.2.1 </bdi>has Beneficiary</a></li><li class="tocline"><a class="tocxref" href="#has-context"><bdi class="secno">5.2.2 </bdi>has Context</a></li><li class="tocline"><a class="tocxref" href="#has-sector"><bdi class="secno">5.2.3 </bdi>has Sector</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-processing-categories"><bdi class="secno">6. </bdi>Processing Categories</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#processing-classes"><bdi class="secno">6.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#acquire"><bdi class="secno">6.1.1 </bdi>Acquire</a></li><li class="tocline"><a class="tocxref" href="#adapt"><bdi class="secno">6.1.2 </bdi>Adapt</a></li><li class="tocline"><a class="tocxref" href="#align"><bdi class="secno">6.1.3 </bdi>Align</a></li><li class="tocline"><a class="tocxref" href="#alter"><bdi class="secno">6.1.4 </bdi>Alter</a></li><li class="tocline"><a class="tocxref" href="#analyse"><bdi class="secno">6.1.5 </bdi>Analyse</a></li><li class="tocline"><a class="tocxref" href="#anonymise"><bdi class="secno">6.1.6 </bdi>Anonymise</a></li><li class="tocline"><a class="tocxref" href="#collect"><bdi class="secno">6.1.7 </bdi>Collect</a></li><li class="tocline"><a class="tocxref" href="#combine"><bdi class="secno">6.1.8 </bdi>Combine</a></li><li class="tocline"><a class="tocxref" href="#consult"><bdi class="secno">6.1.9 </bdi>Consult</a></li><li class="tocline"><a class="tocxref" href="#copy"><bdi class="secno">6.1.10 </bdi>Copy</a></li><li class="tocline"><a class="tocxref" href="#derive"><bdi class="secno">6.1.11 </bdi>Derive</a></li><li class="tocline"><a class="tocxref" href="#destruct"><bdi class="secno">6.1.12 </bdi>Destruct</a></li><li class="tocline"><a class="tocxref" href="#disclose"><bdi class="secno">6.1.13 </bdi>Disclose</a></li><li class="tocline"><a class="tocxref" href="#disclose-by-transmission"><bdi class="secno">6.1.14 </bdi>Disclose By Transmission</a></li><li class="tocline"><a class="tocxref" href="#disseminate"><bdi class="secno">6.1.15 </bdi>Disseminate</a></li><li class="tocline"><a class="tocxref" href="#erase"><bdi class="secno">6.1.16 </bdi>Erase</a></li><li class="tocline"><a class="tocxref" href="#make-available"><bdi class="secno">6.1.17 </bdi>Make Available</a></li><li class="tocline"><a class="tocxref" href="#move"><bdi class="secno">6.1.18 </bdi>Move</a></li><li class="tocline"><a class="tocxref" href="#obtain"><bdi class="secno">6.1.19 </bdi>Obtain</a></li><li class="tocline"><a class="tocxref" href="#organise"><bdi class="secno">6.1.20 </bdi>Organise</a></li><li class="tocline"><a class="tocxref" href="#profiling"><bdi class="secno">6.1.21 </bdi>Profiling</a></li><li class="tocline"><a class="tocxref" href="#pseudo-anonymise"><bdi class="secno">6.1.22 </bdi>Pseudo Anonymise</a></li><li class="tocline"><a class="tocxref" href="#record"><bdi class="secno">6.1.23 </bdi>Record</a></li><li class="tocline"><a class="tocxref" href="#remove"><bdi class="secno">6.1.24 </bdi>Remove</a></li><li class="tocline"><a class="tocxref" href="#restrict"><bdi class="secno">6.1.25 </bdi>Restrict</a></li><li class="tocline"><a class="tocxref" href="#retrieve"><bdi class="secno">6.1.26 </bdi>Retrieve</a></li><li class="tocline"><a class="tocxref" href="#share"><bdi class="secno">6.1.27 </bdi>Share</a></li><li class="tocline"><a class="tocxref" href="#store"><bdi class="secno">6.1.28 </bdi>Store</a></li><li class="tocline"><a class="tocxref" href="#structure"><bdi class="secno">6.1.29 </bdi>Structure</a></li><li class="tocline"><a class="tocxref" href="#transfer"><bdi class="secno">6.1.30 </bdi>Transfer</a></li><li class="tocline"><a class="tocxref" href="#transform"><bdi class="secno">6.1.31 </bdi>Transform</a></li><li class="tocline"><a class="tocxref" href="#transmit"><bdi class="secno">6.1.32 </bdi>Transmit</a></li><li class="tocline"><a class="tocxref" href="#use"><bdi class="secno">6.1.33 </bdi>Use</a></li></ol></li><li class="tocline"><a class="tocxref" href="#processing-properties"><bdi class="secno">6.2 </bdi>Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#innovative-use-of-new-solutions"><bdi class="secno">6.2.1 </bdi>innovative Use Of New Solutions</a></li><li class="tocline"><a class="tocxref" href="#is-automated-decision-making"><bdi class="secno">6.2.2 </bdi>is Automated Decision Making</a></li><li class="tocline"><a class="tocxref" href="#is-evaluation-scoring"><bdi class="secno">6.2.3 </bdi>is Evaluation Scoring</a></li><li class="tocline"><a class="tocxref" href="#is-large-scale"><bdi class="secno">6.2.4 </bdi>is Large Scale</a></li><li class="tocline"><a class="tocxref" href="#is-matching-combining"><bdi class="secno">6.2.5 </bdi>is Matching Combining</a></li><li class="tocline"><a class="tocxref" href="#is-systematic-monitoring"><bdi class="secno">6.2.6 </bdi>is Systematic Monitoring</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-technical-organisational-measures"><bdi class="secno">7. </bdi>Technical and Organisational Measures</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#technicalorganisationalmeasure-classes"><bdi class="secno">7.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#access-control-method"><bdi class="secno">7.1.1 </bdi>Access Control Method</a></li><li class="tocline"><a class="tocxref" href="#anonymization"><bdi class="secno">7.1.2 </bdi>Anonymization</a></li><li class="tocline"><a class="tocxref" href="#authentication-protocols"><bdi class="secno">7.1.3 </bdi>Authentication Protocols</a></li><li class="tocline"><a class="tocxref" href="#authorisation-procedure"><bdi class="secno">7.1.4 </bdi>Authorisation Procedure</a></li><li class="tocline"><a class="tocxref" href="#certification-0"><bdi class="secno">7.1.5 </bdi>Certification</a></li><li class="tocline"><a class="tocxref" href="#certification-seal"><bdi class="secno">7.1.6 </bdi>Certification Seal</a></li><li class="tocline"><a class="tocxref" href="#code-of-conduct"><bdi class="secno">7.1.7 </bdi>Code Of Conduct</a></li><li class="tocline"><a class="tocxref" href="#contract"><bdi class="secno">7.1.8 </bdi>Contract</a></li><li class="tocline"><a class="tocxref" href="#de-identification"><bdi class="secno">7.1.9 </bdi>De Identification</a></li><li class="tocline"><a class="tocxref" href="#design-standard"><bdi class="secno">7.1.10 </bdi>Design Standard</a></li><li class="tocline"><a class="tocxref" href="#encryption-in-rest"><bdi class="secno">7.1.11 </bdi>Encryption In Rest</a></li><li class="tocline"><a class="tocxref" href="#encryption-in-transfer"><bdi class="secno">7.1.12 </bdi>Encryption In Transfer</a></li><li class="tocline"><a class="tocxref" href="#guidelines-principle"><bdi class="secno">7.1.13 </bdi>Guidelines Principle</a></li><li class="tocline"><a class="tocxref" href="#legal-agreement"><bdi class="secno">7.1.14 </bdi>Legal Agreement</a></li><li class="tocline"><a class="tocxref" href="#nda"><bdi class="secno">7.1.15 </bdi>NDA</a></li><li class="tocline"><a class="tocxref" href="#organisational-measure"><bdi class="secno">7.1.16 </bdi>Organisational Measure</a></li><li class="tocline"><a class="tocxref" href="#privacy-by-default"><bdi class="secno">7.1.17 </bdi>Privacy By Default</a></li><li class="tocline"><a class="tocxref" href="#privacy-by-design"><bdi class="secno">7.1.18 </bdi>Privacy By Design</a></li><li class="tocline"><a class="tocxref" href="#pseudo-anonymization"><bdi class="secno">7.1.19 </bdi>Pseudo Anonymization</a></li><li class="tocline"><a class="tocxref" href="#pseudonymisation-encryption"><bdi class="secno">7.1.20 </bdi>Pseudonymisation Encryption</a></li><li class="tocline"><a class="tocxref" href="#regularity-of-recertification"><bdi class="secno">7.1.21 </bdi>Regularity Of Recertification</a></li><li class="tocline"><a class="tocxref" href="#risk-management-procedure"><bdi class="secno">7.1.22 </bdi>Risk Management Procedure</a></li><li class="tocline"><a class="tocxref" href="#seal"><bdi class="secno">7.1.23 </bdi>Seal</a></li><li class="tocline"><a class="tocxref" href="#staff-training"><bdi class="secno">7.1.24 </bdi>Staff Training</a></li><li class="tocline"><a class="tocxref" href="#storage-deletion"><bdi class="secno">7.1.25 </bdi>Storage Deletion</a></li><li class="tocline"><a class="tocxref" href="#storage-duration"><bdi class="secno">7.1.26 </bdi>Storage Duration</a></li><li class="tocline"><a class="tocxref" href="#storage-location"><bdi class="secno">7.1.27 </bdi>Storage Location</a></li><li class="tocline"><a class="tocxref" href="#storage-restoration"><bdi class="secno">7.1.28 </bdi>Storage Restoration</a></li><li class="tocline"><a class="tocxref" href="#storage-restriction"><bdi class="secno">7.1.29 </bdi>Storage Restriction</a></li><li class="tocline"><a class="tocxref" href="#technical-measure"><bdi class="secno">7.1.30 </bdi>Technical Measure</a></li></ol></li><li class="tocline"><a class="tocxref" href="#technicalorganisationalmeasure-properties"><bdi class="secno">7.2 </bdi>Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#duration"><bdi class="secno">7.2.1 </bdi>duration</a></li><li class="tocline"><a class="tocxref" href="#location-0"><bdi class="secno">7.2.2 </bdi>location</a></li><li class="tocline"><a class="tocxref" href="#measure-implemented-by"><bdi class="secno">7.2.3 </bdi>measure Implemented By</a></li><li class="tocline"><a class="tocxref" href="#storage"><bdi class="secno">7.2.4 </bdi>storage</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-consent"><bdi class="secno">8. </bdi>Consent</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#consent-classes"><bdi class="secno">8.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#consent"><bdi class="secno">8.1.1 </bdi>Consent</a></li><li class="tocline"><a class="tocxref" href="#legal-entity"><bdi class="secno">8.1.2 </bdi>Legal Entity</a></li></ol></li><li class="tocline"><a class="tocxref" href="#consent-properties"><bdi class="secno">8.2 </bdi>Properties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#consent-notice"><bdi class="secno">8.2.1 </bdi>consent Notice</a></li><li class="tocline"><a class="tocxref" href="#expiry"><bdi class="secno">8.2.2 </bdi>expiry</a></li><li class="tocline"><a class="tocxref" href="#expiry-condition"><bdi class="secno">8.2.3 </bdi>expiry Condition</a></li><li class="tocline"><a class="tocxref" href="#expiry-time"><bdi class="secno">8.2.4 </bdi>expiry Time</a></li><li class="tocline"><a class="tocxref" href="#is-explicit"><bdi class="secno">8.2.5 </bdi>is Explicit</a></li><li class="tocline"><a class="tocxref" href="#provision-by"><bdi class="secno">8.2.6 </bdi>provision By</a></li><li class="tocline"><a class="tocxref" href="#provision-by-justification"><bdi class="secno">8.2.7 </bdi>provision By Justification</a></li><li class="tocline"><a class="tocxref" href="#provision-method"><bdi class="secno">8.2.8 </bdi>provision Method</a></li><li class="tocline"><a class="tocxref" href="#provision-time"><bdi class="secno">8.2.9 </bdi>provision Time</a></li><li class="tocline"><a class="tocxref" href="#withdrawal-by"><bdi class="secno">8.2.10 </bdi>withdrawal By</a></li><li class="tocline"><a class="tocxref" href="#withdrawal-by-justification"><bdi class="secno">8.2.11 </bdi>withdrawal By Justification</a></li><li class="tocline"><a class="tocxref" href="#withdrawal-method"><bdi class="secno">8.2.12 </bdi>withdrawal Method</a></li><li class="tocline"><a class="tocxref" href="#withdrawal-time"><bdi class="secno">8.2.13 </bdi>withdrawal Time</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#vocab-recipients-controllers-data-subjects"><bdi class="secno">9. </bdi>Recipients, Data Controllers, and Data Subjects</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#recipientsdatacontrollersdatasubjects-classes"><bdi class="secno">9.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#child"><bdi class="secno">9.1.1 </bdi>Child</a></li><li class="tocline"><a class="tocxref" href="#data-processor"><bdi class="secno">9.1.2 </bdi>Data Processor</a></li><li class="tocline"><a class="tocxref" href="#third-party"><bdi class="secno">9.1.3 </bdi>Third Party</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#issues"><bdi class="secno">A. </bdi>Issues</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">B. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#informative-references"><bdi class="secno">B.1 </bdi>Informative references</a></li></ol></li></ol></nav>
   <section id="motivation">
     <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#motivation"></a></h2>
     <p>The Data Privacy Vocabulary provides terms (classes and properties) to annotate and categorize instances of legally compliant personal data handling. In particular, the vocabulary provides extensible taxonomies of terms to describe the following components:</p>
@@ -958,7 +962,7 @@ var[data-type]:hover::before {
     <h2 id="x3-base-vocabulary"><bdi class="secno">3. </bdi>Base Vocabulary<a class="self-link" aria-label="§" href="#vocab-base"></a></h2>
     <p>The ‘Base Vocabulary’ describes the top-level classes defining a policy for legal personal data handling. Classes and properties for each top-level class are further elaborated using sub-vocabularies, e.g., the Personal Data taxonomy. While all concepts within the vocabulary share a single namespace, the modular approach makes it possible to use the sub-vocabularies without the <code><a href="#dpv:PersonalDataHandling">:PersonalDataHandling</a></code> class, for example to refer only to purposes. Exceptions to this are the NACE purpose taxonomy extending the <code><a href="#dpv:Sector">:Sector</a></code> concept in the Purposes vocabulary, and the GDPR legal bases taxonomy extending the top-level <code><a href="#dpv:LegalBasis">:LegalBasis</a></code> class, which are provided under a separate namespace to indicate their specialisation.</p>
     <figure id="fig-base-vocabulary">
-      <img title="DPV Base Vocabulary" alt="DPV base vocabulary" src="./diagrams/personaldatahandling.png">
+      <img title="DPV Base Vocabulary" alt="DPV base vocabulary" src="./diagrams/personaldatahandling.png" width="1093" height="307">
       <figcaption>Figure <bdi class="figno">1</bdi> <span class="fig-title">Base Vocabulary</span></figcaption>
     </figure>
     <p>An instance of PersonalDataHandling is associated with one or more instances of Personal Data Category, Purpose, Processing, Recipient, Technical and Organisation Measures, Legal Basis, and Data Controller. The vocabulary provides relevant properties for associating each top-level concept with the PersonalDataHandling class, such as hasPurpose and hasDataSubject to associate with Purpose and Data Subject respectively.</p>
@@ -1964,6 +1968,7 @@ rdfs:seeAlso spl:AnyRecipient
 <code><a href="#dpv:Sale">:Sale</a></code> |
 <code><a href="#dpv:School">:School</a></code> |
 <code><a href="#dpv:SecretText">:SecretText</a></code> |
+<code><a href="#dpv:ServiceConsumptionBehavior">:ServiceConsumptionBehavior</a></code> |
 <code><a href="#dpv:Sexual">:Sexual</a></code> |
 <code><a href="#dpv:SexualHistory">:SexualHistory</a></code> |
 <code><a href="#dpv:SexualPreference">:SexualPreference</a></code> |
@@ -1981,6 +1986,7 @@ rdfs:seeAlso spl:AnyRecipient
 <code><a href="#dpv:Tracking">:Tracking</a></code> |
 <code><a href="#dpv:Transaction">:Transaction</a></code> |
 <code><a href="#dpv:Transactional">:Transactional</a></code> |
+<code><a href="#dpv:TVViewingBehavior">:TVViewingBehavior</a></code> |
 <code><a href="#dpv:UID">:UID</a></code> |
 <code><a href="#dpv:Username">:Username</a></code> |
 <code><a href="#dpv:VoiceCommunicationRecording">:VoiceCommunicationRecording</a></code> |
@@ -8019,8 +8025,38 @@ rdfs:seeAlso spl:AnyRecipient
 </tbody>
 </table>
 </section>
+<section id="serviceconsumptionbehavior">
+<h4 id="dpv:ServiceConsumptionBehavior"><bdi class="secno">4.1.139 </bdi>ServiceConsumptionBehavior<a class="self-link" aria-label="§" href="#serviceconsumptionbehavior"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:ServiceConsumptionBehavior">dpv:ServiceConsumptionBehavior</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>Information about the consumption of a service by an individual. Examples: time and duration of consumption.</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:Behavioral">dpv:Behavioral</a></td>
+</tr>
+<tr>
+<td>Status:</td>
+<td>proposed</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-11-25</td>
+</tr>
+<tr><td>Contributor:</td>
+<td>Harshvardhan J. Pandit, Rudy Jacob</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="sexual">
-<h4 id="dpv:Sexual"><bdi class="secno">4.1.139 </bdi>Sexual<a class="self-link" aria-label="§" href="#sexual"></a></h4>
+<h4 id="dpv:Sexual"><bdi class="secno">4.1.140 </bdi>Sexual<a class="self-link" aria-label="§" href="#sexual"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8063,7 +8099,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="sexual-history">
-<h4 id="dpv:SexualHistory"><bdi class="secno">4.1.140 </bdi>Sexual History<a class="self-link" aria-label="§" href="#sexual-history"></a></h4>
+<h4 id="dpv:SexualHistory"><bdi class="secno">4.1.141 </bdi>Sexual History<a class="self-link" aria-label="§" href="#sexual-history"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8106,7 +8142,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="sexual-preference">
-<h4 id="dpv:SexualPreference"><bdi class="secno">4.1.141 </bdi>Sexual Preference<a class="self-link" aria-label="§" href="#sexual-preference"></a></h4>
+<h4 id="dpv:SexualPreference"><bdi class="secno">4.1.142 </bdi>Sexual Preference<a class="self-link" aria-label="§" href="#sexual-preference"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8149,7 +8185,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="sibling">
-<h4 id="dpv:Sibling"><bdi class="secno">4.1.142 </bdi>Sibling<a class="self-link" aria-label="§" href="#sibling"></a></h4>
+<h4 id="dpv:Sibling"><bdi class="secno">4.1.143 </bdi>Sibling<a class="self-link" aria-label="§" href="#sibling"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8192,7 +8228,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="skin-tone">
-<h4 id="dpv:SkinTone"><bdi class="secno">4.1.143 </bdi>Skin Tone<a class="self-link" aria-label="§" href="#skin-tone"></a></h4>
+<h4 id="dpv:SkinTone"><bdi class="secno">4.1.144 </bdi>Skin Tone<a class="self-link" aria-label="§" href="#skin-tone"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8235,7 +8271,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="social">
-<h4 id="dpv:Social"><bdi class="secno">4.1.144 </bdi>Social<a class="self-link" aria-label="§" href="#social"></a></h4>
+<h4 id="dpv:Social"><bdi class="secno">4.1.145 </bdi>Social<a class="self-link" aria-label="§" href="#social"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8278,7 +8314,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="social-media-communication">
-<h4 id="dpv:SocialMediaCommunication"><bdi class="secno">4.1.145 </bdi>Social Media Communication<a class="self-link" aria-label="§" href="#social-media-communication"></a></h4>
+<h4 id="dpv:SocialMediaCommunication"><bdi class="secno">4.1.146 </bdi>Social Media Communication<a class="self-link" aria-label="§" href="#social-media-communication"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8327,7 +8363,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="social-network">
-<h4 id="dpv:SocialNetwork"><bdi class="secno">4.1.146 </bdi>Social Network<a class="self-link" aria-label="§" href="#social-network"></a></h4>
+<h4 id="dpv:SocialNetwork"><bdi class="secno">4.1.147 </bdi>Social Network<a class="self-link" aria-label="§" href="#social-network"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8370,7 +8406,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="social-status">
-<h4 id="dpv:SocialStatus"><bdi class="secno">4.1.147 </bdi>Social Status<a class="self-link" aria-label="§" href="#social-status"></a></h4>
+<h4 id="dpv:SocialStatus"><bdi class="secno">4.1.148 </bdi>Social Status<a class="self-link" aria-label="§" href="#social-status"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8413,7 +8449,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="special-category-personal-data">
-<h4 id="dpv:SpecialCategoryPersonalData"><bdi class="secno">4.1.148 </bdi>Special Category Personal Data<a class="self-link" aria-label="§" href="#special-category-personal-data"></a></h4>
+<h4 id="dpv:SpecialCategoryPersonalData"><bdi class="secno">4.1.149 </bdi>Special Category Personal Data<a class="self-link" aria-label="§" href="#special-category-personal-data"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8460,7 +8496,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="tattoo">
-<h4 id="dpv:Tattoo"><bdi class="secno">4.1.149 </bdi>Tattoo<a class="self-link" aria-label="§" href="#tattoo"></a></h4>
+<h4 id="dpv:Tattoo"><bdi class="secno">4.1.150 </bdi>Tattoo<a class="self-link" aria-label="§" href="#tattoo"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8503,7 +8539,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="tax">
-<h4 id="dpv:Tax"><bdi class="secno">4.1.150 </bdi>Tax<a class="self-link" aria-label="§" href="#tax"></a></h4>
+<h4 id="dpv:Tax"><bdi class="secno">4.1.151 </bdi>Tax<a class="self-link" aria-label="§" href="#tax"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8546,7 +8582,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="telephone-number">
-<h4 id="dpv:TelephoneNumber"><bdi class="secno">4.1.151 </bdi>Telephone Number<a class="self-link" aria-label="§" href="#telephone-number"></a></h4>
+<h4 id="dpv:TelephoneNumber"><bdi class="secno">4.1.152 </bdi>Telephone Number<a class="self-link" aria-label="§" href="#telephone-number"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8589,7 +8625,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="thought">
-<h4 id="dpv:Thought"><bdi class="secno">4.1.152 </bdi>Thought<a class="self-link" aria-label="§" href="#thought"></a></h4>
+<h4 id="dpv:Thought"><bdi class="secno">4.1.153 </bdi>Thought<a class="self-link" aria-label="§" href="#thought"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8632,7 +8668,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="tracking">
-<h4 id="dpv:Tracking"><bdi class="secno">4.1.153 </bdi>Tracking<a class="self-link" aria-label="§" href="#tracking"></a></h4>
+<h4 id="dpv:Tracking"><bdi class="secno">4.1.154 </bdi>Tracking<a class="self-link" aria-label="§" href="#tracking"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8675,7 +8711,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="transaction">
-<h4 id="dpv:Transaction"><bdi class="secno">4.1.154 </bdi>Transaction<a class="self-link" aria-label="§" href="#transaction"></a></h4>
+<h4 id="dpv:Transaction"><bdi class="secno">4.1.155 </bdi>Transaction<a class="self-link" aria-label="§" href="#transaction"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8718,7 +8754,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="transactional">
-<h4 id="dpv:Transactional"><bdi class="secno">4.1.155 </bdi>Transactional<a class="self-link" aria-label="§" href="#transactional"></a></h4>
+<h4 id="dpv:Transactional"><bdi class="secno">4.1.156 </bdi>Transactional<a class="self-link" aria-label="§" href="#transactional"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8760,8 +8796,38 @@ rdfs:seeAlso spl:AnyRecipient
 </tbody>
 </table>
 </section>
+<section id="tv-viewing-behavior">
+<h4 id="dpv:TVViewingBehavior"><bdi class="secno">4.1.157 </bdi>TV Viewing Behavior<a class="self-link" aria-label="§" href="#tv-viewing-behavior"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:TVViewingBehavior">dpv:TVViewingBehavior</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>Information that relates to an individual's TV viewing behavior, such as timestamps of channel change, duration of viewership, content consumed.</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:ServiceConsumptionBehavior">dpv:ServiceConsumptionBehavior</a></td>
+</tr>
+<tr><td>Status:</td>
+<td>proposed</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-11-25</td>
+</tr>
+<tr>
+<td>Contributor:</td>
+<td>Harshvardhan J. Pandit, Rudy Jacob</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="uid">
-<h4 id="dpv:UID"><bdi class="secno">4.1.156 </bdi>UID<a class="self-link" aria-label="§" href="#uid"></a></h4>
+<h4 id="dpv:UID"><bdi class="secno">4.1.158 </bdi>UID<a class="self-link" aria-label="§" href="#uid"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8810,7 +8876,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="username">
-<h4 id="dpv:Username"><bdi class="secno">4.1.157 </bdi>Username<a class="self-link" aria-label="§" href="#username"></a></h4>
+<h4 id="dpv:Username"><bdi class="secno">4.1.159 </bdi>Username<a class="self-link" aria-label="§" href="#username"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8853,7 +8919,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="voice-communication-recording">
-<h4 id="dpv:VoiceCommunicationRecording"><bdi class="secno">4.1.158 </bdi>Voice Communication Recording<a class="self-link" aria-label="§" href="#voice-communication-recording"></a></h4>
+<h4 id="dpv:VoiceCommunicationRecording"><bdi class="secno">4.1.160 </bdi>Voice Communication Recording<a class="self-link" aria-label="§" href="#voice-communication-recording"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8900,7 +8966,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="voice-mail">
-<h4 id="dpv:VoiceMail"><bdi class="secno">4.1.159 </bdi>Voice Mail<a class="self-link" aria-label="§" href="#voice-mail"></a></h4>
+<h4 id="dpv:VoiceMail"><bdi class="secno">4.1.161 </bdi>Voice Mail<a class="self-link" aria-label="§" href="#voice-mail"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8943,7 +9009,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="weight">
-<h4 id="dpv:Weight"><bdi class="secno">4.1.160 </bdi>Weight<a class="self-link" aria-label="§" href="#weight"></a></h4>
+<h4 id="dpv:Weight"><bdi class="secno">4.1.162 </bdi>Weight<a class="self-link" aria-label="§" href="#weight"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -8986,7 +9052,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="work-history">
-<h4 id="dpv:WorkHistory"><bdi class="secno">4.1.161 </bdi>Work History<a class="self-link" aria-label="§" href="#work-history"></a></h4>
+<h4 id="dpv:WorkHistory"><bdi class="secno">4.1.163 </bdi>Work History<a class="self-link" aria-label="§" href="#work-history"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9063,6 +9129,8 @@ rdfs:seeAlso spl:AnyRecipient
 <code><a href="#dpv:CommercialInterest">:CommercialInterest</a></code> |
 <code><a href="#dpv:CommercialResearch">:CommercialResearch</a></code> |
 <code><a href="#dpv:Context">:Context</a></code> |
+<code><a href="#dpv:CreateEventRecommendations">:CreateEventRecommendations</a></code> |
+<code><a href="#dpv:CreatePersonalizedRecommendations">:CreatePersonalizedRecommendations</a></code> |
 <code><a href="#dpv:CreateProductRecommendations">:CreateProductRecommendations</a></code> |
 <code><a href="#dpv:CustomerCare">:CustomerCare</a></code> |
 <code><a href="#dpv:DeliveryOfGoods">:DeliveryOfGoods</a></code> |
@@ -9350,8 +9418,68 @@ rdfs:seeAlso spl:AnyRecipient
 </tbody>
 </table>
 </section>
+<section id="create-event-recommendations">
+<h4 id="dpv:CreateEventRecommendations"><bdi class="secno">5.1.7 </bdi>Create Event Recommendations<a class="self-link" aria-label="§" href="#create-event-recommendations"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:CreateEventRecommendations">dpv:CreateEventRecommendations</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>Create and provide personalised recommendations for events to the individual.</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:CreatePersonalizedRecommendations">dpv:CreatePersonalizedRecommendations</a></td>
+</tr>
+<tr>
+</tr><tr>
+<td>Status:</td>
+<td>proposed</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-11-25</td>
+</tr>
+<tr><td>Contributor:</td>
+<td>Harshvardhan J. Pandit, Rudy Jacob</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="create-personalized-recommendations">
+<h4 id="dpv:CreatePersonalizedRecommendations"><bdi class="secno">5.1.8 </bdi>Create Personalized Recommendations<a class="self-link" aria-label="§" href="#create-personalized-recommendations"></a></h4>
+<table class="definition">
+<tbody>
+<tr>
+<th>Class:</th>
+<th><code><a href="#dpv:CreatePersonalizedRecommendations">dpv:CreatePersonalizedRecommendations</a></code></th>
+</tr>
+<tr>
+<td>Description:</td>
+<td>Create and provide personalised recommendations to the individual.</td>
+</tr>
+<tr>
+<td>is SubClass of:</td>
+<td><a href="#dpv:ServicePersonalization">dpv:ServicePersonalization</a></td>
+</tr>
+<tr><td>Status:</td>
+<td>proposed</td>
+</tr>
+<tr>
+<td>Date Created:</td>
+<td>2019-11-25</td>
+</tr>
+<tr><td>Contributor:</td>
+<td>Harshvardhan J. Pandit, Rudy Jacob</td>
+</tr>
+</tbody>
+</table>
+</section>
 <section id="create-product-recommendations">
-<h4 id="dpv:CreateProductRecommendations"><bdi class="secno">5.1.7 </bdi>Create Product Recommendations<a class="self-link" aria-label="§" href="#create-product-recommendations"></a></h4>
+<h4 id="dpv:CreateProductRecommendations"><bdi class="secno">5.1.9 </bdi>Create Product Recommendations<a class="self-link" aria-label="§" href="#create-product-recommendations"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9364,7 +9492,7 @@ rdfs:seeAlso spl:AnyRecipient
 </tr>
 <tr>
 <td>is SubClass of:</td>
-<td><a href="#dpv:ServicePersonalization">dpv:ServicePersonalization</a></td>
+<td><a href="#dpv:CreatePersonalizedRecommendations">dpv:CreatePersonalizedRecommendations</a></td>
 </tr>
 <tr>
 <td>Source:</td>
@@ -9400,7 +9528,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="customer-care">
-<h4 id="dpv:CustomerCare"><bdi class="secno">5.1.8 </bdi>Customer Care<a class="self-link" aria-label="§" href="#customer-care"></a></h4>
+<h4 id="dpv:CustomerCare"><bdi class="secno">5.1.10 </bdi>Customer Care<a class="self-link" aria-label="§" href="#customer-care"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9449,7 +9577,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="delivery-of-goods">
-<h4 id="dpv:DeliveryOfGoods"><bdi class="secno">5.1.9 </bdi>Delivery Of Goods<a class="self-link" aria-label="§" href="#delivery-of-goods"></a></h4>
+<h4 id="dpv:DeliveryOfGoods"><bdi class="secno">5.1.11 </bdi>Delivery Of Goods<a class="self-link" aria-label="§" href="#delivery-of-goods"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9498,7 +9626,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="fraud-prevention-and-detection">
-<h4 id="dpv:FraudPreventionAndDetection"><bdi class="secno">5.1.10 </bdi>Fraud Prevention And Detection<a class="self-link" aria-label="§" href="#fraud-prevention-and-detection"></a></h4>
+<h4 id="dpv:FraudPreventionAndDetection"><bdi class="secno">5.1.12 </bdi>Fraud Prevention And Detection<a class="self-link" aria-label="§" href="#fraud-prevention-and-detection"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9547,7 +9675,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="identity-verification">
-<h4 id="dpv:IdentityVerification"><bdi class="secno">5.1.11 </bdi>Identity Verification<a class="self-link" aria-label="§" href="#identity-verification"></a></h4>
+<h4 id="dpv:IdentityVerification"><bdi class="secno">5.1.13 </bdi>Identity Verification<a class="self-link" aria-label="§" href="#identity-verification"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9590,7 +9718,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="improve-existing-products-and-services">
-<h4 id="dpv:ImproveExistingProductsAndServices"><bdi class="secno">5.1.12 </bdi>Improve Existing Products And Services<a class="self-link" aria-label="§" href="#improve-existing-products-and-services"></a></h4>
+<h4 id="dpv:ImproveExistingProductsAndServices"><bdi class="secno">5.1.14 </bdi>Improve Existing Products And Services<a class="self-link" aria-label="§" href="#improve-existing-products-and-services"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9633,7 +9761,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="improve-internal-crmprocesses">
-<h4 id="dpv:ImproveInternalCRMProcesses"><bdi class="secno">5.1.13 </bdi>Improve Internal CRMProcesses<a class="self-link" aria-label="§" href="#improve-internal-crmprocesses"></a></h4>
+<h4 id="dpv:ImproveInternalCRMProcesses"><bdi class="secno">5.1.15 </bdi>Improve Internal CRMProcesses<a class="self-link" aria-label="§" href="#improve-internal-crmprocesses"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9676,7 +9804,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="increase-service-robustness">
-<h4 id="dpv:IncreaseServiceRobustness"><bdi class="secno">5.1.14 </bdi>Increase Service Robustness<a class="self-link" aria-label="§" href="#increase-service-robustness"></a></h4>
+<h4 id="dpv:IncreaseServiceRobustness"><bdi class="secno">5.1.16 </bdi>Increase Service Robustness<a class="self-link" aria-label="§" href="#increase-service-robustness"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9719,7 +9847,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="internal-resource-optimisation">
-<h4 id="dpv:InternalResourceOptimisation"><bdi class="secno">5.1.15 </bdi>Internal Resource Optimisation<a class="self-link" aria-label="§" href="#internal-resource-optimisation"></a></h4>
+<h4 id="dpv:InternalResourceOptimisation"><bdi class="secno">5.1.17 </bdi>Internal Resource Optimisation<a class="self-link" aria-label="§" href="#internal-resource-optimisation"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9762,7 +9890,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="non-commercial-research">
-<h4 id="dpv:NonCommercialResearch"><bdi class="secno">5.1.16 </bdi>Non Commercial Research<a class="self-link" aria-label="§" href="#non-commercial-research"></a></h4>
+<h4 id="dpv:NonCommercialResearch"><bdi class="secno">5.1.18 </bdi>Non Commercial Research<a class="self-link" aria-label="§" href="#non-commercial-research"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9805,7 +9933,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="optimisation-for-consumer">
-<h4 id="dpv:OptimisationForConsumer"><bdi class="secno">5.1.17 </bdi>Optimisation For Consumer<a class="self-link" aria-label="§" href="#optimisation-for-consumer"></a></h4>
+<h4 id="dpv:OptimisationForConsumer"><bdi class="secno">5.1.19 </bdi>Optimisation For Consumer<a class="self-link" aria-label="§" href="#optimisation-for-consumer"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9854,7 +9982,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="optimisation-for-controller">
-<h4 id="dpv:OptimisationForController"><bdi class="secno">5.1.18 </bdi>Optimisation For Controller<a class="self-link" aria-label="§" href="#optimisation-for-controller"></a></h4>
+<h4 id="dpv:OptimisationForController"><bdi class="secno">5.1.20 </bdi>Optimisation For Controller<a class="self-link" aria-label="§" href="#optimisation-for-controller"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9897,7 +10025,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="optimise-user-interface">
-<h4 id="dpv:OptimiseUserInterface"><bdi class="secno">5.1.19 </bdi>Optimise User Interface<a class="self-link" aria-label="§" href="#optimise-user-interface"></a></h4>
+<h4 id="dpv:OptimiseUserInterface"><bdi class="secno">5.1.21 </bdi>Optimise User Interface<a class="self-link" aria-label="§" href="#optimise-user-interface"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9940,7 +10068,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="personalised-benefits">
-<h4 id="dpv:PersonalisedBenefits"><bdi class="secno">5.1.20 </bdi>Personalised Benefits<a class="self-link" aria-label="§" href="#personalised-benefits"></a></h4>
+<h4 id="dpv:PersonalisedBenefits"><bdi class="secno">5.1.22 </bdi>Personalised Benefits<a class="self-link" aria-label="§" href="#personalised-benefits"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -9983,7 +10111,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="research-and-development">
-<h4 id="dpv:ResearchAndDevelopment"><bdi class="secno">5.1.21 </bdi>Research And Development<a class="self-link" aria-label="§" href="#research-and-development"></a></h4>
+<h4 id="dpv:ResearchAndDevelopment"><bdi class="secno">5.1.23 </bdi>Research And Development<a class="self-link" aria-label="§" href="#research-and-development"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -10026,7 +10154,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="sector">
-<h4 id="dpv:Sector"><bdi class="secno">5.1.22 </bdi>Sector<a class="self-link" aria-label="§" href="#sector"></a></h4>
+<h4 id="dpv:Sector"><bdi class="secno">5.1.24 </bdi>Sector<a class="self-link" aria-label="§" href="#sector"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -10061,7 +10189,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="security">
-<h4 id="dpv:Security"><bdi class="secno">5.1.23 </bdi>Security<a class="self-link" aria-label="§" href="#security"></a></h4>
+<h4 id="dpv:Security"><bdi class="secno">5.1.25 </bdi>Security<a class="self-link" aria-label="§" href="#security"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -10104,7 +10232,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="sell-data-to-third-parties">
-<h4 id="dpv:SellDataToThirdParties"><bdi class="secno">5.1.24 </bdi>Sell Data To Third Parties<a class="self-link" aria-label="§" href="#sell-data-to-third-parties"></a></h4>
+<h4 id="dpv:SellDataToThirdParties"><bdi class="secno">5.1.26 </bdi>Sell Data To Third Parties<a class="self-link" aria-label="§" href="#sell-data-to-third-parties"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -10147,7 +10275,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="sell-insights-from-data">
-<h4 id="dpv:SellInsightsFromData"><bdi class="secno">5.1.25 </bdi>Sell Insights From Data<a class="self-link" aria-label="§" href="#sell-insights-from-data"></a></h4>
+<h4 id="dpv:SellInsightsFromData"><bdi class="secno">5.1.27 </bdi>Sell Insights From Data<a class="self-link" aria-label="§" href="#sell-insights-from-data"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -10190,7 +10318,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="sell-products-to-data-subject">
-<h4 id="dpv:SellProductsToDataSubject"><bdi class="secno">5.1.26 </bdi>Sell Products To Data Subject<a class="self-link" aria-label="§" href="#sell-products-to-data-subject"></a></h4>
+<h4 id="dpv:SellProductsToDataSubject"><bdi class="secno">5.1.28 </bdi>Sell Products To Data Subject<a class="self-link" aria-label="§" href="#sell-products-to-data-subject"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -10233,7 +10361,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="sell-targetted-advertisements">
-<h4 id="dpv:SellTargettedAdvertisements"><bdi class="secno">5.1.27 </bdi>Sell Targetted Advertisements<a class="self-link" aria-label="§" href="#sell-targetted-advertisements"></a></h4>
+<h4 id="dpv:SellTargettedAdvertisements"><bdi class="secno">5.1.29 </bdi>Sell Targetted Advertisements<a class="self-link" aria-label="§" href="#sell-targetted-advertisements"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -10276,7 +10404,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="service-optimization">
-<h4 id="dpv:ServiceOptimization"><bdi class="secno">5.1.28 </bdi>Service Optimization<a class="self-link" aria-label="§" href="#service-optimization"></a></h4>
+<h4 id="dpv:ServiceOptimization"><bdi class="secno">5.1.30 </bdi>Service Optimization<a class="self-link" aria-label="§" href="#service-optimization"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -10319,7 +10447,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="service-personalization">
-<h4 id="dpv:ServicePersonalization"><bdi class="secno">5.1.29 </bdi>Service Personalization<a class="self-link" aria-label="§" href="#service-personalization"></a></h4>
+<h4 id="dpv:ServicePersonalization"><bdi class="secno">5.1.31 </bdi>Service Personalization<a class="self-link" aria-label="§" href="#service-personalization"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -10362,7 +10490,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="service-provision">
-<h4 id="dpv:ServiceProvision"><bdi class="secno">5.1.30 </bdi>Service Provision<a class="self-link" aria-label="§" href="#service-provision"></a></h4>
+<h4 id="dpv:ServiceProvision"><bdi class="secno">5.1.32 </bdi>Service Provision<a class="self-link" aria-label="§" href="#service-provision"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -10405,7 +10533,7 @@ rdfs:seeAlso spl:AnyRecipient
 </table>
 </section>
 <section id="user-interface-personalisation">
-<h4 id="dpv:UserInterfacePersonalisation"><bdi class="secno">5.1.31 </bdi>User Interface Personalisation<a class="self-link" aria-label="§" href="#user-interface-personalisation"></a></h4>
+<h4 id="dpv:UserInterfacePersonalisation"><bdi class="secno">5.1.33 </bdi>User Interface Personalisation<a class="self-link" aria-label="§" href="#user-interface-personalisation"></a></h4>
 <table class="definition">
 <tbody>
 <tr>
@@ -12356,7 +12484,7 @@ rdfs:seeAlso spl:AnyRecipient
 </tr>
 <tr>
 <td>Source:</td>
-<td>ISO 25237</td>
+<td><a href="ISO 25237">ISO 25237</a></td>
 </tr>
 <tr>
 <td>Status:</td>
@@ -13224,7 +13352,7 @@ rdfs:seeAlso spl:AnyRecipient
 </tr>
 <tr>
 <td>Source:</td>
-<td>ISO 31000</td>
+<td><a href="ISO 31000">ISO 31000</a></td>
 </tr>
 <tr>
 <td>Status:</td>
