@@ -200,7 +200,7 @@ FormForm a ui:Form;
         """To add a field to the form, press the blue plus at the bottom,
         and then select what sort of field you want."""@en; ui:style "background-color: #ffe;" .
 
-    FieldList  ui:sequence 10; a ui:Multiple; ui:ordered true; ui:property ui:parts; ui:parts ( FieldForm ).
+    FieldList  ui:sequence 10; a ui:Multiple; ui:ordered true; ui:property ui:parts; ui:part FieldForm .
 
 FieldForm a ui:Group;
     dc:title "Form for selecting a type of field";

@@ -506,8 +506,8 @@
                                 <r:rest r:parseType="Resource">
                                     <r:first r:parseType="Resource">
                                         <r:type r:resource="http://www.w3.org/ns/ui#IntergerField"/>
-                                        <label>miniumum number</label>
-                                        <property r:resource="http://www.w3.org/ns/ui#ordered"/>
+                                        <label>minimum number</label>
+                                        <property r:resource="http://www.w3.org/ns/ui#min"/>
                                         <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sequence>
                                     </r:first>
                                     <r:rest r:parseType="Resource">
@@ -559,10 +559,7 @@
 
     <Multiple r:about="http://www.w3.org/ns/ui#FieldList">
         <ordered r:resource="http://www.w3.org/ns/ui#true"/>
-        <parts r:parseType="Resource">
-            <r:first r:resource="http://www.w3.org/ns/ui#FieldForm"/>
-            <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
-        </parts>
+        <part r:resource="http://www.w3.org/ns/ui#FieldForm"/>
         <property r:resource="http://www.w3.org/ns/ui#parts"/>
         <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">10</sequence>
     </Multiple>

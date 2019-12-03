@@ -354,8 +354,8 @@
                                  :sequence 0 ]
                          [
                                  a :IntergerField;
-                                 :label "miniumum number";
-                                 :property :ordered;
+                                 :label "minimum number";
+                                 :property :min;
                                  :sequence 0 ]
                          [
                                  a :Choice;
@@ -386,8 +386,7 @@
     
     :FieldList     a :Multiple;
          :ordered :true;
-         :parts  (
-        :FieldForm );
+         :part :FieldForm;
          :property :parts;
          :sequence 10 .
     
