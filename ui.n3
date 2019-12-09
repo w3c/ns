@@ -197,7 +197,7 @@ FormForm a ui:Form;
     FF1 ui:sequence 1; a ui:Heading;  ui:contents "Edit Form"@en .
   	FF2 ui:sequence 2; a ui:SingleLineTextField; ui:property dc:title; ui:size 60 .
     FF3 ui:sequence 3; a ui:Comment;  ui:contents
-        """To add a field to the form, press the blue plus at the bottom,
+        """To add a field to the form, press the plus at the bottom,
         and then select what sort of field you want."""@en; ui:style "background-color: #ffe;" .
 
     FieldList  ui:sequence 10; a ui:Multiple; ui:ordered true; ui:property ui:parts; ui:part FieldForm .
@@ -247,9 +247,9 @@ FieldForm a ui:Group;
                 [ ui:sequence 3; a ui:DateTimeField; ui:property ui:max ; ui:label "max"]
             ) ]];
 
-            ui:case [ ui:for ui:EmailField; ui:use [a ui:Group; ui:parts
+            ui:case [ ui:for ui:EmailField; ui:use [a ui:Group; ui:parts (
                 [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty]
-            ]];
+            ) ]];
 
             ui:case [ ui:for ui:PhoneField; ui:use [a ui:Group; ui:parts (
                 [ ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from owl:ObjectProperty]

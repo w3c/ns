@@ -78,7 +78,7 @@
          :size 60 .
     
     :FF3     a :Comment;
-         :contents """To add a field to the form, press the blue plus at the bottom,
+         :contents """To add a field to the form, press the plus at the bottom,
         and then select what sort of field you want."""@en;
          :sequence 3;
          :style "background-color: #ffe;" .
@@ -241,13 +241,14 @@
                      :for :EmailField;
                      :use  [
                          a :Group;
-                         :parts  [
-                             a :Choice;
-                             :canMintNew :true;
-                             :from owl:ObjectProperty;
-                             :label "property";
-                             :property :property;
-                             :sequence 1 ] ] ],
+                         :parts  (
+                         [
+                                 a :Choice;
+                                 :canMintNew :true;
+                                 :from owl:ObjectProperty;
+                                 :label "property";
+                                 :property :property;
+                                 :sequence 1 ] ) ] ],
                          [
                      :for :PhoneField;
                      :use  [

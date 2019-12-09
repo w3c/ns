@@ -109,7 +109,7 @@
     </SingleLineTextField>
 
     <Comment r:about="http://www.w3.org/ns/ui#FF3">
-        <contents xml:lang="en">To add a field to the form, press the blue plus at the bottom,
+        <contents xml:lang="en">To add a field to the form, press the plus at the bottom,
         and then select what sort of field you want.</contents>
         <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">3</sequence>
         <style>background-color: #ffe;</style>
@@ -347,12 +347,15 @@
                         <use r:parseType="Resource">
                             <r:type r:resource="http://www.w3.org/ns/ui#Group"/>
                             <parts r:parseType="Resource">
-                                <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
-                                <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
-                                <from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
-                                <label>property</label>
-                                <property r:resource="http://www.w3.org/ns/ui#property"/>
-                                <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                <r:first r:parseType="Resource">
+                                    <r:type r:resource="http://www.w3.org/ns/ui#Choice"/>
+                                    <canMintNew r:resource="http://www.w3.org/ns/ui#true"/>
+                                    <from r:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+                                    <label>property</label>
+                                    <property r:resource="http://www.w3.org/ns/ui#property"/>
+                                    <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">1</sequence>
+                                </r:first>
+                                <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
                             </parts>
                         </use>
                     </case>
