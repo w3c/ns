@@ -1,0 +1,13 @@
+URI: i18n
+
+URI: i18n.ttl
+Content-Type: text/turtle; qs=0.6
+
+URI: i18n.jsonld
+Content-Type: application/ld+json; qs=0.5
+
+URI: i18n.json
+Content-Type: application/json; qs=0.45
+
+URI: i18n.rdf
+Content-Type: application/rdf+xml; qs=0.4

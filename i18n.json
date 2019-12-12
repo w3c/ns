@@ -1,0 +1,17 @@
+{
+    "@context": {
+        "id": "@id",
+        "type": "@type",
+        "title": "http://purl.org/dc/elements/1.1/title",
+        "description": "http://purl.org/dc/elements/1.1/description",
+        "seeAlso": {
+            "@id": "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+            "@type": "@id"
+        }
+    },
+    "id": "https://www.w3.org/ns/i18n#",
+    "type": "http://www.w3.org/2002/07/owl#Ontology",
+    "description": "The i18n namespace is used for describing combinations of language tag and base direction in RDF literals. It is used as an alternative mechanism for describing the BCP47 language tag and base direction of RDF literals that would otherwise use the xsd:string or rdf:langString datatypes.",
+    "title": "The I18N Namespace",
+    "seeAlso": "https://www.w3.org/TR/json-ld11/#the-i18n-namespace"
+}
