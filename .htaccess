@@ -1,10 +1,20 @@
-
-# Added CORS for everything!   sandro@w3.org 2015-05-05
-# (wait for sys) Header set Access-Control-Allow-Origin "*"
+# Added charset for text/turtle per https://github.com/w3c/dxwg/issues/1183
 
 <Files ~ "dcat.ttl">
 ForceType 'text/turtle; charset=utf-8'
 </Files>
+<Files ~ "dcat-external.ttl">
+ForceType 'text/turtle; charset=utf-8'
+</Files>
+<Files ~ "dcat2.ttl">
+ForceType 'text/turtle; charset=utf-8'
+</Files>
+<Files ~ "dcat2014.ttl">
+ForceType 'text/turtle; charset=utf-8'
+</Files>
+
+# Added CORS for everything!   sandro@w3.org 2015-05-05
+# (wait for sys) Header set Access-Control-Allow-Origin "*"
 
 <Files ~ "md.json">
 ForceType 'application/json'
