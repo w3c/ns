@@ -2,6 +2,10 @@
 # Added CORS for everything!   sandro@w3.org 2015-05-05
 # (wait for sys) Header set Access-Control-Allow-Origin "*"
 
+<Files ~ "dcat.ttl">
+ForceType 'text/turtle; charset=utf-8'
+</Files>
+
 <Files ~ "md.json">
 ForceType 'application/json'
 </Files>
