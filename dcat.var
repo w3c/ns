@@ -8,3 +8,7 @@ Content-Type: application/rdf+xml
 
 URI: dcat.ttl
 Content-Type: text/turtle
+
+URI: dcat.jsonld
+Content-Type: application/ld+json
+
