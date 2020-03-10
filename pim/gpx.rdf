@@ -18,6 +18,8 @@ GPX uses the following conventions: all coordinates are relative to the WGS84 da
         <dct:title>Ontology for GPS data from GPX</dct:title>
         <s:comment>This RDF ontology is deemed to contain as RDF terms all
    the terms which are standardized as XML elements in the GPX specification.
+
+   This ontology file has been produced to fill the place but is untested.
    </s:comment>
     </owl:ontology>
 

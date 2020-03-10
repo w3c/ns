@@ -9,6 +9,8 @@
 <>  a owl:ontology; dct:title "Ontology for GPS data from GPX";
    s:comment """This RDF ontology is deemed to contain as RDF terms all
    the terms which are standardized as XML elements in the GPX specification.
+
+   This ontology file has been produced to fill the place but is untested.
    """ ;
 
        dct:title "Ontology for GPS data from GPX";
