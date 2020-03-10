@@ -4,7 +4,7 @@
 @prefix owl: <http://www.w3.org/2002/07/owl#>.
 @prefix schema: <http://schema.org/>.
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix gpx: <#> .
+@prefix gpx: <http://www.w3.org/ns/pim/gpx#> .
 
 <>  a owl:ontology; dct:title "Ontology for GPS data from GPX";
    s:comment """This RDF ontology is deemed to contain as RDF terms all

@@ -3,7 +3,6 @@
 
 <rdf:RDF xmlns="file:///Users/timbl/src/WWW/ns/pim/gpx.n3#"
     xmlns:dct="http://purl.org/dc/terms/"
-    xmlns:gpx="file:///Users/timbl/src/WWW/ns/pim/gpx.n3#"
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:s="http://www.w3.org/2000/01/rdf-schema#">
@@ -22,34 +21,34 @@ GPX uses the following conventions: all coordinates are relative to the WGS84 da
    This ontology file has been produced to fill the place but is untested.</s:comment>
     </owl:ontology>
 
-    <rdf:Property rdf:about="#ageofdgpsdata">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#ageofdgpsdata">
         <comment>Number of seconds since last DGPS update.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#author">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#author">
         <comment>The person or organization who created the GPX file.</comment>
-        <range rdf:resource="#PersonType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#PersonType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#bounds">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#bounds">
         <comment>Minimum and maximum coordinates which describe the extent of the coordinates in the file.</comment>
-        <range rdf:resource="#BoundsType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#BoundsType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#cmt">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#cmt">
         <comment>GPS comment for route.</comment>
         <comment>GPS comment for track.</comment>
         <comment>GPS waypoint comment. Sent to GPS as comment.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#copyright">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#copyright">
         <comment>Copyright and license information governing use of the file.</comment>
-        <range rdf:resource="#CopyrightType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#CopyrightType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#desc">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#desc">
         <comment>A description of the contents of the GPX file.</comment>
         <comment>A text description of the element. Holds additional information about the element intended for the user, not the GPS.</comment>
         <comment>Text description of route for user.  Not sent to GPS.</comment>
@@ -57,23 +56,23 @@ GPX uses the following conventions: all coordinates are relative to the WGS84 da
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#dgpsid">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#dgpsid">
         <comment>ID of DGPS station used in differential correction.</comment>
-        <range rdf:resource="#DgpsStationType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#DgpsStationType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#ele">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#ele">
         <comment>Elevation (in meters) of the point.</comment>
         <comment>The elevation (in meters) of the point.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#email">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#email">
         <comment>Email address.</comment>
-        <range rdf:resource="#EmailType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#EmailType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#extensions">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#extensions">
         <comment>Information about the GPX file, author, and copyright restrictions goes in the metadata section.  Providing rich,
   meaningful information about your GPX files allows others to search for and use your GPS data.</comment>
         <comment>Information about the copyright holder and any license governing use of this file.  By linking to an appropriate license,
@@ -85,64 +84,64 @@ GPX uses the following conventions: all coordinates are relative to the WGS84 da
         <comment>You must include the version number in your GPX document.</comment>
         <comment>rte represents route - an ordered list of waypoints representing a series of turn points leading to a destination.</comment>
         <comment>wpt represents a waypoint, point of interest, or named feature on a map.</comment>
-        <range rdf:resource="#ExtensionsType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#ExtensionsType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#fix">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#fix">
         <comment>Type of GPX fix.</comment>
-        <range rdf:resource="#FixType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#FixType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#geoidheight">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#geoidheight">
         <comment>Height (in meters) of geoid (mean sea level) above WGS84 earth ellipsoid.  As defined in NMEA GGA message.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#gpx">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#gpx">
         <comment>GPX documents contain a metadata header, followed by waypoints, routes, and tracks.  You can add your own elements
   to the extensions section of the GPX document.</comment>
         <comment>GPX is the root element in the XML file.</comment>
-        <range rdf:resource="#GpxType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#GpxType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#hdop">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#hdop">
         <comment>Horizontal dilution of precision.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#keywords">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#keywords">
         <comment>Keywords associated with the file.  Search engines or databases can use this information to classify the data.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#license">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#license">
         <comment>A link to an external resource (Web page, digital photo, video clip, etc) with additional information.</comment>
         <comment>Copyright holder (TopoSoft, Inc.)</comment>
         <comment>Link to external file containing license text.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#link">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#link">
         <comment>A geographic point with optional elevation and time.  Available for use by other schemas.</comment>
         <comment>Link to Web site or other external information about person.</comment>
         <comment>Link to additional information about the waypoint.</comment>
         <comment>Links to external information about the route.</comment>
         <comment>Links to external information about track.</comment>
         <comment>URLs associated with the location described in the file.</comment>
-        <range rdf:resource="#LinkType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#LinkType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#magvar">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#magvar">
         <comment>Magnetic variation (in degrees) at the point</comment>
-        <range rdf:resource="#DegreesType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#DegreesType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#metadata">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#metadata">
         <comment>Metadata about the file.</comment>
-        <range rdf:resource="#MetadataType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#MetadataType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#name">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#name">
         <comment>GPS name of route.</comment>
         <comment>GPS name of track.</comment>
         <comment>Name of person or organization.</comment>
@@ -151,18 +150,18 @@ GPX uses the following conventions: all coordinates are relative to the WGS84 da
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#number">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#number">
         <comment>GPS route number.</comment>
         <comment>GPS track number.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#pdop">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#pdop">
         <comment>Position dilution of precision.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#pt">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#pt">
         <comment>Ordered list of geographic points.</comment>
         <comment>Represents a differential GPS station.</comment>
         <comment>The latitude of the point.  Decimal degrees, WGS84 datum.</comment>
@@ -174,42 +173,42 @@ GPX uses the following conventions: all coordinates are relative to the WGS84 da
         <comment>Two lat/lon pairs defining the extent of an element.</comment>
         <comment>Type of GPS fix.  none means GPS had no fix.  To signify "the fix info is unknown, leave out fixType entirely. pps = military signal used</comment>
         <comment>Used for bearing, heading, course.  Units are decimal degrees, true (not magnetic).</comment>
-        <range rdf:resource="#PtType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#PtType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#rte">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#rte">
         <comment>A list of routes.</comment>
-        <range rdf:resource="#RteType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#RteType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#rtept">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#rtept">
         <comment>A list of route points.</comment>
         <comment>trk represents a track - an ordered list of points describing a path.</comment>
-        <range rdf:resource="#WptType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#WptType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#sat">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#sat">
         <comment>Number of satellites used to calculate the GPX fix.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#nonNegativeInteger"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#src">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#src">
         <comment>Source of data. Included to give user some idea of reliability and accuracy of data.</comment>
         <comment>Source of data. Included to give user some idea of reliability and accuracy of data.  "Garmin eTrex", "USGS quad Boston North", e.g.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#sym">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#sym">
         <comment>Text of GPS symbol name. For interchange with other programs, use the exact spelling of the symbol as displayed on the GPS.  If the GPS abbreviates words, spell them out.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#text">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#text">
         <comment>Text of hyperlink.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#time">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#time">
         <comment>An ordered sequence of points.  (for polygons or polylines, e.g.)</comment>
         <comment>Creation/modification timestamp for element. Date and time in are in Univeral Coordinated Time (UTC), not local time! Conforms to ISO 8601 specification for date/time representation. Fractional seconds are allowed for millisecond timing in tracklogs.</comment>
         <comment>The creation date of the file.</comment>
@@ -218,23 +217,23 @@ GPX uses the following conventions: all coordinates are relative to the WGS84 da
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#trk">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#trk">
         <comment>A list of tracks.</comment>
-        <range rdf:resource="#TrkType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#TrkType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#trkpt">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#trkpt">
         <comment>A Track Point holds the coordinates, elevation, timestamp, and metadata for a single point in a track.</comment>
-        <range rdf:resource="#WptType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#WptType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#trkseg">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#trkseg">
         <comment>A Track Segment holds a list of Track Points which are logically connected in order. To represent a single GPS track where GPS reception was lost, or the GPS receiver was turned off, start a new Track Segment for each continuous span of track data.</comment>
         <comment>You can add extend GPX by adding your own elements from another schema here.</comment>
-        <range rdf:resource="#TrksegType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#TrksegType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#type">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#type">
         <comment>A person or organization.</comment>
         <comment>An email address.  Broken into two parts (id and domain) to help prevent email harvesting.</comment>
         <comment>Mime type of content (image/jpeg)</comment>
@@ -247,17 +246,17 @@ GPX uses the following conventions: all coordinates are relative to the WGS84 da
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#vdop">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#vdop">
         <comment>Vertical dilution of precision.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#wpt">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#wpt">
         <comment>A list of waypoints.</comment>
-        <range rdf:resource="#WptType"/>
+        <range rdf:resource="http://www.w3.org/ns/pim/gpx#WptType"/>
     </rdf:Property>
 
-    <rdf:Property rdf:about="#year">
+    <rdf:Property rdf:about="http://www.w3.org/ns/pim/gpx#year">
         <comment>Year of copyright.</comment>
         <range rdf:resource="http://www.w3.org/2001/XMLSchema#gYear"/>
     </rdf:Property>
