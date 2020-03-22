@@ -508,7 +508,7 @@
                                 </r:first>
                                 <r:rest r:parseType="Resource">
                                     <r:first r:parseType="Resource">
-                                        <r:type r:resource="http://www.w3.org/ns/ui#IntergerField"/>
+                                        <r:type r:resource="http://www.w3.org/ns/ui#IntegerField"/>
                                         <label>minimum number</label>
                                         <property r:resource="http://www.w3.org/ns/ui#min"/>
                                         <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">0</sequence>

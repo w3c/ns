@@ -354,7 +354,7 @@
                                  :property :ordered;
                                  :sequence 0 ]
                          [
-                                 a :IntergerField;
+                                 a :IntegerField;
                                  :label "minimum number";
                                  :property :min;
                                  :sequence 0 ]

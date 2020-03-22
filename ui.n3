@@ -288,7 +288,7 @@ FieldForm a ui:Group;
 
             ui:case [ ui:for ui:Multiple; ui:use [a ui:Group; ui:parts (
 						[ui:sequence 0; a ui:BooleanField;  ui:property ui:ordered; ui:label "ordered"] # If this an ordered array or an unordered set?
-						[ui:sequence 0; a ui:IntergerField;  ui:property ui:min; ui:label "minimum number"] # If this an ordered array or an unordered set?
+						[ui:sequence 0; a ui:IntegerField;  ui:property ui:min; ui:label "minimum number"] # If this an ordered array or an unordered set?
 						[ui:sequence 1; a ui:Choice;  ui:canMintNew true; ui:property ui:property; ui:label "property"; ui:from r:Property]
                 [ui:sequence 2; a ui:Choice;  ui:canMintNew true; ui:property ui:part; ui:from ui:Form; ui:use FieldForm]   # Form for details of the field part of the multiple
             ) ]];
