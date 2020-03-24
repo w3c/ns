@@ -7,9 +7,9 @@ RewriteBase /ns/dx/prof/
 
 # If requested with text/turtle
 RewriteCond "%{HTTP_ACCEPT}" "text/turtle"
-RewriteRule ^$ /ns/dx/prof/profilesont.ttl [P,L]
+RewriteRule ^$ /ns/dx/prof/profilesont.ttl [L]
 
 # If requested with application/rdf+xml
 RewriteCond "%{HTTP_ACCEPT}" "application/rdf\+xml"
-RewriteRule ^$ /ns/dx/prof/profilesont.rdf [P,L]
+RewriteRule ^$ /ns/dx/prof/profilesont.rdf [L]
 
