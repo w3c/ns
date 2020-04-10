@@ -1,6 +1,5 @@
-
-# Added CORS for everything!   sandro@w3.org 2015-05-05
-# (wait for sys) Header set Access-Control-Allow-Origin "*"
+# Change on 2020-04-10: changed the redirection per
+#     https://github.com/w3c/did-core/pull/238#issuecomment-611820943
 
 RewriteEngine On
 RewriteBase /ns/did/
@@ -8,6 +7,6 @@ AddType application/ld+json .jsonld
 
 
 # Changes added on the latest block due URL name changes, 2019-10-12 (Ivan Herman)
-RewriteRule ^v1.jsonld$ https://w3c.github.io/did-core/contexts/did-v1.jsonld [P]
-RewriteRule ^v1.json$ https://w3c.github.io/did-core/contexts/did-v1.jsonld [P]
+RewriteRule ^v1.jsonld$ https://w3c.github.io/did-core-registries/contexts/did-v1.jsonld [P]
+RewriteRule ^v1.json$ https://w3c.github.io/did-core-registries/contexts/did-v1.jsonld [P]
 
