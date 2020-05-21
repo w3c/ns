@@ -7,6 +7,6 @@ AddType application/ld+json .jsonld
 
 
 # Changes added on the latest block due URL name changes, 2019-10-12 (Ivan Herman)
-RewriteRule ^v1.jsonld$ https://w3c.github.io/did-core-registries/contexts/did-v1.jsonld [P]
-RewriteRule ^v1.json$ https://w3c.github.io/did-core-registries/contexts/did-v1.jsonld [P]
+RewriteRule ^v1.jsonld$ https://w3c.github.io/did-spec-registries/contexts/did-v1.jsonld [P]
+RewriteRule ^v1.json$ https://w3c.github.io/did-spec-registries/contexts/did-v1.jsonld [P]
 
