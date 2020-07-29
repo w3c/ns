@@ -1,0 +1,12 @@
+<Files ~ "manifest.ttl">
+ForceType 'text/turtle; charset=utf-8'
+</Files>
+
+
+RewriteRule ^manifest.var$ https://w3c.github.io/pub-vocab/pub-vocab/manifest.var [P]
+RewriteRule ^manifest.jsonld$ https://w3c.github.io/pub-vocab/pub-vocab/manifest.jsonld [P]
+RewriteRule ^manifest.json$ https://w3c.github.io/pub-vocab/pub-vocab/manifest.jsonld [P]
+RewriteRule ^manifest.rdf$ https://w3c.github.io/pub-vocab/pub-vocab/manifest.rdf [P]
+RewriteRule ^manifest.ttl$ https://w3c.github.io/pub-vocab/pub-vocab/manifest.ttl [P]
+RewriteRule ^manifest.html$ https://w3c.github.io/pub-vocab/pub-vocab/manifest.html [P]
+
