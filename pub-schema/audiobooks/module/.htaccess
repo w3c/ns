@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteBase /ns/pub-schema/audiobooks/module/
+
+RewriteRule ^(.*).schema.json$ https://w3c.github.io/audiobooks/schema/module/$1.schema.json [P]
