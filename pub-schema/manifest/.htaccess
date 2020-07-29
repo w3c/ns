@@ -1,0 +1,5 @@
+RewriteEngine On
+RewriteBase /ns/pub-schema/manifest/
+
+RewriteRule ^(.*).schema.json$ https://w3c.github.io/pub-manifest/schema/$1.schema.json [P]
+RewriteRule ^Overview.html$ https://w3c.github.io/pub-manifest/schema/ [P]
