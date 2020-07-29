@@ -1,4 +1,4 @@
 RewriteEngine On
 RewriteBase /ns/pub-schema/manifest/module/
 
-RewriteRule ^(.*).schema.json$ https://w3c.github.io/pub-manifest/schema/$1.schema.json [P]
+RewriteRule ^(.*).schema.json$ https://w3c.github.io/pub-manifest/schema/module/$1.schema.json [P]
