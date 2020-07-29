@@ -1,6 +1,8 @@
-<Files ~ "manifest.ttl">
-ForceType 'text/turtle; charset=utf-8'
-</Files>
+RewriteEngine On
+RewriteBase /ns/pub-vocab/
+
+AddType text/turtle .ttl
+AddType application/ld+json .jsonld
 
 
 RewriteRule ^manifest.var$ https://w3c.github.io/pub-vocab/pub-vocab/manifest.var [P]
