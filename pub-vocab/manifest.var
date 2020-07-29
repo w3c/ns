@@ -1,0 +1,16 @@
+URI: manifest
+
+URI: manifest.html
+Content-Type: text/html
+
+URI: manifest.ttl
+Content-Type: text/turtle; qs=0.6
+
+URI: manifest.jsonld
+Content-Type: application/ld+json; qs=0.5
+
+URI: manifest.rdf
+Content-Type: application/rdf+xml; qs=0.4
+
+URI: manifest.json
+Content-Type: application/json; qs=0.3

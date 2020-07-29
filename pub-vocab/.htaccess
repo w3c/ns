@@ -5,7 +5,6 @@ AddType text/turtle .ttl
 AddType application/ld+json .jsonld
 
 
-RewriteRule ^manifest.var$ https://w3c.github.io/pub-vocab/pub-vocab/manifest.var [P]
 RewriteRule ^manifest.jsonld$ https://w3c.github.io/pub-vocab/pub-vocab/manifest.jsonld [P]
 RewriteRule ^manifest.json$ https://w3c.github.io/pub-vocab/pub-vocab/manifest.jsonld [P]
 RewriteRule ^manifest.rdf$ https://w3c.github.io/pub-vocab/pub-vocab/manifest.rdf [P]
