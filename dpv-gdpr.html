@@ -1,456 +1,166 @@
-<!DOCTYPE html><html dir="ltr" lang="en"><head><meta content="text/html; charset=utf-8" http-equiv="content-type"><meta name="generator" content="ReSpec 24.27.1"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><style>/* --- ISSUES/NOTES --- */
-.issue-label {
-    text-transform: initial;
-}
-
-.warning > p:first-child { margin-top: 0 }
-.warning {
-    padding: .5em;
-    border-left-width: .5em;
-    border-left-style: solid;
-}
-span.warning { padding: .1em .5em .15em; }
-
-.issue.closed span.issue-number {
-    text-decoration: line-through;
-}
-
-.warning {
-    border-color: #f11;
-    border-width: .2em;
-    border-style: solid;
-    background: #fbe9e9;
-}
-
-.warning-title:before{
-    content: "⚠"; /*U+26A0 WARNING SIGN*/
-    font-size: 3em;
-    float: left;
-    height: 100%;
-    padding-right: .3em;
-    vertical-align: top;
-    margin-top: -0.5em;
-}
-
-li.task-list-item {
-    list-style: none;
-}
-
-input.task-list-item-checkbox {
-    margin: 0 0.35em 0.25em -1.6em;
-    vertical-align: middle;
-}
-
-.issue a.respec-gh-label {
-  padding: 5px;
-  margin: 0 2px 0 2px;
-  font-size: 10px;
-  text-transform: none;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 4px;
-  position: relative;
-  bottom: 2px;
-  border: none;
-}
-
-.issue a.respec-label-dark {
-  color: #fff;
-  background-color: #000;
-}
-
-.issue a.respec-label-light {
-  color: #000;
-  background-color: #fff;
-}
+<!DOCTYPE html><html dir="ltr" lang="en"><head>
+<meta charset="utf-8">
+<meta name="generator" content="ReSpec 25.16.5">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+.issue-label{text-transform:initial}
+.warning>p:first-child{margin-top:0}
+.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
+span.warning{padding:.1em .5em .15em}
+.issue.closed span.issue-number{text-decoration:line-through}
+.warning{border-color:#f11;border-width:.2em;border-style:solid;background:#fbe9e9}
+.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
+li.task-list-item{list-style:none}
+input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
+.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
+</style>
+<style>
+dfn{cursor:pointer}
+.dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font:small Helvetica Neue,sans-serif,Droid Sans Fallback;background:#fff;color:#000;box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);border-radius:2px}
+.dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
+.dfn-panel:not(.docked)>.caret::after,.dfn-panel:not(.docked)>.caret::before{content:"";position:absolute;border:10px solid transparent;border-top:0;border-bottom:10px solid #fff;top:0}
+.dfn-panel:not(.docked)>.caret::before{border-bottom:9px solid #a2a9b1}
+.dfn-panel *{margin:0}
+.dfn-panel b{display:block;color:#000;margin-top:.25em}
+.dfn-panel ul a[href]{color:#333}
+.dfn-panel a.self-link{font-weight:700}
+.dfn-panel .dfn-exported{float:right;padding:.1em;border-radius:.2em;text-align:center;white-space:nowrap;font-size:90%;background:#d1edfd;color:#040b1c;box-shadow:0 0 0 .125em #1ca5f940}
+.dfn-panel a:not(:hover){text-decoration:none!important;border-bottom:none!important}
+.dfn-panel a[href]:hover{border-bottom-width:1px}
+.dfn-panel ul{padding:0}
+.dfn-panel li{margin-left:1em}
+.dfn-panel.docked{position:fixed;left:.5em;top:unset;bottom:2em;margin:0 auto;max-width:calc(100vw - .75em * 2 - .5em - .2em * 2);max-height:30vh;overflow:auto}
 </style>
   
-  <title>DPVCG GDPR Legal Basis Vocabulary</title>
-  <style id="respec-mainstyle">/*****************************************************************
- * ReSpec 3 CSS
- * Robin Berjon - http://berjon.com/
- *****************************************************************/
+  
+<title>DPV-GDPR: GDPR Module for Data Privacy Vocabulary (DPV)</title>
+  
+  
 
-@keyframes pop {
-  0% {
-    transform: scale(1, 1);
+<style type="text/css">
+
+  .head img[src*="logos/W3C"] {
+    display: inherit !important;
   }
-  25% {
-    transform: scale(1.25, 1.25);
-    opacity: 0.75;
+  .head a:hover > img[src*='ogc'] {
+    opacity: 0.8;
   }
-  100% {
-    transform: scale(1, 1);
+  /* Table styles, March 2016 */
+  table {border-collapse:collapse}
+  th, td {
+    border:thin solid black;
+    padding: 0.3em;
   }
-}
-
-/* Override code highlighter background */
-.hljs {
-  background: transparent !important;
-}
-
-/* --- INLINES --- */
-h1 abbr,
-h2 abbr,
-h3 abbr,
-h4 abbr,
-h5 abbr,
-h6 abbr,
-a abbr {
-  border: none;
-}
-
-dfn {
-  font-weight: bold;
-}
-
-a.internalDFN {
-  color: inherit;
-  border-bottom: 1px solid #99c;
-  text-decoration: none;
-}
-
-a.externalDFN {
-  color: inherit;
-  border-bottom: 1px dotted #ccc;
-  text-decoration: none;
-}
-
-a.bibref {
-  text-decoration: none;
-}
-
-.respec-offending-element:target {
-  animation: pop 0.25s ease-in-out 0s 1;
-}
-
-.respec-offending-element,
-a[href].respec-offending-element {
-  text-decoration: red wavy underline;
-}
-@supports not (text-decoration: red wavy underline) {
-  .respec-offending-element:not(pre) {
-    display: inline-block;
+  .inlineCode {
+    FONT-FAMILY: "courier new"; BACKGROUND-COLOR: #ddf
   }
-  .respec-offending-element {
-    /* Red squiggly line */
-    background: url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=)
-      bottom repeat-x;
+  PRE.code {
+    BORDER-RIGHT: #999999 1pt solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #999999 1pt solid; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; BORDER-LEFT: #999999 1pt solid; PADDING-TOP: 0.5em; BORDER-BOTTOM: #999999 1pt solid; FONT-FAMILY: "courier new"; BACKGROUND-COLOR: #eef
   }
-}
-
-#references :target {
-  background: #eaf3ff;
-  animation: pop 0.4s ease-in-out 0s 1;
-}
-
-cite .bibref {
-  font-style: normal;
-}
-
-code {
-  color: #c83500;
-}
-
-th code {
-  color: inherit;
-}
-
-a[href].orcid {
-    padding-left: 4px;
-    padding-right: 4px;
-}
-
-a[href].orcid > svg {
-    margin-bottom: -2px;
-}
-
-/* --- TOC --- */
-
-.toc a,
-.tof a {
-  text-decoration: none;
-}
-
-a .secno,
-a .figno {
-  color: #000;
-}
-
-ul.tof,
-ol.tof {
-  list-style: none outside none;
-}
-
-.caption {
-  margin-top: 0.5em;
-  font-style: italic;
-}
-
-/* --- TABLE --- */
-
-table.simple {
-  border-spacing: 0;
-  border-collapse: collapse;
-  border-bottom: 3px solid #005a9c;
-}
-
-.simple th {
-  background: #005a9c;
-  color: #fff;
-  padding: 3px 5px;
-  text-align: left;
-}
-
-.simple th[scope="row"] {
-  background: inherit;
-  color: inherit;
-  border-top: 1px solid #ddd;
-}
-
-.simple td {
-  padding: 3px 10px;
-  border-top: 1px solid #ddd;
-}
-
-.simple tr:nth-child(even) {
-  background: #f0f6ff;
-}
-
-/* --- DL --- */
-
-.section dd > p:first-child {
-  margin-top: 0;
-}
-
-.section dd > p:last-child {
-  margin-bottom: 0;
-}
-
-.section dd {
-  margin-bottom: 1em;
-}
-
-.section dl.attrs dd,
-.section dl.eldef dd {
-  margin-bottom: 0;
-}
-
-#issue-summary > ul,
-.respec-dfn-list {
-  column-count: 2;
-}
-
-#issue-summary li,
-.respec-dfn-list li {
-  list-style: none;
-}
-
-details.respec-tests-details {
-  margin-left: 1em;
-  display: inline-block;
-  vertical-align: top;
-}
-
-details.respec-tests-details > * {
-  padding-right: 2em;
-}
-
-details.respec-tests-details[open] {
-  z-index: 999999;
-  position: absolute;
-  border: thin solid #cad3e2;
-  border-radius: 0.3em;
-  background-color: white;
-  padding-bottom: 0.5em;
-}
-
-details.respec-tests-details[open] > summary {
-  border-bottom: thin solid #cad3e2;
-  padding-left: 1em;
-  margin-bottom: 1em;
-  line-height: 2em;
-}
-
-details.respec-tests-details > ul {
-  width: 100%;
-  margin-top: -0.3em;
-}
-
-details.respec-tests-details > li {
-  padding-left: 1em;
-}
-
-a[href].self-link:hover {
-  opacity: 1;
-  text-decoration: none;
-  background-color: transparent;
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  position: relative;
-}
-
-aside.example .marker > a.self-link {
-  color: inherit;
-}
-
-h2 > a.self-link,
-h3 > a.self-link,
-h4 > a.self-link,
-h5 > a.self-link,
-h6 > a.self-link {
-  border: none;
-  color: inherit;
-  font-size: 83%;
-  height: 2em;
-  left: -1.6em;
-  opacity: 0.5;
-  position: absolute;
-  text-align: center;
-  text-decoration: none;
-  top: 0;
-  transition: opacity 0.2s;
-  width: 2em;
-}
-
-h2 > a.self-link::before,
-h3 > a.self-link::before,
-h4 > a.self-link::before,
-h5 > a.self-link::before,
-h6 > a.self-link::before {
-  content: "§";
-  display: block;
-}
-
-@media (max-width: 767px) {
-  dd {
-    margin-left: 0;
+  PRE.code2 {
+    BORDER-RIGHT: #999999 1pt solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #999999 1pt solid; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; BORDER-LEFT: #999999 1pt solid; PADDING-TOP: 0.5em; BORDER-BOTTOM: #999999 1pt solid; FONT-FAMILY: "courier new"; BACKGROUND-COLOR: #ffa
+  }
+  .ednote {
+    FONT-STYLE: italic
+  }
+  PRE.clientmsg {
+    BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 2px; BACKGROUND: #eee; PADDING-BOTTOM: 2px; MARGIN: 0px; BORDER-LEFT: #999 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #999 1px solid
+  }
+  PRE.servermsg {
+    BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 2px; BACKGROUND: #eee; PADDING-BOTTOM: 2px; MARGIN: 5px 0px 0px; BORDER-LEFT: #999 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #999 1px solid; TEXT-ALIGN: left
+  }
+  P.msg {
+    PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: center
+  }
+  DIV.interaction {
+    BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #999 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #999 1px solid
+  }
+  DIV.interaction H4 {
+    MARGIN: 0px 0px 10px
+  }
+  DIV.interaction P {
+    MARGIN: 0px
+  }
+  DIV.test {
+    BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #999 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #999 1px solid
+  }
+  DIV.test H4 {
+    MARGIN: 0px 0px 10px
   }
 
-  /* Don't position self-link in headings off-screen */
-  h2 > a.self-link,
-  h3 > a.self-link,
-  h4 > a.self-link,
-  h5 > a.self-link,
-  h6 > a.self-link {
-    left: auto;
-    top: auto;
-  }
-}
+</style>
 
-@media print {
-  .removeOnSave {
-    display: none;
-  }
+<style id="respec-mainstyle">
+@keyframes pop{
+0%{transform:scale(1,1)}
+25%{transform:scale(1.25,1.25);opacity:.75}
+100%{transform:scale(1,1)}
+}
+.hljs{background:0 0!important}
+a abbr,h1 abbr,h2 abbr,h3 abbr,h4 abbr,h5 abbr,h6 abbr{border:none}
+dfn{font-weight:700}
+a.internalDFN{color:inherit;border-bottom:1px solid #99c;text-decoration:none}
+a.externalDFN{color:inherit;border-bottom:1px dotted #ccc;text-decoration:none}
+a.bibref{text-decoration:none}
+.respec-offending-element:target{animation:pop .25s ease-in-out 0s 1}
+.respec-offending-element,a[href].respec-offending-element{text-decoration:red wavy underline}
+@supports not (text-decoration:red wavy underline){
+.respec-offending-element:not(pre){display:inline-block}
+.respec-offending-element{background:url(data:image/gif;base64,R0lGODdhBAADAPEAANv///8AAP///wAAACwAAAAABAADAEACBZQjmIAFADs=) bottom repeat-x}
+}
+#references :target{background:#eaf3ff;animation:pop .4s ease-in-out 0s 1}
+cite .bibref{font-style:normal}
+code{color:#c63501}
+th code{color:inherit}
+a[href].orcid{padding-left:4px;padding-right:4px}
+a[href].orcid>svg{margin-bottom:-2px}
+.toc a,.tof a{text-decoration:none}
+a .figno,a .secno{color:#000}
+ol.tof,ul.tof{list-style:none outside none}
+.caption{margin-top:.5em;font-style:italic}
+table.simple{border-spacing:0;border-collapse:collapse;border-bottom:3px solid #005a9c}
+.simple th{background:#005a9c;color:#fff;padding:3px 5px;text-align:left}
+.simple th a{color:#fff;padding:3px 5px;text-align:left}
+.simple th[scope=row]{background:inherit;color:inherit;border-top:1px solid #ddd}
+.simple td{padding:3px 10px;border-top:1px solid #ddd}
+.simple tr:nth-child(even){background:#f0f6ff}
+.section dd>p:first-child{margin-top:0}
+.section dd>p:last-child{margin-bottom:0}
+.section dd{margin-bottom:1em}
+.section dl.attrs dd,.section dl.eldef dd{margin-bottom:0}
+#issue-summary>ul,.respec-dfn-list{column-count:2}
+#issue-summary li,.respec-dfn-list li{list-style:none}
+details.respec-tests-details{margin-left:1em;display:inline-block;vertical-align:top}
+details.respec-tests-details>*{padding-right:2em}
+details.respec-tests-details[open]{z-index:999999;position:absolute;border:thin solid #cad3e2;border-radius:.3em;background-color:#fff;padding-bottom:.5em}
+details.respec-tests-details[open]>summary{border-bottom:thin solid #cad3e2;padding-left:1em;margin-bottom:1em;line-height:2em}
+details.respec-tests-details>ul{width:100%;margin-top:-.3em}
+details.respec-tests-details>li{padding-left:1em}
+a[href].self-link:hover{opacity:1;text-decoration:none;background-color:transparent}
+h2,h3,h4,h5,h6{position:relative}
+aside.example .marker>a.self-link{color:inherit}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{border:none;color:inherit;font-size:83%;height:2em;left:-1.6em;opacity:.5;position:absolute;text-align:center;text-decoration:none;top:0;transition:opacity .2s;width:2em}
+h2>a.self-link::before,h3>a.self-link::before,h4>a.self-link::before,h5>a.self-link::before,h6>a.self-link::before{content:"§";display:block}
+@media (max-width:767px){
+dd{margin-left:0}
+h2>a.self-link,h3>a.self-link,h4>a.self-link,h5>a.self-link,h6>a.self-link{left:auto;top:auto}
+}
+@media print{
+.removeOnSave{display:none}
 }
 </style>
-  
-  <style type="text/css">
-    .head img[src*="logos/W3C"] {
-      display: inherit !important;
-    }
-    .head a:hover > img[src*='ogc'] {
-      opacity: 0.8;
-    }
-    /* Table styles, March 2016 */
-    table {border-collapse:collapse}
-    th, td {
-      border:thin solid black;
-      padding: 0.3em;
-    }
-    .inlineCode {
-      FONT-FAMILY: "courier new"; BACKGROUND-COLOR: #ddf
-    }
-    PRE.code {
-      BORDER-RIGHT: #999999 1pt solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #999999 1pt solid; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; BORDER-LEFT: #999999 1pt solid; PADDING-TOP: 0.5em; BORDER-BOTTOM: #999999 1pt solid; FONT-FAMILY: "courier new"; BACKGROUND-COLOR: #eef
-    }
-    PRE.code2 {
-      BORDER-RIGHT: #999999 1pt solid; PADDING-RIGHT: 0.5em; BORDER-TOP: #999999 1pt solid; PADDING-LEFT: 0.5em; PADDING-BOTTOM: 0.5em; BORDER-LEFT: #999999 1pt solid; PADDING-TOP: 0.5em; BORDER-BOTTOM: #999999 1pt solid; FONT-FAMILY: "courier new"; BACKGROUND-COLOR: #ffa
-    }
-    .ednote {
-      FONT-STYLE: italic
-    }
-    PRE.clientmsg {
-      BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 2px; BACKGROUND: #eee; PADDING-BOTTOM: 2px; MARGIN: 0px; BORDER-LEFT: #999 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #999 1px solid
-    }
-    PRE.servermsg {
-      BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 2px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 2px; BACKGROUND: #eee; PADDING-BOTTOM: 2px; MARGIN: 5px 0px 0px; BORDER-LEFT: #999 1px solid; PADDING-TOP: 2px; BORDER-BOTTOM: #999 1px solid; TEXT-ALIGN: left
-    }
-    P.msg {
-      PADDING-RIGHT: 0px; PADDING-LEFT: 0px; PADDING-BOTTOM: 0px; MARGIN: 0px; PADDING-TOP: 0px; TEXT-ALIGN: center
-    }
-    DIV.interaction {
-      BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #999 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #999 1px solid
-    }
-    DIV.interaction H4 {
-      MARGIN: 0px 0px 10px
-    }
-    DIV.interaction P {
-      MARGIN: 0px
-    }
-    DIV.test {
-      BORDER-RIGHT: #999 1px solid; PADDING-RIGHT: 5px; BORDER-TOP: #999 1px solid; PADDING-LEFT: 5px; PADDING-BOTTOM: 5px; BORDER-LEFT: #999 1px solid; PADDING-TOP: 5px; BORDER-BOTTOM: #999 1px solid
-    }
-    DIV.test H4 {
-      MARGIN: 0px 0px 10px
-    }
-  </style>
-<style>var {
-  position: relative;
-  cursor: pointer;
-}
-
-var[data-type]::before,
-var[data-type]::after {
-  position: absolute;
-  left: 50%;
-  top: -6px;
-  opacity: 0;
-  transition: opacity 0.4s;
-  pointer-events: none;
-}
-
-/* the triangle or arrow or caret or whatever */
-var[data-type]::before {
-  content: "";
-  transform: translateX(-50%);
-  border-width: 4px 6px 0 6px;
-  border-style: solid;
-  border-color: transparent;
-  border-top-color: #000;
-}
-
-/* actual text */
-var[data-type]::after {
-  content: attr(data-type);
-  transform: translateX(-50%) translateY(-100%);
-  background: #000;
-  text-align: center;
-  /* additional styling */
-  font-family: "Dank Mono", "Fira Code", monospace;
-  font-style: normal;
-  padding: 6px;
-  border-radius: 3px;
-  color: #daca88;
-  text-indent: 0;
-  font-weight: normal;
-}
-
-var[data-type]:hover::after,
-var[data-type]:hover::before {
-  opacity: 1;
-}
-</style><script id="initialUserConfig" type="application/json">{
+<meta name="description" content="The Data Privacy Vocabulary provides terms (classes and properties) to annotate and categorize instances of legally compliant personal data handling according to the EU General Data Protection Regulation. One category of terms are the legal bases. This vocabulary provides the legal bases defined by the GDPR.">
+<style>
+var{position:relative;cursor:pointer}
+var[data-type]::after,var[data-type]::before{position:absolute;left:50%;top:-6px;opacity:0;transition:opacity .4s;pointer-events:none}
+var[data-type]::before{content:"";transform:translateX(-50%);border-width:4px 6px 0 6px;border-style:solid;border-color:transparent;border-top-color:#000}
+var[data-type]::after{content:attr(data-type);transform:translateX(-50%) translateY(-100%);background:#000;text-align:center;font-family:"Dank Mono","Fira Code",monospace;font-style:normal;padding:6px;border-radius:3px;color:#daca88;text-indent:0;font-weight:400}
+var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
+</style>
+<script id="initialUserConfig" type="application/json">{
   "shortName": "dpv-gdpr",
   "specStatus": "CG-DRAFT",
-  "wg": "Data Privacy Vocabularies and Controls Community Group",
-  "wgURI": "https://www.w3.org/community/dpvcg/",
-  "wgPublicList": "public-dpvcg",
+  "group": "dpvcg",
   "edDraftURI": "https://w3.org/ns/dpv-gdpr",
   "editors": [
     {
@@ -470,15 +180,23 @@ var[data-type]:hover::before {
   ],
   "authors": [
     {
+      "name": "Axel Polleres",
+      "company": "Vienna University of Economics and Business"
+    },
+    {
       "name": "Bert Bos",
       "company": "W3C/ERCIM"
     },
     {
-      "name": "Rob Brennan",
-      "company": "Dublin City University"
+      "name": "Bud Bruegger",
+      "company": "Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein"
     },
     {
-      "name": "Bud Bruegger",
+      "name": "Elmar Kiesling",
+      "company": "Vienna University of Technology"
+    },
+    {
+      "name": "Eva Schlehahn",
       "company": "Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein"
     },
     {
@@ -486,113 +204,111 @@ var[data-type]:hover::before {
       "company": "Vienna University of Technology"
     },
     {
-      "name": "Javier D. Fernández",
-      "company": "Vienna University of Economics and Business"
-    },
-    {
-      "name": "Ramisa Gachpaz Hamed",
+      "name": "Harshvardhan J. Pandit",
       "company": "Trinity College Dublin"
     },
     {
-      "name": "Elmar Kiesling",
-      "company": "Vienna University of Technology"
+      "name": "Javier D. Fernández",
+      "company": "Vienna University of Economics and Business"
     },
     {
       "name": "Mark Lizar",
       "company": "OpenConsent/Kantara Initiative"
     },
     {
-      "name": "Eva Schlehahn",
-      "company": "Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein"
-    },
-    {
-      "name": "Simon Steyskal",
-      "company": "Siemens"
+      "name": "Ramisa Gachpaz Hamed",
+      "company": "Trinity College Dublin"
     },
     {
       "name": "Rigo Wenning",
       "company": "W3C/ERCIM"
+    },
+    {
+      "name": "Rob Brennan",
+      "company": "Dublin City University"
+    },
+    {
+      "name": "Simon Steyskal",
+      "company": "Siemens"
     }
   ],
-  "publishISODate": "2019-07-26T00:00:00.000Z",
-  "generatedSubtitle": "Draft Community Group Report 26 July 2019"
-}</script><meta name="description" content="The Data Privacy Vocabulary provides terms (classes and properties) to annotate and categorize instances of legally compliant personal data handling according to the EU General Data Protection Regulation. One category of terms are the legal bases. This vocabulary provides the legal bases defined by the GDPR."><link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
-<body class="h-entry informative"><div class="head">
-      <a class="logo" href="https://www.w3.org/"><img alt="W3C" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72" height="48"></a>
-      <h1 class="title p-name" id="title">DPVCG GDPR Legal Basis Vocabulary</h1>
+  "localBiblio": {
+    "NACE": {
+      "href": "https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2",
+      "title": "Statistical Classification of Economic Activities in the European Community (NACE)"
+    },
+    "NAICS": {
+      "href": "https://www.census.gov/eos/www/naics/",
+      "title": "North American Industry Classification System (NAICS)"
+    },
+    "ISIC": {
+      "href": "https://unstats.un.org/unsd/classifications",
+      "title": "International Standard Industrial Classification of All Economic Activities (ISIC)"
+    },
+    "GICS": {
+      "href": "https://www.msci.com/gics",
+      "title": "Global Industry Classification Standard (GICS)"
+    },
+    "NACE-NAICS": {
+      "href": "https://ec.europa.eu/eurostat/ramon/nomenclatures/index.cfm?TargetUrl=LST_NOM_DTL&StrNom=NACE_REV2",
+      "title": "NACE to NAICS mapping"
+    }
+  },
+  "publishISODate": "2020-10-02T00:00:00.000Z",
+  "generatedSubtitle": "Draft Community Group Report 02 October 2020"
+}</script>
+<link rel="stylesheet" href="https://www.w3.org/StyleSheets/TR/2016/cg-draft"></head>
+<body class="h-entry informative toc-inline"><div class="head">
+    <a class="logo" href="https://www.w3.org/"><img alt="W3C" src="https://www.w3.org/StyleSheets/TR/2016/logos/W3C" width="72" height="48"></a> <h1 id="title" class="title">DPV-GDPR: GDPR Module for Data Privacy Vocabulary (DPV)</h1>
+    
+    <h2>
+      Draft Community Group Report
+      <time class="dt-published" datetime="2020-10-02">02 October 2020</time>
+    </h2>
+    <dl>
       
-      <h2>
-        Draft Community Group Report
-        <time class="dt-published" datetime="2019-07-26">26 July 2019</time>
-      </h2>
-      <dl>
-        
-        
-        <dt>Latest editor's draft:</dt><dd><a href="https://w3.org/ns/dpv-gdpr">https://w3.org/ns/dpv-gdpr</a></dd>
-        
-        
-        
-        
-        
-        <dt>Editors:</dt>
-        <dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:pandith@tcd.ie">Harshvardhan J. Pandit</a>
+      
+      <dt>Latest editor's draft:</dt><dd><a href="https://w3.org/ns/dpv-gdpr">https://w3.org/ns/dpv-gdpr</a></dd>
+      
+      
+      
+      
+      <dt>Editors:</dt>
+      <dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:pandith@tcd.ie">Harshvardhan J. Pandit</a>
             (<a class="p-org org h-org h-card" href="https://tcd.ie/">Trinity College Dublin</a>)
           </dd><dd class="p-author h-card vcard"><a class="ed_mailto u-email email p-name" href="mailto:axel.polleres@wu.ac.at">Axel Polleres</a>
             (<a class="p-org org h-org h-card" href="https://wu.ac.at/">Vienna University of Economics and Business</a>)
           </dd>
-        
-        <dt>
-                Authors:
-              </dt><dd class="p-author h-card vcard"><span class="p-name fn">Bert Bos</span>
-            (W3C/ERCIM)
-          </dd><dd class="p-author h-card vcard"><span class="p-name fn">Rob Brennan</span>
-            (Dublin City University)
-          </dd><dd class="p-author h-card vcard"><span class="p-name fn">Bud Bruegger</span>
-            (Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein)
-          </dd><dd class="p-author h-card vcard"><span class="p-name fn">Fajar J. Ekaputra</span>
-            (Vienna University of Technology)
-          </dd><dd class="p-author h-card vcard"><span class="p-name fn">Javier D. Fernández</span>
-            (Vienna University of Economics and Business)
-          </dd><dd class="p-author h-card vcard"><span class="p-name fn">Ramisa Gachpaz Hamed</span>
-            (Trinity College Dublin)
-          </dd><dd class="p-author h-card vcard"><span class="p-name fn">Elmar Kiesling</span>
-            (Vienna University of Technology)
-          </dd><dd class="p-author h-card vcard"><span class="p-name fn">Mark Lizar</span>
-            (OpenConsent/Kantara Initiative)
-          </dd><dd class="p-author h-card vcard"><span class="p-name fn">Eva Schlehahn</span>
-            (Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein)
-          </dd><dd class="p-author h-card vcard"><span class="p-name fn">Simon Steyskal</span>
-            (Siemens)
-          </dd><dd class="p-author h-card vcard"><span class="p-name fn">Rigo Wenning</span>
-            (W3C/ERCIM)
-          </dd>
-        
-      </dl>
       
-      <p class="copyright">
-        <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
-        ©
-        2019
-        
-        the Contributors to the DPVCG GDPR Legal Basis Vocabulary Specification, published by the
-        <a href="https://www.w3.org/community/dpvcg/">Data Privacy Vocabularies and Controls Community Group</a> under the
-        <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
-              <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
-              is available.
-            
-      </p>
-      <hr title="Separator for header">
-    </div>
+      <dt>Authors:</dt><dd class="p-author h-card vcard"><span class="p-name fn">Axel Polleres</span> (Vienna University of Economics and Business) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Bert Bos</span> (W3C/ERCIM) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Bud Bruegger</span> (Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Elmar Kiesling</span> (Vienna University of Technology) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Eva Schlehahn</span> (Unabhängige Landeszentrum für Datenschutz Schleswig-Holstein) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Fajar J. Ekaputra</span> (Vienna University of Technology) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Harshvardhan J. Pandit</span> (Trinity College Dublin) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Javier D. Fernández</span> (Vienna University of Economics and Business) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Mark Lizar</span> (OpenConsent/Kantara Initiative) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Ramisa Gachpaz Hamed</span> (Trinity College Dublin) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Rigo Wenning</span> (W3C/ERCIM) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Rob Brennan</span> (Dublin City University) </dd><dd class="p-author h-card vcard"><span class="p-name fn">Simon Steyskal</span> (Siemens) </dd>
+      
+    </dl>
+    
+    <p class="copyright">
+          <a href="https://www.w3.org/Consortium/Legal/ipr-notice#Copyright">Copyright</a>
+          ©
+          2020
+          
+          the Contributors to the DPV-GDPR: GDPR Module for Data Privacy Vocabulary (DPV)
+          Specification, published by the
+          <a></a> under the
+          <a href="https://www.w3.org/community/about/agreements/cla/">W3C Community Contributor License Agreement (CLA)</a>. A human-readable
+                <a href="https://www.w3.org/community/about/agreements/cla-deed/">summary</a>
+                is available.
+              
+        </p>
+    <hr title="Separator for header">
+  </div>
   <section id="abstract" class="introductory"><h2>Abstract</h2>
     <p>The Data Privacy Vocabulary provides terms (classes and properties) to annotate and categorize instances of legally compliant personal data handling according to the EU General Data Protection Regulation. One category of terms are the legal bases. This vocabulary provides the legal bases defined by the GDPR.</p>
     <p style="text-align: center;">The namespace for terms for Legal Bases under GDPR is <code>http://www.w3.org/ns/dpv-gdpr#</code></p>
     <p style="text-align: center;">The suggested prefix for the GDPR Legal Bases namespace is <code>dpv-gdpr</code></p>
-    <p style="text-align: center;">An ontology of Legal Bases under GDPR is available <a href="dpv-gdpr.ttl">here</a>.</p>
+    <p style="text-align: center;">An ontology of Legal Bases under GDPR is available <a href="LegalBasis.ttl">here</a>.</p>
     <p style="text-align: center;">The Github repository for DPV is <a href="https://github.com/dpvcg/dpv-gdpr">here</a>.</p>
   </section>
   <section id="sotd" class="introductory"><h2>Status of This Document</h2><p>
       This specification was published by the
-      <a href="https://www.w3.org/community/dpvcg/">Data Privacy Vocabularies and Controls Community Group</a>. It is not a W3C Standard nor is it
+      <a></a>. It is not a W3C Standard nor is it
       on the W3C Standards Track.
       
             Please note that under the
@@ -604,16 +320,11 @@ var[data-type]:hover::before {
     </p>
     
     <p>This document was published by the Data Privacy Vocabularies and Controls Community Group (DPVCG) as a first public working draft. If you wish to make comments regarding this document, please send them to <a href="mailto:public-dpvcg@w3.org">public-dpvcg@w3.org</a> ( archived ). All comments are welcome.</p>
-    <p>
-            If you wish to make comments regarding this document, please send
-            them to
-            <a href="mailto:public-dpvcg@w3.org">public-dpvcg@w3.org</a>
-            (<a href="mailto:public-dpvcg-request@w3.org?subject=subscribe">subscribe</a>,
-            <a href="https://lists.w3.org/Archives/Public/public-dpvcg/">archives</a>).
-          </p><div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><section class="">
+    <div class="note" id="issue-container-generatedID"><div role="heading" class="ednote-title marker" id="h-ednote" aria-level="3"><span>Editor's note</span></div><section class="">
       <h3 id="participation">Participation<a class="self-link" aria-label="§" href="#participation"></a></h3>
       <p>The DPVCG requests participation regarding open issues and welcomes suggestions on their resolution or mitigation. The list of open issues and their discussions to date can be found at <a href="https://www.w3.org/community/dpvcg/track/issues/open">https://www.w3.org/community/dpvcg/track/issues/open</a>. Specifically, the DPVCG kindly requests proposals to extend its initial taxonomies by additional terms, where these are missing or need refinements in order to describe specific use cases of personal data handling. A list of issues at the time of creating this document can be found <a href="#issues" class="respec-offending-element" title="Linter (local-refs-exist): Broken local reference found in document. Please fix the links mentioned. See developer console. Occured" id="respec-offender-linter-local-refs-exist-broken-local-reference-found-in-document-please-fix-the-links-mentioned-see-developer-console-occured">here</a>. Other forms of participation such as comments and feedback are also welcome.</p>
-      <p>While we welcome participation via any and all mediums - e.g. via <a href="https://github.com/dpvcg/dpv">Github</a> pull requests or issues, emails, papers, or reports - the formal resolution of contributions will be done via the DPVCG meeting calls and mailing lists. We therefore would suggest submitting suggestions there for discussion of formal approval.</p>
+      <p>While we welcome participation via any and all mediums - e.g. via <a href="https://github.com/dpvcg/dpv">Github</a> pull requests or issues, emails, papers, or reports - the formal resolution of contributions will be done via the DPVCG meeting calls and mailing lists. We therefore would suggest submitting submissions there once they reach the stage for formal approval.</p>
+      <p><b>Interested participants should submit their suggestions, feedbacks, and comments by 31<sup>st</sup> July 2019 in order to have them formally reviewed according to the scheduled timeline.</b></p>
       <p>In order to propose/approve new terms, please include the following:</p>
         <ul>
           <li>term - suggested URI/identifier</li>
@@ -626,7 +337,7 @@ var[data-type]:hover::before {
           <li>source - mention where the new term originates from (e.g. from a legal regulation or from an existing ontology, if possible with a link confirming the reference.</li>
         </ul>
     </section></div>
-  </section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#namespaces"><bdi class="secno">2. </bdi>Namespaces</a></li><li class="tocline"><a class="tocxref" href="#vocab-legal-basis"><bdi class="secno">3. </bdi>Legal Basis under GDPR</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#legalbasis-classes"><bdi class="secno">3.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#a6-1-a-explicit-consent"><bdi class="secno">3.1.1 </bdi>A6-1-a-explicit-consent</a></li><li class="tocline"><a class="tocxref" href="#a6-1-a-non-explicit-consent"><bdi class="secno">3.1.2 </bdi>A6-1-a-non-explicit-consent</a></li><li class="tocline"><a class="tocxref" href="#a6-1-b"><bdi class="secno">3.1.3 </bdi>A6-1-b</a></li><li class="tocline"><a class="tocxref" href="#a6-1-c"><bdi class="secno">3.1.4 </bdi>A6-1-c</a></li><li class="tocline"><a class="tocxref" href="#a6-1-d"><bdi class="secno">3.1.5 </bdi>A6-1-d</a></li><li class="tocline"><a class="tocxref" href="#a6-1-e"><bdi class="secno">3.1.6 </bdi>A6-1-e</a></li><li class="tocline"><a class="tocxref" href="#a6-1-f"><bdi class="secno">3.1.7 </bdi>A6-1-f</a></li><li class="tocline"><a class="tocxref" href="#a9-2-a"><bdi class="secno">3.1.8 </bdi>A9-2-a</a></li><li class="tocline"><a class="tocxref" href="#a9-2-b"><bdi class="secno">3.1.9 </bdi>A9-2-b</a></li><li class="tocline"><a class="tocxref" href="#a9-2-c"><bdi class="secno">3.1.10 </bdi>A9-2-c</a></li><li class="tocline"><a class="tocxref" href="#a9-2-d"><bdi class="secno">3.1.11 </bdi>A9-2-d</a></li><li class="tocline"><a class="tocxref" href="#a9-2-e"><bdi class="secno">3.1.12 </bdi>A9-2-e</a></li><li class="tocline"><a class="tocxref" href="#a9-2-f"><bdi class="secno">3.1.13 </bdi>A9-2-f</a></li><li class="tocline"><a class="tocxref" href="#a9-2-g"><bdi class="secno">3.1.14 </bdi>A9-2-g</a></li><li class="tocline"><a class="tocxref" href="#a9-2-h"><bdi class="secno">3.1.15 </bdi>A9-2-h</a></li><li class="tocline"><a class="tocxref" href="#a9-2-i"><bdi class="secno">3.1.16 </bdi>A9-2-i</a></li><li class="tocline"><a class="tocxref" href="#a9-2-j"><bdi class="secno">3.1.17 </bdi>A9-2-j</a></li></ol></li></ol></li></ol></nav>
+  </section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#motivation"><bdi class="secno">1. </bdi>Introduction</a></li><li class="tocline"><a class="tocxref" href="#namespaces"><bdi class="secno">2. </bdi>Namespaces</a></li><li class="tocline"><a class="tocxref" href="#vocab-legal-basis"><bdi class="secno">3. </bdi>Legal Basis under GDPR</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#dpv-gdpr-classes"><bdi class="secno">3.1 </bdi>Classes</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#A6-1-a-explicit-consent"><bdi class="secno">3.1.1 </bdi>Art 6(1-a explicit consent)</a></li><li class="tocline"><a class="tocxref" href="#A6-1-a-non-explicit-consent"><bdi class="secno">3.1.2 </bdi>Art 6(1-a non-explicit consent)</a></li><li class="tocline"><a class="tocxref" href="#A6-1-b"><bdi class="secno">3.1.3 </bdi>Art 6(1-b)</a></li><li class="tocline"><a class="tocxref" href="#A6-1-c"><bdi class="secno">3.1.4 </bdi>Art 6(1-c)</a></li><li class="tocline"><a class="tocxref" href="#A6-1-d"><bdi class="secno">3.1.5 </bdi>Art 6(1-d)</a></li><li class="tocline"><a class="tocxref" href="#A6-1-e"><bdi class="secno">3.1.6 </bdi>Art 6(1-e)</a></li><li class="tocline"><a class="tocxref" href="#A6-1-f"><bdi class="secno">3.1.7 </bdi>Art 6(1-f)</a></li><li class="tocline"><a class="tocxref" href="#A9-2-a"><bdi class="secno">3.1.8 </bdi>Art 9(2-a)</a></li><li class="tocline"><a class="tocxref" href="#A9-2-b"><bdi class="secno">3.1.9 </bdi>Art 9(2-b)</a></li><li class="tocline"><a class="tocxref" href="#A9-2-c"><bdi class="secno">3.1.10 </bdi>Art 9(2-c)</a></li><li class="tocline"><a class="tocxref" href="#A9-2-d"><bdi class="secno">3.1.11 </bdi>Art 9(2-d)</a></li><li class="tocline"><a class="tocxref" href="#A9-2-e"><bdi class="secno">3.1.12 </bdi>Art 9(2-e)</a></li><li class="tocline"><a class="tocxref" href="#A9-2-f"><bdi class="secno">3.1.13 </bdi>Art 9(2-f)</a></li><li class="tocline"><a class="tocxref" href="#A9-2-g"><bdi class="secno">3.1.14 </bdi>Art 9(2-g)</a></li><li class="tocline"><a class="tocxref" href="#A9-2-h"><bdi class="secno">3.1.15 </bdi>Art 9(2-h)</a></li><li class="tocline"><a class="tocxref" href="#A9-2-i"><bdi class="secno">3.1.16 </bdi>Art 9(2-i)</a></li><li class="tocline"><a class="tocxref" href="#A9-2-j"><bdi class="secno">3.1.17 </bdi>Art 9(2-j)</a></li></ol></li></ol></li></ol></nav>
   <section id="motivation">
     <h2 id="x1-introduction"><bdi class="secno">1. </bdi>Introduction<a class="self-link" aria-label="§" href="#motivation"></a></h2>
     <p>The Data Privacy Vocabulary provides terms (classes and properties) to annotate and categorize instances of legally compliant personal data handling. In particular, the vocabulary provides <code>LegalBasis</code> as a top-level concept representing the various legal basis that can be used for justifying processing of personal data. Since these legal bases are defined in legislations within the scope of legal jurisdictions, we provide the legal bases specific to GDPR as a separate aligned vocabulary.</p>
@@ -778,769 +489,1028 @@ var[data-type]:hover::before {
     <p>Regulations such as the GDPR specify certain legal basis for carrying out the processing of personal data, which makes it mandatory for every processing to have one (or more) legal basis that justifies their compliance. DPVCG provides a list of legal bases as per the GDPR under the separate namespace of dpv-gdpr. Additional legal bases can be declared by subclassing dpv:LegalBasis.</p>
     <p>The taxonomy lists a total of 17 legal bases as provided by Article 6 and Article 9 of the GDPR. The legal basis of ‘consent’ as defined in Article 6(1)(a) has been declared using the terms ‘explicit’ and ‘non-explicit’ to differentiate the requirements of the two in accordance of their requirements of compliance. Furthermore, legal basis provided by Article 6 apply to processing involving personal data whereas those in Article 9 apply specifically to processing involving special categories of personal data.</p>
 
-<section id="legalbasis-classes">
-<h3 id="x3-1-classes"><bdi class="secno">3.1 </bdi>Classes<a class="self-link" aria-label="§" href="#legalbasis-classes"></a></h3>
-<p>
-<code><a href="dpv-gdpr:A6-1-a-explicit-consent">:A6-1-a-explicit-consent</a></code> | 
-<code><a href="dpv-gdpr:A6-1-a-non-explicit-consent">:A6-1-a-non-explicit-consent</a></code> | 
-<code><a href="dpv-gdpr:A6-1-b">:A6-1-b</a></code> | 
-<code><a href="dpv-gdpr:A6-1-c">:A6-1-c</a></code> | 
-<code><a href="dpv-gdpr:A6-1-d">:A6-1-d</a></code> | 
-<code><a href="dpv-gdpr:A6-1-e">:A6-1-e</a></code> | 
-<code><a href="dpv-gdpr:A6-1-f">:A6-1-f</a></code> | 
-<code><a href="dpv-gdpr:A9-2-a">:A9-2-a</a></code> | 
-<code><a href="dpv-gdpr:A9-2-b">:A9-2-b</a></code> | 
-<code><a href="dpv-gdpr:A9-2-c">:A9-2-c</a></code> | 
-<code><a href="dpv-gdpr:A9-2-d">:A9-2-d</a></code> | 
-<code><a href="dpv-gdpr:A9-2-e">:A9-2-e</a></code> | 
-<code><a href="dpv-gdpr:A9-2-f">:A9-2-f</a></code> | 
-<code><a href="dpv-gdpr:A9-2-g">:A9-2-g</a></code> | 
-<code><a href="dpv-gdpr:A9-2-h">:A9-2-h</a></code> | 
-<code><a href="dpv-gdpr:A9-2-i">:A9-2-i</a></code> | 
-<code><a href="dpv-gdpr:A9-2-j">:A9-2-j</a></code>
-</p>
+    <section id="dpv-gdpr-classes">
+      <h3 id="x3-1-classes"><bdi class="secno">3.1 </bdi>Classes<a class="self-link" aria-label="§" href="#dpv-gdpr-classes"></a></h3>
+    <p>
+      <code><a href="#A6-1-a-explicit-consent">Art 6(1-a explicit consent)</a></code> |
+      <code><a href="#A6-1-a-non-explicit-consent">Art 6(1-a non-explicit consent)</a></code> |
+      <code><a href="#A6-1-b">Art 6(1-b)</a></code> |
+      <code><a href="#A6-1-c">Art 6(1-c)</a></code> |
+      <code><a href="#A6-1-d">Art 6(1-d)</a></code> |
+      <code><a href="#A6-1-e">Art 6(1-e)</a></code> |
+      <code><a href="#A6-1-f">Art 6(1-f)</a></code> |
+      <code><a href="#A9-2-a">Art 9(2-a)</a></code> |
+      <code><a href="#A9-2-b">Art 9(2-b)</a></code> |
+      <code><a href="#A9-2-c">Art 9(2-c)</a></code> |
+      <code><a href="#A9-2-d">Art 9(2-d)</a></code> |
+      <code><a href="#A9-2-e">Art 9(2-e)</a></code> |
+      <code><a href="#A9-2-f">Art 9(2-f)</a></code> |
+      <code><a href="#A9-2-g">Art 9(2-g)</a></code> |
+      <code><a href="#A9-2-h">Art 9(2-h)</a></code> |
+      <code><a href="#A9-2-i">Art 9(2-i)</a></code> |
+      <code><a href="#A9-2-j">Art 9(2-j)</a></code> |
+    </p>
 
-<section id="a6-1-a-explicit-consent">
-<h4 id="dpv-gdpr:A6-1-a-explicit-consent"><bdi class="secno">3.1.1 </bdi>A6-1-a-explicit-consent<a class="self-link" aria-label="§" href="#a6-1-a-explicit-consent"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A6-1-a-explicit-consent">dpv-gdpr:A6-1-a-explicit-consent</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>explicit' consent.</td>
-</tr>
-<tr>
-<td>Comments:</td>
-<td>Valid consent in this case would have requirements for being 'explicit' in addition to requirements defined by A4-11. This is also mentioned in the Article 29 Working Party document "Guidelines on Consent under Regulation 2016/679 (wp259rev.01)"</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_a/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_a/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-10</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://lists.w3.org/Archives/Public/public-dpvcg/2019Apr/0094.html">https://lists.w3.org/Archives/Public/public-dpvcg/2019Apr/0094.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger, Harshvardhan J. Pandit, Rigo Wenning</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a6-1-a-non-explicit-consent">
-<h4 id="dpv-gdpr:A6-1-a-non-explicit-consent"><bdi class="secno">3.1.2 </bdi>A6-1-a-non-explicit-consent<a class="self-link" aria-label="§" href="#a6-1-a-non-explicit-consent"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A6-1-a-non-explicit-consent">dpv-gdpr:A6-1-a-non-explicit-consent</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>consent</td>
-</tr>
-<tr>
-<td>Comments:</td>
-<td>Definition of consent: A data subject's unambigious/clear affirmative action that signifies an agreement to process their personal data (Rigo Wenning) . What is referred to as 'non-explicit consent' here is also termed as 'regular' consent in the Article 29 Working Party document "Guidelines on Consent under Regulation 2016/679 (wp259rev.01)". This is the legal basis that requires consent but not at the level of being 'explicit'.</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_a/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_a/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-10</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://lists.w3.org/Archives/Public/public-dpvcg/2019Apr/0094.html">https://lists.w3.org/Archives/Public/public-dpvcg/2019Apr/0094.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger, Harshvardhan J. Pandit, Rigo Wenning</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a6-1-b">
-<h4 id="dpv-gdpr:A6-1-b"><bdi class="secno">3.1.3 </bdi>A6-1-b<a class="self-link" aria-label="§" href="#a6-1-b"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A6-1-b">dpv-gdpr:A6-1-b</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>performance of a contract</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_b/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_b/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a6-1-c">
-<h4 id="dpv-gdpr:A6-1-c"><bdi class="secno">3.1.4 </bdi>A6-1-c<a class="self-link" aria-label="§" href="#a6-1-c"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A6-1-c">dpv-gdpr:A6-1-c</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>compliance with a legal obligation</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_c/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_c/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a6-1-d">
-<h4 id="dpv-gdpr:A6-1-d"><bdi class="secno">3.1.5 </bdi>A6-1-d<a class="self-link" aria-label="§" href="#a6-1-d"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A6-1-d">dpv-gdpr:A6-1-d</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>protection of the vital interests</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_d/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_d/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a6-1-e">
-<h4 id="dpv-gdpr:A6-1-e"><bdi class="secno">3.1.6 </bdi>A6-1-e<a class="self-link" aria-label="§" href="#a6-1-e"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A6-1-e">dpv-gdpr:A6-1-e</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>public interest or official authority</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_e/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_e/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a6-1-f">
-<h4 id="dpv-gdpr:A6-1-f"><bdi class="secno">3.1.7 </bdi>A6-1-f<a class="self-link" aria-label="§" href="#a6-1-f"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A6-1-f">dpv-gdpr:A6-1-f</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>legitimate interests</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_f/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_f/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a9-2-a">
-<h4 id="dpv-gdpr:A9-2-a"><bdi class="secno">3.1.8 </bdi>A9-2-a<a class="self-link" aria-label="§" href="#a9-2-a"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A9-2-a">dpv-gdpr:A9-2-a</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>explicit consent with special categories of data</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_a/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_a/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a9-2-b">
-<h4 id="dpv-gdpr:A9-2-b"><bdi class="secno">3.1.9 </bdi>A9-2-b<a class="self-link" aria-label="§" href="#a9-2-b"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A9-2-b">dpv-gdpr:A9-2-b</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>employment and social security and social protection law</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_b/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_b/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a9-2-c">
-<h4 id="dpv-gdpr:A9-2-c"><bdi class="secno">3.1.10 </bdi>A9-2-c<a class="self-link" aria-label="§" href="#a9-2-c"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A9-2-c">dpv-gdpr:A9-2-c</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>protection of the vital interests</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_c/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_c/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a9-2-d">
-<h4 id="dpv-gdpr:A9-2-d"><bdi class="secno">3.1.11 </bdi>A9-2-d<a class="self-link" aria-label="§" href="#a9-2-d"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A9-2-d">dpv-gdpr:A9-2-d</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>legitimate activities with appropriate safeguards by a foundation, association or any other not-for-profit body with a political, philosophical, religious or trade union aim and on condition that the processing relates solely to the members or to former members of the body or to persons who have regular contact with it in connection with its purposes and that the personal data are not disclosed outside that body without the consent of the data subjects;</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_d/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_d/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a9-2-e">
-<h4 id="dpv-gdpr:A9-2-e"><bdi class="secno">3.1.12 </bdi>A9-2-e<a class="self-link" aria-label="§" href="#a9-2-e"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A9-2-e">dpv-gdpr:A9-2-e</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>data manifestly made public by the data subject</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_e/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_e/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a9-2-f">
-<h4 id="dpv-gdpr:A9-2-f"><bdi class="secno">3.1.13 </bdi>A9-2-f<a class="self-link" aria-label="§" href="#a9-2-f"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A9-2-f">dpv-gdpr:A9-2-f</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>establishment, exercise or defence of legal claims / courts acting in their judicial capacity</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_f/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_f/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a9-2-g">
-<h4 id="dpv-gdpr:A9-2-g"><bdi class="secno">3.1.14 </bdi>A9-2-g<a class="self-link" aria-label="§" href="#a9-2-g"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A9-2-g">dpv-gdpr:A9-2-g</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>substantial public interest, on the basis of Union or Member State law</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_g/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_g/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a9-2-h">
-<h4 id="dpv-gdpr:A9-2-h"><bdi class="secno">3.1.15 </bdi>A9-2-h<a class="self-link" aria-label="§" href="#a9-2-h"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A9-2-h">dpv-gdpr:A9-2-h</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>preventive or occupational medicine, for the assessment of the working capacity of the employee, medical diagnosis, the provision of health or social care or treatment or the management of health or social care systems and services on the basis of Union or Member State law or pursuant to contract with a health professional and subject to the conditions and safeguards referred to in paragraph 3</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_h/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_h/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a9-2-i">
-<h4 id="dpv-gdpr:A9-2-i"><bdi class="secno">3.1.16 </bdi>A9-2-i<a class="self-link" aria-label="§" href="#a9-2-i"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A9-2-i">dpv-gdpr:A9-2-i</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>public interest in public health</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_i/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_i/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="a9-2-j">
-<h4 id="dpv-gdpr:A9-2-j"><bdi class="secno">3.1.17 </bdi>A9-2-j<a class="self-link" aria-label="§" href="#a9-2-j"></a></h4>
-<table class="definition">
-<tbody>
-<tr>
-<th>Class:</th>
-<th><code><a href="#dpv-gdpr:A9-2-j">dpv-gdpr:A9-2-j</a></code></th>
-</tr>
-<tr>
-<td>Description:</td>
-<td>public interest, scientific or historical research purposes or statistical purposes based on Union or Member State law</td>
-</tr>
-<tr>
-<td>is SubClass of:</td>
-<td><a href="https://w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a></td>
-</tr>
-<tr>
-<td>Source:</td>
-<td><a href="https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_j/oj">https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_j/oj</a></td>
-</tr>
-<tr>
-<td>Status:</td>
-<td>accepted</td>
-</tr>
-<tr>
-<td>Date Created:</td>
-<td>2019-04-04</td>
-</tr>
-<tr>
-<td>Date Approved:</td>
-<td>2019-04-05</td>
-</tr>
-<tr>
-<td>Approval Resolution:</td>
-<td><a href="https://www.w3.org/2019/04/05-dpvcg-minutes.html">https://www.w3.org/2019/04/05-dpvcg-minutes.html</a></td>
-</tr>
-<tr>
-<td>Contributor:</td>
-<td>Eva Schlehahn, Bud Bruegger</td>
-</tr>
-</tbody>
-</table>
-</section>
-</section>
+    <section data-dfn-for="A6-1-a-explicit-consent" id="art-6-1-a-explicit-consent">
+      <h4 id="A6-1-a-explicit-consent"><bdi class="secno">3.1.1 </bdi>Art 6(1-a explicit consent)<a class="self-link" aria-label="§" href="#A6-1-a-explicit-consent"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a6-1-a-explicit-consent">A6-1-a-explicit-consent</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>explicit' consent.</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_a/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn, 
+              Harshvardhan J. Pandit, 
+              Rigo Wenning
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A6-1-a-non-explicit-consent" id="art-6-1-a-non-explicit-consent">
+      <h4 id="A6-1-a-non-explicit-consent"><bdi class="secno">3.1.2 </bdi>Art 6(1-a non-explicit consent)<a class="self-link" aria-label="§" href="#A6-1-a-non-explicit-consent"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a6-1-a-non-explicit-consent">A6-1-a-non-explicit-consent</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>consent</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_a/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn, 
+              Harshvardhan J. Pandit, 
+              Rigo Wenning
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A6-1-b" id="art-6-1-b">
+      <h4 id="A6-1-b"><bdi class="secno">3.1.3 </bdi>Art 6(1-b)<a class="self-link" aria-label="§" href="#A6-1-b"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a6-1-b">A6-1-b</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>performance of a contract</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_b/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A6-1-c" id="art-6-1-c">
+      <h4 id="A6-1-c"><bdi class="secno">3.1.4 </bdi>Art 6(1-c)<a class="self-link" aria-label="§" href="#A6-1-c"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a6-1-c">A6-1-c</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>compliance with a legal obligation</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_c/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A6-1-d" id="art-6-1-d">
+      <h4 id="A6-1-d"><bdi class="secno">3.1.5 </bdi>Art 6(1-d)<a class="self-link" aria-label="§" href="#A6-1-d"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a6-1-d">A6-1-d</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>protection of the vital interests</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_d/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A6-1-e" id="art-6-1-e">
+      <h4 id="A6-1-e"><bdi class="secno">3.1.6 </bdi>Art 6(1-e)<a class="self-link" aria-label="§" href="#A6-1-e"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a6-1-e">A6-1-e</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>public interest or official authority</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_e/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A6-1-f" id="art-6-1-f">
+      <h4 id="A6-1-f"><bdi class="secno">3.1.7 </bdi>Art 6(1-f)<a class="self-link" aria-label="§" href="#A6-1-f"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a6-1-f">A6-1-f</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>legitimate interests</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_6/par_1/pnt_f/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A9-2-a" id="art-9-2-a">
+      <h4 id="A9-2-a"><bdi class="secno">3.1.8 </bdi>Art 9(2-a)<a class="self-link" aria-label="§" href="#A9-2-a"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a9-2-a">A9-2-a</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>explicit consent with special categories of data</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_a/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A9-2-b" id="art-9-2-b">
+      <h4 id="A9-2-b"><bdi class="secno">3.1.9 </bdi>Art 9(2-b)<a class="self-link" aria-label="§" href="#A9-2-b"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a9-2-b">A9-2-b</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>employment and social security and social protection law</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_b/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A9-2-c" id="art-9-2-c">
+      <h4 id="A9-2-c"><bdi class="secno">3.1.10 </bdi>Art 9(2-c)<a class="self-link" aria-label="§" href="#A9-2-c"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a9-2-c">A9-2-c</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>protection of the vital interests</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_c/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A9-2-d" id="art-9-2-d">
+      <h4 id="A9-2-d"><bdi class="secno">3.1.11 </bdi>Art 9(2-d)<a class="self-link" aria-label="§" href="#A9-2-d"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a9-2-d">A9-2-d</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>legitimate activities with appropriate safeguards by a foundation, association or any other not-for-profit body with a political, philosophical, religious or trade union aim and on condition that the processing relates solely to the members or to former members of the body or to persons who have regular contact with it in connection with its purposes and that the personal data are not disclosed outside that body without the consent of the data subjects;</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_d/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A9-2-e" id="art-9-2-e">
+      <h4 id="A9-2-e"><bdi class="secno">3.1.12 </bdi>Art 9(2-e)<a class="self-link" aria-label="§" href="#A9-2-e"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a9-2-e">A9-2-e</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>data manifestly made public by the data subject</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_e/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A9-2-f" id="art-9-2-f">
+      <h4 id="A9-2-f"><bdi class="secno">3.1.13 </bdi>Art 9(2-f)<a class="self-link" aria-label="§" href="#A9-2-f"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a9-2-f">A9-2-f</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>establishment, exercise or defence of legal claims / courts acting in their judicial capacity</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_f/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A9-2-g" id="art-9-2-g">
+      <h4 id="A9-2-g"><bdi class="secno">3.1.14 </bdi>Art 9(2-g)<a class="self-link" aria-label="§" href="#A9-2-g"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a9-2-g">A9-2-g</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>substantial public interest, on the basis of Union or Member State law</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_g/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A9-2-h" id="art-9-2-h">
+      <h4 id="A9-2-h"><bdi class="secno">3.1.15 </bdi>Art 9(2-h)<a class="self-link" aria-label="§" href="#A9-2-h"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a9-2-h">A9-2-h</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>preventive or occupational medicine, for the assessment of the working capacity of the employee, medical diagnosis, the provision of health or social care or treatment or the management of health or social care systems and services on the basis of Union or Member State law or pursuant to contract with a health professional and subject to the conditions and safeguards referred to in paragraph 3</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_h/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A9-2-i" id="art-9-2-i">
+      <h4 id="A9-2-i"><bdi class="secno">3.1.16 </bdi>Art 9(2-i)<a class="self-link" aria-label="§" href="#A9-2-i"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a9-2-i">A9-2-i</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>public interest in public health</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_i/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+    <section data-dfn-for="A9-2-j" id="art-9-2-j">
+      <h4 id="A9-2-j"><bdi class="secno">3.1.17 </bdi>Art 9(2-j)<a class="self-link" aria-label="§" href="#A9-2-j"></a></h4>
+      <table class="definition">
+        <tbody>
+          <tr>
+            <td>Term:</td>
+            <td><code><dfn id="dfn-a9-2-j">A9-2-j</dfn></code></td>
+          </tr>
+          <tr>
+            <td>Description:</td>
+            <td>public interest, scientific or historical research purposes or statistical purposes based on Union or Member State law</td>
+          </tr>
+          <tr>
+            <td>Subclass Of:</td>
+            <td>
+              <a href="http://www.w3.org/ns/dpv#LegalBasis">dpv:LegalBasis</a>
+            </td>
+          </tr>
+          <tr>
+            <td>Status:</td>
+            <td>accepted</td>
+          </tr>
+          <tr>
+            <td>Defined by:</td>
+            <td>
+              https://eur-lex.europa.eu/eli/reg/2016/679/art_9/par_2/pnt_j/oj
+            </td>
+          </tr>
+          <tr>
+            <td>Created:</td>
+            <td><time>2019-04-04</time></td>
+          </tr>
+          <tr>
+            <td>Contributor(s):</td>
+            <td>
+              Bud Bruegger, 
+              Eva Schlehahn
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    </section>
+
   </section>
 
+<menu id="__copy_menu__" type="context"><menuitem></menuitem></menu><p role="navigation" id="back-to-top">
+    <a href="#title"><abbr title="Back to Top">↑</abbr></a>
+  </p><aside class="dfn-panel" id="dfn-panel-for-dfn-a6-1-a-explicit-consent" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a6-1-a-explicit-consent">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a6-1-a-non-explicit-consent" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a6-1-a-non-explicit-consent">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a6-1-b" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a6-1-b">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a6-1-c" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a6-1-c">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a6-1-d" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a6-1-d">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a6-1-e" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a6-1-e">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a6-1-f" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a6-1-f">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a9-2-a" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a9-2-a">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a9-2-b" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a9-2-b">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a9-2-c" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a9-2-c">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a9-2-d" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a9-2-d">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a9-2-e" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a9-2-e">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a9-2-f" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a9-2-f">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a9-2-g" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a9-2-g">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a9-2-h" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a9-2-h">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a9-2-i" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a9-2-i">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><aside class="dfn-panel" id="dfn-panel-for-dfn-a9-2-j" hidden="">
+      <span class="caret"></span>
+      <div>
+        <a class="self-link" href="#dfn-a9-2-j">Permalink</a>
+        
+      </div>
+      <b>Referenced in:</b>
+      <ul>
+      <li>Not referenced in this document.</li>
+    </ul>
+    </aside><script id="respec-dfn-panel">(() => {
+// @ts-check
+if (document.respecIsReady) {
+  document.respecIsReady.then(dfnPanel);
+} else {
+  dfnPanel();
+}
 
-<p role="navigation" id="back-to-top"><a href="#title"><abbr title="Back to Top">↑</abbr></a></p><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
+function dfnPanel() {
+  /** @type {HTMLElement} */
+  let panel;
+  document.body.addEventListener("click", event => {
+    if (!(event.target instanceof HTMLElement)) return;
+
+    /** @type {HTMLElement} */
+    const el = event.target;
+
+    const action = deriveAction(el);
+    switch (action) {
+      case "show": {
+        if (panel) hidePanel(panel);
+        /** @type {HTMLElement} */
+        const dfn = el.closest("dfn, .index-term");
+        panel = document.getElementById(`dfn-panel-for-${dfn.id}`);
+        displayPanel(dfn, panel, { x: event.clientX, y: event.clientY });
+        break;
+      }
+      case "dock": {
+        panel.style.left = null;
+        panel.style.top = null;
+        panel.classList.add("docked");
+        break;
+      }
+      case "hide": {
+        hidePanel(panel);
+        break;
+      }
+    }
+  });
+}
+
+/** @param {HTMLElement} clickTarget */
+function deriveAction(clickTarget) {
+  const hitALink = !!clickTarget.closest("a");
+  if (clickTarget.closest("dfn, .index-term")) {
+    return hitALink ? null : "show";
+  }
+  if (clickTarget.closest(".dfn-panel")) {
+    if (hitALink) {
+      const clickedSelfLink = clickTarget.classList.contains("self-link");
+      return clickedSelfLink ? "hide" : "dock";
+    }
+    const panel = clickTarget.closest(".dfn-panel");
+    return panel.classList.contains("docked") ? "hide" : null;
+  }
+  if (document.querySelector(".dfn-panel:not([hidden])")) {
+    return "hide";
+  }
+  return null;
+}
+
+/**
+ * @param {HTMLElement} dfn
+ * @param {HTMLElement} panel
+ * @param {{ x: number, y: number }} clickPosition
+ */
+function displayPanel(dfn, panel, { x, y }) {
+  panel.hidden = false;
+  // distance (px) between edge of panel and the pointing triangle (caret)
+  const MARGIN = 20;
+
+  const dfnRects = dfn.getClientRects();
+  // Find the `top` offset when the `dfn` can be spread across multiple lines
+  let closestTop = 0;
+  let minDiff = Infinity;
+  for (const rect of dfnRects) {
+    const { top, bottom } = rect;
+    const diffFromClickY = Math.abs((top + bottom) / 2 - y);
+    if (diffFromClickY < minDiff) {
+      minDiff = diffFromClickY;
+      closestTop = top;
+    }
+  }
+
+  const top = window.scrollY + closestTop + dfnRects[0].height;
+  const left = x - MARGIN;
+  panel.style.left = `${left}px`;
+  panel.style.top = `${top}px`;
+
+  // Find if the panel is flowing out of the window
+  const panelRect = panel.getBoundingClientRect();
+  const SCREEN_WIDTH = Math.min(window.innerWidth, window.screen.width);
+  if (panelRect.right > SCREEN_WIDTH) {
+    const newLeft = Math.max(MARGIN, x + MARGIN - panelRect.width);
+    const newCaretOffset = left - newLeft;
+    panel.style.left = `${newLeft}px`;
+    /** @type {HTMLElement} */
+    const caret = panel.querySelector(".caret");
+    caret.style.left = `${newCaretOffset}px`;
+  }
+}
+
+/** @param {HTMLElement} panel */
+function hidePanel(panel) {
+  panel.hidden = true;
+  panel.classList.remove("docked");
+}
+})()</script><script src="https://www.w3.org/scripts/TR/2016/fixup.js"></script></body></html>
