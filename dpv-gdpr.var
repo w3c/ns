@@ -1,7 +1,7 @@
 URI: dpv-gdpr
 
-URI: dpv-gdpr.html
+URI: dpv-gdpr.html.redirect
 Content-Type: text/html
 
-URI: dpv-gdpr.ttl
+URI: dpv-gdpr.ttl.redirect
 Content-Type: text/turtle; qs=0.5
