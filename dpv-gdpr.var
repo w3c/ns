@@ -5,3 +5,13 @@ Content-Type: text/html
 
 URI: dpv-gdpr.ttl.redirect
 Content-Type: text/turtle; qs=0.5
+
+URI: dpv-gdpr.rdf.redirect
+Content-Type: application/rdf+xml; qs=0.5
+
+URI: dpv-gdpr.jsonld.redirect
+Content-Type: application/ld+json; qs=0.5
+
+URI: dpv-gdpr.jsonld.redirect
+Content-Type: application/json; qs=0.5
+

@@ -1,0 +1,9 @@
+Status: 302 Moved Temporarily
+Location: https://dpvcg.github.io/dpv/dpv.ttl
+Content-Type: text/html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0//EN">
+<title>Redirection</title>
+<p>The correct URI for this page is <a
+href="https://dpvcg.github.io/dpv/dpv.ttl">
+https://dpvcg.github.io/dpv/dpv.ttl</a>.
