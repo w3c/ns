@@ -9,7 +9,7 @@ AddType application/rdf+xml .rdf
 
 
 # Changes added on the latest block due URL name changes, 2019-10-12 (Ivan Herman)
-RewriteRule ^v1.jsonld$ https://raw.githack.com/w3c/did-spec-registries/core-ld-vocabulary/vocabs/DID-core.jsonld [P]
-RewriteRule ^v1.json$ https://raw.githack.com/w3c/did-spec-registries/core-ld-vocabulary/vocabs/DID-core.jsonld [P]
-RewriteRule ^v1.ttl$ https://raw.githack.com/w3c/did-spec-registries/core-ld-vocabulary/vocabs/DID-core.ttl [P]
+RewriteRule ^v1.jsonld$ https://w3c.github.io/did-spec-registries/vocabs/DID-core-v1.jsonld [P]
+RewriteRule ^v1.json$ https://w3c.github.io/did-spec-registries/vocabs/DID-core-v1.jsonld [P]
+RewriteRule ^v1.ttl$ https://w3c.github.io/did-spec-registries/vocabs/DID-core-v1.ttl [P]
 
