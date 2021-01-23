@@ -1,0 +1,14 @@
+# Installed on 2020-01-23
+
+RewriteEngine On
+RewriteBase /ns/did/shacl/
+AddType application/ld+json .jsonld
+AddType text/turtle .ttl
+AddType application/rdf+xml .rdf
+
+
+# Changes added on the latest block due URL name changes, 2019-10-12 (Ivan Herman)
+RewriteRule ^v1.jsonld$ https://w3c.github.io/did-spec-registries/vocabs/DID-core-shape-v1.jsonld [P]
+RewriteRule ^v1.json$ https://w3c.github.io/did-spec-registries/vocabs/DID-core-shape-v1.jsonld [P]
+RewriteRule ^v1.ttl$ https://w3c.github.io/did-spec-registries/vocabs/DID-core-shape-v1.ttl [P]
+
