@@ -1,0 +1,15 @@
+# Change on 2020-04-10: changed the redirection per
+#     https://github.com/w3c/did-core/pull/238#issuecomment-611820943
+
+RewriteEngine On
+RewriteBase /ns/did/vocab/
+AddType application/ld+json .jsonld
+AddType text/turtle .ttl
+AddType application/rdf+xml .rdf
+
+
+# Changes added on the latest block due URL name changes, 2019-10-12 (Ivan Herman)
+RewriteRule ^v1.jsonld$ https://raw.githack.com/w3c/did-spec-registries/core-ld-vocabulary/vocabs/DID-core.jsonld [P]
+RewriteRule ^v1.json$ https://raw.githack.com/w3c/did-spec-registries/core-ld-vocabulary/vocabs/DID-core.jsonld [P]
+RewriteRule ^v1.ttl$ https://raw.githack.com/w3c/did-spec-registries/core-ld-vocabulary/vocabs/DID-core.ttl [P]
+
