@@ -133,6 +133,8 @@ AddType application/n-triples .nt
 # added by dsr@w3.org for thing description content negotiation
 AddType text/turtle .ttl
 AddType application/ld+json .jsonld
+AddType application/rdf+xml .rdf
+
 
 RewriteCond %{HTTP_ACCEPT} text/turtle
 RewriteRule ^td$ td/td.ttl [R=303]
