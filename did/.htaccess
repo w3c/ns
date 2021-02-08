@@ -46,6 +46,6 @@ RewriteRule ^v1.json$ https://w3c.github.io/did-spec-registries/vocabs/v1/contex
 
 
 # These are the default values in case the user wants to see these files in a browser
-RewriteRule ^v1$ https://w3c.github.io/did-spec-registries/vocabs/v1/context.json [R=303,L]
-RewriteRule ^shacl$ https://w3c.github.io/did-spec-registries/vocabs/v1/shacl.ttl [R=303,L]
-RewriteRule ^shex$ https://w3c.github.io/did-spec-registries/vocabs/v1/shex.shex [R=303,L]
+# RewriteRule ^v1$ https://w3c.github.io/did-spec-registries/vocabs/v1/context.jsonld [R=303,L]
+# RewriteRule ^shacl$ https://w3c.github.io/did-spec-registries/vocabs/v1/shacl.ttl [R=303,L]
+# RewriteRule ^shex$ https://w3c.github.io/did-spec-registries/vocabs/v1/shex.shex [R=303,L]
