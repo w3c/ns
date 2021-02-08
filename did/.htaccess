@@ -1,12 +1,51 @@
-# Change on 2020-04-10: changed the redirection per
-#     https://github.com/w3c/did-core/pull/238#issuecomment-611820943
+# Set up after the finalization of the vocabulary, constraints, and context files by the DID WG
+# Ivan Herman, 2021-02-09
 
 RewriteEngine On
 RewriteBase /ns/did/
+
 AddType application/ld+json .jsonld
+AddType application/json .json
+AddType text/turtle .ttl
+AddType application/rdf+xml .rdf
+AddType text/shex .shex
+
+Options -MultiViews
+
+RewriteCond %{HTTP_ACCEPT} text/html
+RewriteRule ^$ https://w3c.github.io/did-spec-registries/vocabs/v1/vocab.html [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} text/turtle
+RewriteRule ^$ https://w3c.github.io/did-spec-registries/vocabs/v1/vocab.ttl [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} application/ld\+json [OR]
+RewriteCond %{HTTP_ACCEPT} application/json
+RewriteRule ^$ https://w3c.github.io/did-spec-registries/vocabs/v1/vocab.jsonld [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} application/rdf\+xml
+RewriteRule ^$ https://w3c.github.io/did-spec-registries/vocabs/v1/vocab.rdf [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} application/ld\+json [OR]
+RewriteCond %{HTTP_ACCEPT} application/json
+RewriteRule ^v1$ https://w3c.github.io/did-spec-registries/vocabs/v1/context.jsonld [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} text/turtle
+RewriteRule ^shacl$ https://w3c.github.io/did-spec-registries/vocabs/v1/shacl.ttl [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} application/ld\+json [OR]
+RewriteCond %{HTTP_ACCEPT} application/json
+RewriteRule ^shacl$ https://w3c.github.io/did-spec-registries/vocabs/v1/shacl.jsonld [R=303,L]
+
+RewriteCond %{HTTP_ACCEPT} text/shex
+RewriteRule ^shex$ https://w3c.github.io/did-spec-registries/vocabs/v1/shex.shex [R=303,L]
 
 
-# Changes added on the latest block due URL name changes, 2019-10-12 (Ivan Herman)
-RewriteRule ^v1.jsonld$ https://w3c.github.io/did-spec-registries/contexts/did-v1.jsonld [P]
-RewriteRule ^v1.json$ https://w3c.github.io/did-spec-registries/contexts/did-v1.jsonld [P]
+# These are just here for the case the user tries to get these files explicitly via a suffix
+RewriteRule ^v1.jsonld$ https://w3c.github.io/did-spec-registries/vocabs/v1/context.jsonld [P]
+RewriteRule ^v1.json$ https://w3c.github.io/did-spec-registries/vocabs/v1/context.jsonld [P]
 
+
+# These are the default values in case the user wants to see these files in a browser
+RewriteRule ^v1$ https://w3c.github.io/did-spec-registries/vocabs/v1/context.json [R=303,L]
+RewriteRule ^shacl$ https://w3c.github.io/did-spec-registries/vocabs/v1/shacl.ttl [R=303,L]
+RewriteRule ^shex$ https://w3c.github.io/did-spec-registries/vocabs/v1/shex.shex [R=303,L]
