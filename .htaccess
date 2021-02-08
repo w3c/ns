@@ -164,3 +164,5 @@ RewriteRule ^pub-context.json$ https://w3c.github.io/pub-vocab/pub-context.jsonl
 RewriteRule ^pub-context-jsonld10.jsonld$ https://w3c.github.io/pub-vocab/pub-context-jsonld10.jsonld [P]
 RewriteRule ^pub-context-jsonld10.json$ https://w3c.github.io/pub-vocab/pub-context-jsonld10.jsonld [P]
 
+# Temporary fix
+RewriteRule ^did/v1^ https://w3c.github.io/did-spec-registries/vocabs/v1/context.jsonld [R=303]
