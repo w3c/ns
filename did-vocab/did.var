@@ -1,0 +1,13 @@
+URI: did
+
+URI: did.html
+Content-Type: text/html; qs=0.9
+
+URI: did.jsonld
+Content-Type: application/ld+json; qs=0.5
+
+URI: did.jsonld
+Content-Type: application/json; qs=0.5
+
+URI: did.ttl
+Content-type: text/turtle; qs=0.7

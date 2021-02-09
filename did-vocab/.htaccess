@@ -1,0 +1,25 @@
+RewriteEngine on
+RewriteBase /ns/did-vocab/
+
+AddType application/ld+json .jsonld
+AddType application/json .jsonld
+AddType text/turtle .ttl
+AddType application/rdf+xml .rdf
+AddType text/shex .shex
+
+# did
+RewriteRule ^$ did [PT,L]
+RewriteRule ^did.html$   https://w3c.github.io/did-spec-registries/vocabs/v1/vocab.html [P]
+RewriteRule ^did.ttl$    https://w3c.github.io/did-spec-registries/vocabs/v1/vocab.ttl [P]
+RewriteRule ^did.jsonld$ https://w3c.github.io/did-spec-registries/vocabs/v1/vocab.jsonld [P]
+RewriteRule ^did.rdf$    https://w3c.github.io/did-spec-registries/vocabs/v1/vocab.rdf [P]
+
+# v1
+RewriteRule ^v1.jsonld$ https://w3c.github.io/did-spec-registries/vocabs/v1/context.jsonld [P]
+
+#shacl
+RewriteRule ^shacl.jsonld$  https://w3c.github.io/did-spec-registries/vocabs/v1/shacl.jsonld [P]
+RewriteRule ^shacl.ttl$     https://w3c.github.io/did-spec-registries/vocabs/v1/shacl.ttl [P]
+
+#shex
+RewriteRule ^shex.shex$ https://w3c.github.io/did-spec-registries/vocabs/v1/shex.shex [P]

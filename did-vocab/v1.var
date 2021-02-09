@@ -1,0 +1,7 @@
+URI: v1
+
+URI: v1.jsonld
+Content-Type: application/ld+json; qs=0.5
+
+URI: v1.jsonld
+Content-Type: application/json; qs=0.5

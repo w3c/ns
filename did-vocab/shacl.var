@@ -1,0 +1,10 @@
+URI: shacl
+
+URI: shacl.jsonld
+Content-Type: application/ld+json; qs=0.9
+
+URI: did/shacl.jsonld
+Content-Type: application/json; qs=0.9
+
+URI: shacl.ttl
+Content-type: text/turtle; qs=0.7
