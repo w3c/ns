@@ -1,0 +1,8 @@
+# /dx/prof
+# Requested by Nicholas Car 20200217
+
+RewriteEngine on
+RewriteBase /ns/dx/connegp/profile/
+
+# Roles vocab URIs
+RewriteRule ^(.*) https://www.w3.org/ns/dx/connegp/profiles
