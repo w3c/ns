@@ -5,4 +5,14 @@ RewriteEngine on
 RewriteBase /ns/dx/prof/role/
 
 # Roles vocab URIs
-RewriteRule ^(.*) http://www.w3.org/ns/dx/prof/role [L]
+RewriteRule ^constraints$ http://www.w3.org/ns/dx/prof/index.ttl
+RewriteRule ^example$ http://www.w3.org/ns/dx/prof/index.ttl
+RewriteRule ^guidance$ http://www.w3.org/ns/dx/prof/index.ttl
+RewriteRule ^mapping$ http://www.w3.org/ns/dx/prof/index.ttl
+RewriteRule ^schema$ http://www.w3.org/ns/dx/prof/index.ttl
+RewriteRule ^specification$ http://www.w3.org/ns/dx/prof/index.ttl
+RewriteRule ^validation$ http://www.w3.org/ns/dx/prof/index.ttl
+RewriteRule ^vocabulary$ http://www.w3.org/ns/dx/prof/index.ttl
+
+# for http://www.w3.org/ns/dx/prof/role
+RewriteRule ^$ http://www.w3.org/ns/dx/prof/index.ttl
