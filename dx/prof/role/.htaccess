@@ -15,4 +15,4 @@ RewriteRule ^validation$ https://www.w3.org/ns/dx/prof/role
 RewriteRule ^vocabulary$ https://www.w3.org/ns/dx/prof/role
 
 # for https://www.w3.org/ns/dx/prof/role
-RewriteRule ^$ https://www.w3.org/ns/dx/prof/index.ttl
+RewriteRule ^$ https://www.w3.org/ns/dx/prof/role/index.ttl
