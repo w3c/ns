@@ -5,16 +5,16 @@
 RewriteEngine on
 RewriteBase /ns/dx/prof/
 
-RewriteRule ^ResourceDescriptor$ /TR/dx-prof/prof.ttl [R=permanent, L]
-RewriteRule ^ResourceRole$ /TR/dx-prof/prof.ttl [R=permanent, L]
-RewriteRule ^Profile$ /TR/dx-prof/prof.ttl [R=permanent, L]
-RewriteRule ^hasArtifact$ /TR/dx-prof/prof.ttl [R=permanent, L]
-RewriteRule ^isInheritedFrom$ /TR/dx-prof/prof.ttl [R=permanent, L]
-RewriteRule ^isProfileOf$ /TR/dx-prof/prof.ttl [R=permanent, L]
-RewriteRule ^isTransitiveProfileOf$ /TR/dx-prof/prof.ttl [R=permanent, L]
-RewriteRule ^hasResource$ /TR/dx-prof/prof.ttl [R=permanent, L]
-RewriteRule ^hasRole$ /TR/dx-prof/prof.ttl [R=permanent, L]
-RewriteRule ^hasToken$ /TR/dx-prof/prof.ttl [R=permanent, L]
+RewriteRule ^ResourceDescriptor$ /TR/dx-prof/prof.ttl [L]
+RewriteRule ^ResourceRole$ /TR/dx-prof/prof.ttl [L]
+RewriteRule ^Profile$ /TR/dx-prof/prof.ttl [L]
+RewriteRule ^hasArtifact$ /TR/dx-prof/prof.ttl [L]
+RewriteRule ^isInheritedFrom$ /TR/dx-prof/prof.ttl [L]
+RewriteRule ^isProfileOf$ /TR/dx-prof/prof.ttl [L]
+RewriteRule ^isTransitiveProfileOf$ /TR/dx-prof/prof.ttl [L]
+RewriteRule ^hasResource$ /TR/dx-prof/prof.ttl [L]
+RewriteRule ^hasRole$ /TR/dx-prof/prof.ttl [L]
+RewriteRule ^hasToken$ /TR/dx-prof/prof.ttl [L]
 
 # If requested with text/turtle
 RewriteCond "%{HTTP_ACCEPT}" "text/turtle"
