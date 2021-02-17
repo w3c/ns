@@ -5,14 +5,14 @@ RewriteEngine on
 RewriteBase /ns/dx/prof/role/
 
 # Roles vocab URIs
-RewriteRule ^constraints$ http://www.w3.org/ns/dx/prof/role
-RewriteRule ^example$ http://www.w3.org/ns/dx/prof/role
-RewriteRule ^guidance$ http://www.w3.org/ns/dx/prof/role
-RewriteRule ^mapping$ http://www.w3.org/ns/dx/prof/role
-RewriteRule ^schema$ http://www.w3.org/ns/dx/prof/role
-RewriteRule ^specification$ http://www.w3.org/ns/dx/prof/role
-RewriteRule ^validation$ http://www.w3.org/ns/dx/prof/role
-RewriteRule ^vocabulary$ http://www.w3.org/ns/dx/prof/role
+RewriteRule ^constraints$ https://www.w3.org/ns/dx/prof/role
+RewriteRule ^example$ https://www.w3.org/ns/dx/prof/role
+RewriteRule ^guidance$ https://www.w3.org/ns/dx/prof/role
+RewriteRule ^mapping$ https://www.w3.org/ns/dx/prof/role
+RewriteRule ^schema$ https://www.w3.org/ns/dx/prof/role
+RewriteRule ^specification$ https://www.w3.org/ns/dx/prof/role
+RewriteRule ^validation$ https://www.w3.org/ns/dx/prof/role
+RewriteRule ^vocabulary$ https://www.w3.org/ns/dx/prof/role
 
-# for http://www.w3.org/ns/dx/prof/role
-RewriteRule ^$ http://www.w3.org/ns/dx/prof/index.ttl
+# for https://www.w3.org/ns/dx/prof/role
+RewriteRule ^$ https://www.w3.org/ns/dx/prof/index.ttl
