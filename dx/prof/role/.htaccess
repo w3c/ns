@@ -1,0 +1,8 @@
+# /dx/prof
+# Requested by Nicholas Car 20200217
+
+RewriteEngine on
+RewriteBase /ns/dx/prof/role/
+
+# Roles vocab URIs
+RewriteRule ^(.*) http://www.w3.org/ns/dx/prof/role [L]
