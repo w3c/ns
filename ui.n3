@@ -52,13 +52,15 @@ backgroundImage a r:Property, owl:DatatypeProperty;
 
 color a r:Property, owl:DatatypeProperty;
     s:label "color"@en;
-    s:range ui:Color;
-	s:comment """Must be a valid CSS color string such as one could put in
-        an HTML style attribute.  This should be in the #xxxxxx form,
-        (with 6 digits of hex)  so that it
-        can work with Graphviz.""".
+    s:range ui:Color .
 
-
+ui:Color a s:Class; s:label "color"@en; # @@ how to declare a datatype?
+s:comment """Must be a valid CSS color string such as one could put in
+			an HTML style attribute.  This must be in the #xxxxxx form,
+			(with 6 digits of lowercase hex) so that it
+			can work eg with Graphviz.
+			As this is just an encoded array of RGB values,
+			you can do math with these, such as blending, complement, etc.""".
 
 sortPriority a r:Property, owl:DatatypeProperty;
         s:label "sort priority";
@@ -103,10 +105,113 @@ tableProperties a r:Property;
 prompt  a r:Property;
         s:label "user prompt";
         s:comment """A string for the UI to use if the user needs a longer
-        prompts than just a field name, the rdfs:label. """;
+        prompts than just a field name, the s:label. """;
         ui:prompt "A longer prompt for a user inputting this property".
 
+############################
+#
+# Terms that seemed to be missing from the original UI vocbaulary.
+#
+ui:label a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Label"@en, "Etiqueta"@es .
 
+ui:pattern a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Pattern"@en, "Modelo"@es .
+
+ui:value a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Value"@en, "Valor"@es .
+
+ui:values a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Values"@en, "Valores"@es .
+
+ui:contents a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Contents"@en, "Contenido"@es .
+
+#
+# Added by the JD team, as they deemed these to be "missing"!
+#
+ui:minDateOffset a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Minimum date offset"@en, "Fecha mínima compensada"@es .
+
+ui:maxDateOffset a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Maximum date offset"@en, "Fecha máxima de desplazamiento"@es .
+
+ui:minDatetimeOffset a r:Property ;
+	 s:isDefinedBy <> ;
+	 s:label "Minimum datetime offset"@en, "Desplazamiento mínimo de fecha y hora"@es .
+
+ui:maxDatetimeOffset a r:Property ;
+	 s:isDefinedBy <> ;
+	 s:label "Maximum datetime offset"@en, "Desplazamiento máximo de fecha y hora"@es .
+
+ui:name a r:Property ;
+	 s:isDefinedBy <> ;
+	 s:label "Name"@en, "Nombre"@es .
+
+ui:TimeField a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Time field"@en, "Campo de tiempo"@es .
+
+
+ui:oldValue a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Old value"@en, "Valor antiguo"@es .
+
+ui:base a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Base"@en, "Base"@es .
+
+ui:parentProperty a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Parent property"@en, "Propiedad principal"@es .
+
+ui:reference a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Reference"@en, "Referencia"@es .
+
+ui:valid a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Valid"@en, "Válida"@es .
+
+ui:defaultError a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Default error"@en, "Error predeterminado"@es .
+
+ui:partsClone a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Parts clone"@en, "Clon de piezas"@es .
+
+ui:maxLength a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Max length"@en, "Longitud máxima"@es .
+
+ui:minLength a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Min length"@en, "Longitud mínima"@es .
+
+ui:validationError a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Validation error"@en, "Error de validacion"@es .
+
+ui:required a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Required"@en, "Requerido"@es .
+
+ui:requiredError a r:Property ;
+	s:isDefinedBy <> ;
+	s:label "Required error"@en, "Error requerido"@es .
+
+ui:Comment a s:Class ;
+	s:isDefinedBy <> ;
+	s:label "Comment"@en, "Comentario"@es .
+############################
 #  A Taxonomy of Field types
 
 ui:Form owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier ui:Options ui:Multiple ui:Heading ui:Comment);
@@ -116,13 +221,13 @@ ui:Single owl:disjointUnionOf ( ui:ValueField  ui:Group ui:Choice ui:Classifier 
 ui:ValueField owl:disjointUnionOf ( ui:TextField ui:NumericField ui:ColorField ui:DateField ui:DateTimeField ui:PhoneField ui:EmailField).
 ui:NumericField owl:disjointUnionOf (ui:BooleanField ui:TriStateField ui:IntegerField ui:DecimalField ui:FloatField).
 # ui:Multiple owl:disjointUnionOf ( ui:ZeroOrMore ui:OneOrMore ).
-ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField).
+ui:TextField owl:disjointUnionOf (ui:SingleLineTextField ui:MultiLineTextField NamedNodeURIField).
 
 ui:Form a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice,  ui:Heading, ui:Comment, ui:Classifier, ui:Options, ui:Multiple.
 ui:Single a s:Class; is s:subClassOf of ui:ValueField, ui:Group, ui:Choice, ui:Heading, ui:Comment, ui:Classifier, ui:Options.
 ui:ValueField a s:Class; is s:subClassOf of  ui:TextField, ui:NumericField, ui:ColorField, ui:DateField, ui:DateTimeField, ui:PhoneField, ui:EmailField.
 ui:NumericField a s:Class; is s:subClassOf of ui:BooleanField, ui:TriStateField, ui:IntegerField, ui:DecimalField, ui:FloatField.
-ui:TextField a s:Class; is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField.
+ui:TextField a s:Class; is s:subClassOf of ui:SingleLineTextField, ui:MultiLineTextField, NamedNodeURIField.
 
 ui:Classifier a s:Class; s:label "classifier";
     s:comment """A classifier allows the user to select the type of an object.
@@ -130,12 +235,20 @@ ui:Classifier a s:Class; s:label "classifier";
     (Ideally, the superclass is also set up as the disjoint union of the subclasses,
     if they are disjoint.)
 
-    The form normally stores the resulting classes using an rdf:type triple,
+    The form normally stores the resulting classes using an r:type triple,
     but a different predicate can be used if required, so the classifier field
     needs is 'property' defined too.
 
     If the subclass selected itself is has subclasses defined, the user can
     recursively select from them in turn, as many levels as needed.""".
+
+ui:NamedNodeURIField a s:Class; s:label "Something by its URI";
+    s:comment """A NamedNodeURIField is like a SingleLineTextField, except
+		that the value it generates is not a literal string but an RDF node with the given URI.
+		Normally users should not see URIs. When they do, this a way to do it.
+		""".
+
+######## Properties
 
 ui:property a r:Property; s:domain ui:Form; s:range r:Property;
     s:label "property to be stored"@en;
@@ -279,7 +392,7 @@ FieldForm a ui:Group;
 
                 [ ui:sequence 4; a ui:Choice;  ui:canMintNew true; ui:property ui:category; ui:label "superclass"; ui:from s:Class]
 
-                [ ui:sequence 6; a ui:Comment; ui:contents """(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)""" ]
+                [ ui:sequence 6; a ui:Comment; ui:contents """(When the choice is made normally the item is given a r:type. Set this to r:type unless you want the form to set a different property.)""" ]
 
                 [ ui:sequence 8; a ui:Choice;  ui:canMintNew true; ui:property ui:property;
                         ui:label "property"; ui:from owl:ObjectProperty; ui:default r:type] # @@ restriction

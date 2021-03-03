@@ -61,7 +61,7 @@
     (Ideally, the superclass is also set up as the disjoint union of the subclasses,
     if they are disjoint.)
 
-    The form normally stores the resulting classes using an rdf:type triple,
+    The form normally stores the resulting classes using an r:type triple,
     but a different predicate can be used if required, so the classifier field
     needs is 'property' defined too.
 
@@ -72,14 +72,27 @@
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
     </s:Class>
 
+    <s:Class r:about="http://www.w3.org/ns/ui#Color">
+        <s:comment>Must be a valid CSS color string such as one could put in
+			an HTML style attribute.  This must be in the #xxxxxx form,
+			(with 6 digits of lowercase hex) so that it
+			can work eg with Graphviz.
+			As this is just an encoded array of RGB values,
+			you can do math with these, such as blending, complement, etc.</s:comment>
+        <s:label xml:lang="en">color</s:label>
+    </s:Class>
+
     <r:Description r:about="http://www.w3.org/ns/ui#ColorField">
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#ValueField"/>
     </r:Description>
 
-    <r:Description r:about="http://www.w3.org/ns/ui#Comment">
+    <s:Class r:about="http://www.w3.org/ns/ui#Comment">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Comentario</s:label>
+        <s:label xml:lang="en">Comment</s:label>
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
-    </r:Description>
+    </s:Class>
 
     <r:Description r:about="http://www.w3.org/ns/ui#DateField">
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#ValueField"/>
@@ -475,7 +488,7 @@
                                     <r:rest r:parseType="Resource">
                                         <r:first r:parseType="Resource">
                                             <r:type r:resource="http://www.w3.org/ns/ui#Comment"/>
-                                            <contents>(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)</contents>
+                                            <contents>(When the choice is made normally the item is given a r:type. Set this to r:type unless you want the form to set a different property.)</contents>
                                             <sequence r:datatype="http://www.w3.org/2001/XMLSchema#integer">6</sequence>
                                         </r:first>
                                         <r:rest r:parseType="Resource">
@@ -642,6 +655,15 @@
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#Form"/>
     </r:Description>
 
+    <s:Class r:about="http://www.w3.org/ns/ui#NamedNodeURIField">
+        <s:comment>A NamedNodeURIField is like a SingleLineTextField, except
+		that the value it generates is not a literal string but an RDF node with the given URI.
+		Normally users should not see URIs. When they do, this a way to do it.
+		</s:comment>
+        <s:label>Something by its URI</s:label>
+        <s:subClassOf r:resource="http://www.w3.org/ns/ui#TextField"/>
+    </s:Class>
+
     <s:Class r:about="http://www.w3.org/ns/ui#NumericField">
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#ValueField"/>
         <owl:disjointUnionOf r:parseType="Resource">
@@ -706,10 +728,19 @@
             <r:first r:resource="http://www.w3.org/ns/ui#SingleLineTextField"/>
             <r:rest r:parseType="Resource">
                 <r:first r:resource="http://www.w3.org/ns/ui#MultiLineTextField"/>
-                <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                <r:rest r:parseType="Resource">
+                    <r:first r:resource="http://www.w3.org/ns/ui#NamedNodeURIField"/>
+                    <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                </r:rest>
             </r:rest>
         </owl:disjointUnionOf>
     </s:Class>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#TimeField">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Campo de tiempo</s:label>
+        <s:label xml:lang="en">Time field</s:label>
+    </r:Property>
 
     <r:Description r:about="http://www.w3.org/ns/ui#TriStateField">
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#NumericField"/>
@@ -769,6 +800,12 @@ facet of the thing.
         <s:label xml:lang="en">background image</s:label>
     </r:Property>
 
+    <r:Property r:about="http://www.w3.org/ns/ui#base">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="en">Base</s:label>
+        <s:label xml:lang="es">Base</s:label>
+    </r:Property>
+
     <r:Property r:about="http://www.w3.org/ns/ui#category">
         <s:comment>The superclass subclasses of which will be selected.</s:comment>
         <s:domain r:resource="http://www.w3.org/ns/ui#Classifier"/>
@@ -778,12 +815,14 @@ facet of the thing.
 
     <r:Property r:about="http://www.w3.org/ns/ui#color">
         <r:type r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <s:comment>Must be a valid CSS color string such as one could put in
-        an HTML style attribute.  This should be in the #xxxxxx form,
-        (with 6 digits of hex)  so that it
-        can work with Graphviz.</s:comment>
         <s:label xml:lang="en">color</s:label>
         <s:range r:resource="http://www.w3.org/ns/ui#Color"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#contents">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Contenido</s:label>
+        <s:label xml:lang="en">Contents</s:label>
     </r:Property>
 
     <r:Property r:about="http://www.w3.org/ns/ui#creationForm">
@@ -792,6 +831,12 @@ facet of the thing.
         <s:domain r:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
         <s:label>creation form</s:label>
         <s:range r:resource="http://www.w3.org/ns/ui#Form"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#defaultError">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="en">Default error</s:label>
+        <s:label xml:lang="es">Error predeterminado</s:label>
     </r:Property>
 
     <r:Property r:about="http://www.w3.org/ns/ui#dependingOn">
@@ -827,8 +872,29 @@ facet of the thing.
         <prompt>Properties to be specified for new ones</prompt>
     </r:Property>
 
+    <r:Property r:about="http://www.w3.org/ns/ui#label">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Etiqueta</s:label>
+        <s:label xml:lang="en">Label</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#maxDateOffset">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Fecha máxima de desplazamiento</s:label>
+        <s:label xml:lang="en">Maximum date offset</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#maxDatetimeOffset">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Desplazamiento máximo de fecha y hora</s:label>
+        <s:label xml:lang="en">Maximum datetime offset</s:label>
+    </r:Property>
+
     <r:Property r:about="http://www.w3.org/ns/ui#maxLength">
         <s:domain r:resource="http://www.w3.org/ns/ui#TextField"/>
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Longitud máxima</s:label>
+        <s:label xml:lang="en">Max length</s:label>
         <s:label>max length of value</s:label>
         <s:range r:resource="http://www.w3.org/2001/XMLSchema#integer"/>
     </r:Property>
@@ -838,9 +904,39 @@ facet of the thing.
         <s:label>max</s:label>
     </r:Property>
 
+    <r:Property r:about="http://www.w3.org/ns/ui#minDateOffset">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Fecha mínima compensada</s:label>
+        <s:label xml:lang="en">Minimum date offset</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#minDatetimeOffset">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Desplazamiento mínimo de fecha y hora</s:label>
+        <s:label xml:lang="en">Minimum datetime offset</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#minLength">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Longitud mínima</s:label>
+        <s:label xml:lang="en">Min length</s:label>
+    </r:Property>
+
     <r:Property r:about="http://www.w3.org/ns/ui#minValue">
         <s:domain r:resource="http://www.w3.org/ns/ui#ValueField"/>
         <s:label>min</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#name">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="en">Name</s:label>
+        <s:label xml:lang="es">Nombre</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#oldValue">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="en">Old value</s:label>
+        <s:label xml:lang="es">Valor antiguo</s:label>
     </r:Property>
 
     <r:Description r:about="http://www.w3.org/ns/ui#ordered">
@@ -848,6 +944,12 @@ facet of the thing.
         <s:range r:resource="http://www.w3.org/2001/XMLSchema#Boolean"/>
         <e r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
     </r:Description>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#parentProperty">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="en">Parent property</s:label>
+        <s:label xml:lang="es">Propiedad principal</s:label>
+    </r:Property>
 
     <r:Property r:about="http://www.w3.org/ns/ui#part">
         <s:domain r:resource="http://www.w3.org/ns/ui#Form"/>
@@ -861,9 +963,21 @@ facet of the thing.
         <s:range r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Collection"/>
     </r:Property>
 
+    <r:Property r:about="http://www.w3.org/ns/ui#partsClone">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Clon de piezas</s:label>
+        <s:label xml:lang="en">Parts clone</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#pattern">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Modelo</s:label>
+        <s:label xml:lang="en">Pattern</s:label>
+    </r:Property>
+
     <r:Property r:about="http://www.w3.org/ns/ui#prompt">
         <s:comment>A string for the UI to use if the user needs a longer
-        prompts than just a field name, the rdfs:label. </s:comment>
+        prompts than just a field name, the s:label. </s:comment>
         <s:label>user prompt</s:label>
         <prompt>A longer prompt for a user inputting this property</prompt>
     </r:Property>
@@ -874,6 +988,24 @@ facet of the thing.
         <s:domain r:resource="http://www.w3.org/ns/ui#Form"/>
         <s:label xml:lang="en">property to be stored</s:label>
         <s:range r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#reference">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="en">Reference</s:label>
+        <s:label xml:lang="es">Referencia</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#required">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Requerido</s:label>
+        <s:label xml:lang="en">Required</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#requiredError">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Error requerido</s:label>
+        <s:label xml:lang="en">Required error</s:label>
     </r:Property>
 
     <r:Property r:about="http://www.w3.org/ns/ui#seqeunce">
@@ -929,5 +1061,29 @@ facet of the thing.
 
     <r:Property r:about="http://www.w3.org/ns/ui#use">
         <s:range r:resource="http://www.w3.org/ns/ui#Form"/>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#valid">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="en">Valid</s:label>
+        <s:label xml:lang="es">Válida</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#validationError">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Error de validacion</s:label>
+        <s:label xml:lang="en">Validation error</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#value">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Valor</s:label>
+        <s:label xml:lang="en">Value</s:label>
+    </r:Property>
+
+    <r:Property r:about="http://www.w3.org/ns/ui#values">
+        <s:isDefinedBy r:resource=""/>
+        <s:label xml:lang="es">Valores</s:label>
+        <s:label xml:lang="en">Values</s:label>
     </r:Property>
 </r:RDF>

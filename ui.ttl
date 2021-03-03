@@ -45,7 +45,7 @@
     (Ideally, the superclass is also set up as the disjoint union of the subclasses,
     if they are disjoint.)
 
-    The form normally stores the resulting classes using an rdf:type triple,
+    The form normally stores the resulting classes using an r:type triple,
     but a different predicate can be used if required, so the classifier field
     needs is 'property' defined too.
 
@@ -55,9 +55,22 @@
          s:subClassOf :Form,
                 :Single .
     
+    :Color     a s:Class;
+         s:comment """Must be a valid CSS color string such as one could put in
+			an HTML style attribute.  This must be in the #xxxxxx form,
+			(with 6 digits of lowercase hex) so that it
+			can work eg with Graphviz.
+			As this is just an encoded array of RGB values,
+			you can do math with these, such as blending, complement, etc.""";
+         s:label "color"@en .
+    
     :ColorField     s:subClassOf :ValueField .
     
-    :Comment     s:subClassOf :Form,
+    :Comment     a s:Class;
+         s:isDefinedBy <>;
+         s:label "Comentario"@es,
+                "Comment"@en;
+         s:subClassOf :Form,
                 :Single .
     
     :DateField     s:subClassOf :ValueField .
@@ -333,7 +346,7 @@
                                  :sequence 4 ]
                          [
                                  a :Comment;
-                                 :contents "(When the choice is made normally the item is given a rdf:type. Set this to rdf:type unless you want the form to set a different property.)";
+                                 :contents "(When the choice is made normally the item is given a r:type. Set this to r:type unless you want the form to set a different property.)";
                                  :sequence 6 ]
                          [
                                  a :Choice;
@@ -428,6 +441,14 @@
     
     :Multiple     s:subClassOf :Form .
     
+    :NamedNodeURIField     a s:Class;
+         s:comment """A NamedNodeURIField is like a SingleLineTextField, except
+		that the value it generates is not a literal string but an RDF node with the given URI.
+		Normally users should not see URIs. When they do, this a way to do it.
+		""";
+         s:label "Something by its URI";
+         s:subClassOf :TextField .
+    
     :NumericField     a s:Class;
          s:subClassOf :ValueField;
          owl:disjointUnionOf  (
@@ -458,7 +479,13 @@
          s:subClassOf :ValueField;
          owl:disjointUnionOf  (
         :SingleLineTextField
-        :MultiLineTextField ) .
+        :MultiLineTextField
+        :NamedNodeURIField ) .
+    
+    :TimeField     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Campo de tiempo"@es,
+                "Time field"@en .
     
     :TriStateField     s:subClassOf :NumericField .
     
@@ -498,6 +525,11 @@ facet of the thing.
          s:comment "URI or base64 representation of an image";
          s:label "background image"@en .
     
+    :base     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Base"@en,
+                "Base"@es .
+    
     :category     a r:Property;
          s:comment "The superclass subclasses of which will be selected.";
          s:domain :Classifier;
@@ -506,12 +538,13 @@ facet of the thing.
     
     :color     a r:Property,
                 owl:DatatypeProperty;
-         s:comment """Must be a valid CSS color string such as one could put in
-        an HTML style attribute.  This should be in the #xxxxxx form,
-        (with 6 digits of hex)  so that it
-        can work with Graphviz.""";
          s:label "color"@en;
          s:range :Color .
+    
+    :contents     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Contenido"@es,
+                "Contents"@en .
     
     :creationForm     a r:Property;
          s:comment """A form which may be used to collect information about a
@@ -519,6 +552,11 @@ facet of the thing.
          s:domain s:Class;
          s:label "creation form";
          s:range :Form .
+    
+    :defaultError     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Default error"@en,
+                "Error predeterminado"@es .
     
     :dependingOn     a r:Property;
          s:comment "Many fields prompt for information about a given property of the subject";
@@ -549,22 +587,70 @@ facet of the thing.
          s:range r:List;
          :prompt "Properties to be specified for new ones" .
     
+    :label     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Etiqueta"@es,
+                "Label"@en .
+    
+    :maxDateOffset     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Fecha máxima de desplazamiento"@es,
+                "Maximum date offset"@en .
+    
+    :maxDatetimeOffset     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Desplazamiento máximo de fecha y hora"@es,
+                "Maximum datetime offset"@en .
+    
     :maxLength     a r:Property;
          s:domain :TextField;
-         s:label "max length of value";
+         s:isDefinedBy <>;
+         s:label "Longitud máxima"@es,
+                "Max length"@en,
+                "max length of value";
          s:range xsd:integer .
     
     :maxValue     a r:Property;
          s:domain :ValueField;
          s:label "max" .
     
+    :minDateOffset     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Fecha mínima compensada"@es,
+                "Minimum date offset"@en .
+    
+    :minDatetimeOffset     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Desplazamiento mínimo de fecha y hora"@es,
+                "Minimum datetime offset"@en .
+    
+    :minLength     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Longitud mínima"@es,
+                "Min length"@en .
+    
     :minValue     a r:Property;
          s:domain :ValueField;
          s:label "min" .
     
+    :name     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Name"@en,
+                "Nombre"@es .
+    
+    :oldValue     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Old value"@en,
+                "Valor antiguo"@es .
+    
     :ordered     s:label "ordered";
          s:range xsd:Boolean;
          :e r:Property .
+    
+    :parentProperty     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Parent property"@en,
+                "Propiedad principal"@es .
     
     :part     a r:Property;
          s:domain :Form;
@@ -576,9 +662,19 @@ facet of the thing.
          s:label "parts"@en;
          s:range r:Collection .
     
+    :partsClone     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Clon de piezas"@es,
+                "Parts clone"@en .
+    
+    :pattern     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Modelo"@es,
+                "Pattern"@en .
+    
     :prompt     a r:Property;
          s:comment """A string for the UI to use if the user needs a longer
-        prompts than just a field name, the rdfs:label. """;
+        prompts than just a field name, the s:label. """;
          s:label "user prompt";
          :prompt "A longer prompt for a user inputting this property" .
     
@@ -588,6 +684,21 @@ facet of the thing.
          s:domain :Form;
          s:label "property to be stored"@en;
          s:range r:Property .
+    
+    :reference     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Reference"@en,
+                "Referencia"@es .
+    
+    :required     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Requerido"@es,
+                "Required"@en .
+    
+    :requiredError     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Error requerido"@es,
+                "Required error"@en .
     
     :seqeunce     a r:Property;
          s:comment "The sequence in which this item is arranged with repect to other parts.";
@@ -636,4 +747,24 @@ facet of the thing.
     
     :use     a r:Property;
          s:range :Form .
+    
+    :valid     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Valid"@en,
+                "Válida"@es .
+    
+    :validationError     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Error de validacion"@es,
+                "Validation error"@en .
+    
+    :value     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Valor"@es,
+                "Value"@en .
+    
+    :values     a r:Property;
+         s:isDefinedBy <>;
+         s:label "Valores"@es,
+                "Values"@en .
     
