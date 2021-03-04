@@ -55,16 +55,21 @@
          s:subClassOf :Form,
                 :Single .
     
-    :Color     a s:Class;
+    :Color     a s:Datatype;
          s:comment """Must be a valid CSS color string such as one could put in
 			an HTML style attribute.  This must be in the #xxxxxx form,
 			(with 6 digits of lowercase hex) so that it
 			can work eg with Graphviz.
 			As this is just an encoded array of RGB values,
 			you can do math with these, such as blending, complement, etc.""";
-         s:label "color"@en .
+         s:label "hex color"@en;
+         owl:onDatatype xsd:string;
+         owl:withRestrictions  (
+        :ColorValuespaceRestriction ) .
     
     :ColorField     s:subClassOf :ValueField .
+    
+    :ColorValuespaceRestriction     xsd:pattern "#[0-9a-z]{6}" .
     
     :Comment     a s:Class;
          s:isDefinedBy <>;
@@ -513,10 +518,6 @@ facet of the thing.
     
     :backgroundColor     a r:Property,
                 owl:DatatypeProperty;
-         s:comment """Must be a valid CSS color string such as one could put in
-        an HTML style attribute.  This should be in the #xxxxxx form,
-        (with 6 digits of hex)  so that it
-        can work with Graphviz.""";
          s:label "background color"@en;
          s:range :Color .
     

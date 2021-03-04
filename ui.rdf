@@ -6,7 +6,8 @@
     xmlns:owl="http://www.w3.org/2002/07/owl#"
     xmlns:r="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
     xmlns:s="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:ui="http://www.w3.org/ns/ui#">
+    xmlns:ui="http://www.w3.org/ns/ui#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#">
 
     <r:Description r:about="">
         <dc:author r:resource="https://www.w3.org/People/Berners-Lee/card#i"/>
@@ -72,18 +73,27 @@
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#Single"/>
     </s:Class>
 
-    <s:Class r:about="http://www.w3.org/ns/ui#Color">
+    <s:Datatype r:about="http://www.w3.org/ns/ui#Color">
         <s:comment>Must be a valid CSS color string such as one could put in
 			an HTML style attribute.  This must be in the #xxxxxx form,
 			(with 6 digits of lowercase hex) so that it
 			can work eg with Graphviz.
 			As this is just an encoded array of RGB values,
 			you can do math with these, such as blending, complement, etc.</s:comment>
-        <s:label xml:lang="en">color</s:label>
-    </s:Class>
+        <s:label xml:lang="en">hex color</s:label>
+        <owl:onDatatype r:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <owl:withRestrictions r:parseType="Resource">
+            <r:first r:resource="http://www.w3.org/ns/ui#ColorValuespaceRestriction"/>
+            <r:rest r:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+        </owl:withRestrictions>
+    </s:Datatype>
 
     <r:Description r:about="http://www.w3.org/ns/ui#ColorField">
         <s:subClassOf r:resource="http://www.w3.org/ns/ui#ValueField"/>
+    </r:Description>
+
+    <r:Description r:about="http://www.w3.org/ns/ui#ColorValuespaceRestriction">
+        <xsd:pattern>#[0-9a-z]{6}</xsd:pattern>
     </r:Description>
 
     <s:Class r:about="http://www.w3.org/ns/ui#Comment">
@@ -786,10 +796,6 @@ facet of the thing.
 
     <r:Property r:about="http://www.w3.org/ns/ui#backgroundColor">
         <r:type r:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
-        <s:comment>Must be a valid CSS color string such as one could put in
-        an HTML style attribute.  This should be in the #xxxxxx form,
-        (with 6 digits of hex)  so that it
-        can work with Graphviz.</s:comment>
         <s:label xml:lang="en">background color</s:label>
         <s:range r:resource="http://www.w3.org/ns/ui#Color"/>
     </r:Property>

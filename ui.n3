@@ -40,27 +40,33 @@ style a r:Property, owl:DatatypeProperty;
 
 backgroundColor a r:Property, owl:DatatypeProperty;
 	s:label "background color"@en;
-        s:range ui:Color;
-	s:comment """Must be a valid CSS color string such as one could put in
-        an HTML style attribute.  This should be in the #xxxxxx form,
-        (with 6 digits of hex)  so that it
-        can work with Graphviz.""".
+        s:range ui:Color.
 
 backgroundImage a r:Property, owl:DatatypeProperty;
-	s:label "background image"@en;
-	s:comment """URI or base64 representation of an image""".
+		s:label "background image"@en;
+		s:comment """URI or base64 representation of an image""".
 
 color a r:Property, owl:DatatypeProperty;
     s:label "color"@en;
     s:range ui:Color .
 
-ui:Color a s:Class; s:label "color"@en; # @@ how to declare a datatype?
-s:comment """Must be a valid CSS color string such as one could put in
+ui:Color a s:Datatype; s:label "hex color"@en;
+	 	owl:onDatatype xsd:string ;
+
+		s:comment """Must be a valid CSS color string such as one could put in
 			an HTML style attribute.  This must be in the #xxxxxx form,
 			(with 6 digits of lowercase hex) so that it
 			can work eg with Graphviz.
 			As this is just an encoded array of RGB values,
-			you can do math with these, such as blending, complement, etc.""".
+			you can do math with these, such as blending, complement, etc.""";
+
+	  owl:withRestrictions ( ui:ColorValuespaceRestriction ).
+
+ui:ColorValuespaceRestriction xsd:pattern "#[0-9a-z]{6}" .
+
+
+
+# See https://gitter.im/linkeddata/chat?at=6040cee9a3a2f04f1fd22527
 
 sortPriority a r:Property, owl:DatatypeProperty;
         s:label "sort priority";
