@@ -544,7 +544,7 @@ org:headOf a owl:ObjectProperty, rdf:Property;
     rdfs:label "responsable de"@fr;
     rdfs:label "responsabile di"@it;
 
-    rdfs:domain foaf:Person;
+    rdfs:domain foaf:Agent;
     rdfs:range  org:Organization;
     rdfs:subPropertyOf org:memberOf;
 
