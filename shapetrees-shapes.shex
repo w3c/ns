@@ -1,0 +1,42 @@
+BASE <http://www.w3.org/ns/shapetrees>
+PREFIX st: <http://www.w3.org/ns/shapetrees#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+<#ShapeTree> {
+  a st:ShapeTree ;
+  (
+    st:expectsType [st:Container] ;
+    st:contains @<#ShapeTree> + ;
+    ( st:alsoAllow st:AllowAll? |
+      st:alsoAllow [ st:AllowResources st:AllowContainers st:AllowNonRDFSources st:AllowOnly ]* )
+    |
+    st:expectsType [st:Resource st:NonRDFResource]
+  ) ;
+  rdfs:label xsd:string ? ;
+  st:references @<#ReferencedShapeTree> * ;
+  st:shape IRI ? ;
+  st:contains IRI ? ;
+  st:supports IRI ? ;
+}
+
+<#ReferencedShapeTree> {
+  st:hasShapeTree IRI ;
+  st:viaShapePath xsd:string
+}
+
+<#ShapeTreeLocatorShape> {
+  a [st:ShapeTreeLocator] ;
+  st:location @<#ShapeTreeLocationShape>+
+}
+
+<#ShapeTreeLocationShape> {
+  st:hasRootShapeTree IRI ;
+  st:hasShapeTree IRI ;
+  st:hasRootShapeTreeInstance IRI ;
+  ( st:node IRI ;
+    st:shape IRI )?
+  |
+  st:node IRI ;
+  st:shape IRI
+}
