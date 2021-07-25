@@ -58,6 +58,7 @@
     "questioning":   "oa:questioning",
     "replying":      "oa:replying",
     "reviewing":     "oa:reviewing",
+    "assessing":     "oa:assessing",
     "tagging":       "oa:tagging",
 
     "auto":          "oa:autoDirection",
