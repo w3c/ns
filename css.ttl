@@ -1,0 +1,581 @@
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix css: <http://www.w3.org/ns/css#> .
+@prefix spec: <http://www.w3.org/ns/webreq/spec#>. # @@ Fixme
+
+<> rdfs:comment """This ontology allows CSS properties to be expressed in RDF.
+The same camelcase convention is usede as is used by the subproperties of the
+ style property in browser JS implementations.
+
+ """ .
+  
+css:marginTop a rdf:Property; rdfs:label "margin-top";
+  spec:values "<margin-width> | inherit";
+  spec:appliesTo "all elements except elements with table display types other than table-caption, table and inline-table";
+  spec:inherited false;.
+
+
+css:marginBottom a rdf:Property; rdfs:label "margin-bottom";
+  spec:values "<margin-width> | inherit";
+  spec:appliesTo "all elements except elements with table display types other than table-caption, table and inline-table";
+  spec:inherited false;.
+
+
+css:marginRight a rdf:Property; rdfs:label "margin-right";
+  spec:values "<margin-width> | inherit";
+  spec:appliesTo "all elements except elements with table display types other than table-caption, table and inline-table";
+  spec:inherited false;.
+
+
+css:marginLeft a rdf:Property; rdfs:label "margin-left";
+  spec:values "<margin-width> | inherit";
+  spec:appliesTo "all elements except elements with table display types other than table-caption, table and inline-table";
+  spec:inherited false;.
+
+
+css:margin a rdf:Property; rdfs:label "margin";
+  spec:values "<margin-width>{1,4} | inherit";
+  spec:appliesTo "all elements except elements with table display types other than table-caption, table and inline-table";
+  spec:inherited false;.
+
+
+css:paddingTop a rdf:Property; rdfs:label "padding-top";
+  spec:values "<padding-width> | inherit";
+  spec:appliesTo "all elements except table-row-group, table-header-group, table-footer-group, table-row, table-column-group and table-column";
+  spec:inherited false;.
+
+
+css:paddingRight a rdf:Property; rdfs:label "padding-right";
+  spec:values "<padding-width> | inherit";
+  spec:appliesTo "all elements except table-row-group, table-header-group, table-footer-group, table-row, table-column-group and table-column";
+  spec:inherited false;.
+
+
+css:paddingBottom a rdf:Property; rdfs:label "padding-bottom";
+  spec:values "<padding-width> | inherit";
+  spec:appliesTo "all elements except table-row-group, table-header-group, table-footer-group, table-row, table-column-group and table-column";
+  spec:inherited false;.
+
+
+css:paddingLeft a rdf:Property; rdfs:label "padding-left";
+  spec:values "<padding-width> | inherit";
+  spec:appliesTo "all elements except table-row-group, table-header-group, table-footer-group, table-row, table-column-group and table-column";
+  spec:inherited false;.
+
+
+css:padding a rdf:Property; rdfs:label "padding";
+  spec:values "<padding-width>{1,4} | inherit";
+  spec:appliesTo "all elements except table-row-group, table-header-group, table-footer-group, table-row, table-column-group and table-column";
+  spec:inherited false;.
+
+
+css:borderTop-Width a rdf:Property; rdfs:label "border-top-width";
+  spec:values "<border-width> | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderRight-Width a rdf:Property; rdfs:label "border-right-width";
+  spec:values "<border-width> | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderBottom-Width a rdf:Property; rdfs:label "border-bottom-width";
+  spec:values "<border-width> | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderLeft-Width a rdf:Property; rdfs:label "border-left-width";
+  spec:values "<border-width> | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderWidth a rdf:Property; rdfs:label "border-width";
+  spec:values "<border-width>{1,4} | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderTop-Color a rdf:Property; rdfs:label "border-top-color";
+  spec:values "<color> | transparent | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderRight-Color a rdf:Property; rdfs:label "border-right-color";
+  spec:values "<color> | transparent | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderBottom-Color a rdf:Property; rdfs:label "border-bottom-color";
+  spec:values "<color> | transparent | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderLeft-Color a rdf:Property; rdfs:label "border-left-color";
+  spec:values "<color> | transparent | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderColor a rdf:Property; rdfs:label "border-color";
+  spec:values "[ <color> | transparent ]{1,4} | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderTop-Style a rdf:Property; rdfs:label "border-top-style";
+  spec:values "<border-style> | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderRight-Style a rdf:Property; rdfs:label "border-right-style";
+  spec:values "<border-style> | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderBottom-Style a rdf:Property; rdfs:label "border-bottom-style";
+  spec:values "<border-style> | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderLeft-Style a rdf:Property; rdfs:label "border-left-style";
+  spec:values "<border-style> | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderStyle a rdf:Property; rdfs:label "border-style";
+  spec:values "<border-style>{1,4} | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderTop a rdf:Property; rdfs:label "border-top";
+  spec:values "[ <border-width> || <border-style> || <'border-top-color'> ] | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderRight a rdf:Property; rdfs:label "border-right";
+  spec:values "[ <border-width> || <border-style> || <'border-top-color'> ] | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderBottom a rdf:Property; rdfs:label "border-bottom";
+  spec:values "[ <border-width> || <border-style> || <'border-top-color'> ] | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:borderLeft a rdf:Property; rdfs:label "border-left";
+  spec:values "[ <border-width> || <border-style> || <'border-top-color'> ] | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:border a rdf:Property; rdfs:label "border";
+  spec:values "[ <border-width> || <border-style> || <'border-top-color'> ] | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:display a rdf:Property; rdfs:label "display";
+  spec:values "inline | block | list-item | inline-block | table | inline-table | table-row-group | table-header-group | table-footer-group | table-row | table-column-group | table-column | table-cell | table-caption | none | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:position a rdf:Property; rdfs:label "position";
+  spec:values "static | relative | absolute | fixed | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:top a rdf:Property; rdfs:label "top";
+  spec:values "<length> | <percentage> | auto | inherit";
+  spec:appliesTo "positioned elements";
+  spec:inherited false;.
+
+
+css:right a rdf:Property; rdfs:label "right";
+  spec:values "<length> | <percentage> | auto | inherit";
+  spec:appliesTo "positioned elements";
+  spec:inherited false;.
+
+
+css:bottom a rdf:Property; rdfs:label "bottom";
+  spec:values "<length> | <percentage> | auto | inherit";
+  spec:appliesTo "positioned elements";
+  spec:inherited false;.
+
+
+css:left a rdf:Property; rdfs:label "left";
+  spec:values "<length> | <percentage> | auto | inherit";
+  spec:appliesTo "positioned elements";
+  spec:inherited false;.
+
+
+css:float a rdf:Property; rdfs:label "float";
+  spec:values "left | right | none | inherit";
+  spec:appliesTo "all, but see {visuren.html#dis-pos-flo}9.7{}";
+  spec:inherited false;.
+
+
+css:clear a rdf:Property; rdfs:label "clear";
+  spec:values "none | left | right | both | inherit";
+  spec:appliesTo "block-level elements";
+  spec:inherited false;.
+
+
+css:zIndex a rdf:Property; rdfs:label "z-index";
+  spec:values "auto | <integer> | inherit";
+  spec:appliesTo "positioned elements";
+  spec:inherited false;.
+
+
+css:direction a rdf:Property; rdfs:label "direction";
+  spec:values "ltr | rtl | inherit";
+  spec:appliesTo "all elements, but see prose";
+  spec:inherited true;.
+
+
+css:unicodeBidi a rdf:Property; rdfs:label "unicode-bidi";
+  spec:values "normal | embed | bidi-override | inherit";
+  spec:appliesTo "all elements, but see prose";
+  spec:inherited false;.
+
+
+css:width a rdf:Property; rdfs:label "width";
+  spec:values "<length> | <percentage> | auto | inherit";
+  spec:appliesTo "all elements but non-replaced inline elements, table rows, and row groups";
+  spec:inherited false;.
+
+
+css:minWidth a rdf:Property; rdfs:label "min-width";
+  spec:values "<length> | <percentage> | inherit";
+  spec:appliesTo "all elements but non-replaced inline elements, table rows, and row groups";
+  spec:inherited false;.
+
+
+css:maxWidth a rdf:Property; rdfs:label "max-width";
+  spec:values "<length> | <percentage> | none | inherit";
+  spec:appliesTo "all elements but non-replaced inline elements, table rows, and row groups";
+  spec:inherited false;.
+
+
+css:height a rdf:Property; rdfs:label "height";
+  spec:values "<length> | <percentage> | auto | inherit";
+  spec:appliesTo "all elements but non-replaced inline elements, table columns, and column groups";
+  spec:inherited false;.
+
+
+css:minHeight a rdf:Property; rdfs:label "min-height";
+  spec:values "<length> | <percentage> | inherit";
+  spec:appliesTo "all elements but non-replaced inline elements, table columns, and column groups";
+  spec:inherited false;.
+
+
+css:maxHeight a rdf:Property; rdfs:label "max-height";
+  spec:values "<length> | <percentage> | none | inherit";
+  spec:appliesTo "all elements but non-replaced inline elements, table columns, and column groups";
+  spec:inherited false;.
+
+
+css:lineHeight a rdf:Property; rdfs:label "line-height";
+  spec:values "normal | <number> | <length> | <percentage> | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:verticalAlign a rdf:Property; rdfs:label "vertical-align";
+  spec:values "baseline | sub | super | top | text-top | middle | bottom | text-bottom | <percentage> | <length> | inherit";
+  spec:appliesTo "inline-level and table-cell elements";
+  spec:inherited false;.
+
+
+css:overflow a rdf:Property; rdfs:label "overflow";
+  spec:values "visible | hidden | scroll | auto | inherit";
+  spec:appliesTo "block containers";
+  spec:inherited false;.
+
+
+css:clip a rdf:Property; rdfs:label "clip";
+  spec:values "<shape> | auto | inherit";
+  spec:appliesTo "absolutely positioned elements";
+  spec:inherited false;.
+
+
+css:visibility a rdf:Property; rdfs:label "visibility";
+  spec:values "visible | hidden | collapse | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:content a rdf:Property; rdfs:label "content";
+  spec:values "normal | none | [ <string> | <uri> | <counter> | attr(<identifier>) | open-quote | close-quote | no-open-quote | no-close-quote ]+ | inherit";
+  spec:appliesTo ":before and :after pseudo-elements";
+  spec:inherited false;.
+
+
+css:quotes a rdf:Property; rdfs:label "quotes";
+  spec:values "[<string> <string>]+ | none | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:counterReset a rdf:Property; rdfs:label "counter-reset";
+  spec:values "[ <identifier> <integer>? ]+ | none | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:counterIncrement a rdf:Property; rdfs:label "counter-increment";
+  spec:values "[ <identifier> <integer>? ]+ | none | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:listStyle-Type a rdf:Property; rdfs:label "list-style-type";
+  spec:values "disc | circle | square | decimal | decimal-leading-zero | lower-roman | upper-roman | lower-greek | lower-latin | upper-latin | armenian | georgian | lower-alpha | upper-alpha | none | inherit";
+  spec:appliesTo "elements with 'display: list-item'";
+  spec:inherited true;.
+
+
+css:listStyle-Image a rdf:Property; rdfs:label "list-style-image";
+  spec:values "<uri> | none | inherit";
+  spec:appliesTo "elements with 'display: list-item'";
+  spec:inherited true;.
+
+
+css:listStyle-Position a rdf:Property; rdfs:label "list-style-position";
+  spec:values "inside | outside | inherit";
+  spec:appliesTo "elements with 'display: list-item'";
+  spec:inherited true;.
+
+
+css:listStyle a rdf:Property; rdfs:label "list-style";
+  spec:values "[ <'list-style-type'> || <'list-style-position'> || <'list-style-image'> ] | inherit";
+  spec:appliesTo "elements with 'display: list-item'";
+  spec:inherited true;.
+
+
+css:pageBreak-Before a rdf:Property; rdfs:label "page-break-before";
+  spec:values "auto | always | avoid | left | right | inherit";
+  spec:appliesTo "block-level elements (but see text)";
+  spec:inherited false;.
+
+
+css:pageBreak-After a rdf:Property; rdfs:label "page-break-after";
+  spec:values "auto | always | avoid | left | right | inherit";
+  spec:appliesTo "block-level elements (but see text)";
+  spec:inherited false;.
+
+
+css:pageBreak-Inside a rdf:Property; rdfs:label "page-break-inside";
+  spec:values "avoid | auto | inherit";
+  spec:appliesTo "block-level elements (but see text)";
+  spec:inherited false;.
+
+
+css:orphans a rdf:Property; rdfs:label "orphans";
+  spec:values "<integer> | inherit";
+  spec:appliesTo "block container elements";
+  spec:inherited true;.
+
+
+css:widows a rdf:Property; rdfs:label "widows";
+  spec:values "<integer> | inherit";
+  spec:appliesTo "block container elements";
+  spec:inherited true;.
+
+
+css:color a rdf:Property; rdfs:label "color";
+  spec:values "<color> | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:backgroundColor a rdf:Property; rdfs:label "background-color";
+  spec:values "<color> | transparent | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:backgroundImage a rdf:Property; rdfs:label "background-image";
+  spec:values "<uri> | none | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:backgroundRepeat a rdf:Property; rdfs:label "background-repeat";
+  spec:values "repeat | repeat-x | repeat-y | no-repeat | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:backgroundAttachment a rdf:Property; rdfs:label "background-attachment";
+  spec:values "scroll | fixed | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:backgroundPosition a rdf:Property; rdfs:label "background-position";
+  spec:values "[ [ <percentage> | <length> | left | center | right ] [ <percentage> | <length> | top | center | bottom ]? ] | [ [ left | center | right ] || [ top | center | bottom ] ] | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:background a rdf:Property; rdfs:label "background";
+  spec:values "[<'background-color'> || <'background-image'> || <'background-repeat'> || <'background-attachment'> || <'background-position'>] | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:fontFamily a rdf:Property; rdfs:label "font-family";
+  spec:values "[[ <family-name> | <generic-family> ] [, <family-name> | <generic-family>]* ] | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:fontStyle a rdf:Property; rdfs:label "font-style";
+  spec:values "normal | italic | oblique | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:fontVariant a rdf:Property; rdfs:label "font-variant";
+  spec:values "normal | small-caps | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:fontWeight a rdf:Property; rdfs:label "font-weight";
+  spec:values "normal | bold | bolder | lighter | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900 | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:fontSize a rdf:Property; rdfs:label "font-size";
+  spec:values "<absolute-size> | <relative-size> | <length> | <percentage> | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:font a rdf:Property; rdfs:label "font";
+  spec:values "[ [ <'font-style'> || <'font-variant'> || <'font-weight'> ]? <'font-size'> [ / <'line-height'> ]? <'font-family'> ] | caption | icon | menu | message-box | small-caption | status-bar | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:textIndent a rdf:Property; rdfs:label "text-indent";
+  spec:values "<length> | <percentage> | inherit";
+  spec:appliesTo "block containers";
+  spec:inherited true;.
+
+
+css:textAlign a rdf:Property; rdfs:label "text-align";
+  spec:values "left | right | center | justify | inherit";
+  spec:appliesTo "block containers";
+  spec:inherited true;.
+
+
+css:textDecoration a rdf:Property; rdfs:label "text-decoration";
+  spec:values "none | [ underline || overline || line-through || blink ] | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:letterSpacing a rdf:Property; rdfs:label "letter-spacing";
+  spec:values "normal | <length> | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:wordSpacing a rdf:Property; rdfs:label "word-spacing";
+  spec:values "normal | <length> | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:textTransform a rdf:Property; rdfs:label "text-transform";
+  spec:values "capitalize | uppercase | lowercase | none | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:whiteSpace a rdf:Property; rdfs:label "white-space";
+  spec:values "normal | pre | nowrap | pre-wrap | pre-line | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:captionSide a rdf:Property; rdfs:label "caption-side";
+  spec:values "top | bottom | inherit";
+  spec:appliesTo "table-caption elements";
+  spec:inherited true;.
+
+
+css:tableLayout a rdf:Property; rdfs:label "table-layout";
+  spec:values "auto | fixed | inherit";
+  spec:appliesTo "table and inline-table elements";
+  spec:inherited false;.
+
+
+css:borderCollapse a rdf:Property; rdfs:label "border-collapse";
+  spec:values "collapse | separate | inherit";
+  spec:appliesTo "table and inline-table elements";
+  spec:inherited true;.
+
+
+css:borderSpacing a rdf:Property; rdfs:label "border-spacing";
+  spec:values "<length> <length>? | inherit";
+  spec:appliesTo "table and inline-table elements*";
+  spec:inherited true;.
+
+
+css:emptyCells a rdf:Property; rdfs:label "empty-cells";
+  spec:values "show | hide | inherit";
+  spec:appliesTo "table-cell elements";
+  spec:inherited true;.
+
+
+css:cursor a rdf:Property; rdfs:label "cursor";
+  spec:values "[ [<uri> ,]* [ auto | crosshair | default | pointer | move | e-resize | ne-resize | nw-resize | n-resize | se-resize | sw-resize | s-resize | w-resize | text | wait | help | progress ] ] | inherit";
+  spec:appliesTo "*";
+  spec:inherited true;.
+
+
+css:outline a rdf:Property; rdfs:label "outline";
+  spec:values "[ <'outline-color'> || <'outline-style'> || <'outline-width'> ] | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:outlineWidth a rdf:Property; rdfs:label "outline-width";
+  spec:values "<border-width> | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:outlineStyle a rdf:Property; rdfs:label "outline-style";
+  spec:values "<border-style> | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
+css:outlineColor a rdf:Property; rdfs:label "outline-color";
+  spec:values "<color> | invert | inherit";
+  spec:appliesTo "*";
+  spec:inherited false;.
+
+
