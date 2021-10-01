@@ -11,7 +11,7 @@
 
     <rdf:Description rdf:about="">
         <dc:title>Workspace Ontology</dc:title>
-        <comment>This ontology is for use in describing 
+        <comment>This ontology is for use in describing
 Workspaces.  Workspaces are places where data is stored and associated policies of privacy.
 A given application typically stores information in several different
 workspaces, some being user private, some shared, and some public.
@@ -42,7 +42,7 @@ Goals then are that the user can
     </Class>
 
     <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#MasterWorkspace">
-        <comment>This is a workspace for storing the 
+        <comment>This is a workspace for storing the
     information about the other workspaces.
     As a user, you normally don't have to worry about it.</comment>
         <label xml:lang="en">Master Workspace</label>
@@ -56,6 +56,12 @@ Goals then are that the user can
         <label>personal storage</label>
         <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Storage"/>
     </Class>
+
+    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#PreferencesWorkspace">
+        <comment>Aceess may not be open to the public. Contains preferences resources.</comment>
+        <label>Preferences workspace</label>
+        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
+    </rdf:Description>
 
     <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#PrivateWorkspace">
         <comment>Access only by the you, the user.</comment>
@@ -75,12 +81,6 @@ Goals then are that the user can
         <comment>Aceess is open to the public. Anything in a public workspace
     can be accesed by anyone.</comment>
         <label>Public workspace</label>
-        <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
-    </rdf:Description>
-
-    <rdf:Description rdf:about="http://www.w3.org/ns/pim/space#PreferencesWorkspace">
-        <comment>Aceess may not be open to the public. Contains preferences resources</comment>
-        <label>Preferences workspace</label>
         <subClassOf rdf:resource="http://www.w3.org/ns/pim/space#Workspace"/>
     </rdf:Description>
 
@@ -127,12 +127,10 @@ workspaces, some being user private, some shared, and some public.
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/space#storage">
-        <comment>The storage in which this workspace is</comment>
+        <comment>The storage in which this workspace is, or the storage which
+contains this resource, or a storage available to this agent to use.</comment>
         <label>storage</label>
         <range rdf:resource="http://www.w3.org/ns/pim/space#Storage"/>
-        <owl:inverse rdf:parseType="Resource">
-            <label>workspace included</label>
-        </owl:inverse>
     </rdf:Property>
 
     <rdf:Property rdf:about="http://www.w3.org/ns/pim/space#uriPrefix">

@@ -9,7 +9,7 @@
     @prefix ws: <http://www.w3.org/ns/pim/space#> .
     
     <>     dc:title "Workspace Ontology";
-         :comment """This ontology is for use in describing 
+         :comment """This ontology is for use in describing
 Workspaces.  Workspaces are places where data is stored and associated policies of privacy.
 A given application typically stores information in several different
 workspaces, some being user private, some shared, and some public.
@@ -35,7 +35,7 @@ Goals then are that the user can
          :label "access controlled storage";
          :subClassOf ws:Storage .
     
-    ws:MasterWorkspace     :comment """This is a workspace for storing the 
+    ws:MasterWorkspace     :comment """This is a workspace for storing the
     information about the other workspaces.
     As a user, you normally don't have to worry about it.""";
          :label "Master Workspace"@en;
@@ -47,6 +47,10 @@ Goals then are that the user can
 """;
          :label "personal storage";
          :subClassOf ws:Storage .
+    
+    ws:PreferencesWorkspace     :comment "Aceess may not be open to the public. Contains preferences resources.";
+         :label "Preferences workspace";
+         :subClassOf ws:Workspace .
     
     ws:PrivateWorkspace     :comment "Access only by the you, the user.";
          :label "Private workspace";
@@ -62,11 +66,6 @@ Goals then are that the user can
     ws:PublicWorkspace     :comment """Aceess is open to the public. Anything in a public workspace
     can be accesed by anyone.""";
          :label "Public workspace";
-         :subClassOf ws:Workspace .
-
-    ws:PreferencesWorkspace     :comment """AAceess may not be open to the public. 
-    Contains preferences resources""";
-         :label "Preferences workspace";
          :subClassOf ws:Workspace .
     
     ws:SharedWorkspace     :comment "Access is to some but not all people.";
@@ -100,11 +99,10 @@ workspaces, some being user private, some shared, and some public.
          :range ws:ConfigurationFile .
     
     ws:storage     a rdf:Property;
-         :comment "The storage in which this workspace is";
+         :comment """The storage in which this workspace is, or the storage which
+contains this resource, or a storage available to this agent to use.""";
          :label "storage";
-         :range ws:Storage;
-         owl:inverse  [
-             :label "workspace included" ] .
+         :range ws:Storage .
     
     ws:uriPrefix     a rdf:Property,
                 owl:DatatypeProperty;
