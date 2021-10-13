@@ -17,7 +17,7 @@ prof:Full a prof:Profile ;
      rdfs:isDefinedBy <http://www.w3.org/TR/owl2-rdf-based-semantics/>, <http://www.w3.org/TR/owl2-syntax/> ;
      rdfs:seeAlso <http://www.w3.org/TR/2009/REC-owl2-overview-20091027/> . 
 
-<http://www.w3.org/ns/owl-profile/data/DL.html> dc:title "Information Resource for OWL 2 Full" ;
+<http://www.w3.org/ns/owl-profile/data/Full.html> dc:title "Information Resource for OWL 2 Full" ;
      xhv:stylesheet <http://www.w3.org/StyleSheets/TR/base> . 
 
 <http://www.ivan-herman.net/foaf#me> a foaf:Person ;
