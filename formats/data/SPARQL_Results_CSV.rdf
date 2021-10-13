@@ -6,7 +6,7 @@
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
   xmlns:formats="http://www.w3.org/ns/formats/"
 >
-  <rdf:Description rdf:about="file:///Users/ivan/W3C/WWW/ns/formats/data/SPARQL_Results_CSV.html">
+  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/SPARQL_Results_CSV.html">
     <dcterms:title>Information Resource for the SPARQL Results File Format in CSV</dcterms:title>
   </rdf:Description>
   <formats:Format rdf:about="http://www.w3.org/ns/formats/SPARQL_Results_CSV">
@@ -25,7 +25,7 @@
     <rdfs:seeAlso rdf:resource="http://www.rfc-editor.org/rfc/rfc4180.txt"/>
     <formats:media_type>text/csv</formats:media_type>
     <dcterms:created>2011-10-19</dcterms:created>
-    <dcterms:modified>2013-03-25</dcterms:modified>
+    <dcterms:modified>2021-10-13</dcterms:modified>
     <formats:preferred_suffix>.csv</formats:preferred_suffix>
   </formats:Format>
 </rdf:RDF>

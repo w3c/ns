@@ -3,26 +3,26 @@
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:formats="http://www.w3.org/ns/formats/"
 >
   <formats:Format rdf:about="http://www.w3.org/ns/formats/JSON-LD">
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/ldpatch/"/>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/ldpatch/#media-registration"/>
-    <dc:modified>2015-02-07</dc:modified>
-    <dc:creator>
+    <dcterms:modified>2021-10-13</dc:modified>
+    <dcterms:creator>
       <foaf:Person rdf:about="https://deiu.rww.io/profile/card#me">
         <rdfs:seeAlso rdf:resource="https://deiu.rww.io/profile/card"/>
         <foaf:workplaceHomepage rdf:resource="http://www.w3.org"/>
         <foaf:mbox rdf:resource="mailto:andrei@w3.org"/>
         <foaf:name>Andrei Sambra</foaf:name>
       </foaf:Person>
-    </dc:creator>
+    </dcterms:creator>
     <rdfs:comment>LD Patch is defined by the “Linked Data Patch Format” W3C Candidate Recommendation.</rdfs:comment>
     <formats:preferred_suffix>.ldp</formats:preferred_suffix>
-    <dc:created>2015-02-07</dc:created>
+    <dcterms:created>2015-02-07</dcterms:created>
     <formats:media_type>text/ldpatch</formats:media_type>
-    <dc:description>Unique identifier for the LD Patch Format</dc:description>
+    <dcterms:description>Unique identifier for the LD Patch Format</dcterms:description>
   </formats:Format>
 </rdf:RDF>
 

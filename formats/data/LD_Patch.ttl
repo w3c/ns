@@ -1,4 +1,4 @@
-@prefix dc: <http://purl.org/dc/terms/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix formats: <http://www.w3.org/ns/formats/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -7,10 +7,10 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 formats:LD_Patch a formats:Format ;
-    dc:created "2015-02-07" ;
-    dc:creator <https://deiu.rww.io/profile/card#me> ;
-    dc:description "Unique identifier for the LD Patch Format" ;
-    dc:modified "2015-02-07" ;
+    dcterms:created "2015-02-07" ;
+    dcterms:creator <https://deiu.rww.io/profile/card#me> ;
+    dcterms:description "Unique identifier for the LD Patch Format" ;
+    dcterms:modified "2021-10-13" ;
     rdfs:comment "LD Patch is defined by the “Linked Data Patch Format” W3C Candidate Recommendation." ;
     rdfs:isDefinedBy <http://www.w3.org/TR/ldpatch/> ;
     rdfs:seeAlso <http://www.w3.org/TR/ldpatch/#media-registration> ;

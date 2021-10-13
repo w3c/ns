@@ -20,9 +20,9 @@
     </dcterms:creator>
     <rdfs:comment>RDFa is defined by the “RDFa Core 1.1: Syntax and processing rules for embedding RDF through attributes” W3C Recommendation.</rdfs:comment>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdfa-core/"/>
-    <dcterms:modified>2013-03-25</dcterms:modified>
+    <dcterms:modified>2021-10-13</dcterms:modified>
   </formats:Format>
-  <rdf:Description rdf:about="file:///Users/ivan/W3C/WWW/ns/formats/data/RDFa.html">
+  <rdf:Description rdf:about="http://www.w3.org/ns/formats/data/RDFa.html">
     <dcterms:title>Information Resource for the RDFa RDF Serialization Format</dcterms:title>
   </rdf:Description>
 </rdf:RDF>

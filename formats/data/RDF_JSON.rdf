@@ -3,16 +3,16 @@
   xmlns:foaf="http://xmlns.com/foaf/0.1/"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
   xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-  xmlns:dc="http://purl.org/dc/terms/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
   xmlns:formats="http://www.w3.org/ns/formats/"
 >
   <formats:Format rdf:about="http://www.w3.org/ns/formats/RDF_JSON">
-    <dc:description>Unique identifier for the RDF 1.1 JSON Alternate Serialization (RDF/JSON)</dc:description>
+    <dcterms:description>Unique identifier for the RDF 1.1 JSON Alternate Serialization (RDF/JSON)</dcterms:description>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdf-json/"/>
     <formats:preferred_suffix>.rj</formats:preferred_suffix>
     <rdfs:comment>RDF/JSON is defined by the “RDF 1.1 JSON Alternate Serialization (RDF/JSON)” W3C Working Group Note.</rdfs:comment>
     <rdfs:seeAlso rdf:resource="http://www.w3.org/TR/rdf-json/#sec-mediaReg"/>
-    <dc:creator>
+    <dcterms:creator>
       <foaf:Person rdf:about="http://www.ivan-herman.net/foaf#me">
         <foaf:name>Ivan Herman</foaf:name>
         <rdfs:seeAlso rdf:resource="http://www.ivan-herman.net/foaf"/>
@@ -20,10 +20,10 @@
         <foaf:mbox rdf:resource="mailto:ivan@w3.org"/>
         <foaf:title>Semantic Web Activity Lead</foaf:title>
       </foaf:Person>
-    </dc:creator>
+    </dcterms:creator>
     <formats:media_type>application/rdf+json</formats:media_type>
-    <dc:created>2013-11-09</dc:created>
-    <dc:modified>2013-11-09</dc:modified>
+    <dcterms:created>2013-11-09</dcterms:created>
+    <dcterms:modified>2021-10-13</dcterms:modified>
   </formats:Format>
 </rdf:RDF>
 
