@@ -1,0 +1,17 @@
+URI: dpv-pd
+
+URI: dpv-pd.html.redirect
+Content-Type: text/html
+
+URI: dpv-pd.ttl.redirect
+Content-Type: text/turtle; qs=0.5
+
+URI: dpv-pd.rdf.redirect
+Content-Type: application/rdf+xml; qs=0.5
+
+URI: dpv-pd.jsonld.redirect
+Content-Type: application/ld+json; qs=0.5
+
+URI: dpv-pd.jsonld.redirect
+Content-Type: application/json; qs=0.5
+
