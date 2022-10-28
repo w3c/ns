@@ -65,6 +65,10 @@
       "@id": "shex:extra",
       "@type": "@id"
     },
+    "extends": {
+      "@id": "shex:extends",
+      "@type": "@id"
+    },
     "flags": {
       "@id": "shex:flags",
       "@language": null
@@ -657,6 +661,18 @@
         },
         "rdfs:domain": "shex:Shape",
         "rdfs:range": "rdfs:Resource"
+      },
+      {
+        "@id": "shex:extends",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "extends"
+        },
+        "rdfs:comment": {
+          "en": "base shape expressions for this shape"
+        },
+        "rdfs:domain": "shex:Shape",
+        "rdfs:range": "shex:ShapeExpression"
       },
       {
         "@id": "shex:flags",
