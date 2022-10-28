@@ -669,7 +669,7 @@
           "en": "extends"
         },
         "rdfs:comment": {
-          "en": "base shape expressions for this shape"
+          "en": "Base shape expressions for this shape."
         },
         "rdfs:domain": "shex:Shape",
         "rdfs:range": "shex:ShapeExpression"

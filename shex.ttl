@@ -183,7 +183,7 @@ shex:extra a rdf:Property;
   rdfs:isDefinedBy shex: .
 shex:extends a rdf:Property;
   rdfs:label "extends"@en;
-  rdfs:comment """base shape expressions for this shape"""@en;
+  rdfs:comment """Base shape expressions for this shape."""@en;
   rdfs:domain shex:Shape;
   rdfs:range rdfs:Resource;
   rdfs:isDefinedBy shex: .
