@@ -538,6 +538,21 @@ var respecConfig = {
               </dl>
           </td>
         </tr>
+        <tr id="extends">
+          <td class="bold">extends</td>
+          <td resource="shex:extends" typeof="rdf:property">
+            <em property="rdfs:label">extends</em>
+            <span class="permalink"><a href="#extends" aria-label="permalink for extends" title="permalink for extends"><span>§</span></a></span>
+            <p property="rdfs:comment">base shape expressions for this shape</p>
+            <span property="rdfs:isdefinedby" resource="shex:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="rdfs:resource">rdfs:resource</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shex:shape">shex:shape</dd>
+              </dl>
+          </td>
+        </tr>
         <tr id="flags">
           <td class="bold">flags</td>
           <td resource="shex:flags" typeof="rdf:Property">
@@ -1261,6 +1276,11 @@ var respecConfig = {
         <dt>extra</dt>
         <dd>
             shex:extra
+            with string values interpreted as @id
+        </dd>
+        <dt>extends</dt>
+        <dd>
+            shex:extends
             with string values interpreted as @id
         </dd>
         <dt>flags</dt>
