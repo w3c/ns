@@ -9,6 +9,9 @@ RewriteRule ^app$	  https://solid.github.io/vocab/solid-app.ttl [P]
 RewriteRule ^terms\.(.*)$ https://solid.github.io/vocab/solid-terms.$1 [P]
 RewriteRule ^terms$ https://solid.github.io/vocab/solid-terms.ttl [P]
 
+RewriteRule ^acp\.(.*)$ https://solid.github.io/vocab/solid-acp.$1 [P]
+RewriteRule ^acp$ https://solid.github.io/vocab/solid-acp.ttl [P]
+
 RewriteRule ^interop\.(.*)$ https://solid.github.io/data-interoperability-panel/specification/interop.$1 [P]
 RewriteRule ^interop$ https://solid.github.io/data-interoperability-panel/specification/interop.ttl [P]
 
