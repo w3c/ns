@@ -3,5 +3,5 @@ URI: person
 URI: person.html
 Content-Type: text/html
 
-URI: person.ttl
+URI: person.ttl.redirect
 Content-Type: text/turtle

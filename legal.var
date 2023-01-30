@@ -1,4 +1,7 @@
 URI: legal
 
-URI: legal.html
+URI: legal.html.redirect
 Content-Type: text/html
+
+URI: legal.ttl.redirect
+Content-Type: text/turtle
