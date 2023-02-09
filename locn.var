@@ -3,6 +3,6 @@ URI: locn
 URI: locn.html
 Content-Type: text/html
 
-URI: locn.ttl.redirect
+URI: locn.ttl
 Content-Type: text/turtle
 
