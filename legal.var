@@ -1,7 +1,7 @@
 URI: legal
 
 URI: legal.html.redirect
-Content-Type: test/html
+Content-Type: text/html
 
 URI: legal.ttl.redirect
-Content-Type: test/turtle
+Content-Type: text/turtle
