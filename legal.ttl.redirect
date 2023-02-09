@@ -1,6 +1,6 @@
 Status: 302 Moved Temporarily
-Location: https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/voc/core-business-ap.ttl
+Location: https://uri.semic.eu/w3c/ns/legal
 Content-Type: text/turtle
 Cache-Control: max-age=604800
 
-# The correct URI for this page is https://semiceu.github.io/Core-Business-Vocabulary/releases/2.00/voc/core-business-ap.ttl
+# The correct URI for this page is https://uri.semic.eu/w3c/ns/legal
