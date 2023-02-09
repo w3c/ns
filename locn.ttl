@@ -100,8 +100,8 @@ locn:geographicName a rdf:Property ;
     dcterms:identifier "locn:geographicName"^^xsd:string ;
     rdfs:comment """
 A geographic name is a proper noun applied to a spatial object. Taking the example used in the relevant INSPIRE data specification (page 18), the following are all valid geographic names for the Greek capital:
-- Î‘Î¸Î®Î½Î± (the Greek endonym written in the Greek script)
-- AthÃ­na (the standard Romanisation of the endonym)
+- Αθήνα (the Greek endonym written in the Greek script)
+- Athína (the standard Romanisation of the endonym)
 - Athens (the English language exonym)
 For INSPIRE-conformant data, provide the metadata for the geographic name using a skos:Concept as a datatype.
 """@en ;
@@ -263,7 +263,7 @@ dcterms:Location rdfs:label "Location"@en ;
             foaf:mbox <mailto:public-locadd@w3.org> ;
             foaf:name "Locations and Addresses Community Group" ] ;
     dcterms:modified "2015-03-23"^^xsd:date ;
-    dcterms:rights "Copyright Â© European Union, 2012-2015."@en ;
+    dcterms:rights "Copyright © European Union, 2012-2015."@en ;
     dcterms:title "ISA Programme Location Core Vocabulary"@en ;
     vann:changes """
 2015-03-23: Updates in the namespace document and in the RDF/XML and Turtle schemas:
@@ -271,10 +271,10 @@ dcterms:Location rdfs:label "Location"@en ;
 - Added class and property diagram.
 - Updated GeoSPARQL (a) namespace URIs  and (b) datatype names in the examples of property locn:geometry, based on version 1.0 of the GeoSPARQL specification, and added a note in the examples.
   - prefix ogc (http://www.opengis.net/rdf#) replaced with gsp (http://www.opengis.net/ont/geosparql#) and sf (http://www.opengis.net/ont/sf#)
-  - ogc:WKTLiteral â†’ gsp:wktLiteral
-  - ogc:GMLLiteral â†’ gsp:gmlLiteral
+  - ogc:WKTLiteral → gsp:wktLiteral
+  - ogc:GMLLiteral → gsp:gmlLiteral
 - Added namespace declarations for all namespace prefixes used in LOCN namespace document, even though they are not used in class/property definitions.
-- Corrected the endonym of the Greek capital written in the Greek script in the definition of class locn:geographicName (AÎ¸nÎ½a â†’ Î‘Î¸Î®Î½Î±).
+- Corrected the endonym of the Greek capital written in the Greek script in the definition of class locn:geographicName (Aθnνa → Αθήνα).
 - Fixed links and typos, minor revisions made to the textual descriptions.
 2013-12-21: (PhilA) Update in RDF/XML and Turtle schemas:
 - Updated voaf namespace.
@@ -289,7 +289,7 @@ dcterms:Location rdfs:label "Location"@en ;
 - Revised usage note of property locn:geometry to include text about recommended usage, formerly included in the usage note of class locn:Geometry.
 - Revised usage note and examples of property locn:geometry to include support to geocoded URIs (e.g., geo URIs, GeoHash URIs).
 - Added term status. All terms have been set to "testing", with the exception of class locn:Geometry and properties rdfs:seeAlso (geographic identifier) and locn:addressId.
-- Renamed subject in Turtle examples (ex:a â†’ :Resource).
+- Renamed subject in Turtle examples (ex:a → :Resource).
 - Fixed links and typos, minor revisions made to the textual descriptions.
     """@en ;
     vann:preferredNamespacePrefix "locn"^^xsd:string ;

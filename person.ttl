@@ -53,7 +53,7 @@
 :patronymicName dcterms:identifier "person:patronymicName";
 	a rdf:Property, owl:DatatypeProperty;
 	rdfs:label "patronymic name"@en;
-	rdfs:comment "Patronymic names are important in some countries. Iceland does not have a concept of family name in the way that many other European countries do, for example. In Bulgaria and Russia, patronymic names are in every day usage, for example, the &quot;Sergeyevich&quot; (Ð¡ÐµÑ€Ð³ÐµÐµÐ²Ð¸Ñ‡) in &quot;Mikhail Sergeyevich Gorbachev&quot; (ÐœÐ¸Ñ…Ð°Ð¸Ð» Ð¡ÐµÑ€Ð³ÐµÐµÐ²Ð¸Ñ‡ Ð“Ð¾Ñ€Ð±Ð°Ñ‡Ñ‘Ð²)."@en;
+	rdfs:comment "Patronymic names are important in some countries. Iceland does not have a concept of family name in the way that many other European countries do, for example. In Bulgaria and Russia, patronymic names are in every day usage, for example, the &quot;Sergeyevich&quot; (Сергеевич) in &quot;Mikhail Sergeyevich Gorbachev&quot; (Михаил Сергеевич Горбачёв)."@en;
   rdfs:domain :Person;
   rdfs:range rdfs:Literal;
 	rdfs:isDefinedBy :.
