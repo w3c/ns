@@ -1,11 +1,10 @@
-@prefix : <> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix doap: <http://usefulinc.com/ns/doap#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
-@prefix spec: <#> .
+@prefix spec: <http://www.w3.org/ns/spec#> .
 @prefix test-description: <http://www.w3.org/2006/03/test-description#> .
 @prefix vann: <http://purl.org/vocab/vann/> .
 @prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
@@ -19,12 +18,12 @@ spec:
   dcterms:issued "2021-06-04"^^xsd:date ;
   dcterms:license <https://creativecommons.org/publicdomain/zero/1.0/> ;
   owl:versionInfo [
-    dcterms:date "2022-11-17"^^xsd:date ;
+    dcterms:date "2023-01-14"^^xsd:date ;
 #    dcterms:replaces <> ;
 #    rdfs:seeAlso <> ;
   ] ;
   doap:repository <https://github.com/solid/vocab/> ;
-  vann:preferredNamespacePrefix "spec"@en ;
+  vann:preferredNamespacePrefix "spec" ;
   vann:preferredNamespaceUri "http://www.w3.org/ns/spec#"^^xsd:anyURI ;
   vann:usageNote "Work in Progress!"@en ;
   vs:term_status "testing"@en ;
@@ -205,52 +204,52 @@ spec:advisementLevel
   rdfs:label "advisement"@en ;
   rdfs:range spec:Advisement .
 
-spec:STRONGLYENCOURAGED
+spec:StronglyEncouraged
   a skos:Concept ;
   skos:topConceptOf spec:AdvisementLevel ;
   skos:prefLabel "strongly encouraged"@en .
 
-spec:STRONGLYDISCOURAGED
+spec:StronglyDiscouraged
   a skos:Concept ;
   skos:topConceptOf spec:AdvisementLevel ;
   skos:prefLabel "strongly discouraged"@en .
 
-spec:encouraged
+spec:Encouraged
   a skos:Concept ;
   skos:topConceptOf spec:AdvisementLevel ;
   skos:prefLabel "encouraged"@en .
 
-spec:discouraged
+spec:Discouraged
   a skos:Concept ;
   skos:topConceptOf spec:AdvisementLevel ;
   skos:prefLabel "discouraged"@en .
 
-spec:can
+spec:Can
   a skos:Concept ;
   skos:topConceptOf spec:AdvisementLevel ;
   skos:prefLabel "can"@en .
 
-spec:cannot
+spec:Cannot
   a skos:Concept ;
   skos:topConceptOf spec:AdvisementLevel ;
   skos:prefLabel "cannot"@en .
 
-spec:could
+spec:Could
   a skos:Concept ;
   skos:topConceptOf spec:AdvisementLevel ;
   skos:prefLabel "could"@en .
 
-spec:COULDNOT
+spec:CouldNot
   a skos:Concept ;
   skos:topConceptOf spec:AdvisementLevel ;
   skos:prefLabel "could not"@en .
 
-spec:might
+spec:Might
   a skos:Concept ;
   skos:topConceptOf spec:AdvisementLevel ;
   skos:prefLabel "might"@en .
 
-spec:MIGHTNOT
+spec:MightNot
   a skos:Concept ;
   skos:topConceptOf spec:AdvisementLevel ;
   skos:prefLabel "might not"@en .
