@@ -1,6 +1,6 @@
 URI: adms
 
-URI: /TR/vocab-adms/
+URI: adms.html.redirect
 Content-Type: text/html
 
 URI: adms.ttl.redirect
