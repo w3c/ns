@@ -1,3 +1,4 @@
+<!-- deprecated, now maintained by Semic -- see adms.var -->
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"

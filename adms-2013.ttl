@@ -1,3 +1,5 @@
+# deprecated - now maintained by Semic (see adms.var)
+
 @prefix dcterms: <http://purl.org/dc/terms/>.
 @prefix skos: <http://www.w3.org/2004/02/skos/core#>.
 @prefix foaf: <http://xmlns.com/foaf/0.1/>.

@@ -1,7 +1,10 @@
 URI: adms
 
-URI: adms.ttl
+URI: /TR/vocab-adms/
+Content-Type: text/html
+
+URI: adms.ttl.redirect
 Content-Type: text/turtle
 
-URI: adms.rdf
+URI: adms.rdf.redirect
 Content-Type: application/rdf+xml

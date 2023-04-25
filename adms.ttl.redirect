@@ -1,0 +1,6 @@
+Status: 302 Moved Temporarily
+Location: http://uri.semic.eu/w3c/ns/adms.ttl
+Content-Type: text/turtle
+Cache-Control: max-age=604800
+
+# The correct URI for this page is http://uri.semic.eu/w3c/ns/adms.ttl
