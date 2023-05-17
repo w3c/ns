@@ -1,10 +1,10 @@
 Status: 302 Moved Temporarily
-Location: http://uri.semic.eu/w3c/ns/adms.html
+Location: https://uri.semic.eu/w3c/ns/adms.html
 Content-Type: text/html
 Cache-Control: max-age=604800
 
 <!DOCTYPE html>
 <title>Redirection</title>
 <p>The correct URI for this page is
-<a href="http://uri.semic.eu/w3c/ns/adms.html"
-        >http://uri.semic.eu/w3c/ns/adms.html</a></p>
+<a href="https://uri.semic.eu/w3c/ns/adms.html"
+        >https://uri.semic.eu/w3c/ns/adms.html</a></p>
