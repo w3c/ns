@@ -8,3 +8,6 @@ Content-Type: text/turtle
 
 URI: adms.rdf.redirect
 Content-Type: application/rdf+xml
+
+URI: adms.nt.redirect
+Content-Type: application/n-triples
