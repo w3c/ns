@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generated from person.ttl -->
+<rdf:RDF xmlns:cc="http://creativecommons.org/ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:owl="http://www.w3.org/2002/07/owl#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:schema="http://schema.org/" xmlns:vann="http://purl.org/vocab/vann/" xmlns:voaf="http://purl.org/vocommons/voaf#" xmlns:wdrs="http://www.w3.org/2007/05/powder-s#" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns="http://www.w3.org/ns/person#">
+  <rdf:Description rdf:nodeID="genid1">
+    <schema:affiliation rdf:resource="http://www.w3.org/data#W3C"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <rdfs:seeAlso rdf:resource="http://philarcher.org/foaf.rdf#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <foaf:homepage rdf:resource="http://www.w3.org/People/all#phila"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid1">
+    <foaf:name>Phil Archer</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <foaf:homepage rdf:resource="http://ies.jrc.ec.europa.eu/DE"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid2">
+    <foaf:name>European Commission, Joint Research Centre </foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <schema:affiliation rdf:nodeID="genid2"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <rdfs:seeAlso rdf:resource="http://andrea-perego.name/foaf/#me"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <foaf:homepage rdf:resource="http://andrea-perego.name/"/>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid3">
+    <foaf:name>Andrea Perego</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <foaf:name>Core Vocabularies Working Group (Person Task Force)</foaf:name>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="genid4">
+    <foaf:page rdf:resource="http://joinup.ec.europa.eu/asset/core_person/home"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <rdf:type rdf:resource="http://purl.org/vocommons/voaf#Vocabulary"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <dcterms:title xml:lang="en">ISA Programme Person Core Vocabulary</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <dcterms:comment>This vocabulary was not developed by a W3C group and its publication does not imply endorsement 
+      by the W3C Membership. Terms MAY be deprecated or their definitions clarified but they will 
+      not be deleted (see the W3C Persistence Policy). The vocabulary MAY be further developed by a future group.</dcterms:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <dcterms:abstract xml:lang="en">The Person Core Vocabulary provides a minimum set of classes and properties for describing a natural person, i.e. the individual as opposed to any role they may play in society or the relationships they have to other people, organisations and property; all of which contribute significantly to the broader concept of identity.</dcterms:abstract>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <dcterms:creator rdf:nodeID="genid1"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <dcterms:creator rdf:nodeID="genid3"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <foaf:maker rdf:nodeID="genid4"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <dcterms:description>The Person Core Vocabulary provides a minimum set of classes and properties for describing a natural person, i.e. the individual as opposed to any role they may play in society or the relationships they have to other people, organisations and property; all of which contribute significantly to the broader concept of identity.</dcterms:description>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2012-05-07</dcterms:issued>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-11-17</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2013-12-21</dcterms:modified>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <vann:preferredNamespacePrefix>person</vann:preferredNamespacePrefix>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <vann:preferredNamespaceUri>http://www.w3.org/ns/person#</vann:preferredNamespaceUri>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <wdrs:describedby rdf:resource="https://joinup.ec.europa.eu/asset/core_person/asset_release/core-person-vocabulary-100"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <dcterms:license rdf:resource="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person">
+    <dcterms:rights>Copyright &amp;#169; 2012 European Commission</dcterms:rights>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11">
+    <dcterms:title>ISA Open Metadata Licence v1.1</dcterms:title>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11">
+    <cc:attributionName>European Commission</cc:attributionName>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11">
+    <cc:attributionURL rdf:resource="http://ec.europa.eu/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#Person">
+    <dcterms:identifier>person:Person</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#Person">
+    <rdf:type rdf:resource="http://www.w3.org/2000/01/rdf-schema#Class"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#Person">
+    <rdfs:label xml:lang="en">Person</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#Person">
+    <rdfs:comment xml:lang="en">An individual person who may be dead or alive, but not imaginary. It is that restriction that makes person:Person a sub class of both foaf:Person and schema:Person which both cover imaginary characters as well as real people.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#Person">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#Person">
+    <rdfs:subClassOf rdf:resource="http://xmlns.com/foaf/0.1/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#Person">
+    <rdfs:subClassOf rdf:resource="http://schema.org/Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#patronymicName">
+    <dcterms:identifier>person:patronymicName</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#patronymicName">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#patronymicName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#patronymicName">
+    <rdfs:label xml:lang="en">patronymic name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#patronymicName">
+    <rdfs:comment xml:lang="en">Patronymic names are important in some countries. Iceland does not have a concept of family name in the way that many other European countries do, for example. In Bulgaria and Russia, patronymic names are in every day usage, for example, the &amp;quot;Sergeyevich&amp;quot; (Сергеевич) in &amp;quot;Mikhail Sergeyevich Gorbachev&amp;quot; (Михаил Сергеевич Горбачёв).</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#patronymicName">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/person#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#patronymicName">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#patronymicName">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/person#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#birthName">
+    <dcterms:identifier>person:birthName</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#birthName">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#birthName">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#DatatypeProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#birthName">
+    <rdfs:label xml:lang="en">birth name</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#birthName">
+    <rdfs:comment xml:lang="en">All data associated with an individual is subject to change. Names can change for a variety of reasons, either formally or informally, and new information may come to light that means that a correction or clarification can be made to an existing record. Birth names tend to be persistent however and for this reason they are recorded by some public sector information systems. There is no granularity for birth name - the full name should be recorded in a single field.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#birthName">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/person#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#birthName">
+    <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#birthName">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/person#"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfBirth">
+    <dcterms:identifier>person:placeOfBirth</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfBirth">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfBirth">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfBirth">
+    <rdfs:comment xml:lang="en">A person's place of birth.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfBirth">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfBirth">
+    <rdfs:label xml:lang="en">place of birth</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfBirth">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/person#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfBirth">
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfBirth">
+    <rdfs:range rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfDeath">
+    <dcterms:identifier>person:placeOfDeath</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfDeath">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfDeath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfDeath">
+    <rdfs:comment xml:lang="en">A person's place of death.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfDeath">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfDeath">
+    <rdfs:label xml:lang="en">place of death</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfDeath">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/person#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfDeath">
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#placeOfDeath">
+    <rdfs:range rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfBirth">
+    <dcterms:identifier>person:countryOfBirth</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfBirth">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfBirth">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfBirth">
+    <rdfs:comment xml:lang="en">The country in which a Person was born.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfBirth">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfBirth">
+    <rdfs:label xml:lang="en">country of birth</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfBirth">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/person#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfBirth">
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfBirth">
+    <rdfs:range rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfDeath">
+    <dcterms:identifier>person:countryOfDeath</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfDeath">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfDeath">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfDeath">
+    <rdfs:comment xml:lang="en">The country in which a Person died.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfDeath">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfDeath">
+    <rdfs:label xml:lang="en">country of death</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfDeath">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/person#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfDeath">
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Location"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#countryOfDeath">
+    <rdfs:range rdf:resource="http://schema.org/Place"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#citizenship">
+    <dcterms:identifier>person:citizenship</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#citizenship">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#citizenship">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#citizenship">
+    <rdfs:comment xml:lang="en">The citizenship relationship links a Person to a Jurisdiction that has conferred citizenship rights on the individual such as the right to vote, to receive certain protection from the community or the issuance of a passport. Multiple citizenships are recorded as multiple instances of the citizenship relationship.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#citizenship">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#citizenship">
+    <rdfs:label xml:lang="en">citizenship</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#citizenship">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/person#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#citizenship">
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Jurisdiction"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#residency">
+    <dcterms:identifier>person:residency</dcterms:identifier>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#residency">
+    <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#residency">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#residency">
+    <rdfs:comment xml:lang="en">Residency typically provides an individual with a subset of the rights of a citizen.</rdfs:comment>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#residency">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#residency">
+    <rdfs:label xml:lang="en">residency</rdfs:label>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#residency">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/person#Person"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/person#residency">
+    <rdfs:range rdf:resource="http://purl.org/dc/terms/Jurisdiction"/>
+  </rdf:Description>
+</rdf:RDF>

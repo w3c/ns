@@ -6,5 +6,8 @@ Content-Type: text/html
 URI: locn.ttl
 Content-Type: text/turtle
 
+URI: locn.nt
+Content-Type: application/n-triples
+
 URI: locn.rdf
 Content-Type: application/rdf+xml

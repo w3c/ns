@@ -6,3 +6,9 @@ Content-Type: text/html
 URI: person.ttl
 Content-Type: text/turtle
 
+URI: person.nt
+Content-Type: application/n-triples
+
+URI: person.rdf
+Content-Type: application/rdf+xml
+
