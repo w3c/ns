@@ -1,0 +1,17 @@
+# this is now overridden by a RewriteRule in .htaccess,
+# this file is kept for archiving only
+# (also, in case the semic.eu website fails and we need to restore this)
+URI: person
+
+URI: person.html
+Content-Type: text/html
+
+URI: person.ttl
+Content-Type: text/turtle
+
+URI: person.nt
+Content-Type: application/n-triples
+
+URI: person.rdf
+Content-Type: application/rdf+xml
+
