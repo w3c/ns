@@ -1,3 +1,6 @@
+# this is now overridden by a RewriteRule in .htaccess,
+# this file is kept for archiving only
+# (also, in case the semic.eu website fails and we need to restore this)
 URI: locn
 
 URI: locn.html

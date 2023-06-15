@@ -169,3 +169,10 @@ RewriteRule ^pub-context-jsonld10.json$ https://w3c.github.io/pub-vocab/pub-cont
 RewriteRule ^did$    did-vocab/did [PT]
 RewriteRule ^did\.(.*)  did-vocab/did.$1 [PT,L]
 RewriteRule ^did/(.*)  did-vocab/$1 [PT,L]
+
+###
+# EU Core Vocabularies -- now maintained by Semic
+# by pierre-antoine@w3.org on 2023-06-15
+RewriteRule ^person$ https://uri.semic.eu/w3c/ns/person [R,L]
+RewriteRule ^locn$   https://uri.semic.eu/w3c/ns/locn [R,L]
+RewriteRule ^legal$  https://uri.semic.eu/w3c/ns/legal [R,L]
