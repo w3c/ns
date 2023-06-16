@@ -151,7 +151,7 @@
 <https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11> <http://creativecommons.org/ns#attributionURL> <http://ec.europa.eu/> .
 <https://joinup.ec.europa.eu/category/licence/isa-open-metadata-licence-v11> <http://purl.org/dc/terms/title> "ISA Open Metadata Licence v1.1" .
 <https://joinup.ec.europa.eu/node/43160> <http://purl.org/dc/terms/title> "Process and Methodology for Developing Core Vocabularies" .
-<htts://www.w3.org/ns/locn.svg> <http://www.w3.org/2000/01/rdf-schema#label> "Class and property diagram of the LOCN vocabulary" .
+<https://www.w3.org/ns/locn.svg> <http://www.w3.org/2000/01/rdf-schema#label> "Class and property diagram of the LOCN vocabulary" .
 <https://joinup.ec.europa.eu/node/55858> <http://purl.org/dc/terms/title> "Core Vocabularies Specification" .
 _:genid1 <http://xmlns.com/foaf/0.1/homepage> <http://www.w3.org/community/locadd/> .
 _:genid1 <http://xmlns.com/foaf/0.1/mbox> <mailto:public-locadd@w3.org> .
