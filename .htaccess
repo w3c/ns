@@ -173,7 +173,7 @@ RewriteRule ^did/(.*)  did-vocab/$1 [PT,L]
 ###
 # EU Core Vocabularies -- now maintained by Semic
 # by pierre-antoine@w3.org on 2023-06-15
-RewriteRule ^person$ https://uri.semic.eu/w3c/ns/person [L,R=307]
-RewriteRule ^legal$ https://uri.semic.eu/w3c/ns/legal [L,R=307]
-RewriteRule ^locn$ https://uri.semic.eu/w3c/ns/locn [L,R=307]
+RewriteRule ^person(\..[a-z]+)?$ https://uri.semic.eu/w3c/ns/person$1 [L,R=307]
+RewriteRule ^legal(\..[a-z]+)?$ https://uri.semic.eu/w3c/ns/legal$1 [L,R=307]
 RewriteRule ^locn.svg$ legacy_locn.svg [L,R=307]
+RewriteRule ^locn(\..[a-z]+)?$ https://uri.semic.eu/w3c/ns/locn$1 [L,R=307]
