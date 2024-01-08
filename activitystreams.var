@@ -4,7 +4,7 @@ URI: activitystreams.html
 Content-Type: text/html
 
 URI: activitystreams.jsonld
-Content-Type: application/ld+json; qs=0.5
+Content-Type: application/ld+json; qs=0.995
 
 URI: activitystreams.jsonld
-Content-Type: application/json; qs=0.4
+Content-Type: application/json; qs=0.994
