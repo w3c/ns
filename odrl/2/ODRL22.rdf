@@ -19,7 +19,7 @@
     <skos:scopeNote xml:lang="en">Non-Normative</skos:scopeNote>
     <includedIn rdf:resource="http://www.w3.org/ns/odrl/2/use"/>
   </Action>
-  <Action rdf:about="http://creativecommons.org/ns#CommericalUse">
+  <Action rdf:about="http://creativecommons.org/ns#CommercialUse">
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Commercial Use</rdfs:label>
