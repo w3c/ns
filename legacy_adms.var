@@ -1,0 +1,8 @@
+URI: legacy_var
+
+URI: legacy_var.ttl
+Content-Type: text/turtle
+
+URI: legacy_var.rdf
+Content-Type: application/rdf+xml
+

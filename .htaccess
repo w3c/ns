@@ -173,7 +173,15 @@ RewriteRule ^did/(.*)  did-vocab/$1 [PT,L]
 ###
 # EU Core Vocabularies -- now maintained by Semic
 # by pierre-antoine@w3.org on 2023-06-15
-RewriteRule ^person(\..[a-z]+)?$ https://uri.semic.eu/w3c/ns/person$1 [L,R=307]
-RewriteRule ^legal(\..[a-z]+)?$ https://uri.semic.eu/w3c/ns/legal$1 [L,R=307]
-RewriteRule ^locn.svg$ legacy_locn.svg [L,R=307]
-RewriteRule ^locn(\..[a-z]+)?$ https://uri.semic.eu/w3c/ns/locn$1 [L,R=307]
+#RewriteRule ^person(\..[a-z]+)?$ https://uri.semic.eu/w3c/ns/person$1 [L,R=307]
+#RewriteRule ^legal(\..[a-z]+)?$ https://uri.semic.eu/w3c/ns/legal$1 [L,R=307]
+#RewriteRule ^locn.svg$ legacy_locn.svg [L,R=307]
+#RewriteRule ^locn(\..[a-z]+)?$ https://uri.semic.eu/w3c/ns/locn$1 [L,R=307]
+# 2024-06-10 the URIs at uri.semic.eu are returning a 500,
+# and my contact at TenCent who managed this for Semic is not responding,
+# so reverting redirection to our own copies
+# by pierre-antoine@w3.org on 2024-06-06
+RewriteRule ^person(\..[a-z]+)?$ legacy_person$1 [L,R=307]
+RewriteRule ^legal(\..[a-z]+)?$ legal-entity$1 [L,R=307]
+RewriteRule ^locn(\..[a-z]+)?$ legacy_locn$1 [L,R=307]
+RewriteRule ^adms(\..[a-z]+)?$ legacy_adms$1 [L,R=307]
