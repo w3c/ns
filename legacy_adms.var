@@ -1,8 +1,8 @@
-URI: legacy_var
+URI: legacy_adms
 
-URI: legacy_var.ttl
+URI: legacy_adms.ttl
 Content-Type: text/turtle
 
-URI: legacy_var.rdf
+URI: legacy_adms.rdf
 Content-Type: application/rdf+xml
 
