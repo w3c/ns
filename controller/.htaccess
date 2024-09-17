@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /ns/controller/
+AddType application/ld+json .jsonld
+AddType text/turtle .ttl
+
+
+# The v1 of the controller document context context:
+RewriteRule ^v1$ https://w3c.github.io/controller-document/context/v1.jsonld [E=json,P]
+
+Header set Content-Type application/ld+json env=json
+
+
