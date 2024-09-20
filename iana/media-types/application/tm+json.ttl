@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Seb: <../../person/Sebastian_Kaebisch#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2022-08-22"^^XML:date;
+    reg:file [ reg:file "application/tm+json"; reg:type "template" ];
+    reg:name "tm+json";
+    reg:xref Seb:, W3C:.
+medi:application reg:record :Resource.
+

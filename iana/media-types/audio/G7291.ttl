@@ -3,7 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:Resource reg:name "G7291"; reg:xref html:rfc4749, html:rfc5459 .
-
+:Resource
+    reg:file [ reg:file "audio/G7291"; reg:type "template" ];
+    reg:name "G7291";
+    reg:xref html:rfc4749, html:rfc5459.
 medi:audio reg:record :Resource.
 

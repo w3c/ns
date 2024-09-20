@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ap: <../../person/Apache_Arrow_Project#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-06-23"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.apache.arrow.file"; reg:type "template" ];
+    reg:name "vnd.apache.arrow.file";
+    reg:xref Ap:.
+medi:application reg:record :Resource.
+

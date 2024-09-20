@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Igo: <../../person/Igor_Lima_Bolacha_Severino#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-05-11"^^XML:date;
+    reg:file [ reg:file "application/vnd.pt.mundusmundi"; reg:type "template" ];
+    reg:name "vnd.pt.mundusmundi";
+    reg:xref Igo:.
+medi:application reg:record :Resource.
+

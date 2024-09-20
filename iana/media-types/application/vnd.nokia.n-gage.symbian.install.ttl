@@ -10,7 +10,7 @@
                 reg:type "template"
             ];
     reg:name
-    "vnd.nokia.n-gage.symbian.install - OBSOLETE; no replacement given";
+    "vnd.nokia.n-gage.symbian.install (OBSOLETE; no replacement given)";
     reg:xref Noki:.
 medi:application reg:record :Resource.
 

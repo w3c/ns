@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix D: <../../person/Daniel_Flassig#>.
+
+medi:model reg:record :Resource.
+
+:Resource
+    terms:date "2021-04-07"^^XML:date;
+    reg:file [ reg:file "model/vnd.pytha.pyox"; reg:type "template" ];
+    reg:name "vnd.pytha.pyox";
+    reg:xref D:.

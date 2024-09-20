@@ -6,6 +6,6 @@
     reg:file
     [ reg:file "application/relax-ng-compact-syntax"; reg:type "template" ];
     reg:name "relax-ng-compact-syntax";
-    reg:xref <http://www.jtc1sc34.org/repository/0661.pdf>.
+    reg:xref <http://www.JTC_1sc34.org/repository/0661.pdf>.
 medi:application reg:record :Resource.
 

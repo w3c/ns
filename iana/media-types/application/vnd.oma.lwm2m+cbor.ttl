@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joh: <../../person/John_Mudge#>.
+@prefix Ope: <../../person/Open_Mobile_Naming_Authority#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-08-03"^^XML:date;
+    reg:file [ reg:file "application/vnd.oma.lwm2m+cbor"; reg:type "template" ];
+    reg:name "vnd.oma.lwm2m+cbor";
+    reg:xref Joh:, Ope:.
+medi:application reg:record :Resource.
+

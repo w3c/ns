@@ -5,7 +5,7 @@
 
 :Resource
     reg:file [ reg:file "application/smil"; reg:type "template" ];
-    reg:name "smil - OBSOLETED in favor of application/smil+xml";
+    reg:name "smil (OBSOLETED in favor of application/smil+xml)";
     reg:xref html:rfc4536.
 medi:application reg:record :Resource.
 

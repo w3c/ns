@@ -9,6 +9,6 @@
     terms:date "2016-09-06"^^XML:date;
     reg:file [ reg:file "application/clue_info+xml"; reg:type "template" ];
     reg:name "clue_info+xml";
-    reg:xref html:RFC-ietf-clue-data-model-schema-17.
+    reg:xref html:rfc8846.
 medi:application reg:record :Resource.
 

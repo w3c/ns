@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Heu: <../../person/Heungsub_Lee#>.
+
+medi:text reg:record :Resource.
+
+:Resource
+    terms:date "2018-07-03"^^XML:date;
+    reg:file [ reg:file "text/vnd.hgl"; reg:type "template" ];
+    reg:name "vnd.hgl";
+    reg:xref Heu:.

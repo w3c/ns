@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Con: <../../person/Connor_Horman#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-04-06"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.snesdev-page-table"; reg:type "template" ];
+    reg:name "vnd.snesdev-page-table";
+    reg:xref Con:.
+medi:application reg:record :Resource.
+

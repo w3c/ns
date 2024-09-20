@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix OGC: <../../person/OGC#>.
+@prefix Sco: <../../person/Scott_Simmons#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2022-01-13"^^XML:date;
+    reg:file [ reg:file "application/city+json"; reg:type "template" ];
+    reg:name "city+json";
+    reg:xref OGC:, Sco:.
+medi:application reg:record :Resource.
+

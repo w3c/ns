@@ -1,12 +1,13 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix IEEE: <../../person/IEEE#>.
 @prefix Rob: <../../person/Robby_Simpson#>.
-@prefix Zig: <../../person/ZigBee#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
     reg:file [ reg:file "application/sep+xml"; reg:type "template" ];
     reg:name "sep+xml";
-    reg:xref Rob:, Zig:.
+    reg:updated "2024-04-16";
+    reg:xref IEEE:, Rob:.
 medi:application reg:record :Resource.
 

@@ -16,5 +16,5 @@ medi:n0 reg:person :.
 :
     reg:id "Stefan_Szilva";
     reg:name "Stefan Szilva";
-    reg:updated "2015-02-10";
-    reg:uri "mailto:szilva&changenet.sk".
+    reg:updated "2024-01-12";
+    reg:uri "mailto:stefan.szilva&gmail.com".

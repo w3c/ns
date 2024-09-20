@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Alex: <../../person/Alexander_Ivanov#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-05-13"^^XML:date;
+    reg:file [ reg:file "application/vnd.msgpack"; reg:type "template" ];
+    reg:name "vnd.msgpack";
+    reg:xref Alex:.
+medi:application reg:record :Resource.
+

@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Khr: <../../person/Khronos#>.
+@prefix S: <../../person/Saurabh_Bhatia#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-05-07"^^XML:date;
+    reg:file [ reg:file "application/gltf-buffer"; reg:type "template" ];
+    reg:name "gltf-buffer";
+    reg:xref Khr:, S:.
+medi:application reg:record :Resource.
+

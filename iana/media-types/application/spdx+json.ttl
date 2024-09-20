@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Lin: <../../person/Linux_Foundation#>.
+@prefix Ros: <../../person/Rose_Judge#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-11-03"^^XML:date;
+    reg:file [ reg:file "application/spdx+json"; reg:type "template" ];
+    reg:name "spdx+json";
+    reg:xref Lin:, Ros:.
+medi:application reg:record :Resource.
+

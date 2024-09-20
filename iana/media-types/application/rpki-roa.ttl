@@ -6,6 +6,7 @@
 :Resource
     reg:file [ reg:file "application/rpki-roa"; reg:type "template" ];
     reg:name "rpki-roa";
-    reg:xref html:rfc6481.
+    reg:updated "2023-12-15";
+    reg:xref html:rfc9582.
 medi:application reg:record :Resource.
 

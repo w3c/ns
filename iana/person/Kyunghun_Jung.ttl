@@ -10,5 +10,5 @@ medi:n0 reg:person :.
 :
     reg:id "Kyunghun_Jung";
     reg:name "Kyunghun Jung";
-    reg:updated "2016-10-03";
+    reg:updated "2017-12-04";
     reg:uri "mailto:kyunghun.jung&samsung.com".

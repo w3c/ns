@@ -8,5 +8,5 @@ medi:message reg:record :Resource.
 
 :Resource
     reg:file [ reg:file "message/news"; reg:type "template" ];
-    reg:name "news - OBSOLETED by RFC5537";
+    reg:name "news (OBSOLETED by  rfc5537 )";
     reg:xref Hen:, html:rfc5537.

@@ -5,7 +5,8 @@
 
 :Resource
     reg:file [ reg:file "application/ODA"; reg:type "template" ];
-    reg:name "oda";
-    reg:xref html:rfc2045, html:rfc2046.
+    reg:name "ODA";
+    reg:updated "2018-08-28";
+    reg:xref html:rfc1494.
 medi:application reg:record :Resource.
 

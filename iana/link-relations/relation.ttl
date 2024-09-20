@@ -1,108 +1,169 @@
-#Processed by Id
-        #    using base file:///devel/WWW/ns/iana/link-relations/raw-relation.ttl
-             @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+#Processed by Id: cwm.py,v 1.197 2007/12/13 15:38:39 syosi Exp 
+        #    using base file:///home/pa/animation/w3.cvs/WWW/ns/iana/link-relations/raw-relation.ttl
+        
+#  Notation3 generation by
+#       notation3.py,v 1.200 2007/12/11 21:18:08 syosi Exp
+
+#   Base was: file:///home/pa/animation/w3.cvs/WWW/ns/iana/link-relations/raw-relation.ttl
+     @prefix : <http://www.w3.org/2000/01/rdf-schema#> .
+    @prefix C2P: <https://c2pa.org/specifications/specifications/2.0/specs/C2PA_Specification.html#> .
     @prefix XML: <http://www.w3.org/2001/XMLSchema#> .
-    @prefix html: <https://tools.ietf.org/html/> .
     @prefix li: <http://www.w3.org/TR/2011/WD-html5-20110113/links.html#> .
-    @prefix lin: <http://www.w3.org/TR/html5/links.html#> .
-    @prefix link: <./> .
-    @prefix n0: <http://www.w3.org/TR/1999/> .
+    @prefix lin: <https://html.spec.whatwg.org/multipage/links.html#> .
     @prefix n1: <http://www.w3.org/TR/powder-dr/#> .
-    @prefix pingb: <http://www.hixie.ch/specs/pingback/> .
-    @prefix prelo: <http://www.w3.org/TR/preload/> .
+    @prefix n2: <https://wicg.github.io/media-feeds/#> .
+    @prefix n3: <https://www.w3.org/TR/micropub/#> .
+    @prefix n4: <https://www.w3.org/TR/P3P/#> .
+    @prefix n5: <https://www.w3.org/TR/pub-manifest/#> .
     @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-    @prefix re: <http://www.w3.org/TR/resource-hints/> .
     @prefix reg: <https://www.w3.org/ns/assignments/reg#> .
-    @prefix res: <https://www.w3.org/TR/resource-hints/> .
-    @prefix terms: <http://purl.org/dc/terms/> .
-    @prefix web: <http://www.w3.org/TR/webmention/> .
+    @prefix w: <https://solidproject.org/TR/wac#> .
     
     <>     <#registry> <#link-relations> .
     
     <#about>     a rdf:Property;
-         terms:description "Refers to a resource that is the subject of the link's context.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a resource that is the subject of the link's context.";
+         :definedBy <link-relations>;
          :label "about";
          reg:spec "rfc6903 , section 2" .
     
+    <#acl>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2022-03-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "Asserts that the link target provides an access control resource for the link context.";
+         :definedBy <link-relations>;
+         :label "acl";
+         reg:spec  [
+             reg:xref w:acl-link-relation ];
+         reg:updated "2022-09-28"^^XML:date .
+    
     <#alternate>     a rdf:Property;
-         terms:description "Refers to a substitute for this context";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a substitute for this context";
+         :definedBy <link-relations>;
          :label "alternate";
          reg:spec  [
              reg:xref lin:link-type-alternate ] .
     
+    <#amphtml>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2020-01-21"^^XML:date;
+         <http://purl.org/dc/terms/description> "Used to reference alternative content that uses the AMP profile of the HTML format.";
+         :definedBy <link-relations>;
+         :label "amphtml";
+         reg:spec  [
+             reg:xref <https://amp.dev/documentation/guides-and-tutorials/learn/spec/amphtml/> ] .
+    
     <#appendix>     a rdf:Property;
-         terms:description "Refers to an appendix.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to an appendix.";
+         :definedBy <link-relations>;
          :label "appendix";
          reg:spec  [
-             reg:xref n0:REC-html401-19991224 ] .
+             reg:xref <https://www.w3.org/TR/html401/> ] .
+    
+    <#apple-touch-icon>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-25"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to an icon for the context. Synonym for icon.";
+         :definedBy <link-relations>;
+         :label "apple-touch-icon";
+         reg:spec  [
+             reg:xref <https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW3> ] .
+    
+    <#apple-touch-startup-image>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-25"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to a launch screen for the context.";
+         :definedBy <link-relations>;
+         :label "apple-touch-startup-image";
+         reg:spec  [
+             reg:xref <https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/ConfiguringWebApplications/ConfiguringWebApplications.html#//apple_ref/doc/uid/TP40002051-CH3-SW3> ] .
     
     <#archives>     a rdf:Property;
-         terms:date "2010-11-09"^^XML:date;
-         terms:description """Refers to a collection of records, documents, or other
+         <http://purl.org/dc/terms/date> "2010-11-09"^^XML:date;
+         <http://purl.org/dc/terms/description> """Refers to a collection of records, documents, or other
       materials of historical interest.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "archives";
          reg:spec  [
              reg:xref li:rel-archives ] .
     
     <#author>     a rdf:Property;
-         terms:date "2010-11-09"^^XML:date;
-         terms:description "Refers to the context's author.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/date> "2010-11-09"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to the context's author.";
+         :comment "See also 'me'";
+         :definedBy <link-relations>;
          :label "author";
          reg:spec  [
              reg:xref lin:link-type-author ] .
     
     <#blocked-by>     a rdf:Property;
-         terms:date "2015-12-21"^^XML:date;
-         terms:description """Identifies the entity that blocks access to a resource
+         <http://purl.org/dc/terms/date> "2015-12-21"^^XML:date;
+         <http://purl.org/dc/terms/description> """Identifies the entity that blocks access to a resource
       following receipt of a legal demand.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "blocked-by";
          reg:spec  [
-             reg:xref html:rfc7725 ] .
+             reg:xref <https://tools.ietf.org/html/rfc7725> ] .
     
     <#bookmark>     a rdf:Property;
-         terms:description "Gives a permanent link to use for bookmarking purposes.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Gives a permanent link to use for bookmarking purposes.";
+         :definedBy <link-relations>;
          :label "bookmark";
          reg:spec  [
              reg:xref lin:link-type-bookmark ] .
     
+    <#c2pa-manifest>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2024-08-01"^^XML:date;
+         <http://purl.org/dc/terms/description> "This link relation identifies the C2PA Manifest associated with the link context";
+         :definedBy <link-relations>;
+         :label "c2pa-manifest";
+         reg:spec  [
+             reg:xref C2P:_by_link_header ] .
+    
     <#canonical>     a rdf:Property;
-         terms:description "Designates the preferred version of a resource (the IRI and its contents).";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Designates the preferred version of a resource (the IRI and its contents).";
+         :definedBy <link-relations>;
          :label "canonical";
          reg:spec  [
-             reg:xref html:rfc6596 ] .
+             reg:xref <https://tools.ietf.org/html/rfc6596> ] .
     
     <#chapter>     a rdf:Property;
-         terms:description "Refers to a chapter in a collection of resources.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a chapter in a collection of resources.";
+         :definedBy <link-relations>;
          :label "chapter";
          reg:spec  [
-             reg:xref n0:REC-html401-19991224 ] .
+             reg:xref <https://www.w3.org/TR/html401/> ] .
+    
+    <#cite-as>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2017-10-26"^^XML:date;
+         <http://purl.org/dc/terms/description> "Indicates that the link target is preferred over the link context for the purpose of permanent citation.";
+         :definedBy <link-relations>;
+         :label "cite-as";
+         reg:spec  [
+             reg:xref <https://tools.ietf.org/html/rfc8574> ];
+         reg:updated "2019-02-26"^^XML:date .
     
     <#collection>     a rdf:Property;
-         terms:description "The target IRI points to a resource which represents the collection resource for the context IRI.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "The target IRI points to a resource which represents the collection resource for the context IRI.";
+         :definedBy <link-relations>;
          :label "collection";
          reg:spec  [
-             reg:xref html:rfc6573 ] .
+             reg:xref <https://tools.ietf.org/html/rfc6573> ] .
+    
+    <#compression-dictionary>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2024-09-13"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to a compression dictionary used for content encoding.";
+         :definedBy <link-relations>;
+         :label "compression-dictionary";
+         reg:spec  [
+             reg:xref <https://tools.ietf.org/html/RFC-ietf-httpbis-compression-dictionary-19> ] .
     
     <#contents>     a rdf:Property;
-         terms:description "Refers to a table of contents.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a table of contents.";
+         :definedBy <link-relations>;
          :label "contents";
          reg:spec  [
-             reg:xref n0:REC-html401-19991224 ] .
+             reg:xref <https://www.w3.org/TR/html401/> ] .
     
-    <#convertedFrom>     a rdf:Property;
-         terms:date "2016-08-12"^^XML:date;
-         terms:description """The document linked to was later converted to the
+    <#convertedfrom>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2016-08-12"^^XML:date;
+         <http://purl.org/dc/terms/description> """The document linked to was later converted to the
       document that contains this link relation.  For example, an RFC can
       have a link to the Internet-Draft that became the RFC; in that case,
       the link relation would be "convertedFrom".""";
@@ -111,44 +172,45 @@
       is also different than "previous" in that this relation is used for
       converted resources, not those that are part of a sequence of
       resources.""";
-         :definedBy link:link-relations;
-         :label "convertedFrom";
+         :definedBy <link-relations>;
+         :label "convertedfrom";
          reg:spec  [
-             reg:xref html:rfc7991 ] .
+             reg:xref <https://tools.ietf.org/html/rfc7991> ];
+         reg:updated "2022-10-07"^^XML:date .
     
     <#copyright>     a rdf:Property;
-         terms:description """Refers to a copyright statement that applies to the
+         <http://purl.org/dc/terms/description> """Refers to a copyright statement that applies to the
     link's context.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "copyright";
          reg:spec  [
-             reg:xref n0:REC-html401-19991224 ] .
+             reg:xref <https://www.w3.org/TR/html401/> ] .
     
     <#create-form>     a rdf:Property;
-         terms:description "The target IRI points to a resource where a submission form can be obtained.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "The target IRI points to a resource where a submission form can be obtained.";
+         :definedBy <link-relations>;
          :label "create-form";
          reg:spec  [
-             reg:xref html:rfc6861 ] .
+             reg:xref <https://tools.ietf.org/html/rfc6861> ] .
     
     <#current>     a rdf:Property;
-         terms:description """Refers to a resource containing the most recent
+         <http://purl.org/dc/terms/description> """Refers to a resource containing the most recent
       item(s) in a collection of resources.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "current";
          reg:spec  [
-             reg:xref html:rfc5005 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5005> ] .
     
     <#describedby>     a rdf:Property;
-         terms:description """Refers to a resource providing information about the
+         <http://purl.org/dc/terms/description> """Refers to a resource providing information about the
       link's context.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "describedby";
          reg:spec  [
              reg:xref n1:assoc-linking ] .
     
     <#describes>     a rdf:Property;
-         terms:description """The relationship A 'describes' B asserts that
+         <http://purl.org/dc/terms/description> """The relationship A 'describes' B asserts that
       resource A provides a description of resource B. There are no
       constraints on the format or representation of either A or B,
       neither are there any further constraints on either resource.""";
@@ -158,190 +220,337 @@
         'describes' established a relation from the describing resource to
         the resource it describes.  If B is 'describedby' A, then A
         'describes' B.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "describes";
          reg:spec  [
-             reg:xref html:rfc6892 ] .
+             reg:xref <https://tools.ietf.org/html/rfc6892> ] .
     
     <#disclosure>     a rdf:Property;
-         terms:description """Refers to a list of patent disclosures made with respect to 
+         <http://purl.org/dc/terms/description> """Refers to a list of patent disclosures made with respect to 
       material for which 'disclosure' relation is specified.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "disclosure";
          reg:spec  [
-             reg:xref html:rfc6579 ] .
+             reg:xref <https://tools.ietf.org/html/rfc6579> ] .
     
     <#dns-prefetch>     a rdf:Property;
-         terms:date "2016-02-29"^^XML:date;
-         terms:description """Used to indicate an origin that will be used to fetch required 
+         <http://purl.org/dc/terms/date> "2016-02-29"^^XML:date;
+         <http://purl.org/dc/terms/description> """Used to indicate an origin that will be used to fetch required 
       resources for the link context, and that the user agent ought to resolve 
       as early as possible.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "dns-prefetch";
          reg:spec  [
-             reg:xref res: ] .
+             reg:xref lin:link-type-dns-prefetch ];
+         reg:updated "2023-07-07"^^XML:date .
     
     <#duplicate>     a rdf:Property;
-         terms:description """Refers to a resource whose available representations
+         <http://purl.org/dc/terms/description> """Refers to a resource whose available representations
       are byte-for-byte identical with the corresponding representations of
       the context IRI.""";
          :comment """This relation is for static resources.  That is, an HTTP GET
       request on any duplicate will return the same representation.  It
       does not make sense for dynamic or POSTable resources and should not
       be used for them.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "duplicate";
          reg:spec  [
-             reg:xref html:rfc6249 ] .
+             reg:xref <https://tools.ietf.org/html/rfc6249> ] .
     
     <#edit>     a rdf:Property;
-         terms:description """Refers to a resource that can be used to edit the
+         <http://purl.org/dc/terms/description> """Refers to a resource that can be used to edit the
       link's context.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "edit";
          reg:spec  [
-             reg:xref html:rfc5023 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5023> ] .
     
     <#edit-form>     a rdf:Property;
-         terms:description """The target IRI points to a resource where a submission form for
+         <http://purl.org/dc/terms/description> """The target IRI points to a resource where a submission form for
       editing associated resource can be obtained.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "edit-form";
          reg:spec  [
-             reg:xref html:rfc6861 ] .
+             reg:xref <https://tools.ietf.org/html/rfc6861> ] .
     
     <#edit-media>     a rdf:Property;
-         terms:description """Refers to a resource that can be used to edit media
+         <http://purl.org/dc/terms/description> """Refers to a resource that can be used to edit media
       associated with the link's context.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "edit-media";
          reg:spec  [
-             reg:xref html:rfc5023 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5023> ] .
     
     <#enclosure>     a rdf:Property;
-         terms:description """Identifies a related resource that is potentially
+         <http://purl.org/dc/terms/description> """Identifies a related resource that is potentially
       large and might require special handling.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "enclosure";
          reg:spec  [
-             reg:xref html:rfc4287 ] .
+             reg:xref <https://tools.ietf.org/html/rfc4287> ] .
+    
+    <#external>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-25"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to a resource that is not part of the same site as the current context.";
+         :definedBy <link-relations>;
+         :label "external";
+         reg:spec  [
+             reg:xref lin:link-type-external ] .
     
     <#first>     a rdf:Property;
-         terms:description """An IRI that refers to the furthest preceding resource
+         <http://purl.org/dc/terms/description> """An IRI that refers to the furthest preceding resource
     in a series of resources.""";
          :comment """This relation type registration did not indicate a
       reference.  Originally requested by Mark Nottingham in December
       2004.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "first";
          reg:spec  [
-             reg:xref html:RFC-nottingham-rfc5988bis-08 ] .
+             reg:xref <https://tools.ietf.org/html/rfc8288> ] .
     
     <#glossary>     a rdf:Property;
-         terms:description "Refers to a glossary of terms.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a glossary of terms.";
+         :definedBy <link-relations>;
          :label "glossary";
          reg:spec  [
-             reg:xref n0:REC-html401-19991224 ] .
+             reg:xref <https://www.w3.org/TR/html401/> ] .
     
     <#help>     a rdf:Property;
-         terms:description "Refers to context-sensitive help.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to context-sensitive help.";
+         :definedBy <link-relations>;
          :label "help";
          reg:spec  [
              reg:xref lin:link-type-help ] .
     
     <#hosts>     a rdf:Property;
-         terms:description """Refers to a resource hosted by the server indicated by
+         <http://purl.org/dc/terms/description> """Refers to a resource hosted by the server indicated by
       the link context.""";
          :comment """This relation is used in CoRE where links are retrieved as a
       "/.well-known/core" resource representation, and is the default
       relation type in the CoRE Link Format.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "hosts";
          reg:spec  [
-             reg:xref html:rfc6690 ] .
+             reg:xref <https://tools.ietf.org/html/rfc6690> ] .
     
     <#hub>     a rdf:Property;
-         terms:description """Refers to a hub that enables registration for
+         <http://purl.org/dc/terms/description> """Refers to a hub that enables registration for
     notification of updates to the context.""";
          :comment "This relation type was requested by Brett Slatkin.";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "hub";
          reg:spec  [
-             reg:xref <http://pubsubhubbub.googlecode.com> ] .
+             reg:xref <https://www.w3.org/TR/websub/> ];
+         reg:updated "2019-07-29" .
+    
+    <#ice-server>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2024-08-27"^^XML:date;
+         <http://purl.org/dc/terms/description> "Conveys the STUN and TURN servers that can be used by an ICE Agent to establish a connection with a peer.";
+         :definedBy <link-relations>;
+         :label "ice-server";
+         reg:spec  [
+             reg:xref <https://tools.ietf.org/html/RFC-ietf-wish-whip-16> ] .
     
     <#icon>     a rdf:Property;
-         terms:date "2010-11-09"^^XML:date;
-         terms:description "Refers to an icon representing the link's context.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/date> "2010-11-09"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to an icon representing the link's context.";
+         :definedBy <link-relations>;
          :label "icon";
          reg:spec  [
-             reg:xref lin:link-type-icon ] .
+             reg:xref lin:rel-icon ] .
     
     <#index>     a rdf:Property;
-         terms:description "Refers to an index.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to an index.";
+         :definedBy <link-relations>;
          :label "index";
          reg:spec  [
-             reg:xref n0:REC-html401-19991224 ] .
+             reg:xref <https://www.w3.org/TR/html401/> ] .
+    
+    <#intervalafter>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval that ends before the beginning of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalafter";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalAfter  section 4.2.21";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervalbefore>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval that begins after the end of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalbefore";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalBefore  section 4.2.22";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervalcontains>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval that begins after the beginning of the time interval associated with the context resource, and ends before the end of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalcontains";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalContains  section 4.2.23";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervaldisjoint>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval that begins after the end of the time interval associated with the context resource, or ends before the beginning of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervaldisjoint";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalDisjoint  section 4.2.24";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervalduring>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval that begins before the beginning of the time interval associated with the context resource, and ends after the end of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalduring";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalDuring  section 4.2.25";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervalequals>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval whose beginning coincides with the beginning of the time interval associated with the context resource, and whose end coincides with the end of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalequals";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalEquals  section 4.2.26";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervalfinishedby>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval that begins after the beginning of the time interval associated with the context resource, and whose end coincides with the end of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalfinishedby";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalFinishedBy  section 4.2.27";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervalfinishes>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval that begins before the beginning of the time interval associated with the context resource, and whose end coincides with the end of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalfinishes";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalFinishes  section 4.2.28";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervalin>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval that begins before or is coincident with the beginning of the time interval associated with the context resource, and ends after or is coincident with the end of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalin";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalIn  section 4.2.29";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervalmeets>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval whose beginning coincides with the end of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalmeets";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalMeets  section 4.2.30";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervalmetby>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval whose end coincides with the beginning of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalmetby";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalMetBy  section 4.2.31";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervaloverlappedby>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval that begins before the beginning of the time interval associated with the context resource, and ends after the beginning of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervaloverlappedby";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalOverlappedBy  section 4.2.32";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervaloverlaps>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval that begins before the end of the time interval associated with the context resource, and ends after the end of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervaloverlaps";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalOverlaps  section 4.2.33";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervalstartedby>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval whose beginning coincides with the beginning of the time interval associated with the context resource, and ends before the end of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalstartedby";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalStartedBy  section 4.2.34";
+         reg:updated "2022-10-07"^^XML:date .
+    
+    <#intervalstarts>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2018-11-29"^^XML:date;
+         <http://purl.org/dc/terms/description> "refers to a resource associated with a time interval whose beginning coincides with the beginning of the time interval associated with the context resource, and ends after the end of the time interval associated with the context resource";
+         :definedBy <link-relations>;
+         :label "intervalstarts";
+         reg:spec "https://www.w3.org/TR/owl-time/#time:intervalStarts  section 4.2.35";
+         reg:updated "2022-10-07"^^XML:date .
     
     <#item>     a rdf:Property;
-         terms:description "The target IRI points to a resource that is a member of the collection represented by the context IRI.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "The target IRI points to a resource that is a member of the collection represented by the context IRI.";
+         :definedBy <link-relations>;
          :label "item";
          reg:spec  [
-             reg:xref html:rfc6573 ] .
+             reg:xref <https://tools.ietf.org/html/rfc6573> ] .
     
     <#last>     a rdf:Property;
-         terms:description """An IRI that refers to the furthest following resource
+         <http://purl.org/dc/terms/description> """An IRI that refers to the furthest following resource
       in a series of resources.""";
          :comment """This relation type registration did not indicate a
       reference. Originally requested by Mark Nottingham in December
       2004.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "last";
          reg:spec  [
-             reg:xref html:RFC-nottingham-rfc5988bis-08 ] .
+             reg:xref <https://tools.ietf.org/html/rfc8288> ] .
     
     <#latest-version>     a rdf:Property;
-         terms:description """Points to a resource containing the latest (e.g.,
+         <http://purl.org/dc/terms/description> """Points to a resource containing the latest (e.g.,
       current) version of the context.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "latest-version";
          reg:spec  [
-             reg:xref html:rfc5829 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5829> ] .
     
     <#license>     a rdf:Property;
-         terms:description "Refers to a license associated with this context.";
+         <http://purl.org/dc/terms/description> "Refers to a license associated with this context.";
          :comment """For implications of use in HTML, see: 
       http://www.w3.org/TR/html5/links.html#link-type-license""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "license";
          reg:spec  [
-             reg:xref html:rfc4946 ] .
+             reg:xref <https://tools.ietf.org/html/rfc4946> ] .
     
-    <#link-relations>     terms:created "2005-08-26"^^XML:date;
-         terms:title "Link Relations";
+    <#link-relations>     <http://purl.org/dc/terms/created> "2005-08-26"^^XML:date;
+         <http://purl.org/dc/terms/title> "Link Relations";
          reg:id "link-relations";
          reg:registry <#link-relations-1>;
-         reg:updated "2017-08-23" .
+         reg:updated "2024-09-13" .
     
-    <#link-relations-1>     terms:title "Link Relation Types";
+    <#link-relations-1>     <http://purl.org/dc/terms/title> "Link Relation Types";
+         :comment """New link relations, along with changes to existing relations, can be requested 
+using the  https://github.com/protocol-registries/link-relations  or the mailing list defined in  rfc8288 .""";
          reg:expert "Mark Nottingham, Julian Reschke, Jan Algermissen";
          reg:id "link-relations-1";
          reg:record <#about>,
+                <#acl>,
                 <#alternate>,
+                <#amphtml>,
                 <#appendix>,
+                <#apple-touch-icon>,
+                <#apple-touch-startup-image>,
                 <#archives>,
                 <#author>,
                 <#blocked-by>,
                 <#bookmark>,
+                <#c2pa-manifest>,
                 <#canonical>,
                 <#chapter>,
+                <#cite-as>,
                 <#collection>,
+                <#compression-dictionary>,
                 <#contents>,
-                <#convertedFrom>,
+                <#convertedfrom>,
                 <#copyright>,
                 <#create-form>,
                 <#current>,
@@ -354,26 +563,55 @@
                 <#edit-form>,
                 <#edit-media>,
                 <#enclosure>,
+                <#external>,
                 <#first>,
                 <#glossary>,
                 <#help>,
                 <#hosts>,
                 <#hub>,
+                <#ice-server>,
                 <#icon>,
                 <#index>,
+                <#intervalafter>,
+                <#intervalbefore>,
+                <#intervalcontains>,
+                <#intervaldisjoint>,
+                <#intervalduring>,
+                <#intervalequals>,
+                <#intervalfinishedby>,
+                <#intervalfinishes>,
+                <#intervalin>,
+                <#intervalmeets>,
+                <#intervalmetby>,
+                <#intervaloverlappedby>,
+                <#intervaloverlaps>,
+                <#intervalstartedby>,
+                <#intervalstarts>,
                 <#item>,
                 <#last>,
                 <#latest-version>,
                 <#license>,
+                <#linkset>,
                 <#lrdd>,
+                <#manifest>,
+                <#mask-icon>,
+                <#me>,
+                <#media-feed>,
                 <#memento>,
+                <#micropub>,
+                <#modulepreload>,
                 <#monitor>,
                 <#monitor-group>,
                 <#next>,
                 <#next-archive>,
                 <#nofollow>,
+                <#noopener>,
                 <#noreferrer>,
+                <#opener>,
+                <#openid2.local_id>,
+                <#openid2.provider>,
                 <#original>,
+                <#p3pv1>,
                 <#payment>,
                 <#pingback>,
                 <#preconnect>,
@@ -387,22 +625,32 @@
                 <#previous>,
                 <#privacy-policy>,
                 <#profile>,
+                <#publication>,
                 <#related>,
                 <#replies>,
                 <#restconf>,
+                <#ruleinput>,
                 <#search>,
                 <#section>,
                 <#self>,
                 <#service>,
+                <#service-desc>,
+                <#service-doc>,
+                <#service-meta>,
+                <#sip-trunking-capability>,
+                <#sponsored>,
                 <#start>,
+                <#status>,
                 <#stylesheet>,
                 <#subsection>,
                 <#successor-version>,
+                <#sunset>,
                 <#tag>,
                 <#terms-of-service>,
                 <#timegate>,
                 <#timemap>,
                 <#type>,
+                <#ugc>,
                 <#up>,
                 <#version-history>,
                 <#via>,
@@ -410,10 +658,20 @@
                 <#working-copy>,
                 <#working-copy-of>;
          reg:registration_rule "Specification Required";
-         reg:xref html:RFC-nottingham-rfc5988bis-08 .
+         reg:xref <https://tools.ietf.org/html/rfc8288> .
+    
+    <#linkset>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2022-05-11"^^XML:date;
+         <http://purl.org/dc/terms/description> """The link target of a link with the "linkset" relation
+      type provides a set of links, including links in which the link
+      context of the link participates.""";
+         :definedBy <link-relations>;
+         :label "linkset";
+         reg:spec  [
+             reg:xref <https://tools.ietf.org/html/rfc9264> ] .
     
     <#lrdd>     a rdf:Property;
-         terms:description """Refers to further information about the link's context,
+         <http://purl.org/dc/terms/description> """Refers to further information about the link's context,
       expressed as a LRDD ("Link-based Resource Descriptor Document")
       resource.  See  rfc6415  for information about
       processing this relation type in host-meta documents. When used
@@ -421,80 +679,171 @@
       Multiple instances indicate additional LRDD resources. LRDD
       resources MUST have an "application/xrd+xml" representation, and
       MAY have others.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "lrdd";
          reg:spec  [
-             reg:xref html:rfc6415 ] .
+             reg:xref <https://tools.ietf.org/html/rfc6415> ] .
+    
+    <#manifest>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-25"^^XML:date;
+         <http://purl.org/dc/terms/description> "Links to a manifest file for the context.";
+         :definedBy <link-relations>;
+         :label "manifest";
+         reg:spec  [
+             reg:xref lin:link-type-manifest ];
+         reg:updated "2020-11-16"^^XML:date .
+    
+    <#mask-icon>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-26"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to a mask that can be applied to the icon for the context.";
+         :definedBy <link-relations>;
+         :label "mask-icon";
+         reg:spec  [
+             reg:xref <https://developer.apple.com/library/archive/documentation/AppleApplications/Reference/SafariWebContent/pinnedTabs/pinnedTabs.html#//apple_ref/doc/uid/TP40002051-CH18-SW1> ] .
+    
+    <#me>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2023-09-18"^^XML:date;
+         <http://purl.org/dc/terms/description> "Links to a resource about the author of the link's context.";
+         :comment "See also 'author'";
+         :definedBy <link-relations>;
+         :label "me";
+         reg:spec  [
+             reg:xref <https://microformats.org/wiki/rel-me> ] .
+    
+    <#media-feed>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2020-06-19"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to a feed of personalised media recommendations relevant to the link context.";
+         :definedBy <link-relations>;
+         :label "media-feed";
+         reg:spec  [
+             reg:xref n2:discovery-of-media-feeds ] .
     
     <#memento>     a rdf:Property;
-         terms:date "2013-11-01"^^XML:date;
-         terms:description "The Target IRI points to a Memento, a fixed resource that will not change state anymore.";
+         <http://purl.org/dc/terms/date> "2013-11-01"^^XML:date;
+         <http://purl.org/dc/terms/description> "The Target IRI points to a Memento, a fixed resource that will not change state anymore.";
          :comment """A Memento for an Original Resource is a resource that
       encapsulates a prior state of the Original Resource.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "memento";
          reg:spec  [
-             reg:xref html:rfc7089 ] .
+             reg:xref <https://tools.ietf.org/html/rfc7089> ] .
+    
+    <#micropub>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-25"^^XML:date;
+         <http://purl.org/dc/terms/description> "Links to the context's Micropub endpoint.";
+         :definedBy <link-relations>;
+         :label "micropub";
+         reg:spec  [
+             reg:xref n3:endpoint-discovery-p-1 ] .
+    
+    <#modulepreload>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-25"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to a module that the user agent is to preemptively fetch and store for use in the current context.";
+         :definedBy <link-relations>;
+         :label "modulepreload";
+         reg:spec  [
+             reg:xref lin:link-type-modulepreload ] .
     
     <#monitor>     a rdf:Property;
-         terms:description "Refers to a resource that can be used to monitor changes in an HTTP resource.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a resource that can be used to monitor changes in an HTTP resource.";
+         :definedBy <link-relations>;
          :label "monitor";
          reg:spec  [
-             reg:xref html:rfc5989 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5989> ] .
     
     <#monitor-group>     a rdf:Property;
-         terms:description "Refers to a resource that can be used to monitor changes in a specified group of HTTP resources.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a resource that can be used to monitor changes in a specified group of HTTP resources.";
+         :definedBy <link-relations>;
          :label "monitor-group";
          reg:spec  [
-             reg:xref html:rfc5989 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5989> ] .
     
     <#next>     a rdf:Property;
-         terms:date "2006-02-02"^^XML:date;
-         terms:description """Indicates that the link's context is a part of a series, and
+         <http://purl.org/dc/terms/date> "2006-02-02"^^XML:date;
+         <http://purl.org/dc/terms/description> """Indicates that the link's context is a part of a series, and
       that the next in the series is the link target.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "next";
          reg:spec  [
              reg:xref lin:link-type-next ] .
     
     <#next-archive>     a rdf:Property;
-         terms:description "Refers to the immediately following archive resource.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to the immediately following archive resource.";
+         :definedBy <link-relations>;
          :label "next-archive";
          reg:spec  [
-             reg:xref html:rfc5005 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5005> ] .
     
     <#nofollow>     a rdf:Property;
-         terms:date "2010-11-09"^^XML:date;
-         terms:description "Indicates that the context’s original author or publisher does not endorse the link target.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/date> "2010-11-09"^^XML:date;
+         <http://purl.org/dc/terms/description> "Indicates that the context’s original author or publisher does not endorse the link target.";
+         :definedBy <link-relations>;
          :label "nofollow";
          reg:spec  [
              reg:xref lin:link-type-nofollow ] .
     
+    <#noopener>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-25"^^XML:date;
+         <http://purl.org/dc/terms/description> "Indicates that any newly created top-level browsing context which results from following the link will not be an auxiliary browsing context.";
+         :definedBy <link-relations>;
+         :label "noopener";
+         reg:spec  [
+             reg:xref lin:link-type-noopener ] .
+    
     <#noreferrer>     a rdf:Property;
-         terms:date "2010-11-09"^^XML:date;
-         terms:description "Indicates that no referrer information is to be leaked when following the link.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/date> "2010-11-09"^^XML:date;
+         <http://purl.org/dc/terms/description> "Indicates that no referrer information is to be leaked when following the link.";
+         :definedBy <link-relations>;
          :label "noreferrer";
          reg:spec  [
              reg:xref lin:link-type-noreferrer ] .
     
+    <#opener>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-25"^^XML:date;
+         <http://purl.org/dc/terms/description> "Indicates that any newly created top-level browsing context which results from following the link will be an auxiliary browsing context.";
+         :definedBy <link-relations>;
+         :label "opener";
+         reg:spec  [
+             reg:xref lin:link-type-opener ] .
+    
+    <#openid2.local_id>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-25"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to an OpenID Authentication server on which the context relies for an assertion that the end user controls an Identifier.";
+         :definedBy <link-relations>;
+         :label "openid2.local_id";
+         reg:spec  [
+             reg:xref <https://openid.net/specs/openid-authentication-2_0.html#rfc.section.7.3.3> ] .
+    
+    <#openid2.provider>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-25"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to a resource which accepts OpenID Authentication protocol messages for the context.";
+         :definedBy <link-relations>;
+         :label "openid2.provider";
+         reg:spec  [
+             reg:xref <https://openid.net/specs/openid-authentication-2_0.html#rfc.section.7.3.3> ] .
+    
     <#original>     a rdf:Property;
-         terms:date "2013-11-01"^^XML:date;
-         terms:description "The Target IRI points to an Original Resource.";
+         <http://purl.org/dc/terms/date> "2013-11-01"^^XML:date;
+         <http://purl.org/dc/terms/description> "The Target IRI points to an Original Resource.";
          :comment """An Original Resource is a resource that exists or used to
       exist, and for which access to one of its prior states may be
       required.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "original";
          reg:spec  [
-             reg:xref html:rfc7089 ] .
+             reg:xref <https://tools.ietf.org/html/rfc7089> ] .
+    
+    <#p3pv1>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-09-25"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to a P3P privacy policy for the context.";
+         :definedBy <link-relations>;
+         :label "p3pv1";
+         reg:spec  [
+             reg:xref n4:syntax_link ];
+         reg:updated "2022-10-07"^^XML:date .
     
     <#payment>     a rdf:Property;
-         terms:description "Indicates a resource where payment is accepted.";
+         <http://purl.org/dc/terms/description> "Indicates a resource where payment is accepted.";
          :comment """This relation type registration did not indicate a
       reference.  Requested by Joshua Kinberg and Robert Sayre.  It is
       meant as a general way to facilitate acts of payment, and thus
@@ -509,301 +858,398 @@
       item containing a book review may include a rel="payment" link
       that points to the location where the book may be purchased
       through an online retailer.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "payment";
          reg:spec  [
-             reg:xref html:RFC-nottingham-rfc5988bis-08 ] .
+             reg:xref <https://tools.ietf.org/html/rfc8288> ] .
     
     <#pingback>     a rdf:Property;
-         terms:date "2016-02-04"^^XML:date;
-         terms:description "Gives the address of the pingback resource for the link context.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/date> "2016-02-04"^^XML:date;
+         <http://purl.org/dc/terms/description> "Gives the address of the pingback resource for the link context.";
+         :definedBy <link-relations>;
          :label "pingback";
          reg:spec  [
-             reg:xref pingb:pingback ] .
+             reg:xref <http://www.hixie.ch/specs/pingback/pingback> ] .
     
     <#preconnect>     a rdf:Property;
-         terms:date "2016-02-29"^^XML:date;
-         terms:description """Used to indicate an origin that will be used to fetch required 
+         <http://purl.org/dc/terms/date> "2016-02-29"^^XML:date;
+         <http://purl.org/dc/terms/description> """Used to indicate an origin that will be used to fetch required 
       resources for the link context. Initiating an early connection, which 
       includes the DNS lookup, TCP handshake, and optional TLS negotiation, 
       allows the user agent to mask the high latency costs of establishing a 
       connection.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "preconnect";
          reg:spec  [
-             reg:xref res: ] .
+             reg:xref lin:link-type-preconnect ];
+         reg:updated "2023-07-07"^^XML:date .
     
     <#predecessor-version>     a rdf:Property;
-         terms:description """Points to a resource containing the predecessor
+         <http://purl.org/dc/terms/description> """Points to a resource containing the predecessor
       version in the version history.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "predecessor-version";
          reg:spec  [
-             reg:xref html:rfc5829 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5829> ] .
     
     <#prefetch>     a rdf:Property;
-         terms:date "2010-11-09"^^XML:date;
-         terms:description """The prefetch link relation type is used to identify a resource 
+         <http://purl.org/dc/terms/date> "2010-11-09"^^XML:date;
+         <http://purl.org/dc/terms/description> """The prefetch link relation type is used to identify a resource 
       that might be required by the next navigation from the link context, and 
       that the user agent ought to fetch, such that the user agent can deliver a 
       faster response once the resource is requested in the future.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "prefetch";
          reg:spec  [
-             reg:xref re: ];
-         reg:updated "2016-03-03"^^XML:date .
+             reg:xref lin:link-type-prefetch ];
+         reg:updated "2023-07-07"^^XML:date .
     
     <#preload>     a rdf:Property;
-         terms:date "2016-01-22"^^XML:date;
-         terms:description """Refers to a resource that should be loaded early in the 
+         <http://purl.org/dc/terms/date> "2016-01-22"^^XML:date;
+         <http://purl.org/dc/terms/description> """Refers to a resource that should be loaded early in the 
       processing of the link's context, without blocking rendering.""";
          :comment "Additional target attributes establish the detailed fetch properties of the link.";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "preload";
          reg:spec  [
-             reg:xref prelo: ] .
+             reg:xref <http://www.w3.org/TR/preload/> ] .
     
     <#prerender>     a rdf:Property;
-         terms:date "2016-02-29"^^XML:date;
-         terms:description """Used to identify a resource that might be required by the next 
+         <http://purl.org/dc/terms/date> "2016-02-29"^^XML:date;
+         <http://purl.org/dc/terms/description> """Used to identify a resource that might be required by the next 
       navigation from the link context, and that the user agent ought to fetch 
       and execute, such that the user agent can deliver a faster response once 
       the resource is requested in the future.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "prerender";
          reg:spec  [
-             reg:xref res: ] .
+             reg:xref <https://www.w3.org/TR/2023/DISC-resource-hints-20230314/> ];
+         reg:updated "2023-07-07"^^XML:date .
     
     <#prev>     a rdf:Property;
-         terms:description """Indicates that the link's context is a part of a series, and
+         <http://purl.org/dc/terms/description> """Indicates that the link's context is a part of a series, and
       that the previous in the series is the link target.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "prev";
          reg:spec  [
              reg:xref lin:link-type-prev ] .
     
     <#prev-archive>     a rdf:Property;
-         terms:description "Refers to the immediately preceding archive resource.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to the immediately preceding archive resource.";
+         :definedBy <link-relations>;
          :label "prev-archive";
          reg:spec  [
-             reg:xref html:rfc5005 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5005> ] .
     
     <#preview>     a rdf:Property;
-         terms:description "Refers to a resource that provides a preview of the link's context.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a resource that provides a preview of the link's context.";
+         :definedBy <link-relations>;
          :label "preview";
          reg:spec "rfc6903 , section 3" .
     
     <#previous>     a rdf:Property;
-         terms:description """Refers to the previous resource in an ordered series
+         <http://purl.org/dc/terms/description> """Refers to the previous resource in an ordered series
       of resources.  Synonym for "prev".""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "previous";
          reg:spec  [
-             reg:xref n0:REC-html401-19991224 ] .
+             reg:xref <https://www.w3.org/TR/html401/> ] .
     
     <#privacy-policy>     a rdf:Property;
-         terms:description "Refers to a privacy policy associated with the link's context.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a privacy policy associated with the link's context.";
+         :definedBy <link-relations>;
          :label "privacy-policy";
          reg:spec "rfc6903 , section 4" .
     
     <#profile>     a rdf:Property;
-         terms:description """Identifying that a resource representation conforms
+         <http://purl.org/dc/terms/description> """Identifying that a resource representation conforms
 to a certain profile, without affecting the non-profile semantics
 of the resource representation.""";
          :comment """Profile URIs are primarily intended to be used as
 identifiers, and thus clients SHOULD NOT indiscriminately access
 profile URIs.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "profile";
          reg:spec  [
-             reg:xref html:rfc6906 ] .
+             reg:xref <https://tools.ietf.org/html/rfc6906> ] .
+    
+    <#publication>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2020-01-07"^^XML:date;
+         <http://purl.org/dc/terms/description> """Links to a publication manifest. A manifest represents 
+      structured information about a publication, such as informative metadata, 
+      a list of resources, and a default reading order.""";
+         :definedBy <link-relations>;
+         :label "publication";
+         reg:spec  [
+             reg:xref n5:link-relation-type-registration ] .
     
     <#related>     a rdf:Property;
-         terms:description "Identifies a related resource.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Identifies a related resource.";
+         :definedBy <link-relations>;
          :label "related";
          reg:spec  [
-             reg:xref html:rfc4287 ] .
+             reg:xref <https://tools.ietf.org/html/rfc4287> ] .
     
     <#replies>     a rdf:Property;
-         terms:description """Identifies a resource that is a reply to the context
+         <http://purl.org/dc/terms/description> """Identifies a resource that is a reply to the context
       of the link.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "replies";
          reg:spec  [
-             reg:xref html:rfc4685 ] .
+             reg:xref <https://tools.ietf.org/html/rfc4685> ] .
     
     <#restconf>     a rdf:Property;
-         terms:description """Identifies the root of RESTCONF API as configured on this HTTP server.
+         <http://purl.org/dc/terms/description> """Identifies the root of RESTCONF API as configured on this HTTP server.
       The "restconf" relation defines the root of the API defined in RFC8040.
       Subsequent revisions of RESTCONF will use alternate relation values to support 
       protocol versioning.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "restconf";
          reg:spec  [
-             reg:xref html:rfc8040 ] .
+             reg:xref <https://tools.ietf.org/html/rfc8040> ] .
+    
+    <#ruleinput>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2020-10-05"^^XML:date;
+         <http://purl.org/dc/terms/description> """The resource identified by the link target provides an input value to an 
+    instance of a rule, where the resource which represents the rule instance is 
+    identified by the link context.""";
+         :definedBy <link-relations>;
+         :label "ruleinput";
+         reg:spec  [
+             reg:xref <https://openconnectivity.org/specs/OCF_Core_Optional_Specification_v2.2.0.pdf> ] .
     
     <#search>     a rdf:Property;
-         terms:date "2010-11-09"^^XML:date;
-         terms:description """Refers to a resource that can be used to search through
+         <http://purl.org/dc/terms/date> "2010-11-09"^^XML:date;
+         <http://purl.org/dc/terms/description> """Refers to a resource that can be used to search through
       the link's context and related resources.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "search";
          reg:spec  [
-             reg:xref <http://www.opensearch.org/Specifications/OpenSearch/1.1> ] .
+             reg:xref <https://github.com/dewitt/opensearch> ];
+         reg:updated "2022-11-23"^^XML:date .
     
     <#section>     a rdf:Property;
-         terms:description "Refers to a section in a collection of resources.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a section in a collection of resources.";
+         :definedBy <link-relations>;
          :label "section";
          reg:spec  [
-             reg:xref n0:REC-html401-19991224 ] .
+             reg:xref <https://www.w3.org/TR/html401/> ] .
     
     <#self>     a rdf:Property;
-         terms:description "Conveys an identifier for the link's context.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Conveys an identifier for the link's context.";
+         :definedBy <link-relations>;
          :label "self";
          reg:spec  [
-             reg:xref html:rfc4287 ] .
+             reg:xref <https://tools.ietf.org/html/rfc4287> ] .
     
     <#service>     a rdf:Property;
-         terms:description """Indicates a URI that can be used to retrieve a
+         <http://purl.org/dc/terms/description> """Indicates a URI that can be used to retrieve a
       service document.""";
          :comment """When used in an Atom document, this relation type specifies
       Atom Publishing Protocol service documents by default.  Requested
       by James Snell.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "service";
          reg:spec  [
-             reg:xref html:rfc5023 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5023> ] .
+    
+    <#service-desc>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-05-30"^^XML:date;
+         <http://purl.org/dc/terms/description> """Identifies service description for the context that
+      is primarily intended for consumption by machines.""";
+         :definedBy <link-relations>;
+         :label "service-desc";
+         reg:spec  [
+             reg:xref <https://tools.ietf.org/html/rfc8631> ] .
+    
+    <#service-doc>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-05-30"^^XML:date;
+         <http://purl.org/dc/terms/description> """Identifies service documentation for the context that
+      is primarily intended for human consumption.""";
+         :definedBy <link-relations>;
+         :label "service-doc";
+         reg:spec  [
+             reg:xref <https://tools.ietf.org/html/rfc8631> ] .
+    
+    <#service-meta>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-05-30"^^XML:date;
+         <http://purl.org/dc/terms/description> """Identifies general metadata for the context that is
+      primarily intended for consumption by machines.""";
+         :definedBy <link-relations>;
+         :label "service-meta";
+         reg:spec  [
+             reg:xref <https://tools.ietf.org/html/rfc8631> ] .
+    
+    <#sip-trunking-capability>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2022-10-11"^^XML:date;
+         <http://purl.org/dc/terms/description> """Refers to a capability set document that defines parameters 
+    or configuration requirements for automated peering and communication-channel 
+    negotiation of the Session Initiation Protocol (SIP).""";
+         :definedBy <link-relations>;
+         :label "sip-trunking-capability";
+         reg:spec  [
+             reg:xref <https://tools.ietf.org/html/rfc9409> ];
+         reg:updated "2023-05-12"^^XML:date .
+    
+    <#sponsored>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-11-07"^^XML:date;
+         <http://purl.org/dc/terms/description> """Refers to a resource that is within a context that is 
+		sponsored (such as advertising or another compensation agreement).""";
+         :definedBy <link-relations>;
+         :label "sponsored";
+         reg:spec  [
+             reg:xref <https://webmasters.googleblog.com/2019/09/evolving-nofollow-new-ways-to-identify.html> ] .
     
     <#start>     a rdf:Property;
-         terms:description """Refers to the first resource in a collection of
+         <http://purl.org/dc/terms/description> """Refers to the first resource in a collection of
       resources.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "start";
          reg:spec  [
-             reg:xref n0:REC-html401-19991224 ] .
+             reg:xref <https://www.w3.org/TR/html401> ] .
+    
+    <#status>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-05-30"^^XML:date;
+         <http://purl.org/dc/terms/description> """Identifies a resource that represents the context's
+      status.""";
+         :definedBy <link-relations>;
+         :label "status";
+         reg:spec  [
+             reg:xref <https://tools.ietf.org/html/rfc8631> ] .
     
     <#stylesheet>     a rdf:Property;
-         terms:description "Refers to a stylesheet.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a stylesheet.";
+         :definedBy <link-relations>;
          :label "stylesheet";
          reg:spec  [
              reg:xref lin:link-type-stylesheet ] .
     
     <#subsection>     a rdf:Property;
-         terms:description """Refers to a resource serving as a subsection in a
+         <http://purl.org/dc/terms/description> """Refers to a resource serving as a subsection in a
       collection of resources.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "subsection";
          reg:spec  [
-             reg:xref n0:REC-html401-19991224 ] .
+             reg:xref <https://www.w3.org/TR/html401/> ] .
     
     <#successor-version>     a rdf:Property;
-         terms:description """Points to a resource containing the successor version
+         <http://purl.org/dc/terms/description> """Points to a resource containing the successor version
       in the version history.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "successor-version";
          reg:spec  [
-             reg:xref html:rfc5829 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5829> ] .
+    
+    <#sunset>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-04-01"^^XML:date;
+         <http://purl.org/dc/terms/description> """Identifies a resource that provides information about
+      the context's retirement policy.""";
+         :definedBy <link-relations>;
+         :label "sunset";
+         reg:spec  [
+             reg:xref <https://tools.ietf.org/html/rfc8594> ] .
     
     <#tag>     a rdf:Property;
-         terms:description """Gives a tag (identified by the given address) that applies to
+         <http://purl.org/dc/terms/description> """Gives a tag (identified by the given address) that applies to
       the current document.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "tag";
          reg:spec  [
              reg:xref lin:link-type-tag ] .
     
     <#terms-of-service>     a rdf:Property;
-         terms:description "Refers to the terms of service associated with the link's context.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to the terms of service associated with the link's context.";
+         :definedBy <link-relations>;
          :label "terms-of-service";
          reg:spec "rfc6903 , section 5" .
     
     <#timegate>     a rdf:Property;
-         terms:date "2013-11-01"^^XML:date;
-         terms:description "The Target IRI points to a TimeGate for an Original Resource.";
+         <http://purl.org/dc/terms/date> "2013-11-01"^^XML:date;
+         <http://purl.org/dc/terms/description> "The Target IRI points to a TimeGate for an Original Resource.";
          :comment """A TimeGate for an Original Resource is a resource that is
       capable of datetime negotiation to support access to prior states
       of the Original Resource.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "timegate";
          reg:spec  [
-             reg:xref html:rfc7089 ] .
+             reg:xref <https://tools.ietf.org/html/rfc7089> ] .
     
     <#timemap>     a rdf:Property;
-         terms:date "2013-11-01"^^XML:date;
-         terms:description "The Target IRI points to a TimeMap for an Original Resource.";
+         <http://purl.org/dc/terms/date> "2013-11-01"^^XML:date;
+         <http://purl.org/dc/terms/description> "The Target IRI points to a TimeMap for an Original Resource.";
          :comment """A TimeMap for an Original Resource is a resource from which
       a list of URIs of Mementos of the Original Resource is available.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "timemap";
          reg:spec  [
-             reg:xref html:rfc7089 ] .
+             reg:xref <https://tools.ietf.org/html/rfc7089> ] .
     
     <#type>     a rdf:Property;
-         terms:description "Refers to a resource identifying the abstract semantic type of which the link's context is considered to be an instance.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Refers to a resource identifying the abstract semantic type of which the link's context is considered to be an instance.";
+         :definedBy <link-relations>;
          :label "type";
          reg:spec "rfc6903 , section 6" .
     
+    <#ugc>     a rdf:Property;
+         <http://purl.org/dc/terms/date> "2019-11-07"^^XML:date;
+         <http://purl.org/dc/terms/description> "Refers to a resource that is within a context that is User Generated Content.";
+         :definedBy <link-relations>;
+         :label "ugc";
+         reg:spec  [
+             reg:xref <https://webmasters.googleblog.com/2019/09/evolving-nofollow-new-ways-to-identify.html> ] .
+    
     <#up>     a rdf:Property;
-         terms:description """Refers to a parent document in a hierarchy of
+         <http://purl.org/dc/terms/description> """Refers to a parent document in a hierarchy of
       documents.""";
          :comment """This relation type registration did not indicate a
       reference.  Requested by Noah Slater.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "up";
          reg:spec  [
-             reg:xref html:RFC-nottingham-rfc5988bis-08 ] .
+             reg:xref <https://tools.ietf.org/html/rfc8288> ] .
     
     <#version-history>     a rdf:Property;
-         terms:description """Points to a resource containing the version history
+         <http://purl.org/dc/terms/description> """Points to a resource containing the version history
       for the context.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "version-history";
          reg:spec  [
-             reg:xref html:rfc5829 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5829> ] .
     
     <#via>     a rdf:Property;
-         terms:description """Identifies a resource that is the source of the
+         <http://purl.org/dc/terms/description> """Identifies a resource that is the source of the
       information in the link's context.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "via";
          reg:spec  [
-             reg:xref html:rfc4287 ] .
+             reg:xref <https://tools.ietf.org/html/rfc4287> ] .
     
     <#webmention>     a rdf:Property;
-         terms:date "2016-04-19"^^XML:date;
-         terms:description """Identifies a target URI that supports the Webmention protcol.
+         <http://purl.org/dc/terms/date> "2016-04-19"^^XML:date;
+         <http://purl.org/dc/terms/description> """Identifies a target URI that supports the Webmention protocol.
     This allows clients that mention a resource in some form of publishing process
     to contact that endpoint and inform it that this resource has been mentioned.""";
          :comment """This is a similar "Linkback" mechanism to the ones of Refback, Trackback, and Pingback.
     It uses a different protocol, though, and thus should be discoverable through its own link
     relation type.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "webmention";
          reg:spec  [
-             reg:xref web: ] .
+             reg:xref <http://www.w3.org/TR/webmention/> ] .
     
     <#working-copy>     a rdf:Property;
-         terms:description "Points to a working copy for this resource.";
-         :definedBy link:link-relations;
+         <http://purl.org/dc/terms/description> "Points to a working copy for this resource.";
+         :definedBy <link-relations>;
          :label "working-copy";
          reg:spec  [
-             reg:xref html:rfc5829 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5829> ] .
     
     <#working-copy-of>     a rdf:Property;
-         terms:description """Points to the versioned resource from which this
+         <http://purl.org/dc/terms/description> """Points to the versioned resource from which this
       working copy was obtained.""";
-         :definedBy link:link-relations;
+         :definedBy <link-relations>;
          :label "working-copy-of";
          reg:spec  [
-             reg:xref html:rfc5829 ] .
+             reg:xref <https://tools.ietf.org/html/rfc5829> ] .
     
+#ENDS

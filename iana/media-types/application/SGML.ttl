@@ -5,7 +5,7 @@
 
 :Resource
     reg:file [ reg:file "application/SGML"; reg:type "template" ];
-    reg:name "sgml";
+    reg:name "SGML";
     reg:xref html:rfc1874.
 medi:application reg:record :Resource.
 

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Misk: <../../person/Miska_M._Hannuksela#>.
+
+medi:video reg:record :Resource.
+
+:Resource
+    terms:date "2017-09-15"^^XML:date;
+    reg:file [ reg:file "video/vnd.nokia.mp4vr"; reg:type "template" ];
+    reg:name "vnd.nokia.mp4vr";
+    reg:xref Misk:.

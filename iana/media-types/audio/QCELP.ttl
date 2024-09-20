@@ -3,7 +3,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:Resource reg:name "QCELP"; reg:xref html:rfc3555, html:rfc3625 .
-
+:Resource
+    reg:file [ reg:file "audio/QCELP"; reg:type "template" ];
+    reg:name "QCELP";
+    reg:updated "2021-08-23";
+    reg:xref html:rfc3555, html:rfc3625.
 medi:audio reg:record :Resource.
 

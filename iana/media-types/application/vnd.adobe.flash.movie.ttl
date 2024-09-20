@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Hen: <../../person/Henrik_Andersson#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file
+    [ reg:file "application/vnd.adobe.flash.movie"; reg:type "template" ];
+    reg:name "vnd.adobe.flash.movie";
+    reg:xref Hen:.
+medi:application reg:record :Resource.
+

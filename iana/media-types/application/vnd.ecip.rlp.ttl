@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Wei: <../../person/Wei_Tang#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2017-09-08"^^XML:date;
+    reg:file [ reg:file "application/vnd.ecip.rlp"; reg:type "template" ];
+    reg:name "vnd.ecip.rlp";
+    reg:xref Wei:.
+medi:application reg:record :Resource.
+

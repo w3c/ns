@@ -5,7 +5,9 @@
 
 :Resource
     reg:file [ reg:file "application/vnd.ibm.modcap"; reg:type "template" ];
-    reg:name "vnd.ibm.modcap";
+    reg:name
+    "vnd.ibm.modcap (OBSOLETED in favor of application/vnd.afpc.modca)";
+    reg:updated "2018-05-01";
     reg:xref Reinh:.
 medi:application reg:record :Resource.
 

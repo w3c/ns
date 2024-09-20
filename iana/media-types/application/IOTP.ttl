@@ -5,7 +5,7 @@
 
 :Resource
     reg:file [ reg:file "application/IOTP"; reg:type "template" ];
-    reg:name "iotp";
+    reg:name "IOTP";
     reg:xref html:rfc2935.
 medi:application reg:record :Resource.
 

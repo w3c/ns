@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix C2PA: <../../person/C2PA#>.
+@prefix Leon: <../../person/Leonard_Rosenthol#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-09-25"^^XML:date;
+    reg:file [ reg:file "application/c2pa"; reg:type "template" ];
+    reg:name "c2pa";
+    reg:xref C2PA:, Leon:.
+medi:application reg:record :Resource.
+

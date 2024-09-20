@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Pie: <../../person/Pierre_Papin#>.
+
+medi:text reg:record :Resource.
+
+:Resource
+    terms:date "2018-11-21"^^XML:date;
+    reg:file [ reg:file "text/vnd.senx.warpscript"; reg:type "template" ];
+    reg:name "vnd.senx.warpscript";
+    reg:xref Pie:.

@@ -2,22 +2,28 @@
 @prefix n: <../media-types/application/n-quads#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix n1: <../media-types/application/n-triples#>.
+@prefix w: <../media-types/application/wasm#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 @prefix n3: <../media-types/text/n3#>.
+@prefix shex: <../media-types/text/shex#>.
 @prefix tur: <../media-types/text/turtle#>.
 
 n:Resource reg:xref :.
 
 n1:Resource reg:xref :.
 
+w:Resource reg:xref :.
+
 medi:n0 reg:person :.
 
 n3:Resource reg:xref :.
+
+shex:Resource reg:xref :.
 
 tur:Resource reg:xref :.
 
 :
     reg:id "Eric_Prudhommeaux";
     reg:name "Eric Prud'hommeaux";
-    reg:updated "2017-03-07";
+    reg:updated "2021-05-10";
     reg:uri "mailto:eric at w3.org".

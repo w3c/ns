@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Seb: <../../person/Sebastian_A._Weiss#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-09-27"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.nacamar.ybrid+json"; reg:type "template" ];
+    reg:name "vnd.nacamar.ybrid+json";
+    reg:xref Seb:.
+medi:application reg:record :Resource.
+

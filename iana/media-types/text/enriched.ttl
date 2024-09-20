@@ -5,5 +5,7 @@
 
 medi:text reg:record :Resource.
 
-:Resource reg:name "enriched"; reg:xref html:rfc1896 .
-
+:Resource
+    reg:file [ reg:file "text/enriched"; reg:type "template" ];
+    reg:name "enriched";
+    reg:xref html:rfc1896.

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/Dan_Luhring#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-11-15"^^XML:date;
+    reg:file [ reg:file "application/vnd.syft+json"; reg:type "template" ];
+    reg:name "vnd.syft+json";
+    reg:xref D:.
+medi:application reg:record :Resource.
+

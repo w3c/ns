@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joh: <../../person/John_Kwan#>.
+@prefix M: <../../person/Martin_Lambert#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/vnd.sealed.tiff"; reg:type "template" ];
+    reg:name "vnd.sealed.tiff";
+    reg:xref Joh:, M:.
+medi:application reg:record :Resource.
+

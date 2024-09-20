@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ATSC: <../../person/ATSC#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2017-08-11"^^XML:date;
+    reg:file [ reg:file "application/route-apd+xml"; reg:type "template" ];
+    reg:name "route-apd+xml";
+    reg:xref ATSC:.
+medi:application reg:record :Resource.
+

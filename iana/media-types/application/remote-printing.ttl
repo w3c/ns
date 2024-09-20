@@ -1,12 +1,14 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix M: <../../person/Marshall_Rose#>.
+@prefix doc: <https://datatracker.ietf.org/doc/>.
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
     reg:file [ reg:file "application/remote-printing"; reg:type "template" ];
-    reg:name "remote-printing";
-    reg:xref M:, html:rfc1486.
+    reg:name "remote-printing (OBSOLETE)";
+    reg:updated "2022-12-15";
+    reg:xref M:, doc:status-change-int-tlds-to-historic, html:rfc1486.
 medi:application reg:record :Resource.
 

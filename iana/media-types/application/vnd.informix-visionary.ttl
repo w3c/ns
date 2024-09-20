@@ -7,7 +7,7 @@
     reg:file
     [ reg:file "application/vnd.informix-visionary"; reg:type "template" ];
     reg:name
-    "vnd.informix-visionary - OBSOLETED in favor of application/vnd.visionary";
+    "vnd.informix-visionary (OBSOLETED in favor of application/vnd.visionary)";
     reg:xref Chr:.
 medi:application reg:record :Resource.
 

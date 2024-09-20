@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ell: <../../person/Elliott_Brown#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-02-22"^^XML:date;
+    reg:file [ reg:file "application/vnd.modl"; reg:type "template" ];
+    reg:name "vnd.modl";
+    reg:xref Ell:.
+medi:application reg:record :Resource.
+

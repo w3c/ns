@@ -1,12 +1,11 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Rob: <../../person/Robert_Brambley#>.
 @prefix Ste: <../../person/Steven_Heintz#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
     reg:file [ reg:file "application/vnd.adobe.fxp"; reg:type "template" ];
     reg:name "vnd.adobe.fxp";
-    reg:xref Rob:, Ste:.
+    reg:xref Ste:.
 medi:application reg:record :Resource.
 

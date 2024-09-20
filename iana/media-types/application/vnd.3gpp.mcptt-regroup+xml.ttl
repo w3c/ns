@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Kir: <../../person/Kiran_Kapale#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-03-16"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.3gpp.mcptt-regroup+xml"; reg:type "template" ];
+    reg:name "vnd.3gpp.mcptt-regroup+xml";
+    reg:xref Kir:.
+medi:application reg:record :Resource.
+

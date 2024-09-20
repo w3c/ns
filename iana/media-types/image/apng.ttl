@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix W3C: <../../person/W3C_PNG_Working_Group#>.
+@prefix W3: <../../person/W3C#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2022-11-21"^^XML:date;
+    reg:file [ reg:file "image/apng"; reg:type "template" ];
+    reg:name "apng";
+    reg:xref W3C:, W3:.
+medi:image reg:record :Resource.
+

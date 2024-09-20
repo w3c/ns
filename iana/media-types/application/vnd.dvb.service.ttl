@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mich: <../../person/Michael_Lagally#>.
+@prefix Pet: <../../person/Peter_Siebert#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/vnd.dvb.service"; reg:type "template" ];
+    reg:name "vnd.dvb.service";
+    reg:xref Mich:, Pet:.
+medi:application reg:record :Resource.
+

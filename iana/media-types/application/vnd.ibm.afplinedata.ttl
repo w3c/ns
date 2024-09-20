@@ -6,7 +6,8 @@
 :Resource
     reg:file
     [ reg:file "application/vnd.ibm.afplinedata"; reg:type "template" ];
-    reg:name "vnd.ibm.afplinedata";
+    reg:name "vnd.ibm.afplinedata (OBSOLETED in favor of vnd.afpc.afplinedata)";
+    reg:updated "2018-04-10";
     reg:xref Rog:.
 medi:application reg:record :Resource.
 

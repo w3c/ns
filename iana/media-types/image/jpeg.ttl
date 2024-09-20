@@ -3,7 +3,10 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:Resource reg:name "jpeg"; reg:xref html:rfc2045, html:rfc2046 .
-
+:Resource
+    reg:file [ reg:file "image/jpeg"; reg:type "template" ];
+    reg:name "jpeg";
+    reg:updated "2024-08-06";
+    reg:xref html:rfc2045, html:rfc2046.
 medi:image reg:record :Resource.
 

@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ing: <../../person/Ingo_Hofmann#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
+@prefix Nil: <../../person/Nils_Peters#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-04-04"^^XML:date;
+    reg:file [ reg:file "audio/mhas"; reg:type "template" ];
+    reg:name "mhas";
+    reg:xref Ing:, ISO:, Nil:.
+medi:audio reg:record :Resource.
+

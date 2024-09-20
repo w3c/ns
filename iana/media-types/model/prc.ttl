@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Bet: <../../person/Betsy_Fanning#>.
+@prefix ISO: <../../person/ISO-TC_171-SC_2#>.
+
+medi:model reg:record :Resource.
+
+:Resource
+    terms:date "2022-03-08"^^XML:date;
+    reg:file [ reg:file "model/prc"; reg:type "template" ];
+    reg:name "prc";
+    reg:xref Bet:, ISO:.

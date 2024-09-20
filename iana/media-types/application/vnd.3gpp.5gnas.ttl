@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../../person/_3GPP#>.
+@prefix Jon: <../../person/Jones_Lu_Yunjie#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-04-09"^^XML:date;
+    reg:file [ reg:file "application/vnd.3gpp.5gnas"; reg:type "template" ];
+    reg:name "vnd.3gpp.5gnas";
+    reg:xref n1:, Jon:.
+medi:application reg:record :Resource.
+

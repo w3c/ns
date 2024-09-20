@@ -10,5 +10,5 @@ prs:Resource reg:xref :.
 :
     reg:id "Hans-Dieter_A._Hiep";
     reg:name "Hans-Dieter A. Hiep";
-    reg:updated "2016-04-04";
-    reg:uri "mailto:info&aexiz.com".
+    reg:updated "2022-11-10";
+    reg:uri "mailto:hdh&cwi.nl".

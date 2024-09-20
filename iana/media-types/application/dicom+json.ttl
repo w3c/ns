@@ -3,14 +3,14 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix D: <../../person/David_Clunie#>.
-@prefix DIC: <../../person/DICOM_Standards_Committee#>.
-@prefix J: <../../person/James_F_Philbin#>.
+@prefix DIC: <../../person/DICOM_Standard_Committee#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
     terms:date "2016-09-19"^^XML:date;
     reg:file [ reg:file "application/dicom+json"; reg:type "template" ];
     reg:name "dicom+json";
-    reg:xref D:, DIC:, J:.
+    reg:updated "2021-08-27"^^XML:date;
+    reg:xref D:, DIC:.
 medi:application reg:record :Resource.
 

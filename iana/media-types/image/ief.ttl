@@ -1,11 +1,10 @@
 @prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
-    terms:description "Image Exchange Format";
+    reg:file [ reg:file "image/ief"; reg:type "template" ];
     reg:name "ief";
     reg:xref html:rfc1314.
 medi:image reg:record :Resource.

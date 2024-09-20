@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ETSI: <../../person/ETSI#>.
+@prefix Mig: <../../person/Miguel_Angel_Reina_Ortega#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-01-10"^^XML:date;
+    reg:file [ reg:file "audio/TETRA_ACELP_BB"; reg:type "template" ];
+    reg:name "TETRA_ACELP_BB";
+    reg:xref ETSI:, Mig:.
+medi:audio reg:record :Resource.
+

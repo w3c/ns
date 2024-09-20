@@ -6,6 +6,6 @@
 :Resource
     reg:file [ reg:file "application/vnd.apple.mpegurl"; reg:type "template" ];
     reg:name "vnd.apple.mpegurl";
-    reg:xref html:RFC-pantos-http-live-streaming-23.
+    reg:xref html:rfc8216.
 medi:application reg:record :Resource.
 

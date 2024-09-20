@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Seb: <../../person/Sebastian_Stenzel#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-03-17"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.cryptomator.encrypted"; reg:type "template" ];
+    reg:name "vnd.cryptomator.encrypted";
+    reg:xref Seb:.
+medi:application reg:record :Resource.
+

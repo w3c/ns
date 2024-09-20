@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Autom: <../../person/AutomationML_e.V.#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2022-07-26"^^XML:date;
+    reg:file
+    [ reg:file "application/automationml-aml+xml"; reg:type "template" ];
+    reg:name "automationml-aml+xml";
+    reg:xref Autom:.
+medi:application reg:record :Resource.
+

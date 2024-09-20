@@ -1,11 +1,12 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>.
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
     reg:file [ reg:file "image/jpx"; reg:type "template" ];
     reg:name "jpx";
-    reg:xref html:rfc3745.
+    reg:xref ISO:, html:rfc3745.
 medi:image reg:record :Resource.
 

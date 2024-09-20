@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Dr: <../../person/Dr._Jun_Tian#>.
+@prefix Wi: <../../person/Wi-Fi_Alliance#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-10-19"^^XML:date;
+    reg:file [ reg:file "application/vnd.wfa.dpp"; reg:type "template" ];
+    reg:name "vnd.wfa.dpp";
+    reg:xref Dr:, Wi:.
+medi:application reg:record :Resource.
+

@@ -10,6 +10,7 @@
     reg:file
     [ reg:file "application/EmergencyCallData.VEDS+xml"; reg:type "template" ];
     reg:name "EmergencyCallData.VEDS+xml";
-    reg:xref html:rfc8148.
+    reg:updated "2022-05-25"^^XML:date;
+    reg:xref html:rfc8148, [ reg:data "6500"; reg:type "rfc-errata" ].
 medi:application reg:record :Resource.
 

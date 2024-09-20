@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Marcos_Caceres#>.
+@prefix W3C: <../../person/W3C#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/manifest+json"; reg:type "template" ];
+    reg:name "manifest+json";
+    reg:updated "2021-06-22";
+    reg:xref M:, W3C:.
+medi:application reg:record :Resource.
+

@@ -4,6 +4,7 @@
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
+    reg:file [ reg:file "application/mathml-content+xml"; reg:type "template" ];
     reg:name "mathml-content+xml";
     reg:xref W3C:, <http://www.w3.org/TR/MathML3/appendixb.html>.
 medi:application reg:record :Resource.

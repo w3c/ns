@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Fr: <../../person/Fränz_Friederes#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2019-07-25"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.cryptii.pipe+json"; reg:type "template" ];
+    reg:name "vnd.cryptii.pipe+json";
+    reg:xref Fr:.
+medi:application reg:record :Resource.
+

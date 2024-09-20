@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Vic: <../../person/Victor_Kuchynsky#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2019-05-04"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.logipipe.circuit+zip"; reg:type "template" ];
+    reg:name "vnd.logipipe.circuit+zip";
+    reg:xref Vic:.
+medi:application reg:record :Resource.
+

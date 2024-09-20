@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix And: <../../person/Andy_Miller#>.
+@prefix IMS: <../../person/IMS_Global#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-10-02"^^XML:date;
+    reg:file [ reg:file "application/clr"; reg:type "template" ];
+    reg:name "clr";
+    reg:xref And:, IMS:.
+medi:application reg:record :Resource.
+

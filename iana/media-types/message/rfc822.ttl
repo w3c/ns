@@ -5,5 +5,7 @@
 
 medi:message reg:record :Resource.
 
-:Resource reg:name "rfc822"; reg:xref html:rfc2045, html:rfc2046 .
-
+:Resource
+    reg:file [ reg:file "message/rfc822"; reg:type "template" ];
+    reg:name "rfc822";
+    reg:xref html:rfc2045, html:rfc2046.

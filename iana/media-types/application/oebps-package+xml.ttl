@@ -1,11 +1,15 @@
 @prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix html: <https://tools.ietf.org/html/>.
+@prefix EPU: <../../person/EPUB_3_WG#>.
+@prefix W3C: <../../person/W3C#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
+    terms:date "2022-08-16"^^XML:date;
     reg:file [ reg:file "application/oebps-package+xml"; reg:type "template" ];
     reg:name "oebps-package+xml";
-    reg:xref html:rfc4839.
+    reg:xref EPU:, W3C:.
 medi:application reg:record :Resource.
 

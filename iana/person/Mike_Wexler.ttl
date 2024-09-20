@@ -1,7 +1,7 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd-mif#>.
+@prefix vnd: <../media-types/application/vnd.framemaker#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.framemaker#>.
+@prefix vn: <../media-types/application/vnd.mif#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 
 vnd:Resource reg:xref :.

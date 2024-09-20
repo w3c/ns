@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Benj: <../../person/Benjamin_Israel#>.
+@prefix MID: <../../person/MIDI_Association#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-03-18"^^XML:date;
+    reg:file [ reg:file "audio/midi-clip"; reg:type "template" ];
+    reg:name "midi-clip";
+    reg:xref Benj:, MID:.
+medi:audio reg:record :Resource.
+

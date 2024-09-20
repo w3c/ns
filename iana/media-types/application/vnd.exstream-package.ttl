@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bil: <../../person/Bill_Kidwell#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-10-23"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.exstream-package"; reg:type "template" ];
+    reg:name "vnd.exstream-package";
+    reg:xref Bil:.
+medi:application reg:record :Resource.
+

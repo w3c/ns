@@ -5,5 +5,7 @@
 
 medi:model reg:record :Resource.
 
-:Resource reg:name "vrml"; reg:xref html:rfc2077 .
-
+:Resource
+    reg:file [ reg:file "model/vrml"; reg:type "template" ];
+    reg:name "vrml";
+    reg:xref html:rfc2077.

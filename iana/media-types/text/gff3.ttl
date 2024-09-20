@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Seq: <../../person/Sequence_Ontology#>.
+
+medi:text reg:record :Resource.
+
+:Resource
+    terms:date "2020-08-17"^^XML:date;
+    reg:file [ reg:file "text/gff3"; reg:type "template" ];
+    reg:name "gff3";
+    reg:xref Seq:.

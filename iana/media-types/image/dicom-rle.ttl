@@ -3,7 +3,7 @@
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix D: <../../person/David_Clunie#>.
-@prefix DIC: <../../person/DICOM_Standards_Committee#>.
+@prefix DIC: <../../person/DICOM_Standard_Committee#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource

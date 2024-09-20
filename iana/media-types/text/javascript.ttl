@@ -7,5 +7,6 @@ medi:text reg:record :Resource.
 
 :Resource
     reg:file [ reg:file "text/javascript"; reg:type "template" ];
-    reg:name "javascript - OBSOLETED in favor of application/javascript";
-    reg:xref html:rfc4329.
+    reg:name "javascript";
+    reg:updated "2022-03-08";
+    reg:xref html:rfc9239.

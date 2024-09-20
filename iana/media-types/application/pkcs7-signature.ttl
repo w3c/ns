@@ -6,6 +6,6 @@
 :Resource
     reg:file [ reg:file "application/pkcs7-signature"; reg:type "template" ];
     reg:name "pkcs7-signature";
-    reg:xref html:rfc5751.
+    reg:xref html:rfc8551.
 medi:application reg:record :Resource.
 

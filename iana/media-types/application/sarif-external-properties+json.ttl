@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/David_Keaton#>.
+@prefix Mich: <../../person/Michael_C._Fanning#>.
+@prefix OASIS: <../../person/OASIS#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-04-26"^^XML:date;
+    reg:file
+            [
+                reg:file "application/sarif-external-properties+json";
+                reg:type "template"
+            ];
+    reg:name "sarif-external-properties+json";
+    reg:xref D:, Mich:, OASIS:.
+medi:application reg:record :Resource.
+

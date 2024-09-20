@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Al: <../../person/Al_Brown#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-06-24"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.veritone.aion+json"; reg:type "template" ];
+    reg:name "vnd.veritone.aion+json";
+    reg:xref Al:.
+medi:application reg:record :Resource.
+

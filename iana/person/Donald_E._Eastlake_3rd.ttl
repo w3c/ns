@@ -10,5 +10,5 @@ medi:n0 reg:person :.
 :
     reg:id "Donald_E._Eastlake_3rd";
     reg:name "Donald E. Eastlake 3rd";
-    reg:updated "2000-05-20";
-    reg:uri "mailto:Donald.Eastlake&motorola.com".
+    reg:updated "2021-07-06";
+    reg:uri "mailto:d3e3e3&gmail.com".

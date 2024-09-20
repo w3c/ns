@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Hidek: <../../person/Hidekazu_Enjo#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/vnd.ciedi"; reg:type "template" ];
+    reg:name "vnd.ciedi";
+    reg:xref Hidek:.
+medi:application reg:record :Resource.
+

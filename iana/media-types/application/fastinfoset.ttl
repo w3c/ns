@@ -1,11 +1,12 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1_SC_6_ASN.1_Rapporteur#>.
 @prefix ITU: <../../person/ITU-T_ASN.1_Rapporteur#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
     reg:file [ reg:file "application/fastinfoset"; reg:type "template" ];
     reg:name "fastinfoset";
-    reg:xref ITU:.
+    reg:xref ISO:, ITU:.
 medi:application reg:record :Resource.
 

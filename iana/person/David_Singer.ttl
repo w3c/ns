@@ -1,10 +1,28 @@
 @prefix : <#>.
 @prefix mp21: <../media-types/application/mp21#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../media-types/image/avci#>.
+@prefix n2: <../media-types/image/avcs#>.
+@prefix hei: <../media-types/image/heic-sequence#>.
+@prefix heic: <../media-types/image/heic#>.
+@prefix he: <../media-types/image/heif-sequence#>.
+@prefix heif: <../media-types/image/heif#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 @prefix iso: <../media-types/video/iso.segment#>.
 
 mp21:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+hei:Resource reg:xref :.
+
+heic:Resource reg:xref :.
+
+he:Resource reg:xref :.
+
+heif:Resource reg:xref :.
 
 medi:n0 reg:person :.
 
@@ -13,5 +31,5 @@ iso:Resource reg:xref :.
 :
     reg:id "David_Singer";
     reg:name "David Singer";
-    reg:updated "2014-01-29";
+    reg:updated "2018-07-30";
     reg:uri "mailto:singer&apple.com".

@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/Dana_Tripp#>.
+@prefix ISO: <../../person/ISO-TC_184-SC_4#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-08-05"^^XML:date;
+    reg:file [ reg:file "application/p21"; reg:type "template" ];
+    reg:name "p21";
+    reg:xref D:, ISO:.
+medi:application reg:record :Resource.
+

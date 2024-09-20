@@ -1,21 +1,21 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.sealed-doc#>.
+@prefix vnd: <../media-types/application/vnd.sealed.doc#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.sealed-eml#>.
-@prefix v: <../media-types/application/vnd.sealed-mht#>.
-@prefix n1: <../media-types/application/vnd.sealed-ppt#>.
-@prefix n2: <../media-types/application/vnd.sealed-xls#>.
-@prefix n3: <../media-types/application/vnd.sealedmedia.softseal-html#>.
-@prefix n4: <../media-types/application/vnd.sealedmedia.softseal-pdf#>.
-@prefix n5: <../media-types/audio/vnd.sealedmedia.softseal-mpeg#>.
-@prefix n6: <../media-types/image/vnd.sealed-png#>.
-@prefix n7: <../media-types/image/vnd.sealedmedia.softseal-gif#>.
-@prefix n8: <../media-types/image/vnd.sealedmedia.softseal-jpg#>.
+@prefix vn: <../media-types/application/vnd.sealed.eml#>.
+@prefix v: <../media-types/application/vnd.sealed.mht#>.
+@prefix n1: <../media-types/application/vnd.sealed.ppt#>.
+@prefix n2: <../media-types/application/vnd.sealed.xls#>.
+@prefix n3: <../media-types/application/vnd.sealedmedia.softseal.html#>.
+@prefix n4: <../media-types/application/vnd.sealedmedia.softseal.pdf#>.
+@prefix n5: <../media-types/audio/vnd.sealedmedia.softseal.mpeg#>.
+@prefix n6: <../media-types/image/vnd.sealed.png#>.
+@prefix n7: <../media-types/image/vnd.sealedmedia.softseal.gif#>.
+@prefix n8: <../media-types/image/vnd.sealedmedia.softseal.jpg#>.
 @prefix medi: <../media-types/media-types.ttl#>.
-@prefix n9: <../media-types/video/vnd.sealed-swf#>.
-@prefix n10: <../media-types/video/vnd.sealed.mpeg1#>.
-@prefix n11: <../media-types/video/vnd.sealed.mpeg4#>.
-@prefix n12: <../media-types/video/vnd.sealedmedia.softseal-mov#>.
+@prefix n9: <../media-types/video/vnd.sealed.mpeg1#>.
+@prefix n10: <../media-types/video/vnd.sealed.mpeg4#>.
+@prefix n11: <../media-types/video/vnd.sealed.swf#>.
+@prefix n12: <../media-types/video/vnd.sealedmedia.softseal.mov#>.
 
 vnd:Resource reg:xref :.
 

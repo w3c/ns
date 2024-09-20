@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Fr: <../../person/Frank_Kilcommins#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-11-29"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.oai.workflows+yaml"; reg:type "template" ];
+    reg:name "vnd.oai.workflows+yaml";
+    reg:xref Fr:.
+medi:application reg:record :Resource.
+

@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix L: <../../person/Laurence_J._Golding#>.
+@prefix Mich: <../../person/Michael_C._Fanning#>.
+@prefix OASIS: <../../person/OASIS#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-09-15"^^XML:date;
+    reg:file [ reg:file "application/sarif+json"; reg:type "template" ];
+    reg:name "sarif+json";
+    reg:xref L:, Mich:, OASIS:.
+medi:application reg:record :Resource.
+

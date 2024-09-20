@@ -1,9 +1,9 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.dvb_service#>.
+@prefix vnd: <../media-types/application/vnd.dvb.ait#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.dvb.ait#>.
-@prefix v: <../media-types/application/vnd.dvb.dvbj#>.
-@prefix n1: <../media-types/application/vnd.dvb.pfr#>.
+@prefix vn: <../media-types/application/vnd.dvb.dvbj#>.
+@prefix v: <../media-types/application/vnd.dvb.pfr#>.
+@prefix n1: <../media-types/application/vnd.dvb.service#>.
 @prefix n2: <../media-types/image/vnd.dvb.subtitle#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 @prefix n3: <../media-types/text/vnd.dvb.subtitle#>.

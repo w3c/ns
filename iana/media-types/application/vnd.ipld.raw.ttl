@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Marcin_Rataj#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2022-04-01"^^XML:date;
+    reg:file [ reg:file "application/vnd.ipld.raw"; reg:type "template" ];
+    reg:name "vnd.ipld.raw";
+    reg:updated "2024-02-08"^^XML:date;
+    reg:xref M:.
+medi:application reg:record :Resource.
+

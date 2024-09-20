@@ -5,5 +5,7 @@
 
 medi:multipart reg:record :Resource.
 
-:Resource reg:name "digest"; reg:xref html:rfc2045, html:rfc2046 .
-
+:Resource
+    reg:file [ reg:file "multipart/digest"; reg:type "template" ];
+    reg:name "digest";
+    reg:xref html:rfc2045, html:rfc2046.

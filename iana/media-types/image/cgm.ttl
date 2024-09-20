@@ -1,11 +1,9 @@
 @prefix : <#>.
-@prefix terms: <http://purl.org/dc/terms/>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Al: <../../person/Alan_Francis#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
-    terms:description "Computer Graphics Metafile";
     reg:file [ reg:file "image/cgm"; reg:type "template" ];
     reg:name "cgm";
     reg:xref Al:.

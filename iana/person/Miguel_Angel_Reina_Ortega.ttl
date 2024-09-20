@@ -1,13 +1,18 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.etsi.asic-e+zip#>.
+@prefix TET: <../media-types/application/TETRA_ISI#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/application/vnd.etsi.asic-e+zip#>.
 @prefix vn: <../media-types/application/vnd.etsi.asic-s+zip#>.
 @prefix v: <../media-types/application/vnd.etsi.iptvservice+xml#>.
 @prefix n1: <../media-types/application/vnd.etsi.iptvsync+xml#>.
 @prefix n2: <../media-types/application/vnd.etsi.mheg5#>.
 @prefix n3: <../media-types/application/vnd.etsi.overload-control-policy-dataset+xml#>.
 @prefix n4: <../media-types/application/vnd.etsi.timestamp-token#>.
+@prefix TE: <../media-types/audio/TETRA_ACELP_BB#>.
+@prefix TETR: <../media-types/audio/TETRA_ACELP#>.
 @prefix medi: <../media-types/media-types.ttl#>.
+
+TET:Resource reg:xref :.
 
 vnd:Resource reg:xref :.
 
@@ -23,10 +28,14 @@ n3:Resource reg:xref :.
 
 n4:Resource reg:xref :.
 
+TE:Resource reg:xref :.
+
+TETR:Resource reg:xref :.
+
 medi:n0 reg:person :.
 
 :
     reg:id "Miguel_Angel_Reina_Ortega";
     reg:name "Miguel Angel Reina Ortega";
-    reg:updated "2013-10-15";
+    reg:updated "2020-01-10";
     reg:uri "mailto:MiguelAngel.ReinaOrtega&etsi.org".

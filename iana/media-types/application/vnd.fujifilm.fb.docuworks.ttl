@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix K: <../../person/Kazuya_Iimura#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-04-19"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.fujifilm.fb.docuworks"; reg:type "template" ];
+    reg:name "vnd.fujifilm.fb.docuworks";
+    reg:xref K:.
+medi:application reg:record :Resource.
+

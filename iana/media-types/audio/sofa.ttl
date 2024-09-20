@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix AES: <../../person/AES#>.
+@prefix Pio: <../../person/Piotr_Majdak#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "audio/sofa"; reg:type "template" ];
+    reg:name "sofa";
+    reg:xref AES:, Pio:.
+medi:audio reg:record :Resource.
+

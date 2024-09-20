@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Geo: <../../person/GeoGebra#>.
+@prefix M: <../../person/Markus_Hohenwarter#>.
+@prefix Mich: <../../person/Michael_Borcherds#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-10-19"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.geogebra.slides"; reg:type "template" ];
+    reg:name "vnd.geogebra.slides";
+    reg:xref Geo:, M:, Mich:.
+medi:application reg:record :Resource.
+

@@ -4,7 +4,7 @@
 @prefix terms: <http://purl.org/dc/terms/>.
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix D: <../../person/David_Singer#>.
-@prefix ISO: <../../person/ISO-IEC_JTC1#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
 
 medi:video reg:record :Resource.
 

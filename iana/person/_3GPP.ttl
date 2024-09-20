@@ -1,20 +1,35 @@
 @prefix : <#>.
 @prefix n1: <../media-types/application/3gpdash-qoe-report+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n2: <../media-types/application/3gpp-ims+xml#>.
+@prefix n3: <../media-types/application/3gppHal+json#>.
+@prefix n4: <../media-types/application/3gppHalForms+json#>.
 @prefix cccex: <../media-types/application/cccex#>.
 @prefix mbm: <../media-types/application/mbms-associated-procedure-description+xml#>.
 @prefix mb: <../media-types/application/mbms-deregister+xml#>.
 @prefix mbms: <../media-types/application/mbms-envelope+xml#>.
 @prefix m: <../media-types/application/mbms-msk-response+xml#>.
-@prefix n2: <../media-types/application/mbms-msk+xml#>.
-@prefix n3: <../media-types/application/mbms-protection-description+xml#>.
-@prefix n4: <../media-types/application/mbms-reception-report+xml#>.
-@prefix n5: <../media-types/application/mbms-register-response+xml#>.
-@prefix n6: <../media-types/application/mbms-register+xml#>.
-@prefix n7: <../media-types/application/mbms-schedule+xml#>.
-@prefix n8: <../media-types/application/mbms-user-service-description+xml#>.
+@prefix n5: <../media-types/application/mbms-msk+xml#>.
+@prefix n6: <../media-types/application/mbms-protection-description+xml#>.
+@prefix n7: <../media-types/application/mbms-reception-report+xml#>.
+@prefix n8: <../media-types/application/mbms-register-response+xml#>.
+@prefix n9: <../media-types/application/mbms-register+xml#>.
+@prefix n10: <../media-types/application/mbms-schedule+xml#>.
+@prefix n11: <../media-types/application/mbms-user-service-description+xml#>.
 @prefix ses: <../media-types/application/session-info#>.
 @prefix sim: <../media-types/application/simpleSymbolContainer#>.
+@prefix vnd: <../media-types/application/vnd.3gpp.5gnas#>.
+@prefix vn: <../media-types/application/vnd.3gpp.gtpc#>.
+@prefix v: <../media-types/application/vnd.3gpp.lpp#>.
+@prefix n12: <../media-types/application/vnd.3gpp.ngap#>.
+@prefix n13: <../media-types/application/vnd.3gpp.pfcp#>.
+@prefix n14: <../media-types/application/vnd.3gpp.s1ap#>.
+@prefix n15: <../media-types/application/vnd.3gpp.seal-info+xml#>.
+@prefix n16: <../media-types/application/vnd.3gpp.seal-location-info+xml#>.
+@prefix n17: <../media-types/application/vnd.3gpp.seal-mbms-usage-info+xml#>.
+@prefix n18: <../media-types/application/vnd.3gpp.seal-network-QoS-management-info+xml#>.
+@prefix n19: <../media-types/application/vnd.3gpp.seal-unicast-info+xml#>.
+@prefix n20: <../media-types/application/vnd.3gpp.vae-info+xml#>.
 @prefix EVS: <../media-types/audio/EVS#>.
 @prefix rtp: <../media-types/audio/rtp-enc-aescm128#>.
 @prefix medi: <../media-types/media-types.ttl#>.
@@ -22,6 +37,12 @@
 @prefix r: <../media-types/video/rtp-enc-aescm128#>.
 
 n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+n3:Resource reg:xref :.
+
+n4:Resource reg:xref :.
 
 cccex:Resource reg:xref :.
 
@@ -33,12 +54,6 @@ mbms:Resource reg:xref :.
 
 m:Resource reg:xref :.
 
-n2:Resource reg:xref :.
-
-n3:Resource reg:xref :.
-
-n4:Resource reg:xref :.
-
 n5:Resource reg:xref :.
 
 n6:Resource reg:xref :.
@@ -47,9 +62,39 @@ n7:Resource reg:xref :.
 
 n8:Resource reg:xref :.
 
+n9:Resource reg:xref :.
+
+n10:Resource reg:xref :.
+
+n11:Resource reg:xref :.
+
 ses:Resource reg:xref :.
 
 sim:Resource reg:xref :.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+n12:Resource reg:xref :.
+
+n13:Resource reg:xref :.
+
+n14:Resource reg:xref :.
+
+n15:Resource reg:xref :.
+
+n16:Resource reg:xref :.
+
+n17:Resource reg:xref :.
+
+n18:Resource reg:xref :.
+
+n19:Resource reg:xref :.
+
+n20:Resource reg:xref :.
 
 EVS:Resource reg:xref :.
 

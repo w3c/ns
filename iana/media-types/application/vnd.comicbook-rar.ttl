@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Kim: <../../person/Kim_Scarborough#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2017-12-11"^^XML:date;
+    reg:file [ reg:file "application/vnd.comicbook-rar"; reg:type "template" ];
+    reg:name "vnd.comicbook-rar";
+    reg:xref Kim:.
+medi:application reg:record :Resource.
+

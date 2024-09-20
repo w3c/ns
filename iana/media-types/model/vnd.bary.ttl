@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Displ: <../../person/Displaced_Micro-Mesh_SDK_Support#>.
+
+medi:model reg:record :Resource.
+
+:Resource
+    terms:date "2023-03-23"^^XML:date;
+    reg:file [ reg:file "model/vnd.bary"; reg:type "template" ];
+    reg:name "vnd.bary";
+    reg:xref Displ:.

@@ -2,10 +2,11 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Khr: <../../person/Khronos#>.
 @prefix M: <../../person/Mark_Callow#>.
-@prefix n1: <http://www.khronos.org/opengles/sdk/tools/KTX/file_format_spec/#>.
 @prefix medi: <../media-types.ttl#>.
 
-:Resource reg:name "ktx"; reg:xref Khr:, M:, n1:mimeregistration.
-
+:Resource
+    reg:file [ reg:file "image/ktx"; reg:type "template" ];
+    reg:name "ktx";
+    reg:xref Khr:, M:.
 medi:image reg:record :Resource.
 

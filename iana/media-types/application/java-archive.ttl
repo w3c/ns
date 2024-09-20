@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Iri: <../../person/Iris_Clark#>.
+@prefix JCP: <../../person/JCP#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-04-27"^^XML:date;
+    reg:file [ reg:file "application/java-archive"; reg:type "template" ];
+    reg:name "java-archive";
+    reg:xref Iri:, JCP:.
+medi:application reg:record :Resource.
+

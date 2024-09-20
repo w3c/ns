@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bet: <../../person/Betsy_Fanning#>.
+@prefix ISO: <../../person/ISO-TC_171-SC_2#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2022-04-05"^^XML:date;
+    reg:file [ reg:file "application/fdf"; reg:type "template" ];
+    reg:name "fdf";
+    reg:xref Bet:, ISO:.
+medi:application reg:record :Resource.
+

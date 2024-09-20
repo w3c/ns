@@ -1,7 +1,7 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix OAS: <../../person/OASIS_TC_Admin#>.
 @prefix OASIS: <../../person/OASIS#>.
-@prefix Sv: <../../person/Svante_Schubert#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
@@ -11,6 +11,7 @@
                 reg:type "template"
             ];
     reg:name "vnd.oasis.opendocument.chart-template";
-    reg:xref OASIS:, Sv:.
+    reg:updated "2022-06-07";
+    reg:xref OAS:, OASIS:.
 medi:application reg:record :Resource.
 

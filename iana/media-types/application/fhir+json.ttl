@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Gr: <../../person/Grahame_Grieve#>.
+@prefix HL7: <../../person/HL7#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-03-06"^^XML:date;
+    reg:file [ reg:file "application/fhir+json"; reg:type "template" ];
+    reg:name "fhir+json";
+    reg:xref Gr:, HL7:.
+medi:application reg:record :Resource.
+

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Mi: <../../person/Mi_Tar#>.
+
+medi:text reg:record :Resource.
+
+:Resource
+    terms:date "2018-06-04"^^XML:date;
+    reg:file [ reg:file "text/vnd.gml"; reg:type "template" ];
+    reg:name "vnd.gml";
+    reg:xref Mi:.

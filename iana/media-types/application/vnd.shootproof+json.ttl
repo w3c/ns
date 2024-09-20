@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ben: <../../person/Ben_Ramsey#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-04-06"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.shootproof+json"; reg:type "template" ];
+    reg:name "vnd.shootproof+json";
+    reg:xref Ben:.
+medi:application reg:record :Resource.
+

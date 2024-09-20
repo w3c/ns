@@ -1,7 +1,7 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.adobe.flash-movie#>.
+@prefix vnd: <../media-types/application/vnd.adobe.flash.movie#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.desmume-movie#>.
+@prefix vn: <../media-types/application/vnd.desmume.movie#>.
 @prefix v: <../media-types/application/vnd.microsoft.portable-executable#>.
 @prefix n1: <../media-types/application/vnd.microsoft.windows.thumbnail-cache#>.
 @prefix n2: <../media-types/application/vnd.nintendo.nitro.rom#>.

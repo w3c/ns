@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mich: <../../person/Michael_A_Dolan#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/vnd.dece.zip"; reg:type "template" ];
+    reg:name "vnd.dece.zip";
+    reg:xref Mich:.
+medi:application reg:record :Resource.
+

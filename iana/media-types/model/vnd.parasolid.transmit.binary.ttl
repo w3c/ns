@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix P: <../../person/Parasolid#>.
+
+medi:model reg:record :Resource.
+
+:Resource
+    reg:file
+    [ reg:file "model/vnd.parasolid.transmit.binary"; reg:type "template" ];
+    reg:name "vnd.parasolid.transmit.binary";
+    reg:xref P:.

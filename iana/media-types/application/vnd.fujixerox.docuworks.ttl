@@ -1,12 +1,13 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Y: <../../person/Yasuo_Taguchi#>.
+@prefix T: <../../person/Takatomo_Wakibayashi#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
     reg:file
     [ reg:file "application/vnd.fujixerox.docuworks"; reg:type "template" ];
     reg:name "vnd.fujixerox.docuworks";
-    reg:xref Y:.
+    reg:updated "2019-12-03";
+    reg:xref T:.
 medi:application reg:record :Resource.
 

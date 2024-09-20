@@ -2,7 +2,6 @@
 @prefix terms: <http://purl.org/dc/terms/>.
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Pet: <../../person/Peter_Biro#>.
 @prefix Stef: <../../person/Stefan_Szilva#>.
 @prefix medi: <../media-types.ttl#>.
 
@@ -14,6 +13,7 @@
                 reg:type "template"
             ];
     reg:name "vnd.gov.sk.xmldatacontainer+xml";
-    reg:xref Pet:, Stef:.
+    reg:updated "2024-01-12"^^XML:date;
+    reg:xref Stef:.
 medi:application reg:record :Resource.
 

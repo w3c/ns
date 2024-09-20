@@ -9,6 +9,7 @@
     terms:date "2016-02-04"^^XML:date;
     reg:file [ reg:file "application/problem+json"; reg:type "template" ];
     reg:name "problem+json";
-    reg:xref html:rfc7807.
+    reg:updated "2023-05-02"^^XML:date;
+    reg:xref html:rfc9457.
 medi:application reg:record :Resource.
 

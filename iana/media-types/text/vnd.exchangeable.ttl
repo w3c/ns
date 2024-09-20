@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix M: <../../person/Martin_Cizek#>.
+
+medi:text reg:record :Resource.
+
+:Resource
+    terms:date "2022-08-03"^^XML:date;
+    reg:file [ reg:file "text/vnd.exchangeable"; reg:type "template" ];
+    reg:name "vnd.exchangeable";
+    reg:xref M:.

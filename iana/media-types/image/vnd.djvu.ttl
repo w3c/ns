@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Leo: <../../person/Leon_Bottou#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "image/vnd.djvu"; reg:type "template" ];
+    reg:name "vnd.djvu";
+    reg:xref Leo:.
+medi:image reg:record :Resource.
+

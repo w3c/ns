@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-06-25"^^XML:date;
+    reg:file [ reg:file "haptics/hjif"; reg:type "template" ];
+    reg:name "hjif";
+    reg:xref html:RFC-ietf-mediaman-haptics-05.
+medi:haptics reg:record :Resource.
+

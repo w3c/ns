@@ -1,5 +1,5 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd-sema#>.
+@prefix vnd: <../media-types/application/vnd.sema#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.semd#>.
 @prefix v: <../media-types/application/vnd.semf#>.

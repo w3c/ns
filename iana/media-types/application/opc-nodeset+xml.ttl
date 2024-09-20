@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix OPC: <../../person/OPC_Foundation#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-09-01"^^XML:date;
+    reg:file [ reg:file "application/opc-nodeset+xml"; reg:type "template" ];
+    reg:name "opc-nodeset+xml";
+    reg:xref OPC:.
+medi:application reg:record :Resource.
+

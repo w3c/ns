@@ -1,0 +1,19 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Steven_Lasker#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-04-04"^^XML:date;
+    reg:file
+            [
+                reg:file "application/vnd.oci.image.manifest.v1+json";
+                reg:type "template"
+            ];
+    reg:name "vnd.oci.image.manifest.v1+json";
+    reg:updated "2020-04-09"^^XML:date;
+    reg:xref Ste:.
+medi:application reg:record :Resource.
+

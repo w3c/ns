@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ben: <../../person/Ben_Hinman#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2017-09-19"^^XML:date;
+    reg:file [ reg:file "application/vnd.avalon+json"; reg:type "template" ];
+    reg:name "vnd.avalon+json";
+    reg:xref Ben:.
+medi:application reg:record :Resource.
+

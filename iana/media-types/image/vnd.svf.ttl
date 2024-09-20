@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Jod: <../../person/Jodi_Moline#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "image/vnd.svf"; reg:type "template" ];
+    reg:name "vnd.svf";
+    reg:xref Jod:.
+medi:image reg:record :Resource.
+

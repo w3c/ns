@@ -7,5 +7,5 @@ medi:message reg:record :Resource.
 
 :Resource
     reg:file [ reg:file "message/vnd.si.simp"; reg:type "template" ];
-    reg:name "vnd.si.simp - OBSOLETED by request";
+    reg:name "vnd.si.simp (OBSOLETED by request)";
     reg:xref Nic:.

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/David_Riccitelli#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-01-04"^^XML:date;
+    reg:file [ reg:file "application/vnd.wordlift"; reg:type "template" ];
+    reg:name "vnd.wordlift";
+    reg:xref D:.
+medi:application reg:record :Resource.
+

@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix HL7: <../../person/HL7#>.
+@prefix M: <../../person/Marc_Duteau#>.
+
+medi:text reg:record :Resource.
+
+:Resource
+    terms:date "2022-07-22"^^XML:date;
+    reg:file [ reg:file "text/hl7v2"; reg:type "template" ];
+    reg:name "hl7v2";
+    reg:xref HL7:, M:.

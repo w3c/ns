@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joh: <../../person/John_Wolfe#>.
+
+medi:video reg:record :Resource.
+
+:Resource
+    reg:file [ reg:file "video/vnd.vivo"; reg:type "template" ];
+    reg:name "vnd.vivo";
+    reg:xref Joh:.

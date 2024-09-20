@@ -4,7 +4,9 @@
 @prefix n1: <http://www.w3.org/TR/2007/REC-xslt20-20070123/#>.
 @prefix medi: <../media-types.ttl#>.
 
-:Resource reg:name "xslt+xml"; reg:xref W3C:, n1:media-type-registration.
-
+:Resource
+    reg:file [ reg:file "application/xslt+xml"; reg:type "template" ];
+    reg:name "xslt+xml";
+    reg:xref W3C:, n1:media-type-registration.
 medi:application reg:record :Resource.
 

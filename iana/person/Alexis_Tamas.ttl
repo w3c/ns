@@ -13,5 +13,5 @@ medi:n0 reg:person :.
 :
     reg:id "Alexis_Tamas";
     reg:name "Alexis Tamas";
-    reg:updated "2006-03-23";
-    reg:uri "mailto:fsdl&frogans.com".
+    reg:updated "2020-05-04";
+    reg:uri "mailto:alexis.tamas&op3ft.org".

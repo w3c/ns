@@ -8,4 +8,5 @@ medi:multipart reg:record :Resource.
 :Resource
     reg:file [ reg:file "multipart/byteranges"; reg:type "template" ];
     reg:name "byteranges";
-    reg:xref html:rfc7233.
+    reg:updated "2021-10-01";
+    reg:xref html:rfc9110.

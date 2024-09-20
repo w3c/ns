@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix PDF: <../../person/PDF_Association#>.
+@prefix Pet: <../../person/Peter_Wyatt#>.
+
+medi:model reg:record :Resource.
+
+:Resource
+    terms:date "2022-02-25"^^XML:date;
+    reg:file [ reg:file "model/u3d"; reg:type "template" ];
+    reg:name "u3d";
+    reg:xref PDF:, Pet:.

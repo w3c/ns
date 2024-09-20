@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bry: <../../person/Bryn_Rhodes#>.
+@prefix HL7: <../../person/HL7#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-11-23"^^XML:date;
+    reg:file [ reg:file "application/elm+xml"; reg:type "template" ];
+    reg:name "elm+xml";
+    reg:xref Bry:, HL7:.
+medi:application reg:record :Resource.
+

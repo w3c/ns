@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix OAS: <../../person/OASIS_TC_Admin#>.
+@prefix OASIS: <../../person/OASIS#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2022-06-01"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.oasis.opendocument.base"; reg:type "template" ];
+    reg:name "vnd.oasis.opendocument.base";
+    reg:updated "2022-06-07"^^XML:date;
+    reg:xref OAS:, OASIS:.
+medi:application reg:record :Resource.
+

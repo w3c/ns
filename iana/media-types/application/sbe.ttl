@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Don: <../../person/Donald_L._Mendelson#>.
+@prefix FIX: <../../person/FIX_Trading_Community#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-04-14"^^XML:date;
+    reg:file [ reg:file "application/sbe"; reg:type "template" ];
+    reg:name "sbe";
+    reg:xref Don:, FIX:.
+medi:application reg:record :Resource.
+

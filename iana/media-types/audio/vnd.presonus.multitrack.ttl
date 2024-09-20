@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Matthias_Juwan#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2017-08-22"^^XML:date;
+    reg:file [ reg:file "audio/vnd.presonus.multitrack"; reg:type "template" ];
+    reg:name "vnd.presonus.multitrack";
+    reg:xref M:.
+medi:audio reg:record :Resource.
+

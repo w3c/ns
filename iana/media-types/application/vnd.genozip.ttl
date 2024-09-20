@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Div: <../../person/Divon_Lan#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2022-04-05"^^XML:date;
+    reg:file [ reg:file "application/vnd.genozip"; reg:type "template" ];
+    reg:name "vnd.genozip";
+    reg:xref Div:.
+medi:application reg:record :Resource.
+

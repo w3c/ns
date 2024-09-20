@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../../person/_3GPP#>.
+@prefix Ulr: <../../person/Ulrich_Wiehe#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-04-28"^^XML:date;
+    reg:file [ reg:file "application/3gppHal+json"; reg:type "template" ];
+    reg:name "3gppHal+json";
+    reg:xref n1:, Ulr:.
+medi:application reg:record :Resource.
+

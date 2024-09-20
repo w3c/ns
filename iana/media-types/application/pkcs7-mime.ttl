@@ -6,6 +6,6 @@
 :Resource
     reg:file [ reg:file "application/pkcs7-mime"; reg:type "template" ];
     reg:name "pkcs7-mime";
-    reg:xref html:rfc5751, html:rfc7114.
+    reg:xref html:rfc7114, html:rfc8551.
 medi:application reg:record :Resource.
 

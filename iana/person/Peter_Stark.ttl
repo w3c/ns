@@ -1,11 +1,11 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd-wap-wmlc#>.
+@prefix vnd: <../media-types/application/vnd.wap.wbxml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.wap-wbxml#>.
+@prefix vn: <../media-types/application/vnd.wap.wmlc#>.
 @prefix v: <../media-types/application/vnd.wap.wmlscriptc#>.
-@prefix n1: <../media-types/image/vnd-wap-wbmp#>.
+@prefix n1: <../media-types/image/vnd.wap.wbmp#>.
 @prefix medi: <../media-types/media-types.ttl#>.
-@prefix n2: <../media-types/text/vnd.wap-wml#>.
+@prefix n2: <../media-types/text/vnd.wap.wml#>.
 @prefix n3: <../media-types/text/vnd.wap.wmlscript#>.
 
 vnd:Resource reg:xref :.

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix html: <https://tools.ietf.org/html/>.
+
+medi:video reg:record :Resource.
+
+:Resource
+    terms:date "2021-06-11"^^XML:date;
+    reg:file [ reg:file "video/VP9"; reg:type "template" ];
+    reg:name "VP9";
+    reg:xref html:RFC-ietf-payload-vp9-16.

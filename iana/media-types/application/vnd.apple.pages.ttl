@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Manichandra_Sajjanapu#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-08-09"^^XML:date;
+    reg:file [ reg:file "application/vnd.apple.pages"; reg:type "template" ];
+    reg:name "vnd.apple.pages";
+    reg:xref M:.
+medi:application reg:record :Resource.
+

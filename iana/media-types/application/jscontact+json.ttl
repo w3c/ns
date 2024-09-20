@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/jscontact+json"; reg:type "template" ];
+    reg:name "jscontact+json";
+    reg:updated "2023-10-27";
+    reg:xref html:rfc9553.
+medi:application reg:record :Resource.
+

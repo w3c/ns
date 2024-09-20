@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/jscalendar+json"; reg:type "template" ];
+    reg:name "jscalendar+json";
+    reg:updated "2020-11-25";
+    reg:xref html:rfc8984.
+medi:application reg:record :Resource.
+

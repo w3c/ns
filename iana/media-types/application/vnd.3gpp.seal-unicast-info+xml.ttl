@@ -1,0 +1,19 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../../person/_3GPP#>.
+@prefix Chr: <../../person/Christian_Herrero-Veron#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-03-16"^^XML:date;
+    reg:file
+            [
+                reg:file "application/vnd.3gpp.seal-unicast-info+xml";
+                reg:type "template"
+            ];
+    reg:name "vnd.3gpp.seal-unicast-info+xml";
+    reg:xref n1:, Chr:.
+medi:application reg:record :Resource.
+

@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix CDISC: <../../person/CDISC#>.
+@prefix S: <../../person/Sam_Hume#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/odm+xml"; reg:type "template" ];
+    reg:name "odm+xml";
+    reg:updated "2018-11-28";
+    reg:xref CDISC:, S:.
+medi:application reg:record :Resource.
+

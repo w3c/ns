@@ -5,5 +5,7 @@
 
 medi:message reg:record :Resource.
 
-:Resource reg:name "external-body"; reg:xref html:rfc2045, html:rfc2046 .
-
+:Resource
+    reg:file [ reg:file "message/external-body"; reg:type "template" ];
+    reg:name "external-body";
+    reg:xref html:rfc2045, html:rfc2046.

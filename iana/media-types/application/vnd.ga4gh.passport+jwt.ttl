@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix GA4: <../../person/GA4GH_Secretariat#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-05-14"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.ga4gh.passport+jwt"; reg:type "template" ];
+    reg:name "vnd.ga4gh.passport+jwt";
+    reg:xref GA4:.
+medi:application reg:record :Resource.
+

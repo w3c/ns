@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Hei: <../../person/Heiko_Recktenwald#>.
+
+medi:video reg:record :Resource.
+
+:Resource
+    reg:file [ reg:file "video/vnd.mpegurl"; reg:type "template" ];
+    reg:name "vnd.mpegurl";
+    reg:xref Hei:.

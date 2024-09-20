@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Phi: <../../person/Phillip_Maness#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-11-14"^^XML:date;
+    reg:file [ reg:file "audio/vnd.dts.uhd"; reg:type "template" ];
+    reg:name "vnd.dts.uhd";
+    reg:xref Phi:.
+medi:audio reg:record :Resource.
+

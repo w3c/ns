@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Phi: <../../person/Philipp_Gortan#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2019-11-26"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.gentics.grd+json"; reg:type "template" ];
+    reg:name "vnd.gentics.grd+json";
+    reg:xref Phi:.
+medi:application reg:record :Resource.
+

@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-12-06"^^XML:date;
+    reg:file [ reg:file "application/tzif-leap"; reg:type "template" ];
+    reg:name "tzif-leap";
+    reg:updated "2024-05-09"^^XML:date;
+    reg:xref html:RFC-murchison-rfc8536bis-15.
+medi:application reg:record :Resource.
+

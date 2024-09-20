@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ben: <../../person/Ben_van_Hartingsveldt#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-05-06"^^XML:date;
+    reg:file [ reg:file "application/stratum"; reg:type "template" ];
+    reg:name "stratum";
+    reg:xref Ben:, [ reg:data "1"; reg:type "note" ].
+medi:application reg:record :Resource.
+

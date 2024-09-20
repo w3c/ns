@@ -1,14 +1,26 @@
 @prefix : <#>.
-@prefix geox: <../media-types/application/geoxacml+xml#>.
+@prefix cit: <../media-types/application/city+json#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix geop: <../media-types/application/geopackage+sqlite3#>.
+@prefix geo: <../media-types/application/geopose+json#>.
+@prefix geox: <../media-types/application/geoxacml+json#>.
+@prefix ge: <../media-types/application/geoxacml+xml#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 
+cit:Resource reg:xref :.
+
+geop:Resource reg:xref :.
+
+geo:Resource reg:xref :.
+
 geox:Resource reg:xref :.
+
+ge:Resource reg:xref :.
 
 medi:n0 reg:person :.
 
 :
     reg:id "Scott_Simmons";
     reg:name "Scott Simmons";
-    reg:updated "2017-07-18";
-    reg:uri "mailto:ssimmons&opengeospatial.org".
+    reg:updated "2024-08-19";
+    reg:uri "mailto:ssimmons&ogc.org".

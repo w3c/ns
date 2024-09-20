@@ -9,6 +9,6 @@
     terms:date "2017-03-30"^^XML:date;
     reg:file [ reg:file "application/rpki-publication"; reg:type "template" ];
     reg:name "rpki-publication";
-    reg:xref html:RFC-ietf-sidr-publication-12.
+    reg:xref html:rfc8181.
 medi:application reg:record :Resource.
 

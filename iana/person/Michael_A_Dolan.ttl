@@ -1,19 +1,19 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.dece-zip#>.
+@prefix vnd: <../media-types/application/vnd.dece.data#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.dece.data#>.
-@prefix v: <../media-types/application/vnd.dece.ttml+xml#>.
-@prefix n1: <../media-types/application/vnd.dece.unspecified#>.
+@prefix vn: <../media-types/application/vnd.dece.ttml+xml#>.
+@prefix v: <../media-types/application/vnd.dece.unspecified#>.
+@prefix n1: <../media-types/application/vnd.dece.zip#>.
 @prefix n2: <../media-types/audio/vnd.dece.audio#>.
 @prefix n3: <../media-types/image/vnd.dece.graphic#>.
 @prefix medi: <../media-types/media-types.ttl#>.
-@prefix n4: <../media-types/video/vnd.dece-mp4#>.
-@prefix n5: <../media-types/video/vnd.dece.hd#>.
-@prefix n6: <../media-types/video/vnd.dece.mobile#>.
+@prefix n4: <../media-types/video/vnd.dece.hd#>.
+@prefix n5: <../media-types/video/vnd.dece.mobile#>.
+@prefix n6: <../media-types/video/vnd.dece.mp4#>.
 @prefix n7: <../media-types/video/vnd.dece.pd#>.
 @prefix n8: <../media-types/video/vnd.dece.sd#>.
 @prefix n9: <../media-types/video/vnd.dece.video#>.
-@prefix n10: <../media-types/video/vnd.uvvu-mp4#>.
+@prefix n10: <../media-types/video/vnd.uvvu.mp4#>.
 
 vnd:Resource reg:xref :.
 

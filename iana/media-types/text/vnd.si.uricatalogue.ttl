@@ -7,5 +7,5 @@ medi:text reg:record :Resource.
 
 :Resource
     reg:file [ reg:file "text/vnd.si.uricatalogue"; reg:type "template" ];
-    reg:name "vnd.si.uricatalogue - OBSOLETED by request";
+    reg:name "vnd.si.uricatalogue (OBSOLETED by request)";
     reg:xref Nic:.

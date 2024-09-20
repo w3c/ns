@@ -3,7 +3,9 @@
 @prefix html: <https://tools.ietf.org/html/>.
 @prefix medi: <../media-types.ttl#>.
 
-:Resource reg:name "pgp-keys"; reg:xref html:rfc3156 .
-
+:Resource
+    reg:file [ reg:file "application/pgp-keys"; reg:type "template" ];
+    reg:name "pgp-keys";
+    reg:xref html:rfc3156.
 medi:application reg:record :Resource.
 

@@ -7,5 +7,5 @@ medi:text reg:record :Resource.
 
 :Resource
     reg:file [ reg:file "text/SGML"; reg:type "template" ];
-    reg:name "sgml";
+    reg:name "SGML";
     reg:xref html:rfc1874.

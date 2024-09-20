@@ -1,12 +1,13 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Tim: <../../person/Timo_Kosonen#>.
-@prefix Tom: <../../person/Tom_White#>.
+@prefix Ath: <../../person/Athan_Billias#>.
+@prefix MID: <../../person/MIDI_Association#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
     reg:file [ reg:file "audio/sp-midi"; reg:type "template" ];
     reg:name "sp-midi";
-    reg:xref Tim:, Tom:.
+    reg:updated "2022-10-04";
+    reg:xref Ath:, MID:.
 medi:audio reg:record :Resource.
 

@@ -1,8 +1,8 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd-curl#>.
+@prefix vnd: <../media-types/application/vnd.curl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix medi: <../media-types/media-types.ttl#>.
-@prefix vn: <../media-types/text/vnd-curl#>.
+@prefix vn: <../media-types/text/vnd.curl#>.
 
 vnd:Resource reg:xref :.
 

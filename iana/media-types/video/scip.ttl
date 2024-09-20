@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix html: <https://tools.ietf.org/html/>.
+
+medi:video reg:record :Resource.
+
+:Resource
+    terms:date "2021-01-28"^^XML:date;
+    reg:file [ reg:file "video/scip"; reg:type "template" ];
+    reg:name "scip";
+    reg:updated "2024-03-04"^^XML:date;
+    reg:xref html:rfc9607.

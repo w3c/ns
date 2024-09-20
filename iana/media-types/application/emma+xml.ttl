@@ -1,10 +1,13 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
 @prefix W3C: <../../person/W3C#>.
 @prefix n1: <http://www.w3.org/TR/2007/CR-emma-20071211/#>.
 @prefix medi: <../media-types.ttl#>.
 
-:Resource reg:name "emma+xml"; reg:xref "false", W3C:, n1:media-type-registration.
-
+:Resource
+    reg:file [ reg:file "application/emma+xml"; reg:type "template" ];
+    reg:name "emma+xml";
+    reg:xref ISO:, W3C:, n1:media-type-registration.
 medi:application reg:record :Resource.
 

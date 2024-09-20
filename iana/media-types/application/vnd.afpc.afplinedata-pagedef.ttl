@@ -1,0 +1,19 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix J: <../../person/Jörg_Palmer#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2019-10-14"^^XML:date;
+    reg:file
+            [
+                reg:file "application/vnd.afpc.afplinedata-pagedef";
+                reg:type "template"
+            ];
+    reg:name "vnd.afpc.afplinedata-pagedef";
+    reg:updated "2020-04-06"^^XML:date;
+    reg:xref J:.
+medi:application reg:record :Resource.
+

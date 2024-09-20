@@ -1,5 +1,5 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.paos+xml#>.
+@prefix vnd: <../media-types/application/vnd.paos.xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 

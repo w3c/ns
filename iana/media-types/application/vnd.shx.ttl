@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Mi: <../../person/Mi_Tar#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-03-17"^^XML:date;
+    reg:file [ reg:file "application/vnd.shx"; reg:type "template" ];
+    reg:name "vnd.shx";
+    reg:xref Mi:.
+medi:application reg:record :Resource.
+

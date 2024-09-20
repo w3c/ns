@@ -1,11 +1,12 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../../person/_3GPP#>.
 @prefix Joh: <../../person/John_M_Meredith#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
     reg:file [ reg:file "application/3gpp-ims+xml"; reg:type "template" ];
     reg:name "3gpp-ims+xml";
-    reg:xref Joh:.
+    reg:xref n1:, Joh:.
 medi:application reg:record :Resource.
 

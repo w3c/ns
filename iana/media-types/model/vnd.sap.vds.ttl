@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Igo: <../../person/Igor_Afanasyev#>.
+@prefix SAP: <../../person/SAP_SE#>.
+
+medi:model reg:record :Resource.
+
+:Resource
+    terms:date "2021-03-23"^^XML:date;
+    reg:file [ reg:file "model/vnd.sap.vds"; reg:type "template" ];
+    reg:name "vnd.sap.vds";
+    reg:xref Igo:, SAP:.

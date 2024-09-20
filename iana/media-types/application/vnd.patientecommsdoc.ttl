@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix And: <../../person/Andrew_David_Kendall#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-10-26"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.patientecommsdoc"; reg:type "template" ];
+    reg:name "vnd.patientecommsdoc";
+    reg:xref And:.
+medi:application reg:record :Resource.
+

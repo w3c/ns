@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix SMP: <../../person/SMPTE_Director_of_Standards_Development#>.
+@prefix SMPTE: <../../person/SMPTE#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2022-07-13"^^XML:date;
+    reg:file [ reg:file "image/dpx"; reg:type "template" ];
+    reg:name "dpx";
+    reg:updated "2024-06-18"^^XML:date;
+    reg:xref SMP:, SMPTE:.
+medi:image reg:record :Resource.
+

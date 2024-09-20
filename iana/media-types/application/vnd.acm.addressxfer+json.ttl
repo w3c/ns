@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Sridh: <../../person/Sridhar_Ramakrishnan#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-03-02"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.acm.addressxfer+json"; reg:type "template" ];
+    reg:name "vnd.acm.addressxfer+json";
+    reg:updated "2023-05-25"^^XML:date;
+    reg:xref Sridh:.
+medi:application reg:record :Resource.
+

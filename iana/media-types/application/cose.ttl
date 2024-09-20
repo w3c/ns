@@ -9,6 +9,6 @@
     terms:date "2017-01-11"^^XML:date;
     reg:file [ reg:file "application/cose"; reg:type "template" ];
     reg:name "cose";
-    reg:xref html:rfc8152.
+    reg:xref html:rfc9052.
 medi:application reg:record :Resource.
 

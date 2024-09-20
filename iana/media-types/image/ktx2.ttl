@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Khr: <../../person/Khronos#>.
+@prefix M: <../../person/Mark_Callow#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-08-11"^^XML:date;
+    reg:file [ reg:file "image/ktx2"; reg:type "template" ];
+    reg:name "ktx2";
+    reg:xref Khr:, M:.
+medi:image reg:record :Resource.
+

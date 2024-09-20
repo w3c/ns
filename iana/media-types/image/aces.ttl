@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix How: <../../person/Howard_Lukk#>.
+@prefix SMPTE: <../../person/SMPTE#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2017-12-08"^^XML:date;
+    reg:file [ reg:file "image/aces"; reg:type "template" ];
+    reg:name "aces";
+    reg:updated "2017-12-11"^^XML:date;
+    reg:xref How:, SMPTE:.
+medi:image reg:record :Resource.
+

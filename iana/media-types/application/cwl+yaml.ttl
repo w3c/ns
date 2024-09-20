@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix CWL: <../../person/CWL_Project#>.
+@prefix Mich: <../../person/Michael_R._Crusoe#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-04-17"^^XML:date;
+    reg:file [ reg:file "application/cwl+yaml"; reg:type "template" ];
+    reg:name "cwl+yaml";
+    reg:xref CWL:, Mich:.
+medi:application reg:record :Resource.
+

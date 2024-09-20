@@ -1,14 +1,17 @@
 @prefix : <#>.
 @prefix vnd: <../media-types/application/vnd.collection.doc+json#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.hyper+json#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 
 vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
 
 medi:n0 reg:person :.
 
 :
     reg:id "Irakli_Nadareishvili";
     reg:name "Irakli Nadareishvili";
-    reg:updated "2014-01-31";
+    reg:updated "2018-03-06";
     reg:uri "mailto:irakli&gmail.com".

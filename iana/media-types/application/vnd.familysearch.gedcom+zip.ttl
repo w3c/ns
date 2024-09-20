@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Gor: <../../person/Gordon_Clarke#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-12-07"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.familysearch.gedcom+zip"; reg:type "template" ];
+    reg:name "vnd.familysearch.gedcom+zip";
+    reg:xref Gor:.
+medi:application reg:record :Resource.
+

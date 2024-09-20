@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
+@prefix M: <../../person/Max_Neuendorf#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-03-19"^^XML:date;
+    reg:file [ reg:file "audio/usac"; reg:type "template" ];
+    reg:name "usac";
+    reg:xref ISO:, M:.
+medi:audio reg:record :Resource.
+

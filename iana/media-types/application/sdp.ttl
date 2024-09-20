@@ -6,6 +6,7 @@
 :Resource
     reg:file [ reg:file "application/sdp"; reg:type "template" ];
     reg:name "sdp";
-    reg:xref html:rfc4566.
+    reg:updated "2019-08-28";
+    reg:xref html:rfc8866.
 medi:application reg:record :Resource.
 

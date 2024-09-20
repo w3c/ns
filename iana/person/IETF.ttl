@@ -7,8 +7,5 @@ pkc:Resource reg:xref :.
 
 medi:n0 reg:person :.
 
-:
-    reg:id "IETF";
-    reg:name "IETF";
-    reg:updated "2015-08-21";
-    reg:uri "mailto:ietf&ietf.org".
+: reg:id "IETF"; reg:name "IETF"; reg:uri "mailto:ietf&ietf.org".
+

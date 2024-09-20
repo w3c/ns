@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Andre: <../../person/Andreas_Molzer#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-03-17"^^XML:date;
+    reg:file [ reg:file "application/vnd.nebumind.line"; reg:type "template" ];
+    reg:name "vnd.nebumind.line";
+    reg:xref Andre:.
+medi:application reg:record :Resource.
+

@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix SMP: <../../person/SMPTE_Director_of_Standards_Development#>.
+@prefix SMPTE: <../../person/SMPTE#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-06-07"^^XML:date;
+    reg:file [ reg:file "application/ST2110-41"; reg:type "template" ];
+    reg:name "ST2110-41";
+    reg:xref SMP:, SMPTE:.
+medi:application reg:record :Resource.
+

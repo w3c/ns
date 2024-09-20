@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Rob: <../../person/Robert_Byrnes#>.
+
+medi:text reg:record :Resource.
+
+:Resource
+    reg:file [ reg:file "text/vnd.curl"; reg:type "template" ];
+    reg:name "vnd.curl";
+    reg:xref Rob:.

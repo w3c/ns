@@ -1,5 +1,5 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd-acucobol#>.
+@prefix vnd: <../media-types/application/vnd.acucobol#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.acucorp#>.
 @prefix medi: <../media-types/media-types.ttl#>.

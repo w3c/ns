@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix H: <../../person/Haorui_Yang#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2022-09-05"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.3gpp-prose-pc3a+xml"; reg:type "template" ];
+    reg:name "vnd.3gpp-prose-pc3a+xml";
+    reg:xref H:.
+medi:application reg:record :Resource.
+

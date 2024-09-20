@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Bry: <../../person/Bryan_Blank#>.
+@prefix NCGIS: <../../person/NCGIS#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2019-08-21"^^XML:date;
+    reg:file [ reg:file "application/vnd.las"; reg:type "template" ];
+    reg:name "vnd.las";
+    reg:xref Bry:, NCGIS:.
+medi:application reg:record :Resource.
+

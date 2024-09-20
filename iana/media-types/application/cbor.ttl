@@ -6,6 +6,6 @@
 :Resource
     reg:file [ reg:file "application/cbor"; reg:type "template" ];
     reg:name "cbor";
-    reg:xref html:rfc7049.
+    reg:xref html:rfc8949.
 medi:application reg:record :Resource.
 

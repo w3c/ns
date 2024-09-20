@@ -1,0 +1,18 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix And: <../../person/Andrew_Block#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-02-27"^^XML:date;
+    reg:file
+            [
+                reg:file "application/vnd.cncf.helm.config.v1+json";
+                reg:type "template"
+            ];
+    reg:name "vnd.cncf.helm.config.v1+json";
+    reg:xref And:.
+medi:application reg:record :Resource.
+

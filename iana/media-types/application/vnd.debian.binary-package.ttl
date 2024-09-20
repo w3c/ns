@@ -2,7 +2,7 @@
 @prefix terms: <http://purl.org/dc/terms/>.
 @prefix XML: <http://www.w3.org/2001/XMLSchema#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix Ch: <../../person/Charles_Plessy#>.
+@prefix Debi: <../../person/Debian_Policy_mailing_list#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
@@ -10,6 +10,7 @@
     reg:file
     [ reg:file "application/vnd.debian.binary-package"; reg:type "template" ];
     reg:name "vnd.debian.binary-package";
-    reg:xref Ch:.
+    reg:updated "2022-01-07"^^XML:date;
+    reg:xref Debi:.
 medi:application reg:record :Resource.
 

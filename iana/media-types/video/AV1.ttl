@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Alli: <../../person/Alliance_for_Open_Media#>.
+
+medi:video reg:record :Resource.
+
+:Resource
+    terms:date "2021-01-21"^^XML:date;
+    reg:file [ reg:file "video/AV1"; reg:type "template" ];
+    reg:name "AV1";
+    reg:xref Alli:.

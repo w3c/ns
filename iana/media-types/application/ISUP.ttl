@@ -5,7 +5,7 @@
 
 :Resource
     reg:file [ reg:file "application/ISUP"; reg:type "template" ];
-    reg:name "isup";
+    reg:name "ISUP";
     reg:xref html:rfc3204.
 medi:application reg:record :Resource.
 

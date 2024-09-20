@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-01-18"^^XML:date;
+    reg:file [ reg:file "image/webp"; reg:type "template" ];
+    reg:name "webp";
+    reg:updated "2024-04-09"^^XML:date;
+    reg:xref html:RFC-zern-webp-15.
+medi:image reg:record :Resource.
+

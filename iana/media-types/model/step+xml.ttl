@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix D: <../../person/Dana_Tripp#>.
+@prefix ISO: <../../person/ISO-TC_184-SC_4#>.
+
+medi:model reg:record :Resource.
+
+:Resource
+    terms:date "2021-08-10"^^XML:date;
+    reg:file [ reg:file "model/step+xml"; reg:type "template" ];
+    reg:name "step+xml";
+    reg:xref D:, ISO:.

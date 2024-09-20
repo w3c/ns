@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ASTM: <../../person/ASTM#>.
+
+medi:model reg:record :Resource.
+
+:Resource
+    terms:date "2020-07-20"^^XML:date;
+    reg:file [ reg:file "model/e57"; reg:type "template" ];
+    reg:name "e57";
+    reg:xref ASTM:.

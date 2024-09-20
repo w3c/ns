@@ -1,14 +1,28 @@
 @prefix : <#>.
-@prefix geox: <../media-types/application/geoxacml+xml#>.
+@prefix cit: <../media-types/application/city+json#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix geop: <../media-types/application/geopackage+sqlite3#>.
+@prefix geo: <../media-types/application/geopose+json#>.
+@prefix geox: <../media-types/application/geoxacml+json#>.
+@prefix ge: <../media-types/application/geoxacml+xml#>.
 @prefix gml: <../media-types/application/gml+xml#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 
+cit:Resource reg:xref :.
+
+geop:Resource reg:xref :.
+
+geo:Resource reg:xref :.
+
 geox:Resource reg:xref :.
+
+ge:Resource reg:xref :.
 
 gml:Resource reg:xref :.
 
 medi:n0 reg:person :.
 
-: reg:id "OGC"; reg:name "Open Geospatial Consortium (OGC)".
-
+:
+    reg:id "OGC";
+    reg:name "Open Geospatial Consortium (OGC)";
+    reg:uri "http://www.opengeospatial.org".

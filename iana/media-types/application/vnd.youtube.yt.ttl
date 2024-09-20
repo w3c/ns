@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix L: <../../person/Laura_Wood#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2017-12-15"^^XML:date;
+    reg:file [ reg:file "application/vnd.youtube.yt"; reg:type "template" ];
+    reg:name "vnd.youtube.yt (OBSOLETED in favor of video/vnd.youtube.yt)";
+    reg:updated "2019-05-24"^^XML:date;
+    reg:xref L:.
+medi:application reg:record :Resource.
+

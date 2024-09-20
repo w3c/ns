@@ -1,7 +1,7 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.dtg.local-html#>.
+@prefix vnd: <../media-types/application/vnd.dtg.local.flash#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.dtg.local.flash#>.
+@prefix vn: <../media-types/application/vnd.dtg.local.html#>.
 @prefix v: <../media-types/application/vnd.dtg.local#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 

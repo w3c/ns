@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-03-21"^^XML:date;
+    reg:file
+    [ reg:file "application/gnap-binding-rotation-jws"; reg:type "template" ];
+    reg:name "gnap-binding-rotation-jws";
+    reg:xref html:RFC-ietf-gnap-core-protocol-20.
+medi:application reg:record :Resource.
+

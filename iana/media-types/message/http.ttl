@@ -8,4 +8,5 @@ medi:message reg:record :Resource.
 :Resource
     reg:file [ reg:file "message/http"; reg:type "template" ];
     reg:name "http";
-    reg:xref html:rfc7230.
+    reg:updated "2021-10-06";
+    reg:xref html:rfc9112.

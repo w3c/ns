@@ -7,6 +7,7 @@
 :Resource
     reg:file [ reg:file "application/ld+json"; reg:type "template" ];
     reg:name "ld+json";
+    reg:updated "2020-03-17";
     reg:xref Iv:, W3C:.
 medi:application reg:record :Resource.
 

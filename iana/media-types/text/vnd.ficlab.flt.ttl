@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Ste: <../../person/Steve_Gilberd#>.
+
+medi:text reg:record :Resource.
+
+:Resource
+    terms:date "2019-09-25"^^XML:date;
+    reg:file [ reg:file "text/vnd.ficlab.flt"; reg:type "template" ];
+    reg:name "vnd.ficlab.flt";
+    reg:xref Ste:.

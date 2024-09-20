@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-11-09"^^XML:date;
+    reg:file [ reg:file "application/dash-patch+xml"; reg:type "template" ];
+    reg:name "dash-patch+xml";
+    reg:xref ISO:.
+medi:application reg:record :Resource.
+

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ste: <../../person/Stephen_Mizell#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-02-01"^^XML:date;
+    reg:file [ reg:file "application/vnd.restful+json"; reg:type "template" ];
+    reg:name "vnd.restful+json";
+    reg:xref Ste:.
+medi:application reg:record :Resource.
+

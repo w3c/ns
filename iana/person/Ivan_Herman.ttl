@@ -3,7 +3,10 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix jf2: <../media-types/application/jf2feed+json#>.
 @prefix ld: <../media-types/application/ld+json#>.
+@prefix lpf: <../media-types/application/lpf+zip#>.
 @prefix pro: <../media-types/application/provenance+xml#>.
+@prefix vc: <../media-types/application/vc#>.
+@prefix vp: <../media-types/application/vp#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 @prefix pr: <../media-types/text/provenance-notation#>.
 
@@ -13,7 +16,13 @@ jf2:Resource reg:xref :.
 
 ld:Resource reg:xref :.
 
+lpf:Resource reg:xref :.
+
 pro:Resource reg:xref :.
+
+vc:Resource reg:xref :.
+
+vp:Resource reg:xref :.
 
 medi:n0 reg:person :.
 
@@ -22,5 +31,5 @@ pr:Resource reg:xref :.
 :
     reg:id "Ivan_Herman";
     reg:name "Ivan Herman";
-    reg:updated "2017-06-27";
+    reg:updated "2024-07-05";
     reg:uri "mailto:ivan&w3.org".

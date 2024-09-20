@@ -10,5 +10,5 @@ medi:n0 reg:person :.
 :
     reg:id "Phil_Green";
     reg:name "Phil Green";
-    reg:updated "2008-02-07";
-    reg:uri "mailto:green&colourspace.demon.co.uk".
+    reg:updated "2021-02-09";
+    reg:uri "mailto:green&colourspace.net".

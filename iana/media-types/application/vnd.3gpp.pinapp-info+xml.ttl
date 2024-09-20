@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../../person/_3GPP_CT1#>.
+@prefix Don: <../../person/Dongwook_Kim#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-04-17"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.3gpp.pinapp-info+xml"; reg:type "template" ];
+    reg:name "vnd.3gpp.pinapp-info+xml";
+    reg:xref n1:, Don:.
+medi:application reg:record :Resource.
+

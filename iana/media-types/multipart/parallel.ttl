@@ -5,5 +5,7 @@
 
 medi:multipart reg:record :Resource.
 
-:Resource reg:name "parallel"; reg:xref html:rfc2045, html:rfc2046 .
-
+:Resource
+    reg:file [ reg:file "multipart/parallel"; reg:type "template" ];
+    reg:name "parallel";
+    reg:xref html:rfc2045, html:rfc2046.

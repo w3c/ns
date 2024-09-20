@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Emi: <../../person/Emily_DUBS#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-02-07"^^XML:date;
+    reg:file [ reg:file "application/vnd.dvb.dvbisl+xml"; reg:type "template" ];
+    reg:name "vnd.dvb.dvbisl+xml";
+    reg:xref Emi:.
+medi:application reg:record :Resource.
+

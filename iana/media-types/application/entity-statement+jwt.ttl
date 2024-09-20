@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ope: <../../person/OpenID_Foundation_Artifact_Binding_WG#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-08-29"^^XML:date;
+    reg:file
+    [ reg:file "application/entity-statement+jwt"; reg:type "template" ];
+    reg:name "entity-statement+jwt";
+    reg:xref Ope:.
+medi:application reg:record :Resource.
+

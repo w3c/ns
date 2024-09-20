@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix ISO: <../../person/ISO-TC_184-SC_4#>.
+@prefix Mich: <../../person/Michael_Zink#>.
+
+medi:model reg:record :Resource.
+
+:Resource
+    terms:date "2023-01-24"^^XML:date;
+    reg:file [ reg:file "model/JT"; reg:type "template" ];
+    reg:name "JT";
+    reg:xref ISO:, Mich:.

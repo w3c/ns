@@ -1,12 +1,15 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/application/vnd.3gpp2.sms#>.
+@prefix vnd: <../media-types/application/vnd.3gpp2.bcmcsinfo+xml#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix vn: <../media-types/application/vnd.3gpp2.tcap#>.
+@prefix vn: <../media-types/application/vnd.3gpp2.sms#>.
+@prefix v: <../media-types/application/vnd.3gpp2.tcap#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 
 vnd:Resource reg:xref :.
 
 vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
 
 medi:n0 reg:person :.
 

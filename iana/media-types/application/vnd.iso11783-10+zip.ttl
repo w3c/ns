@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Fr: <../../person/Frank_Wiebeler#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2019-05-17"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.iso11783-10+zip"; reg:type "template" ];
+    reg:name "vnd.iso11783-10+zip";
+    reg:xref Fr:.
+medi:application reg:record :Resource.
+

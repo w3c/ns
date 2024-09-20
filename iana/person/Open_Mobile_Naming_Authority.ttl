@@ -16,10 +16,11 @@
 @prefix n11: <../media-types/application/vnd.oma.dcd#>.
 @prefix n12: <../media-types/application/vnd.oma.dcdc#>.
 @prefix n13: <../media-types/application/vnd.oma.drm.risd+xml#>.
-@prefix n14: <../media-types/application/vnd.oma.lwm2m+json#>.
-@prefix n15: <../media-types/application/vnd.oma.lwm2m+tlv#>.
-@prefix n16: <../media-types/application/vnd.oma.pal+xml#>.
-@prefix n17: <../media-types/application/vnd.oma.scidm.messages+xml#>.
+@prefix n14: <../media-types/application/vnd.oma.lwm2m+cbor#>.
+@prefix n15: <../media-types/application/vnd.oma.lwm2m+json#>.
+@prefix n16: <../media-types/application/vnd.oma.lwm2m+tlv#>.
+@prefix n17: <../media-types/application/vnd.oma.pal+xml#>.
+@prefix n18: <../media-types/application/vnd.oma.scidm.messages+xml#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 
 vnd:Resource reg:xref :.
@@ -62,10 +63,12 @@ n16:Resource reg:xref :.
 
 n17:Resource reg:xref :.
 
+n18:Resource reg:xref :.
+
 medi:n0 reg:person :.
 
 :
     reg:id "Open_Mobile_Naming_Authority";
     reg:name "Open Mobile Naming Authority (OMNA)";
-    reg:updated "2016-06-20";
+    reg:updated "2020-08-03";
     reg:uri "mailto:OMA-OMNA&mail.openmobilealliance.org".

@@ -1,17 +1,23 @@
 @prefix : <#>.
-@prefix ktx: <../media-types/image/ktx#>.
+@prefix glt: <../media-types/application/gltf-buffer#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ktx: <../media-types/image/ktx#>.
+@prefix ktx2: <../media-types/image/ktx2#>.
 @prefix medi: <../media-types/media-types.ttl#>.
-@prefix glt: <../media-types/model/gltf+json#>.
-
-ktx:Resource reg:xref :.
-
-medi:n0 reg:person :.
+@prefix gl: <../media-types/model/gltf-binary#>.
+@prefix gltf: <../media-types/model/gltf+json#>.
 
 glt:Resource reg:xref :.
 
-:
-    reg:id "Khronos";
-    reg:name "The Khronos Group";
-    reg:updated "2016-07-01";
-    reg:uri "http://www.khronos.org".
+ktx:Resource reg:xref :.
+
+ktx2:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+gl:Resource reg:xref :.
+
+gltf:Resource reg:xref :.
+
+: reg:id "Khronos"; reg:name "The Khronos Group"; reg:uri "http://www.khronos.org".
+

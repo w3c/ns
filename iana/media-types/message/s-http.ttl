@@ -1,11 +1,13 @@
 @prefix : <#>.
 @prefix medi: <../media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix doc: <https://datatracker.ietf.org/doc/>.
 @prefix html: <https://tools.ietf.org/html/>.
 
 medi:message reg:record :Resource.
 
 :Resource
     reg:file [ reg:file "message/s-http"; reg:type "template" ];
-    reg:name "s-http";
-    reg:xref html:rfc2660.
+    reg:name "s-http (OBSOLETE)";
+    reg:updated "2021-12-23";
+    reg:xref doc:status-change-http-experiments-to-historic, html:rfc2660.

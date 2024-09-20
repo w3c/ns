@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Che: <../../person/Chet_Ensign#>.
+@prefix OASIS: <../../person/OASIS#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/xliff+xml"; reg:type "template" ];
+    reg:name "xliff+xml";
+    reg:updated "2018-07-05";
+    reg:xref Che:, OASIS:.
+medi:application reg:record :Resource.
+

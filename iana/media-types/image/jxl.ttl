@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1_SC_29_WG_1#>.
+@prefix IS: <../../person/ISO-IEC_JTC_1#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-03-04"^^XML:date;
+    reg:file [ reg:file "image/jxl"; reg:type "template" ];
+    reg:name "jxl";
+    reg:xref ISO:, IS:.
+medi:image reg:record :Resource.
+

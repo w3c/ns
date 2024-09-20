@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-07-05"^^XML:date;
+    reg:file
+    [ reg:file "application/trickle-ice-sdpfrag"; reg:type "template" ];
+    reg:name "trickle-ice-sdpfrag";
+    reg:xref html:rfc8840.
+medi:application reg:record :Resource.
+

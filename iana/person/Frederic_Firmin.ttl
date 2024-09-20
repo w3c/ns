@@ -3,14 +3,42 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vnd: <../media-types/application/vnd.3gpp-prose-pc3ch+xml#>.
 @prefix vn: <../media-types/application/vnd.3gpp-prose+xml#>.
-@prefix v: <../media-types/application/vnd.3gpp.access-transfer-events+xml#>.
-@prefix n1: <../media-types/application/vnd.3gpp.GMOP+xml#>.
-@prefix n2: <../media-types/application/vnd.3gpp.mid-call+xml#>.
-@prefix n3: <../media-types/application/vnd.3gpp.sms+xml#>.
-@prefix n4: <../media-types/application/vnd.3gpp.srvcc-ext+xml#>.
-@prefix n5: <../media-types/application/vnd.3gpp.SRVCC-info+xml#>.
-@prefix n6: <../media-types/application/vnd.3gpp.state-and-event-info+xml#>.
-@prefix n7: <../media-types/application/vnd.3gpp.ussd+xml#>.
+@prefix v: <../media-types/application/vnd.3gpp-v2x-local-service-information#>.
+@prefix n1: <../media-types/application/vnd.3gpp.access-transfer-events+xml#>.
+@prefix n2: <../media-types/application/vnd.3gpp.GMOP+xml#>.
+@prefix n3: <../media-types/application/vnd.3gpp.interworking-data#>.
+@prefix n4: <../media-types/application/vnd.3gpp.mcdata-affiliation-command+xml#>.
+@prefix n5: <../media-types/application/vnd.3gpp.mcdata-info+xml#>.
+@prefix n6: <../media-types/application/vnd.3gpp.mcdata-payload#>.
+@prefix n7: <../media-types/application/vnd.3gpp.mcdata-service-config+xml#>.
+@prefix n8: <../media-types/application/vnd.3gpp.mcdata-signalling#>.
+@prefix n9: <../media-types/application/vnd.3gpp.mcdata-ue-config+xml#>.
+@prefix n10: <../media-types/application/vnd.3gpp.mcdata-user-profile+xml#>.
+@prefix n11: <../media-types/application/vnd.3gpp.mcptt-affiliation-command+xml#>.
+@prefix n12: <../media-types/application/vnd.3gpp.mcptt-floor-request+xml#>.
+@prefix n13: <../media-types/application/vnd.3gpp.mcptt-info+xml#>.
+@prefix n14: <../media-types/application/vnd.3gpp.mcptt-location-info+xml#>.
+@prefix n15: <../media-types/application/vnd.3gpp.mcptt-mbms-usage-info+xml#>.
+@prefix n16: <../media-types/application/vnd.3gpp.mcptt-service-config+xml#>.
+@prefix n17: <../media-types/application/vnd.3gpp.mcptt-signed+xml#>.
+@prefix n18: <../media-types/application/vnd.3gpp.mcptt-ue-config+xml#>.
+@prefix n19: <../media-types/application/vnd.3gpp.mcptt-ue-init-config+xml#>.
+@prefix n20: <../media-types/application/vnd.3gpp.mcptt-user-profile+xml#>.
+@prefix n21: <../media-types/application/vnd.3gpp.mcvideo-affiliation-command+xml#>.
+@prefix n22: <../media-types/application/vnd.3gpp.mcvideo-affiliation-info+xml#>.
+@prefix n23: <../media-types/application/vnd.3gpp.mcvideo-info+xml#>.
+@prefix n24: <../media-types/application/vnd.3gpp.mcvideo-location-info+xml#>.
+@prefix n25: <../media-types/application/vnd.3gpp.mcvideo-mbms-usage-info+xml#>.
+@prefix n26: <../media-types/application/vnd.3gpp.mcvideo-service-config+xml#>.
+@prefix n27: <../media-types/application/vnd.3gpp.mcvideo-transmission-request+xml#>.
+@prefix n28: <../media-types/application/vnd.3gpp.mcvideo-ue-config+xml#>.
+@prefix n29: <../media-types/application/vnd.3gpp.mcvideo-user-profile+xml#>.
+@prefix n30: <../media-types/application/vnd.3gpp.mid-call+xml#>.
+@prefix n31: <../media-types/application/vnd.3gpp.sms+xml#>.
+@prefix n32: <../media-types/application/vnd.3gpp.srvcc-ext+xml#>.
+@prefix n33: <../media-types/application/vnd.3gpp.SRVCC-info+xml#>.
+@prefix n34: <../media-types/application/vnd.3gpp.state-and-event-info+xml#>.
+@prefix n35: <../media-types/application/vnd.3gpp.ussd+xml#>.
 @prefix medi: <../media-types/media-types.ttl#>.
 
 ses:Resource reg:xref :.
@@ -35,10 +63,66 @@ n6:Resource reg:xref :.
 
 n7:Resource reg:xref :.
 
+n8:Resource reg:xref :.
+
+n9:Resource reg:xref :.
+
+n10:Resource reg:xref :.
+
+n11:Resource reg:xref :.
+
+n12:Resource reg:xref :.
+
+n13:Resource reg:xref :.
+
+n14:Resource reg:xref :.
+
+n15:Resource reg:xref :.
+
+n16:Resource reg:xref :.
+
+n17:Resource reg:xref :.
+
+n18:Resource reg:xref :.
+
+n19:Resource reg:xref :.
+
+n20:Resource reg:xref :.
+
+n21:Resource reg:xref :.
+
+n22:Resource reg:xref :.
+
+n23:Resource reg:xref :.
+
+n24:Resource reg:xref :.
+
+n25:Resource reg:xref :.
+
+n26:Resource reg:xref :.
+
+n27:Resource reg:xref :.
+
+n28:Resource reg:xref :.
+
+n29:Resource reg:xref :.
+
+n30:Resource reg:xref :.
+
+n31:Resource reg:xref :.
+
+n32:Resource reg:xref :.
+
+n33:Resource reg:xref :.
+
+n34:Resource reg:xref :.
+
+n35:Resource reg:xref :.
+
 medi:n0 reg:person :.
 
 :
     reg:id "Frederic_Firmin";
     reg:name "Frederic Firmin";
-    reg:updated "2017-07-18";
+    reg:updated "2020-10-05";
     reg:uri "mailto:Frederic.Firmin&etsi.org".

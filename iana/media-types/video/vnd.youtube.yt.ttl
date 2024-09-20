@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Goo: <../../person/Google#>.
+
+medi:video reg:record :Resource.
+
+:Resource
+    terms:date "2019-05-24"^^XML:date;
+    reg:file [ reg:file "video/vnd.youtube.yt"; reg:type "template" ];
+    reg:name "vnd.youtube.yt";
+    reg:updated "2019-06-07"^^XML:date;
+    reg:xref Goo:.

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix html: <https://tools.ietf.org/html/>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-05-14"^^XML:date;
+    reg:file [ reg:file "application/dns+json"; reg:type "template" ];
+    reg:name "dns+json";
+    reg:xref html:rfc8427.
+medi:application reg:record :Resource.
+

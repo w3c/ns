@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/David_Singer#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-07-30"^^XML:date;
+    reg:file [ reg:file "image/heif-sequence"; reg:type "template" ];
+    reg:name "heif-sequence";
+    reg:xref D:, ISO:.
+medi:image reg:record :Resource.
+

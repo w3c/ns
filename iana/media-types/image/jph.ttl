@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
+@prefix ITU: <../../person/ITU-T#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2019-05-17"^^XML:date;
+    reg:file [ reg:file "image/jph"; reg:type "template" ];
+    reg:name "jph";
+    reg:xref ISO:, ITU:.
+medi:image reg:record :Resource.
+

@@ -2,14 +2,15 @@
 @prefix vnd: <../media-types/application/vnd.amazon.mobi8-ebook#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix vn: <../media-types/application/vnd.chess-pgn#>.
-@prefix v: <../media-types/application/vnd.comicbook+zip#>.
-@prefix n1: <../media-types/application/vnd.ms-cab-compressed#>.
-@prefix n2: <../media-types/application/vnd.ms-fontobject#>.
-@prefix n3: <../media-types/application/vnd.rar#>.
-@prefix n4: <../media-types/application/vnd.wordperfect#>.
-@prefix n5: <../media-types/image/vnd.adobe.photoshop#>.
+@prefix v: <../media-types/application/vnd.comicbook-rar#>.
+@prefix n1: <../media-types/application/vnd.comicbook+zip#>.
+@prefix n2: <../media-types/application/vnd.ms-cab-compressed#>.
+@prefix n3: <../media-types/application/vnd.ms-fontobject#>.
+@prefix n4: <../media-types/application/vnd.rar#>.
+@prefix n5: <../media-types/application/vnd.wordperfect#>.
+@prefix n6: <../media-types/image/vnd.adobe.photoshop#>.
 @prefix medi: <../media-types/media-types.ttl#>.
-@prefix n6: <../media-types/text/vnd.ascii-art#>.
+@prefix n7: <../media-types/text/vnd.ascii-art#>.
 
 vnd:Resource reg:xref :.
 
@@ -27,12 +28,14 @@ n4:Resource reg:xref :.
 
 n5:Resource reg:xref :.
 
+n6:Resource reg:xref :.
+
 medi:n0 reg:person :.
 
-n6:Resource reg:xref :.
+n7:Resource reg:xref :.
 
 :
     reg:id "Kim_Scarborough";
     reg:name "Kim Scarborough";
-    reg:updated "2016-08-12";
+    reg:updated "2017-12-11";
     reg:uri "mailto:user&unknown.nu".

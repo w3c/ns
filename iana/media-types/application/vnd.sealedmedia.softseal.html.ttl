@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/David_Petersen#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file
+            [
+                reg:file "application/vnd.sealedmedia.softseal.html";
+                reg:type "template"
+            ];
+    reg:name "vnd.sealedmedia.softseal.html";
+    reg:xref D:.
+medi:application reg:record :Resource.
+

@@ -1,11 +1,13 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix Ale: <../../person/Alexis_Tamas#>.
+@prefix OP3FT: <../../person/OP3FT#>.
 @prefix medi: <../media-types.ttl#>.
 
 :Resource
     reg:file [ reg:file "application/vnd.frogans.fnc"; reg:type "template" ];
-    reg:name "vnd.frogans.fnc";
-    reg:xref Ale:.
+    reg:name "vnd.frogans.fnc (OBSOLETE)";
+    reg:updated "2020-05-04";
+    reg:xref Ale:, OP3FT:.
 medi:application reg:record :Resource.
 

@@ -1,0 +1,18 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Aid: <../../person/Aidan_Murdock#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-11-27"^^XML:date;
+    reg:file
+            [
+                reg:file "application/vnd.nato.openxmlformats-package.iepd+zip";
+                reg:type "template"
+            ];
+    reg:name "vnd.nato.openxmlformats-package.iepd+zip";
+    reg:xref Aid:.
+medi:application reg:record :Resource.
+

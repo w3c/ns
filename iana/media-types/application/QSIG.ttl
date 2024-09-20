@@ -5,7 +5,7 @@
 
 :Resource
     reg:file [ reg:file "application/QSIG"; reg:type "template" ];
-    reg:name "qsig";
+    reg:name "QSIG";
     reg:xref html:rfc3204.
 medi:application reg:record :Resource.
 

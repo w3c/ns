@@ -9,6 +9,6 @@
     terms:date "2017-06-12"^^XML:date;
     reg:file [ reg:file "application/passport"; reg:type "template" ];
     reg:name "passport";
-    reg:xref html:RFC-ietf-stir-passport-11.
+    reg:xref html:rfc8225.
 medi:application reg:record :Resource.
 

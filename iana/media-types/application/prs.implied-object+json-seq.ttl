@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Marek_Čermák#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-01-11"^^XML:date;
+    reg:file
+    [ reg:file "application/prs.implied-object+json-seq"; reg:type "template" ];
+    reg:name "prs.implied-object+json-seq";
+    reg:xref M:.
+medi:application reg:record :Resource.
+

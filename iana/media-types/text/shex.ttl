@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix Eri: <../../person/Eric_Prudhommeaux#>.
+@prefix W3C: <../../person/W3C#>.
+
+medi:text reg:record :Resource.
+
+:Resource
+    terms:date "2021-05-10"^^XML:date;
+    reg:file [ reg:file "text/shex"; reg:type "template" ];
+    reg:name "shex";
+    reg:xref Eri:, W3C:.

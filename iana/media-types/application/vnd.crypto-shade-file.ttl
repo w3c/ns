@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Con: <../../person/Connor_Horman#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file
+    [ reg:file "application/vnd.crypto-shade-file"; reg:type "template" ];
+    reg:name "vnd.crypto-shade-file";
+    reg:xref Con:.
+medi:application reg:record :Resource.
+

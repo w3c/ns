@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Ap: <../../person/Apache_Parquet_Project#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2024-02-14"^^XML:date;
+    reg:file [ reg:file "application/vnd.apache.parquet"; reg:type "template" ];
+    reg:name "vnd.apache.parquet";
+    reg:updated "2024-03-05"^^XML:date;
+    reg:xref Ap:.
+medi:application reg:record :Resource.
+

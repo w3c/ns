@@ -1,0 +1,18 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Fre: <../../person/Frederic_Firmin#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-11-29"^^XML:date;
+    reg:file
+            [
+                reg:file "application/vnd.3gpp.mcvideo-service-config+xml";
+                reg:type "template"
+            ];
+    reg:name "vnd.3gpp.mcvideo-service-config+xml";
+    reg:xref Fre:.
+medi:application reg:record :Resource.
+

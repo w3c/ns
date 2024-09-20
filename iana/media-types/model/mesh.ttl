@@ -5,5 +5,7 @@
 
 medi:model reg:record :Resource.
 
-:Resource reg:name "mesh"; reg:xref html:rfc2077 .
-
+:Resource
+    reg:file [ reg:file "model/mesh"; reg:type "template" ];
+    reg:name "mesh";
+    reg:xref html:rfc2077.

@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Tim: <../../person/Tim_Woodward#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2018-07-30"^^XML:date;
+    reg:file
+    [ reg:file "application/vnd.3gpp.mc-signalling-ear"; reg:type "template" ];
+    reg:name "vnd.3gpp.mc-signalling-ear";
+    reg:xref Tim:.
+medi:application reg:record :Resource.
+

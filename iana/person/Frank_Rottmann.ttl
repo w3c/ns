@@ -1,6 +1,14 @@
 @prefix : <#>.
-@prefix vnd: <../media-types/video/vnd.CCTV#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/video/vnd.CCTV#>.
+
+medi:n0 reg:person :.
 
 vnd:Resource reg:xref :.
 
+:
+    reg:id "Frank_Rottmann";
+    reg:name "Frank Rottmann";
+    reg:updated "2008-07-23";
+    reg:uri "mailto:Frank.Rottmann&web.de".

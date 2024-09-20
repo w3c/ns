@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix html: <https://tools.ietf.org/html/>.
+
+medi:message reg:record :Resource.
+
+:Resource
+    terms:date "2023-03-21"^^XML:date;
+    reg:file [ reg:file "message/ohttp-req"; reg:type "template" ];
+    reg:name "ohttp-req";
+    reg:xref html:rfc9458.

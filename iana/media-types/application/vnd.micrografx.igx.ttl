@@ -1,0 +1,11 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Joe: <../../person/Joe_Prevo#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/vnd.micrografx.igx"; reg:type "template" ];
+    reg:name "vnd.micrografx.igx";
+    reg:xref Joe:.
+medi:application reg:record :Resource.
+

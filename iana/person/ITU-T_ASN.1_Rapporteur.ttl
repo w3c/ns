@@ -3,6 +3,7 @@
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix f0: <../media-types/application/fastsoap#>.
 @prefix so: <../media-types/application/soap+fastinfoset#>.
+@prefix medi: <../media-types/media-types.ttl#>.
 
 f:Resource reg:xref :.
 
@@ -10,3 +11,10 @@ f0:Resource reg:xref :.
 
 so:Resource reg:xref :.
 
+medi:n0 reg:person :.
+
+:
+    reg:id "ITU-T_ASN.1_Rapporteur";
+    reg:name "ITU-T ASN.1 Rapporteur";
+    reg:updated "2005-10-31";
+    reg:uri "mailto:tsb&itu.int".

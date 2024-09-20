@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix P: <../../person/Patrick_Dwyer#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2021-01-28"^^XML:date;
+    reg:file [ reg:file "application/vnd.cyclonedx+xml"; reg:type "template" ];
+    reg:name "vnd.cyclonedx+xml";
+    reg:xref P:.
+medi:application reg:record :Resource.
+

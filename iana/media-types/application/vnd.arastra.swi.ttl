@@ -6,7 +6,7 @@
 :Resource
     reg:file [ reg:file "application/vnd.arastra.swi"; reg:type "template" ];
     reg:name
-        "vnd.arastra.swi - OBSOLETED in favor of application/vnd.aristanetworks.swi";
+        "vnd.arastra.swi (OBSOLETED in favor of application/vnd.aristanetworks.swi)";
     reg:xref Bil:.
 medi:application reg:record :Resource.
 

@@ -1,43 +1,61 @@
 @prefix : <#>.
-@prefix csv: <../media-types/application/csvm+json#>.
+@prefix n1: <../media-types/application/activity+json#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix csv: <../media-types/application/csvm+json#>.
 @prefix emm: <../media-types/application/emma+xml#>.
 @prefix emo: <../media-types/application/emotionml+xml#>.
+@prefix epu: <../media-types/application/epub+zip#>.
 @prefix exi: <../media-types/application/exi#>.
 @prefix fon: <../media-types/application/font-woff#>.
 @prefix its: <../media-types/application/its+xml#>.
 @prefix jf2: <../media-types/application/jf2feed+json#>.
 @prefix ld: <../media-types/application/ld+json#>.
-@prefix m: <../media-types/application/mathml-content+xml#>.
-@prefix m0: <../media-types/application/mathml-presentation+xml#>.
-@prefix m1: <../media-types/application/mathml+xml#>.
+@prefix lpf: <../media-types/application/lpf+zip#>.
+@prefix m: <../media-types/application/manifest+json#>.
+@prefix m0: <../media-types/application/mathml-content+xml#>.
+@prefix m1: <../media-types/application/mathml-presentation+xml#>.
+@prefix m2: <../media-types/application/mathml+xml#>.
 @prefix n: <../media-types/application/n-quads#>.
-@prefix n1: <../media-types/application/n-triples#>.
+@prefix n2: <../media-types/application/n-triples#>.
+@prefix oeb: <../media-types/application/oebps-package+xml#>.
 @prefix pro: <../media-types/application/provenance+xml#>.
 @prefix sp: <../media-types/application/sparql-query#>.
 @prefix s: <../media-types/application/sparql-results+xml#>.
+@prefix td: <../media-types/application/td+json#>.
+@prefix tm: <../media-types/application/tm+json#>.
 @prefix trig: <../media-types/application/trig#>.
 @prefix ttm: <../media-types/application/ttml+xml#>.
+@prefix vc: <../media-types/application/vc#>.
+@prefix vp: <../media-types/application/vp#>.
+@prefix w: <../media-types/application/wasm#>.
 @prefix wid: <../media-types/application/widget#>.
 @prefix wsd: <../media-types/application/wsdl+xml#>.
 @prefix wsp: <../media-types/application/wspolicy+xml#>.
-@prefix x: <../media-types/application/x-www-form-urlencoded#>.
 @prefix xht: <../media-types/application/xhtml+xml#>.
 @prefix xsl: <../media-types/application/xslt+xml#>.
+@prefix n3: <../media-types/image/apng#>.
+@prefix png: <../media-types/image/png#>.
 @prefix svg: <../media-types/image/svg+xml#>.
 @prefix medi: <../media-types/media-types.ttl#>.
-@prefix n2: <../media-types/multipart/x-mixed-replace#>.
+@prefix x: <../media-types/multipart/x-mixed-replace#>.
 @prefix c: <../media-types/text/cache-manifest#>.
 @prefix html: <../media-types/text/html#>.
-@prefix n3: <../media-types/text/n3#>.
+@prefix n30: <../media-types/text/n3#>.
 @prefix pr: <../media-types/text/provenance-notation#>.
+@prefix shex: <../media-types/text/shex#>.
 @prefix tur: <../media-types/text/turtle#>.
+@prefix vtt: <../media-types/text/vtt#>.
+@prefix wgsl: <../media-types/text/wgsl#>.
+
+n1:Resource reg:xref :.
 
 csv:Resource reg:xref :.
 
 emm:Resource reg:xref :.
 
 emo:Resource reg:xref :.
+
+epu:Resource reg:xref :.
 
 exi:Resource reg:xref :.
 
@@ -49,15 +67,21 @@ jf2:Resource reg:xref :.
 
 ld:Resource reg:xref :.
 
+lpf:Resource reg:xref :.
+
 m:Resource reg:xref :.
 
 m0:Resource reg:xref :.
 
 m1:Resource reg:xref :.
 
+m2:Resource reg:xref :.
+
 n:Resource reg:xref :.
 
-n1:Resource reg:xref :.
+n2:Resource reg:xref :.
+
+oeb:Resource reg:xref :.
 
 pro:Resource reg:xref :.
 
@@ -65,9 +89,19 @@ sp:Resource reg:xref :.
 
 s:Resource reg:xref :.
 
+td:Resource reg:xref :.
+
+tm:Resource reg:xref :.
+
 trig:Resource reg:xref :.
 
 ttm:Resource reg:xref :.
+
+vc:Resource reg:xref :.
+
+vp:Resource reg:xref :.
+
+w:Resource reg:xref :.
 
 wid:Resource reg:xref :.
 
@@ -75,27 +109,35 @@ wsd:Resource reg:xref :.
 
 wsp:Resource reg:xref :.
 
-x:Resource reg:xref :.
-
 xht:Resource reg:xref :.
 
 xsl:Resource reg:xref :.
+
+n3:Resource reg:xref :.
+
+png:Resource reg:xref :.
 
 svg:Resource reg:xref :.
 
 medi:n0 reg:person :.
 
-n2:Resource reg:xref :.
+x:Resource reg:xref :.
 
 c:Resource reg:xref :.
 
 html:Resource reg:xref :.
 
-n3:Resource reg:xref :.
+n30:Resource reg:xref :.
 
 pr:Resource reg:xref :.
 
+shex:Resource reg:xref :.
+
 tur:Resource reg:xref :.
+
+vtt:Resource reg:xref :.
+
+wgsl:Resource reg:xref :.
 
 : reg:id "W3C"; reg:name "W3C"; reg:uri "http://www.w3.org/".
 

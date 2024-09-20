@@ -1,0 +1,12 @@
+@prefix : <#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../../person/_3GPP#>.
+@prefix Y: <../../person/Yang_Yong#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    reg:file [ reg:file "application/vnd.3gpp.gtpc"; reg:type "template" ];
+    reg:name "vnd.3gpp.gtpc";
+    reg:xref n1:, Y:.
+medi:application reg:record :Resource.
+

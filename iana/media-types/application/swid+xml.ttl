@@ -1,0 +1,16 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix D: <../../person/David_Waltermire#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
+@prefix Ron: <../../person/Ron_Brill#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2019-09-03"^^XML:date;
+    reg:file [ reg:file "application/swid+xml"; reg:type "template" ];
+    reg:name "swid+xml";
+    reg:xref D:, ISO:, Ron:.
+medi:application reg:record :Resource.
+

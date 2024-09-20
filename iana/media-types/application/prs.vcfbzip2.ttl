@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix P: <../../person/Paolo_Marcheschi#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-08-03"^^XML:date;
+    reg:file [ reg:file "application/prs.vcfbzip2"; reg:type "template" ];
+    reg:name "prs.vcfbzip2";
+    reg:xref P:.
+medi:application reg:record :Resource.
+

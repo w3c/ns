@@ -1,19 +1,16 @@
 @prefix : <#>.
-@prefix x: <../media-types/application/x-www-form-urlencoded#>.
-@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix xht: <../media-types/application/xhtml+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
 @prefix medi: <../media-types/media-types.ttl#>.
-@prefix n1: <../media-types/multipart/x-mixed-replace#>.
+@prefix x: <../media-types/multipart/x-mixed-replace#>.
 @prefix c: <../media-types/text/cache-manifest#>.
 @prefix html: <../media-types/text/html#>.
-
-x:Resource reg:xref :.
 
 xht:Resource reg:xref :.
 
 medi:n0 reg:person :.
 
-n1:Resource reg:xref :.
+x:Resource reg:xref :.
 
 c:Resource reg:xref :.
 

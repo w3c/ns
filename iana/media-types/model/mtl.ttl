@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix medi: <../media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix C: <../../person/Carolyn_Hull#>.
+@prefix DIC: <../../person/DICOM_Standard_Committee#>.
+@prefix DI: <../../person/DICOM_WG_17#>.
+
+medi:model reg:record :Resource.
+
+:Resource
+    terms:date "2020-02-13"^^XML:date;
+    reg:file [ reg:file "model/mtl"; reg:type "template" ];
+    reg:name "mtl";
+    reg:updated "2022-09-20"^^XML:date;
+    reg:xref C:, DIC:, DI:.

@@ -1,0 +1,15 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix ATSC: <../../person/ATSC#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-03-18"^^XML:date;
+    reg:file
+    [ reg:file "application/atsc-dynamic-event-message"; reg:type "template" ];
+    reg:name "atsc-dynamic-event-message";
+    reg:xref ATSC:.
+medi:application reg:record :Resource.
+

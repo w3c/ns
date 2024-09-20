@@ -7,5 +7,6 @@ medi:text reg:record :Resource.
 
 :Resource
     reg:file [ reg:file "text/ecmascript"; reg:type "template" ];
-    reg:name "ecmascript - OBSOLETED in favor of application/ecmascript";
-    reg:xref html:rfc4329.
+    reg:name "ecmascript (OBSOLETED in favor of text/javascript)";
+    reg:updated "2022-03-08";
+    reg:xref html:rfc9239.

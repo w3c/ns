@@ -1,6 +1,6 @@
 @prefix : <#>.
 @prefix reg: <https://www.w3.org/ns/assignments/reg#>.
-@prefix ISO: <../../person/ISO-IEC_JTC1#>.
+@prefix ISO: <../../person/ISO-IEC_JTC_1#>.
 @prefix Thom: <../../person/Thomas_Stockhammer#>.
 @prefix medi: <../media-types.ttl#>.
 

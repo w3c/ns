@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix M: <../../person/Markus_Strehle#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2020-01-31"^^XML:date;
+    reg:file [ reg:file "application/vnd.sar"; reg:type "template" ];
+    reg:name "vnd.sar";
+    reg:xref M:.
+medi:application reg:record :Resource.
+

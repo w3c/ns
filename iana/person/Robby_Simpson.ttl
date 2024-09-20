@@ -13,5 +13,5 @@ medi:n0 reg:person :.
 :
     reg:id "Robby_Simpson";
     reg:name "Robby Simpson";
-    reg:updated "2012-11-27";
-    reg:uri "mailto:rsimpson&gmail.com".
+    reg:updated "2024-04-16";
+    reg:uri "mailto:robby.simpson&ieee.org".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix terms: <http://purl.org/dc/terms/>.
+@prefix XML: <http://www.w3.org/2001/XMLSchema#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix Nicol: <../../person/Nicolas_CARPI#>.
+@prefix medi: <../media-types.ttl#>.
+
+:Resource
+    terms:date "2023-02-08"^^XML:date;
+    reg:file [ reg:file "application/vnd.eln+zip"; reg:type "template" ];
+    reg:name "vnd.eln+zip";
+    reg:xref Nicol:.
+medi:application reg:record :Resource.
+
