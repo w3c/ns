@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.cncf.helm.chart.content.v1.tar+gzip#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.cncf.helm.chart.provenance.v1.prov#>.
+@prefix v: <../media-types/application/vnd.cncf.helm.config.v1+json#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Andrew_Block";
+    reg:name "Andrew Block";
+    reg:updated "2023-02-27";
+    reg:uri "mailto:andy.block&gmail.com".

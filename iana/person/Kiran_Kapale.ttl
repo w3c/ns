@@ -1,0 +1,23 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.3gpp.mcdata-msgstore-ctrl-request+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.3gpp.mcdata-regroup+xml#>.
+@prefix v: <../media-types/application/vnd.3gpp.mcptt-regroup+xml#>.
+@prefix n1: <../media-types/application/vnd.3gpp.mcvideo-regroup+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Kiran_Kapale";
+    reg:name "Kiran Kapale";
+    reg:updated "2023-03-16";
+    reg:uri "mailto:kiran.kapale&samsung.com".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix str: <../media-types/application/stratum#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+str:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Ben_van_Hartingsveldt";
+    reg:name "Ben van Hartingsveldt";
+    reg:updated "2024-05-06";
+    reg:uri "mailto:ben.vanhartingsveldt&yocto.com".

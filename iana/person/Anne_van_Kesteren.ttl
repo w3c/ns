@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix x: <../media-types/application/x-www-form-urlencoded#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+x:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Anne_van_Kesteren";
+    reg:name "Anne van Kesteren";
+    reg:updated "2020-07-14";
+    reg:uri "mailto:annevk&annevk.nl".

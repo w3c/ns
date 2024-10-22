@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix n1: <../media-types/application/automationml-aml+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n2: <../media-types/application/automationml-amlx+zip#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "AutomationML_e.V.";
+    reg:name "AutomationML e.V.";
+    reg:updated "2022-07-26";
+    reg:uri "mailto:office&automationml.org".

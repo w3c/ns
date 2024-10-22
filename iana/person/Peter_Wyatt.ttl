@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix u3d: <../media-types/model/u3d#>.
+
+medi:n0 reg:person :.
+
+u3d:Resource reg:xref :.
+
+:
+    reg:id "Peter_Wyatt";
+    reg:name "Peter Wyatt";
+    reg:updated "2022-02-25";
+    reg:uri "mailto:peter.wyatt&pdfa.org".

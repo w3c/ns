@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix fdf: <../media-types/application/fdf#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix xfdf: <../media-types/application/xfdf#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix prc: <../media-types/model/prc#>.
+
+fdf:Resource reg:xref :.
+
+xfdf:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+prc:Resource reg:xref :.
+
+:
+    reg:id "Betsy_Fanning";
+    reg:name "Betsy Fanning";
+    reg:updated "2022-04-29";
+    reg:uri "mailto:betsy.fanning&pdfa.org".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/model/vnd.cld#>.
+
+medi:n0 reg:person :.
+
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Robert_Monaghan";
+    reg:name "Robert Monaghan";
+    reg:updated "2022-12-22";
+    reg:uri "mailto:cld&illuscio.com".

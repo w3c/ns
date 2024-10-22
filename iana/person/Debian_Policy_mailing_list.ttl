@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.debian.binary-package#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Debian_Policy_mailing_list";
+    reg:name "Debian Policy mailing list";
+    reg:updated "2014-05-20";
+    reg:uri "mailto:debian-policy&lists.debian.org".

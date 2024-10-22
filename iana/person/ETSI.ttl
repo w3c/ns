@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix TET: <../media-types/application/TETRA_ISI#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix TE: <../media-types/audio/TETRA_ACELP_BB#>.
+@prefix TETR: <../media-types/audio/TETRA_ACELP#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+TET:Resource reg:xref :.
+
+TE:Resource reg:xref :.
+
+TETR:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+: reg:id "ETSI"; reg:name "ETSI".
+

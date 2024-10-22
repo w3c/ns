@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.syft+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Dan_Luhring";
+    reg:name "Dan Luhring";
+    reg:updated "2021-11-15";
+    reg:uri "mailto:dan.luhring&anchore.com".

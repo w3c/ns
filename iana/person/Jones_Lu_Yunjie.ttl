@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.3gpp.5gnas#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.3gpp.lpp#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Jones_Lu_Yunjie";
+    reg:name "Jones Lu Yunjie";
+    reg:updated "2021-04-09";
+    reg:uri "mailto:jones.lu&ericsson.com".

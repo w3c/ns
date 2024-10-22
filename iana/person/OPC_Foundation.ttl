@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix opc: <../media-types/application/opc-nodeset+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+opc:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "OPC_Foundation";
+    reg:name "OPC Foundation";
+    reg:updated "2020-09-01";
+    reg:uri "mailto:sysadmin&opcfoundation.org".

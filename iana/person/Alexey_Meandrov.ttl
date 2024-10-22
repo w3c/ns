@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.collabio.xodocuments.document-template#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.collabio.xodocuments.document#>.
+@prefix v: <../media-types/application/vnd.collabio.xodocuments.presentation-template#>.
+@prefix n1: <../media-types/application/vnd.collabio.xodocuments.presentation#>.
+@prefix n2: <../media-types/application/vnd.collabio.xodocuments.spreadsheet-template#>.
+@prefix n3: <../media-types/application/vnd.collabio.xodocuments.spreadsheet#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+n3:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Alexey_Meandrov";
+    reg:name "Alexey Meandrov";
+    reg:updated "2017-12-12";
+    reg:uri "mailto:alexey.meandrov&xcds.com".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix m: <../media-types/application/manifest+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+m:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Marcos_Caceres";
+    reg:name "Marcos Caceres";
+    reg:updated "2021-06-22";
+    reg:uri "mailto:marcos&marcosc.com".

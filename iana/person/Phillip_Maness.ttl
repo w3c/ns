@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/audio/vnd.dts.uhd#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Phillip_Maness";
+    reg:name "Phillip Maness";
+    reg:updated "2018-11-14";
+    reg:uri "mailto:phillip.maness&xperi.com".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/text/vnd.sosi#>.
+
+medi:n0 reg:person :.
+
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Petter_Reinholdtsen";
+    reg:name "Petter Reinholdtsen";
+    reg:updated "2019-06-03";
+    reg:uri "mailto:pere-iana&hungry.com".

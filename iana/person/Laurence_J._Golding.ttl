@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix s: <../media-types/application/sarif+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+s:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Laurence_J._Golding";
+    reg:name "Laurence J. Golding";
+    reg:updated "2020-09-15";
+    reg:uri "mailto:v-lgold&microsoft.com".

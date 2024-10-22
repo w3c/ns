@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.oai.workflows#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.oai.workflows+json#>.
+@prefix v: <../media-types/application/vnd.oai.workflows+yaml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Frank_Kilcommins";
+    reg:name "Frank Kilcommins";
+    reg:updated "2023-11-29";
+    reg:uri "mailto:fkilcommins&gmail.com".

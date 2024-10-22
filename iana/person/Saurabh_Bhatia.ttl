@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix glt: <../media-types/application/gltf-buffer#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix gl: <../media-types/model/gltf-binary#>.
+
+glt:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+gl:Resource reg:xref :.
+
+:
+    reg:id "Saurabh_Bhatia";
+    reg:name "Saurabh Bhatia";
+    reg:updated "2018-05-07";
+    reg:uri "mailto:glTFIANA&microsoft.com".

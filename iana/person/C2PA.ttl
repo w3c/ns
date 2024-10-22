@@ -1,0 +1,13 @@
+@prefix : <#>.
+@prefix c2p: <../media-types/application/c2pa#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+c2p:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "C2PA";
+    reg:org "Coalition for Content Provenance and Authenticity (C2PA)";
+    reg:uri "https://c2pa.org".

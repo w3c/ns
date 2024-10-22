@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix cd: <../media-types/application/cda+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix hl7: <../media-types/application/hl7v2+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix hl7v2: <../media-types/text/hl7v2#>.
+
+cd:Resource reg:xref :.
+
+hl7:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+hl7v2:Resource reg:xref :.
+
+:
+    reg:id "Marc_Duteau";
+    reg:name "Marc Duteau";
+    reg:updated "2022-07-07";
+    reg:uri "mailto:marc&hl7.org".

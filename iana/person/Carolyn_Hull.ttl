@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix mtl: <../media-types/model/mtl#>.
+@prefix obj: <../media-types/model/obj#>.
+@prefix stl: <../media-types/model/stl#>.
+
+medi:n0 reg:person :.
+
+mtl:Resource reg:xref :.
+
+obj:Resource reg:xref :.
+
+stl:Resource reg:xref :.
+
+:
+    reg:id "Carolyn_Hull";
+    reg:name "Carolyn Hull";
+    reg:updated "2022-09-16";
+    reg:uri "mailto:dicom&dicomstandard.org".

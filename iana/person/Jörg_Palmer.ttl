@@ -1,0 +1,50 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.afpc.afplinedata-pagedef#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.afpc.afplinedata#>.
+@prefix v: <../media-types/application/vnd.afpc.cmoca-cmresource#>.
+@prefix n1: <../media-types/application/vnd.afpc.foca-charset#>.
+@prefix n2: <../media-types/application/vnd.afpc.foca-codedfont#>.
+@prefix n3: <../media-types/application/vnd.afpc.foca-codepage#>.
+@prefix n4: <../media-types/application/vnd.afpc.modca-cmtable#>.
+@prefix n5: <../media-types/application/vnd.afpc.modca-formdef#>.
+@prefix n6: <../media-types/application/vnd.afpc.modca-mediummap#>.
+@prefix n7: <../media-types/application/vnd.afpc.modca-objectcontainer#>.
+@prefix n8: <../media-types/application/vnd.afpc.modca-overlay#>.
+@prefix n9: <../media-types/application/vnd.afpc.modca-pagesegment#>.
+@prefix n10: <../media-types/application/vnd.afpc.modca#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+n3:Resource reg:xref :.
+
+n4:Resource reg:xref :.
+
+n5:Resource reg:xref :.
+
+n6:Resource reg:xref :.
+
+n7:Resource reg:xref :.
+
+n8:Resource reg:xref :.
+
+n9:Resource reg:xref :.
+
+n10:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "J\u00f6rg_Palmer";
+    reg:name "J\u00f6rg Palmer";
+    reg:updated "2020-10-12";
+    reg:uri "mailto:Joerg.Palmer&compart.com".

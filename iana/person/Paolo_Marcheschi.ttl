@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix prs: <../media-types/application/prs.vcfbzip2#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+prs:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Paolo_Marcheschi";
+    reg:name "Paolo Marcheschi";
+    reg:updated "2023-08-03";
+    reg:uri "mailto:paolo.marcheschi&ftgm.it".

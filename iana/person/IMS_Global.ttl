@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix clr: <../media-types/application/clr#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+clr:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "IMS_Global";
+    reg:name "IMS Global Learning Consortium Inc.";
+    reg:updated "2020-10-02";
+    reg:uri "https://www.imsglobal.org".

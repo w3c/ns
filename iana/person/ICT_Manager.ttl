@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.seis+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "ICT_Manager";
+    reg:name "ICT Manager";
+    reg:updated "2020-09-30";
+    reg:uri "mailto:hostmaster&aaltronav.eu".

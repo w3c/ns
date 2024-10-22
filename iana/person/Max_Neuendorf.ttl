@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix n1: <../media-types/audio/aac#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix us: <../media-types/audio/usac#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+n1:Resource reg:xref :.
+
+us:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Max_Neuendorf";
+    reg:name "Max Neuendorf";
+    reg:updated "2018-04-06";
+    reg:uri "mailto:max.neuendorf&iis.fraunhofer.de".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix mid: <../media-types/audio/midi-clip#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+mid:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Benjamin_Israel";
+    reg:name "Benjamin Israel";
+    reg:updated "2024-03-18";
+    reg:uri "mailto:info&midi.org".

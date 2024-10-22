@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix sh: <../media-types/text/shaclc#>.
+
+medi:n0 reg:person :.
+
+sh:Resource reg:xref :.
+
+:
+    reg:id "W3C_SHACL_Community_Group";
+    reg:name "W3C SHACL Community Group";
+    reg:updated "2020-06-30";
+    reg:uri "https://www.w3.org/community/shacl".

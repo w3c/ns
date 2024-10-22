@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix sti: <../media-types/application/stix+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix t: <../media-types/application/taxii+json#>.
+@prefix xli: <../media-types/application/xliff+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+sti:Resource reg:xref :.
+
+t:Resource reg:xref :.
+
+xli:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Chet_Ensign";
+    reg:name "Chet Ensign";
+    reg:updated "2020-04-23";
+    reg:uri "mailto:chet.ensign&oasis-open.org".

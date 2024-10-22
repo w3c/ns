@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix sep: <../media-types/application/sep-exi#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix se: <../media-types/application/sep+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+sep:Resource reg:xref :.
+
+se:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+: reg:id "IEEE"; reg:name "IEEE"; reg:uri "https://www.ieee.org".
+

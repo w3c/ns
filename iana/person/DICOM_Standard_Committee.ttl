@@ -1,0 +1,32 @@
+@prefix : <#>.
+@prefix dic: <../media-types/application/dicom+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix di: <../media-types/application/dicom+xml#>.
+@prefix dico: <../media-types/image/dicom-rle#>.
+@prefix jls: <../media-types/image/jls#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix mtl: <../media-types/model/mtl#>.
+@prefix obj: <../media-types/model/obj#>.
+@prefix stl: <../media-types/model/stl#>.
+
+dic:Resource reg:xref :.
+
+di:Resource reg:xref :.
+
+dico:Resource reg:xref :.
+
+jls:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+mtl:Resource reg:xref :.
+
+obj:Resource reg:xref :.
+
+stl:Resource reg:xref :.
+
+:
+    reg:id "DICOM_Standard_Committee";
+    reg:name "DICOM Standard Committee";
+    reg:updated "2022-09-16";
+    reg:uri "mailto:dicom&dicomstandard.org".

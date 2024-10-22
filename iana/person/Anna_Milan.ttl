@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix bufr: <../media-types/application/bufr#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix grib: <../media-types/application/grib#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+bufr:Resource reg:xref :.
+
+grib:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Anna_Milan";
+    reg:name "Anna Milan";
+    reg:updated "2024-07-05";
+    reg:uri "mailto:amilan&wmo.int".

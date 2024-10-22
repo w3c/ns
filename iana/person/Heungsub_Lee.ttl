@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.hsl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix vn: <../media-types/text/vnd.hgl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+vn:Resource reg:xref :.
+
+:
+    reg:id "Heungsub_Lee";
+    reg:name "Heungsub Lee";
+    reg:updated "2023-02-13";
+    reg:uri "mailto:heungsub&subl.ee".

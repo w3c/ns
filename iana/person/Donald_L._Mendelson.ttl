@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix sbe: <../media-types/application/sbe#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+sbe:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Donald_L._Mendelson";
+    reg:name "Donald L. Mendelson";
+    reg:updated "2020-04-14";
+    reg:uri "mailto:donmendelson&silver-flash.net".

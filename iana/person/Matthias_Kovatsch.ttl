@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix td: <../media-types/application/td+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+td:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Matthias_Kovatsch";
+    reg:name "Matthias Kovatsch";
+    reg:updated "2020-02-12";
+    reg:uri "mailto:w3c&kovatsch.net".

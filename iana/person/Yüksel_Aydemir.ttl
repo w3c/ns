@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.capasystems-pg+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Y\u00fcksel_Aydemir";
+    reg:name "Y\u00fcksel Aydemir";
+    reg:updated "2017-05-03";
+    reg:uri "mailto:yay&capasystems.com".

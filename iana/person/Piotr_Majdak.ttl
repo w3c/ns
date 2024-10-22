@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix sof: <../media-types/audio/sofa#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+sof:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Piotr_Majdak";
+    reg:name "Piotr Majdak";
+    reg:updated "2020-06-16";
+    reg:uri "mailto:piotr.majdak&oeaw.ac.at".

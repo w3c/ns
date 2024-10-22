@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.3gpp.v2x#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Sang_Min_Park";
+    reg:name "Sang Min Park";
+    reg:updated "2023-03-20";
+    reg:uri "mailto:sangmin2.park&lge.com".

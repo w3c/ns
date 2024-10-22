@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.gentoo.catmetadata+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.gentoo.ebuild#>.
+@prefix v: <../media-types/application/vnd.gentoo.eclass#>.
+@prefix n1: <../media-types/application/vnd.gentoo.gpkg#>.
+@prefix n2: <../media-types/application/vnd.gentoo.manifest#>.
+@prefix n3: <../media-types/application/vnd.gentoo.pkgmetadata+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+n3:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Micha\u0142_G\u00f3rny";
+    reg:name "Micha\u0142 G\u00f3rny";
+    reg:updated "2022-11-30";
+    reg:uri "mailto:mgorny&gentoo.org".

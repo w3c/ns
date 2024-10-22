@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix prs: <../media-types/application/prs.implied-document+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix pr: <../media-types/application/prs.implied-executable#>.
+@prefix p: <../media-types/application/prs.implied-object+json-seq#>.
+@prefix n1: <../media-types/application/prs.implied-object+json#>.
+@prefix n2: <../media-types/application/prs.implied-object+yaml#>.
+@prefix n3: <../media-types/application/prs.implied-structure#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+prs:Resource reg:xref :.
+
+pr:Resource reg:xref :.
+
+p:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+n3:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Marek_\u010cerm\u00e1k";
+    reg:name "Marek \u010cerm\u00e1k";
+    reg:updated "2024-01-11";
+    reg:uri "mailto:cermmarek&gmail.com".

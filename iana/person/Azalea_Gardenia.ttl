@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix prs: <../media-types/application/prs.mayfile#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+prs:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Azalea_Gardenia";
+    reg:name "Azalea Gardenia";
+    reg:updated "2024-08-14";
+    reg:uri "mailto:bestie&mayf.pink".

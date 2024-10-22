@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.hdt#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Javier_D._Fern\u00e1ndez";
+    reg:name "Javier D. Fern\u00e1ndez";
+    reg:updated "2016-01-07";
+    reg:uri "mailto:javier.fernandez&wu.ac.at".

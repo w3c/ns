@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix sp: <../media-types/audio/sp-midi#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+sp:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Athan_Billias";
+    reg:name "Athan Billias";
+    reg:updated "2022-10-04";
+    reg:uri "mailto:info&midi.org".

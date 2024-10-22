@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.artisan+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Brad_Turner";
+    reg:name "Brad Turner";
+    reg:updated "2018-05-07";
+    reg:uri "mailto:vnd.artisan&clanofartisans.com".

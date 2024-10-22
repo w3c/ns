@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix n1: <../media-types/image/apng#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+n1:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "W3C_PNG_Working_Group";
+    reg:name "PNG Working Group";
+    reg:updated "2022-11-21";
+    reg:uri "mailto:public-png&w3.org".

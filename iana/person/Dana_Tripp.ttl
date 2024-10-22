@@ -1,0 +1,32 @@
+@prefix : <#>.
+@prefix exp: <../media-types/application/express#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix p21: <../media-types/application/p21#>.
+@prefix p2: <../media-types/application/p21+zip#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix ste: <../media-types/model/step-xml+zip#>.
+@prefix step: <../media-types/model/step#>.
+@prefix st: <../media-types/model/step+xml#>.
+@prefix s: <../media-types/model/step+zip#>.
+
+exp:Resource reg:xref :.
+
+p21:Resource reg:xref :.
+
+p2:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+ste:Resource reg:xref :.
+
+step:Resource reg:xref :.
+
+st:Resource reg:xref :.
+
+s:Resource reg:xref :.
+
+:
+    reg:id "Dana_Tripp";
+    reg:name "Dana Tripp";
+    reg:updated "2021-08-10";
+    reg:uri "mailto:trippdsc4&gmail.com".

@@ -1,0 +1,19 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.3gpp.5gsa2x-local-service-information#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.3gpp.5gsa2x#>.
+@prefix v: <../media-types/application/vnd.3gpp.pinapp-info+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "_3GPP_CT1";
+    reg:name "3GPP CT1 Working Group";
+    reg:uri "mailto:3GPP_TSG_CT_WG1&LIST.ETSI.ORG".

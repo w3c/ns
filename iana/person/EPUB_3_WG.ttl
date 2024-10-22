@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix epu: <../media-types/application/epub+zip#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix oeb: <../media-types/application/oebps-package+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+epu:Resource reg:xref :.
+
+oeb:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "EPUB_3_WG";
+    reg:name "EPUB 3 Working Group";
+    reg:updated "2022-08-16";
+    reg:uri "mailto:public-epub-wg&w3.org".

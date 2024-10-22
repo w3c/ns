@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.fujifilm.fb.docuworks.binder#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.fujifilm.fb.docuworks.container#>.
+@prefix v: <../media-types/application/vnd.fujifilm.fb.docuworks#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Kazuya_Iimura";
+    reg:name "Kazuya Iimura";
+    reg:updated "2021-04-20";
+    reg:uri "mailto:kazuya.iimura.pa&fujifilm.com".

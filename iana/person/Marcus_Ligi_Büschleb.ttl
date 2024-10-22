@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.espass-espass+zip#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Marcus_Ligi_B\u00fcschleb";
+    reg:name "Marcus Ligi B\u00fcschleb";
+    reg:updated "2016-08-12";
+    reg:uri "mailto:marcus.bueschleb&googlemail.com".

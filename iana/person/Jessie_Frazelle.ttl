@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/text/vnd.zoo.kcl#>.
+
+medi:n0 reg:person :.
+
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Jessie_Frazelle";
+    reg:name "Jessie Frazelle";
+    reg:updated "2024-05-30";
+    reg:uri "mailto:jess&zoo.dev".

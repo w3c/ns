@@ -1,0 +1,41 @@
+@prefix : <#>.
+@prefix cd: <../media-types/application/cda+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix elm: <../media-types/application/elm+json#>.
+@prefix el: <../media-types/application/elm+xml#>.
+@prefix fhi: <../media-types/application/fhir+json#>.
+@prefix fh: <../media-types/application/fhir+xml#>.
+@prefix hl7: <../media-types/application/hl7v2+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix cql: <../media-types/text/cql-expression#>.
+@prefix cq: <../media-types/text/cql-identifier#>.
+@prefix c: <../media-types/text/cql#>.
+@prefix fhirp: <../media-types/text/fhirpath#>.
+@prefix hl7v2: <../media-types/text/hl7v2#>.
+
+cd:Resource reg:xref :.
+
+elm:Resource reg:xref :.
+
+el:Resource reg:xref :.
+
+fhi:Resource reg:xref :.
+
+fh:Resource reg:xref :.
+
+hl7:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+cql:Resource reg:xref :.
+
+cq:Resource reg:xref :.
+
+c:Resource reg:xref :.
+
+fhirp:Resource reg:xref :.
+
+hl7v2:Resource reg:xref :.
+
+: reg:id "HL7"; reg:name "HL7"; reg:uri "http://www.hl7.org".
+

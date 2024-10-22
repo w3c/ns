@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix n1: <../media-types/image/avif#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix AV1: <../media-types/video/AV1#>.
+
+n1:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+AV1:Resource reg:xref :.
+
+:
+    reg:id "Alliance_for_Open_Media";
+    reg:name "Alliance for Open Media";
+    reg:updated "2021-01-28";
+    reg:uri "mailto:registration&aomedia.org".

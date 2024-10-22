@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vtt: <../media-types/text/vtt#>.
+
+medi:n0 reg:person :.
+
+vtt:Resource reg:xref :.
+
+:
+    reg:id "Silvia_Pfeiffer";
+    reg:name "Silvia Pfeiffer";
+    reg:updated "2019-10-14";
+    reg:uri "mailto:silviapfeiffer1&gmail.com".

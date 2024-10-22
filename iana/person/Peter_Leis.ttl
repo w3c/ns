@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.3gpp.current-location-discovery+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Peter_Leis";
+    reg:name "Peter Leis";
+    reg:updated "2023-03-16";
+    reg:uri "mailto:peter.leis&nokia.comm".

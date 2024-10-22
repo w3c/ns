@@ -1,0 +1,41 @@
+@prefix : <#>.
+@prefix n1: <../media-types/application/atsc-dwd+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n2: <../media-types/application/atsc-dynamic-event-message#>.
+@prefix n3: <../media-types/application/atsc-held+xml#>.
+@prefix n4: <../media-types/application/atsc-rdt+json#>.
+@prefix n5: <../media-types/application/atsc-rsat+xml#>.
+@prefix mmt: <../media-types/application/mmt-aei+xml#>.
+@prefix mm: <../media-types/application/mmt-usd+xml#>.
+@prefix rou: <../media-types/application/route-apd+xml#>.
+@prefix ro: <../media-types/application/route-s-tsid+xml#>.
+@prefix rout: <../media-types/application/route-usd+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+n3:Resource reg:xref :.
+
+n4:Resource reg:xref :.
+
+n5:Resource reg:xref :.
+
+mmt:Resource reg:xref :.
+
+mm:Resource reg:xref :.
+
+rou:Resource reg:xref :.
+
+ro:Resource reg:xref :.
+
+rout:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "ATSC";
+    reg:name "Advanced Television Systems Committee";
+    reg:updated "2020-03-18";
+    reg:uri "mailto:jwhitaker&atsc.org".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.fujixerox.docuworks#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Takatomo_Wakibayashi";
+    reg:name "Takatomo Wakibayashi";
+    reg:updated "2019-12-03";
+    reg:uri "mailto:takatomo.wakibayashi&fujixerox.co.jp".

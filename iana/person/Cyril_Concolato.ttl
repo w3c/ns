@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix n1: <../media-types/image/avif#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+n1:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Cyril_Concolato";
+    reg:name "Cyril Concolato";
+    reg:updated "2021-01-28";
+    reg:uri "mailto:cconcolato&netflix.com".

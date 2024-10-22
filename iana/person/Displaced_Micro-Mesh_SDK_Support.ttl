@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/model/vnd.bary#>.
+
+medi:n0 reg:person :.
+
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Displaced_Micro-Mesh_SDK_Support";
+    reg:name "Displaced Micro-Mesh SDK Support";
+    reg:updated "2023-03-23";
+    reg:uri "mailto:DisplacedMicroMesh-SDK-support&nvidia.com".

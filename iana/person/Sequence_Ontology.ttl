@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix gff3: <../media-types/text/gff3#>.
+
+medi:n0 reg:person :.
+
+gff3:Resource reg:xref :.
+
+:
+    reg:id "Sequence_Ontology";
+    reg:name "Sequence Ontology";
+    reg:updated "2020-08-17";
+    reg:uri "mailto:song-devel&lists.utah.edu".

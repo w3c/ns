@@ -1,0 +1,32 @@
+@prefix : <#>.
+@prefix ent: <../media-types/application/entity-statement+jwt#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix jwk: <../media-types/application/jwk-set+jwt#>.
+@prefix log: <../media-types/application/logout+jwt#>.
+@prefix res: <../media-types/application/resolve-response+jwt#>.
+@prefix tru: <../media-types/application/trust-chain+json#>.
+@prefix tr: <../media-types/application/trust-mark-delegation+jwt#>.
+@prefix trus: <../media-types/application/trust-mark+jwt#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+ent:Resource reg:xref :.
+
+jwk:Resource reg:xref :.
+
+log:Resource reg:xref :.
+
+res:Resource reg:xref :.
+
+tru:Resource reg:xref :.
+
+tr:Resource reg:xref :.
+
+trus:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "OpenID_Foundation_Artifact_Binding_WG";
+    reg:name "OpenID Foundation Artifact Binding Working Group";
+    reg:updated "2024-08-29";
+    reg:uri "mailto:openid-specs-ab&lists.openid.net".

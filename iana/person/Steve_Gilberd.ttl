@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.ficlab.flb+zip#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix vn: <../media-types/text/vnd.ficlab.flt#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+vn:Resource reg:xref :.
+
+:
+    reg:id "Steve_Gilberd";
+    reg:name "Steve Gilberd";
+    reg:updated "2019-09-25";
+    reg:uri "mailto:steve&erayd.net".

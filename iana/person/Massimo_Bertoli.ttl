@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.veryant.thin#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Massimo_Bertoli";
+    reg:name "Massimo Bertoli";
+    reg:updated "2018-12-20";
+    reg:uri "mailto:massimo.bertoli&veryant.com".

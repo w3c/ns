@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/text/vnd.vcf#>.
+
+medi:n0 reg:person :.
+
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Anand_Jahagirdar";
+    reg:name "Anand Jahagirdar";
+    reg:updated "2024-06-27";
+    reg:uri "mailto:Anand.Jahagirdar&karkinos.in".

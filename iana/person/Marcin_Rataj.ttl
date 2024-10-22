@@ -1,0 +1,26 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.ipfs.ipns-record#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.ipld.car#>.
+@prefix v: <../media-types/application/vnd.ipld.dag-cbor#>.
+@prefix n1: <../media-types/application/vnd.ipld.dag-json#>.
+@prefix n2: <../media-types/application/vnd.ipld.raw#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Marcin_Rataj";
+    reg:name "Marcin Rataj";
+    reg:updated "2024-02-08";
+    reg:uri "mailto:lidel&ipshipyard.com".

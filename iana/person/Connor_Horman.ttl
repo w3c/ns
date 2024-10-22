@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.crypto-shade-file#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.shade-save-file#>.
+@prefix v: <../media-types/application/vnd.snesdev-page-table#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Connor_Horman";
+    reg:name "Connor Horman";
+    reg:updated "2020-04-06";
+    reg:uri "mailto:chorman64&gmail.com".

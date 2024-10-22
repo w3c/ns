@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.banana-accounting#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Jos\u00e9_Del_Romano";
+    reg:name "Jos\u00e9 Del Romano";
+    reg:updated "2018-06-18";
+    reg:uri "mailto:development&banana.ch".

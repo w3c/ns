@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix j2c: <../media-types/image/j2c#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix jpx: <../media-types/image/jpx#>.
+@prefix jxl: <../media-types/image/jxl#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+j2c:Resource reg:xref :.
+
+jpx:Resource reg:xref :.
+
+jxl:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "ISO-IEC_JTC_1_SC_29_WG_1";
+    reg:name "ISO/IEC JTC 1/SC 29/WG 1 Convenor";
+    reg:updated "2023-06-12";
+    reg:uri "mailto:SC_29-sec&itscj.ipsj.or.jp".

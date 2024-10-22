@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix tm: <../media-types/application/tm+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+tm:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Sebastian_Kaebisch";
+    reg:name "Sebastian Kaebisch";
+    reg:updated "2022-08-22";
+    reg:uri "mailto:sebastian.kaebisch&siemens.com".

@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix mipc: <../media-types/application/mipc#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix sipc: <../media-types/application/sipc#>.
+@prefix vnd: <../media-types/application/vnd.bpf#>.
+@prefix vn: <../media-types/application/vnd.bpf3#>.
+@prefix v: <../media-types/application/vnd.las#>.
+@prefix n1: <../media-types/application/vnd.laszip#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+mipc:Resource reg:xref :.
+
+sipc:Resource reg:xref :.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "NCGIS";
+    reg:name
+    "NGA National Center for Geospatial Intelligence Standards (NCGIS)";
+    reg:updated "2019-08-21".

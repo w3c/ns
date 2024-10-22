@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.hc+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Jan_Sch\u00fctze";
+    reg:name "Jan Sch\u00fctze";
+    reg:updated "2017-01-09";
+    reg:uri "mailto:jans&dracoblue.de".

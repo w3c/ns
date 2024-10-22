@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.think-cell.ppttc+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Arno_Schoedl";
+    reg:name "Arno Schoedl";
+    reg:updated "2018-04-16";
+    reg:uri "mailto:aschoedl&think-cell.com".

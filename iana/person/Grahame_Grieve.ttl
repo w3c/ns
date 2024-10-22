@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix fhi: <../media-types/application/fhir+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix fh: <../media-types/application/fhir+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+fhi:Resource reg:xref :.
+
+fh:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Grahame_Grieve";
+    reg:name "Grahame Grieve";
+    reg:updated "2018-03-06";
+    reg:uri "mailto:fhir-director&hl7.org".

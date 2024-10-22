@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.mdl-mbsdf#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.mdl#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Lutz_Kettner";
+    reg:name "Lutz Kettner";
+    reg:updated "2023-03-06";
+    reg:uri "mailto:lkettner&nvidia.com".

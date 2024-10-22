@@ -1,0 +1,34 @@
+@prefix : <#>.
+@prefix hej2k: <../media-types/image/hej2k#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix hsj2: <../media-types/image/hsj2#>.
+@prefix j2c: <../media-types/image/j2c#>.
+@prefix jph: <../media-types/image/jph#>.
+@prefix jphc: <../media-types/image/jphc#>.
+@prefix jxr: <../media-types/image/jxr#>.
+@prefix jxrA: <../media-types/image/jxrA#>.
+@prefix jxrS: <../media-types/image/jxrS#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+hej2k:Resource reg:xref :.
+
+hsj2:Resource reg:xref :.
+
+j2c:Resource reg:xref :.
+
+jph:Resource reg:xref :.
+
+jphc:Resource reg:xref :.
+
+jxr:Resource reg:xref :.
+
+jxrA:Resource reg:xref :.
+
+jxrS:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "ITU-T";
+    reg:name "ITU Telecommunication Standardization Sector";
+    reg:uri "https://www.itu.int".

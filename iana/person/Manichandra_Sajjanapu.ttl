@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.apple.keynote#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.apple.numbers#>.
+@prefix v: <../media-types/application/vnd.apple.pages#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Manichandra_Sajjanapu";
+    reg:name "Manichandra Sajjanapu";
+    reg:updated "2018-08-09";
+    reg:uri "mailto:mcnc33&gmail.com".

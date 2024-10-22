@@ -1,0 +1,19 @@
+@prefix : <#>.
+@prefix ST2: <../media-types/application/ST2110-41#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n1: <../media-types/image/aces#>.
+@prefix dpx: <../media-types/image/dpx#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+ST2:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+dpx:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "SMPTE";
+    reg:name "Society of Motion Picture and Television Engineers (SMPTE)";
+    reg:uri "http://www.smpte.org".

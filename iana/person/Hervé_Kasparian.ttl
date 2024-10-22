@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.eu.kasparian.car+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Herv\u00e9_Kasparian";
+    reg:name "Herv\u00e9 Kasparian";
+    reg:updated "2022-01-03";
+    reg:uri "mailto:herve&kasparian.eu".

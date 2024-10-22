@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix c2p: <../media-types/application/c2pa#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+c2p:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Leonard_Rosenthol";
+    reg:name "Leonard Rosenthol";
+    reg:updated "2023-09-25";
+    reg:uri "mailto:lrosenth&adobe.com".

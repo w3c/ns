@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix spd: <../media-types/application/spdx+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix spdx: <../media-types/text/spdx#>.
+
+spd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+spdx:Resource reg:xref :.
+
+:
+    reg:id "Linux_Foundation";
+    reg:name "Linux Foundation";
+    reg:updated "2021-11-03";
+    reg:uri "mailto:kstewart&linuxfoundation.org".

@@ -1,0 +1,18 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.frogans.fnc#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.frogans.ltf#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "OP3FT";
+    reg:name
+        "Organization for the Promotion, Protection and Progress of Frogans Technology (OP3FT)";
+    reg:updated "2020-05-04";
+    reg:uri "mailto:contact-standards&op3ft.org".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.datalog#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Simon_Johnston";
+    reg:name "Simon Johnston";
+    reg:updated "2022-07-20";
+    reg:uri "mailto:johnstonskj&gmail.com".

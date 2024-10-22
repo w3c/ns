@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.d3m-dataset#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.d3m-problem#>.
+@prefix v: <../media-types/application/vnd.dbf#>.
+@prefix n1: <../media-types/application/vnd.shp#>.
+@prefix n2: <../media-types/application/vnd.shx#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix n3: <../media-types/text/vnd.gml#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+n3:Resource reg:xref :.
+
+:
+    reg:id "Mi_Tar";
+    reg:name "Mi Tar";
+    reg:updated "2020-09-18";
+    reg:uri "mailto:mitar.iana&tnode.com".

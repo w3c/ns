@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix cwl: <../media-types/application/cwl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix cw: <../media-types/application/cwl+json#>.
+@prefix c: <../media-types/application/cwl+yaml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+cwl:Resource reg:xref :.
+
+cw:Resource reg:xref :.
+
+c:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "CWL_Project";
+    reg:name "CWL Project";
+    reg:updated "2024-04-17";
+    reg:uri "mailto:commonworkflowlanguage&sfconservancy.org".

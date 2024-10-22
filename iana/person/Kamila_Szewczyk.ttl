@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.bzip3#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Kamila_Szewczyk";
+    reg:name "Kamila Szewczyk";
+    reg:updated "2023-11-08";
+    reg:uri "mailto:kspalaiologos&gmail.com".

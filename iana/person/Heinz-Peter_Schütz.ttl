@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.bint.med-content#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix vn: <../media-types/multipart/vnd.bint.med-plus#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+vn:Resource reg:xref :.
+
+:
+    reg:id "Heinz-Peter_Sch\u00fctz";
+    reg:name "Heinz-Peter Sch\u00fctz";
+    reg:updated "2017-04-07";
+    reg:uri "mailto:heinz.schuetz&bint.ch".

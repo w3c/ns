@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.3gpp.seal-info+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.3gpp.seal-location-info+xml#>.
+@prefix v: <../media-types/application/vnd.3gpp.seal-mbms-usage-info+xml#>.
+@prefix n1: <../media-types/application/vnd.3gpp.seal-network-QoS-management-info+xml#>.
+@prefix n2: <../media-types/application/vnd.3gpp.seal-unicast-info+xml#>.
+@prefix n3: <../media-types/application/vnd.3gpp.vae-info+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+n3:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Christian_Herrero-Veron";
+    reg:name "Christian Herrero-Veron";
+    reg:updated "2023-03-17";
+    reg:uri "mailto:christian.herrero&huawei.com".

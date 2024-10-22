@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix e57: <../media-types/model/e57#>.
+
+medi:n0 reg:person :.
+
+e57:Resource reg:xref :.
+
+:
+    reg:id "ASTM";
+    reg:name "ASTM International";
+    reg:updated "2020-07-20";
+    reg:uri "https://www.astm.org".

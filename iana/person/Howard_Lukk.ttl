@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix n1: <../media-types/image/aces#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+n1:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Howard_Lukk";
+    reg:name "Howard Lukk";
+    reg:updated "2017-12-11";
+    reg:uri "mailto:hlukk&smpte.org".

@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix n1: <../media-types/application/3gppHal+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix n2: <../media-types/application/3gppHalForms+json#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+n1:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Ulrich_Wiehe";
+    reg:name "Ulrich Wiehe";
+    reg:updated "2021-04-28";
+    reg:uri "mailto:ulrich.wiehe&nokia.com".

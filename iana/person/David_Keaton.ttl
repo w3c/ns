@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix s: <../media-types/application/sarif-external-properties+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+s:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "David_Keaton";
+    reg:name "David Keaton";
+    reg:updated "2021-04-26";
+    reg:uri "mailto:dmk&dmk.com".

@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/model/vnd.usda#>.
+@prefix vn: <../media-types/model/vnd.usdz+zip#>.
+
+medi:n0 reg:person :.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+:
+    reg:id "Sebastian_Grassia";
+    reg:name "Sebastian Grassia";
+    reg:updated "2022-09-19";
+    reg:uri "mailto:usd-iana&pixar.com".

@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix node: <../media-types/application/node#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+node:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Node.js_TSC";
+    reg:name "Node.js Technical Steering Committee";
+    reg:updated "2017-12-11";
+    reg:uri "mailto:tsc&nodejs.org".

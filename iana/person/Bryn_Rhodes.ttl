@@ -1,0 +1,29 @@
+@prefix : <#>.
+@prefix elm: <../media-types/application/elm+json#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix el: <../media-types/application/elm+xml#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix cql: <../media-types/text/cql-expression#>.
+@prefix cq: <../media-types/text/cql-identifier#>.
+@prefix c: <../media-types/text/cql#>.
+@prefix fhirp: <../media-types/text/fhirpath#>.
+
+elm:Resource reg:xref :.
+
+el:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+cql:Resource reg:xref :.
+
+cq:Resource reg:xref :.
+
+c:Resource reg:xref :.
+
+fhirp:Resource reg:xref :.
+
+:
+    reg:id "Bryn_Rhodes";
+    reg:name "Bryn Rhodes";
+    reg:updated "2020-12-08";
+    reg:uri "mailto:bryn&dynamiccontentgroup.com".

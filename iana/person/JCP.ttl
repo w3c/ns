@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix j: <../media-types/application/java-archive#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+j:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "JCP";
+    reg:name "Java Community Process (JCP)";
+    reg:updated "2023-04-27";
+    reg:uri "mailto:pmo&jcp.org".

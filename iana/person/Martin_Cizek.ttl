@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/text/vnd.exchangeable#>.
+
+medi:n0 reg:person :.
+
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Martin_Cizek";
+    reg:name "Martin Cizek";
+    reg:updated "2022-08-03";
+    reg:uri "mailto:martin.cizek&cuzk.cz".

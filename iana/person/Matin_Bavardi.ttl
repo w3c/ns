@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix prs: <../media-types/text/prs.texi#>.
+
+medi:n0 reg:person :.
+
+prs:Resource reg:xref :.
+
+:
+    reg:id "Matin_Bavardi";
+    reg:name "Matin Bavardi";
+    reg:updated "2023-09-06";
+    reg:uri "mailto:matin.bavardi&gmail.com".

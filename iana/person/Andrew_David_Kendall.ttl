@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.patientecommsdoc#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Andrew_David_Kendall";
+    reg:name "Andrew David Kendall";
+    reg:updated "2018-10-26";
+    reg:uri "mailto:andrew.kendall&atos.net".

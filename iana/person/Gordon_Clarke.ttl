@@ -1,0 +1,17 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.familysearch.gedcom+zip#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix vn: <../media-types/text/vnd.familysearch.gedcom#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+vn:Resource reg:xref :.
+
+:
+    reg:id "Gordon_Clarke";
+    reg:name "Gordon Clarke";
+    reg:updated "2021-12-07";
+    reg:uri "mailto:gedcom&familysearch.org".

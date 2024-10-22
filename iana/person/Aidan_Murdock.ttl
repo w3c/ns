@@ -1,0 +1,23 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.nato.bindingdataobject+cbor#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.nato.bindingdataobject+json#>.
+@prefix v: <../media-types/application/vnd.nato.bindingdataobject+xml#>.
+@prefix n1: <../media-types/application/vnd.nato.openxmlformats-package.iepd+zip#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Aidan_Murdock";
+    reg:name "Aidan Murdock";
+    reg:updated "2023-11-27";
+    reg:uri "mailto:aidan.murdock&ncia.nato.int".

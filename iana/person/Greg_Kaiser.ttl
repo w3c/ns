@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.android.ota#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Greg_Kaiser";
+    reg:name "Greg Kaiser";
+    reg:updated "2019-06-25";
+    reg:uri "mailto:android-iana-mime-registration&google.com".

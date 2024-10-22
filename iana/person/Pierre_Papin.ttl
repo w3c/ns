@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/text/vnd.senx.warpscript#>.
+
+medi:n0 reg:person :.
+
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Pierre_Papin";
+    reg:name "Pierre Papin";
+    reg:updated "2018-11-21";
+    reg:uri "mailto:pierre.papin&senx.io".

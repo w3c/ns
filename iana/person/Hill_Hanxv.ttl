@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vnd: <../media-types/text/vnd.hans#>.
+
+medi:n0 reg:person :.
+
+vnd:Resource reg:xref :.
+
+:
+    reg:id "Hill_Hanxv";
+    reg:name "Hill Hanxv";
+    reg:updated "2020-09-15";
+    reg:uri "mailto:i&hanxv.com".

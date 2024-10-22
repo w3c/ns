@@ -1,0 +1,20 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.bbf.usp.error#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix vn: <../media-types/application/vnd.bbf.usp.msg#>.
+@prefix v: <../media-types/application/vnd.bbf.usp.msg+json#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+vn:Resource reg:xref :.
+
+v:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Broadband_Forum";
+    reg:name "Broadband Forum";
+    reg:updated "2019-12-13";
+    reg:uri "mailto:help&broadband-forum.org".

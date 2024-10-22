@@ -1,0 +1,103 @@
+@prefix : <#>.
+@prefix d: <../media-types/application/dash-patch+xml#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix d0: <../media-types/application/dash+xml#>.
+@prefix emm: <../media-types/application/emma+xml#>.
+@prefix fon: <../media-types/application/font-sfnt#>.
+@prefix swi: <../media-types/application/swid+xml#>.
+@prefix urc: <../media-types/application/urc-grpsheet+xml#>.
+@prefix ur: <../media-types/application/urc-ressheet+xml#>.
+@prefix u: <../media-types/application/urc-targetdesc+xml#>.
+@prefix n1: <../media-types/audio/aac#>.
+@prefix mh: <../media-types/audio/mhas#>.
+@prefix us: <../media-types/audio/usac#>.
+@prefix n2: <../media-types/image/avci#>.
+@prefix n3: <../media-types/image/avcs#>.
+@prefix hei: <../media-types/image/heic-sequence#>.
+@prefix heic: <../media-types/image/heic#>.
+@prefix he: <../media-types/image/heif-sequence#>.
+@prefix heif: <../media-types/image/heif#>.
+@prefix hej2k: <../media-types/image/hej2k#>.
+@prefix hsj2: <../media-types/image/hsj2#>.
+@prefix j2c: <../media-types/image/j2c#>.
+@prefix jph: <../media-types/image/jph#>.
+@prefix jphc: <../media-types/image/jphc#>.
+@prefix jxl: <../media-types/image/jxl#>.
+@prefix jxr: <../media-types/image/jxr#>.
+@prefix jxrA: <../media-types/image/jxrA#>.
+@prefix jxrS: <../media-types/image/jxrS#>.
+@prefix jxs: <../media-types/image/jxs#>.
+@prefix jxsc: <../media-types/image/jxsc#>.
+@prefix jxsi: <../media-types/image/jxsi#>.
+@prefix jxss: <../media-types/image/jxss#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+@prefix iso: <../media-types/video/iso.segment#>.
+
+d:Resource reg:xref :.
+
+d0:Resource reg:xref :.
+
+emm:Resource reg:xref :.
+
+fon:Resource reg:xref :.
+
+swi:Resource reg:xref :.
+
+urc:Resource reg:xref :.
+
+ur:Resource reg:xref :.
+
+u:Resource reg:xref :.
+
+n1:Resource reg:xref :.
+
+mh:Resource reg:xref :.
+
+us:Resource reg:xref :.
+
+n2:Resource reg:xref :.
+
+n3:Resource reg:xref :.
+
+hei:Resource reg:xref :.
+
+heic:Resource reg:xref :.
+
+he:Resource reg:xref :.
+
+heif:Resource reg:xref :.
+
+hej2k:Resource reg:xref :.
+
+hsj2:Resource reg:xref :.
+
+j2c:Resource reg:xref :.
+
+jph:Resource reg:xref :.
+
+jphc:Resource reg:xref :.
+
+jxl:Resource reg:xref :.
+
+jxr:Resource reg:xref :.
+
+jxrA:Resource reg:xref :.
+
+jxrS:Resource reg:xref :.
+
+jxs:Resource reg:xref :.
+
+jxsc:Resource reg:xref :.
+
+jxsi:Resource reg:xref :.
+
+jxss:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+iso:Resource reg:xref :.
+
+:
+    reg:id "ISO-IEC_JTC_1";
+    reg:name "ISO/IEC JTC 1";
+    reg:uri "http://www.iso.org/iso/JTC_1_home.html".

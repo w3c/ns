@@ -1,0 +1,14 @@
+@prefix : <#>.
+@prefix vnd: <../media-types/application/vnd.erofs#>.
+@prefix reg: <https://www.w3.org/ns/assignments/reg#>.
+@prefix medi: <../media-types/media-types.ttl#>.
+
+vnd:Resource reg:xref :.
+
+medi:n0 reg:person :.
+
+:
+    reg:id "Xiang_Gao";
+    reg:name "Xiang Gao";
+    reg:updated "2024-01-02";
+    reg:uri "mailto:xiang&kernel.org".
