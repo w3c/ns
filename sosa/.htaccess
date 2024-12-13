@@ -6,18 +6,11 @@
 ######################################################################
 
 RewriteEngine On
-RewriteBase  /ns/sosa/
-
-
-######################################################################
-# Serve the ontology file by default
-######################################################################
-DirectoryIndex sosa
 
 
 ######################################################################
 # File-specific headers
-# 
+#
 # Set the Content-Disposition HTTP header to improve "save as" dialogs
 ######################################################################
 <Files ~ "sosa\.rdf$">
@@ -46,21 +39,44 @@ DirectoryIndex sosa
 
 
 ######################################################################
+# Whole namespace
+#
+# If the request is for the directory (i.e., for the whole sosa
+# namespace), either return a redirect to the specification (if the
+# client requested HTML) or return the local sosa file (RDF or
+# Turtle).
+#
+# Note: This doesn't take into account what the client prefers, only
+# wether it accepts HTML at all. E.g., "Accept:
+# application/rdf+xml,text/html;q=0.1" will result in the client
+# getting HTML, although it preferrred RDF.
+######################################################################
+
+RewriteCond  %{HTTP_ACCEPT}  \btext/html\b
+RewriteRule  ^$  https://www.w3.org/TR/vocab-ssn/ [R=303,NE,env=redirect:1,L]
+
+RewriteRule  ^$  sosa
+
+######################################################################
 # Redirect requests to individual ontology terms
 #
-# Redirect depends on the Accept HTTP header. Possible targets are the
-# RDF/XML version of the ontology, the Turtle version of the ontology,
-# or the right fragment in the specification.
+# Otherwise, if the request cannot be satisfied with a local file, and
+# consists of a single path component (i.e., contains no further
+# slashes), it is assumed to be a term in the sosa namespace.
+#
+# Depending on whether the client asked for HTML or not, return a
+# redirect to the specification (with the term as fragment ID) or
+# returns the local sosa file (RDF or Turtle) that defines the term.
 #
 # Redirection done with a 303 (See Other) code
 ######################################################################
-RewriteCond  %{REQUEST_URI}  /ns/sosa/(ActuatableProperty|Actuation|Actuator|FeatureOfInterest|ObservableProperty|Observation|Platform|Procedure|Repeatability|Result|Sample|Sampler|Sampling|Sensor|actsOnProperty|madeByActuator|hasFeatureOfInterest|hasResult|hasResultingSample|hasSample|hosts|isActedOnBy|isFeatureOfInterestOf|isHostedBy|isObservedBy|isResultOf|isSampleOf|isSamplingResultOf|madeActuation|madeBySampler|madeBySensor|madeObservation|madeSampling|observedProperty|observes|phenomenonTime|usedProcedure|hasSimpleResult|resultTime)$
-RewriteCond  %{HTTP_ACCEPT}  text/html
-RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#SOSA$1 [R=303,NE,env=redirect:1]
 
-RewriteCond  %{REQUEST_URI}  /ns/sosa/(ActuatableProperty|Actuation|Actuator|FeatureOfInterest|ObservableProperty|Observation|Platform|Procedure|Repeatability|Result|Sample|Sampler|Sampling|Sensor|actsOnProperty|madeByActuator|hasFeatureOfInterest|hasResult|hasResultingSample|hasSample|hosts|isActedOnBy|isFeatureOfInterestOf|isHostedBy|isObservedBy|isResultOf|isSampleOf|isSamplingResultOf|madeActuation|madeBySampler|madeBySensor|madeObservation|madeSampling|observedProperty|observes|phenomenonTime|usedProcedure|hasSimpleResult|resultTime)$
-RewriteCond  %{HTTP_ACCEPT}  !text/html
-RewriteRule  ^(.*)$  /ns/sosa/ [R=303,env=redirect:1]
+RewriteCond  %{HTTP_ACCEPT}  \btext/html\b
+RewriteCond  %{REQUEST_FILENAME}  !-f
+RewriteRule  ^([^/]+)$  https://www.w3.org/TR/vocab-ssn/#SOSA$1 [R=303,NE,env=redirect:1,L]
+
+RewriteCond  %{REQUEST_FILENAME}  !-f
+RewriteRule  ^([^/]+)$  sosa
 
 
 ######################################################################
