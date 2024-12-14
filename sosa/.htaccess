@@ -39,44 +39,67 @@ RewriteEngine On
 
 
 ######################################################################
-# Whole namespace
+# Distinguish browsers (HTML clients) from other clients
 #
-# If the request is for the directory (i.e., for the whole sosa
-# namespace), either return a redirect to the specification (if the
-# client requested HTML) or return the local sosa file (RDF or
-# Turtle).
+# If the client wants HTML, then a request for the namespace
+# (https://www.w3.org/ns/sosa/) should result in a redirect to the
+# specification; and a request for a term
+# (https://www.w3.org/ns/sosa/term) should result in a redirect to the
+# specifiation with a fragment ID targeting that term. The exception
+# is when "term" is the name of an existing file, in which case that
+# file is returned.
 #
-# Note: This doesn't take into account what the client prefers, only
-# wether it accepts HTML at all. E.g., "Accept:
-# application/rdf+xml,text/html;q=0.1" will result in the client
-# getting HTML, although it preferrred RDF.
+# If the client doesn't want HTML, then both a request for the
+# namespace and a request for a term result in either the sosa.ttl or
+# sosa.rdf file to be returned. (Content negociation determines which
+# one is returned. If the client has no preference, then Apache
+# returns the smallest file.) The exception again is if the term is
+# the name of a file in this directory, in which case that file is
+# returned.
 ######################################################################
 
-RewriteCond  %{HTTP_ACCEPT}  \btext/html\b
-RewriteRule  ^$  https://www.w3.org/TR/vocab-ssn/ [R=303,NE,env=redirect:1,L]
+# There should exist a sosa.html file. Its content doesn't matter,
+# because it will never be returned. It serves to allow content
+# negotiation based on the client's Accept header. We give it a lower
+# qs, so that clients that do not explicitly prefer HTML will get
+# sosa.ttl or sosa.rdf instead.
+<Files sosa.html>
+    ForceType text/html;qs=0.8
+</Files>
 
-RewriteRule  ^$  sosa
+# A request for /ns/sosa/?foo where foo is not empty is replaced by a
+# request for /ns/sosa/ with an empty query.
+RewriteCond  %{QUERY_STRING}  !=""
+RewriteRule  ^$  ?
 
-######################################################################
-# Redirect requests to individual ontology terms
-#
-# Otherwise, if the request cannot be satisfied with a local file, and
-# consists of a single path component (i.e., contains no further
-# slashes), it is assumed to be a term in the sosa namespace.
-#
-# Depending on whether the client asked for HTML or not, return a
-# redirect to the specification (with the term as fragment ID) or
-# returns the local sosa file (RDF or Turtle) that defines the term.
-#
-# Redirection done with a 303 (See Other) code
-######################################################################
-
-RewriteCond  %{HTTP_ACCEPT}  \btext/html\b
+# Request for /ns/sosa/foo where foo does not match a file: Put foo in
+# the query and let the content negotiation work out which version of
+# sosa to return: sosa.html, sosa.ttl or sosa.rdf. The N flag says to
+# restart the rewrite rules from the start with the rewritten URI. foo
+# may be empty.
+# Bug: There is no check that foo is an actual term in the namespace
 RewriteCond  %{REQUEST_FILENAME}  !-f
-RewriteRule  ^([^/]+)$  https://www.w3.org/TR/vocab-ssn/#SOSA$1 [R=303,NE,env=redirect:1,L]
+RewriteCond  %{QUERY_STRING}  =""
+RewriteRule  ^(.*)$  sosa?term=$1 [N]
 
-RewriteCond  %{REQUEST_FILENAME}  !-f
-RewriteRule  ^([^/]+)$  sosa
+# Request for /ns/sosa/sosa.html?term=foo where foo is not empty.
+# Return a redirect to https...vocab-ssn/#SOSAfoo.
+RewriteCond  %{QUERY_STRING}  ^term=(.+)$
+RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn/#SOSA%1 [R=303,QSD,NE,E=redirect:1,L]
+
+# Request for /ns/sosa/sosa.html or /ns/sosa/sosa.html?term=
+# Return a redirect without a fragment identifier.
+RewriteCond  %{QUERY_STRING}  ^(term=)?$
+RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,env=redirect:1,L]
+
+# Request for /ns/sosa/sosa.html?foo where foo is not of the form
+# term=... Return a redirect and throw away the query.
+RewriteCond  %{QUERY_STRING}  .+
+RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,env=redirect:1,L]
+
+# When we are here, the request matched some file other than
+# sosa.html, or the request contained a query string. Return the file
+# that matched or a 404.
 
 
 ######################################################################
