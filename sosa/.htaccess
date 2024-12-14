@@ -67,16 +67,15 @@ RewriteEngine On
     ForceType text/html;qs=0.8
 </Files>
 
-# A request for /ns/sosa/?foo where foo is not empty is replaced by a
-# request for /ns/sosa/ with an empty query.
-RewriteCond  %{QUERY_STRING}  !=""
-RewriteRule  ^$  ?
+# A request for the the namespace URL /ns/sosa/, i.e., for the
+# directory, is a request for one of the sosa.* files without a
+# specific term.
+RewriteRule  ^$  sosa?term= [N]
 
 # Request for /ns/sosa/foo where foo does not match a file: Put foo in
 # the query and let the content negotiation work out which version of
 # sosa to return: sosa.html, sosa.ttl or sosa.rdf. The N flag says to
-# restart the rewrite rules from the start with the rewritten URI. foo
-# may be empty.
+# restart the rewrite rules from the start with the rewritten URI.
 # Bug: There is no check that foo is an actual term in the namespace
 RewriteCond  %{REQUEST_FILENAME}  !-f
 RewriteCond  %{QUERY_STRING}  =""
