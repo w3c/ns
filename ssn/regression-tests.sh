@@ -7,8 +7,7 @@
 # Created: 14 December 2024
 # Author: Bert Bos <bert@w3.org>
 
-#base="https://www.w3.org/ns/ssn"
-base="http://localhost/~bert/ns/ssn"
+base="https://www.w3.org/ns/ssn"
 
 # A test has 6 parts:
 #    0. name or number of the test

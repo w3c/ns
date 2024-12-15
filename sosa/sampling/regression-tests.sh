@@ -8,7 +8,6 @@
 # Author: Bert Bos <bert@w3.org>
 
 base="https://www.w3.org/ns/sosa/sampling"
-base="http://localhost/~bert/ns/sosa/sampling"
 
 # A test has 6 parts:
 #    0. name or number of the test

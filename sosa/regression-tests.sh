@@ -8,7 +8,6 @@
 # Author: Bert Bos <bert@w3.org>
 
 base="https://www.w3.org/ns/sosa"
-base="http://localhost/~bert/ns/sosa"
 
 # A test has 6 parts:
 #    0. name or number of the test
