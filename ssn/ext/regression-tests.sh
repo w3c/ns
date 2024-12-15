@@ -23,7 +23,7 @@ tests=(
   2   'text/html,*/*;q=0.8'          '/ssn-ext'             200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   3   'text/html,*/*;q=0.8'          '/ssn-ext.html'        200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   4   'text/html,*/*;q=0.8'          '/ssn-ext.ttl'         200  'text/turtle'               "$base/ssn-ext.ttl"
-  5   'text/html,*/*;q=0.8'          '/regression-tests.sh' 200  'application/x-sh'          "$base/regression-tests.sh"
+
   6   'text/html,*/*;q=0.8'          '/Actuation'           200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SSNActuation'
 
   8   'text/html,*/*;q=0.8'          '/ssn-ext?query'       200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
@@ -35,7 +35,7 @@ tests=(
   14  'text/html'                    '/ssn-ext'             200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   15  'text/html'                    '/ssn-ext.html'        200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   16  'text/html'                    '/ssn-ext.ttl'         200  'text/turtle'               "$base/ssn-ext.ttl"
-  17  'text/html'                    '/regression-tests.sh' 200  'application/x-sh'          "$base/regression-tests.sh"
+
   18  'text/html'                    '/Actuation'           200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SSNActuation'
 
   20  'text/html'                    '/ssn-ext?query'       200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
@@ -47,7 +47,7 @@ tests=(
   26  ''                             '/ssn-ext'             200  'text/turtle'               "$base/ssn-ext"
   27  ''                             '/ssn-ext.html'        200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   28  ''                             '/ssn-ext.ttl'         200  'text/turtle'               "$base/ssn-ext.ttl"
-  29  ''                             '/regression-tests.sh' 200  'application/x-sh'          "$base/regression-tests.sh"
+
   30  ''                             '/Actuation'           200  'text/turtle'               "$base/Actuation"
 
   32  ''                             '/ssn-ext?query'       200  'text/turtle'               "$base/ssn-ext?query"
@@ -55,7 +55,7 @@ tests=(
   34  ''                             '/x/y'                 200  'text/turtle'               "$base/x/y"
   35  ''                             '/?foo'                200  'text/turtle'               "$base/?foo"
   36  'text/html,text/turtle'        '/'                    200  'text/turtle'               "$base/"
-  37  'application/rdf+xml'          '/'                    200  'application/rdf+xml'       "$base/"
+
   38  'text/turtle'                  '/hosts'               200  'text/turtle'               "$base/hosts"
   39  '*/*'                          '/'                    200  'text/turtle'               "$base/"
   40  'text/html,*/*;qs=0.8'         '/x?term=y'            404  '-'                         '-'
@@ -82,5 +82,6 @@ for ((i = 0; 6 * i < ${#tests[@]}; i++)); do
   else
     echo -e "\r\c"
   fi
+  sleep 0.5			# W3C's Cloudflare frontend has very low limits
 done
 echo

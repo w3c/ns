@@ -82,5 +82,6 @@ for ((i = 0; 6 * i < ${#tests[@]}; i++)); do
   else
     echo -e "\r\c"
   fi
+  sleep 0.5			# W3C's Cloudflare frontend has very low limits
 done
 echo

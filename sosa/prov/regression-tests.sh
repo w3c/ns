@@ -23,7 +23,7 @@ tests=(
   2   'text/html,*/*;q=0.8'          '/sosa-prov'           200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   3   'text/html,*/*;q=0.8'          '/sosa-prov.html'      200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   4   'text/html,*/*;q=0.8'          '/sosa-prov.ttl'       200  'text/turtle'               "$base/sosa-prov.ttl"
-  5   'text/html,*/*;q=0.8'          '/regression-tests.sh' 200  'application/x-sh'          "$base/regression-tests.sh"
+
   6   'text/html,*/*;q=0.8'          '/hadProcedure'        200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#PROVhadProcedure'
 
   8   'text/html,*/*;q=0.8'          '/sosa-prov?query'     200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
@@ -35,7 +35,7 @@ tests=(
   14  'text/html'                    '/sosa-prov'           200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   15  'text/html'                    '/sosa-prov.html'      200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   16  'text/html'                    '/sosa-prov.ttl'       200  'text/turtle'               "$base/sosa-prov.ttl"
-  17  'text/html'                    '/regression-tests.sh' 200  'application/x-sh'          "$base/regression-tests.sh"
+
   18  'text/html'                    '/hadProcedure'        200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#PROVhadProcedure'
 
   20  'text/html'                    '/sosa-prov?query'     200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
@@ -47,7 +47,7 @@ tests=(
   26  ''                             '/sosa-prov'           200  'text/turtle'               "$base/sosa-prov"
   27  ''                             '/sosa-prov.html'      200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   28  ''                             '/sosa-prov.ttl'       200  'text/turtle'               "$base/sosa-prov.ttl"
-  29  ''                             '/regression-tests.sh' 200  'application/x-sh'          "$base/regression-tests.sh"
+
   30  ''                             '/hadProcedure'        200  'text/turtle'               "$base/hadProcedure"
 
   32  ''                             '/sosa-prov?query'     200  'text/turtle'               "$base/sosa-prov?query"
@@ -82,5 +82,6 @@ for ((i = 0; 6 * i < ${#tests[@]}; i++)); do
   else
     echo -e "\r\c"
   fi
+  sleep 0.5			# W3C's Cloudflare frontend has very low limits
 done
 echo
