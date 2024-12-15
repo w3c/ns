@@ -8,6 +8,7 @@
 # Author: Bert Bos <bert@w3.org>
 
 base="https://www.w3.org/ns/sosa"
+base="http://localhost/~bert/ns/sosa"
 
 # A test has 6 parts:
 #    0. name or number of the test
@@ -25,7 +26,7 @@ tests=(
   4   'text/html,*/*;q=0.8'          '/sosa.ttl'    200  'text/turtle'               "$base/sosa.ttl"
   5   'text/html,*/*;q=0.8'          '/om'          200  'text/turtle'               "$base/om"
   6   'text/html,*/*;q=0.8'          '/Actuation'   200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAActuation'
-  7   'text/html,*/*;q=0.8'          '/prov'        200  'text/turtle'               "$base/prov/"
+
   8   'text/html,*/*;q=0.8'          '/sosa?query'  200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   9   'text/html,*/*;q=0.8'          '/x?y'         200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAx'
   10  'text/html,*/*;q=0.8'          '/x/y'         200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAx/y'
@@ -37,7 +38,7 @@ tests=(
   16  'text/html'                    '/sosa.ttl'    200  'text/turtle'               "$base/sosa.ttl"
   17  'text/html'                    '/om'          406  '-'                         '-'
   18  'text/html'                    '/Actuation'   200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAActuation'
-  19  'text/html'                    '/prov'        406  '-'                         '-'
+
   20  'text/html'                    '/sosa?query'  200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   21  'text/html'                    '/x?y'         200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAx'
   22  'text/html'                    '/x/y'         200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAx/y'
