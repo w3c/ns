@@ -1,41 +1,101 @@
 ######################################################################
-# Rewrite rules for the SOSA Sample relationships module
+# Rewrite rules for the SOSA sampling ontology.
 #
-# See /ns/sosa/.htaccess for details about directives used here.
+# Ontologies and rules developed by the Spatial Data on the Web WG.
 ######################################################################
 
 RewriteEngine On
-RewriteBase  /ns/sosa/sampling/
-
-
-######################################################################
-# Serve the ontology file by default
-######################################################################
-DirectoryIndex sosa-sampling
 
 
 ######################################################################
 # File-specific headers
+#
+# Set the Content-Disposition HTTP header to improve "save as" dialogs
 ######################################################################
-<Files ~ "sosa-sampling\.rdf$">
+<Files sosa-sampling.rdf>
     Header set Content-Disposition "inline; filename=sosa-sampling.rdf"
 </Files>
 
-<Files ~ "sosa-sampling\.ttl$">
+<Files sosa-sampling.ttl>
     Header set Content-Disposition "inline; filename=sosa-sampling.ttl"
 </Files>
 
 
 ######################################################################
-# Redirect requests to individual ontology terms
+# Distinguish browsers (HTML clients) from other clients
+#
+# If the client wants HTML, then a request for the namespace URL
+# should result in a redirect to the specification; and a request for
+# a term should result in a redirect to the specifiation with a
+# fragment ID targeting that term. The exception is when "term" is the
+# name of an existing file, in which case that file is returned.
+#
+# If the client doesn't want HTML, then both a request for the
+# namespace and a request for a term result in the .ttl, .rdf, or
+# similar file to be returned. (Content negociation determines which
+# one is returned. If the client has no preference, then Apache
+# returns the smallest file.) The exception again is if the term is
+# the name of a file in this directory, in which case that file is
+# returned.
 ######################################################################
-RewriteCond  %{REQUEST_URI}  /ns/sosa/sampling/(RelationshipNature|SampleRelationship|hasSampleRelationship|natureOfRelationship|relatedSample)$
-RewriteCond  %{HTTP_ACCEPT}  text/html
-RewriteRule  ^(.*)$  https://www.w3.org/TR/vocab-ssn/#SAMP$1 [R=303,NE,env=redirect:1]
 
-RewriteCond  %{REQUEST_URI}  /ns/sosa/sampling/(RelationshipNature|SampleRelationship|hasSampleRelationship|natureOfRelationship|relatedSample)$
-RewriteCond  %{HTTP_ACCEPT}  !text/html
-RewriteRule  ^(.*)$  /ns/sosa/sampling/ [R=303,env=redirect:1]
+######################################################################
+# There should exist a sosa-sampling.html file. Its content doesn't
+# matter, because it will never be returned. It serves to allow
+# content negotiation based on the client's Accept header. We give it
+# a lower qs, so that clients that do not explicitly prefer HTML will
+# get sosa-sampling.ttl or sosa-sampling.rdf instead.
+######################################################################
+<Files sosa-sampling.html>
+    ForceType text/html;qs=0.8
+</Files>
+
+######################################################################
+# Get rid of any non-empty query string that is not of the form ?term=...
+######################################################################
+RewriteCond  %{QUERY_STRING}  !=""
+RewriteCond  %{QUERY_STRING}  !^term=
+RewriteRule  ^(.*)$  $1?
+
+######################################################################
+# A request for the namespace URL, i.e., for the directory, is a
+# request for one of the sosa-sampling.* files without a specific term.
+######################################################################
+RewriteRule  ^$  sosa-sampling?term= [N]
+
+######################################################################
+# Request for a term foo where foo does not match a file: Put foo in
+# the query and let the content negotiation work out which version of
+# sosa-sampling to return: sosa-sampling.html, sosa-sampling.ttl,
+# sosa-sampling.rdf, etc. The N flag says to restart the rewrite rules
+# from the start with the rewritten URI. Bug: There is no check that
+# foo is an actual term in the namespace
+######################################################################
+RewriteCond  %{REQUEST_FILENAME}  !-f
+RewriteCond  %{QUERY_STRING}  =""
+RewriteRule  ^(.*)$  sosa-sampling?term=$1 [N]
+
+######################################################################
+# Request for sosa-sampling.html?term=foo where foo is not empty. Return
+# a redirect to https://www.w3.org/TR/vocab-ssn/#SAMPfoo.
+######################################################################
+RewriteCond  %{QUERY_STRING}  ^term=(.+)$
+RewriteRule  ^sosa-sampling\.html$  https://www.w3.org/TR/vocab-ssn/#SAMP%1 [R=303,QSD,NE,E=redirect:1,L]
+
+######################################################################
+# Request for sosa-sampling.html or sosa-sampling.html?term=
+# Return a redirect without a fragment identifier.
+######################################################################
+RewriteCond  %{QUERY_STRING}  ^(term=)?$
+RewriteRule  ^sosa-sampling\.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,env=redirect:1,L]
+
+######################################################################
+# When we are here, the request matched some file other than
+# sosa-sampling.html, or it contained a query ?term=... but matched no
+# file. (The latter can only happen if the client requested that
+# explicitly, e.g., .../doesnotexist?term=foo.) Just return the file
+# that was matched, or 404.
+######################################################################
 
 
 ######################################################################
