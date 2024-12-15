@@ -67,7 +67,12 @@ RewriteEngine On
     ForceType text/html;qs=0.8
 </Files>
 
-# A request for the the namespace URL /ns/sosa/, i.e., for the
+# Get rid of any non-empty query string that is not of the form ?term=...
+RewriteCond  %{QUERY_STRING}  !=""
+RewriteCond  %{QUERY_STRING}  !^term=
+RewriteRule  ^(.*)$  $1?
+
+# A request for the namespace URL /ns/sosa/, i.e., for the
 # directory, is a request for one of the sosa.* files without a
 # specific term.
 RewriteRule  ^$  sosa?term= [N]
@@ -91,14 +96,11 @@ RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn/#SOSA%1 [R=303,QSD,NE
 RewriteCond  %{QUERY_STRING}  ^(term=)?$
 RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,env=redirect:1,L]
 
-# Request for /ns/sosa/sosa.html?foo where foo is not of the form
-# term=... Return a redirect and throw away the query.
-RewriteCond  %{QUERY_STRING}  .+
-RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,env=redirect:1,L]
-
 # When we are here, the request matched some file other than
-# sosa.html, or the request contained a query string. Return the file
-# that matched or a 404.
+# sosa.html, or it contained a query ?term=... but matched no file.
+# (The latter can only happen if the client requested that explicitly,
+# e.g., it requested /ns/sosa/doesnotexist?term=foo.) Just return the
+# file that was matched, or 404.
 
 
 ######################################################################
