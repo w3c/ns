@@ -27,7 +27,7 @@ tests=(
   6   'text/html,*/*;q=0.8'   '/Actuation'   200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAActuation'
   7   'text/html,*/*;q=0.8'   '/prov'        200  'text/turtle'               "$base/prov/"
   8   'text/html,*/*;q=0.8'   '/sosa?query'  200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
-  9   'text/html,*/*;q=0.8'   '/x?y'         404  '-'                         '-'
+  9   'text/html,*/*;q=0.8'   '/x?y'         200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAx'
   10  'text/html,*/*;q=0.8'   '/x/y'         200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAx/y'
   11  'text/html,*/*;q=0.8'   '/?foo'        200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   12  'text/html'             ''             200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
@@ -39,7 +39,7 @@ tests=(
   18  'text/html'             '/Actuation'   200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAActuation'
   19  'text/html'             '/prov'        406  '-'                         '-'
   20  'text/html'             '/sosa?query'  200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
-  21  'text/html'             '/x?y'         404  '-'                         '-'
+  21  'text/html'             '/x?y'         200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAx'
   22  'text/html'             '/x/y'         200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/#SOSAx/y'
   23  'text/html'             '/?foo'        200  'text/html; charset=utf-8'  'https://www.w3.org/TR/vocab-ssn/'
   24  ''                      ''             200  'text/turtle'               "$base/"
@@ -51,12 +51,14 @@ tests=(
   30  ''                      '/Actuation'   200  'text/turtle'               "$base/Actuation"
   31  ''                      '/prov'        200  'text/turtle'               "$base/prov/"
   32  ''                      '/sosa?query'  200  'text/turtle'               "$base/sosa?query"
-  33  ''                      '/x?y'         404  '-'                         '-'
+  33  ''                      '/x?y'         200  'text/turtle'               "$base/x?y"
   34  ''                      '/x/y'         200  'text/turtle'               "$base/x/y"
   35  ''                      '/?foo'        200  'text/turtle'               "$base/?foo"
   36  'text/html,text/turtle' '/'            200  'text/turtle'               "$base/"
   37  'application/rdf+xml'   '/'            200  'application/rdf+xml'       "$base/"
   38  'text/turtle'           '/hosts'       200  'text/turtle'               "$base/hosts"
+  39  '*/*'                   '/'            200  'text/turtle'               "$base/"
+  40  'text/html,*/*;qs=0.8'  '/x?term=y'    404  '-'                         '-'
 )
 
 for ((i = 0; 6 * i < ${#tests[@]}; i++)); do
