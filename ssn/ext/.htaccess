@@ -80,14 +80,14 @@ RewriteRule  ^(.*)$  ssn-ext?term=$1 [N]
 # a redirect to https://www.w3.org/TR/vocab-ssn-ext/#SSNfoo.
 ######################################################################
 RewriteCond  %{QUERY_STRING}  ^term=(.+)$
-RewriteRule  ^ssn-ext\.html$  https://www.w3.org/TR/vocab-ssn/#SSN%1 [R=303,QSD,NE,E=redirect:1,L]
+RewriteRule  ^ssn-ext\.html$  https://www.w3.org/TR/vocab-ssn/#SSN%1 [R=303,QSD,NE,L]
 
 ######################################################################
 # Request for ssn-ext.html or ssn-ext.html?term=
 # Return a redirect without a fragment identifier.
 ######################################################################
 RewriteCond  %{QUERY_STRING}  ^(term=)?$
-RewriteRule  ^ssn-ext\.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,env=redirect:1,L]
+RewriteRule  ^ssn-ext\.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,L]
 
 ######################################################################
 # When we are here, the request matched some file other than
@@ -96,10 +96,3 @@ RewriteRule  ^ssn-ext\.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,env
 # explicitly, e.g., .../doesnotexist?term=foo.) Just return the file
 # that was matched, or 404.
 ######################################################################
-
-
-######################################################################
-# Redirect based on HTTP Accept, Apache does not always set that
-# header, so let's add it ourselves
-######################################################################
-Header always merge Vary "Accept" env=redirect

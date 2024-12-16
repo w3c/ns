@@ -83,14 +83,14 @@ RewriteRule  ^(.*)$  sosa-prov?term=$1 [N]
 # a redirect to https://www.w3.org/TR/vocab-ssn/#PROVfoo.
 ######################################################################
 RewriteCond  %{QUERY_STRING}  ^term=(.+)$
-RewriteRule  ^sosa-prov.html$  https://www.w3.org/TR/vocab-ssn/#PROV%1 [R=303,QSD,NE,E=redirect:1,L]
+RewriteRule  ^sosa-prov.html$  https://www.w3.org/TR/vocab-ssn/#PROV%1 [R=303,QSD,NE,L]
 
 ######################################################################
 # Request for sosa-prov.html or sosa-prov.html?term=
 # Return a redirect without a fragment identifier.
 ######################################################################
 RewriteCond  %{QUERY_STRING}  ^(term=)?$
-RewriteRule  ^sosa-prov.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,env=redirect:1,L]
+RewriteRule  ^sosa-prov.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,L]
 
 ######################################################################
 # When we are here, the request matched some file other than
@@ -99,10 +99,3 @@ RewriteRule  ^sosa-prov.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,en
 # explicitly, e.g., .../doesnotexist?term=foo.) Just return the file
 # that was matched, or 404.
 ######################################################################
-
-
-######################################################################
-# Redirect based on HTTP Accept, Apache does not always set that
-# header, so let's add it ourselves
-######################################################################
-Header always merge Vary "Accept" env=redirect
