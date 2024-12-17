@@ -47,7 +47,7 @@ RewriteEngine On
 # get sosa-sampling.ttl or sosa-sampling.rdf instead.
 ######################################################################
 <Files sosa-sampling.html>
-    ForceType text/html;qs=0.8
+    ForceType text/html;qs=0.998
 </Files>
 
 ######################################################################

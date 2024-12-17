@@ -47,7 +47,7 @@ RewriteEngine On
 # get ssn.ttl or ssn.rdf instead.
 ######################################################################
 <Files ssn.html>
-    ForceType text/html;qs=0.8
+    ForceType text/html;qs=0.998
 </Files>
 
 ######################################################################

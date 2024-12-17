@@ -47,7 +47,7 @@ RewriteEngine On
 # get ssn-ext.ttl or ssn-ext.rdf instead.
 ######################################################################
 <Files ssn-ext.html>
-    ForceType text/html;qs=0.8
+    ForceType text/html;qs=0.998
 </Files>
 
 ######################################################################

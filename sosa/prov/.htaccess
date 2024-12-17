@@ -50,7 +50,7 @@ RewriteEngine On
 # get sosa-prov.ttl or sosa-prov.rdf instead.
 ######################################################################
 <Files sosa-prov.html>
-    ForceType text/html;qs=0.8
+    ForceType text/html;qs=0.998
 </Files>
 
 ######################################################################
