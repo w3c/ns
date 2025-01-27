@@ -5,7 +5,6 @@ Content-Type: text/html; qs=0.999
 
 URI: dcat3.ttl
 Content-Type: text/turtle; qs=0.999
-Content-charset: UTF-8
 
 URI: dcat3.jsonld
 Content-Type: application/ld+json; qs=0.999
