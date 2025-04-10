@@ -975,7 +975,7 @@ _:genid54 <http://www.w3.org/2002/07/owl#unionOf> _:genid53 .
 <http://www.w3.org/ns/odrl/2/absoluteSpatialPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/odrl/2/absoluteSpatialPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/ns/odrl/2/absoluteSpatialPosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/absoluteSpatialPosition> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/absolutePosition> .
+<http://www.w3.org/ns/odrl/2/absoluteSpatialPosition> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/absolutePosition> .
 <http://www.w3.org/ns/odrl/2/absoluteSpatialPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Absolute Spatial Asset Position"@en .
 <http://www.w3.org/ns/odrl/2/absoluteSpatialPosition> <http://www.w3.org/2004/02/skos/core#definition> "The absolute spatial positions of four corners of a rectangle on a 2D-canvas or the eight corners of a cuboid in a 3D-space for the target Asset to fit."@en .
 <http://www.w3.org/ns/odrl/2/absoluteSpatialPosition> <http://www.w3.org/2004/02/skos/core#note> "Example: The upper left corner of a picture may be constrained to a specific position of the canvas rendering it. Note: see also the Left Operand Relative Spatial Asset Position. "@en .
@@ -984,7 +984,7 @@ _:genid54 <http://www.w3.org/2002/07/owl#unionOf> _:genid53 .
 <http://www.w3.org/ns/odrl/2/absoluteTemporalPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/odrl/2/absoluteTemporalPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/ns/odrl/2/absoluteTemporalPosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/absoluteTemporalPosition> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/absolutePosition> .
+<http://www.w3.org/ns/odrl/2/absoluteTemporalPosition> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/absolutePosition> .
 <http://www.w3.org/ns/odrl/2/absoluteTemporalPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Absolute Temporal Asset Position"@en .
 <http://www.w3.org/ns/odrl/2/absoluteTemporalPosition> <http://www.w3.org/2004/02/skos/core#definition> "The absolute temporal positions in a media stream the target Asset has to fit."@en .
 <http://www.w3.org/ns/odrl/2/absoluteTemporalPosition> <http://www.w3.org/2004/02/skos/core#note> "Use with Actions including the target Asset in a larger media stream. The fragment part of a Media Fragment URI (https://www.w3.org/TR/media-frags/) may be used for the right operand. See the Left Operand realativeTemporalPosition. <br />Example: The MP3 music file must be positioned between second 192 and 250 of the temporal length of a stream."@en .
@@ -1145,7 +1145,7 @@ _:genid54 <http://www.w3.org/2002/07/owl#unionOf> _:genid53 .
 <http://www.w3.org/ns/odrl/2/relativeSpatialPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/odrl/2/relativeSpatialPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/ns/odrl/2/relativeSpatialPosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/relativeSpatialPosition> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/relativePosition> .
+<http://www.w3.org/ns/odrl/2/relativeSpatialPosition> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/relativePosition> .
 <http://www.w3.org/ns/odrl/2/relativeSpatialPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Relative Spatial Asset Position"@en .
 <http://www.w3.org/ns/odrl/2/relativeSpatialPosition> <http://www.w3.org/2004/02/skos/core#definition> "The relative spatial positions - expressed as percentages of full values - of four corners of a rectangle on a 2D-canvas or the eight corners of a cuboid in a 3D-space of the target Asset."@en .
 <http://www.w3.org/ns/odrl/2/relativeSpatialPosition> <http://www.w3.org/2004/02/skos/core#note> "See also Absolute Spatial Asset Position."@en .
@@ -1154,7 +1154,7 @@ _:genid54 <http://www.w3.org/2002/07/owl#unionOf> _:genid53 .
 <http://www.w3.org/ns/odrl/2/relativeTemporalPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/odrl/2/relativeTemporalPosition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/ns/odrl/2/relativeTemporalPosition> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/relativeTemporalPosition> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/relativePosition> .
+<http://www.w3.org/ns/odrl/2/relativeTemporalPosition> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/relativePosition> .
 <http://www.w3.org/ns/odrl/2/relativeTemporalPosition> <http://www.w3.org/2000/01/rdf-schema#label> "Relative Temporal Asset Position"@en .
 <http://www.w3.org/ns/odrl/2/relativeTemporalPosition> <http://www.w3.org/2004/02/skos/core#definition> "A point in space or time defined with coordinates relative to full measures the positioning of the target Asset."@en .
 <http://www.w3.org/ns/odrl/2/relativeTemporalPosition> <http://www.w3.org/2004/02/skos/core#note> "See also Absolute Temporal Asset Position. <br />Example: The MP3 music file must be positioned between the positions at 33% and 48% of the temporal length of a stream. "@en .
@@ -1187,7 +1187,7 @@ _:genid54 <http://www.w3.org/2002/07/owl#unionOf> _:genid53 .
 <http://www.w3.org/ns/odrl/2/spatialCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <http://www.w3.org/ns/odrl/2/spatialCoordinates> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2004/02/skos/core#Concept> .
 <http://www.w3.org/ns/odrl/2/spatialCoordinates> <http://www.w3.org/2000/01/rdf-schema#isDefinedBy> <http://www.w3.org/ns/odrl/2/> .
-<http://www.w3.org/ns/odrl/2/spatialCoordinates> <http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/ns/odrl/2/spatial> .
+<http://www.w3.org/ns/odrl/2/spatialCoordinates> <http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/ns/odrl/2/spatial> .
 <http://www.w3.org/ns/odrl/2/spatialCoordinates> <http://www.w3.org/2000/01/rdf-schema#label> "Geospatial Coordinates"@en .
 <http://www.w3.org/ns/odrl/2/spatialCoordinates> <http://www.w3.org/2004/02/skos/core#definition> "A set of coordinates setting the borders of a geospatial area used for exercising the action of the Rule. The coordinates MUST include longitude and latitude, they MAY include altitude and the geodetic datum."@en .
 <http://www.w3.org/ns/odrl/2/spatialCoordinates> <http://www.w3.org/2004/02/skos/core#note> "The default values are the altitude of earth's surface at this location and the WGS 84 datum."@en .
@@ -2145,7 +2145,7 @@ _:genid60 <http://www.w3.org/2002/07/owl#unionOf> _:genid59 .
 <http://www.w3.org/2004/02/skos/core#scopeNote> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2004/02/skos/core#prefLabel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2004/02/skos/core#definition> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
-<http://www.w3.org/2004/02/skos/core#broaderTransitive> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+<http://www.w3.org/2004/02/skos/core#broader> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://www.w3.org/2004/02/skos/core#hasTopConcept> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
 <http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .

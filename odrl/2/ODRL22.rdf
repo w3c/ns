@@ -103,7 +103,7 @@
   <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#Concept"/>
   <owl:Class rdf:about="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
   <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
-  <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broaderTransitive"/>
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#broader"/>
   <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition"/>
   <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#hasTopConcept"/>
   <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#member"/>
@@ -822,7 +822,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Absolute Spatial Asset Position</rdfs:label>
-    <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/absolutePosition"/>
+    <skos:broader rdf:resource="http://www.w3.org/ns/odrl/2/absolutePosition"/>
     <skos:definition xml:lang="en">The absolute spatial positions of four corners of a rectangle on a 2D-canvas or the eight corners of a cuboid in a 3D-space for the target Asset to fit.</skos:definition>
     <skos:note xml:lang="en">Example: The upper left corner of a picture may be constrained to a specific position of the canvas rendering it. Note: see also the Left Operand Relative Spatial Asset Position. </skos:note>
     <skos:scopeNote xml:lang="en">Non-Normative</skos:scopeNote>
@@ -832,7 +832,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Absolute Temporal Asset Position</rdfs:label>
-    <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/absolutePosition"/>
+    <skos:broader rdf:resource="http://www.w3.org/ns/odrl/2/absolutePosition"/>
     <skos:definition xml:lang="en">The absolute temporal positions in a media stream the target Asset has to fit.</skos:definition>
     <skos:note xml:lang="en">Use with Actions including the target Asset in a larger media stream. The fragment part of a Media Fragment URI (https://www.w3.org/TR/media-frags/) may be used for the right operand. See the Left Operand realativeTemporalPosition. &lt;br /&gt;Example: The MP3 music file must be positioned between second 192 and 250 of the temporal length of a stream.</skos:note>
     <skos:scopeNote xml:lang="en">Non-Normative</skos:scopeNote>
@@ -2119,7 +2119,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Relative Spatial Asset Position</rdfs:label>
-    <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/relativePosition"/>
+    <skos:broader rdf:resource="http://www.w3.org/ns/odrl/2/relativePosition"/>
     <skos:definition xml:lang="en">The relative spatial positions - expressed as percentages of full values - of four corners of a rectangle on a 2D-canvas or the eight corners of a cuboid in a 3D-space of the target Asset.</skos:definition>
     <skos:note xml:lang="en">See also Absolute Spatial Asset Position.</skos:note>
     <skos:scopeNote xml:lang="en">Non-Normative</skos:scopeNote>
@@ -2129,7 +2129,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Relative Temporal Asset Position</rdfs:label>
-    <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/relativePosition"/>
+    <skos:broader rdf:resource="http://www.w3.org/ns/odrl/2/relativePosition"/>
     <skos:definition xml:lang="en">A point in space or time defined with coordinates relative to full measures the positioning of the target Asset.</skos:definition>
     <skos:note xml:lang="en">See also Absolute Temporal Asset Position. &lt;br /&gt;Example: The MP3 music file must be positioned between the positions at 33% and 48% of the temporal length of a stream. </skos:note>
     <skos:scopeNote xml:lang="en">Non-Normative</skos:scopeNote>
@@ -2284,7 +2284,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/odrl/2/"/>
     <rdfs:label xml:lang="en">Geospatial Coordinates</rdfs:label>
-    <skos:broaderTransitive rdf:resource="http://www.w3.org/ns/odrl/2/spatial"/>
+    <skos:broader rdf:resource="http://www.w3.org/ns/odrl/2/spatial"/>
     <skos:definition xml:lang="en">A set of coordinates setting the borders of a geospatial area used for exercising the action of the Rule. The coordinates MUST include longitude and latitude, they MAY include altitude and the geodetic datum.</skos:definition>
     <skos:note xml:lang="en">The default values are the altitude of earth's surface at this location and the WGS 84 datum.</skos:note>
     <skos:scopeNote xml:lang="en">Non-Normative</skos:scopeNote>

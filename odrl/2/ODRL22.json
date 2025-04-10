@@ -1594,7 +1594,7 @@
         "@value": "Absolute Spatial Asset Position"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
+    "http://www.w3.org/2004/02/skos/core#broader": [
       {
         "@id": "http://www.w3.org/ns/odrl/2/absolutePosition"
       }
@@ -2688,7 +2688,7 @@
         "@value": "Geospatial Coordinates"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
+    "http://www.w3.org/2004/02/skos/core#broader": [
       {
         "@id": "http://www.w3.org/ns/odrl/2/spatial"
       }
@@ -4132,7 +4132,7 @@
     ]
   },
   {
-    "@id": "http://www.w3.org/2004/02/skos/core#broaderTransitive",
+    "@id": "http://www.w3.org/2004/02/skos/core#broader",
     "@type": [
       "http://www.w3.org/2002/07/owl#AnnotationProperty"
     ]
@@ -6826,7 +6826,7 @@
         "@value": "Absolute Temporal Asset Position"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
+    "http://www.w3.org/2004/02/skos/core#broader": [
       {
         "@id": "http://www.w3.org/ns/odrl/2/absolutePosition"
       }
@@ -8531,7 +8531,7 @@
         "@value": "Relative Spatial Asset Position"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
+    "http://www.w3.org/2004/02/skos/core#broader": [
       {
         "@id": "http://www.w3.org/ns/odrl/2/relativePosition"
       }
@@ -9531,7 +9531,7 @@
         "@value": "Relative Temporal Asset Position"
       }
     ],
-    "http://www.w3.org/2004/02/skos/core#broaderTransitive": [
+    "http://www.w3.org/2004/02/skos/core#broader": [
       {
         "@id": "http://www.w3.org/ns/odrl/2/relativePosition"
       }
