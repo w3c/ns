@@ -1,10 +1,11 @@
 RewriteEngine On
 RewriteBase /ns/cid/
+# RewriteBase /2025/credentials/redirects/cid/
 AddType application/ld+json .jsonld
 AddType text/turtle .ttl
 
 # The v1 of the controlled identifiers context:
-RewriteRule ^v1$ https://w3c.github.io/cid/context/v1.jsonld [E=json,P]
+RewriteRule ^v1$ https://www.w3.org/2025/credentials/cid/context/v1.jsonld [E=json,P]
 
 Header set Content-Type application/ld+json env=json
 
