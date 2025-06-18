@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dubbing and Audio description Profiles of TTML2 :: Profile Designator</title>
+  </head>
+
+  <body>
+    <h1>Dubbing and Audio description Profiles of TTML2 :: Profile Designator</h1>
+
+<p><a href="http://www.w3.org/ns/ttml/profile/dapt1.0/processor">http://www.w3.org/ns/ttml/profile/dapt1.0/processor</a> is the profile designator of the DAPT Processor profile of TTML2 specified at <a href="https://www.w3.org/TR/dapt/">https://www.w3.org/TR/dapt/</a></p>
+
+<p>This namespace is stable!</p>
+
+  </body>
+</html>
