@@ -16,7 +16,7 @@
 
 @keywords a, is, of.
 
-<>  doc:version "$Id$";
+<>  doc:version "2014-12-07 20:55:14";
 s:comment """This ontology is for use in describing 
 for fitness records.  Inspired by the anual
 getfit.mit.edu system which oly runs for a few weeks,

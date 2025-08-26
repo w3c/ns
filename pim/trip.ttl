@@ -19,7 +19,7 @@ Trips do not in fact logically have to involve travel.
 A trip could be used to collate expenses relating to an activity or event
 at ones home base, or a set of photos taken at home etc.
 """;
-         doc:version "$Id$" .
+         doc:version "2014-12-07 20:56:37" .
     
     t:TaxiTransaction     a s:Class;
          s:comment """A Taxi transaction is a financial trasction related to a ride in

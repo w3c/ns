@@ -36,4 +36,4 @@ ent:Overview.html dc:title "Unique URIs for Entailment Regimes" ;
      dc:date "2010-01-05" ;
      dc:description "Unique URIs for Semantic Web Entailment Regimes" ;
      owl:versionIRI <http://www.w3.org/ns/entailment/> ;
-     owl:versionInfo "$Date$" . 
+     owl:versionInfo "2010-04-15 07:55:22" . 

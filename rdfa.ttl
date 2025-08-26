@@ -25,7 +25,7 @@ rdfa: a owl:Ontology;
     dcterms:publisher <http://www.w3.org/data#W3C>;
     dcterms:title "RDFa Vocabulary for Term and Prefix Assignment, and for Processor Graph Reporting";
     rdfs:isDefinedBy <http://www.w3.org/TR/rdfa-core/#s_initialcontexts>;
-    owl:versionInfo "$Date$" .
+    owl:versionInfo "2013-03-11 07:54:23" .
 
 rdfa:DocumentError dcterms:description "error condition; to be used when the document fails to be fully processed as a result of non-conformant host language markup";
     rdfs:subClassOf rdfa:Error .

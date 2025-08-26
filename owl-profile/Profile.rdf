@@ -9,7 +9,7 @@
 >
   <rdf:Description rdf:about="http://www.w3.org/ns/owl-profile/">
     <rdfs:comment>Note that, strictly speaking, OWL DL and OWL Full are not referred to, formally, as “profiles” by the OWL 2 Profiles specification. However, “each profile is defined as a syntactic restriction of the OWL 2 Structural Specification, i.e., as a subset of the structural elements that can be used in a conforming ontology,…” (see the OWL 2 Document Overview). In this sense, and for practical purposes, including a URI for OWL DL and Full is correct. Indeed, OWL DL can be seen as a sytactic restriction of OWL that is particularly well suited for OWL 2 Direct Semantics, whereas OWL Full is a “profile” without any syntactic restriction, and is usually associated with the usage of the OWL 2 RDF-Based Semantics. Note also that there are no separate URIs for the 2004 version of OWL DL; OWL 2 DL, published in 2008 supersede that version. Nor is there a URI for OWL Lite.</rdfs:comment>
-    <owl:versionInfo>$Date$</owl:versionInfo>
+    <owl:versionInfo>2011-12-06 08:20:44</owl:versionInfo>
     <dc:description>Unique URIs for OWL 2 Profiles</dc:description>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>

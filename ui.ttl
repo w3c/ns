@@ -13,7 +13,7 @@
 	can be associated with objects and classes.
 	""";
          dc:license <https://creativecommons.org/publicdomain/zero/1.0/>;
-         dc:modified "$Date$";
+         dc:modified "2021-03-04 18:29:49";
          dc:title "An ontology for User Interface description, Hints and Forms." .
     
     :BooleanField     s:subClassOf :NumericField .

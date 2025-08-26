@@ -15,7 +15,7 @@
 
 @keywords a, is, of.
 
-<>  doc:version "$Id$";
+<>  doc:version "2013-08-01 12:47:05";
 s:comment """This ontology is for use in describing trips,
 such as business trips.
 Trips connect where we are at a given point in time,

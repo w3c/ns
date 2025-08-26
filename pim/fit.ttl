@@ -12,7 +12,7 @@ getfit.mit.edu system which oly runs for a few weeks,
 but records exercise sessions.
 """;
          :seeAlso <http://www.w3.org/2002/12/cal/ical>;
-         doc:version "$Id$" .
+         doc:version "2014-12-07 20:56:37" .
     
     fit:Activity     a :Class;
          :label "activity";

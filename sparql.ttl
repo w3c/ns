@@ -17,7 +17,7 @@
      dc:creator <http://www.ivan-herman.net/foaf#me> ;
      dc:date "2010-05-26" ;
      dc:description "Terms used by SPARQL 1.1" ;
-     owl:versionInfo "$Date$" . 
+     owl:versionInfo "2010-05-26 15:16:13" . 
 
 sparql:bound dc:description "Checks if a variable is bound to a value." ;
      rdfs:isDefinedBy <http://www.w3.org/TR/sparql11-query/#func-bound> . 

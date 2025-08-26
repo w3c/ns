@@ -32,7 +32,7 @@
     <dc:description>This is a unique, top-level Class URI for various Semantic Web entailment regimes. Instances include Simple entailment, RDF, RDFS, and D entailments, entailments with Direct and RDF Based Semantics of OWL, and RIF entailment.</dc:description>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/entailment/">
-    <owl:versionInfo>$Date$</owl:versionInfo>
+    <owl:versionInfo>2010-05-03 13:59:03</owl:versionInfo>
     <dc:date>2010-01-05</dc:date>
     <owl:versionIRI rdf:resource="http://www.w3.org/ns/entailment/"/>
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>

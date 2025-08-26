@@ -52,6 +52,6 @@ formats: a owl:Ontology ;
     dc:description "Unique URIs for File Formats" ;
     dc:modified "2013-11-09" ;
     owl:versionIRI formats: ;
-    owl:versionInfo "$Date$" .
+    owl:versionInfo "2015-02-27 20:59:20" .
 
 

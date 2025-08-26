@@ -20,7 +20,7 @@
 
 <>  dc:title "Workspace Ontology";
 
-    doc:version "$Id$";
+    doc:version "2021-10-01 18:47:19";
     s:comment """This ontology is for use in describing
 Workspaces.  Workspaces are places where data is stored and associated policies of privacy.
 A given application typically stores information in several different

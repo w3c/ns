@@ -25,7 +25,7 @@
 	""";
 	dc:created 2010-08-07;
 	dc:license <https://creativecommons.org/publicdomain/zero/1.0/>;
-	dc:modified """$Date$""";
+	dc:modified """2021-03-04 18:29:49""";
 	dc:author <https://www.w3.org/People/Berners-Lee/card#i>.
 
 style a r:Property, owl:DatatypeProperty;

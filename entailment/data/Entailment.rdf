@@ -12,7 +12,7 @@
     <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
     <dc:creator rdf:resource="http://www.ivan-herman.net/foaf#me"/>
     <owl:versionIRI rdf:resource="http://www.w3.org/ns/entailment/"/>
-    <owl:versionInfo>$Date$</owl:versionInfo>
+    <owl:versionInfo>2010-04-15 07:55:23</owl:versionInfo>
     <dc:description>Unique URIs for Semantic Web Entailment Regimes</dc:description>
   </rdf:Description>
   <rdf:Description rdf:about="http://www.w3.org/ns/entailment/Overview.html">

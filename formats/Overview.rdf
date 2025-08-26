@@ -48,7 +48,7 @@
     <owl:versionIRI rdf:resource="http://www.w3.org/ns/formats/"/>
     <dc:created>2010-10-19</dc:created>
     <dc:modified>2013-11-09</dc:modified>
-    <owl:versionInfo>$Date$</owl:versionInfo>
+    <owl:versionInfo>2015-02-27 20:59:20</owl:versionInfo>
     <dc:description>Unique URIs for File Formats</dc:description>
   </owl:Ontology>
   <rdfs:Property rdf:about="http://www.w3.org/ns/formats/preferred_suffix">

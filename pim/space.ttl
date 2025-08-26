@@ -24,7 +24,7 @@ Goals then are that the user can
       - publish apropriate use policies for them
 
 """;
-         doc:version "$Id$" .
+         doc:version "2021-10-01 18:47:19" .
     
     ws:ConfigurationFile     :subClassOf gen:InformationResource .
     

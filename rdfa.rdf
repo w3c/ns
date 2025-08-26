@@ -63,7 +63,7 @@
     </dcterms:creator>
     <dcterms:date>2013-01-18</dcterms:date>
     <dcterms:description>This document describes the RDFa Vocabulary for Term and Prefix Assignment. The Vocabulary is used to modify RDFa 1.1 processing behavior.</dcterms:description>
-    <owl:versionInfo>$Date$</owl:versionInfo>
+    <owl:versionInfo>2013-03-11 07:54:29</owl:versionInfo>
     <dcterms:title>RDFa Vocabulary for Term and Prefix Assignment, and for Processor Graph Reporting</dcterms:title>
     <dcterms:publisher rdf:resource="http://www.w3.org/data#W3C"/>
     <rdfs:isDefinedBy rdf:resource="http://www.w3.org/TR/rdfa-core/#s_initialcontexts"/>
