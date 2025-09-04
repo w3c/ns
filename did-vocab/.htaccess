@@ -1,3 +1,10 @@
+# NB: while this directory is (obviously) reachable as
+#    https://www.w3.org/ns/did-vocab/
+# this is for historical reasons.
+# The canonical URIs of the files in this directory are of the form
+#    https://www.w3.org/ns/did.*
+# See ../.htaccess for more details.
+
 RewriteEngine on
 RewriteBase /ns/did-vocab/
 
@@ -16,6 +23,9 @@ RewriteRule ^did.rdf$    https://w3c.github.io/did-extensions/vocabs/v1/vocab.rd
 
 # v1
 RewriteRule ^v1.jsonld$ https://w3c.github.io/did-extensions/vocabs/v1/context.jsonld [P]
+
+# v1.1rc1
+RewriteRule ^v1.1rc1.jsonld$ https://w3c.github.io/did/context/v1.1rc1 [P]
 
 #shacl
 RewriteRule ^shacl.jsonld$  https://w3c.github.io/did-extensions/vocabs/v1/shacl.jsonld [P]
