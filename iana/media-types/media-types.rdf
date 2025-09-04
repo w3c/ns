@@ -5207,7 +5207,7 @@ Media Type Sub-Parameters: <xref a:type="registry" a:data="media-type-sub-parame
     <record>
       <name>vnd.RenLearn.rlprint</name>
       <xref a:type="person" a:data="James_Wick"/>
-      <class rdf:resource="http://www.w3.org/ns/iana/media-types/application/vnd.renlearn.rlprint#Resource"/>
+      <class rdf:resource="http://www.w3.org/ns/iana/media-types/application/vnd.RenLearn.rlprint#Resource"/>
     </record>
     <record>
       <name>vnd.rig.cryptonote</name>
