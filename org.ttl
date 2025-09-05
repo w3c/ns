@@ -58,7 +58,7 @@
     dct:contributor [foaf:mbox "lupe@fi.upm.es"; foaf:name "Guadalupe Aguado de Cea"];
     dct:contributor [foaf:mbox "emontiel@fi.upm.es"; foaf:name "Elena Montiel Ponsoda"];
     dct:contributor [foaf:mbox "ogiraldo@fi.upm.es"; foaf:name "Olga Ximena Giraldo"];
-    dct:contributor [foaf:mbox "mpoveda@fi.upm.es"; foaf:name "María Poveda Villalón"]; ;
+    dct:contributor [foaf:mbox "mpoveda@fi.upm.es"; foaf:name "María Poveda Villalón"];
 
     dct:license <http://www.opendatacommons.org/licenses/pddl/1.0/> ;
     rdfs:seeAlso <http://www.w3.org/TR/vocab-org/> ;
