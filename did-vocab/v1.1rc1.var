@@ -1,9 +1,7 @@
 URI: v1.1rc1
 
 URI: v1.1rc1.jsonld
-Content-Type: application/ld+json; qs=0.5
+Content-Type: application/ld+json; qs=0.999
 
 URI: v1.1rc1.jsonld
-Content-Type: application/json; qs=0.5
-
-# NB: all variant are proxied from https://w3c.github.io/did/, see ./.htaccess
+Content-Type: application/json; qs=0.990
