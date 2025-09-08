@@ -5,3 +5,6 @@ Content-Type: application/ld+json; qs=0.999
 
 URI: v1.jsonld
 Content-Type: application/json; qs=0.990
+# If application/json is Accept'ed by the client, this entry will be used.
+# Note however that it will still be served as application/ld+json,
+# because that's the media-type associated to extension .jsonld .
