@@ -25,7 +25,7 @@ RewriteRule ^did.rdf$    https://w3c.github.io/did-extensions/vocabs/v1/vocab.rd
 RewriteRule ^v1.jsonld$ https://w3c.github.io/did-extensions/vocabs/v1/context.jsonld [P]
 
 # v1.1rc1
-RewriteRule ^v1.1rc1.jsonld$ https://w3c.github.io/did/context/v1.1rc1 [P]
+RewriteRule ^v1.1rc1.jsonld$ https://w3c.github.io/did/context/v1.1rc1.jsonld [P]
 
 #shacl
 RewriteRule ^shacl.jsonld$  https://w3c.github.io/did-extensions/vocabs/v1/shacl.jsonld [P]
