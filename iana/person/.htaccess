@@ -1,0 +1,17 @@
+RewriteEngine On
+RewriteBase /ns/iana/person/
+
+# These file names were previously encoded with combining characters
+# (diaresis and acute accent)
+# but are now encoded with pre-combined characters.
+# To keep the old URLs alive, we redirect the old encoding to the new one.
+
+RewriteRule ^Adrian_Föder(.*) Adrian_Föder$1
+RewriteRule ^Erik_Ronström(.*) Erik_Ronström$1
+RewriteRule ^Heinz-Peter_Schütz(.*) Heinz-Peter_Schütz$1
+RewriteRule ^Jan_Schütze(.*) Jan_Schütze$1
+RewriteRule ^Javier_D._Fernández(.*) Javier_D._Fernández$1
+RewriteRule ^Maik_Stührenberg(.*) Maik_Stührenberg$1
+RewriteRule ^Marcus_Ligi_Büschleb(.*) Marcus_Ligi_Büschleb$1
+RewriteRule ^Szilveszter_Tóth(.*) Szilveszter_Tóth$1
+RewriteRule ^Yüksel_Aydemir(.*) Yüksel_Aydemir$1
