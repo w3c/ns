@@ -8,11 +8,6 @@
 RewriteEngine on
 RewriteBase /ns/did-vocab/
 
-AddType application/ld+json .jsonld
-AddType text/turtle .ttl
-AddType application/rdf+xml .rdf
-AddType text/shex .shex
-
 # did
 RewriteRule ^$ did [PT,L]
 RewriteRule ^did.html$   https://w3c.github.io/did-extensions/vocabs/v1/vocab.html [P]
