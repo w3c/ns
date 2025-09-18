@@ -1,5 +1,4 @@
 #Options -MultiViews
-#AddType application/rdf+xml .owl
 #RewriteEngine On
 #RewriteBase   /ns/lemon
 #DirectoryIndex ontolex.owl
