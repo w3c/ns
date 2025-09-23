@@ -7,20 +7,6 @@ ForceType 'application/ld+json'
 RewriteEngine On
 RewriteBase /ns/
 
-# added sandro@w3.org 2013-11-29 per
-# https://lists.w3.org/Archives/Team/vocab-services/2013Nov/0002.html
-# JK: the following header unset rules are very specific to
-# this proxy endpoint; don't duplicate them elsewhere.
-RewriteRule ^hydra/(.*)$ http://www.markus-lanthaler.com/hydra/$1 [P,L]
-<If "%{REQUEST_URI} =~ m#^/ns/hydra/#">
-    Header unset Set-Cookie
-    Header unset Expect-CT
-    Header unset Content-Security-Policy
-    Header unset Server
-    Header unset Strict-Transport-Security
-    Header set Access-Control-Allow-Origin "*"
-</If>
-
 # Added ivan@w3.org 2014-05-02
 # http://lists.w3.org/Archives/Public/public-openannotation/2014May/0010.html
 RewriteRule ^oa-context-20130208.json oa.jsonld [L,R=307]
