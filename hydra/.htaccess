@@ -2,6 +2,6 @@
 RewriteEngine On
 RewriteBase /ns/hydra/
 
-RewriteRule ^spec/(.*)$ https://www.hydra-cg.com/spec/latest/core/$1 [R=302,L]
+RewriteRule ^spec/(.*)$ https://www.hydra-cg.com/spec/$1 [R=302,L]
 RewriteRule ^context\.jsonld$ core [R,L]
 
