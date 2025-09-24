@@ -3,6 +3,7 @@ RewriteEngine On
 RewriteBase /ns/hydra/
 
 RewriteRule ^spec/(.*)$ https://www.hydra-cg.com/spec/$1 [R=302,L]
-RewriteRule ^core/context\.jsonld$ core [R,L]
-RewriteRule ^context\.jsonld$ core [R,L]
+
+# the following rule omits ^ in order to match core/context.jsonld as well
+RewriteRule context\.jsonld$ core [R=permanent,L]
 
