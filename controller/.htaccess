@@ -1,7 +1,5 @@
 RewriteEngine On
 RewriteBase /ns/controller/
-AddType application/ld+json .jsonld
-AddType text/turtle .ttl
 
 # This is kept for backward compatibility only. The official URL for the context
 # is in /ns/cid/

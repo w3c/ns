@@ -1,100 +1,11 @@
-# Added charset for text/turtle per https://github.com/w3c/dxwg/issues/1183
 
-<Files ~ "dcat-external.ttl">
-ForceType 'text/turtle; charset=UTF-8'
-</Files>
-<Files ~ "dcat-prov.ttl">
-ForceType 'text/turtle; charset=UTF-8'
-</Files>
-<Files ~ "dcat-schema.ttl">
-ForceType 'text/turtle; charset=UTF-8'
-</Files>
-<Files ~ "dcat2.ttl">
-ForceType 'text/turtle; charset=UTF-8'
-</Files>
-<Files ~ "dcat2-external.ttl">
-ForceType 'text/turtle; charset=UTF-8'
-</Files>
-<Files ~ "dcat3.ttl">
-ForceType 'text/turtle; charset=UTF-8'
-</Files>
-<Files ~ "dcat3-external.ttl">
-ForceType 'text/turtle; charset=UTF-8'
-</Files>
-<Files ~ "dcat2014.ttl">
-ForceType 'text/turtle; charset=UTF-8'
-</Files>
-
-
-# Added CORS for everything!   sandro@w3.org 2015-05-05
-# (wait for sys) Header set Access-Control-Allow-Origin "*"
-
-<Files ~ "md.json">
-ForceType 'application/json'
-</Files>
-
-<Files ~ "json-ld.json">
-ForceType 'application/json'
-</Files>
-
-# Added the access-control-allow ivan@w3.org 2015-05-01
-<Files ~ "json-ld.jsonld">
-Header set Access-Control-Allow-Origin "*"
-ForceType 'application/ld+json'
-</Files>
-
-# Added the access-control-allow ivan@w3.org 2015-05-01
-<Files ~ "csvw.jsonld">
-ForceType 'application/ld+json'
-Header set Access-Control-Allow-Origin "*"
-</Files>
-<Files ~ "csvw.ttl">
-Header set Access-Control-Allow-Origin "*"
-</Files>
-
-# Added the access-control-allow ivan@w3.org 2015-05-01
-<Files ~ "oa.jsonld">
-Header set Access-Control-Allow-Origin "*"
-ForceType 'application/ld+json'
-</Files>
-
-# Added the access-control-allow ivan@w3.org 2015-08-19
-<Files ~ "anno.jsonld">
-Header set Access-Control-Allow-Origin "*"
-ForceType 'application/ld+json'
-</Files>
 <Files ~ "anno.json">
-Header set Access-Control-Allow-Origin "*"
 ForceType 'application/ld+json'
 </Files>
 
-# Added by andrei@w3.org 2015-10-30
-<Files ~ “ldp.jsonld">
-Header set Access-Control-Allow-Origin "*"
-ForceType 'application/ld+json'
-</Files>
-
-
-<FilesMatch "^(ma-ont|mediaont)\.html$">
-ForceType 'text/html; charset=iso-8859-1'
-</FilesMatch>
 
 RewriteEngine On
 RewriteBase /ns/
-
-# added sandro@w3.org 2013-11-29 per
-# https://lists.w3.org/Archives/Team/vocab-services/2013Nov/0002.html
-# JK: the following header unset rules are very specific to
-# this proxy endpoint; don't duplicate them elsewhere.
-RewriteRule ^hydra/(.*)$ http://www.markus-lanthaler.com/hydra/$1 [P,L]
-<If "%{REQUEST_URI} =~ m#^/ns/hydra/#">
-    Header unset Set-Cookie
-    Header unset Expect-CT
-    Header unset Content-Security-Policy
-    Header unset Server
-    Header unset Strict-Transport-Security
-    Header set Access-Control-Allow-Origin "*"
-</If>
 
 # Added ivan@w3.org 2014-05-02
 # http://lists.w3.org/Archives/Public/public-openannotation/2014May/0010.html
@@ -103,11 +14,6 @@ RewriteRule ^oa-context.json oa.jsonld [L,R=307]
 
 # added sandro@w3.org 2015-05-05 per discussion with elf at socialWG F2F
 <Files ~ "activitystreams*">
-Header set Access-Control-Allow-Origin "*"
-</Files>
-
-<Files ~ "shex.jsonld">
-ForceType 'application/ld+json'
 Header set Access-Control-Allow-Origin "*"
 </Files>
 
@@ -139,14 +45,6 @@ RewriteRule ^ldt/document-hierarchy/templates$ https://raw.githubusercontent.com
 RewriteRule ^ldt/topic-hierarchy/templates$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/tht.ttl [P]
 # Hopefully it's now safe to include this one
 RewriteRule ^ldt$ https://raw.githubusercontent.com/AtomGraph/Processor/master/src/main/resources/com/atomgraph/processor/ldt.ttl [P]
-
-# added by fd@w3.org for N-triples content negotiation
-AddType application/n-triples .nt
-
-# added by dsr@w3.org for thing description content negotiation
-AddType text/turtle .ttl
-AddType application/ld+json .jsonld
-AddType application/rdf+xml .rdf
 
 
 RewriteCond %{HTTP_ACCEPT} text/turtle

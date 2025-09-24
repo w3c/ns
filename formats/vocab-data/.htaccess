@@ -1,8 +1,0 @@
-
-<Files ~ "\.html">
-ForceType 'text/html; charset=UTF-8'
-</Files>
-
-<Files ~ "\.ttl">
-ForceType 'text/turtle; charset=UTF-8'
-</Files>
