@@ -1,0 +1,40 @@
+RewriteEngine On
+
+RewriteBase /ns/wot-next
+
+### Redirection setting for next WoT resources
+RewriteRule ^td$ https://w3c.github.io/wot-thing-description/context/td-context-1.1.jsonld [P]
+
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^td-ontology$ https://w3c.github.io/wot-thing-description/ontology/td.ttl [P]
+
+RewriteCond %{HTTP:Accept} text/html [NC]
+RewriteRule ^td-ontology$ https://w3c.github.io/wot-thing-description/ontology/td.html [P]
+
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^tm-ontology$ https://w3c.github.io/wot-thing-description/ontology/tm.ttl [P]
+
+RewriteCond %{HTTP:Accept} text/html [NC]
+RewriteRule ^tm-ontology$ https://w3c.github.io/wot-thing-description/ontology/tm.html [P]
+
+RewriteCond %{HTTP:Accept} text/html [NC]
+RewriteRule ^json-schema-ontology$ https://w3c.github.io/wot-thing-description/ontology/jsonschema.html [P]
+
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^json-schema-ontology$ https://w3c.github.io/wot-thing-description/ontology/jsonschema.ttl [P]
+
+RewriteCond %{HTTP:Accept} text/html [NC]
+RewriteRule ^security-ontology$ https://w3c.github.io/wot-thing-description/ontology/wotsec.html [P]
+
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^security-ontology$ https://w3c.github.io/wot-thing-description/ontology/wotsec.ttl [P]
+
+RewriteCond %{HTTP:Accept} text/html [NC]
+RewriteRule ^hypermedia-ontology$ https://w3c.github.io/wot-thing-description/ontology/hctl.html [P]
+
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^hypermedia-ontology$ https://w3c.github.io/wot-thing-description/ontology/hctl.ttl [P]
+
+RewriteRule ^td-schema$ https://w3c.github.io/wot-thing-description/validation/td-json-schema-validation.json [P]
+
+RewriteRule ^tm-schema$ https://w3c.github.io/wot-thing-description/validation/tm-json-schema-validation.json [P]
