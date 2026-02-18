@@ -100,8 +100,8 @@ RewriteRule ^adms(\..[a-z]+)?$ legacy_adms$1 [L,R=307]
 
 # Adding EPUB Annotation vocabulary redirections toward documents in /TR
 # Ivan Herman, February 2026
-RewriteRule ^ea.jsonld$ https://www.w3.org/TR/epub-anno-vocab/index.jsonld [P]
-RewriteRule ^ea.json$ https://www.w3.org/TR/epub-anno-vocab/index.jsonld [P]
-RewriteRule ^ea.ttl$ https://www.w3.org/TR/epub-anno-vocab/index.ttl [P]
-RewriteRule ^ea.html$ https://www.w3.org/TR/epub-anno-vocab/Overview.html [P]
-RewriteRule ^epub-anno.jsonld$ https://www.w3.org/TR/epub-anno-vocab/index.context.jsonld [P]
+RewriteRule ^ea.jsonld$ https://www.w3.org/TR/epub-anno-vocab-10/index.jsonld [P]
+RewriteRule ^ea.json$ https://www.w3.org/TR/epub-anno-vocab-10/index.jsonld [P]
+RewriteRule ^ea.ttl$ https://www.w3.org/TR/epub-anno-vocab-10/index.ttl [P]
+RewriteRule ^ea.html$ https://www.w3.org/TR/epub-anno-vocab-10/Overview.html [P]
+RewriteRule ^epub-anno.jsonld$ https://www.w3.org/TR/epub-anno-vocab-10/index.context.jsonld [P]
