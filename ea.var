@@ -1,0 +1,13 @@
+URI: ea
+
+URI: ea.html
+Content-Type: text/html
+
+URI: ea.ttl
+Content-Type: text/turtle; qs=0.6
+
+URI: ea.jsonld
+Content-Type: application/ld+json; qs=0.5
+
+URI: ea.json
+Content-Type: application/json; qs=0.4
