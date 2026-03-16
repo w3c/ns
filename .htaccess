@@ -75,7 +75,7 @@ RewriteRule ^pub-context.json$ https://w3c.github.io/pub-vocab/pub-context.jsonl
 RewriteRule ^pub-context-jsonld10.jsonld$ https://w3c.github.io/pub-vocab/pub-context-jsonld10.jsonld [P]
 RewriteRule ^pub-context-jsonld10.json$ https://w3c.github.io/pub-vocab/pub-context-jsonld10.jsonld [P]
 
-### 
+###
 # did
 RewriteRule ^did$    did-vocab/did [PT]
 RewriteRule ^did\.(.*)  did-vocab/did.$1 [PT,L]
@@ -96,3 +96,12 @@ RewriteRule ^person(\..[a-z]+)?$ legacy_person$1 [L,R=307]
 RewriteRule ^legal(\..[a-z]+)?$ legal-entity$1 [L,R=307]
 RewriteRule ^locn(\..[a-z]+)?$ legacy_locn$1 [L,R=307]
 RewriteRule ^adms(\..[a-z]+)?$ legacy_adms$1 [L,R=307]
+
+
+# Adding EPUB Annotation vocabulary redirections toward documents in /TR
+# Ivan Herman, February 2026
+RewriteRule ^ea.jsonld$ /TR/epub-anno-vocab-10/index.jsonld [L]
+RewriteRule ^ea.json$ /TR/epub-anno-vocab-10/index.jsonld [L]
+RewriteRule ^ea.ttl$ /TR/epub-anno-vocab-10/index.ttl [L]
+RewriteRule ^ea.html$ /TR/epub-anno-vocab-10/Overview.html [L]
+RewriteRule ^epub-anno.jsonld$ /TR/epub-anno-vocab-10/index.context.jsonld [L]
