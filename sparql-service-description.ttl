@@ -70,6 +70,13 @@ sd:supportedLanguage a rdf:Property ;
 	rdfs:label "supported language" ;
 	rdfs:comment "Relates an instance of sd:Service to a SPARQL language (e.g. Query and Update) that it implements." .
 
+sd:supportedVersion a rdf:Property ;
+	rdfs:subPropertyOf sd:feature ;
+	rdfs:domain sd:Service ;
+	rdfs:range rdfs:Resource ;
+	rdfs:label "supported version" ;
+	rdfs:comment "Relates an instance of sd:Service to a SPARQL language version that it supports." .
+
 sd:propertyFeature a rdf:Property ;
 	rdfs:subPropertyOf sd:feature ;
 	rdfs:domain sd:Service ;
@@ -137,7 +144,7 @@ sd:Feature a rdfs:Class ;
 sd:Language a rdfs:Class ;
 	rdfs:subClassOf sd:Feature ;
 	rdfs:label "Language" ;
-	rdfs:comment "An instance of sd:Language represents one of the SPARQL languages, including specific configurations providing particular features or extensions. This document defines three instances of sd:Language: sd:SPARQL10Query, sd:SPARQL11Query, and sd:SPARQL11Update." .
+	rdfs:comment "An instance of sd:Language represents one of the SPARQL languages, including specific configurations providing particular features or extensions. This document defines five instances of sd:Language: sd:SPARQLQuery, sd:SPARQLUpdate, sd:SPARQL10Query, sd:SPARQL11Query, and sd:SPARQL11Update." .
 
 sd:Function a rdfs:Class ;
 	rdfs:subClassOf sd:Feature ;
@@ -178,6 +185,10 @@ sd:NamedGraph a rdfs:Class ;
 	
 ### Instances
 
+sd:SPARQLQuery a sd:Language ;
+	rdfs:label "SPARQL Query" ;
+	rdfs:comment "sd:SPARQLQuery is an sd:Language representing the SPARQL Query language." .
+
 sd:SPARQL10Query a sd:Language ;
 	rdfs:label "SPARQL 1.0 Query" ;
 	rdfs:comment "sd:SPARQL10Query is an sd:Language representing the SPARQL 1.0 Query language." .
@@ -185,6 +196,10 @@ sd:SPARQL10Query a sd:Language ;
 sd:SPARQL11Query a sd:Language ;
 	rdfs:label "SPARQL 1.1 Query" ;
 	rdfs:comment "sd:SPARQL11Query is an sd:Language representing the SPARQL 1.1 Query language." .
+
+sd:SPARQLUpdate a sd:Language ;
+	rdfs:label "SPARQL Update" ;
+	rdfs:comment "sd:SPARQLUpdate is an sd:Language representing the SPARQL Update language." .
 
 sd:SPARQL11Update a sd:Language ;
 	rdfs:label "SPARQL 1.1 Update" ;
