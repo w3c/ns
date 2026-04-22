@@ -73,7 +73,7 @@ RewriteRule  ^$  ssn?term= [N]
 ######################################################################
 RewriteCond  %{REQUEST_FILENAME}  !-f
 RewriteCond  %{QUERY_STRING}  =""
-RewriteRule  ^(.*)$  ssn?term=$1 [N]
+RewriteRule  ^([^/]*)$  ssn?term=$1 [N]
 
 ######################################################################
 # Request for ssn.html?term=foo where foo is not empty. Return

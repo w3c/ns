@@ -92,7 +92,7 @@ RewriteRule  ^$  sosa?term= [N]
 ######################################################################
 RewriteCond  %{REQUEST_FILENAME}  !-f
 RewriteCond  %{QUERY_STRING}  =""
-RewriteRule  ^(.*)$  sosa?term=$1 [N]
+RewriteRule  ^([^/]*)$  sosa?term=$1 [N]
 
 ######################################################################
 # Request for /ns/sosa/sosa.html?term=foo where foo is not empty.
