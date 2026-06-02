@@ -19,6 +19,11 @@
       <xs:enumeration value="SHA-512"/>
     </xs:restriction>
   </xs:simpleType>
+  <xs:simpleType name="Base64URL">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Za-z0-9\-_]*(=(=)?)?" />
+    </xs:restriction>
+  </xs:simpleType>
 	<xs:element name="TrustedKey">
     <xs:annotation>
       <xs:documentation>
@@ -26,7 +31,10 @@
       </xs:documentation>
     </xs:annotation>
 		<xs:complexType>
-			<xs:attribute name="digest" type="xs:base64Binary" use="required">
+			<xs:attribute name="digest" type="dbsc:Base64URL" use="required">
+        <xs:documentation>
+          The base64url-encoded (https://datatracker.ietf.org/doc/html/rfc4648#section-5) key digest.
+        </xs:documentation>
 			</xs:attribute>
 			<xs:attribute name="digest_alg" type="dbsc:HashingAlgorithmType" use="required">
 			</xs:attribute>
@@ -39,7 +47,10 @@
       </xs:documentation>
     </xs:annotation>
 		<xs:complexType>
-			<xs:attribute name="fingerprint" type="xs:base64Binary" use="required">
+			<xs:attribute name="fingerprint" type="dbsc:Base64URL" use="required">
+        <xs:documentation>
+          The base64url-encoded (https://datatracker.ietf.org/doc/html/rfc4648#section-5) certificate fingerprint.
+        </xs:documentation>
 			</xs:attribute>
 			<xs:attribute name="fingerprint_alg" type="dbsc:HashingAlgorithmType" use="required">
 			</xs:attribute>
