@@ -32,9 +32,11 @@
     </xs:annotation>
 		<xs:complexType>
 			<xs:attribute name="digest" type="dbsc:Base64URL" use="required">
-        <xs:documentation>
-          The base64url-encoded (https://datatracker.ietf.org/doc/html/rfc4648#section-5) key digest.
-        </xs:documentation>
+        <xs:annotation>
+          <xs:documentation>
+            The base64url-encoded (https://datatracker.ietf.org/doc/html/rfc4648#section-5) key digest.
+          </xs:documentation>
+        </xs:annotation>
 			</xs:attribute>
 			<xs:attribute name="digest_alg" type="dbsc:HashingAlgorithmType" use="required">
 			</xs:attribute>
@@ -48,9 +50,11 @@
     </xs:annotation>
 		<xs:complexType>
 			<xs:attribute name="fingerprint" type="dbsc:Base64URL" use="required">
-        <xs:documentation>
-          The base64url-encoded (https://datatracker.ietf.org/doc/html/rfc4648#section-5) certificate fingerprint.
-        </xs:documentation>
+        <xs:annotation>
+          <xs:documentation>
+            The base64url-encoded (https://datatracker.ietf.org/doc/html/rfc4648#section-5) certificate fingerprint.
+          </xs:documentation>
+        </xs:annotation>
 			</xs:attribute>
 			<xs:attribute name="fingerprint_alg" type="dbsc:HashingAlgorithmType" use="required">
 			</xs:attribute>
