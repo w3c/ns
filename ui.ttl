@@ -13,7 +13,7 @@
 	can be associated with objects and classes.
 	""";
          dc:license <https://creativecommons.org/publicdomain/zero/1.0/>;
-         dc:modified "2021-03-04 18:29:49";
+         dc:modified "2026-07-21";
          dc:title "An ontology for User Interface description, Hints and Forms." .
     
     :BooleanField     s:subClassOf :NumericField .
@@ -35,6 +35,9 @@
                  :property :use;
                  :sequence 2;
                  :use :FieldForm ] ) .
+    
+    :Celsius     a :TemperatureUnit;
+         s:label "Celsius"@en .
     
     :Choice     s:subClassOf :Form,
                 :Single .
@@ -69,7 +72,14 @@
     
     :ColorField     s:subClassOf :ValueField .
     
+    :ColorScheme     a s:Class;
+         s:label "Color scheme"@en .
+    
     :ColorValuespaceRestriction     xsd:pattern "#[0-9a-z]{6}" .
+    
+    :Command     a s:Class;
+         s:comment "A plugin that loads by executing a command in the host script.";
+         s:label "Command"@en .
     
     :Comment     a s:Class;
          s:isDefinedBy <>;
@@ -78,11 +88,33 @@
          s:subClassOf :Form,
                 :Single .
     
+    :Component     a s:Class;
+         s:comment "A plugin that loads by including a custom-element web component.";
+         s:label "Component"@en .
+    
+    :DarkColorScheme     a :ColorScheme;
+         s:label "Dark"@en .
+    
     :DateField     s:subClassOf :ValueField .
     
     :DateTimeField     s:subClassOf :ValueField .
     
     :DecimalField     s:subClassOf :NumericField .
+    
+    :DefaultKeys     a :EditorKeys;
+         s:label "Default"@en .
+    
+    :Dropdown     a :Region;
+         s:label "Dropdown"@en .
+    
+    :EditorKeys     a s:Class;
+         s:label "Editor keys"@en .
+    
+    :Element     a :Region;
+         s:label "Element"@en .
+    
+    :EmacsKeys     a :EditorKeys;
+         s:label "Emacs"@en .
     
     :EmailField     s:subClassOf :ValueField .
     
@@ -100,6 +132,9 @@
         and then select what sort of field you want."""@en;
          :sequence 3;
          :style "background-color: #ffe;" .
+    
+    :Fahrenheit     a :TemperatureUnit;
+         s:label "Fahrenheit"@en .
     
     :FieldForm     a :Group;
          dc:title "Form for selecting a type of field";
@@ -411,6 +446,12 @@
     
     :FloatField     s:subClassOf :NumericField .
     
+    :Floating     a :Region;
+         s:label "Floating"@en .
+    
+    :FontSize     a s:Class;
+         s:label "Font size"@en .
+    
     :Form     a s:Class;
          s:comment """A form can be any type of single field, or typically a Group of several fields,
     including interspersed headings and comments.  """;
@@ -440,7 +481,37 @@
     :Heading     s:subClassOf :Form,
                 :Single .
     
+    :Horizontal     a :Orientation;
+         s:label "Horizontal"@en .
+    
+    :Inline     a :Region;
+         s:label "Inline"@en .
+    
     :IntegerField     s:subClassOf :NumericField .
+    
+    :LargeFont     a :FontSize;
+         s:label "Large"@en .
+    
+    :Layout     a s:Class;
+         s:comment "A rectangular page/screen container whose contained elements render stacked or side by side as determined by its ui:orientation.";
+         s:label "Layout"@en .
+    
+    :LightColorScheme     a :ColorScheme;
+         s:label "Light"@en .
+    
+    :Link     a s:Class;
+         s:comment "A plugin that loads by including an external IRI e.g. in an iframe or via transclusion.";
+         s:label "Link"@en .
+    
+    :MediumFont     a :FontSize;
+         s:label "Medium"@en .
+    
+    :Menu     a s:Class;
+         s:comment "A collection of named actions which may be displayed as a visual menu or set of tabs or other UI.";
+         s:label "Menu"@en .
+    
+    :Modal     a :Region;
+         s:label "Modal"@en .
     
     :MultiLineTextField     s:subClassOf :TextField .
     
@@ -466,7 +537,17 @@
     :Options     s:subClassOf :Form,
                 :Single .
     
+    :Orientation     a s:Class;
+         s:label "Orientation"@en .
+    
     :PhoneField     s:subClassOf :ValueField .
+    
+    :Plugin     a s:Class;
+         s:comment "A plugin is a widget or app that can be called from a host app either by importing an external URL, by running an internal command, or by adding a custom element (web component) to the DOM.";
+         s:label "Plugin"@en .
+    
+    :Region     a s:Class;
+         s:label "Region"@en .
     
     :Single     a s:Class;
          owl:disjointUnionOf  (
@@ -479,6 +560,18 @@
         :Comment ) .
     
     :SingleLineTextField     s:subClassOf :TextField .
+    
+    :SmallFont     a :FontSize;
+         s:label "Small"@en .
+    
+    :SystemColorScheme     a :ColorScheme;
+         s:label "System"@en .
+    
+    :Tab     a :Region;
+         s:label "Tab"@en .
+    
+    :TemperatureUnit     a s:Class;
+         s:label "Temperature unit"@en .
     
     :TextField     a s:Class;
          s:subClassOf :ValueField;
@@ -505,6 +598,15 @@
         :DateTimeField
         :PhoneField
         :EmailField ) .
+    
+    :Vertical     a :Orientation;
+         s:label "Vertical"@en .
+    
+    :VimKeys     a :EditorKeys;
+         s:label "Vim"@en .
+    
+    :Window     a :Region;
+         s:label "Window"@en .
     
     :annotationForm     a r:Property;
          s:comment """A form which may be used to add more infromation to an
@@ -542,6 +644,16 @@ facet of the thing.
          s:label "color"@en;
          s:range :Color .
     
+    :colorScheme     a r:Property;
+         s:comment "Preferred page color scheme; the value is a ui:ColorScheme instance, e.g. ui:DarkColorScheme.";
+         s:label "color scheme"@en;
+         s:range :ColorScheme .
+    
+    :columns     a r:Property;
+         s:comment "On a ui:Layout: render the parts as a grid with this many columns.";
+         s:label "columns"@en;
+         s:range xsd:integer .
+    
     :contents     a r:Property;
          s:isDefinedBy <>;
          s:label "Contenido"@es,
@@ -565,6 +677,16 @@ facet of the thing.
          s:label "depending on"@en;
          s:range r:Property .
     
+    :editorKeys     a r:Property;
+         s:comment "Preferred editor keybindings; the value is a ui:EditorKeys instance, e.g. ui:VimKeys.";
+         s:label "editor keys"@en;
+         s:range :EditorKeys .
+    
+    :fontSize     a r:Property;
+         s:comment "Preferred page font size; the value is a ui:FontSize instance, e.g. ui:SmallFont.";
+         s:label "font size"@en;
+         s:range :FontSize .
+    
     :for     a r:Property;
          s:comment "The value for which this case is selected.";
          s:label "for"@en .
@@ -574,6 +696,15 @@ facet of the thing.
          s:label "from";
          s:range r:Class;
          :prompt "from what class" .
+    
+    :icon     a r:Property;
+         s:comment "Optional icon URL or emoji/text-string shown for a menu item.";
+         s:label "icon"@en .
+    
+    :ignorePattern     a r:Property;
+         s:comment """A filename/path glob pattern hidden from listings (e.g. "*~", ".*"); repeatable.""";
+         s:label "ignore pattern"@en;
+         s:range xsd:string .
     
     :initialProperties     a r:Property;
          s:comment """A really simple way of enabling user interfaces to
@@ -592,6 +723,11 @@ facet of the thing.
          s:isDefinedBy <>;
          s:label "Etiqueta"@es,
                 "Label"@en .
+    
+    :layout     a r:Property;
+         s:comment "Links a thing (e.g. a schema:WebApplication) to its root ui:Layout.";
+         s:label "layout"@en;
+         s:range :Layout .
     
     :maxDateOffset     a r:Property;
          s:isDefinedBy <>;
@@ -648,6 +784,11 @@ facet of the thing.
          s:range xsd:Boolean;
          :e r:Property .
     
+    :orientation     a r:Property;
+         s:comment "The orientation of the menu; a ui:Orientation instance e.g. ui:Horizontal.";
+         s:label "orientation"@en;
+         s:range :Orientation .
+    
     :parentProperty     a r:Property;
          s:isDefinedBy <>;
          s:label "Parent property"@en,
@@ -673,6 +814,11 @@ facet of the thing.
          s:label "Modelo"@es,
                 "Pattern"@en .
     
+    :privatePort     a r:Property;
+         s:comment "TCP port the private server, behind the router, listens on.";
+         s:label "private port"@en;
+         s:range xsd:integer .
+    
     :prompt     a r:Property;
          s:comment """A string for the UI to use if the user needs a longer
         prompts than just a field name, the s:label. """;
@@ -686,10 +832,30 @@ facet of the thing.
          s:label "property to be stored"@en;
          s:range r:Property .
     
+    :proxy     a r:Property;
+         s:comment "URL prefix that wraps a target URL for CORS proxying; the target is URI-encoded onto the end.";
+         s:label "proxy"@en;
+         s:range xsd:string .
+    
+    :proxyPort     a r:Property;
+         s:comment "TCP port the CORS proxy listens on.";
+         s:label "proxy port"@en;
+         s:range xsd:integer .
+    
+    :publicPort     a r:Property;
+         s:comment "TCP port the public routing server (the origin clients talk to) listens on.";
+         s:label "public port"@en;
+         s:range xsd:integer .
+    
     :reference     a r:Property;
          s:isDefinedBy <>;
          s:label "Reference"@en,
                 "Referencia"@es .
+    
+    :region     a r:Property;
+         s:comment "The default target for menu items; a ui:Region instance e.g. ui:Modal.";
+         s:label "region"@en;
+         s:range :Region .
     
     :required     a r:Property;
          s:isDefinedBy <>;
@@ -746,6 +912,11 @@ facet of the thing.
          s:range r:List;
          :prompt "Properties to be given in a default table view" .
     
+    :temperatureUnit     a r:Property;
+         s:comment "Display unit(s) for temperature, each a ui:TemperatureUnit instance, e.g. ui:Celsius";
+         s:label "temperature unit"@en;
+         s:range :TemperatureUnit .
+    
     :use     a r:Property;
          s:range :Form .
     
@@ -769,3 +940,12 @@ facet of the thing.
          s:label "Valores"@es,
                 "Values"@en .
     
+    :windowX     a r:Property;
+         s:comment "The x (horizontal) screen coordinate, in pixels, of an element or window's top-left corner.";
+         s:label "window x"@en;
+         s:range xsd:integer .
+    
+    :windowY     a r:Property;
+         s:comment "The y (vertical) screen coordinate, in pixels, of  an element or window's top-left corner.";
+         s:label "window y"@en;
+         s:range xsd:integer .
