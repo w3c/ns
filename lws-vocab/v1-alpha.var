@@ -1,0 +1,11 @@
+URI: v1-alpha
+
+URI: v1-alpha.jsonld.redirect
+Content-Type: application/ld+json; qs=0.999
+
+URI: v1-alpha.jsonld.redirect
+Content-Type: application/json; qs=0.990
+
+# We use redirection to github.io while the specification is work-in-progress.
+# Once it is stabilized, we might want to install static copies of the files in NS,
+# for better performance and sovereignty.
