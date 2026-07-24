@@ -105,3 +105,9 @@ RewriteRule ^ea.json$ /TR/epub-anno-vocab-10/index.jsonld [L]
 RewriteRule ^ea.ttl$ /TR/epub-anno-vocab-10/index.ttl [L]
 RewriteRule ^ea.html$ /TR/epub-anno-vocab-10/Overview.html [L]
 RewriteRule ^epub-anno.jsonld$ /TR/epub-anno-vocab-10/index.context.jsonld [L]
+
+# Linked Web Storage vocab
+# Pierre-Antoine Champin, July 2026
+RewriteRule ^lws$      lws-vocab/index    [L,PT]
+RewriteRule ^lws\.(.*) lws-vocab/index.$1 [L,PT]
+RewriteRule ^lws/(.*)  lws-vocab/$1       [L,PT]
