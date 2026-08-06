@@ -29,17 +29,24 @@
     "LiteralStemRange": "shex:LiteralStemRange",
     "NodeConstraint": "shex:NodeConstraint",
     "OneOf": "shex:OneOf",
+    "QueryMap": "shex:QueryMap",
     "Schema": "shex:Schema",
     "SemAct": "shex:SemAct",
     "Shape": "shex:Shape",
     "ShapeAnd": "shex:ShapeAnd",
+    "ShapeDecl": "shex:ShapeDecl",
     "ShapeExternal": "shex:ShapeExternal",
+    "ShapeMap": "shex:ShapeMap",
     "ShapeNot": "shex:ShapeNot",
     "ShapeOr": "shex:ShapeOr",
     "Stem": "shex:Stem",
     "StemRange": "shex:StemRange",
     "TripleConstraint": "shex:TripleConstraint",
     "Wildcard": "shex:Wildcard",
+    "abstract": {
+      "@id": "shex:abstract",
+      "@type": "xsd:boolean"
+    },
     "closed": {
       "@id": "shex:closed",
       "@type": "xsd:boolean"
@@ -61,12 +68,12 @@
       "@type": "@id",
       "@container": "@list"
     },
-    "extra": {
-      "@id": "shex:extra",
-      "@type": "@id"
-    },
     "extends": {
       "@id": "shex:extends",
+      "@type": "@id"
+    },
+    "extra": {
+      "@id": "shex:extra",
       "@type": "@id"
     },
     "flags": {
@@ -76,6 +83,11 @@
     "fractiondigits": {
       "@id": "shex:fractiondigits",
       "@type": "xsd:integer"
+    },
+    "imports": {
+      "@id": "shex:imports",
+      "@type": "@id",
+      "@container": "@list"
     },
     "inverse": {
       "@id": "shex:inverse",
@@ -125,6 +137,10 @@
       "@id": "shex:name",
       "@type": "@id"
     },
+    "node": {
+      "@id": "shex:node",
+      "@type": "@id"
+    },
     "nodeKind": {
       "@id": "shex:nodeKind",
       "@type": "@vocab"
@@ -145,6 +161,10 @@
       "@id": "shex:semActs",
       "@type": "@id",
       "@container": "@list"
+    },
+    "shape": {
+      "@id": "shex:shape",
+      "@type": "@id"
     },
     "shapeExpr": {
       "@id": "shex:shapeExpr",
@@ -169,6 +189,10 @@
       "@type": "@id",
       "@container": "@list"
     },
+    "status": {
+      "@id": "shex:status",
+      "@language": null
+    },
     "stem": {
       "@id": "shex:stem",
       "@type": "xsd:string"
@@ -186,6 +210,8 @@
       "@type": "@id",
       "@container": "@list"
     },
+    "FOCUS": "shex:FOCUS",
+    "_": "shex:_",
     "bnode": "shex:bnode",
     "iri": "shex:iri",
     "literal": "shex:literal",
@@ -277,10 +303,11 @@
     "dc:description": {
       "en": "This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex-semantics]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes."
     },
-    "dc:date": "2017-07-07",
-    "owl:versionInfo": "https://github.com/shexSpec/shexspec.github.io/commit/e05f8e97471f5271f50612bed253102f770364b4",
+    "dc:date": "2026-08-06",
+    "owl:versionInfo": "https://github.com/shexSpec/shexTest/commit/e51237875c69bb1fbc86def8f3c895b213a6ff9c",
     "rdfs:seeAlso": [
-      "http://shex.io/shex-semantics"
+      "http://shex.io/shex-semantics",
+      "https://shexspec.github.io/shape-map/"
     ],
     "rdfs_classes": [
       {
@@ -413,6 +440,16 @@
         "rdfs:subClassOf": "shex:TripleExpression"
       },
       {
+        "@id": "shex:QueryMap",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Query Map"
+        },
+        "rdfs:comment": {
+          "en": "A map of node selectors to shape labels, used to select the nodes to be validated against particular shapes. Node selectors are RDF nodes or triple patterns."
+        }
+      },
+      {
         "@id": "shex:Schema",
         "@type": "rdfs:Class",
         "rdfs:label": {
@@ -455,6 +492,16 @@
         "rdfs:subClassOf": "shex:ShapeExpression"
       },
       {
+        "@id": "shex:ShapeDecl",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Shape Declaration"
+        },
+        "rdfs:comment": {
+          "en": "Associates a shape expression with a label, and optionally declares it abstract. The shapes in a Schema are ShapeDecls."
+        }
+      },
+      {
         "@id": "shex:ShapeExpression",
         "@type": "rdfs:Class",
         "rdfs:label": {
@@ -474,6 +521,17 @@
           "en": "A reference to a shape defined in some external Schema."
         },
         "rdfs:subClassOf": "shex:ShapeExpression"
+      },
+      {
+        "@id": "shex:ShapeMap",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Shape Map"
+        },
+        "rdfs:comment": {
+          "en": "A QueryMap in which each node selector is an RDF node; associates RDF nodes with shapes, optionally recording the validation status of each association."
+        },
+        "rdfs:subClassOf": "shex:QueryMap"
       },
       {
         "@id": "shex:ShapeNot",
@@ -550,6 +608,18 @@
       }
     ],
     "rdfs_properties": [
+      {
+        "@id": "shex:abstract",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "abstract"
+        },
+        "rdfs:comment": {
+          "en": "Declares a ShapeDecl abstract, meaning that every reference to it must also identify at least one non-abstract shape."
+        },
+        "rdfs:domain": "shex:ShapeDecl",
+        "rdfs:range": "xsd:boolean"
+      },
       {
         "@id": "shex:annotation",
         "@type": "rdf:Property",
@@ -651,18 +721,6 @@
         "rdfs:range": "shex:TripleExpression"
       },
       {
-        "@id": "shex:extra",
-        "@type": "rdf:Property",
-        "rdfs:label": {
-          "en": "extra"
-        },
-        "rdfs:comment": {
-          "en": "Properties which may have extra values beyond those matched through a constraint."
-        },
-        "rdfs:domain": "shex:Shape",
-        "rdfs:range": "rdfs:Resource"
-      },
-      {
         "@id": "shex:extends",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -673,6 +731,18 @@
         },
         "rdfs:domain": "shex:Shape",
         "rdfs:range": "shex:ShapeExpression"
+      },
+      {
+        "@id": "shex:extra",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "extra"
+        },
+        "rdfs:comment": {
+          "en": "Properties which may have extra values beyond those matched through a constraint."
+        },
+        "rdfs:domain": "shex:Shape",
+        "rdfs:range": "rdfs:Resource"
       },
       {
         "@id": "shex:flags",
@@ -698,6 +768,18 @@
         "rdfs:subPropertyOf": "shex:numericFacet",
         "rdfs:domain": "shex:NodeConstraint",
         "rdfs:range": "xsd:integer"
+      },
+      {
+        "@id": "shex:imports",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "imports"
+        },
+        "rdfs:comment": {
+          "en": "Schemas imported by this Schema; their shape and triple expression labels are also in scope here."
+        },
+        "rdfs:domain": "shex:Schema",
+        "rdfs:range": "rdfs:Resource"
       },
       {
         "@id": "shex:inverse",
@@ -887,6 +969,18 @@
         "rdfs:range": "rdfs:Resource"
       },
       {
+        "@id": "shex:node",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "node"
+        },
+        "rdfs:comment": {
+          "en": "An RDF node, or a triple pattern which is used to select RDF nodes to be validated."
+        },
+        "rdfs:domain": "shex:QueryMap",
+        "rdfs:range": "rdfs:Resource"
+      },
+      {
         "@id": "shex:nodeKind",
         "@type": "rdf:Property",
         "rdfs:label": {
@@ -970,15 +1064,32 @@
         "rdfs:range": "shex:SemAct"
       },
       {
+        "@id": "shex:shape",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "shape"
+        },
+        "rdfs:comment": {
+          "en": "A ShEx shape expression label identifying the shape expression against which the selected nodes are validated, or the string \"START\" for the schema's start shape expression."
+        },
+        "rdfs:domain": "shex:QueryMap",
+        "rdfs:range": "shex:ShapeExpression"
+      },
+      {
         "@id": "shex:shapeExpr",
         "@type": "rdf:Property",
         "rdfs:label": {
           "en": "shape expression"
         },
         "rdfs:comment": {
-          "en": "Shape Expression referenced by this shape."
+          "en": "Shape Expression referenced by this shape or shape declaration."
         },
-        "rdfs:domain": "shex:ShapeNot",
+        "rdfs:domain": {
+          "owl:unionOf": [
+            "shex:ShapeNot",
+            "shex:ShapeDecl"
+          ]
+        },
         "rdfs:range": "shex:ShapeExpression"
       },
       {
@@ -1006,10 +1117,10 @@
           "en": "shapes"
         },
         "rdfs:comment": {
-          "en": "Shapes in this Schema."
+          "en": "Shape declarations in this Schema."
         },
         "rdfs:domain": "shex:Schema",
-        "rdfs:range": "shex:ShapeExpression"
+        "rdfs:range": "shex:ShapeDecl"
       },
       {
         "@id": "shex:start",
@@ -1034,6 +1145,18 @@
         },
         "rdfs:domain": "shex:Schema",
         "rdfs:range": "shex:SemAct"
+      },
+      {
+        "@id": "shex:status",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "status"
+        },
+        "rdfs:comment": {
+          "en": "The validation status of a node/shape association: \"conformant\" or \"nonconformant\". Defaults to \"conformant\"."
+        },
+        "rdfs:domain": "shex:ShapeMap",
+        "rdfs:range": "xsd:string"
       },
       {
         "@id": "shex:stem",
@@ -1125,6 +1248,26 @@
       }
     ],
     "rdfs_instances": [
+      {
+        "@id": "shex:FOCUS",
+        "@type": "rdfs:Resource",
+        "rdfs:label": {
+          "en": "FOCUS"
+        },
+        "rdfs:comment": {
+          "en": "In a triple pattern used as a node selector, indicates the position (subject or object) of the nodes to be selected. A triple pattern has exactly one focus selector."
+        }
+      },
+      {
+        "@id": "shex:_",
+        "@type": "rdfs:Resource",
+        "rdfs:label": {
+          "en": "wildcard"
+        },
+        "rdfs:comment": {
+          "en": "In a triple pattern used as a node selector, a wildcard indicating that the position (subject or object) may hold any value."
+        }
+      },
       {
         "@id": "shex:bnode",
         "@type": "NodeKind",

@@ -9,9 +9,9 @@
 shex: a owl:Ontology;
   dc:title "Shape Expression Vocabulary"@en;
   dc:description """This document describes the RDFS vocabulary description used in the Shape Expression Language (ShEx) [[shex-semantics]] along with the default JSON-LD Context and shape expression to validate RDF versions of shapes."""@en;
-  dc:date "2017-07-07"^^xsd:date;
-  owl:versionInfo <https://github.com/shexSpec/shexspec.github.io/commit/e05f8e97471f5271f50612bed253102f770364b4>;
-  rdfs:seeAlso <http://shex.io/shex-semantics>;
+  dc:date "2026-08-06"^^xsd:date;
+  owl:versionInfo <https://github.com/shexSpec/shexTest/commit/e51237875c69bb1fbc86def8f3c895b213a6ff9c>;
+  rdfs:seeAlso <http://shex.io/shex-semantics>, <https://shexspec.github.io/shape-map/>;
   .
 
 
@@ -73,6 +73,10 @@ shex:OneOf a rdfs:Class;
   rdfs:comment """A TripleExpression composed of one or more sub-expressions, one of which must match."""@en;
   rdfs:subClassOf shex:TripleExpression;
   rdfs:isDefinedBy shex: .
+shex:QueryMap a rdfs:Class;
+  rdfs:label "Query Map"@en;
+  rdfs:comment """A map of node selectors to shape labels, used to select the nodes to be validated against particular shapes. Node selectors are RDF nodes or triple patterns."""@en;
+  rdfs:isDefinedBy shex: .
 shex:Schema a rdfs:Class;
   rdfs:label "Schema"@en;
   rdfs:comment """A Schema contains the set of shapes, used for matching a focus node."""@en;
@@ -91,6 +95,10 @@ shex:ShapeAnd a rdfs:Class;
   rdfs:comment """A ShapeExpression composed of one or more sub-expressions, all of which must match."""@en;
   rdfs:subClassOf shex:ShapeExpression;
   rdfs:isDefinedBy shex: .
+shex:ShapeDecl a rdfs:Class;
+  rdfs:label "Shape Declaration"@en;
+  rdfs:comment """Associates a shape expression with a label, and optionally declares it abstract. The shapes in a Schema are ShapeDecls."""@en;
+  rdfs:isDefinedBy shex: .
 shex:ShapeExpression a rdfs:Class;
   rdfs:label "Shape Expression"@en;
   rdfs:comment """The abstract class of Shape Expressions."""@en;
@@ -99,6 +107,11 @@ shex:ShapeExternal a rdfs:Class;
   rdfs:label "Shape External"@en;
   rdfs:comment """A reference to a shape defined in some external Schema."""@en;
   rdfs:subClassOf shex:ShapeExpression;
+  rdfs:isDefinedBy shex: .
+shex:ShapeMap a rdfs:Class;
+  rdfs:label "Shape Map"@en;
+  rdfs:comment """A QueryMap in which each node selector is an RDF node; associates RDF nodes with shapes, optionally recording the validation status of each association."""@en;
+  rdfs:subClassOf shex:QueryMap;
   rdfs:isDefinedBy shex: .
 shex:ShapeNot a rdfs:Class;
   rdfs:label "Shape Not"@en;
@@ -133,6 +146,12 @@ shex:Wildcard a rdfs:Class;
   rdfs:isDefinedBy shex: .
 
 # Property definitions
+shex:abstract a rdf:Property;
+  rdfs:label "abstract"@en;
+  rdfs:comment """Declares a ShapeDecl abstract, meaning that every reference to it must also identify at least one non-abstract shape."""@en;
+  rdfs:domain shex:ShapeDecl;
+  rdfs:range xsd:boolean;
+  rdfs:isDefinedBy shex: .
 shex:annotation a rdf:Property;
   rdfs:label "annotation"@en;
   rdfs:comment """Annotations on a TripleExpression."""@en;
@@ -175,15 +194,15 @@ shex:expressions a rdf:Property;
   rdfs:domain [ owl:unionOf (shex:EachOf shex:OneOf)];
   rdfs:range shex:TripleExpression;
   rdfs:isDefinedBy shex: .
-shex:extra a rdf:Property;
-  rdfs:label "extra"@en;
-  rdfs:comment """Properties which may have extra values beyond those matched through a constraint."""@en;
-  rdfs:domain shex:Shape;
-  rdfs:range rdfs:Resource;
-  rdfs:isDefinedBy shex: .
 shex:extends a rdf:Property;
   rdfs:label "extends"@en;
   rdfs:comment """Base shape expressions for this shape."""@en;
+  rdfs:domain shex:Shape;
+  rdfs:range shex:ShapeExpression;
+  rdfs:isDefinedBy shex: .
+shex:extra a rdf:Property;
+  rdfs:label "extra"@en;
+  rdfs:comment """Properties which may have extra values beyond those matched through a constraint."""@en;
   rdfs:domain shex:Shape;
   rdfs:range rdfs:Resource;
   rdfs:isDefinedBy shex: .
@@ -199,6 +218,12 @@ shex:fractiondigits a rdf:Property;
   rdfs:subPropertyOf shex:numericFacet;
   rdfs:domain shex:NodeConstraint;
   rdfs:range xsd:integer;
+  rdfs:isDefinedBy shex: .
+shex:imports a rdf:Property;
+  rdfs:label "imports"@en;
+  rdfs:comment """Schemas imported by this Schema; their shape and triple expression labels are also in scope here."""@en;
+  rdfs:domain shex:Schema;
+  rdfs:range rdfs:Resource;
   rdfs:isDefinedBy shex: .
 shex:inverse a rdf:Property;
   rdfs:label "inverse"@en;
@@ -279,6 +304,12 @@ shex:name a rdf:Property;
   rdfs:domain shex:SemAct;
   rdfs:range rdfs:Resource;
   rdfs:isDefinedBy shex: .
+shex:node a rdf:Property;
+  rdfs:label "node"@en;
+  rdfs:comment """An RDF node, or a triple pattern which is used to select RDF nodes to be validated."""@en;
+  rdfs:domain shex:QueryMap;
+  rdfs:range rdfs:Resource;
+  rdfs:isDefinedBy shex: .
 shex:nodeKind a rdf:Property;
   rdfs:label "node kind"@en;
   rdfs:comment """Restiction on the kind of node matched; restricted to the defined instances of NodeKind. One of shex:iri, shex:bnode, shex:literal, or shex:nonliteral."""@en;
@@ -315,10 +346,16 @@ shex:semActs a rdf:Property;
   rdfs:domain [ owl:unionOf (shex:EachOf shex:OneOf shex:TripleConstraint)];
   rdfs:range shex:SemAct;
   rdfs:isDefinedBy shex: .
+shex:shape a rdf:Property;
+  rdfs:label "shape"@en;
+  rdfs:comment """A ShEx shape expression label identifying the shape expression against which the selected nodes are validated, or the string "START" for the schema's start shape expression."""@en;
+  rdfs:domain shex:QueryMap;
+  rdfs:range shex:ShapeExpression;
+  rdfs:isDefinedBy shex: .
 shex:shapeExpr a rdf:Property;
   rdfs:label "shape expression"@en;
-  rdfs:comment """Shape Expression referenced by this shape."""@en;
-  rdfs:domain shex:ShapeNot;
+  rdfs:comment """Shape Expression referenced by this shape or shape declaration."""@en;
+  rdfs:domain [ owl:unionOf (shex:ShapeNot shex:ShapeDecl)];
   rdfs:range shex:ShapeExpression;
   rdfs:isDefinedBy shex: .
 shex:shapeExprs a rdf:Property;
@@ -330,9 +367,9 @@ shex:shapeExprs a rdf:Property;
   rdfs:isDefinedBy shex: .
 shex:shapes a rdf:Property;
   rdfs:label "shapes"@en;
-  rdfs:comment """Shapes in this Schema."""@en;
+  rdfs:comment """Shape declarations in this Schema."""@en;
   rdfs:domain shex:Schema;
-  rdfs:range shex:ShapeExpression;
+  rdfs:range shex:ShapeDecl;
   rdfs:isDefinedBy shex: .
 shex:start a rdf:Property;
   rdfs:label "start"@en;
@@ -345,6 +382,12 @@ shex:startActs a rdf:Property;
   rdfs:comment """Semantic Actions run on the Schema."""@en;
   rdfs:domain shex:Schema;
   rdfs:range shex:SemAct;
+  rdfs:isDefinedBy shex: .
+shex:status a rdf:Property;
+  rdfs:label "status"@en;
+  rdfs:comment """The validation status of a node/shape association: "conformant" or "nonconformant". Defaults to "conformant"."""@en;
+  rdfs:domain shex:ShapeMap;
+  rdfs:range xsd:string;
   rdfs:isDefinedBy shex: .
 shex:stem a rdf:Property;
   rdfs:label "stem"@en;
@@ -385,6 +428,14 @@ shex:xsFacet a rdf:Property;
 # Datatype definitions
 
 # Instance definitions
+shex:FOCUS a rdfs:Resource;
+  rdfs:label "FOCUS"@en;
+  rdfs:comment """In a triple pattern used as a node selector, indicates the position (subject or object) of the nodes to be selected. A triple pattern has exactly one focus selector."""@en;
+  rdfs:isDefinedBy shex: .
+shex:_ a rdfs:Resource;
+  rdfs:label "wildcard"@en;
+  rdfs:comment """In a triple pattern used as a node selector, a wildcard indicating that the position (subject or object) may hold any value."""@en;
+  rdfs:isDefinedBy shex: .
 shex:bnode a shex:NodeKind;
   rdfs:label "bnode"@en;
   rdfs:comment """Requires node to be a Blank Node"""@en;
