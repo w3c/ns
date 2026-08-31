@@ -1,0 +1,18 @@
+RewriteEngine On
+
+RewriteBase /2022/wot
+
+### Redirection settings for WoT Discovery resources
+RewriteRule ^discovery$ https://w3c.github.io/wot-resources/discovery/v1/context/discovery-core.jsonld [P]
+
+RewriteRule ^discovery-did$ https://w3c.github.io/wot-resources/discovery/v1/context/discovery-did.jsonld [P]
+
+RewriteCond %{HTTP:Accept} text/turtle [NC]
+RewriteRule ^discovery-ontology$ https://w3c.github.io/wot-resources/discovery/v1/ontology/discovery-ontology.ttl [P]
+
+RewriteCond %{HTTP:Accept} text/html [NC]
+RewriteRule ^discovery-ontology$ https://w3c.github.io/wot-resources/discovery/v1/ontology/discovery-ontology.html [P]
+
+RewriteRule ^discovery/model/directory$ https://w3c.github.io/wot-resources/discovery/v1/model/directory.tm.jsonld [P]
+
+RewriteRule ^discovery/validation/td-discovery-extensions-json-schema$ https://w3c.github.io/wot-resources/discovery/v1/validation/td-discovery-extensions-json-schema.json [P]
