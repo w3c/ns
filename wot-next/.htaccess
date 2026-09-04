@@ -6,13 +6,13 @@ RewriteBase /ns/wot-next
 RewriteRule ^td$ https://w3c.github.io/wot-thing-description/context/td-context-1.1.jsonld [P]
 
 RewriteCond %{HTTP:Accept} text/turtle [NC]
-RewriteRule ^td-ontology$ https://w3c.github.io/wot-thing-description/ontology/td.ttl [P]
+RewriteRule ^td-ontology$ https://w3c.github.io/wot-thing-description/ontology/td.ttl [P,E=TURTLE:1]
 
 RewriteCond %{HTTP:Accept} text/html [NC]
 RewriteRule ^td-ontology$ https://w3c.github.io/wot-thing-description/ontology/td.html [P]
 
 RewriteCond %{HTTP:Accept} text/turtle [NC]
-RewriteRule ^tm-ontology$ https://w3c.github.io/wot-thing-description/ontology/tm.ttl [P]
+RewriteRule ^tm-ontology$ https://w3c.github.io/wot-thing-description/ontology/tm.ttl [P,E=TURTLE:1]
 
 RewriteCond %{HTTP:Accept} text/html [NC]
 RewriteRule ^tm-ontology$ https://w3c.github.io/wot-thing-description/ontology/tm.html [P]
@@ -21,20 +21,22 @@ RewriteCond %{HTTP:Accept} text/html [NC]
 RewriteRule ^json-schema-ontology$ https://w3c.github.io/wot-thing-description/ontology/jsonschema.html [P]
 
 RewriteCond %{HTTP:Accept} text/turtle [NC]
-RewriteRule ^json-schema-ontology$ https://w3c.github.io/wot-thing-description/ontology/jsonschema.ttl [P]
+RewriteRule ^json-schema-ontology$ https://w3c.github.io/wot-thing-description/ontology/jsonschema.ttl [P,E=TURTLE:1]
 
 RewriteCond %{HTTP:Accept} text/html [NC]
 RewriteRule ^security-ontology$ https://w3c.github.io/wot-thing-description/ontology/wotsec.html [P]
 
 RewriteCond %{HTTP:Accept} text/turtle [NC]
-RewriteRule ^security-ontology$ https://w3c.github.io/wot-thing-description/ontology/wotsec.ttl [P]
+RewriteRule ^security-ontology$ https://w3c.github.io/wot-thing-description/ontology/wotsec.ttl [P,E=TURTLE:1]
 
 RewriteCond %{HTTP:Accept} text/html [NC]
 RewriteRule ^hypermedia-ontology$ https://w3c.github.io/wot-thing-description/ontology/hctl.html [P]
 
 RewriteCond %{HTTP:Accept} text/turtle [NC]
-RewriteRule ^hypermedia-ontology$ https://w3c.github.io/wot-thing-description/ontology/hctl.ttl [P]
+RewriteRule ^hypermedia-ontology$ https://w3c.github.io/wot-thing-description/ontology/hctl.ttl [P,E=TURTLE:1]
 
 RewriteRule ^td-schema$ https://w3c.github.io/wot-thing-description/validation/td-json-schema-validation.json [P]
 
 RewriteRule ^tm-schema$ https://w3c.github.io/wot-thing-description/validation/tm-json-schema-validation.json [P]
+
+Header always set Content-Type "text/turtle" env=TURTLE
