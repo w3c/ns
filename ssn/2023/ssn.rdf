@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-17</dcterms:created>
+    <dcterms:creator>
+      <foaf:Agent rdf:nodeID="cb0">
+        <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+      </foaf:Agent>
+    </dcterms:creator>
+    <dcterms:description xml:lang="en">
+  This module imports all the axiomatizations of the SOSA terms, and adds cross-module axioms. 
+  </dcterms:description>
+    <dcterms:description xml:lang="en">This ontology describes sensors, actuators and observations, and related concepts. It does not describe domain concepts, time, locations, etc. these are intended to be included from other ontologies via OWL imports.</dcterms:description>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-03</dcterms:modified>
+    <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+    <dcterms:title xml:lang="en">Semantic Sensor Network Ontology</dcterms:title>
+    <rdfs:comment xml:lang="en">Please report any errors to the W3C Spatial Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org</rdfs:comment>
+    <rdfs:seeAlso rdf:resource="https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/act/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/obs/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/sam/"/>
+    <owl:priorVersion rdf:resource="http://www.w3.org/ns/ssn/2017/"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2023/"/>
+    <owl:versionInfo xml:lang="en">New modular version of the SSN ontology. 
+
+This ontology was originally developed in 2009-2011 by the W3C Semantic Sensor Networks Incubator Group (SSN-XG). For more information on the group's activities see: http://www.w3.org/2005/Incubator/ssn/. The ontology was revised and modularized in 2015-2017 by the W3C/OGC Spatial Data on the Web Working Group, see: https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology. 
+
+In particular, (a) the scope is extended to include actuation and sampling; (b) the core concepts and properties are factored out into the SOSA ontology. The SSN ontology imports SOSA and adds formal axiomatization consistent with the text definitions in SOSA, and adds classes and properties to accommodate the scope of the original SSN ontology. </owl:versionInfo>
+    <skos:historyNote>
+  Terms in the ssn: namespace have equivalence axioms to terms declared in the sosa: namespace, and are marked 'deprecated'. 
+  The axiomatization from the 2017 version of the standard is preserved. 
+
+  Terms in the sosa: namespace do not carry symmetric equivalent axioms. 
+  Axiomatization only uses sosa: terms. 
+  </skos:historyNote>
+    <skos:scopeNote>The SSN module contains an axiomatization of the core terms from the SOSA module (serialized in the sosa:ttl file) plus some deprecated terms in the ssn: namespace. </skos:scopeNote>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/ssn/2023/"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/ssn/2017/"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/ssn/2023/"/>
+    <dcat:previousVersion rdf:resource="http://www.w3.org/ns/ssn/2017/"/>
+    <dcat:version>2023</dcat:version>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SampleCollection">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ActuationCollection">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+      </rdf:Description>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+      </rdf:Description>
+    </owl:disjointWith>
+    <owl:disjointWith>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SamplingCollection">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+        <owl:disjointWith rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+      </rdf:Description>
+    </owl:disjointWith>
+  </rdf:Description>
+</rdf:RDF>

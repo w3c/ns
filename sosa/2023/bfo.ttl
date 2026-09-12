@@ -1,0 +1,149 @@
+# baseURI: http://www.w3.org/ns/sosa/bfo
+# imports: https://www.commoncoreontologies.org/
+# imports: http://www.w3.org/ns/sosa/
+
+@prefix cco: <https://www.commoncoreontologies.org/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sosa: <http://www.w3.org/ns/sosa/> .
+@prefix sp: <http://www.w3.org/ns/sosa/prov/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+
+
+cco:ont00000357 # "Act of Motion"
+  rdfs:subClassOf sosa:Actuation ;
+. 
+cco:ont00000970 # "Act of Artifact Modification"
+  rdfs:subClassOf sosa:Actuation ;
+. 
+cco:ont00000781 # "Control System"
+  rdfs:subClassOf sosa:Actuator ;
+. 
+cco:ont00001242 # Actuator - Note: CCO Actuator is for mechanical motion
+  rdfs:subClassOf sosa:Actuator ;
+. 
+sosa:Asset
+  rdfs:subClassOf obo:BFO_0000004 ; # "Independent Continuant"
+.
+sosa:Deployment
+  rdfs:subClassOf cco:ont00000228 ; # "Planned Act" 
+.
+sosa:Execution
+  rdfs:subClassOF cco:ont00000228 ; # "Planned Act"
+.
+cco:ont00000513 # "Act of tool use"
+  rdfs:subClassOf sosa:Execution ; 
+.
+cco:ont00001158 # "Act of Data Transformation"
+  rdfs:subClassOf sosa:Execution ; # e.g. some Observations, Samplings
+.
+sosa:FeatureOfInterest
+  rdfs:subClassOf obo:BFO_0000001 ; # Entity
+.
+cco:ont00000037 # "Act of Observation"
+  rdfs:subClassOf sosa:Observation ;
+.
+cco:ont00000345 # "Act of Measuring"
+  rdfs:subClassOf sosa:Observation ;
+.
+cco:ont00000371 # "Act of Prediction"
+  rdfs:subClassOf sosa:Observation ;
+.
+cco:ont00000078 # "Act of Estimation"
+  rdfs:subClassOf sosa:Observation ;
+.
+sosa:Observation 
+  rdfs:subClassOf cco:ont00002075 ; # "Sensing Process"
+.
+sosa:Observation 
+  rdfs:subClassOf [ 
+    a owl:Restriction ; 
+    owl:onProperty sosa:hasResult ; 
+    owl:allValuesFrom cco:ont00000853 ; # "Descriptive Information Content Entity"
+  ] ; 
+.
+cco:ont00000021 # Sensor Platform
+  rdfs:subClassOf sosa:Platform ;
+.
+sosa:Procedure
+  rdfs:subClassOf cco:ont00000965 ; # "Prescriptive Information Content Entity"
+.
+sosa:Property
+  rdfs:subClassOf [ 
+    a owl:Class ; 
+    owl:unionOf (
+      obo:BFO_0000019 
+      obo:BFO_0000031 
+      )
+    ] ; # "quality" or "generically dependent continuant"
+.
+sosa:Sample
+  rdfs:subClassOf obo:BFO_0000004 ; # Independent Continuant
+.
+sosa:Sampling
+  rdfs:subClassOf [ 
+    a owl:Restriction ; 
+    owl:onProperty sosa:hasResult ; 
+    owl:allValuesFrom obo:BFO_0000004 
+  ] ; # independent continuant
+.
+cco:ont00000569 # Sensor - CCO Sensor is a material entity
+  rdfs:subClassOf sosa:Sensor ;
+. 
+sosa:Stimulus
+  rdfs:subClassOf cco:ont00000978 ; # Cause
+.
+sosa:System
+  rdfs:subClassOf obo:BFO_0000004 ; # Independent Continuant
+.
+cco:ont00000117 # Information Processing Artifact
+  rdfs:subClassOf sosa:System ;
+.
+sosa:hasFeatureOfInterest
+  rdfs:subPropertyOf cco:ont00001921 ; # has input 
+.
+sosa:hasResult
+  rdfs:subPropertyOf cco:ont00001986 ; # has output 
+.
+sosa:implements
+  rdfs:subPropertyOf cco:ont00001920 ; # prescribed by
+.
+sosa:isSampleOf
+  rdfs:subPropertyOf cco:ont00001775 ; # is successor of
+.
+sosa:madeBySystem
+  rdfs:subPropertyOf obo:BFO_0000057 ; # has participant
+.
+sosa:usedProcedure
+  rdfs:subPropertyOf cco:ont00001920 ; # prescribed by
+.
+sosa:wasOriginatedBy 
+  rdfs:subPropertyOf cco:ont00001819 ; # caused by 
+.
+sosa:bfo
+  rdf:type owl:Ontology ;
+  owl:versionIRI <http://www.w3.org/ns/sosa/2023/bfo> ;
+  dcat:version "2023" ;
+  dcat:hasVersion <http://www.w3.org/ns/sosa/2023/bfo> ;
+  dcat:hasCurrentVersion <http://www.w3.org/ns/sosa/2023/bfo> ;
+  dcterms:created "2025-10-23"^^xsd:date ;
+  dcterms:modified "2026-06-09"^^xsd:date ;
+  dcterms:creator "Simon J D Cox" ;
+  dcterms:creator [
+      rdf:type foaf:Agent ;
+      foaf:name "W3C/OGC Spatiotemporal Data on the Web Working Group"@en ;
+    ] ;
+  dcterms:license <http://www.opengeospatial.org/ogc/Software> ;
+  dcterms:license <http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document> ;
+  dcterms:rights "Copyright 2017, 2026 W3C/OGC." ;
+  rdfs:comment "Alignment of the the W3C/OGC SOSA Ontology with the BFO and CCO Ontologies"@en ;
+  rdfs:label "Alignment of SOSA with BFO + CCO"@en ;
+  owl:imports <http://purl.obolibrary.org/obo/bfo> ;
+  owl:imports <https://www.commoncoreontologies.org/CommonCoreOntologiesMerged> ; 
+  owl:imports sosa: ;
+.

@@ -1,0 +1,49 @@
+######################################################################
+# Rewrite rules for http://www.w3.org/ns/ssn/2023/
+#
+# Written by ssn/scripts/publish_namespace.py.  Do not edit by hand.
+######################################################################
+
+RewriteEngine On
+
+######################################################################
+# Set the Content-Disposition HTTP header to improve "save as" dialogs
+######################################################################
+<Files ssn.rdf>
+    Header set Content-Disposition "inline; filename=ssn.rdf"
+</Files>
+
+<Files ssn.ttl>
+    Header set Content-Disposition "inline; filename=ssn.ttl"
+</Files>
+
+######################################################################
+# ssn.html exists only so that content negotiation has an HTML
+# variant to match.  Its content is never returned: the rule below
+# catches it and redirects to the specification instead.  Its lower qs
+# keeps clients with no preference on Turtle or RDF/XML.
+######################################################################
+<Files ssn.html>
+    ForceType text/html;qs=0.998
+</Files>
+
+######################################################################
+# Get rid of any non-empty query string that is not of the form ?term=...
+######################################################################
+RewriteCond  %{QUERY_STRING}  !=""
+RewriteCond  %{QUERY_STRING}  !^term=
+RewriteRule  ^(.*)$  $1?
+
+######################################################################
+# A request for the version IRI, i.e. for the directory, is a request
+# for one of the ssn.* files.  Content negotiation decides which.
+######################################################################
+RewriteRule  ^$  ssn?term= [N]
+
+######################################################################
+# The HTML variant was chosen: redirect to the specification of this
+# edition.  Terms are not served from a version IRI, so there is no
+# fragment to add here.
+######################################################################
+RewriteCond  %{QUERY_STRING}  ^(term=)?$
+RewriteRule  ^ssn\.html$  https://www.w3.org/TR/vocab-ssn-2023/  [R=303,QSD,NE,L]

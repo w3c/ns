@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <owl:Class rdf:about="http://www.w3.org/ns/ssn/Stimulus">
+    <rdfs:comment xml:lang="en">An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed Property. It is the event, not the object, that triggers the Sensor.</rdfs:comment>
+    <rdfs:isDefinedBy>
+      <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/dep/">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-17</dcterms:created>
+        <dcterms:creator>
+          <foaf:Agent rdf:nodeID="cb110705d8cdca2794ae0817a1546bc4075b804ca73ae3bbe31692d8f5aa520a35d">
+            <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+          </foaf:Agent>
+        </dcterms:creator>
+        <dcterms:description xml:lang="en">
+  This module contains terms defined in the ssn: namespace that now have equivalents in the sosa: namespace so are deprecated. 
+  </dcterms:description>
+        <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+        <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-03</dcterms:modified>
+        <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+        <dcterms:title xml:lang="en">Semantic Sensor Network Ontology - SSN deprecated terms</dcterms:title>
+        <rdfs:comment xml:lang="en">Please report any errors to the W3C Spatial Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2023/dep/"/>
+        <owl:versionInfo xml:lang="en">
+  New modular version of the SSN ontology. 
+  </owl:versionInfo>
+        <skos:historyNote>
+  Terms in the ssn: namespace have equivalence axioms to terms declared in the sosa: namespace, and are marked 'deprecated'. 
+  The axiomatization from the 2017 version of the standard is preserved. 
+
+  Terms in the sosa: namespace do not carry symmetric equivalent axioms. 
+  Axiomatization only uses sosa: terms. 
+  </skos:historyNote>
+        <skos:scopeNote>The SSN-DEP module contains deprecated terms in the ssn: namespace. </skos:scopeNote>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/ssn/2023/dep/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/ssn/2023/dep/"/>
+        <dcat:version>2023</dcat:version>
+      </owl:Ontology>
+    </rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">Stimulus</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1d0148ddd131fd4e67bc832117fea99dc567812a3cc688606da0cde8fc286145c">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <owl:onProperty>
+          <rdf:Description rdf:nodeID="cbf9bb86ce2e920ce8b864af9c9bfc31ff79038800f0780f08bad9099c613984d7">
+            <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/detects"/>
+          </rdf:Description>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb215695e7a5afe4a350f2399c2ef26984653fb4fcb10a52d94f538191687dc7f64">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <owl:onProperty>
+          <rdf:Description rdf:nodeID="cb390ec517c29f318fe81c90283fd27780ade957632b440401f2aaf193b7f8a40b">
+            <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/wasOriginatedBy"/>
+          </rdf:Description>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb21915b963cb50abce9e0cd58a8567592e5cda523feeb0f5dc892458a7b371ed78">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ObservableProperty"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/isProxyFor"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+    <skos:definition xml:lang="en">An event in the real world that 'triggers' the Sensor. The properties associated to the Stimulus may be different to the eventual observed Property. It is the event, not the object, that triggers the Sensor.</skos:definition>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/ssn/Output">
+    <rdfs:comment xml:lang="en">Any information that is reported from a Procedure.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">Output</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb13eac97e2ef381b997f57137c3bd35c517daeb59e23bf64ad9cfe4604f00d4acf">
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <owl:onProperty>
+          <rdf:Description rdf:nodeID="cb102e040ae6dbcbf51648c0e9d3700c6f0529d2b35b85521bf466d9ed4fea6310e">
+            <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasOutput"/>
+          </rdf:Description>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1e3d512647d73d0cc6a4beca58dab0077fe632c19952b2b9daa2869ffc2811639">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <owl:onProperty>
+          <rdf:Description rdf:nodeID="cbd4116988f4f7cde247072250d544da03faf5e12d5fbe5e1bd5f6de53cdf5ac69">
+            <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasOutput"/>
+          </rdf:Description>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:definition xml:lang="en">Any information that is reported from a Procedure.</skos:definition>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/ssn/Input">
+    <rdfs:comment xml:lang="en">Any information that is provided to a Procedure for its use.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">Input</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb17bd6a7a8f51b680b777cf0c4765cd6466b154c921886cb164c020522e7705ddf">
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <owl:onProperty>
+          <rdf:Description rdf:nodeID="cb646bbe6b1c74caa9e2fb12a4fa8b2a64155224ea06a26c54a49b5511ee6d53e1">
+            <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasInput"/>
+          </rdf:Description>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb220ff222a83571d3e6271c9edc8347a6cebc9c30d89f29206592c291db9e42949">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <owl:onProperty>
+          <rdf:Description rdf:nodeID="cb5337cf4d7126a758c54e4eb1e83e01f0e81016eb537fa48c9e6c3e2b28c81b98">
+            <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasInput"/>
+          </rdf:Description>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:definition xml:lang="en">Any information that is provided to a Procedure for its use.</skos:definition>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/wasOriginatedBy">
+    <rdfs:comment xml:lang="en">Relation between an Observation and the Stimulus that originated it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">was originated by</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/wasOriginatedBy"/>
+    <skos:definition xml:lang="en">Relation between an Observation and the Stimulus that originated it.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/implements">
+    <rdfs:comment xml:lang="en">Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">implements</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/implements"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/implementedBy">
+        <rdfs:comment xml:lang="en">Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+        <rdfs:label xml:lang="en">implemented by</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/implementedBy"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/implements"/>
+        <skos:definition xml:lang="en">Relation between a Procedure (an algorithm, procedure or method) and an entity that implements that Procedure in some executable way.</skos:definition>
+        <skos:example xml:lang="en">For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.</skos:example>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">Relation between an entity that implements a Procedure in some executable way and the Procedure (an algorithm, procedure or method).</skos:definition>
+    <skos:example xml:lang="en">For example, the relationship between a sensor and the scientific measuring Procedure via which it senses.</skos:example>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/deployedSystem">
+    <rdfs:comment xml:lang="en">Relation between a Deployment and a deployed System.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">deployed system</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/deployedAsset">
+        <rdfs:comment xml:lang="en">Relation between a Deployment and a deployed asset.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+        <rdfs:label xml:lang="en">deployed asset</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/deployedAsset"/>
+        <skos:definition xml:lang="en">Relation between a Deployment and a deployed asset.</skos:definition>
+      </owl:ObjectProperty>
+    </rdfs:subPropertyOf>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/deployedSystem"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasDeployment">
+        <rdfs:comment xml:lang="en">Relation between a System and a Deployment, recording that the System is deployed in that Deployment.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+        <rdfs:label xml:lang="en">has deployment</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/hasDeployment"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/deployedSystem"/>
+        <skos:definition xml:lang="en">Relation between a System and a Deployment, recording that the System is deployed in that Deployment.</skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">Relation between a Deployment and a deployed System.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/isPropertyOf">
+    <rdfs:comment xml:lang="en">Relation between a Property and the entity it belongs to.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">is property of</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/isPropertyOf"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasProperty">
+        <rdfs:comment xml:lang="en">Relation between an entity and a Property of that entity.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/hasProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/isPropertyOf"/>
+        <skos:definition xml:lang="en">Relation between an entity and a Property of that entity.</skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">Relation between a Property and the entity it belongs to.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasSubSystem">
+    <rdfs:comment xml:lang="en">Relation between a System and its component parts.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">has subsystem</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/hasSubSystem"/>
+    <skos:definition xml:lang="en">Relation between a System and its component parts.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/ssn/Property">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/ssn/Deployment">
+    <rdfs:comment xml:lang="en">Describes the Deployment of one or more assets for a particular purpose. Deployment may be done on a Platform.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">Deployment</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb24ccbbf6de8290dc009ad1e37be78dabac830a2de9b01164368c83f4eb44a3684">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/deployedSystem"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb293e30771a662c1a4ccff99f4cf1efd0a79ae4f59e05193382e48ad97a762f84b">
+        <owl:allValuesFrom>
+          <owl:Class rdf:nodeID="cb68067f2b743e19efb21ee5d853c3161b0666d622a2f0455c63f429b69f182231">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sensor"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/ssn/System"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/deployedAsset"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2a676a7276cebba3c7e85677c9d7c34afa48f53e6cb3257d3b3e03491e767ed52">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Property"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/forProperty"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb37ce097c5e3dd7de42d909e22ebd56cb95633ecd6abcd1050f8e08dda15ade540">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/deployedOnPlatform"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+    <skos:definition xml:lang="en">Describes the Deployment of one or more assets for a particular purpose. Deployment may be done on a Platform.</skos:definition>
+    <skos:example xml:lang="en">For example, a temperature Sensor deployed on a wall, or a whole network of Sensors deployed for an Observation campaign.</skos:example>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/isProxyFor">
+    <rdfs:comment xml:lang="en">A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">is proxy for</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/isProxyFor"/>
+    <skos:definition xml:lang="en">A relation from a Stimulus to the Property that the Stimulus is serving as a proxy for.</skos:definition>
+    <skos:example xml:lang="en">For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.</skos:example>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/detects">
+    <rdfs:comment xml:lang="en">A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some observable Property.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">detects</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/detects"/>
+    <skos:definition xml:lang="en">A relation from a Sensor to the Stimulus that the Sensor detects. The Stimulus itself will be serving as a proxy for some observable Property.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/forProperty">
+    <rdfs:comment xml:lang="en">A relation between some aspect of an entity and a Property.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">for property</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/forProperty"/>
+    <skos:definition xml:lang="en">A relation between some aspect of an entity and a Property.</skos:definition>
+    <skos:example xml:lang="en">For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a Deployment to the properties it was installed to observe or act on; from a SystemCapability to the Property the capability is described for.</skos:example>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/inDeployment">
+    <rdfs:comment xml:lang="en">Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">in deployment</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/inDeployment"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/deployedOnPlatform">
+        <rdfs:comment xml:lang="en">Relation between a Deployment and the Platform on which the Systems are deployed.</rdfs:comment>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+        <rdfs:label xml:lang="en">deployed on platform</rdfs:label>
+        <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+        <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/deployedOnPlatform"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/inDeployment"/>
+        <skos:definition xml:lang="en">Relation between a Deployment and the Platform on which the Systems are deployed.</skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">Relation between a Platform and a Deployment, meaning that the deployedSystems of the Deployment are hosted on the Platform.</skos:definition>
+    <skos:example xml:lang="en">For example, a relation between a buoy and a deployment of several Sensors.</skos:example>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasOutput">
+    <rdfs:comment xml:lang="en">Relation between a Procedure and an Output of it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">has output</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/hasOutput"/>
+    <skos:definition xml:lang="en">Relation between a Procedure and an Output of it.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/ssn/System">
+    <rdfs:comment xml:lang="en">System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">System</rdfs:label>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1aed20b7e4b690c3d99f3184044eeb6b45e9756b2f4bf89675bddd438e3c261fd">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <owl:onProperty>
+          <rdf:Description rdf:nodeID="cb1864bb1a16f2bc05aba9ebebaeda49f857c5acff348b6d3f0cf87855d646701b">
+            <owl:inverseOf rdf:resource="http://www.w3.org/ns/ssn/hasSubSystem"/>
+          </rdf:Description>
+        </owl:onProperty>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb20c3d7cbfed3f4ba2211cc9b408dde5bcb82ef66fd0cc3b7e13031858ed8ea7f4">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/System"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasSubSystem"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb230e486a897162cc5eb7b2db44b3f725957113796a67fdce4e70902d7e057a660">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/ssn/Deployment"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/hasDeployment"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb29eb623d9a4882c5cdeeca077d2665a4d3608a8cb0729e4498e6c73692c31fb39">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isHostedBy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2e03277eab5706dea9ad13e4e3c2057147b114f812c88eb303e8d56d523e21649">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/ssn/implements"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <skos:definition xml:lang="en">System is a unit of abstraction for pieces of infrastructure that implement Procedures. A System may have components, its subsystems, which are other systems.</skos:definition>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/ssn/hasInput">
+    <rdfs:comment xml:lang="en">Relation between a Procedure and an Input to it.</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/ssn/dep/"/>
+    <rdfs:label xml:lang="en">has input</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <owl:equivalentProperty rdf:resource="http://www.w3.org/ns/sosa/hasInput"/>
+    <skos:definition xml:lang="en">Relation between a Procedure and an Input to it.</skos:definition>
+  </owl:ObjectProperty>
+</rdf:RDF>

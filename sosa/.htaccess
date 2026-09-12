@@ -1,117 +1,118 @@
 ######################################################################
-# Rewrite rules for the SOSA ontology, the SOSA to OBOE and the SOSA
-# to O&M alignments.
+# Rewrite rules for the SOSA namespace, https://www.w3.org/ns/sosa/
 #
 # Ontologies and rules developed by the Spatial Data on the Web WG.
+#
+# Two editions are served, 2017 and 2023.
+#
+# An ontology IRI — this namespace, one of its modules, one of its
+# terms — serves the most recent edition that has it.  A version IRI,
+# .../sosa/2017/... or .../sosa/2023/..., serves that edition and
+# keeps serving it.  Every redirect here is temporary: a later edition
+# may well revive a module or a term that 2023 dropped, and a 301 kept
+# in a client's cache would hide that.
+#
+# Anything under this namespace that is neither a file, a directory,
+# nor one of the names below is not part of it, and gets the 404 that
+# Apache returns when no rule and no file matches.
+#
+# The block between the two markers is generated from the ontologies
+# themselves by ssn/scripts/publish_namespace.py, in w3c/sdw-sosa-ssn.
+# Everything outside the markers is written by hand.
 ######################################################################
 
 RewriteEngine On
 
-
 ######################################################################
-# File-specific headers
-#
-# Set the Content-Disposition HTTP header to improve "save as" dialogs
-######################################################################
-<Files ~ "sosa\.rdf$">
-    Header set Content-Disposition "inline; filename=sosa.rdf"
-</Files>
-
-<Files ~ "sosa\.ttl$">
-    Header set Content-Disposition "inline; filename=sosa.ttl"
-</Files>
-
-<Files ~ "om\.rdf$">
-    Header set Content-Disposition "inline; filename=sosa-om.rdf"
-</Files>
-
-<Files ~ "om\.ttl$">
-    Header set Content-Disposition "inline; filename=sosa-om.ttl"
-</Files>
-
-<Files ~ "oboe\.rdf$">
-    Header set Content-Disposition "inline; filename=sosa-oboe.rdf"
-</Files>
-
-<Files ~ "oboe\.ttl$">
-    Header set Content-Disposition "inline; filename=sosa-oboe.ttl"
-</Files>
-
-
-######################################################################
-# Distinguish browsers (HTML clients) from other clients
-#
-# If the client wants HTML, then a request for the namespace
-# (https://www.w3.org/ns/sosa/) should result in a redirect to the
-# specification; and a request for a term
-# (https://www.w3.org/ns/sosa/term) should result in a redirect to the
-# specifiation with a fragment ID targeting that term. The exception
-# is when "term" is the name of an existing file, in which case that
-# file is returned.
-#
-# If the client doesn't want HTML, then both a request for the
-# namespace and a request for a term result in either the sosa.ttl or
-# sosa.rdf file to be returned. (Content negociation determines which
-# one is returned. If the client has no preference, then Apache
-# returns the smallest file.) The exception again is if the term is
-# the name of a file in this directory, in which case that file is
-# returned.
-######################################################################
-
-######################################################################
-# There should exist a sosa.html file. Its content doesn't matter,
-# because it will never be returned. It serves to allow content
-# negotiation based on the client's Accept header. We give it a lower
-# qs, so that clients that do not explicitly prefer HTML will get
-# sosa.ttl or sosa.rdf instead.
-######################################################################
-<Files sosa.html>
-    ForceType text/html;qs=0.998
-</Files>
-
-######################################################################
-# Get rid of any non-empty query string that is not of the form ?term=...
+# Get rid of any query string: none of the IRIs served here has one.
+# The rewrite is internal, so the rules below see a clean path.
 ######################################################################
 RewriteCond  %{QUERY_STRING}  !=""
-RewriteCond  %{QUERY_STRING}  !^term=
 RewriteRule  ^(.*)$  $1?
 
 ######################################################################
-# A request for the namespace URL /ns/sosa/, i.e., for the
-# directory, is a request for one of the sosa.* files without a
-# specific term.
+# The graphs this namespace served from here until now are the graphs
+# of the 2017 edition.  Their URLs keep working: the request goes to
+# the same file under that edition, where the rules of the edition
+# answer it.  A file no edition has still ends in a 404.
 ######################################################################
-RewriteRule  ^$  sosa?term= [N]
+RewriteRule  ^(.+)\.(ttl|rdf|jsonld|nt|html)$  /ns/sosa/2017/$1.$2  [R=303,L]
 
-######################################################################
-# Request for /ns/sosa/foo where foo does not match a file: Put foo in
-# the query and let the content negotiation work out which version of
-# sosa to return: sosa.html, sosa.ttl or sosa.rdf. The N flag says to
-# restart the rewrite rules from the start with the rewritten URI.
-# Bug: There is no check that foo is an actual term in the namespace
-######################################################################
-RewriteCond  %{REQUEST_FILENAME}  !-f
-RewriteCond  %{QUERY_STRING}  =""
-RewriteRule  ^(.*)$  sosa?term=$1 [N]
+# BEGIN generated term rules — ssn/scripts/publish_namespace.py
+# 19 module(s) and 145 term(s) of /ns/sosa/,
+# written from the ontologies and from the anchors of the
+# specification.  Do not edit by hand.
 
-######################################################################
-# Request for /ns/sosa/sosa.html?term=foo where foo is not empty.
-# Return a redirect to https://www.w3.org/TR/vocab-ssn/#SOSAfoo.
-######################################################################
-RewriteCond  %{QUERY_STRING}  ^term=(.+)$
-RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn/#SOSA%1 [R=303,QSD,NE,L]
+# The IRI of this namespace serves its most recent edition (2023).
 
-######################################################################
-# Request for /ns/sosa/sosa.html or /ns/sosa/sosa.html?term=
-# Return a redirect without a fragment identifier.
-######################################################################
-RewriteCond  %{QUERY_STRING}  ^(term=)?$
-RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn/ [R=303,QSD,NE,L]
+RewriteRule  ^$  /ns/sosa/2023/  [R=303,L]
 
-######################################################################
-# When we are here, the request matched some file other than
-# sosa.html, or it contained a query ?term=... but matched no file.
-# (The latter can only happen if the client requested that explicitly,
-# e.g., it requested /ns/sosa/doesnotexist?term=foo.) Just return the
-# file that was matched, or 404.
-######################################################################
+# Each module of this namespace serves the most recent edition
+# that has it.
+
+RewriteRule  ^act/?$  /ns/sosa/2023/act/  [R=303,L]
+RewriteRule  ^bfo/?$  /ns/sosa/2023/bfo  [R=303,L]
+RewriteRule  ^common/?$  /ns/sosa/2023/common/  [R=303,L]
+RewriteRule  ^dep/?$  /ns/sosa/2023/dep/  [R=303,L]
+RewriteRule  ^dolce/?$  /ns/sosa/2023/dolce  [R=303,L]
+RewriteRule  ^dul/?$  /ns/sosa/2023/dul  [R=303,L]
+RewriteRule  ^ido/?$  /ns/sosa/2023/ido  [R=303,L]
+RewriteRule  ^oboe/?$  /ns/sosa/2023/oboe  [R=303,L]
+RewriteRule  ^obs/?$  /ns/sosa/2023/obs/  [R=303,L]
+RewriteRule  ^om/?$  /ns/sosa/2017/om  [R=303,L]
+RewriteRule  ^oms/?$  /ns/sosa/2023/oms/  [R=303,L]
+RewriteRule  ^prov/?$  /ns/sosa/2023/prov  [R=303,L]
+RewriteRule  ^sam/?$  /ns/sosa/2023/sam/  [R=303,L]
+RewriteRule  ^sampling/?$  /ns/sosa/2023/sampling/  [R=303,L]
+RewriteRule  ^saref/?$  /ns/sosa/2023/saref  [R=303,L]
+RewriteRule  ^system-capability-properties/?$  /ns/sosa/2023/system-capability-properties  [R=303,L]
+RewriteRule  ^system-environment-properties/?$  /ns/sosa/2023/system-environment-properties  [R=303,L]
+RewriteRule  ^systems/?$  /ns/sosa/2023/systems/  [R=303,L]
+
+# A client that wants HTML goes to the anchor where the edition
+# that defines the term defines it.
+
+RewriteCond  %{HTTP_ACCEPT}  text/html [NC]
+RewriteRule  ^(ActuatableProperty|ObservableProperty|Result|hasSampledFeature)$  https://www.w3.org/TR/vocab-ssn/#SOSA$1  [R=303,NE,L]
+
+RewriteCond  %{HTTP_ACCEPT}  text/html [NC]
+RewriteRule  ^(ActuatingProcedure|Actuation|ActuationCollection|Actuator|Asset|Battery|Deployment|Execution|ExecutionCollection|FeatureOfInterest|MaterialSample|NormalOperatingConditions|Observation|ObservationCollection|ObservingProcedure|OperatingConditions|Platform|Procedure|Property|Sample|SampleCollection|Sampler|Sampling|SamplingCollection|SamplingProcedure|Sensor|SpatialSample|StatisticalSample|Stimulus|SuboptimalOperatingConditions|SurvivableConditions|System|actsOn|actsOnProperty|deployedAsset|deployedOnPlatform|deployedSystem|detects|endTime|featureHasUltimateSample|forProperty|hasDeployment|hasFeatureOfInterest|hasInput|hasInputValue|hasMember|hasOperatingConditions|hasOriginalSample|hasOutput|hasProcedure|hasProperty|hasProxy|hasResult|hasSample|hasSimpleResult|hasSubSystem|hasSystemCapability|hasUltimateFeatureOfInterest|hasValidityContext|hosts|implementedBy|implements|inDeployment|inputFor|inputValueForExecution|isActedOnBy|isDetectedBy|isFeatureOfInterestOf|isHostedBy|isMemberOf|isObservedBy|isOriginalSampleOf|isProcedureFor|isPropertyOf|isProxyFor|isResultOf|isResultOfMadeBySampler|isResultOfUsedProcedure|isSampleOf|isSampleOfUltimateFOI|isSubSystemOf|isUltimateFeatureOfInterestOf|madeActuation|madeByActuator|madeBySampler|madeBySensor|madeBySystem|madeExecution|madeObservation|madeSampling|madeSamplingHasResult|observationRelatedTo|observedProperty|observes|originated|outputFor|phenomenonOccurred|phenomenonTime|propertyFor|qualityOf|relatedObservation|resultQuality|resultTime|startTime|systemDeployment|usedForExecution|usedForExecutionHasResult|usedProcedure|wasActedOnBy|wasObservedBy|wasOriginatedBy)$  https://www.w3.org/TR/vocab-ssn-2023/#SOSA$1  [R=303,NE,L]
+
+RewriteCond  %{HTTP_ACCEPT}  text/html [NC]
+RewriteRule  ^oms/(PreparationProcedure|PreparationStep|classification|hasPreparationStep|horizontalPositionalAccuracy|madeOnPlatform|makesObservationCollection|metadata|observationType|parameter|preparedSample|processingDetails|relatedSampling|samplePreparationStep|samplingLocation|shape|size|sourceLocation|storageLocation|time|validTime|verticalPositionalAccuracy)$  https://www.w3.org/TR/vocab-ssn-2023/#OMS$1  [R=303,NE,L]
+
+RewriteCond  %{HTTP_ACCEPT}  text/html [NC]
+RewriteRule  ^prov/(eventAssociation|hadProcedure)$  https://www.w3.org/TR/vocab-ssn/#PROV$1  [R=303,NE,L]
+
+RewriteCond  %{HTTP_ACCEPT}  text/html [NC]
+RewriteRule  ^sampling/(RelationshipNature|SampleRelationship|hasSampleRelationship|natureOfRelationship|relatedSample)$  https://www.w3.org/TR/vocab-ssn-2023/#SAMR$1  [R=303,NE,L]
+
+# Deprecated terms have no anchor of their own.
+RewriteCond  %{HTTP_ACCEPT}  text/html [NC]
+RewriteRule  ^prov/(executionAssociation)$  https://www.w3.org/TR/vocab-ssn-2023/  [R=303,L]
+
+# Every other client goes to the module that defines the term.
+
+RewriteRule  ^(ActuatingProcedure|Actuation|ActuationCollection|Actuator|actsOn|actsOnProperty|isActedOnBy|madeActuation|madeByActuator|wasActedOnBy)$  /ns/sosa/2023/act/  [R=303,L]
+
+RewriteRule  ^(Asset|Deployment|Execution|ExecutionCollection|FeatureOfInterest|Platform|Procedure|Property|System|deployedAsset|deployedOnPlatform|deployedSystem|endTime|forProperty|hasDeployment|hasFeatureOfInterest|hasInput|hasInputValue|hasMember|hasOutput|hasProcedure|hasProperty|hasResult|hasSimpleResult|hasSubSystem|hasUltimateFeatureOfInterest|hosts|implementedBy|implements|inDeployment|inputFor|inputValueForExecution|isFeatureOfInterestOf|isHostedBy|isMemberOf|isProcedureFor|isPropertyOf|isResultOf|isSubSystemOf|isUltimateFeatureOfInterestOf|madeBySystem|madeExecution|outputFor|phenomenonOccurred|phenomenonTime|propertyFor|resultTime|startTime|systemDeployment|usedForExecution|usedProcedure)$  /ns/sosa/2023/common/  [R=303,L]
+
+RewriteRule  ^(ActuatableProperty|ObservableProperty|Result)$  /ns/sosa/2023/dep/  [R=303,L]
+
+RewriteRule  ^(Observation|ObservationCollection|ObservingProcedure|Sensor|Stimulus|detects|hasProxy|isDetectedBy|isObservedBy|isProxyFor|madeBySensor|madeObservation|observationRelatedTo|observedProperty|observes|originated|qualityOf|relatedObservation|resultQuality|wasObservedBy|wasOriginatedBy)$  /ns/sosa/2023/obs/  [R=303,L]
+
+RewriteRule  ^(MaterialSample|Sample|SampleCollection|Sampler|Sampling|SamplingCollection|SamplingProcedure|SpatialSample|StatisticalSample|featureHasUltimateSample|hasOriginalSample|hasSample|isOriginalSampleOf|isResultOfMadeBySampler|isResultOfUsedProcedure|isSampleOf|isSampleOfUltimateFOI|madeBySampler|madeSampling|madeSamplingHasResult|usedForExecutionHasResult)$  /ns/sosa/2023/sam/  [R=303,L]
+
+RewriteRule  ^(Battery|NormalOperatingConditions|OperatingConditions|SuboptimalOperatingConditions|SurvivableConditions|hasOperatingConditions|hasSystemCapability|hasValidityContext)$  /ns/sosa/2023/systems/  [R=303,L]
+
+RewriteRule  ^(hasSampledFeature)$  /ns/ssn/2017/ext  [R=303,L]
+
+RewriteRule  ^oms/(PreparationProcedure|PreparationStep|classification|hasPreparationStep|horizontalPositionalAccuracy|madeOnPlatform|makesObservationCollection|metadata|observationType|parameter|preparedSample|processingDetails|relatedSampling|samplePreparationStep|samplingLocation|shape|size|sourceLocation|storageLocation|time|validTime|verticalPositionalAccuracy)$  /ns/sosa/2023/oms/  [R=303,L]
+
+RewriteRule  ^prov/(eventAssociation)$  /ns/sosa/2017/prov  [R=303,L]
+
+RewriteRule  ^prov/(executionAssociation|hadProcedure)$  /ns/sosa/2023/prov  [R=303,L]
+
+RewriteRule  ^sampling/(RelationshipNature|SampleRelationship|hasSampleRelationship|natureOfRelationship|relatedSample)$  /ns/sosa/2023/sampling/  [R=303,L]
+
+# END generated term rules

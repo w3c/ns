@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/sam/">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-02</dcterms:created>
+    <dcterms:creator>
+      <foaf:Agent rdf:nodeID="cb10f80ad42238b9eca1b0aa96346ed6b45de6f34a6db3dd8a088e250d4b2a92e2b">
+        <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+      </foaf:Agent>
+    </dcterms:creator>
+    <dcterms:description xml:lang="en">Sampling classes and properties for the SSN Ontology.</dcterms:description>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+    <dcterms:title xml:lang="en">Sensor, Observation, Sample, and Actuator (SOSA) Ontology - actuation module</dcterms:title>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/common/"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2023/sam/"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/ssn/2023/sam/"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/ssn/2023/sam/"/>
+    <dcat:version>2023</dcat:version>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeSamplingHasResult">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeSampling"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasResult"/>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedForExecutionHasResult">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedForExecution"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasResult"/>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb26783da5c41a39eeee8db2e834719c6587be16bccdbfe23aa27c0aeb7140fc478">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasSample"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SamplingCollection">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1b59dd33d676f75c26a0e4a9d5690d8f727da9cd44b10c16772f9bbda2bbe5498">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/SamplingProcedure"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1fd2625b2d506989fc9b4eb207b4277f7c5f6ea3a8903c64f63dc43d262f04536">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2396135dc5981b92be6cfbd85e206d5773d1c3b9d72b2d041dffe49994274ea8f">
+        <owl:allValuesFrom>
+          <rdf:Description rdf:nodeID="cb1f36d45d75c3f72bca075e523629928750e2df5a8ebe2f74309adc32bd0cb6619">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SamplingCollection"/>
+            </owl:unionOf>
+          </rdf:Description>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb259482f1f0cfd425b96524c3da49dda878b46efd2340be0b0b1f7bafd8ece3c4a">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb31bbbe024309e5aa9a6fbda4571f8f0df32ac8bbf08258baca8330338447b2e1b">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySampler"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb31ec3f5a82a1a70640589965a6e8a85b56c8b600384e80ac2ba07a19fb422d3e2">
+        <owl:allValuesFrom>
+          <rdf:Description rdf:nodeID="cb1b36b3f48e4cb5688e136b3d6ef8db16f5a92f4780da5c92057602d83d7e89026">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SamplingCollection"/>
+            </owl:unionOf>
+          </rdf:Description>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1ebf23644168f7ba43fa6e1f652db1aa7fe98aafbdeedb254a85acadbc62ae6e6">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/SamplingProcedure"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOfUsedProcedure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1ec9690e1f244bbd2b38681471848dcd6fcaea172c4fdeab7aac9b75b9bc460c3">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasOriginalSample"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb259ee6ce3f3f600df8fd6449198f0c39886093f9163f3f3ebcfe39396efbb968f">
+        <owl:minCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minCardinality>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isSampleOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2e0cd503fab6c23fe3f2ff427f4523c21fd72f79bc54b74512d44eaf7f506c808">
+        <owl:allValuesFrom>
+          <owl:Class rdf:nodeID="cb287cc4dc0d7f3f4997e36ddf23bd2258907174f39a590d1f1a54f603c3ab35fa8">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SamplingCollection"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb3071747900cc853e582c696d78fcf733b4ca69c444edb13eea9a23606acfe74fc">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOfMadeBySampler"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb3135fb41b2ca643c9de21aadbd23bfc3550a0084035bc04a6f5f8797096311011">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isSampleOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb321f019ded06d036c52ae601ce5fb970c7df5e89a554a83257b176e30cebd0b90">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isSampleOfUltimateFOI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SamplingProcedure">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb25baf67c930dd8a50adf0bf0ea9036474c7ffd64b9780efac403ce36523e75a24">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/implementedBy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampler">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1850e9dc6d29e89fc566b5e8fd72ec30fa4807f2a6728806f429e1b83502ca40c">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/SamplingProcedure"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/implements"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb24c9b25c82fc1847d2074a703c2429f261a81042739a22aa4e3a1a4d588ab7e4f">
+        <owl:allValuesFrom>
+          <owl:Class rdf:nodeID="cb174ca677ab4f6583d0cac3bad63c0127e259290dd119c03849ff4a26584ee6846">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SamplingCollection"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeSampling"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SampleCollection">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb188eb998ba00ec304cb946bafe55f534b68afe1179e06f24f96d9b01dc9bc4876">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/SamplingProcedure"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOfUsedProcedure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1898ff4297bc403333f740b00aacd157a66c5d78e84172ab299489c9d9f55c253">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasOriginalSample"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2467913872f2834a312d5b7ae85c087acf7e562dd0273fd7c2bef4b94815d3c1b">
+        <owl:allValuesFrom>
+          <rdf:Description rdf:nodeID="cb2343c7f6bca5ee3b13417f251338c6cd59bc59a55713ff8656e14cb4920c216f3">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SampleCollection"/>
+            </owl:unionOf>
+          </rdf:Description>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb267e943fbba27e70ec0a8d983a7889892573057117d91930d9d825dbda885b42e">
+        <owl:allValuesFrom>
+          <owl:Class rdf:nodeID="cb22bcb41a5aec038f61d9c3264be06824519d5ecd6b7c2c8b723c0dad10c67fa5b">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SamplingCollection"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2a410aad796479b460eb420912253abdeb6bdd2600df453e998211b48b08fd68c">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isResultOfMadeBySampler"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2b0591762b6258b2a6a0f349564c034d8bab73e5bf4d544a1e4775eb299c271a1">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isSampleOf"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2bee97d2659ec4accde9be9d6787fcfafe80d1eb61463c32069965372d24e6d20">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isSampleOfUltimateFOI"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb30c11203eb8321ad84f03284af0255e4b98d3348f7c4f3967fd8237f0278568ae">
+        <owl:allValuesFrom>
+          <rdf:Description rdf:nodeID="cb2355aae2603cadc5da1cb10bc6599d620930207de05701cda7df90dd4833034d6">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SampleCollection"/>
+            </owl:unionOf>
+          </rdf:Description>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2257693555efd6f002676803f80fcff8ab40ee55055458e93b72480c2243d7bd3">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/SamplingProcedure"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb26cfee5cacc9491dd861d20c2a5ae9e8b522b32b69338937ba80708ba5b6f6c71">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2c920ef37048b3b9952ba81dfcf0a011b177b384e3e40addcf6227fe5874d6385">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb38b94a03c282c53e763640fe79c651772bee0d43b125a58d8ec5dc8203cfa5556">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeBySampler"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOfMadeBySampler">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOf"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySampler"/>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOfUsedProcedure">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOf"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedProcedure"/>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
+</rdf:RDF>

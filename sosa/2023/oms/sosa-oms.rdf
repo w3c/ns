@@ -1,0 +1,474 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:schema1="http://schema.org/"
+  xmlns:ogc-ms="http://www.opengis.net/def/ont/modspec/"
+>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/validTime">
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservationCollection">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-basic/ObservationCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://purl.org/dc/terms/PeriodOfTime"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/2006/time#Interval"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/validTime-sem"/>
+    <rdfs:isDefinedBy>
+      <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/oms/">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-10-07</dcterms:created>
+        <dcterms:creator>
+          <foaf:Agent rdf:nodeID="cb0">
+            <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+          </foaf:Agent>
+        </dcterms:creator>
+        <dcterms:description xml:lang="en">This ontology is based on the SOSA Ontology by the W3C/OGC Spatial Data on the Web Working Group, supplemented by some classes and properties required to implement ISO 19156:2023 .</dcterms:description>
+        <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+        <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+        <dcterms:replaces rdf:resource="http://www.w3.org/ns/sosa/om"/>
+        <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+        <dcterms:source rdf:resource="https://docs.ogc.org/as/20-082r4/20-082r4.html"/>
+        <dcterms:title xml:lang="en">OMS Ontology - based on (SOSA) Ontology</dcterms:title>
+        <rdfs:comment>The original source of each resource is indicated by the rdfs:isDefinedBy property</rdfs:comment>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/oms/"/>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/oms/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/oms/"/>
+        <dcat:version>2023</dcat:version>
+      </owl:Ontology>
+    </rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">valid time</rdfs:label>
+    <skos:definition xml:lang="en">The time interval during which the result is assumed to be applicable for use.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/horizontalPositionalAccuracy">
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SpatialSample">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/SpatialSample"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/SpatialSample/horizontalPositionalAccuracy-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">horizontal positional accuracy</rdfs:label>
+    <skos:definition xml:lang="en">positional accuracy of the horizontal component of the Geometry of the SpatialSample.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/samplingLocation">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-core/AbstractSampling/samplingLocation-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">sampling location</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+    <skos:definition xml:lang="en">If location information pertaining to the Sampling is provided, the attribute samplingLocation:Geometry shall be used.</skos:definition>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/result-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/metadata">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuatingProcedure"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Deployment">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Deployment"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ObservingProcedure">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/ObservingProcedure"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <skos:definition>[ISO 19156:2023] An ObservingProcedure shall be defined as the description of steps performed in order to determine the value of an observableProperty by an Observer.</skos:definition>
+        <skos:example xml:lang="en">[ISO 19156:2023] An instance of Procedure is a description of the process used by an observer. This could be a chemical analysis method, a protocol for measuring an object, or even a checklist used by a human observer during a biodiversity campaign. Procedure could further describe the algorithms behind simulators or models used to generate a result from other inputs.</skos:example>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Host"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Procedure"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Property">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/ObservableProperty"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sample"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SampleCollection">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/SampleCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampler">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampler"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SamplingProcedure">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/SamplingProcedure"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+        <skos:definition>[ISO 19156:2023] A SamplingProcedure shall be defined as the description of steps performed by a Sampler in order to extract a Sample from its sampledFeature in the frame of a Sampling.</skos:definition>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sensor">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observer"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationProcedure"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationStep"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-core/gen/metadata-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/size">
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/MaterialSample">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/MaterialSample"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/MaterialSample/size-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">size</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://qudt.org/schema/qudt/quantity"/>
+    <skos:definition xml:lang="en">a physical extent of the MaterialSample.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/observationType">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-core/AbstractObservationCharacteristics/type-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">observation type</rdfs:label>
+    <skos:definition xml:lang="en">Information providing further detail on the type of Observations.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/classification">
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/StatisticalSample">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/StatisticalSample"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/StatisticalSample/classification-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">classification</rdfs:label>
+    <skos:definition xml:lang="en">a criterion by which the subset was defined.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/time">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-core/AbstractSampling/time-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">sampling time</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2006/time#hasTime"/>
+    <skos:definition xml:lang="en">If information on the time of the Sampling is provided, the attribute time:TM_Object shall be used.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/verticalPositionalAccuracy">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SpatialSample"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/SpatialSample/verticalPositionalAccuracy-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">vertical positional accuracy</rdfs:label>
+    <skos:definition xml:lang="en">positional accuracy of the vertical component of the Geometry of the SpatialSample.</skos:definition>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasResult">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/result-sem"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/sample-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/relatedObservation">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/shape">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SpatialSample"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/SpatialSample/shape-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">shape</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+    <skos:definition xml:lang="en">the Geometry of the SpatialSample.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/storageLocation">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/MaterialSample"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/MaterialSample/storageLocation-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">storage location</rdfs:label>
+    <skos:definition xml:lang="en">the location of a MaterialSample.</skos:definition>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasMember">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-basic/ObservationCollection/member-sem"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/SampleCollection/member-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/wasObservedBy">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-core/AbstractObservationCharacteristics/uFoI-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isSampleOfUltimateFOI">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sample/sampledFeature-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSample">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inDeployment">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Host/deployment-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedSystem">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Deployment/observer-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isSampleOf">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sample/sampledFeature-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.opengis.net/def/ont/modspec/implementedBy">
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.opengis.net/def/ont/modspec/implements">
+        <rdfs:subPropertyOf rdf:resource="http://purl.org/dc/terms/source"/>
+        <rdfs:subPropertyOf rdf:resource="https://www.w3.org/TR/prov-o/#wasDerivedFrom"/>
+        <skos:definition>link from an RDFS/OWL class or property to a requirement linked to an element in a UML model which it implements</skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition>link from a requirement linked to an element in a UML model to an RDFS/OWL class or property which implements it</skos:definition>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeSampling">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampler/sampling-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/observingProcedure-sem"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/samplingProcedure-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/parameter">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-core/AbstractSampling/parameter-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">parameter</rdfs:label>
+    <skos:definition xml:lang="en">Arbitrary event-specific parameter relevant to the Sampling.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/sourceLocation">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/MaterialSample"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-basic/MaterialSample/sourceLocation-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">source location</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.opengis.net/ont/geosparql#hasGeometry"/>
+    <skos:definition xml:lang="en">the location from where the MaterialSample was obtained.</skos:definition>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isPropertyOf">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observedProperty">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/observedProperty-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observes">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observer/observableProperty-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedOnPlatform">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Deployment/host-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/implementedBy">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/ObservingProcedure/observer-sem"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationStep/processingDetails-sem"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/SamplingProcedure/sampler-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <owl:inverseOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/implements">
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observer/observingProcedure-sem"/>
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/samplingProcedure-sem"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </owl:inverseOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySampler">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/sampler-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/relatedSampling">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/relatedSampling-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">related sampling</rdfs:label>
+    <skos:definition xml:lang="en">Relation to an act of Sampling.</skos:definition>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-core/AbstractObservationCharacteristics/pFoI-sem"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/featureOfInterest-sem"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sampling/featureOfInterest-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOf">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeObservation">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedForExecution">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/gen/relatedObservation-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/phenomenonTime-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasOriginalSample">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/resultQuality">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-core/AbstractObservationCharacteristics/resultQuality-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/resultTime">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/resultTime-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySensor">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/observer-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isObservedBy">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/ObservableProperty/observer-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasDeployment">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observer/deployment-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasProperty">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/oms/PreparationProcedure">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationProcedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">Preparation Procedure</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <skos:definition xml:lang="en">
+  A workflow, protocol, plan, algorithm, program, or computational method specifying a step in preparing a Sample. 
+  A Preparation Procedure is re-usable, and might be involved in many preparations. 
+  It explains the steps to be carried out to arrive at reproducible results.
+  </skos:definition>
+    <skos:definition>[ISO 19156:2023] A PreparationProcedure shall be defined as the description of preparation steps performed on a Sample</skos:definition>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/samplePreparationStep">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationProcedure"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationStep"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationProcedure/samplePreparationStep-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">sample preparation step</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/processingDetails">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationStep"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationProcedure"/>
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationStep/processingDetails-sem"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+        <rdfs:label xml:lang="en">processing details</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/oms/samplePreparationStep"/>
+        <skos:definition xml:lang="en">The PreparationProcedure used by the PreparationStep.</skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">link from a PreparationProcedure to a PreparationStep used in the PreparationProcedure</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/madeOnPlatform">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/obs-cpt/Observation/host-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">made on platform</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/makesObservationCollection">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+        <rdfs:label xml:lang="en">makes observation collection</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/oms/madeOnPlatform"/>
+        <skos:definition xml:lang="en">relation from a Platform to an ObservationCollection arising from a Deployment on the Platform</skos:definition>
+        <skos:note xml:lang="en">
+  In order to indicate potential Observations at a Platform, an empty ObservationCollection can be provided. This mimics the semantics of the OMS ObservingCapability class.
+  </skos:note>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">relation from an ObservationCollection to the associated Platform.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/preparedSample">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationStep"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationStep/preparedSample-sem"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">prepared sample</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/oms/hasPreparationStep">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationStep"/>
+        <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/Sample/preparationStep-sem"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+        <rdfs:label xml:lang="en">has preparation step</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/oms/preparedSample"/>
+        <skos:definition xml:lang="en">Link to a preparation step used to prepare the sample</skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">The Sample on which the PreparationProcedure is performed.</skos:definition>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/oms/PreparationStep">
+    <ogc-ms:implements rdf:resource="http://www.opengis.net/spec/om/3.0/req/sam-cpt/PreparationStep"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:label xml:lang="en">Preparation Step</rdfs:label>
+    <skos:definition xml:lang="en">A PreparationStep is an individual step pertaining to a Sample PreparationProcedure.</skos:definition>
+    <skos:example xml:lang="en">???</skos:example>
+  </owl:Class>
+</rdf:RDF>

@@ -1,0 +1,737 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:schema1="http://schema.org/"
+>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+    <rdfs:isDefinedBy>
+      <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/common/">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-02</dcterms:created>
+        <dcterms:creator>
+          <foaf:Agent rdf:nodeID="cb0">
+            <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+          </foaf:Agent>
+        </dcterms:creator>
+        <dcterms:description xml:lang="en">Core classes and properties for the SSN Ontology.</dcterms:description>
+        <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+        <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+        <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+        <dcterms:title xml:lang="en">Sensor, Observation, Sample, and Actuator (SOSA) Ontology - core module</dcterms:title>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/common/"/>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/common/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/common/"/>
+        <dcat:version>2023</dcat:version>
+      </owl:Ontology>
+    </rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">has simple result</rdfs:label>
+    <skos:definition xml:lang="en">
+  relation from an Execution to its value expressed as a literal
+
+  In the case of an Actuation, the result may be the value of the Property following the execution of the Procedure by the Actuator. 
+
+  In the case of an Observation, the result is the value of the Property produced by the execution of the Procedure by the Sensor. 
+  </skos:definition>
+    <skos:example xml:lang="en">For instance, the values 23 or true.</skos:example>
+    <skos:note xml:lang="en">This DatatypeProperty provides an alternative to hasResult, to be used only if the execution result can be expressed as a Literal</skos:note>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isUltimateFeatureOfInterestOf">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">is ultimate feature of interest of</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">has ultimate feature of interest</rdfs:label>
+        <skos:definition xml:lang="en">
+  relation from a Deployment or Execution to its ultimate target entity
+
+  i.e., from an Actuation or ActuationCollection to the ultimate entity whose property was modified;
+  from an Observation or ObservationCollection to the ultimate entity whose property was observed;
+  from an act of Sampling or SamplingCollection to the ultimate entity that was sampled;
+  or from a Deployment to its ultimate target
+  </skos:definition>
+        <skos:note>should match a property chain something like this but with sosa:isSampleOf*
+      owl:propertyChainAxiom ( sosa:hasFeatureOfInterest sosa:isSampleOf )</skos:note>
+        <skos:scopeNote>This is useful when the proximate feature of interest is a sample of the ultimate feature of interest, directly or transitively.</skos:scopeNote>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from an ultimate FeatureOfInterest to an Execution, Execution Collection, or Deployment, for which that FeatureOfInterest is the ultimate target
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/resultTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <rdfs:comment xml:lang="en">The value would usually be encoded using xsd:dateTime xsd:date xsd:gYearMonth xsd:gYear</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">result time</rdfs:label>
+    <skos:definition xml:lang="en">
+  instant of time when the result of the Execution became available
+  </skos:definition>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/inputValueForExecution">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">input value for execution</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasInputValue">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">has input value</rdfs:label>
+        <skos:definition xml:lang="en">
+  assigns a value to an input defined by the Procedure that is used in an Execution
+  </skos:definition>
+        <skos:note xml:lang="en">The input value MUST be consistent with a hasInput definition from the corresponding Procedure</skos:note>
+        <skos:scopeNote xml:lang="en">The input might be a calibration or conditioning parameter, or the output of a previous procedure within an extended processing chain.</skos:scopeNote>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from an input value to an Execution that used the value
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/endTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <rdfs:comment xml:lang="en">The value would usually be encoded using xsd:dateTime xsd:date xsd:gYearMonth xsd:gYear</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">end time</rdfs:label>
+    <skos:definition xml:lang="en">
+  instant of time when the Execution or Deployment was ended or completed
+  </skos:definition>
+  </owl:DatatypeProperty>
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/ns/sosa/startTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <rdfs:comment xml:lang="en">The value would usually be encoded using xsd:dateTime xsd:date xsd:gYearMonth xsd:gYear</rdfs:comment>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">start time</rdfs:label>
+    <skos:definition xml:lang="en">
+  instant of time when the Execution or Deployment was initiated or tasked
+  </skos:definition>
+  </owl:DatatypeProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasSubSystem">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">has subsystem</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isSubSystemOf">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">is subsystem of</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/hasSubSystem"/>
+        <skos:definition xml:lang="en">
+  relation from a component System to a System that it belongs to
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a System to its component parts
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/implements">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">implements</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/implementedBy">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">implemented by</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/implements"/>
+        <skos:definition xml:lang="en">
+  relation from a Procedure to a System that is capable of executing the Procedure
+  </skos:definition>
+        <skos:example xml:lang="en">For example, the relationship between a scientific measuring Procedure and a sensor that senses via that Procedure.</skos:example>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a System to the Procedure that it is capable of executing
+  </skos:definition>
+    <skos:example xml:lang="en">For example, the relationship between a sensor and the scientific measuring Procedure via which it senses.</skos:example>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasMember">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label>has member of collection</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isMemberOf">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label>is member of collection</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+        <skos:definition>
+  link from an Execution or Sample or Collection of these, to a Collection which that Execution or Sample or Collection is part of
+  </skos:definition>
+        <skos:editorialNote>Note that there is a single `isMemberOf` property. OWL or SHACL constraints may limit the range depending on the context of different collection types</skos:editorialNote>
+        <skos:scopeNote>Rules for the consistency of values of properties of collections and properties of their members are given for each collection type</skos:scopeNote>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition>
+  link from a Collection to an Execution or Sample or Collection of these that is part of that Collection
+  </skos:definition>
+    <skos:editorialNote>Note that there is a single `hasMember` property. OWL or SHACL constraints may limit the range depending on the context of different collection types</skos:editorialNote>
+    <skos:scopeNote>Rules for the consistency of values of properties of collections and properties of their members are given for each collection type</skos:scopeNote>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Procedure">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">Procedure</rdfs:label>
+    <skos:definition xml:lang="en">
+  workflow, protocol, plan, algorithm, program, or computational method specifying how to make an Execution
+
+  A Procedure is re-usable, and might be applied in many Actuations, Observations, or Samplings.
+  It explains the steps to be carried out to arrive at reproducible results.
+  </skos:definition>
+    <skos:example xml:lang="en">The measured wind speed differs depending on the height of the sensor above the surface, e.g., due to friction. Consequently, procedures for measuring wind speed define a standard height for anemometers above ground, typically 10m for meteorological measures and 2m in Agrometeorology. This definition of height, sensor placement, and so forth are defined by the Procedure.</skos:example>
+    <skos:scopeNote xml:lang="en">
+  Procedure generalizes the ActuationProcedure, ObservationProcedure, and SamplingProcedure classes. 
+  It is included in the ontology to support the definition of a common pattern for executions and their properties. 
+  </skos:scopeNote>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/deployedOnPlatform">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">deployed on platform</rdfs:label>
+    <rdfs:subPropertyOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/deployedAsset">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Asset"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">deployed asset</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/hasDeployment"/>
+        <skos:definition xml:lang="en">
+  relation from a Deployment to an Asset (System or Platform)
+  </skos:definition>
+      </owl:ObjectProperty>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/inDeployment">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">in deployment</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasDeployment"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/deployedOnPlatform"/>
+        <skos:definition xml:lang="en">
+  relation from a Platform to a Deployment using that Platform
+  </skos:definition>
+        <skos:example xml:lang="en">For example, a relation between a buoy and a deployment of several Sensors.</skos:example>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Deployment to a Platform on which Systems are hosted
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">phenomenon time</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/phenomenonOccurred">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/2006/time#TemporalEntity"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">phenomenon occurred</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/phenomenonTime"/>
+        <skos:definition xml:lang="en">
+  result of an Execution that this time applies to
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  time that the result of an Execution applies to the target entity
+
+  This may be an interval or an instant, or some other compound temporal entity [[!owl-time]].
+  </skos:definition>
+    <skos:scopeNote xml:lang="en">
+  The phenomenonTime is not necessarily the same as the endTime or resultTime. 
+  
+  In the case of Actuation, phenomenonTime SHOULD indicate the time during which the actuator was active. 
+
+  In the case of Observation, the phenomenonTime MAY be distant from the resultTime. 
+  For example in the case of forecasts the phenomenonTime is after the resultTime. 
+  In historical, geological and cosmological investigations the phenomenonTime can be far in the past, while the resultTime is contemporary. 
+
+  In the case of Sampling the phenomenonTime SHOULD indicate the time during which the Sampling Procedure was active.
+  The resultTime can indicate when the sample comes into the posession of the operator. 
+  </skos:scopeNote>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/forProperty">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">for property</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/propertyFor">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">property for</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/forProperty"/>
+        <skos:definition xml:lang="en">
+  relation from a Property to some Procedure or System that acts on it or observes that Property
+  </skos:definition>
+        <skos:example xml:lang="en">For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a SystemCapability to the Property the capability is described for.</skos:example>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from some Procedure or System to a Property it acts on or observes
+  </skos:definition>
+    <skos:example xml:lang="en">For example, from a Sensor to the properties it can observe; from an Actuator to the properties it can act on; from a SystemCapability to the Property the capability is described for.</skos:example>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasDeployment">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Asset"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">has deployment</rdfs:label>
+    <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/deployedAsset"/>
+    <skos:definition xml:lang="en">
+  relation from an Asset (System or Platform) to a Deployment
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/usedForExecution">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">used for execution</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">used procedure</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/usedForExecution"/>
+        <skos:definition xml:lang="en">
+  relation from an Execution or ExecutionCollection to the Procedure used
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Procedure to an Execution or ExecutionCollection made using that Procedure
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySystem">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">made by system</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeExecution">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">made execution</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeBySystem"/>
+        <skos:definition xml:lang="en">
+  relation from a System to an Execution or ExecutionCollection that it has made
+  </skos:definition>
+        <skos:scopeNote xml:lang="en">
+  madeExecution generalizes the madeActuation, madeObservation, and madeSampling properties. 
+  It is included in the ontology to support the definition of a common pattern for executions and their properties. 
+
+  madeExecution is considered to be abstract. 
+  Applications SHOULD use concrete subproperties of madeExecution.
+  </skos:scopeNote>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from an Execution to the System that made that Execution
+  </skos:definition>
+    <skos:scopeNote xml:lang="en">
+  madeBySystem generalizes the madeByActuator, madeBySensor, and madeBySampler properties. 
+  It is included in the ontology to support the definition of a common pattern for executions and their properties. 
+
+  madeBySystem is considered to be abstract. 
+  Applications SHOULD use concrete subproperties of madeBySystem.
+  </skos:scopeNote>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/outputFor">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">output for</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasOutput">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">has output</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/outputFor"/>
+        <skos:definition xml:lang="en">
+  relation from a Procedure to an output of its execution
+  </skos:definition>
+        <skos:note xml:lang="en">This property will typically describe the type of the result from executing the Procedure.</skos:note>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from an output to a Procedure that generates that output in an Execution
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">is feature of interest of</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">has feature of interest</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+        <skos:definition xml:lang="en">
+  relation from an Execution or Deployment to its target entity
+
+  i.e., from an Actuation or ActuationCollection to the entity whose property was modified;
+  from an Observation or ObservationCollection to the entity whose quality was observed;
+  from an act of Sampling or SamplingCollection to the entity that was sampled;
+  or from a Deployment to its target
+  </skos:definition>
+        <skos:example xml:lang="en">For example, in an Observation of the weight of a person, the FeatureOfInterest is the person and the property is its weight.</skos:example>
+        <skos:scopeNote>This is the _proximate_ feature of interest, which may be a proxy entity such as a sample of the _ultimate_ feature of interest. Use `hasUltimateFeatureOfInterest` if the intention is to link to the _ultimate_ feature of interest. </skos:scopeNote>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a FeatureOfInterest to an Execution, Execution Collection, or Deployment, operating on that FeatureOfInterest
+
+  i.e., to an Actuation or ActuationCollection acting on it, 
+  to an Observation or ObservationCollection about it, 
+  to an act of Sampling or SamplingCollection that sampled it, 
+  or to a Deployment for which it is the target.
+</skos:definition>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/System">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">System</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Asset"/>
+    <skos:definition xml:lang="en">
+  An Asset that implements a Procedure in the context of an Execution
+  </skos:definition>
+    <skos:note xml:lang="en">
+  This may be a device, a piece of infrastructure, an agent (including humans), or a software-based system, including systems performing simulations.
+
+  Different Systems can implement the same (reusable) Procedure for different Executions.
+
+  A System may have components, its subsystems, which are other systems.
+  </skos:note>
+    <skos:scopeNote xml:lang="en">
+  Specific system types may be implemented as subclasses of this class or its subclasses.
+  Their descriptions may capture the properties and characteristics of a whole class of systems, corresponding with the information typically found in a datasheet.
+
+  Individual system instances are members of this class or its subclasses. 
+  </skos:scopeNote>
+    <skos:scopeNote xml:lang="en">
+  System generalizes the Actuator, Sensor, and Sampler classes. 
+  It is included in the ontology to support the definition of a common pattern for executions and their properties. 
+
+  System is considered to be abstract. 
+  Individual systems SHOULD be typed with one of the (concrete) subclasses of System.
+  </skos:scopeNote>
+    <skos:scopeNote xml:lang="en">
+  The association of a System (Actuator, Sensor, and Sampler) with a FeatureOfInterest is usually in the context of an Execution or a Deployment. 
+
+  A System can be hosted by a Platform. 
+
+  A System can be deployed for a specified time interval as part of a Deployment.
+  </skos:scopeNote>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasInput">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">has input</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/inputFor">
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">input for</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/hasInput"/>
+        <skos:definition xml:lang="en">
+  relation from an input to a Procedure that uses it in an Execution
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Procedure to an input required for its execution
+  </skos:definition>
+    <skos:note xml:lang="en">This property will typically describe the type of the inputs required to execute the Procedure.</skos:note>
+    <skos:scopeNote xml:lang="en">An input might be a calibration or conditioning parameter, or the output of a previous procedure within an extended processing chain.</skos:scopeNote>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/ExecutionCollection">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">Execution Collection</rdfs:label>
+    <skos:definition xml:lang="en">
+  set of one or more Executions or ExecutionCollections; collections may be nested
+
+  All Execution properties may appear in an Execution Collection, including: 
+  hasFeatureOfInterest , usedProcedure , madeBySystem , endTime, resultTime , startTime . 
+  If they are present, the value of these properties summarize the values of the matching properties of the member Executions, where membership is either direct or transitive through one or more member execution collections.
+
+  The following consistency rules apply with respect to the execution properties listed above: 
+  
+  1. Where an individual Execution Collection omits a property, a member Execution (direct or transitive) MAY have any value for that property.
+
+  2. Where an individual Execution Collection has a single value for a property, each member Execution (direct or transitive) MUST have that same value for the property - i.e., the collection is homogeneous in that property.  That property MAY then be omitted in any member Execution or Execution Collection.
+
+  3. Where an individual Execution Collection has more than one value for a property, each member Execution (direct or transitive) MUST have a value for that property that matches one of the values for the property in the collection. 
+  
+  4. Where an individual Execution Collection has a value for a property that is a range or interval, each member Execution (direct or transitive) MUST have a value for that property that matches or falls within that range or interval.
+
+  5. Where an individual Execution Collection has more than one value for a property that is a range or interval, each member Execution (direct or transitive) MUST have a value for that property that either matches or falls within one of those ranges or intervals.
+  </skos:definition>
+    <skos:note xml:lang="en">The members of a collection do not necessarily share a common value for any property. </skos:note>
+    <skos:scopeNote xml:lang="en">
+  Execution Collection generalizes the Actuation Collection, Observation Collection, and Sampling Collection classes. 
+  It is included in the ontology to support the definition of a common pattern for executions and their properties. 
+
+  ExecutionCollection is considered to be abstract. 
+  Individual execution collections SHOULD be typed with one of the (concrete) subclasses of ExecutionCollection.
+  </skos:scopeNote>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasProcedure">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">has procedure</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/propertyFor"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isProcedureFor">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">is procedure for</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/forProperty"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/hasProcedure"/>
+        <skos:definition xml:lang="en">
+  relation from a Procedure to a Property that it can observe or act on
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Property to a Procedure that can act on or observe that Property
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Platform">
+    <dcterms:source rdf:resource="https://inspire.ec.europa.eu/id/document/tg/ef"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">Platform or Host</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Asset"/>
+    <skos:altLabel>Host</skos:altLabel>
+    <skos:definition xml:lang="en">
+  An Asset that hosts other Assets, particularly Systems (often Sensors), and other Platforms.
+  </skos:definition>
+    <skos:example xml:lang="en">
+  A post, tree, buoy, vehicle, ship, aircraft, satellite, mobile phone, human or animal may act as platforms for (technical or biological) sensors or actuators.
+  An environmental monitoring facility.
+  </skos:example>
+    <skos:prefLabel>Platform</skos:prefLabel>
+    <skos:scopeNote>The INSPIRE 'Environmental Monitoring Facility' may be implemented using SOSA by the OWL/RDFS class 'Platform'</skos:scopeNote>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hosts">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Asset"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">hosts</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Asset"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">is hosted by</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/hosts"/>
+        <skos:definition xml:lang="en">
+  relation from an Asset (System or Platform), to a Platform that it is mounted on or hosted by
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Platform to an Asset (System or Platform) hosted or mounted on that Platform
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/systemDeployment">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">system deployment</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasDeployment"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/deployedSystem">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Deployment"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/System"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">deployed system</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/deployedAsset"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/systemDeployment"/>
+        <skos:definition xml:lang="en">
+  relation from a Deployment to a deployed System
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a System to a Deployment of that System
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isPropertyOf">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">is property of</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasProperty">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">has property</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isPropertyOf"/>
+        <skos:definition xml:lang="en">
+  relation from an entity to a Property of that entity
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Property to a FeatureOfInterest that it is a quality of
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:FunctionalProperty rdf:about="http://www.w3.org/ns/sosa/hasResult">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">has result</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isResultOf">
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <rdfs:label xml:lang="en">is result of</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+        <skos:definition xml:lang="en">
+  relation from a result to the Execution that created or caused that result
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from an Execution to its result
+
+  In the case of an Actuation, the result may be the value of the Property following the execution of the Procedure by the Actuator. 
+
+  In the case of an Observation, the result is the value of the Property produced by the execution of the Procedure by the Sensor. 
+  
+  In the case of a Sampling, the result is the Sample produced by the execution of the Procedure by the Sampler. 
+
+  An Execution has a single result, therefore sosa:hasResult is Functional.
+  </skos:definition>
+    <skos:note xml:lang="en">The result value MUST be consistent with the hasOutput definition from the corresponding Procedure</skos:note>
+  </owl:FunctionalProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Asset">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">Asset</rdfs:label>
+    <skos:definition xml:lang="en">
+  resource involved in a Deployment.
+  </skos:definition>
+    <skos:scopeNote xml:lang="en">
+  Asset generalizes the System and Platform classes, or other resource types that are relevant to deployments. 
+  It is included in the ontology to support the definition of a common pattern for deployments. 
+
+  Asset is considered to be abstract. 
+  Individual assets SHOULD be typed with one of the (concrete) subclasses of Asset.
+  </skos:scopeNote>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Property">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">Property</rdfs:label>
+    <skos:definition xml:lang="en">
+  identifiable quality of features of interest that can be observed or acted upon
+
+  A property can apply to different features of interest.
+
+  </skos:definition>
+    <skos:example xml:lang="en">Cars (a feature type) all have a characteristic colour, where 'colour' is a property.</skos:example>
+    <skos:note xml:lang="en">Concepts from existing code lists, vocabularies, and taxonomies, may be used as instances of Property</skos:note>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">Feature Of Interest</rdfs:label>
+    <skos:definition xml:lang="en">
+  entity that is the target of an Execution or ExecutionCollection or Deployment
+
+i.e., the entity whose property is being manipulated by an Actuation or ActuationCollection,
+or whose property is being estimated by an Observation or ObservationCollection,
+or which is being sampled or transformed by an act of Sampling or SamplingCollection,
+or which is the target of Executions planned as part of a Deployment.
+  </skos:definition>
+    <skos:example xml:lang="en">When measuring the height of a tree, the height is the observed Property, 20m may be the Result of the Observation, and the tree is the FeatureOfInterest. A window is a FeatureOfInterest for an automatic window control Actuation.</skos:example>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Execution">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">Execution of a Procedure</rdfs:label>
+    <skos:definition xml:lang="en">
+  act of carrying out a Procedure using a System
+  </skos:definition>
+    <skos:scopeNote xml:lang="en">
+  Execution generalizes the Actuation, Observation, and Sampling classes. 
+  It is included in the ontology to support the definition of a common pattern for executions and their properties. 
+
+  Execution is considered to be abstract. 
+  Individual executions SHOULD be typed with one of the (concrete) subclasses of Execution.
+  </skos:scopeNote>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Deployment">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">Deployment</rdfs:label>
+    <skos:definition xml:lang="en">
+  arrangement of one or more Assets to execute Procedures with respect to designated features of interest.
+  </skos:definition>
+    <skos:example xml:lang="en">A temperature Sensor deployed on a wall, a network of Sensors deployed for an Observation campaign.</skos:example>
+    <skos:note xml:lang="en">
+  A Deployment will usually be for a specified time interval. 
+  It MAY involve Platforms, or Systems, or both. 
+  A Deployment can be used quite flexibly to describe the use of systems, and platforms that host systems, with respect to a feature of interest. 
+  </skos:note>
+  </owl:Class>
+</rdf:RDF>

@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:schema1="http://schema.org/"
+>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasMember">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isMemberOf">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasProcedure">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inputFor">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inDeployment">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedSystem">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inputValueForExecution">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/startTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonOccurred">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isPropertyOf">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOf">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservingProcedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasResult">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSubSystem">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedAsset">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedForExecution">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedOnPlatform">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/resultTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasDeployment">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/propertyFor">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hosts">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/implements">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservingProcedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasInput">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isSubSystemOf">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasOutput">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Deployment">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasInputValue">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isUltimateFeatureOfInterestOf">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/implementedBy">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasProperty">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/endTime">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/outputFor">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/wasOriginatedBy">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+    <rdfs:isDefinedBy>
+      <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/obs/">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-02</dcterms:created>
+        <dcterms:creator>
+          <foaf:Agent rdf:nodeID="cb0">
+            <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+          </foaf:Agent>
+        </dcterms:creator>
+        <dcterms:description xml:lang="en">Observation classes and properties for the SSN Ontology.</dcterms:description>
+        <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+        <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+        <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+        <dcterms:title xml:lang="en">Sensor, Observation, Sample, and Actuator (SOSA) Ontology - actuation module</dcterms:title>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/obs/"/>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/obs/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/obs/"/>
+        <dcat:version>2023</dcat:version>
+      </owl:Ontology>
+    </rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">was originated by</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/originated">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <rdfs:label xml:lang="en">originated</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/wasOriginatedBy"/>
+        <skos:definition xml:lang="en">
+  relation from a Stimulus to an Observation that was originated by that Stimulus
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from an Observation to the Stimulus that originated that Observation
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Stimulus">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label xml:lang="en">Stimulus</rdfs:label>
+    <skos:definition xml:lang="en">
+  event in the real world that triggers a Sensor
+  </skos:definition>
+    <skos:note xml:lang="en">The Properties associated with a Stimulus may differ from those eventually observed. It is the event, not the object, that triggers the Sensor.</skos:note>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasProxy">
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Property">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label xml:lang="en">has proxy</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isProxyFor">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <rdfs:label xml:lang="en">is proxy for</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/hasProxy"/>
+        <skos:definition xml:lang="en">
+  relation from a Stimulus to the Property for which it is serving as a proxy
+  </skos:definition>
+        <skos:example xml:lang="en">For example, the expansion of quicksilver is a stimulus that serves as a proxy for some temperature property. An increase or decrease in the velocity of spinning cups on a wind sensor is serving as a proxy for the wind speed.</skos:example>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Property to a Stimulus that serves as its proxy
+  </skos:definition>
+    <skos:example xml:lang="en">
+The expansion of mercury is a Stimulus that serves as a proxy for some temperature Property.
+An increase or decrease in the velocity of spinning cups on a wind Sensor is serving as a proxy for the wind speed.
+  </skos:example>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/detects">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label xml:lang="en">detects</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isDetectedBy">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <rdfs:label xml:lang="en">is detected by</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/detects"/>
+        <skos:definition xml:lang="en">
+  relation from a Stimulus to a Sensor that may detect that Stimulus
+
+  The Stimulus itself will be serving as a proxy for some Property.
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Sensor to the Stimulus that it detects
+
+  The Stimulus itself will be serving as a proxy for some Property.
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sensor">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label xml:lang="en">Sensor or Observer</rdfs:label>
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/System">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <skos:altLabel xml:lang="en">Observer</skos:altLabel>
+    <skos:definition xml:lang="en">
+  System that implements an ObservingProcedure to determine the value of an observable Property
+
+  This may be a device, a piece of infrastructure, an agent (including humans), or a software-based system, including systems performing simulations.
+
+  A Sensor responds to a stimulus, e.g., a change in the environment, or input data composed from the results of prior Observations.
+  </skos:definition>
+    <skos:example xml:lang="en">Accelerometers, gyroscopes, barometers, magnetometers, and so forth are Sensors that are typically mounted on a modern smartphone (which acts as Host or Platform). Other examples of Sensors include the human eyes.</skos:example>
+    <skos:note>The UML class 'Observer' from ISO 19156:2023 is implemented in SOSA by the OWL/RDFS class 'Sensor'. The class name 'Sensor' is preferred for backward compatibility with existing SOSA deployments. </skos:note>
+    <skos:prefLabel xml:lang="en">Sensor</skos:prefLabel>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySensor">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label xml:lang="en">made by sensor or observer</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/madeBySystem"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeObservation">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <rdfs:label xml:lang="en">made observation</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/madeExecution"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeBySensor"/>
+        <skos:definition xml:lang="en">
+  relation from a Sensor to an Observation or ObservationCollection it has made
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from an Observation or ObservationCollection to the Sensor which made that Observation or ObservationCollection
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservationCollection">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label xml:lang="en">Observation Collection</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <skos:definition xml:lang="en">
+  set of Observations or ObservationCollections; collections may be nested
+
+  All Observation properties may appear in an Observation Collection, including: 
+  hasFeatureOfInterest , hasUltimateFeatureOfInterest , usedProcedure , madeBySensor , observedProperty , phenomenonTime , startTime, resultTime , hasResult , hasSimpleResult : 
+  If they are present, the values of these properties summarize the values of the matching properties of the member observations, where membership is either direct or transitive through one or more member observation collections. 
+  The following consistency rules apply with respect to the Observation properties listed above: 
+  
+  1. Where an individual Observation Collection omits a property, a member Observation (direct or transitive) MAY have any value for that property.
+
+  2. Where an individual Observation Collection has a single value for a property, each member Observation(direct or transitive) MUST have that same value for the property - i.e., the collection is homogeneous in that property.  That property MAY then be omitted in any member Observation or Observation Collection.
+
+  3. Where an individual Observation Collection has more than one value for a property, each member Observation (direct or transitive) MUST have a value for that property that matches one of the values for the property in the collection. 
+  
+  4. Where an individual Observation Collection has a value for a property that is a range or interval, each member Observation (direct or transitive) MUST have a value for that property that matches or falls within that range or interval.
+
+  5. Where an individual Observation Collection has more than one value for a property that is a range or interval, each member Observation (direct or transitive) MUST have a value for that property that either matches or falls within one of those ranges or intervals.
+  </skos:definition>
+    <skos:note xml:lang="en">An instance of ObservationCollection represents a container for a set of data derived from observations.
+  This broadly corresponds with the class Dataset from DCAT.</skos:note>
+    <skos:note xml:lang="en">The members of a collection do not necessarily share a common value for any property. </skos:note>
+    <skos:note>The results of collections of observations are often packaged in a 'data cube' whose axes define the
+      range of properties of the set of observations.</skos:note>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observes">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label xml:lang="en">observes</rdfs:label>
+    <rdfs:subPropertyOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/forProperty">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </rdfs:subPropertyOf>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isObservedBy">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <rdfs:label xml:lang="en">is observed by</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/observes"/>
+        <skos:definition xml:lang="en">
+  relation from a Property to a Sensor that is able to observe that Property
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Sensor to a Property that it is capable of sensing
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/qualityOf">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label>quality of</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/resultQuality">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <rdfs:label>observation result quality</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/qualityOf"/>
+        <skos:definition xml:lang="en">
+  relation from an Observation or ObservationCollection to some information pertaining to the quality of that result
+  </skos:definition>
+        <skos:note>
+  The quality of a result can be assessed following the procedures in the ISO 19157 series.
+  </skos:note>
+        <skos:note>dqv:hasQualityMeasurement from the Data Quality Vocabulary is equivalent</skos:note>
+        <skos:scopeNote xml:lang="en">
+  This instance-specific description complements the description of the observation Procedure, which provides information concerning the quality of all observations using this procedure. Multiple measures can be provided.
+  </skos:scopeNote>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  link from a quality description to an Observation or ObservationCollection which that quality description relates to
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/wasObservedBy">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label xml:lang="en">was observed by</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observedProperty">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <rdfs:label xml:lang="en">observed property</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/wasObservedBy"/>
+        <skos:definition xml:lang="en">
+  relation from an Observation or ObservationCollection to the property observed in that Observation or ObservationCollection
+  </skos:definition>
+        <skos:note xml:lang="en">
+  'observed property' covers the concepts referred to in [VIM] as 'measurand' (quantitative values) and 'examinand' (categorical and nominal values — [VIM4]), as well as complex and structured properties whose values may be represented as lists, vectors, arrays, rasters, geometries, etc. More specific terms are used in other contexts for related concepts, such as 'analyte' (chemistry) and 'determinand' (water quality).
+  </skos:note>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Property to an Observation that observed that Property
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/relatedObservation">
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Execution">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label xml:lang="en">related observation</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observationRelatedTo">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+        <rdfs:label xml:lang="en">observation related to</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/relatedObservation"/>
+        <skos:definition xml:lang="en">
+  relation from an Observation or ObservationCollection to another Execution or ExecutionCollection
+  </skos:definition>
+        <skos:scopeNote>This general relationship complements the specific predicates outbound from Observation. It is particularly useful to relate Observations (and collections) to other Executions (and collections)</skos:scopeNote>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from an Execution or ExecutionCollection to an Observation or ObservationCollection
+  </skos:definition>
+    <skos:scopeNote>This general relationship complements the specific predicates inbound to Observation. It is particularly useful to relate Observations (and collections) to other Executions (and collections)</skos:scopeNote>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservingProcedure">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label xml:lang="en">Observing Procedure</rdfs:label>
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <skos:definition xml:lang="en">
+  workflow, protocol, plan, algorithm, program, or computational method specifying how to make an Observation
+
+  An Observing Procedure is re-usable, and might be involved in many Observations. 
+  It explains the steps to be carried out to arrive at reproducible results.
+  </skos:definition>
+    <skos:example xml:lang="en">A workflow, protocol, plan, algorithm, program, or computational method specifying how to make an observation; the description of the process used by an observer. This could be a chemical analysis method, a protocol for measuring an object, or even a checklist used by a human observer during a biodiversity campaign. The Procedure could further describe the algorithms behind simulators or models used to generate a result from other inputs.</skos:example>
+    <skos:note xml:lang="en">[ISO 19156:2023] An ObservingProcedure shall be defined as the description of steps performed in order to determine the value of an observableProperty by an Observer.</skos:note>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Observation">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <rdfs:label xml:lang="en">Observation</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+    <skos:definition xml:lang="en">
+  act of carrying out an ObservingProcedure using a Sensor to estimate or calculate a value of an observable Property of a FeatureOfInterest
+  </skos:definition>
+    <skos:example xml:lang="en">The activity of estimating the intensity of an Earthquake using the Mercalli intensity scale is an Observation as is measuring the moment magnitude, i.e., the energy released by said earthquake.</skos:example>
+    <skos:note>
+  When the feature of interest cannot be observed directly, a sample of it might be used in Observations as a proxy for it. In such case, the Sample is the proximate Feature of Interest of the Observation, while the (ultimate) Feature of Interest of the act of Sampling (i.e., the entity that the Sample is ultimately 'isSampleOf') is the ultimate Feature of Interest of the Observation.
+  </skos:note>
+    <skos:scopeNote xml:lang="en">
+  An Observation primarily concerns a single Property of a single FeatureOfInterest. 
+  Observations of multiple properties, or other combinations of Observations, may be described in an ObservationCollection. 
+  
+  Alternatively, applications may choose to encapsulate complexity by defining a complex property with multiple individual components, and a corresponding complex result (e.g., a vector). 
+  This approach is not prohibited by the SSN Ontology, but the details are beyond the scope of SSN.
+  </skos:scopeNote>
+  </owl:Class>
+</rdf:RDF>

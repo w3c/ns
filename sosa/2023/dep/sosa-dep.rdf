@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Result">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:label xml:lang="en">Result</rdfs:label>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:definition xml:lang="en">
+  outcome of an Observation, Actuation, or act of Sampling. 
+  
+  To store the simple result value of an observation one can use the hasSimpleResult property.
+  </skos:definition>
+    <skos:example xml:lang="en">The value 20 as the height of a certain tree together with the unit, e.g., Meter.</skos:example>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/ActuatableProperty">
+    <rdfs:isDefinedBy>
+      <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/dep/">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-17</dcterms:created>
+        <dcterms:creator>
+          <foaf:Agent rdf:nodeID="cb0">
+            <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+          </foaf:Agent>
+        </dcterms:creator>
+        <dcterms:description xml:lang="en">
+  This module contains terms defined in the sosa: namespace in the 2017 edition that are deprecated. 
+  </dcterms:description>
+        <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+        <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+        <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-10-02</dcterms:modified>
+        <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+        <dcterms:title xml:lang="en">Semantic Sensor Network Ontology - SOSA deprecated terms</dcterms:title>
+        <rdfs:comment xml:lang="en">Please report any errors to the W3C Spatial Data on the Web Working Group via the SDW WG Public List public-sdw-wg@w3.org</rdfs:comment>
+        <rdfs:seeAlso rdf:resource="https://www.w3.org/2015/spatial/wiki/Semantic_Sensor_Network_Ontology"/>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/dep/"/>
+        <owl:versionInfo xml:lang="en">
+  New modular version of the SSN ontology. 
+  </owl:versionInfo>
+        <skos:scopeNote>The SOSA-DEP module contains deprecated terms in the sosa: namespace. </skos:scopeNote>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/dep/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/dep/"/>
+        <dcat:version>2023</dcat:version>
+      </owl:Ontology>
+    </rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">Actuatable Property</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:definition xml:lang="en">
+  A quality (property, characteristic) of a FeatureOfInterest that can be changed by an Actuator.
+  </skos:definition>
+    <skos:example xml:lang="en">A window actuator acts by changing the state between a frame and a window. The ability of the window to be opened and closed is its Property.</skos:example>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/ObservableProperty">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/dep/"/>
+    <rdfs:label xml:lang="en">Observable Property</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <owl:deprecated rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</owl:deprecated>
+    <skos:definition xml:lang="en">
+  A quality (property, characteristic) of a FeatureOfInterest that can be observed by an Sensor.
+  </skos:definition>
+    <skos:example xml:lang="en">The height of a tree, the depth of a water body, or the temperature of a surface. </skos:example>
+    <skos:note xml:lang="en">'Observable' means that the value can be determined through an act of Observation using an ObservingProcedure applied by a Sensor or Observer. 
+  This can be contrasted with properties whose value is assigned by some authority (e.g., price, ownership), or whose value is a consequence of some other values (e.g., rank). </skos:note>
+  </owl:Class>
+</rdf:RDF>

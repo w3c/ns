@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasSample">
+    <rdfs:domain rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasInput">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasContentPart"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SampleCollection">
+    <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasSubSystem">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasFunctionalPart"/>
+  </owl:ObjectProperty>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/ido">
+    <dcterms:contributor>Andreas Neumann</dcterms:contributor>
+    <dcterms:contributor>Caitlin Woods</dcterms:contributor>
+    <dcterms:contributor>Simon J D Cox</dcterms:contributor>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-06</dcterms:created>
+    <dcterms:creator>Johan Klüwer</dcterms:creator>
+    <dcterms:creator>Maja Milicic Brandt</dcterms:creator>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-11-12</dcterms:modified>
+    <dcterms:rights>Copyright 2017, 2025 W3C/OGC.</dcterms:rights>
+    <rdfs:comment xml:lang="en"><![CDATA[Alignment of the the W3C/OGC SOSA Ontology with the Industrial Data Ontology (IDO) version 4.0 <http://rds.posccaesar.org/ontology/lis14/ont/core/4.0>]]></rdfs:comment>
+    <rdfs:label xml:lang="en">Alignment of SOSA with IDO</rdfs:label>
+    <owl:imports rdf:resource="http://rds.posccaesar.org/ontology/lis14/ont/core/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/ido"/>
+    <skos:note xml:lang="en">A caution is advised if using the provided alignment with IDO major versions higher than 4.0</skos:note>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/ido"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/ido"/>
+    <dcat:version>2023</dcat:version>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeSamplingHasResult">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasOutput">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasContentPart"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/concretizes"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOfUsedProcedure">
+    <rdfs:domain rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/SamplingProcedure"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observes">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasTemporalExtent"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isProxyFor">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/wasObservedBy">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isPropertyOf">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/qualityOf"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/implements">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/System"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeExecution">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/activeParticipantIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySystem">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasActiveParticipant"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hosts">
+    <rdfs:domain rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"/>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"/>
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/locatedRelativeTo"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isOriginalSampleOf">
+    <rdfs:domain>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
+        <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+      </rdf:Description>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasDeployment">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/passiveParticipantIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isSampleOfUltimateFOI">
+    <rdfs:domain rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/detects">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isDetectedBy">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isSampleOf">
+    <rdfs:domain rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasInputValue">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasPassiveParticipant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ExecutionCollection">
+    <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/actsOnProperty">
+    <rdfs:domain rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Deployment">
+    <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedForExecution">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/concretizedBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/featureHasUltimateSample">
+    <rdfs:domain rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isActedOnBy">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/wasActedOnBy">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasMember">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasPart"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/outputFor">
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/contentPartOf"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasProperty">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasQuality"/>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasResult">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/creates"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/relatedObservation">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Execution">
+    <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonOccurred">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/temporalExtentOf"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasParticipant"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/wasOriginatedBy">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"/>
+  </rdf:Description>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Asset">
+    <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/PhysicalObject"/>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/observedProperty">
+    <rdfs:domain rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isSubSystemOf">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/functionalPartOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isObservedBy">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/resultQuality">
+    <rdfs:domain rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasProxy">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/participantIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inputValueForExecution">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/passiveParticipantIn"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOf">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/createdBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedAsset">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/hasPassiveParticipant"/>
+  </rdf:Description>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/implementedBy">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/System"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOfMadeBySampler">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/forProperty">
+    <rdfs:domain>
+      <owl:Class rdf:nodeID="cb0">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+          <rdf:Description rdf:about="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:domain>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+  </owl:ObjectProperty>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isMemberOf">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/partOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/locatedRelativeTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasOriginalSample">
+    <rdfs:domain rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inputFor">
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/contentPartOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/originated">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Stimulus"/>
+    <rdfs:range rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedForExecutionHasResult">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/SamplingProcedure"/>
+    <rdfs:range rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Object"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/actsOn">
+    <rdfs:domain rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observationRelatedTo">
+    <rdfs:subPropertyOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/occursRelativeTo"/>
+  </rdf:Description>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Stimulus">
+    <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Activity"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Procedure">
+    <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/InformationObject"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Property">
+    <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/Quality"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/System">
+    <rdfs:subClassOf rdf:resource="http://rds.posccaesar.org/ontology/lis14/rdl/System"/>
+  </owl:Class>
+</rdf:RDF>

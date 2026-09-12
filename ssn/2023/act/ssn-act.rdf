@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/act/">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-02</dcterms:created>
+    <dcterms:creator>
+      <foaf:Agent rdf:nodeID="cbf46eae42cb34f13b8d3cf72a0004cb3d5ccef6bb9cc1157a24c4a313a1ecb4e5">
+        <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+      </foaf:Agent>
+    </dcterms:creator>
+    <dcterms:description xml:lang="en">Actuation classes and properties for the SSN Ontology.</dcterms:description>
+    <dcterms:description xml:lang="en">Actuation classes and properties for the SSN Ontology.
+  This module adds RDFS and OWL axioms to the terms defined in SOSA Actuation
+  </dcterms:description>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+    <dcterms:title xml:lang="en">SSN Ontology - actuation module</dcterms:title>
+    <dcterms:title xml:lang="en">Sensor, Observation, Sample, and Actuator (SOSA) Ontology - actuation module</dcterms:title>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/common/"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2023/act/"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/ssn/2023/act/"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/ssn/2023/act/"/>
+    <dcat:version>2023</dcat:version>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Property">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2c2c7207be151d90d32efa71b725ca1fc886aa3f8340d4bd1ff3d675e7c4edf1d">
+        <owl:allValuesFrom>
+          <rdf:Description rdf:nodeID="cb27a13edfc02b4b6979f23aae06fd8a8895166a5335c8e77dc75033a905ffc0962">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ActuationCollection"/>
+            </owl:unionOf>
+          </rdf:Description>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/wasActedOnBy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb392135134b01896b3fff941853b4fcc78e6649d85398ab5d1f2d59ff884c89cdb">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/isActedOnBy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ActuationCollection">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb171f8feb0ab0b411cd84b0b7667fdb9d365c12e4fb308f4af32232b7ebed49c27">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ActuatingProcedure"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb22997df61d39fe8ec4a8bfd2ed21fd90ecf9278dae1b14e93fb6df91927c3d317">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2847f9432ab674036535ddb31549726a9116bd032d4af30a1c63b909c7b51a189">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeByActuator"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2a3e1483df00e22efd176961d26b0e676174baf0a0ba66793b9a5fe1783ff92e4">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/actsOnProperty"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb36cd0ffa217a58c411bf3af14372690785ebc01ffd38ba970480701e8608fe09a">
+        <owl:allValuesFrom>
+          <rdf:Description rdf:nodeID="cb1d52f0cc0a87831a96f61fb56153e671632a7020e613170678501efb6e74d4e1d">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ActuationCollection"/>
+            </owl:unionOf>
+          </rdf:Description>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasMember"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1f93dbd64c414dd852f372c51ae596cfc09408e86f54f77cfb7b0f54f3617bf73">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ActuatingProcedure"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb2b0dc9e15eca98554a1781e0a187b8c377311d91223f7d1b480fbc2e99f06f663">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb30bc452e6c470dc9eaa49fc0c9af2d9d1b4eb306a16f5b3c24bc95a6cf294c4d5">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeByActuator"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb32b2606f20917bf582862b6f86d0c999ebacb0f414deceab43f33c7e7fb42b630">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/actsOnProperty"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuator">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1edfef43f3b3851fc0cb9ed94f7029cd69619c1946e881b890b125d17cf9910f8">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/ActuatingProcedure"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/implements"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1f3bad091d6b072a2892010d76581f15409d03477b7d0f891d7a88bf0800d1ded">
+        <owl:allValuesFrom>
+          <owl:Class rdf:nodeID="cb2091c5c7597041bcd3a9ac3f5b4cc1eda31751ef868572419d9869787a01b5196">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation"/>
+              <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ActuationCollection"/>
+            </owl:unionOf>
+          </owl:Class>
+        </owl:allValuesFrom>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/madeActuation"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb26aba8cfcf3115d3da7c57c347cd3b0038ba3a767e4fb50d056e46898dae3cd6d">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/actsOn"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/ActuatingProcedure">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1db41cffd40d4bc77c75bf454989f298c7d9175fe49810b8f34f9b9771d66298c">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/implementedBy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:nodeID="cb2ae8375fcacc6b6417cc2c30960f91383330fd667cb6d2eaabba6b41b5c7abac2">
+    <rdf:first rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+  </rdf:Description>
+</rdf:RDF>

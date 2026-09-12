@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/SpatialSample">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
+        <rdfs:subClassOf>
+          <owl:Class rdf:nodeID="cb110ed0b05c3adf8cf3cbd3673fcffc0cd0bda115e4ebe61de9bf18e0d84273350">
+            <owl:unionOf rdf:parseType="Collection">
+              <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Endurant"/>
+              <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Perdurant"/>
+            </owl:unionOf>
+          </owl:Class>
+        </rdfs:subClassOf>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/DOLCE/OWL/DOLCEbasic#Feature"/>
+  </owl:Class>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/dolce">
+    <dcterms:created>2026-06-02</dcterms:created>
+    <dcterms:creator>Alessandro Mosca</dcterms:creator>
+    <dcterms:creator>Claudio Masolo</dcterms:creator>
+    <dcterms:creator>Emilio M. Sanfilippo</dcterms:creator>
+    <dcterms:creator>Krzysztof Janowicz</dcterms:creator>
+    <dcterms:creator>Stefano Borgo</dcterms:creator>
+    <dcterms:creator>Walter Terkaj</dcterms:creator>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:rights>Copyright 2026 W3C/OGC and DOLCE.</dcterms:rights>
+    <rdfs:comment xml:lang="en">Alignment of the W3C/OGC SOSA/SSN ontology with the DOLCE ontology in OWL, in particular with the DOLCEbasic module. This file includes bridge axioms between SOSA 2017 and SOSA/SSN 2023, to be removed later.</rdfs:comment>
+    <rdfs:label xml:lang="en">Alignment of SOSA with DOLCE in OWL</rdfs:label>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+    <owl:imports rdf:resource="https://w3id.org/DOLCE/OWL/DOLCEbasic"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/dolce"/>
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">0.9</owl:versionInfo>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/dolce"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/dolce"/>
+    <dcat:version>2023</dcat:version>
+  </owl:Ontology>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/SampleCollection">
+    <rdfs:subClassOf>
+      <owl:Class rdf:nodeID="cb1007cbfeb26f634db644bd22e692f69e1f591e77af2fa40c0b50d5d7363f81ccd">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Endurant"/>
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Perdurant"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Property">
+    <rdfs:subClassOf>
+      <owl:Class rdf:nodeID="cb1eeffbd715d253edadd1614074b307a073af58727310c5f1d0e0e8f6de7fd8ba2">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Quality"/>
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Region"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/ExecutionCollection">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/DOLCE/OWL/DOLCEbasic#Perdurant"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Stimulus">
+    <rdfs:subClassOf>
+      <owl:Class rdf:nodeID="cb19228eaf2f4442f4fa1a75aa2ce12f2a6ef9d9833c9aea205bd29f0ecf37c828f">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Accomplishment"/>
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Achievement"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/DOLCE/OWL/DOLCEbasic#Event"/>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:subClassOf>
+      <owl:Class rdf:nodeID="cb1006d5c52f63f869fbcc8e472c0913223f3c1d4f384aa6105edf3d3f5814ecd44">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Endurant"/>
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Perdurant"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Deployment">
+    <rdfs:subClassOf>
+      <owl:Class rdf:nodeID="cb1d4b88d05bb168550e53129fa26bb6f5d3d1a4d52f4f4da1cf2ecc089fb84d2a6">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Accomplishment"/>
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Achievement"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/DOLCE/OWL/DOLCEbasic#Event"/>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampler">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/System"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sensor">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/System"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+  </rdf:Description>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/MaterialSample">
+    <rdfs:subClassOf>
+      <owl:Class rdf:nodeID="cb14e368e56905cb2eee5ba162311c6df58dea5f203cdd2a0d4988179a8e56a66d8">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#AmountOfMatter"/>
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#PhysicalObject"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/StatisticalSample">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
+    <rdfs:subClassOf rdf:resource="https://w3id.org/DOLCE/OWL/DOLCEbasic#NonAgentiveSocialObject"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuator">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/System"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Asset"/>
+  </rdf:Description>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Asset">
+    <rdfs:subClassOf>
+      <owl:Class rdf:nodeID="cb131ce81e00835da43d5d406c67f925dd730e80bc991c5676f5c1af75d4a5fb6d5">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#PhysicalObject"/>
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#SocialObject"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/System">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Asset"/>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Execution">
+    <rdfs:subClassOf>
+      <owl:Class rdf:nodeID="cb1476c04e0baa09190249a29f72f51ac9b1d892f03d919921a0c6e911d0cd13741">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Accomplishment"/>
+          <rdf:Description rdf:about="https://w3id.org/DOLCE/OWL/DOLCEbasic#Achievement"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf rdf:resource="https://w3id.org/DOLCE/OWL/DOLCEbasic#Event"/>
+  </owl:Class>
+</rdf:RDF>

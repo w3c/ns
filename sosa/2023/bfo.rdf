@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/bfo">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-10-23</dcterms:created>
+    <dcterms:creator>Simon J D Cox</dcterms:creator>
+    <dcterms:creator>
+      <foaf:Agent rdf:nodeID="cb246b11696f6220d583ec8d6ef3a443296924135bbd6c47512c9b00e6a0ffbd1">
+        <foaf:name xml:lang="en">W3C/OGC Spatiotemporal Data on the Web Working Group</foaf:name>
+      </foaf:Agent>
+    </dcterms:creator>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2026-06-09</dcterms:modified>
+    <dcterms:rights>Copyright 2017, 2026 W3C/OGC.</dcterms:rights>
+    <rdfs:comment xml:lang="en">Alignment of the the W3C/OGC SOSA Ontology with the BFO and CCO Ontologies</rdfs:comment>
+    <rdfs:label xml:lang="en">Alignment of SOSA with BFO + CCO</rdfs:label>
+    <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+    <owl:imports rdf:resource="https://www.commoncoreontologies.org/CommonCoreOntologiesMerged"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/bfo"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/bfo"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/bfo"/>
+    <dcat:version>2023</dcat:version>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+    <rdfs:subPropertyOf rdf:resource="https://www.commoncoreontologies.org/ont00001921"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00000117">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/System">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00000569">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00000781">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Property">
+    <rdfs:subClassOf>
+      <owl:Class rdf:nodeID="cb68067f2b743e19efb21ee5d853c3161b0666d622a2f0455c63f429b69f182231">
+        <owl:unionOf rdf:parseType="Collection">
+          <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000019"/>
+          <rdf:Description rdf:about="http://purl.obolibrary.org/obo/BFO_0000031"/>
+        </owl:unionOf>
+      </owl:Class>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/implements">
+    <rdfs:subPropertyOf rdf:resource="https://www.commoncoreontologies.org/ont00001920"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Stimulus">
+    <rdfs:subClassOf rdf:resource="https://www.commoncoreontologies.org/ont00000978"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00000078">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
+        <rdfs:subClassOf>
+          <owl:Restriction rdf:nodeID="cb0">
+            <owl:allValuesFrom rdf:resource="https://www.commoncoreontologies.org/ont00000853"/>
+            <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf rdf:resource="https://www.commoncoreontologies.org/ont00002075"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00000037">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling">
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb38176e07b895e088c62d2b622036d4096755a950a050c3be68c3c06fc3293815">
+        <owl:allValuesFrom rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/hasResult"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySystem">
+    <rdfs:subPropertyOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000057"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00001158">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Execution">
+        <rdfs:subClassOF rdf:resource="https://www.commoncoreontologies.org/ont00000228"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
+    <rdfs:subPropertyOf rdf:resource="https://www.commoncoreontologies.org/ont00001920"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00000357">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Deployment">
+    <rdfs:subClassOf rdf:resource="https://www.commoncoreontologies.org/ont00000228"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00000970">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00001242">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Asset">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isSampleOf">
+    <rdfs:subPropertyOf rdf:resource="https://www.commoncoreontologies.org/ont00001775"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/wasOriginatedBy">
+    <rdfs:subPropertyOf rdf:resource="https://www.commoncoreontologies.org/ont00001819"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00000371">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
+    <rdfs:subClassOf rdf:resource="https://www.commoncoreontologies.org/ont00000965"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00000513">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000001"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00000345">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://www.commoncoreontologies.org/ont00000021">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Platform"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasResult">
+    <rdfs:subPropertyOf rdf:resource="https://www.commoncoreontologies.org/ont00001986"/>
+  </rdf:Description>
+</rdf:RDF>

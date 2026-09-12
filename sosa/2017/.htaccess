@@ -1,0 +1,79 @@
+######################################################################
+# Rewrite rules for http://www.w3.org/ns/sosa/2017/
+#
+# The 2017 edition is published, and does not change.
+######################################################################
+
+RewriteEngine On
+
+######################################################################
+# Set the Content-Disposition HTTP header to improve "save as" dialogs
+######################################################################
+<Files sosa.rdf>
+    Header set Content-Disposition "inline; filename=sosa.rdf"
+</Files>
+
+<Files sosa.ttl>
+    Header set Content-Disposition "inline; filename=sosa.ttl"
+</Files>
+
+######################################################################
+# sosa.html exists only so that content negotiation has an HTML
+# variant to match.  Its content is never returned: the rule below
+# catches it and redirects to the specification instead.  Its lower qs
+# keeps clients with no preference on Turtle or RDF/XML.
+######################################################################
+<Files sosa.html>
+    ForceType text/html;qs=0.998
+</Files>
+
+######################################################################
+# Get rid of any non-empty query string that is not of the form ?term=...
+######################################################################
+RewriteCond  %{QUERY_STRING}  !=""
+RewriteCond  %{QUERY_STRING}  !^term=
+RewriteRule  ^(.*)$  $1?
+
+######################################################################
+# A request for the version IRI, i.e. for the directory, is a request
+# for one of the sosa.* files.  Content negotiation decides which.
+######################################################################
+RewriteRule  ^$  sosa?term= [N]
+
+######################################################################
+# The HTML variant was chosen: redirect to the specification of this
+# edition.  Terms are not served from a version IRI, so there is no
+# fragment to add here.
+######################################################################
+RewriteCond  %{QUERY_STRING}  ^(term=)?$
+RewriteRule  ^sosa\.html$  https://www.w3.org/TR/vocab-ssn/  [R=303,QSD,NE,L]
+
+######################################################################
+# The modules of this edition served as a plain file rather than from
+# a directory of their own, because their IRI has no trailing slash.
+# Content negotiation matches them on their own name; a client that
+# insists on HTML gets a 406, as it did in 2017.
+######################################################################
+<Files om.rdf>
+    Header set Content-Disposition "inline; filename=sosa-om.rdf"
+</Files>
+
+<Files om.ttl>
+    Header set Content-Disposition "inline; filename=sosa-om.ttl"
+</Files>
+
+<Files oboe.rdf>
+    Header set Content-Disposition "inline; filename=sosa-oboe.rdf"
+</Files>
+
+<Files oboe.ttl>
+    Header set Content-Disposition "inline; filename=sosa-oboe.ttl"
+</Files>
+
+<Files prov.rdf>
+    Header set Content-Disposition "inline; filename=sosa-prov.rdf"
+</Files>
+
+<Files prov.ttl>
+    Header set Content-Disposition "inline; filename=sosa-prov.ttl"
+</Files>

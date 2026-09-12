@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/actsOnProperty">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/controls"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/actsOn">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/controls"/>
+  </rdf:Description>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/saref">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-14</dcterms:created>
+    <dcterms:creator>Maxime Lefrançois</dcterms:creator>
+    <dcterms:creator>
+      <foaf:Agent rdf:nodeID="cbad0869f1606d3cef7a225a3a40f4958ca55d97176d40854b5345e58accc817bb">
+        <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+      </foaf:Agent>
+    </dcterms:creator>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-03-14</dcterms:modified>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-02-19</dcterms:modified>
+    <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+    <rdfs:comment xml:lang="en">Alignment of the the W3C/OGC SOSA Ontology with the ETSI Smart Applications REFerence Ontology (SAREF).</rdfs:comment>
+    <rdfs:label xml:lang="en">Alignment of SOSA with SAREF Core V4.1.1</rdfs:label>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/"/>
+    <owl:imports rdf:resource="https://saref.etsi.org/core/v4.1.1"/>
+    <owl:imports rdf:resource="https://saref.etsi.org/saref4syst/v1.1.2"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/saref"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/saref"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/saref"/>
+    <dcat:version>2023</dcat:version>
+  </owl:Ontology>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/hasStateOfInterest">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/MaterialSample">
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSample">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/saref4syst/hasSubSystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasResult">
+    <owl:equivalentProperty rdf:resource="https://saref.etsi.org/core/hasResult"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/startTime">
+    <owl:equivalentProperty rdf:resource="https://saref.etsi.org/core/hasStartTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sampling">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="https://saref.etsi.org/core/ProcedureExecution">
+        <owl:equivalentClass rdf:resource="http://www.w3.org/ns/sosa/Execution"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/StatisticalSample">
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
+    <owl:equivalentProperty rdf:resource="https://saref.etsi.org/core/hasPhenomenonTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
+    <owl:equivalentProperty rdf:resource="https://saref.etsi.org/core/isExecutionOf"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSubSystem">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/consistsOf"/>
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/saref4syst/hasSubSystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/Device">
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/System">
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+        <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4syst/System"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySensor">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/madeBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/Operation">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasOriginalSample">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/saref4syst/hasSubSystem"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasOutput">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/hasOutput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/Sensor">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform">
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4syst/System"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/Command">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/Actuator">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/Property">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Observation">
+    <owl:equivalentClass rdf:resource="https://saref.etsi.org/core/Observation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/CommandOfInterest">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Procedure"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/StateOfInterest">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/hasPropertyOfInterest">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasInputValue">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/hasInput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/hasProperty">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/propertyFor">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/isActedUponBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySampler">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/madeBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/SpatialSample">
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/core/FeatureOfInterest"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/forProperty">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeExecution">
+    <owl:equivalentProperty rdf:resource="https://saref.etsi.org/core/madeExecution"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/resultTime">
+    <owl:equivalentProperty rdf:resource="https://saref.etsi.org/core/hasResultTime"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/implements">
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="https://saref.etsi.org/core/hasFunction"/>
+      <rdf:Description rdf:about="https://saref.etsi.org/core/hasCommand"/>
+    </owl:propertyChainAxiom>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="https://saref.etsi.org/core/offers"/>
+      <rdf:Description rdf:about="https://saref.etsi.org/core/hasOperation"/>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/PropertyOfInterest">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySystem">
+    <owl:equivalentProperty rdf:resource="https://saref.etsi.org/core/madeBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasProcedure">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/isActedUponBy"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Actuation">
+    <owl:equivalentClass rdf:resource="https://saref.etsi.org/core/Actuation"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasInput">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/hasInput"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observedProperty">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/observes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/State">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Property"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/actsUpon"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observes">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/observes"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Asset">
+    <rdfs:subClassOf rdf:resource="https://saref.etsi.org/saref4syst/System"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="https://saref.etsi.org/core/hasState">
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/hasProperty"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeByActuator">
+    <rdfs:subPropertyOf rdf:resource="https://saref.etsi.org/core/madeBy"/>
+  </rdf:Description>
+</rdf:RDF>

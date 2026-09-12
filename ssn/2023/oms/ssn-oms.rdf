@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oms/makesObservationCollection">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hosts"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeSamplingHasResult"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf"/>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/ssn/oms/">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2023-12-06</dcterms:created>
+    <dcterms:creator>
+      <foaf:Agent rdf:nodeID="cb10632ce621339691e2252158986aff6b76862abcac9ad5c2a5f96a30390a0b0d">
+        <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+      </foaf:Agent>
+    </dcterms:creator>
+    <dcterms:description xml:lang="en">This ontology is based on the SOSA Ontology by the W3C/OGC Spatial Data on the Web Working Group, supplemented by some classes and properties required to implement ISO 19156:2023 , with axiomatization following SSN.</dcterms:description>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+    <dcterms:source rdf:resource="https://docs.ogc.org/as/20-082r4/20-082r4.html"/>
+    <dcterms:title xml:lang="en">OMS Ontology - based on (SOSA) Ontology with SSN axiomatization</dcterms:title>
+    <rdfs:comment>Vertical module adding SSN-style axioms to the SOSA-OMS module</rdfs:comment>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/obs/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/ssn/sam/"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/ssn/2023/oms/"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/ssn/2023/oms/"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/ssn/2023/oms/"/>
+    <dcat:version>2023</dcat:version>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oms/madeOnPlatform">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <owl:propertyChainAxiom rdf:parseType="Collection">
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOfMadeBySampler"/>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isHostedBy"/>
+    </owl:propertyChainAxiom>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oms/PreparationStep">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1288b9c2d84f774a5d8bc77e2ec8aac9940ab4d1df5238184dc8ec18f8cc2e2d8">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/preparedSample"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb1d5e0dbbf76f7fcfc8aa54c46ee506d4f16649bb94e6829d4a6421992657d7296">
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/preparedSample"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cbddbaf7fdaf1fb9fcff5a0bde9308249a097a9691a50583a9ba673b1b281badfc">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationProcedure"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/usedProcedure"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/oms/PreparationProcedure">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/oms/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cbe34db5d4143eb80a4c1d6eafbac6b9186b709938b6013a2c8bf736a3be0f2fea">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationStep"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/implementedBy"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Sample">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:subClassOf>
+      <owl:Restriction rdf:nodeID="cb175e110ecc144f9b682a82f4f6226af4c4212c3d7423e21e120b65ca6b55239be">
+        <owl:allValuesFrom rdf:resource="http://www.w3.org/ns/sosa/oms/PreparationStep"/>
+        <owl:onProperty rdf:resource="http://www.w3.org/ns/sosa/oms/hasPreparationStep"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+  </rdf:Description>
+</rdf:RDF>

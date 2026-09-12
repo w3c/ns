@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:schema1="http://schema.org/"
+>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/relatedObservation">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeExecution">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/">
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2017-04-17</dcterms:created>
+    <dcterms:creator>
+      <foaf:Agent rdf:nodeID="cb0">
+        <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+      </foaf:Agent>
+    </dcterms:creator>
+    <dcterms:description xml:lang="en">
+  This module imports all the terms in the SOSA module, and adds cross-module annotations (domain/rangeIncludes). 
+  </dcterms:description>
+    <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+    <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+    <dcterms:modified rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-03</dcterms:modified>
+    <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+    <dcterms:title xml:lang="en">Sensor, Observation, Sample, and Actuator (SOSA) Ontology</dcterms:title>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/act/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/dep/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+    <owl:imports rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <owl:priorVersion rdf:resource="http://www.w3.org/ns/sosa/2017/"/>
+    <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/"/>
+    <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2017/"/>
+    <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/"/>
+    <dcat:previousVersion rdf:resource="http://www.w3.org/ns/sosa/2017/"/>
+    <dcat:version>2023</dcat:version>
+  </owl:Ontology>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/madeBySystem">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Observation"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/ObservationCollection"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuator"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sensor"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/observationRelatedTo">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Actuation"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/ActuationCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/obs/"/>
+  </rdf:Description>
+</rdf:RDF>

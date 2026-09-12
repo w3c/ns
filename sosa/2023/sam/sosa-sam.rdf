@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+  xmlns:dcat="http://www.w3.org/ns/dcat#"
+  xmlns:foaf="http://xmlns.com/foaf/0.1/"
+  xmlns:dcterms="http://purl.org/dc/terms/"
+  xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:schema1="http://schema.org/"
+>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/SpatialSample">
+    <rdfs:isDefinedBy>
+      <owl:Ontology rdf:about="http://www.w3.org/ns/sosa/sam/">
+        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2024-02-02</dcterms:created>
+        <dcterms:creator>
+          <foaf:Agent rdf:nodeID="cb0">
+            <foaf:name xml:lang="en">W3C/OGC Spatial Data on the Web Working Group</foaf:name>
+          </foaf:Agent>
+        </dcterms:creator>
+        <dcterms:description xml:lang="en">Sampling classes and properties for the SSN Ontology.</dcterms:description>
+        <dcterms:license rdf:resource="http://www.opengeospatial.org/ogc/Software"/>
+        <dcterms:license rdf:resource="http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document"/>
+        <dcterms:rights>Copyright 2025 W3C/OGC.</dcterms:rights>
+        <dcterms:title xml:lang="en">Sensor, Observation, Sample, and Actuator (SOSA) Ontology - actuation module</dcterms:title>
+        <owl:imports rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+        <owl:versionIRI rdf:resource="http://www.w3.org/ns/sosa/2023/sam/"/>
+        <dcat:hasCurrentVersion rdf:resource="http://www.w3.org/ns/sosa/2023/sam/"/>
+        <dcat:hasVersion rdf:resource="http://www.w3.org/ns/sosa/2023/sam/"/>
+        <dcat:version>2023</dcat:version>
+      </owl:Ontology>
+    </rdfs:isDefinedBy>
+    <rdfs:label xml:lang="en">Spatial Sample</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <skos:definition xml:lang="en">
+  subset of a FeatureOfInterest defined by its location and shape in space
+  
+  When observations are made to estimate properties of a geospatial feature, particularly where the value of a property varies within the scope of the feature, a SpatialSample is used.
+  </skos:definition>
+    <skos:example xml:lang="en">Some common names for spatial samples include: borehole, flightline, interval, lidar cloud, map horizon, microscope slide, mine level, mine, observation well, profile,  quadrat, scene, section, ship track, spot, station, swath, trajectory, traverse, etc...</skos:example>
+    <skos:note xml:lang="en">Depending on accessibility and on the nature of the expected property variation, a SpatialSample may extend in one, two or three spatial dimensions.</skos:note>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inputValueForExecution">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSubSystem">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasSimpleResult">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isUltimateFeatureOfInterestOf">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/StatisticalSample">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">Statistical Sample</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <skos:definition xml:lang="en">
+  subset of a FeatureOfInterest defined by the statistical process used to create it
+  </skos:definition>
+    <skos:example xml:lang="en">The male or female subset of a population.</skos:example>
+    <skos:note xml:lang="en">StatisticalSamples usually apply to populations or other sets, of which a certain subset may be of specific interest.</skos:note>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasMember">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isSubSystemOf">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isMemberOf">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Platform">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasProcedure">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inputFor">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/forProperty">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedSystem">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasResult">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/inDeployment">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/implements">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingProcedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/phenomenonOccurred">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isPropertyOf">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasUltimateFeatureOfInterest">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isHostedBy">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/startTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/MaterialSample">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">Material Sample</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <skos:definition xml:lang="en">
+  subset of a FeatureOfInterest that is physical (i.e., tangible)
+  </skos:definition>
+    <skos:example xml:lang="en">A piece of rock, a blood sample, a water sample, etc.</skos:example>
+    <skos:note xml:lang="en">MaterialSamples may be destroyed in connexion with the observation act or a subsequent preparation step.</skos:note>
+    <skos:note xml:lang="en">MaterialSamples that are curated and preserved are sometimes known as 'specimens'.</skos:note>
+  </owl:Class>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isFeatureOfInterestOf">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/isResultOf">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedForExecution">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedOnPlatform">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/usedProcedure">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingProcedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/deployedAsset">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasFeatureOfInterest">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/resultTime">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/propertyFor">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hosts">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasInput">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasOutput">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasInputValue">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasDeployment">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Deployment">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Property">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/hasProperty">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/endTime">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/implementedBy">
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <rdf:Description rdf:about="http://www.w3.org/ns/sosa/outputFor">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+  </rdf:Description>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasSample">
+    <schema1:domainIncludes>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/FeatureOfInterest">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </schema1:domainIncludes>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">has sample</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isSampleOf">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+        <rdfs:label xml:lang="en">is sample of</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/hasSample"/>
+        <skos:definition xml:lang="en">
+  relation from a Sample or SampleCollection to the FeatureOfInterest that it is intended to represent
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a FeatureOfInterest to the Sample or SampleCollection used to represent that FeatureOfInterest
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isSampleOfUltimateFOI">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">has sampled feature</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/featureHasUltimateSample">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/FeatureOfInterest"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+        <rdfs:label xml:lang="en">feature has ultimate sample</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isSampleOfUltimateFOI"/>
+        <skos:definition xml:lang="en">
+  relation from an ultimate FeatureOfInterest to a Sample or SampleCollection that is intended to be representative of that FeatureOfInterest; i.e., the end of a chain of hasSample relations
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Sample or SampleCollection to the ultimate FeatureOfInterest that it is intended to be representative of; i.e., the end of a chain of isSampleOf relations
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/SamplingProcedure">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">Sampling Procedure</rdfs:label>
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Procedure">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <skos:definition xml:lang="en">
+  workflow, protocol, plan, algorithm, program, or computational method specifying how to make a Sampling
+
+  A Sampling Procedure is re-usable, and might be involved in many Samplings. 
+  The Sampling Procedure explains the steps to be carried out to arrive at reproducible results.
+  </skos:definition>
+    <skos:example xml:lang="en">
+spatial distribution of locations where to collect a sample (e.g., river segment)
+instrument (or mode of use thereof) required to collect a sample (e.g., fish net, electric stunner)
+field work instructions (e.g., dig four boreholes in each cardinal direction 2 metre way from the centre of the site; collect soil material from the 15-30 cm depth and mix it in a single bag)
+  </skos:example>
+    <skos:note xml:lang="en">
+[ISO 19156:2023] A SamplingProcedure shall be defined as the description of steps performed by a Sampler in order to extract a Sample from its sampledFeature in the frame of a Sampling.
+  </skos:note>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isResultOfUsedProcedure">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingProcedure"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">is a result of used procedure</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/usedForExecutionHasResult">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingProcedure"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+        <rdfs:label xml:lang="en">used for execution has result</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isResultOfUsedProcedure"/>
+        <skos:definition xml:lang="en">
+  relation from a Procedure to a Sample or SampleCollection made by that Procedure
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Sample or SampleCollection to the Procedure used to make that Sample or SampleCollection
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeSampling">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">made sampling</rdfs:label>
+    <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/madeExecution"/>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeBySampler">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampling"/>
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SamplingCollection"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+        <rdfs:label xml:lang="en">made by sampler</rdfs:label>
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/ns/sosa/madeBySystem"/>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/madeSampling"/>
+        <skos:definition xml:lang="en">
+  relation from an act of Sampling to the Sampler that made that act of Sampling
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Sampler to the Sampling or SamplingCollection made by that Sampler
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sample">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">Sample</rdfs:label>
+    <skos:definition xml:lang="en">
+  piece or subset that is intended to be representative of a FeatureOfInterest
+  </skos:definition>
+    <skos:example xml:lang="en">A 'station' is a spatial sample, in the form of an identifiable locality where a sensor system or Procedure may be deployed and an observation made. In the context of the observation model, it connotes the 'world in the vicinity of the station', so the observed properties relate to the physical medium at the station, and not to any physical artifact such as a mooring, buoy, benchmark, monument, well, etc.</skos:example>
+    <skos:example xml:lang="en">A statistical sample is often designed to be characteristic of an entire population, so that observations can be made regarding the sample that provide a good estimate of the properties of the population.</skos:example>
+    <skos:note xml:lang="en">
+  Samples are typically subsets or extracts from an entity or feature.
+  Every sample is expected to (eventually) be the feature of interest of an Observation. 
+  
+  Samples are used in situations where observations cannot be made directly on the ultimate feature of interest, either because the entire feature cannot be observed, or because it is more convenient to use a proxy.
+  Samples are thus artifacts of an observational strategy, and have no significant function outside of their role in the observation process. 
+  The characteristics of the samples themselves are of little interest, except perhaps to the manager of a sampling campaign.
+
+  A Sample is intended to represent some FeatureOfInterest, so there is an expectation of at least one isSampleOf property. 
+  However, in some cases the identity, and even the exact type, of the sampled feature may not be known when observations are made using the sample.
+
+  Physical samples are sometimes known as 'specimens'. A transient sample, such as a ships-track or flight-line, might be identified and described, but is unlikely to be revisited exactly.
+  </skos:note>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sampling">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">Sampling</rdfs:label>
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/Execution">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <skos:definition xml:lang="en">
+  act of carrying out a SamplingProcedure using a Sampler to create one or more Samples of a FeatureOfInterest
+  </skos:definition>
+    <skos:example xml:lang="en">Crushing a rock sample in a ball mill.</skos:example>
+    <skos:example xml:lang="en">Digging a pit through a soil sequence.</skos:example>
+    <skos:example xml:lang="en">Dividing a field site into quadrants.</skos:example>
+    <skos:example xml:lang="en">Drawing blood from a patient.</skos:example>
+    <skos:example xml:lang="en">Drilling an observation well.</skos:example>
+    <skos:example xml:lang="en">Establishing a station for environmental monitoring.</skos:example>
+    <skos:example xml:lang="en">Registering an image of the landscape.</skos:example>
+    <skos:example xml:lang="en">Selecting a subset of a population.</skos:example>
+    <skos:example xml:lang="en">Sieving a powder to separate the subset finer than 100-mesh.</skos:example>
+    <skos:example xml:lang="en">Splitting a piece of drill-core to create two new samples.</skos:example>
+    <skos:example xml:lang="en">Taking a diamond-drill core from a rock outcrop.</skos:example>
+  </owl:Class>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/hasOriginalSample">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">has original sample</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isOriginalSampleOf">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+        <rdfs:label xml:lang="en">is original sample  of</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/hasOriginalSample"/>
+        <skos:definition xml:lang="en">
+  relation from the initial Sample collected from the ultimate FeatureOfInterest to a downstream Sample or SampleCollection
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Sample or SampleCollection to the initial Sample collected from that ultimate FeatureOfInterest
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/isResultOfMadeBySampler">
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+    <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+    <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">is a result of made by sampler</rdfs:label>
+    <owl:inverseOf>
+      <owl:ObjectProperty rdf:about="http://www.w3.org/ns/sosa/madeSamplingHasResult">
+        <schema1:domainIncludes rdf:resource="http://www.w3.org/ns/sosa/Sampler"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/Sample"/>
+        <schema1:rangeIncludes rdf:resource="http://www.w3.org/ns/sosa/SampleCollection"/>
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+        <rdfs:label xml:lang="en">made sampling has result</rdfs:label>
+        <owl:inverseOf rdf:resource="http://www.w3.org/ns/sosa/isResultOfMadeBySampler"/>
+        <skos:definition xml:lang="en">
+  relation from a Sampler to a Sample or SampleCollection made by that Sampler
+  </skos:definition>
+      </owl:ObjectProperty>
+    </owl:inverseOf>
+    <skos:definition xml:lang="en">
+  relation from a Sample or SampleCollection to the Sampler that made that Sample or SampleCollection
+  </skos:definition>
+  </owl:ObjectProperty>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/SamplingCollection">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">Sampling Collection</rdfs:label>
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/ns/sosa/ExecutionCollection"/>
+    <skos:definition xml:lang="en">
+  set of one or more Samplings or SamplingCollections; collections may be nested
+
+  All Sampling properties may appear in a Sampling Collection, including: 
+  hasFeatureOfInterest , hasUltimateFeatureOfInterest , madeBySampler , usedProcedure , hasInputValue , startTime , phenomenonTime , resultTime , hasResult . 
+  If they are present, the value of these properties summarize the values of the matching properties of the member samplings, where membership is either direct or transitive through one or more member sampling collections. 
+  The following consistency rules apply with respect to the Sampling properties listed above: 
+  
+  1. Where an individual Sampling Collection omits a property, a member Sampling (direct or transitive) MAY have any value for that property.
+
+  2. Where an individual Sampling Collection has a single value for a property, each member Sampling (direct or transitive) MUST have that same value for the property - i.e., the collection is homogeneous in that property.  That property MAY then be omitted in any member Sampling or Sampling Collection.
+
+  3. Where an individual Sampling Collection has more than one value for a property, each member Sampling (direct or transitive) MUST have a value for that property that matches one of the values for the property in the collection. 
+  
+  4. Where an individual Sampling Collection has a value for a property that is a range or interval, each member Sampling (direct or transitive) MUST have a value for that property that matches or falls within that range or interval.
+
+  5. Where an individual Sampling Collection has more than one value for a property that is a range or interval, each member Sampling (direct or transitive) MUST have a value for that property that either matches or falls within one of those ranges or intervals.
+  </skos:definition>
+    <skos:note xml:lang="en">The members of a collection do not necessarily share a common value for any property.</skos:note>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/SampleCollection">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">Sample Collection</rdfs:label>
+    <skos:definition xml:lang="en">
+  set of one or more Samples or SampleCollections; collections may be nested.
+
+  All Sample properties may appear in a Sample Collection, including: 
+  hasOriginalSample , isSampleOfUltimateFOI , isSampleOf , isResultOfUsedProcedure , isResultOfMadeBySampler . 
+  If these properties are present, their values summarize the values of the matching properties of the member samples, where membership is either direct or transitive through one or more member sample collections. 
+
+  The following consistency rules apply with respect to the Sample properties listed above: 
+  
+  1. Where an individual Sample Collection omits a property, a member Sample (direct or transitive) MAY have any value for that property.
+
+  2. Where an individual Sample Collection has a single value for a property, each member Sample (direct or transitive) MUST have that same value for the property - i.e., the collection is homogeneous in that property.  That property MAY be omitted in any member Sample or Sample Collection.
+
+  3. Where an individual Sample Collection has more than one value for a property, each member Sample (direct or transitive) MUST have a value for that property that matches one of the values for the property in the collection. 
+  
+  4. Where an individual Sample Collection has a value for a property that is a range or interval, each member Sample (direct or transitive) MUST have a value for that property that either matches or falls within that range or interval.
+
+  5. Where an individual Sample Collection has more than one value for a property that is a range or interval, each member Sample (direct or transitive) MUST have a value for that property that either matches or falls within one of those ranges or intervals.
+  </skos:definition>
+    <skos:note>
+  The members of a collection do not necessarily share a common value for any property. 
+  </skos:note>
+  </owl:Class>
+  <owl:Class rdf:about="http://www.w3.org/ns/sosa/Sampler">
+    <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/sam/"/>
+    <rdfs:label xml:lang="en">Sampler</rdfs:label>
+    <rdfs:subClassOf>
+      <rdf:Description rdf:about="http://www.w3.org/ns/sosa/System">
+        <rdfs:isDefinedBy rdf:resource="http://www.w3.org/ns/sosa/common/"/>
+      </rdf:Description>
+    </rdfs:subClassOf>
+    <skos:definition xml:lang="en">
+  System that implements a SamplingProcedure to generate a Sample
+  </skos:definition>
+    <skos:example xml:lang="en">A ball mill, diamond drill, hammer, hypodermic syringe and needle, image Sensor, or a soil auger can all act as Samplers. Sometimes, however, the distinction between the Sampler and the Sensor is not evident, if they are packaged as a unit.</skos:example>
+    <skos:note xml:lang="en">A Sampler need not be a physical device.</skos:note>
+  </owl:Class>
+</rdf:RDF>
