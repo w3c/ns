@@ -1,0 +1,104 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix shexMan: <http://www.w3.org/ns/shex-manifest#> .
+@prefix shexTest: <http://www.w3.org/ns/shex-test#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# CSVM Ontology definition
+shexTest: a owl:Ontology;
+  dc:title "ShEx Test Vocabulary"@en;
+  dc:description """This document describes the RDFS vocabulary in which the tests of a ShEx conformance suite say what they say beyond an entry of the ShEx manifest vocabulary [[shex-manifest]] -- the features of ShEx a test exercises, whether it is approved, how its schema must be rejected and where, the schema's other representations, and what its semantic actions must output [[shex-semantics]] -- along with the JSON-LD Context that a test manifest stacks on the manifest vocabulary's, so that a JSON or YAML test manifest is an RDF graph."""@en;
+  dc:date "2026-10-09"^^xsd:date;
+  owl:versionInfo <https://github.com/shexSpec/shexTest/commit/62fce75e962c935b214636b70a05ebc6c3ec7983>;
+  rdfs:seeAlso <http://shex.io/shex-semantics>, <https://github.com/shexSpec/shexTest>, <https://www.w3.org/ns/shex-manifest>;
+  .
+
+
+# Class definitions
+
+# Property definitions
+shexTest:approval a rdf:Property;
+  rdfs:label "approval"@en;
+  rdfs:comment """What the community has decided about the test itself: "Approved" or "Proposed"."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy shexTest: .
+shexTest:endColumn a rdf:Property;
+  rdfs:label "end column"@en;
+  rdfs:comment """The 1-based column at which the expected rejection ends."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range xsd:integer;
+  rdfs:isDefinedBy shexTest: .
+shexTest:endRow a rdf:Property;
+  rdfs:label "end row"@en;
+  rdfs:comment """The 1-based row at which the expected rejection ends."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range xsd:integer;
+  rdfs:isDefinedBy shexTest: .
+shexTest:result a rdf:Property;
+  rdfs:label "result"@en;
+  rdfs:comment """The results the validation must produce, for a test that says more than conformant or nonconformant. A literal is their text; an IRI (written with the term resultURL) is the document that holds them."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:isDefinedBy shexTest: .
+shexTest:sameSemanticsAs a rdf:Property;
+  rdfs:label "same semantics as"@en;
+  rdfs:comment """Another test whose schema means what this one's does, however differently it is written."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range shexMan:Entry;
+  rdfs:isDefinedBy shexTest: .
+shexTest:schemaError a rdf:Property;
+  rdfs:label "schema error"@en;
+  rdfs:comment """How the test's schema must be rejected: "syntax", when it does not parse, or "structure", when it parses but breaks a structural constraint, such as referring to a shape it does not declare. An entry with neither a schemaError nor a status tests the schema's representations (shexc, shexj, shexr)."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy shexTest: .
+shexTest:semActs a rdf:Property;
+  rdfs:label "semantic actions"@en;
+  rdfs:comment """Code for the semantic actions the test's schema names without code of their own. A literal is its text; an IRI (written with the term semActsURL) is the document that holds it."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:isDefinedBy shexTest: .
+shexTest:shapeExterns a rdf:Property;
+  rdfs:label "shape externs"@en;
+  rdfs:comment """A schema providing the shapes the test's schema declares EXTERNAL. A literal is its text; an IRI (written with the term shapeExternsURL) is the document that holds it."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:isDefinedBy shexTest: .
+shexTest:shexc a rdf:Property;
+  rdfs:label "ShExC"@en;
+  rdfs:comment """The test's schema in ShExC, the compact syntax of ShEx. A literal is its text; an IRI (written with the term shexcURL) is the document that holds it."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:isDefinedBy shexTest: .
+shexTest:shexj a rdf:Property;
+  rdfs:label "ShExJ"@en;
+  rdfs:comment """The test's schema in ShExJ, the JSON representation of ShEx. A literal is its text; an IRI (written with the term shexjURL) is the document that holds it."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:isDefinedBy shexTest: .
+shexTest:shexr a rdf:Property;
+  rdfs:label "ShExR"@en;
+  rdfs:comment """The test's schema in ShExR, the RDF representation of ShEx. A literal is its text; an IRI (written with the term shexrURL) is the document that holds it."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:isDefinedBy shexTest: .
+shexTest:startColumn a rdf:Property;
+  rdfs:label "start column"@en;
+  rdfs:comment """The 1-based column at which the expected rejection begins."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range xsd:integer;
+  rdfs:isDefinedBy shexTest: .
+shexTest:startRow a rdf:Property;
+  rdfs:label "start row"@en;
+  rdfs:comment """The 1-based row of the schema's text at which the rejection a negative test expects begins."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range xsd:integer;
+  rdfs:isDefinedBy shexTest: .
+shexTest:trait a rdf:Property;
+  rdfs:label "trait"@en;
+  rdfs:comment """A feature of ShEx the test exercises, as a plain name (Empty, TriplePattern, Import, SemanticAction, ...), so that an implementation can tell which tests bear on what it supports."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy shexTest: .
+
+# Datatype definitions
+
+# Instance definitions

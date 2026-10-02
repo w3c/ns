@@ -1,0 +1,350 @@
+{
+  "@context": {
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "shexMan": "http://www.w3.org/ns/shex-manifest#",
+    "shexTest": "http://www.w3.org/ns/shex-test#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "resultURL": {
+      "@id": "shexTest:result",
+      "@type": "@id"
+    },
+    "seeAlso": {
+      "@id": "rdfs:seeAlso",
+      "@type": "@id"
+    },
+    "semActsURL": {
+      "@id": "shexTest:semActs",
+      "@type": "@id"
+    },
+    "shapeExternsURL": {
+      "@id": "shexTest:shapeExterns",
+      "@type": "@id"
+    },
+    "shexcURL": {
+      "@id": "shexTest:shexc",
+      "@type": "@id"
+    },
+    "shexjURL": {
+      "@id": "shexTest:shexj",
+      "@type": "@id"
+    },
+    "shexrURL": {
+      "@id": "shexTest:shexr",
+      "@type": "@id"
+    },
+    "wasDerivedFrom": {
+      "@id": "prov:wasDerivedFrom",
+      "@type": "@id"
+    },
+    "approval": {
+      "@id": "shexTest:approval",
+      "@language": null
+    },
+    "endColumn": {
+      "@id": "shexTest:endColumn",
+      "@type": "xsd:integer"
+    },
+    "endRow": {
+      "@id": "shexTest:endRow",
+      "@type": "xsd:integer"
+    },
+    "result": {
+      "@id": "shexTest:result"
+    },
+    "sameSemanticsAs": {
+      "@id": "shexTest:sameSemanticsAs",
+      "@type": "@id"
+    },
+    "schemaError": {
+      "@id": "shexTest:schemaError",
+      "@language": null
+    },
+    "semActs": {
+      "@id": "shexTest:semActs"
+    },
+    "shapeExterns": {
+      "@id": "shexTest:shapeExterns"
+    },
+    "shexc": {
+      "@id": "shexTest:shexc"
+    },
+    "shexj": {
+      "@id": "shexTest:shexj"
+    },
+    "shexr": {
+      "@id": "shexTest:shexr"
+    },
+    "startColumn": {
+      "@id": "shexTest:startColumn",
+      "@type": "xsd:integer"
+    },
+    "startRow": {
+      "@id": "shexTest:startRow",
+      "@type": "xsd:integer"
+    },
+    "trait": {
+      "@id": "shexTest:trait",
+      "@language": null
+    }
+  },
+  "@graph": {
+    "@context": {
+      "id": "@id",
+      "type": "@type",
+      "dc:title": {
+        "@container": "@language"
+      },
+      "dc:description": {
+        "@container": "@language"
+      },
+      "dc:date": {
+        "@type": "xsd:date"
+      },
+      "rdfs:comment": {
+        "@container": "@language"
+      },
+      "rdfs:domain": {
+        "@type": "@id"
+      },
+      "rdfs:label": {
+        "@container": "@language"
+      },
+      "rdfs:range": {
+        "@type": "@id"
+      },
+      "rdfs:seeAlso": {
+        "@type": "@id"
+      },
+      "rdfs:subClassOf": {
+        "@type": "@id"
+      },
+      "rdfs:subPropertyOf": {
+        "@type": "@id"
+      },
+      "owl:equivalentClass": {
+        "@type": "@vocab"
+      },
+      "owl:equivalentProperty": {
+        "@type": "@vocab"
+      },
+      "owl:oneOf": {
+        "@container": "@list",
+        "@type": "@vocab"
+      },
+      "owl:imports": {
+        "@type": "@id"
+      },
+      "owl:versionInfo": {
+        "@type": "@id"
+      },
+      "owl:inverseOf": {
+        "@type": "@vocab"
+      },
+      "owl:unionOf": {
+        "@type": "@vocab",
+        "@container": "@list"
+      },
+      "rdfs_classes": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_properties": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_datatypes": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_instances": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      }
+    },
+    "@id": "http://www.w3.org/ns/shex-test#",
+    "@type": "owl:Ontology",
+    "dc": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dc:title": {
+      "en": "ShEx Test Vocabulary"
+    },
+    "dc:description": {
+      "en": "This document describes the RDFS vocabulary in which the tests of a ShEx conformance suite say what they say beyond an entry of the ShEx manifest vocabulary [[shex-manifest]] -- the features of ShEx a test exercises, whether it is approved, how its schema must be rejected and where, the schema's other representations, and what its semantic actions must output [[shex-semantics]] -- along with the JSON-LD Context that a test manifest stacks on the manifest vocabulary's, so that a JSON or YAML test manifest is an RDF graph."
+    },
+    "dc:date": "2026-10-09",
+    "owl:versionInfo": "https://github.com/shexSpec/shexTest/commit/62fce75e962c935b214636b70a05ebc6c3ec7983",
+    "rdfs:seeAlso": [
+      "http://shex.io/shex-semantics",
+      "https://github.com/shexSpec/shexTest",
+      "https://www.w3.org/ns/shex-manifest"
+    ],
+    "rdfs_properties": [
+      {
+        "@id": "shexTest:approval",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "approval"
+        },
+        "rdfs:comment": {
+          "en": "What the community has decided about the test itself: \"Approved\" or \"Proposed\"."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "xsd:string"
+      },
+      {
+        "@id": "shexTest:endColumn",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "end column"
+        },
+        "rdfs:comment": {
+          "en": "The 1-based column at which the expected rejection ends."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "xsd:integer"
+      },
+      {
+        "@id": "shexTest:endRow",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "end row"
+        },
+        "rdfs:comment": {
+          "en": "The 1-based row at which the expected rejection ends."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "xsd:integer"
+      },
+      {
+        "@id": "shexTest:result",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "result"
+        },
+        "rdfs:comment": {
+          "en": "The results the validation must produce, for a test that says more than conformant or nonconformant. A literal is their text; an IRI (written with the term resultURL) is the document that holds them."
+        },
+        "rdfs:domain": "shexMan:Entry"
+      },
+      {
+        "@id": "shexTest:sameSemanticsAs",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "same semantics as"
+        },
+        "rdfs:comment": {
+          "en": "Another test whose schema means what this one's does, however differently it is written."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "shexMan:Entry"
+      },
+      {
+        "@id": "shexTest:schemaError",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "schema error"
+        },
+        "rdfs:comment": {
+          "en": "How the test's schema must be rejected: \"syntax\", when it does not parse, or \"structure\", when it parses but breaks a structural constraint, such as referring to a shape it does not declare. An entry with neither a schemaError nor a status tests the schema's representations (shexc, shexj, shexr)."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "xsd:string"
+      },
+      {
+        "@id": "shexTest:semActs",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "semantic actions"
+        },
+        "rdfs:comment": {
+          "en": "Code for the semantic actions the test's schema names without code of their own. A literal is its text; an IRI (written with the term semActsURL) is the document that holds it."
+        },
+        "rdfs:domain": "shexMan:Entry"
+      },
+      {
+        "@id": "shexTest:shapeExterns",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "shape externs"
+        },
+        "rdfs:comment": {
+          "en": "A schema providing the shapes the test's schema declares EXTERNAL. A literal is its text; an IRI (written with the term shapeExternsURL) is the document that holds it."
+        },
+        "rdfs:domain": "shexMan:Entry"
+      },
+      {
+        "@id": "shexTest:shexc",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "ShExC"
+        },
+        "rdfs:comment": {
+          "en": "The test's schema in ShExC, the compact syntax of ShEx. A literal is its text; an IRI (written with the term shexcURL) is the document that holds it."
+        },
+        "rdfs:domain": "shexMan:Entry"
+      },
+      {
+        "@id": "shexTest:shexj",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "ShExJ"
+        },
+        "rdfs:comment": {
+          "en": "The test's schema in ShExJ, the JSON representation of ShEx. A literal is its text; an IRI (written with the term shexjURL) is the document that holds it."
+        },
+        "rdfs:domain": "shexMan:Entry"
+      },
+      {
+        "@id": "shexTest:shexr",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "ShExR"
+        },
+        "rdfs:comment": {
+          "en": "The test's schema in ShExR, the RDF representation of ShEx. A literal is its text; an IRI (written with the term shexrURL) is the document that holds it."
+        },
+        "rdfs:domain": "shexMan:Entry"
+      },
+      {
+        "@id": "shexTest:startColumn",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "start column"
+        },
+        "rdfs:comment": {
+          "en": "The 1-based column at which the expected rejection begins."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "xsd:integer"
+      },
+      {
+        "@id": "shexTest:startRow",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "start row"
+        },
+        "rdfs:comment": {
+          "en": "The 1-based row of the schema's text at which the rejection a negative test expects begins."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "xsd:integer"
+      },
+      {
+        "@id": "shexTest:trait",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "trait"
+        },
+        "rdfs:comment": {
+          "en": "A feature of ShEx the test exercises, as a plain name (Empty, TriplePattern, Import, SemanticAction, ...), so that an implementation can tell which tests bear on what it supports."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "xsd:string"
+      }
+    ]
+  }
+}
