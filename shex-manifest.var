@@ -1,0 +1,10 @@
+URI: shex-manifest
+
+URI: shex-manifest.html
+Content-Type: text/html
+
+URI: shex-manifest.ttl
+Content-Type: text/turtle; qs=0.6
+
+URI: shex-manifest.jsonld
+Content-Type: application/ld+json; qs=0.5

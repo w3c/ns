@@ -1,0 +1,78 @@
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix shex: <http://www.w3.org/ns/shex#> .
+@prefix shexMan: <http://www.w3.org/ns/shex-manifest#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# CSVM Ontology definition
+shexMan: a owl:Ontology;
+  dc:title "ShEx Manifest Vocabulary"@en;
+  dc:description """This document describes the RDFS vocabulary used to write ShEx manifests -- ordered lists of entries, each a schema, some data and a query map, with the outcome expected of validating them [[shex-semantics]] [[shape-map]] -- along with the JSON-LD Context that makes a JSON or YAML manifest an RDF graph. Test suites and the example collections of ShEx implementations write their manifests with it."""@en;
+  dc:date "2026-10-07"^^xsd:date;
+  owl:versionInfo <https://github.com/shexSpec/shexTest/commit/826d1b9b67c135fc3e091c77690088ff562358f8>;
+  rdfs:seeAlso <http://shex.io/shex-semantics>, <https://shexspec.github.io/shape-map/>;
+  .
+
+
+# Class definitions
+shexMan:Entry a rdfs:Class;
+  rdfs:label "Entry"@en;
+  rdfs:comment """One validation and the outcome expected of it: a schema, the data to validate, and a query map (or one node and one shape) saying which nodes are validated against which shapes."""@en;
+  rdfs:isDefinedBy shexMan: .
+shexMan:Manifest a rdfs:Class;
+  rdfs:label "Manifest"@en;
+  rdfs:comment """An ordered collection of entries: the examples a ShEx implementation offers, or the tests of a test suite."""@en;
+  rdfs:isDefinedBy shexMan: .
+
+# Property definitions
+shexMan:data a rdf:Property;
+  rdfs:label "data"@en;
+  rdfs:comment """The data the entry validates. A literal is the data's text; an IRI (written with the term dataURL) is the document that holds it. Several values are the documents of one graph."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:isDefinedBy shexMan: .
+shexMan:dataLabel a rdf:Property;
+  rdfs:label "data label"@en;
+  rdfs:comment """What to call the entry's data when presenting it to a person."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy shexMan: .
+shexMan:entries a rdf:Property;
+  rdfs:label "entries"@en;
+  rdfs:comment """The entries of a manifest, in order."""@en;
+  rdfs:domain shexMan:Manifest;
+  rdfs:range shexMan:Entry;
+  rdfs:isDefinedBy shexMan: .
+shexMan:name a rdf:Property;
+  rdfs:label "name"@en;
+  rdfs:comment """A name for the entry, unique within its manifest."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy shexMan: .
+shexMan:queryMap a rdf:Property;
+  rdfs:label "query map"@en;
+  rdfs:comment """The entry's query map, pairing node selectors with shapes. A literal is the map in ShapeMap syntax; an IRI (written with the term queryMapURL) is the document that holds it. An entry with one node and one shape may write them as shex:node and shex:shape instead."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:isDefinedBy shexMan: .
+shexMan:queryMapLabel a rdf:Property;
+  rdfs:label "query map label"@en;
+  rdfs:comment """What to call the entry's query map when presenting it to a person."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy shexMan: .
+shexMan:schema a rdf:Property;
+  rdfs:label "schema"@en;
+  rdfs:comment """The entry's schema. A literal is the schema's text; an IRI (written with the term schemaURL) is the document that holds it."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:isDefinedBy shexMan: .
+shexMan:schemaLabel a rdf:Property;
+  rdfs:label "schema label"@en;
+  rdfs:comment """What to call the entry's schema when presenting it to a person. Entries with one schema usually share its label."""@en;
+  rdfs:domain shexMan:Entry;
+  rdfs:range xsd:string;
+  rdfs:isDefinedBy shexMan: .
+
+# Datatype definitions
+
+# Instance definitions

@@ -1,0 +1,477 @@
+<html lang="en">
+  <head>
+    <meta charset='utf-8'/>
+    <title>ShEx Test Vocabulary</title>
+    <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
+    <script class="remove">
+var respecConfig = {
+    localBiblio: {
+      "shex-semantics": {
+        "authors": [
+          "Eric Prud'hommeaux",
+          "Iovka Boneva",
+          "Jose Labra Gayo",
+          "Gregg Kellogg"
+        ],
+        "title": "Shape Expressions Language",
+        "href" : "http://shex.io/shex-semantics",
+        "rawDate": "2016-12-22",
+        "status" : "CG-NOTE",
+        "publisher": "W3C"
+      },
+      "shex-manifest": {
+        "title": "ShEx Manifest Vocabulary",
+        "href" : "https://www.w3.org/ns/shex-manifest",
+        "publisher": "W3C"
+      }
+    },
+    specStatus:       "base",
+    shortName:        "shextestns",
+    publishDate:      "2026-10-09",
+    thisVersion:      "https://www.w3.org/ns/shex-test",
+    edDraftURI:       "https://github.com/shexSpec/shexTest/tree/main/vocab",
+    // lcEnd: "3000-01-01",
+    // crEnd: "3000-01-01",
+    testSuiteURI:     "https://shexspec.github.io/shexTest/",
+    includePermalinks:true,
+    noRecTrack:       true,
+    github:           "https://github.com/shexSpec/shexTest",
+    editors: [{
+      name:       "Gregg Kellogg",
+      url:        "http://greggkellogg.net/",
+      company:    "Spec-Ops",
+      companyURL: "https://spec-ops.io/",
+      w3cid:      "44770"
+    }],
+    wg: "Shape Expressions Community Group",
+    wgURI: "https://www.w3.org/community/shex/",
+    wgPublicList: "public-csv-wg",
+    wgPatentURI: "https://www.w3.org/2004/01/pp-impl/68238/status",
+    alternateFormats: [
+      {uri: "shex-test.ttl", label: "Turtle"},
+      {uri: "shex-test.jsonld", label: "JSON-LD"}
+    ],
+    inlineCSS: true,
+    doRDFa: false,
+    noIDLIn: true,
+    issueBase: "https://github.com/shexSpec/shex/issues/",
+    noLegacyStyle: false
+    };
+    </script>
+    <style type="text/css">
+      dl.terms dt {
+        float: left;
+        clear: left;
+        width: 17vw;
+      }
+      dl.terms dd:after {
+          content: '';
+          display: block;
+          clear: both;
+          margin-bottom: 5px;
+      }
+      table.rdfs-definition td {vertical-align: top;}
+      .bold {font-weight: bold;}
+    </style>
+  </head>
+  <body resource="http://www.w3.org/ns/shex-test#" typeof="owl:Ontology" prefix="shexTest: http://www.w3.org/ns/shex-test#">
+    <section id="abstract">
+      <p>This document describes the
+        <span property="dc:title">ShEx Test Vocabulary</span>
+        and Term definitions used
+        for writing the tests of Shape Expressions [[shex-semantics]] implementations. This document provides the RDFS [[RDF-SCHEMA]] vocabulary definition and a description of the JSON-LD context definition for use with
+        writing test manifests in JSON-LD or YAML-LD.</p>
+      <p>Alternate versions of the vocabulary definition exist in
+        <a rel="alternate" href="shex-test.ttl">Turtle</a> and
+        <a rel="alternate" href="shex-test.jsonld">JSON-LD</a>,
+        which also includes the <code>@context</code> a JSON-LD or YAML-LD test manifest references, after the ShEx manifest vocabulary's.
+        <!--These versions may also be retrieved from <code>FIXME</code> using an appropiate HTTP <em>Accept</em> header.-->
+      </p>
+      <dl>
+        <dt>Published:</dt><dd><time property="dc:date">2026-10-09</time></dd>
+        <dt>Version Info:</dt>
+        <dd><a href="https://github.com/shexSpec/shexTest/commit/62fce75e962c935b214636b70a05ebc6c3ec7983" property="owl:versionInfo">https://github.com/shexSpec/shexTest/commit/62fce75e962c935b214636b70a05ebc6c3ec7983</a></dd>
+        <dt>See Also:</dt>
+          <dd><a href="http://shex.io/shex-semantics" property="rdfs:seeAlso">http://shex.io/shex-semantics</a></dd>
+          <dd><a href="https://github.com/shexSpec/shexTest" property="rdfs:seeAlso">https://github.com/shexSpec/shexTest</a></dd>
+          <dd><a href="https://www.w3.org/ns/shex-manifest" property="rdfs:seeAlso">https://www.w3.org/ns/shex-manifest</a></dd>
+      </dl>
+    </section>
+    <section id="sotd">
+      <p>
+        FIXME
+      </p>
+    </section>
+    <section>
+      <h2>Introduction</h2>
+      <p property="dc:description">This document describes the RDFS vocabulary in which the tests of a ShEx conformance suite say what they say beyond an entry of the ShEx manifest vocabulary [[shex-manifest]] -- the features of ShEx a test exercises, whether it is approved, how its schema must be rejected and where, the schema's other representations, and what its semantic actions must output [[shex-semantics]] -- along with the JSON-LD Context that a test manifest stacks on the manifest vocabulary's, so that a JSON or YAML test manifest is an RDF graph.</p>
+      <p>This specification makes use of the following namespaces:</p>
+      <dl class="terms">
+        <dt><code>shexTest</code>:</dt>
+        <dd><code>http://www.w3.org/ns/shex-test#</code></dd>
+        <dt><code>shexMan</code>:</dt>
+        <dd><code>http://www.w3.org/ns/shex-manifest#</code></dd>
+        <dt><code>prov</code>:</dt>
+        <dd><code>http://www.w3.org/ns/prov#</code></dd>
+        <dt><code>rdf</code>:</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt><code>rdfs</code>:</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt><code>xsd</code>:</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+      </dl>
+    </section>
+    <section>
+      <h2>Class Definitions</h2>
+      <p>The following are class definitions in the <code>shexTest</code> namespace:</p>
+      <table class="rdfs-definition">
+      </table>
+    </section>
+    <section>
+      <h2>Property Definitions</h2>
+      <p>The following are property definitions in the <code>shexTest</code> namespace:</p>
+      <table class="rdfs-definition">
+        <tr id="approval">
+          <td class="bold">approval</td>
+          <td resource="shexTest:approval" typeof="rdf:Property">
+            <em property="rdfs:label">approval</em>
+            <span class="permalink"><a href="#approval" aria-label="Permalink for approval" title="Permalink for approval"><span>§</span></a></span>
+            <p property="rdfs:comment">What the community has decided about the test itself: "Approved" or "Proposed".</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="endColumn">
+          <td class="bold">endColumn</td>
+          <td resource="shexTest:endColumn" typeof="rdf:Property">
+            <em property="rdfs:label">end column</em>
+            <span class="permalink"><a href="#endColumn" aria-label="Permalink for end column" title="Permalink for end column"><span>§</span></a></span>
+            <p property="rdfs:comment">The 1-based column at which the expected rejection ends.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="endRow">
+          <td class="bold">endRow</td>
+          <td resource="shexTest:endRow" typeof="rdf:Property">
+            <em property="rdfs:label">end row</em>
+            <span class="permalink"><a href="#endRow" aria-label="Permalink for end row" title="Permalink for end row"><span>§</span></a></span>
+            <p property="rdfs:comment">The 1-based row at which the expected rejection ends.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="result">
+          <td class="bold">result</td>
+          <td resource="shexTest:result" typeof="rdf:Property">
+            <em property="rdfs:label">result</em>
+            <span class="permalink"><a href="#result" aria-label="Permalink for result" title="Permalink for result"><span>§</span></a></span>
+            <p property="rdfs:comment">The results the validation must produce, for a test that says more than conformant or nonconformant. A literal is their text; an IRI (written with the term resultURL) is the document that holds them.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="sameSemanticsAs">
+          <td class="bold">sameSemanticsAs</td>
+          <td resource="shexTest:sameSemanticsAs" typeof="rdf:Property">
+            <em property="rdfs:label">same semantics as</em>
+            <span class="permalink"><a href="#sameSemanticsAs" aria-label="Permalink for same semantics as" title="Permalink for same semantics as"><span>§</span></a></span>
+            <p property="rdfs:comment">Another test whose schema means what this one's does, however differently it is written.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shexMan:Entry">shexMan:Entry</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="schemaError">
+          <td class="bold">schemaError</td>
+          <td resource="shexTest:schemaError" typeof="rdf:Property">
+            <em property="rdfs:label">schema error</em>
+            <span class="permalink"><a href="#schemaError" aria-label="Permalink for schema error" title="Permalink for schema error"><span>§</span></a></span>
+            <p property="rdfs:comment">How the test's schema must be rejected: "syntax", when it does not parse, or "structure", when it parses but breaks a structural constraint, such as referring to a shape it does not declare. An entry with neither a schemaError nor a status tests the schema's representations (shexc, shexj, shexr).</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="semActs">
+          <td class="bold">semActs</td>
+          <td resource="shexTest:semActs" typeof="rdf:Property">
+            <em property="rdfs:label">semantic actions</em>
+            <span class="permalink"><a href="#semActs" aria-label="Permalink for semantic actions" title="Permalink for semantic actions"><span>§</span></a></span>
+            <p property="rdfs:comment">Code for the semantic actions the test's schema names without code of their own. A literal is its text; an IRI (written with the term semActsURL) is the document that holds it.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="shapeExterns">
+          <td class="bold">shapeExterns</td>
+          <td resource="shexTest:shapeExterns" typeof="rdf:Property">
+            <em property="rdfs:label">shape externs</em>
+            <span class="permalink"><a href="#shapeExterns" aria-label="Permalink for shape externs" title="Permalink for shape externs"><span>§</span></a></span>
+            <p property="rdfs:comment">A schema providing the shapes the test's schema declares EXTERNAL. A literal is its text; an IRI (written with the term shapeExternsURL) is the document that holds it.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="shexc">
+          <td class="bold">shexc</td>
+          <td resource="shexTest:shexc" typeof="rdf:Property">
+            <em property="rdfs:label">ShExC</em>
+            <span class="permalink"><a href="#shexc" aria-label="Permalink for ShExC" title="Permalink for ShExC"><span>§</span></a></span>
+            <p property="rdfs:comment">The test's schema in ShExC, the compact syntax of ShEx. A literal is its text; an IRI (written with the term shexcURL) is the document that holds it.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="shexj">
+          <td class="bold">shexj</td>
+          <td resource="shexTest:shexj" typeof="rdf:Property">
+            <em property="rdfs:label">ShExJ</em>
+            <span class="permalink"><a href="#shexj" aria-label="Permalink for ShExJ" title="Permalink for ShExJ"><span>§</span></a></span>
+            <p property="rdfs:comment">The test's schema in ShExJ, the JSON representation of ShEx. A literal is its text; an IRI (written with the term shexjURL) is the document that holds it.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="shexr">
+          <td class="bold">shexr</td>
+          <td resource="shexTest:shexr" typeof="rdf:Property">
+            <em property="rdfs:label">ShExR</em>
+            <span class="permalink"><a href="#shexr" aria-label="Permalink for ShExR" title="Permalink for ShExR"><span>§</span></a></span>
+            <p property="rdfs:comment">The test's schema in ShExR, the RDF representation of ShEx. A literal is its text; an IRI (written with the term shexrURL) is the document that holds it.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="startColumn">
+          <td class="bold">startColumn</td>
+          <td resource="shexTest:startColumn" typeof="rdf:Property">
+            <em property="rdfs:label">start column</em>
+            <span class="permalink"><a href="#startColumn" aria-label="Permalink for start column" title="Permalink for start column"><span>§</span></a></span>
+            <p property="rdfs:comment">The 1-based column at which the expected rejection begins.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="startRow">
+          <td class="bold">startRow</td>
+          <td resource="shexTest:startRow" typeof="rdf:Property">
+            <em property="rdfs:label">start row</em>
+            <span class="permalink"><a href="#startRow" aria-label="Permalink for start row" title="Permalink for start row"><span>§</span></a></span>
+            <p property="rdfs:comment">The 1-based row of the schema's text at which the rejection a negative test expects begins.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:integer">xsd:integer</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="trait">
+          <td class="bold">trait</td>
+          <td resource="shexTest:trait" typeof="rdf:Property">
+            <em property="rdfs:label">trait</em>
+            <span class="permalink"><a href="#trait" aria-label="Permalink for trait" title="Permalink for trait"><span>§</span></a></span>
+            <p property="rdfs:comment">A feature of ShEx the test exercises, as a plain name (Empty, TriplePattern, Import, SemanticAction, ...), so that an implementation can tell which tests bear on what it supports.</p>
+            <span property="rdfs:isDefinedBy" resource="shexTest:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Datatype Definitions</h2>
+      <p>The following are datatype definitions in the <code>shexTest</code> namespace:</p>
+      <table class="rdfs-definition">
+      </table>
+    </section>
+    <section>
+      <h2>Instance Definitions</h2>
+      <p>The following are instance definitions in the <code>shexTest</code> namespace:</p>
+      <table class="rdfs-definition">
+      </table>
+    </section>
+    <section>
+      <h2>Term Definitions</h2>
+      <dl class="terms">
+        <dt>approval</dt>
+        <dd>
+            shexTest:approval
+        </dd>
+        <dt>endColumn</dt>
+        <dd>
+            shexTest:endColumn
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>endRow</dt>
+        <dd>
+            shexTest:endRow
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>prov</dt>
+        <dd>
+            http://www.w3.org/ns/prov#
+        </dd>
+        <dt>rdf</dt>
+        <dd>
+            http://www.w3.org/1999/02/22-rdf-syntax-ns#
+        </dd>
+        <dt>rdfs</dt>
+        <dd>
+            http://www.w3.org/2000/01/rdf-schema#
+        </dd>
+        <dt>result</dt>
+        <dd>
+            shexTest:result
+        </dd>
+        <dt>resultURL</dt>
+        <dd>
+            shexTest:result
+            with string values interpreted as @id
+        </dd>
+        <dt>sameSemanticsAs</dt>
+        <dd>
+            shexTest:sameSemanticsAs
+            with string values interpreted as @id
+        </dd>
+        <dt>schemaError</dt>
+        <dd>
+            shexTest:schemaError
+        </dd>
+        <dt>seeAlso</dt>
+        <dd>
+            rdfs:seeAlso
+            with string values interpreted as @id
+        </dd>
+        <dt>semActs</dt>
+        <dd>
+            shexTest:semActs
+        </dd>
+        <dt>semActsURL</dt>
+        <dd>
+            shexTest:semActs
+            with string values interpreted as @id
+        </dd>
+        <dt>shapeExterns</dt>
+        <dd>
+            shexTest:shapeExterns
+        </dd>
+        <dt>shapeExternsURL</dt>
+        <dd>
+            shexTest:shapeExterns
+            with string values interpreted as @id
+        </dd>
+        <dt>shexMan</dt>
+        <dd>
+            http://www.w3.org/ns/shex-manifest#
+        </dd>
+        <dt>shexTest</dt>
+        <dd>
+            http://www.w3.org/ns/shex-test#
+        </dd>
+        <dt>shexc</dt>
+        <dd>
+            shexTest:shexc
+        </dd>
+        <dt>shexcURL</dt>
+        <dd>
+            shexTest:shexc
+            with string values interpreted as @id
+        </dd>
+        <dt>shexj</dt>
+        <dd>
+            shexTest:shexj
+        </dd>
+        <dt>shexjURL</dt>
+        <dd>
+            shexTest:shexj
+            with string values interpreted as @id
+        </dd>
+        <dt>shexr</dt>
+        <dd>
+            shexTest:shexr
+        </dd>
+        <dt>shexrURL</dt>
+        <dd>
+            shexTest:shexr
+            with string values interpreted as @id
+        </dd>
+        <dt>startColumn</dt>
+        <dd>
+            shexTest:startColumn
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>startRow</dt>
+        <dd>
+            shexTest:startRow
+            with string values interpreted as xsd:integer
+        </dd>
+        <dt>trait</dt>
+        <dd>
+            shexTest:trait
+        </dd>
+        <dt>wasDerivedFrom</dt>
+        <dd>
+            prov:wasDerivedFrom
+            with string values interpreted as @id
+        </dd>
+        <dt>xsd</dt>
+        <dd>
+            http://www.w3.org/2001/XMLSchema#
+        </dd>
+      </dl>
+    </section>
+  </body>
+</html>

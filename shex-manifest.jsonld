@@ -1,0 +1,274 @@
+{
+  "@context": {
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "shex": "http://www.w3.org/ns/shex#",
+    "shexMan": "http://www.w3.org/ns/shex-manifest#",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "comment": "rdfs:comment",
+    "dataURL": {
+      "@id": "shexMan:data",
+      "@container": "@set",
+      "@type": "@id"
+    },
+    "node": {
+      "@id": "shex:node",
+      "@type": "@id"
+    },
+    "queryMapURL": {
+      "@id": "shexMan:queryMap",
+      "@type": "@id"
+    },
+    "schemaURL": {
+      "@id": "shexMan:schema",
+      "@type": "@id"
+    },
+    "shape": {
+      "@id": "shex:shape",
+      "@type": "@id"
+    },
+    "status": "shex:status",
+    "Entry": "shexMan:Entry",
+    "Manifest": "shexMan:Manifest",
+    "data": {
+      "@id": "shexMan:data"
+    },
+    "dataLabel": {
+      "@id": "shexMan:dataLabel",
+      "@language": null
+    },
+    "entries": {
+      "@id": "shexMan:entries",
+      "@type": "@id",
+      "@container": "@list"
+    },
+    "name": {
+      "@id": "shexMan:name",
+      "@language": null
+    },
+    "queryMap": {
+      "@id": "shexMan:queryMap"
+    },
+    "queryMapLabel": {
+      "@id": "shexMan:queryMapLabel",
+      "@language": null
+    },
+    "schema": {
+      "@id": "shexMan:schema"
+    },
+    "schemaLabel": {
+      "@id": "shexMan:schemaLabel",
+      "@language": null
+    }
+  },
+  "@graph": {
+    "@context": {
+      "id": "@id",
+      "type": "@type",
+      "dc:title": {
+        "@container": "@language"
+      },
+      "dc:description": {
+        "@container": "@language"
+      },
+      "dc:date": {
+        "@type": "xsd:date"
+      },
+      "rdfs:comment": {
+        "@container": "@language"
+      },
+      "rdfs:domain": {
+        "@type": "@id"
+      },
+      "rdfs:label": {
+        "@container": "@language"
+      },
+      "rdfs:range": {
+        "@type": "@id"
+      },
+      "rdfs:seeAlso": {
+        "@type": "@id"
+      },
+      "rdfs:subClassOf": {
+        "@type": "@id"
+      },
+      "rdfs:subPropertyOf": {
+        "@type": "@id"
+      },
+      "owl:equivalentClass": {
+        "@type": "@vocab"
+      },
+      "owl:equivalentProperty": {
+        "@type": "@vocab"
+      },
+      "owl:oneOf": {
+        "@container": "@list",
+        "@type": "@vocab"
+      },
+      "owl:imports": {
+        "@type": "@id"
+      },
+      "owl:versionInfo": {
+        "@type": "@id"
+      },
+      "owl:inverseOf": {
+        "@type": "@vocab"
+      },
+      "owl:unionOf": {
+        "@type": "@vocab",
+        "@container": "@list"
+      },
+      "rdfs_classes": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_properties": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_datatypes": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      },
+      "rdfs_instances": {
+        "@reverse": "rdfs:isDefinedBy",
+        "@type": "@id"
+      }
+    },
+    "@id": "http://www.w3.org/ns/shex-manifest#",
+    "@type": "owl:Ontology",
+    "dc": "http://purl.org/dc/terms/",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dc:title": {
+      "en": "ShEx Manifest Vocabulary"
+    },
+    "dc:description": {
+      "en": "This document describes the RDFS vocabulary used to write ShEx manifests -- ordered lists of entries, each a schema, some data and a query map, with the outcome expected of validating them [[shex-semantics]] [[shape-map]] -- along with the JSON-LD Context that makes a JSON or YAML manifest an RDF graph. Test suites and the example collections of ShEx implementations write their manifests with it."
+    },
+    "dc:date": "2026-10-07",
+    "owl:versionInfo": "https://github.com/shexSpec/shexTest/commit/826d1b9b67c135fc3e091c77690088ff562358f8",
+    "rdfs:seeAlso": [
+      "http://shex.io/shex-semantics",
+      "https://shexspec.github.io/shape-map/"
+    ],
+    "rdfs_classes": [
+      {
+        "@id": "shexMan:Entry",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Entry"
+        },
+        "rdfs:comment": {
+          "en": "One validation and the outcome expected of it: a schema, the data to validate, and a query map (or one node and one shape) saying which nodes are validated against which shapes."
+        }
+      },
+      {
+        "@id": "shexMan:Manifest",
+        "@type": "rdfs:Class",
+        "rdfs:label": {
+          "en": "Manifest"
+        },
+        "rdfs:comment": {
+          "en": "An ordered collection of entries: the examples a ShEx implementation offers, or the tests of a test suite."
+        }
+      }
+    ],
+    "rdfs_properties": [
+      {
+        "@id": "shexMan:data",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "data"
+        },
+        "rdfs:comment": {
+          "en": "The data the entry validates. A literal is the data's text; an IRI (written with the term dataURL) is the document that holds it. Several values are the documents of one graph."
+        },
+        "rdfs:domain": "shexMan:Entry"
+      },
+      {
+        "@id": "shexMan:dataLabel",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "data label"
+        },
+        "rdfs:comment": {
+          "en": "What to call the entry's data when presenting it to a person."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "xsd:string"
+      },
+      {
+        "@id": "shexMan:entries",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "entries"
+        },
+        "rdfs:comment": {
+          "en": "The entries of a manifest, in order."
+        },
+        "rdfs:domain": "shexMan:Manifest",
+        "rdfs:range": "shexMan:Entry"
+      },
+      {
+        "@id": "shexMan:name",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "name"
+        },
+        "rdfs:comment": {
+          "en": "A name for the entry, unique within its manifest."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "xsd:string"
+      },
+      {
+        "@id": "shexMan:queryMap",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "query map"
+        },
+        "rdfs:comment": {
+          "en": "The entry's query map, pairing node selectors with shapes. A literal is the map in ShapeMap syntax; an IRI (written with the term queryMapURL) is the document that holds it. An entry with one node and one shape may write them as shex:node and shex:shape instead."
+        },
+        "rdfs:domain": "shexMan:Entry"
+      },
+      {
+        "@id": "shexMan:queryMapLabel",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "query map label"
+        },
+        "rdfs:comment": {
+          "en": "What to call the entry's query map when presenting it to a person."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "xsd:string"
+      },
+      {
+        "@id": "shexMan:schema",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "schema"
+        },
+        "rdfs:comment": {
+          "en": "The entry's schema. A literal is the schema's text; an IRI (written with the term schemaURL) is the document that holds it."
+        },
+        "rdfs:domain": "shexMan:Entry"
+      },
+      {
+        "@id": "shexMan:schemaLabel",
+        "@type": "rdf:Property",
+        "rdfs:label": {
+          "en": "schema label"
+        },
+        "rdfs:comment": {
+          "en": "What to call the entry's schema when presenting it to a person. Entries with one schema usually share its label."
+        },
+        "rdfs:domain": "shexMan:Entry",
+        "rdfs:range": "xsd:string"
+      }
+    ]
+  }
+}

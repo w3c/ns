@@ -1,0 +1,384 @@
+<html lang="en">
+  <head>
+    <meta charset='utf-8'/>
+    <title>ShEx Manifest Vocabulary</title>
+    <script class="remove" src="https://www.w3.org/Tools/respec/respec-w3c-common"></script>
+    <script class="remove">
+var respecConfig = {
+    localBiblio: {
+      "shex-semantics": {
+        "authors": [
+          "Eric Prud'hommeaux",
+          "Iovka Boneva",
+          "Jose Labra Gayo",
+          "Gregg Kellogg"
+        ],
+        "title": "Shape Expressions Language",
+        "href" : "http://shex.io/shex-semantics",
+        "rawDate": "2016-12-22",
+        "status" : "CG-NOTE",
+        "publisher": "W3C"
+      },
+      "shape-map": {
+        "authors": [
+          "Eric Prud'hommeaux",
+          "Thomas Baker"
+        ],
+        "title": "ShapeMap Structure and Language",
+        "href" : "https://shexspec.github.io/shape-map/",
+        "status" : "CG-DRAFT",
+        "publisher": "W3C"
+      }
+    },
+    specStatus:       "base",
+    shortName:        "shexmanifestns",
+    publishDate:      "2026-10-07",
+    thisVersion:      "https://www.w3.org/ns/shex-manifest",
+    edDraftURI:       "https://github.com/shexSpec/shexTest/tree/main/vocab",
+    // lcEnd: "3000-01-01",
+    // crEnd: "3000-01-01",
+    testSuiteURI:     "https://shexspec.github.io/shexTest/",
+    includePermalinks:true,
+    noRecTrack:       true,
+    github:           "https://github.com/shexSpec/shexTest",
+    editors: [{
+      name:       "Gregg Kellogg",
+      url:        "http://greggkellogg.net/",
+      company:    "Spec-Ops",
+      companyURL: "https://spec-ops.io/",
+      w3cid:      "44770"
+    }],
+    wg: "Shape Expressions Community Group",
+    wgURI: "https://www.w3.org/community/shex/",
+    wgPublicList: "public-csv-wg",
+    wgPatentURI: "https://www.w3.org/2004/01/pp-impl/68238/status",
+    alternateFormats: [
+      {uri: "shex-manifest.ttl", label: "Turtle"},
+      {uri: "shex-manifest.jsonld", label: "JSON-LD"}
+    ],
+    inlineCSS: true,
+    doRDFa: false,
+    noIDLIn: true,
+    issueBase: "https://github.com/shexSpec/shex/issues/",
+    noLegacyStyle: false
+    };
+    </script>
+    <style type="text/css">
+      dl.terms dt {
+        float: left;
+        clear: left;
+        width: 17vw;
+      }
+      dl.terms dd:after {
+          content: '';
+          display: block;
+          clear: both;
+          margin-bottom: 5px;
+      }
+      table.rdfs-definition td {vertical-align: top;}
+      .bold {font-weight: bold;}
+    </style>
+  </head>
+  <body resource="http://www.w3.org/ns/shex-manifest#" typeof="owl:Ontology" prefix="shexMan: http://www.w3.org/ns/shex-manifest#">
+    <section id="abstract">
+      <p>This document describes the
+        <span property="dc:title">ShEx Manifest Vocabulary</span>
+        and Term definitions used
+        for writing manifests of Shape Expressions [[shex-semantics]] examples and tests. This document provides the RDFS [[RDF-SCHEMA]] vocabulary definition and a description of the JSON-LD context definition for use with
+        writing manifests in JSON-LD or YAML-LD.</p>
+      <p>Alternate versions of the vocabulary definition exist in
+        <a rel="alternate" href="shex-manifest.ttl">Turtle</a> and
+        <a rel="alternate" href="shex-manifest.jsonld">JSON-LD</a>,
+        which also includes the <code>@context</code> a JSON-LD or YAML-LD manifest references.
+        <!--These versions may also be retrieved from <code>FIXME</code> using an appropiate HTTP <em>Accept</em> header.-->
+      </p>
+      <dl>
+        <dt>Published:</dt><dd><time property="dc:date">2026-10-07</time></dd>
+        <dt>Version Info:</dt>
+        <dd><a href="https://github.com/shexSpec/shexTest/commit/826d1b9b67c135fc3e091c77690088ff562358f8" property="owl:versionInfo">https://github.com/shexSpec/shexTest/commit/826d1b9b67c135fc3e091c77690088ff562358f8</a></dd>
+        <dt>See Also:</dt>
+          <dd><a href="http://shex.io/shex-semantics" property="rdfs:seeAlso">http://shex.io/shex-semantics</a></dd>
+          <dd><a href="https://shexspec.github.io/shape-map/" property="rdfs:seeAlso">https://shexspec.github.io/shape-map/</a></dd>
+      </dl>
+    </section>
+    <section id="sotd">
+      <p>
+        FIXME
+      </p>
+    </section>
+    <section>
+      <h2>Introduction</h2>
+      <p property="dc:description">This document describes the RDFS vocabulary used to write ShEx manifests -- ordered lists of entries, each a schema, some data and a query map, with the outcome expected of validating them [[shex-semantics]] [[shape-map]] -- along with the JSON-LD Context that makes a JSON or YAML manifest an RDF graph. Test suites and the example collections of ShEx implementations write their manifests with it.</p>
+      <p>This specification makes use of the following namespaces:</p>
+      <dl class="terms">
+        <dt><code>shexMan</code>:</dt>
+        <dd><code>http://www.w3.org/ns/shex-manifest#</code></dd>
+        <dt><code>shex</code>:</dt>
+        <dd><code>http://www.w3.org/ns/shex#</code></dd>
+        <dt><code>rdf</code>:</dt>
+        <dd><code>http://www.w3.org/1999/02/22-rdf-syntax-ns#</code></dd>
+        <dt><code>rdfs</code>:</dt>
+        <dd><code>http://www.w3.org/2000/01/rdf-schema#</code></dd>
+        <dt><code>xsd</code>:</dt>
+        <dd><code>http://www.w3.org/2001/XMLSchema#</code></dd>
+      </dl>
+    </section>
+    <section>
+      <h2>Class Definitions</h2>
+      <p>The following are class definitions in the <code>shexMan</code> namespace:</p>
+      <table class="rdfs-definition">
+        <tr id="Entry">
+          <td class="bold">Entry</td>
+          <td resource="shexMan:Entry" typeof="rdfs:Class">
+            <em property="rdfs:label">Entry</em>
+            <span class="permalink"><a href="#Entry" aria-label="Permalink for Entry" title="Permalink for Entry"><span>§</span></a></span>
+            <p property="rdfs:comment">One validation and the outcome expected of it: a schema, the data to validate, and a query map (or one node and one shape) saying which nodes are validated against which shapes.</p>
+            <span property="rdfs:isDefinedBy" resource="shexMan:"></span>
+          </td>
+        </tr>
+        <tr id="Manifest">
+          <td class="bold">Manifest</td>
+          <td resource="shexMan:Manifest" typeof="rdfs:Class">
+            <em property="rdfs:label">Manifest</em>
+            <span class="permalink"><a href="#Manifest" aria-label="Permalink for Manifest" title="Permalink for Manifest"><span>§</span></a></span>
+            <p property="rdfs:comment">An ordered collection of entries: the examples a ShEx implementation offers, or the tests of a test suite.</p>
+            <span property="rdfs:isDefinedBy" resource="shexMan:"></span>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Property Definitions</h2>
+      <p>The following are property definitions in the <code>shexMan</code> namespace:</p>
+      <table class="rdfs-definition">
+        <tr id="data">
+          <td class="bold">data</td>
+          <td resource="shexMan:data" typeof="rdf:Property">
+            <em property="rdfs:label">data</em>
+            <span class="permalink"><a href="#data" aria-label="Permalink for data" title="Permalink for data"><span>§</span></a></span>
+            <p property="rdfs:comment">The data the entry validates. A literal is the data's text; an IRI (written with the term dataURL) is the document that holds it. Several values are the documents of one graph.</p>
+            <span property="rdfs:isDefinedBy" resource="shexMan:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="dataLabel">
+          <td class="bold">dataLabel</td>
+          <td resource="shexMan:dataLabel" typeof="rdf:Property">
+            <em property="rdfs:label">data label</em>
+            <span class="permalink"><a href="#dataLabel" aria-label="Permalink for data label" title="Permalink for data label"><span>§</span></a></span>
+            <p property="rdfs:comment">What to call the entry's data when presenting it to a person.</p>
+            <span property="rdfs:isDefinedBy" resource="shexMan:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="entries">
+          <td class="bold">entries</td>
+          <td resource="shexMan:entries" typeof="rdf:Property">
+            <em property="rdfs:label">entries</em>
+            <span class="permalink"><a href="#entries" aria-label="Permalink for entries" title="Permalink for entries"><span>§</span></a></span>
+            <p property="rdfs:comment">The entries of a manifest, in order.</p>
+            <span property="rdfs:isDefinedBy" resource="shexMan:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="shexMan:Entry">shexMan:Entry</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Manifest">shexMan:Manifest</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="name">
+          <td class="bold">name</td>
+          <td resource="shexMan:name" typeof="rdf:Property">
+            <em property="rdfs:label">name</em>
+            <span class="permalink"><a href="#name" aria-label="Permalink for name" title="Permalink for name"><span>§</span></a></span>
+            <p property="rdfs:comment">A name for the entry, unique within its manifest.</p>
+            <span property="rdfs:isDefinedBy" resource="shexMan:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="queryMap">
+          <td class="bold">queryMap</td>
+          <td resource="shexMan:queryMap" typeof="rdf:Property">
+            <em property="rdfs:label">query map</em>
+            <span class="permalink"><a href="#queryMap" aria-label="Permalink for query map" title="Permalink for query map"><span>§</span></a></span>
+            <p property="rdfs:comment">The entry's query map, pairing node selectors with shapes. A literal is the map in ShapeMap syntax; an IRI (written with the term queryMapURL) is the document that holds it. An entry with one node and one shape may write them as shex:node and shex:shape instead.</p>
+            <span property="rdfs:isDefinedBy" resource="shexMan:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="queryMapLabel">
+          <td class="bold">queryMapLabel</td>
+          <td resource="shexMan:queryMapLabel" typeof="rdf:Property">
+            <em property="rdfs:label">query map label</em>
+            <span class="permalink"><a href="#queryMapLabel" aria-label="Permalink for query map label" title="Permalink for query map label"><span>§</span></a></span>
+            <p property="rdfs:comment">What to call the entry's query map when presenting it to a person.</p>
+            <span property="rdfs:isDefinedBy" resource="shexMan:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="schema">
+          <td class="bold">schema</td>
+          <td resource="shexMan:schema" typeof="rdf:Property">
+            <em property="rdfs:label">schema</em>
+            <span class="permalink"><a href="#schema" aria-label="Permalink for schema" title="Permalink for schema"><span>§</span></a></span>
+            <p property="rdfs:comment">The entry's schema. A literal is the schema's text; an IRI (written with the term schemaURL) is the document that holds it.</p>
+            <span property="rdfs:isDefinedBy" resource="shexMan:"></span>
+              <dl class="terms">
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+        <tr id="schemaLabel">
+          <td class="bold">schemaLabel</td>
+          <td resource="shexMan:schemaLabel" typeof="rdf:Property">
+            <em property="rdfs:label">schema label</em>
+            <span class="permalink"><a href="#schemaLabel" aria-label="Permalink for schema label" title="Permalink for schema label"><span>§</span></a></span>
+            <p property="rdfs:comment">What to call the entry's schema when presenting it to a person. Entries with one schema usually share its label.</p>
+            <span property="rdfs:isDefinedBy" resource="shexMan:"></span>
+              <dl class="terms">
+                  <dt>rdfs:range</dt>
+                      <dd property="rdfs:range" resource="xsd:string">xsd:string</dd>
+                  <dt>rdfs:domain</dt>
+                      <dd property="rdfs:domain" resource="shexMan:Entry">shexMan:Entry</dd>
+              </dl>
+          </td>
+        </tr>
+      </table>
+    </section>
+    <section>
+      <h2>Datatype Definitions</h2>
+      <p>The following are datatype definitions in the <code>shexMan</code> namespace:</p>
+      <table class="rdfs-definition">
+      </table>
+    </section>
+    <section>
+      <h2>Instance Definitions</h2>
+      <p>The following are instance definitions in the <code>shexMan</code> namespace:</p>
+      <table class="rdfs-definition">
+      </table>
+    </section>
+    <section>
+      <h2>Term Definitions</h2>
+      <dl class="terms">
+        <dt>Entry</dt>
+        <dd>
+            shexMan:Entry
+        </dd>
+        <dt>Manifest</dt>
+        <dd>
+            shexMan:Manifest
+        </dd>
+        <dt>comment</dt>
+        <dd>
+            rdfs:comment
+        </dd>
+        <dt>data</dt>
+        <dd>
+            shexMan:data
+        </dd>
+        <dt>dataLabel</dt>
+        <dd>
+            shexMan:dataLabel
+        </dd>
+        <dt>dataURL</dt>
+        <dd>
+            shexMan:data
+            with string values interpreted as @id
+              with array values interpreted as @set
+        </dd>
+        <dt>entries</dt>
+        <dd>
+            shexMan:entries
+            with string values interpreted as @id
+              with array values interpreted as @list
+        </dd>
+        <dt>name</dt>
+        <dd>
+            shexMan:name
+        </dd>
+        <dt>node</dt>
+        <dd>
+            shex:node
+            with string values interpreted as @id
+        </dd>
+        <dt>queryMap</dt>
+        <dd>
+            shexMan:queryMap
+        </dd>
+        <dt>queryMapLabel</dt>
+        <dd>
+            shexMan:queryMapLabel
+        </dd>
+        <dt>queryMapURL</dt>
+        <dd>
+            shexMan:queryMap
+            with string values interpreted as @id
+        </dd>
+        <dt>rdf</dt>
+        <dd>
+            http://www.w3.org/1999/02/22-rdf-syntax-ns#
+        </dd>
+        <dt>rdfs</dt>
+        <dd>
+            http://www.w3.org/2000/01/rdf-schema#
+        </dd>
+        <dt>schema</dt>
+        <dd>
+            shexMan:schema
+        </dd>
+        <dt>schemaLabel</dt>
+        <dd>
+            shexMan:schemaLabel
+        </dd>
+        <dt>schemaURL</dt>
+        <dd>
+            shexMan:schema
+            with string values interpreted as @id
+        </dd>
+        <dt>shape</dt>
+        <dd>
+            shex:shape
+            with string values interpreted as @id
+        </dd>
+        <dt>shex</dt>
+        <dd>
+            http://www.w3.org/ns/shex#
+        </dd>
+        <dt>shexMan</dt>
+        <dd>
+            http://www.w3.org/ns/shex-manifest#
+        </dd>
+        <dt>status</dt>
+        <dd>
+            shex:status
+        </dd>
+        <dt>xsd</dt>
+        <dd>
+            http://www.w3.org/2001/XMLSchema#
+        </dd>
+      </dl>
+    </section>
+  </body>
+</html>
