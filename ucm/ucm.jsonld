@@ -1,0 +1,77 @@
+{
+  "@context": {
+    "dcterms": "http://purl.org/dc/terms/",
+    "foaf": "http://xmlns.com/foaf/0.1/",
+    "org": "http://www.w3.org/ns/org#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "ucm": "https://www.w3.org/ns/ucm#",
+    "vann": "http://purl.org/vocab/vann/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#"
+  },
+  "@graph": [
+    {
+      "@id": "https://www.w3.org/ns/ucm",
+      "@type": "owl:Ontology",
+      "dcterms:created": {
+        "@type": "xsd:date",
+        "@value": "2025-01-01"
+      },
+      "dcterms:creator": {
+        "@id": "https://www.w3.org/community/ucm/"
+      },
+      "dcterms:description": {
+        "@language": "en",
+        "@value": "UCM is an RDF vocabulary providing a common semantic foundation for achieving semantic interoperability across healthcare and human-service ecosystems. It serves as a semantic bridge that enables standards, ontologies, information models, and data models developed by independent communities to communicate with a shared understanding of information while preserving their respective semantics."
+      },
+      "dcterms:isPartOf": {
+        "@id": "https://www.w3.org/community/ucm/"
+      },
+      "dcterms:license": {
+        "@id": "https://creativecommons.org/licenses/by/4.0/"
+      },
+      "dcterms:modified": {
+        "@type": "xsd:date",
+        "@value": "2026-10-15"
+      },
+      "dcterms:publisher": {
+        "@type": "org:Organization",
+        "foaf:homepage": {
+          "@id": "https://www.w3.org/"
+        },
+        "foaf:name": "World Wide Web Consortium (W3C)"
+      },
+      "dcterms:title": {
+        "@language": "en",
+        "@value": "Unified Care Model (UCM) Vocabulary"
+      },
+      "foaf:homepage": {
+        "@id": "https://www.w3.org/community/ucm/"
+      },
+      "owl:versionIRI": {
+        "@id": "https://www.w3.org/ns/ucm/0.0.1"
+      },
+      "owl:versionInfo": "0.0.1",
+      "rdfs:comment": {
+        "@language": "en",
+        "@value": "UCM is an RDF vocabulary providing a common semantic foundation for achieving semantic interoperability across healthcare and human-service ecosystems."
+      },
+      "rdfs:label": {
+        "@language": "en",
+        "@value": "Unified Care Model (UCM) Vocabulary"
+      },
+      "rdfs:seeAlso": [
+        {
+          "@id": "https://www.w3.org/community/ucm/"
+        },
+        {
+          "@id": "https://github.com/w3c-cg/ucm/blob/latest/unified-care-model.ttl"
+        }
+      ],
+      "vann:preferredNamespacePrefix": "ucm",
+      "vann:preferredNamespaceUri": "https://www.w3.org/ns/ucm#"
+    }
+  ]
+}
